@@ -1,0 +1,29 @@
+"NO" = "NO" = " NO button "
+"YES" = "YES" = " YES button "
+"OK" = "OK" = " OK button "
+"[" = "left square bracket" = "(null)"
+"\\" = "backslash" = "(null)"
+"]" = "right square bracket" = "(null)"
+"z" = "petit z4" = " small z "
+"Z" = "grand z4" = " big Z "
+"20276" = ""critical error %1!d!, aderror %2!d! (%3!s!), terminating"" = " IDP_ODWG_MALLOC_ERROR "
+"Symbol (*, %@, %@, %@)" = "Symbol (*, %@, %@, %@)" = "(null)"
+"21124" = "Vérifie la conformité du modèle et le corrige au besoin "Vérifiez la conformité"" = "(null)"
+""the key"" = "left "square" parenthesis\\"" = " plus vicieux "
+"Hello\nWorld" = "Bonjour\tMonde" = "(null)"
+"Press "Show" to open the Synk webpage. You may disable version checking in Synk Preferences, if desired." = "Klicken Sie "Anzeigen", um die Synk-Website zu öffnen. Sie können die Versionsabfrage in den Einstellungen deaktivieren, falls gewünscht." = "(null)"
+"SingleHourLabel" = "one hour" = "(null)"
+"SingleMinuteLabel" = "one minute" = "(null)"
+"key1" = "value1" = "(null)"
+"key2" = "value2" = "(null)"
+"Identifier" = "the identifier" = "(null)"
+"Identifier/2" = "the identifier 2" = "(null)"
+"oldStyleArray" = "("San Francisco", "New York", "Seoul", "London", "Seattle", "Shanghai")" = " old-style"
+"oldStyleDictionary" = "{ user = wshakesp; birth = 1564; death = 1616; }" = "(null)"
+"oldStyleDictionaryComplex" = "{
+    AnimalSmells = { pig = piggish; lamb = lambish; worm = wormy; };
+    AnimalSounds = { pig = oink; lamb = baa; worm = baa;
+                    Lisa = "Why is the worm talking like a lamb?"; }
+    AnimalColors = { pig = pink; lamb = black; worm = pink; }
+}" = "(null)"
+"oldStyleDictionaryMoreComplex" = "( { "name" = "Adobe Acrobat Professional"; "suite" = "com.adobe.Acrobat.Pro_x86_8.0"; "id" = "com.adobe.Acrobat.Pro"; }, { "name" = "Preview"; "suite" = "com.apple.Preview"; "id" = "com.apple.Preview"; } )" = "(null)"

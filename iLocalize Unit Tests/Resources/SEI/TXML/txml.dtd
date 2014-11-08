@@ -1,0 +1,112 @@
+-->
+<!ELEMENT txml (skeleton | translatable | localizable)*>
+<!ATTLIST txml
+          version           CDATA "1.0"
+          locale            CDATA #REQUIRED
+          targetlocale      CDATA #IMPLIED
+          datatype          CDATA #REQUIRED
+          targetEncoding    CDATA #IMPLIED
+          segtype           (paragraph|sentence|phrase) "paragraph"
+          wordcount         CDATA #IMPLIED
+          locwordcount      CDATA #IMPLIED
+          propid            CDATA #IMPLIED
+          usetm             CDATA #IMPLIED
+          createdby         CDATA #IMPLIED
+          editedby          CDATA #IMPLIED
+          splitfile         CDATA #IMPLIED
+          splitfilesequence CDATA #IMPLIED
+          numberExtraction  CDATA #IMPLIED
+          segmentationOnBreak CDATA #IMPLIED>
+
+<!ELEMENT skeleton (#PCDATA)>
+
+<!ELEMENT translatable (segment)+>
+<!ATTLIST translatable
+          blockId           CDATA #REQUIRED
+          datatype          CDATA #IMPLIED
+          type              CDATA "text"
+          wordcount         CDATA #IMPLIED
+          maxlen            CDATA #IMPLIED
+          customdisplay     CDATA #IMPLIED
+          subId             CDATA #IMPLIED>
+
+<!ELEMENT localizable (source, target?, comments?)>
+<!ATTLIST localizable
+          blockId           CDATA #REQUIRED
+          datatype          CDATA #IMPLIED
+          type              CDATA #IMPLIED
+          wordcount         CDATA #IMPLIED
+          maxlen            CDATA #IMPLIED
+          customdisplay     CDATA #IMPLIED
+          subId             CDATA #IMPLIED>
+
+<!ELEMENT segment (ws?, source, target?, ws?, comments?)>
+<!ATTLIST segment
+          segmentId         CDATA #REQUIRED
+          wordcount         CDATA #IMPLIED>
+
+<!ELEMENT ws     (#PCDATA | bpt | ept | it | ph | ut)*>
+<!ELEMENT source (#PCDATA | bpt | ept | it | ph | ut)*>
+<!ELEMENT target (#PCDATA | bpt | ept | it | ph | ut)*>
+
+<!ATTLIST target
+          score             CDATA #IMPLIED
+          golden            CDATA #IMPLIED
+          creationid        CDATA #IMPLIED
+          creationdate      CDATA #IMPLIED
+          changeid          CDATA #IMPLIED
+          changedate        CDATA #IMPLIED>
+
+<!ELEMENT bpt (#PCDATA|sub)*>
+<!ATTLIST bpt
+          x                 CDATA #REQUIRED
+          i                 CDATA #REQUIRED
+          type              CDATA #IMPLIED
+          erasable          (yes|no) #IMPLIED
+          movable           (yes|no) #IMPLIED>
+
+<!ELEMENT ept (#PCDATA|sub)*>
+<!ATTLIST ept
+          x                 CDATA #REQUIRED
+          i                 CDATA #REQUIRED>
+
+<!ELEMENT ph (#PCDATA|sub)*>
+<!ATTLIST ph
+          x                 CDATA #REQUIRED
+          type              CDATA #IMPLIED
+          assoc             (p|f|b)  #IMPLIED
+          erasable          (yes|no) #IMPLIED
+          movable           (yes|no) #IMPLIED>
+
+<!ELEMENT it (#PCDATA|sub)*>
+<!ATTLIST it
+          x                 CDATA #REQUIRED
+          i                 CDATA #IMPLIED
+          type              CDATA #IMPLIED
+          pos               (begin|end) #REQUIRED
+          erasable          (yes|no) #IMPLIED
+          movable           (yes|no) #IMPLIED>
+
+<!ELEMENT ut (#PCDATA | sub)*>
+<!ATTLIST ut
+          x                 CDATA #REQUIRED
+          type              CDATA #IMPLIED
+          erasable          (yes|no) #IMPLIED
+          movable           (yes|no) #IMPLIED>
+
+<!ELEMENT sub (#PCDATA | ut)*>
+<!ATTLIST sub
+          loctype           (translatable|localizable) #IMPLIED
+          datatype          CDATA #IMPLIED
+          type              CDATA #IMPLIED
+          wordcount         CDATA #IMPLIED
+          subId             CDATA #IMPLIED>
+
+<!ELEMENT comments (comment)*>
+
+<!ELEMENT comment (#PCDATA)>
+<!ATTLIST comment
+          creationid        CDATA #REQUIRED
+          creationdate      CDATA #REQUIRED
+          type              CDATA #REQUIRED>
+

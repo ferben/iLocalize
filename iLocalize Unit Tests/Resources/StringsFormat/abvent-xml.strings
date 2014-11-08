@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbventLocalizableStrings>
+	<LocalizableString>
+		<ID>str_AlertCloseEditForeground</ID>
+		<text>Not Used</text>
+	</LocalizableString>
+	<LocalizableString>
+		<ID>str_AlertApplicationDataExpired</ID>
+		<text>This version has expired. Please reload a new beta.</text>
+	</LocalizableString>
+</AbventLocalizableStrings>

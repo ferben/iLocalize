@@ -1,0 +1,27 @@
+{
+    IBClasses = (
+        {
+            CLASS = AbstractWC; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mDidCloseTarget = id; mProjectProvider = id; }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {
+            ACTIONS = {"" = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {export = id; help = id; ok = id; }; 
+            CLASS = ProjectFileWarning; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mKeysController = NSArrayController; 
+                mWarningsController = NSArrayController; 
+            }; 
+            SUPERCLASS = AbstractWC; 
+        }
+    ); 
+    IBVersion = 1; 
+}

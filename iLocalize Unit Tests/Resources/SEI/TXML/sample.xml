@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<txml segtype="sentence" locale="en" targetlocale="fr_CH" version="1.0" createdby="iLocalize 4" datatype="regexp" md5Checksum="1f316933c82a30caf58fb5730be47787">
+  <skeleton>/Users/bovet/Test.app/Contents/Resources/English.lproj/Localizable.strings</skeleton>
+  <translatable blockId="1" satt_key="title">
+    <segment segmentId="1">
+      <source>Main Window</source>
+      <target score="100">Fenetre &quot;principale&quot;</target>
+    </segment>
+  </translatable>
+  <skeleton>/Users/bovet/Test.app/Contents/Resources/English.lproj/Another.strings</skeleton>
+  <translatable blockId="2" satt_key="button.title">
+    <segment segmentId="1">
+      <source>Choose</source>
+      <target score="100">Choisir</target>
+    </segment>
+  </translatable>
+  <translatable blockId="3" satt_key="button.tooltip">
+    <segment segmentId="1">
+      <source>Button to choose the file</source>
+      <target score="100">Bouton pour choisir le fichier</target>
+    </segment>
+  </translatable>
+</txml>

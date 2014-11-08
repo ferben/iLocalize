@@ -1,0 +1,11 @@
+/* NO button */
+"NO" = "NO";
+/* YES button */
+"YES" = "YES";
+/* OK button */
+"OK" = "OK";
+
+/* Cancel message */
+"Cancel" = "Cancel";
+/* Remove message */
+"Remove" = "Remove";

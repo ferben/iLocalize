@@ -1,0 +1,3770 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Proj>
+  <ProjName>50onPaletteIM</ProjName>
+  <File>
+    <Filepath>50onPaletteIM/System/Library/Input Methods/50onPaletteServer.app/Contents/Resources/English.lproj/InfoPlist.strings</Filepath>
+    <TextItem>
+      <Description> Localized versions of Info.plist keys </Description>
+      <Position>CFBundleName</Position>
+      <TranslationSet>
+        <base loc="en">Japanese Kana Palette</base>
+        <tran loc="fr">Palette pour le japonais</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>NSHumanReadableCopyright</Position>
+      <TranslationSet>
+        <base loc="en">Copyright 2003 Apple Computer, Inc.</base>
+        <tran loc="fr">Copyright 2003 Apple Computer, Inc.</tran>
+      </TranslationSet>
+    </TextItem>
+  </File>
+  <File>
+    <Filepath>50onPaletteIM/System/Library/Input Methods/50onPaletteServer.app/Contents/Resources/English.lproj/MainMenu.nib.strings</Filepath>
+    <TextItem>
+      <Description/>
+      <Position>530.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾗ</base>
+        <tran loc="fr">ﾗ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>305.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｇ</base>
+        <tran loc="fr">ｇ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>425.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">Ｏ</base>
+        <tran loc="fr">Ｏ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>519.title</Position>
+      <TranslationSet>
+        <base loc="en">ヲ</base>
+        <tran loc="fr">ヲ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>276.title</Position>
+      <TranslationSet>
+        <base loc="en">お</base>
+        <tran loc="fr">お</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>475.title</Position>
+      <TranslationSet>
+        <base loc="en">f</base>
+        <tran loc="fr">f</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>288.title</Position>
+      <TranslationSet>
+        <base loc="en">¥</base>
+        <tran loc="fr">¥</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>402.title</Position>
+      <TranslationSet>
+        <base loc="en">u</base>
+        <tran loc="fr">u</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100605.title</Position>
+      <TranslationSet>
+        <base loc="en">Go to next item</base>
+        <tran loc="fr">Élément suivant</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100609.title</Position>
+      <TranslationSet>
+        <base loc="en">Go to next item</base>
+        <tran loc="fr">Élément suivant</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100612.title</Position>
+      <TranslationSet>
+        <base loc="en">Go to next item</base>
+        <tran loc="fr">Élément suivant</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>342.title</Position>
+      <TranslationSet>
+        <base loc="en">す</base>
+        <tran loc="fr">す</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>390.title</Position>
+      <TranslationSet>
+        <base loc="en">ら</base>
+        <tran loc="fr">ら</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>521.title</Position>
+      <TranslationSet>
+        <base loc="en">メ</base>
+        <tran loc="fr">メ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>367.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｔ</base>
+        <tran loc="fr">ｔ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>531.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾄ</base>
+        <tran loc="fr">ﾄ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>328.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">：</base>
+        <tran loc="fr">：</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>487.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｲ</base>
+        <tran loc="fr">ｲ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>291.title</Position>
+      <TranslationSet>
+        <base loc="en">み</base>
+        <tran loc="fr">み</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>239.title</Position>
+      <TranslationSet>
+        <base loc="en">デ</base>
+        <tran loc="fr">デ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>200.title</Position>
+      <TranslationSet>
+        <base loc="en">ク</base>
+        <tran loc="fr">ク</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>348.title</Position>
+      <TranslationSet>
+        <base loc="en">S</base>
+        <tran loc="fr">S</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>370.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">(</base>
+        <tran loc="fr">(</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>421.title</Position>
+      <TranslationSet>
+        <base loc="en">(</base>
+        <tran loc="fr">(</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>414.title</Position>
+      <TranslationSet>
+        <base loc="en">@</base>
+        <tran loc="fr">@</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>382.title</Position>
+      <TranslationSet>
+        <base loc="en">ピ</base>
+        <tran loc="fr">ピ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>350.title</Position>
+      <TranslationSet>
+        <base loc="en">ゼ</base>
+        <tran loc="fr">ゼ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>308.title</Position>
+      <TranslationSet>
+        <base loc="en">ぬ</base>
+        <tran loc="fr">ぬ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100236.title</Position>
+      <TranslationSet>
+        <base loc="en">Delete</base>
+        <tran loc="fr">Suppr.</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100243.title</Position>
+      <TranslationSet>
+        <base loc="en">Delete</base>
+        <tran loc="fr">Suppr.</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100484.title</Position>
+      <TranslationSet>
+        <base loc="en">Delete</base>
+        <tran loc="fr">Suppr.</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>301.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">）</base>
+        <tran loc="fr">）</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>486.title</Position>
+      <TranslationSet>
+        <base loc="en">）</base>
+        <tran loc="fr">）</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>503.title</Position>
+      <TranslationSet>
+        <base loc="en">）</base>
+        <tran loc="fr">）</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>492.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">｡</base>
+        <tran loc="fr">｡</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>313.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">Ｍ</base>
+        <tran loc="fr">Ｍ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>264.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｅ</base>
+        <tran loc="fr">ｅ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>393.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾕ</base>
+        <tran loc="fr">ﾕ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>461.title</Position>
+      <TranslationSet>
+        <base loc="en">え</base>
+        <tran loc="fr">え</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>438.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ヰ</base>
+        <tran loc="fr">ヰ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>438.title</Position>
+      <TranslationSet>
+        <base loc="en">ヰ</base>
+        <tran loc="fr">ヰ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>510.title</Position>
+      <TranslationSet>
+        <base loc="en">d</base>
+        <tran loc="fr">d</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>533.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾁﾞ</base>
+        <tran loc="fr">ﾁﾞ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>403.title</Position>
+      <TranslationSet>
+        <base loc="en">w</base>
+        <tran loc="fr">w</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>498.title</Position>
+      <TranslationSet>
+        <base loc="en">ャ</base>
+        <tran loc="fr">ャ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>201.title</Position>
+      <TranslationSet>
+        <base loc="en">る</base>
+        <tran loc="fr">る</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>405.title</Position>
+      <TranslationSet>
+        <base loc="en">せ</base>
+        <tran loc="fr">せ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>417.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾆ</base>
+        <tran loc="fr">ﾆ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>514.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｖ</base>
+        <tran loc="fr">ｖ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>325.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｰ</base>
+        <tran loc="fr">ｰ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>357.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">８</base>
+        <tran loc="fr">８</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>361.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾍﾟ</base>
+        <tran loc="fr">ﾍﾟ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>220.title</Position>
+      <TranslationSet>
+        <base loc="en">キ</base>
+        <tran loc="fr">キ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>215.title</Position>
+      <TranslationSet>
+        <base loc="en">ヅ</base>
+        <tran loc="fr">ヅ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>341.title</Position>
+      <TranslationSet>
+        <base loc="en">ぽ</base>
+        <tran loc="fr">ぽ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>279.title</Position>
+      <TranslationSet>
+        <base loc="en">Q</base>
+        <tran loc="fr">Q</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>505.title</Position>
+      <TranslationSet>
+        <base loc="en">9</base>
+        <tran loc="fr">9</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>459.title</Position>
+      <TranslationSet>
+        <base loc="en">B</base>
+        <tran loc="fr">B</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>397.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｸﾞ</base>
+        <tran loc="fr">ｸﾞ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>497.title</Position>
+      <TranslationSet>
+        <base loc="en">の</base>
+        <tran loc="fr">の</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>378.title</Position>
+      <TranslationSet>
+        <base loc="en">ゾ</base>
+        <tran loc="fr">ゾ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>246.title</Position>
+      <TranslationSet>
+        <base loc="en">ブ</base>
+        <tran loc="fr">ブ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>268.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">｣</base>
+        <tran loc="fr">｣</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100633.title</Position>
+      <TranslationSet>
+        <base loc="en">Return</base>
+        <tran loc="fr">Retour</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100636.title</Position>
+      <TranslationSet>
+        <base loc="en">Return</base>
+        <tran loc="fr">Retour</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100638.title</Position>
+      <TranslationSet>
+        <base loc="en">Return</base>
+        <tran loc="fr">Retour</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>391.title</Position>
+      <TranslationSet>
+        <base loc="en">ぎ</base>
+        <tran loc="fr">ぎ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>502.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｃ</base>
+        <tran loc="fr">ｃ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>419.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">Ｋ</base>
+        <tran loc="fr">Ｋ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>478.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾓ</base>
+        <tran loc="fr">ﾓ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>324.title</Position>
+      <TranslationSet>
+        <base loc="en">b</base>
+        <tran loc="fr">b</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100518.title</Position>
+      <TranslationSet>
+        <base loc="en">↓</base>
+        <tran loc="fr">↓</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100619.title</Position>
+      <TranslationSet>
+        <base loc="en">↓</base>
+        <tran loc="fr">↓</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100621.title</Position>
+      <TranslationSet>
+        <base loc="en">↓</base>
+        <tran loc="fr">↓</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>532.title</Position>
+      <TranslationSet>
+        <base loc="en">q</base>
+        <tran loc="fr">q</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>423.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾀ</base>
+        <tran loc="fr">ﾀ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>501.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｐ</base>
+        <tran loc="fr">ｐ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>452.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">Ｘ</base>
+        <tran loc="fr">Ｘ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>349.title</Position>
+      <TranslationSet>
+        <base loc="en">ろ</base>
+        <tran loc="fr">ろ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>500.title</Position>
+      <TranslationSet>
+        <base loc="en">ュ</base>
+        <tran loc="fr">ュ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>527.title</Position>
+      <TranslationSet>
+        <base loc="en">そ</base>
+        <tran loc="fr">そ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>203.title</Position>
+      <TranslationSet>
+        <base loc="en">ッ</base>
+        <tran loc="fr">ッ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>299.title</Position>
+      <TranslationSet>
+        <base loc="en">カ</base>
+        <tran loc="fr">カ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>455.title</Position>
+      <TranslationSet>
+        <base loc="en">ほ</base>
+        <tran loc="fr">ほ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>299.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｶ</base>
+        <tran loc="fr">ｶ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>235.title</Position>
+      <TranslationSet>
+        <base loc="en">?</base>
+        <tran loc="fr">?</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>238.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">?</base>
+        <tran loc="fr">?</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>488.title</Position>
+      <TranslationSet>
+        <base loc="en">W</base>
+        <tran loc="fr">W</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>311.title</Position>
+      <TranslationSet>
+        <base loc="en">,</base>
+        <tran loc="fr">,</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>520.title</Position>
+      <TranslationSet>
+        <base loc="en">D</base>
+        <tran loc="fr">D</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>412.title</Position>
+      <TranslationSet>
+        <base loc="en">と</base>
+        <tran loc="fr">と</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>473.title</Position>
+      <TranslationSet>
+        <base loc="en">バ</base>
+        <tran loc="fr">バ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>410.title</Position>
+      <TranslationSet>
+        <base loc="en">ジ</base>
+        <tran loc="fr">ジ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>470.title</Position>
+      <TranslationSet>
+        <base loc="en">ヴ</base>
+        <tran loc="fr">ヴ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>482.title</Position>
+      <TranslationSet>
+        <base loc="en">が</base>
+        <tran loc="fr">が</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>462.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾑ</base>
+        <tran loc="fr">ﾑ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>339.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">Ｉ</base>
+        <tran loc="fr">Ｉ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>207.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ａ</base>
+        <tran loc="fr">ａ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100337.title</Position>
+      <TranslationSet>
+        <base loc="en">↑</base>
+        <tran loc="fr">↑</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100618.title</Position>
+      <TranslationSet>
+        <base loc="en">↑</base>
+        <tran loc="fr">↑</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100623.title</Position>
+      <TranslationSet>
+        <base loc="en">↑</base>
+        <tran loc="fr">↑</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>289.title</Position>
+      <TranslationSet>
+        <base loc="en">s</base>
+        <tran loc="fr">s</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>496.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾀﾞ</base>
+        <tran loc="fr">ﾀﾞ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>329.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">−</base>
+        <tran loc="fr">−</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>509.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">Ｚ</base>
+        <tran loc="fr">Ｚ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>386.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｒ</base>
+        <tran loc="fr">ｒ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>229.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾂ</base>
+        <tran loc="fr">ﾂ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>477.title</Position>
+      <TranslationSet>
+        <base loc="en">た</base>
+        <tran loc="fr">た</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>442.title</Position>
+      <TranslationSet>
+        <base loc="en">ョ</base>
+        <tran loc="fr">ョ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>323.title</Position>
+      <TranslationSet>
+        <base loc="en">わ</base>
+        <tran loc="fr">わ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>274.title</Position>
+      <TranslationSet>
+        <base loc="en">べ</base>
+        <tran loc="fr">べ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>409.title</Position>
+      <TranslationSet>
+        <base loc="en">ォ</base>
+        <tran loc="fr">ォ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>415.title</Position>
+      <TranslationSet>
+        <base loc="en">チ</base>
+        <tran loc="fr">チ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>479.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｴ</base>
+        <tran loc="fr">ｴ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>258.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｹﾞ</base>
+        <tran loc="fr">ｹﾞ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>371.title</Position>
+      <TranslationSet>
+        <base loc="en">U</base>
+        <tran loc="fr">U</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>261.title</Position>
+      <TranslationSet>
+        <base loc="en">F</base>
+        <tran loc="fr">F</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>317.title</Position>
+      <TranslationSet>
+        <base loc="en">.</base>
+        <tran loc="fr">.</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100453.title</Position>
+      <TranslationSet>
+        <base loc="en">Use Half-width</base>
+        <tran loc="fr">Demi-largeur</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>293.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｧ</base>
+        <tran loc="fr">ｧ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>504.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">／</base>
+        <tran loc="fr">／</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>292.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾌﾟ</base>
+        <tran loc="fr">ﾌﾟ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>307.title</Position>
+      <TranslationSet>
+        <base loc="en">ズ</base>
+        <tran loc="fr">ズ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>411.title</Position>
+      <TranslationSet>
+        <base loc="en">ヒ</base>
+        <tran loc="fr">ヒ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>248.title</Position>
+      <TranslationSet>
+        <base loc="en">。</base>
+        <tran loc="fr">。</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>492.title</Position>
+      <TranslationSet>
+        <base loc="en">。</base>
+        <tran loc="fr">。</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>481.title</Position>
+      <TranslationSet>
+        <base loc="en">な</base>
+        <tran loc="fr">な</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>467.title</Position>
+      <TranslationSet>
+        <base loc="en">n</base>
+        <tran loc="fr">n</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>212.title</Position>
+      <TranslationSet>
+        <base loc="en">を</base>
+        <tran loc="fr">を</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100221.title</Position>
+      <TranslationSet>
+        <base loc="en">あ</base>
+        <tran loc="fr">あ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100535.title</Position>
+      <TranslationSet>
+        <base loc="en">あ</base>
+        <tran loc="fr">あ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>281.label</Position>
+      <TranslationSet>
+        <base loc="en">あ</base>
+        <tran loc="fr">あ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>368.title</Position>
+      <TranslationSet>
+        <base loc="en">あ</base>
+        <tran loc="fr">あ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>457.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">Ｇ</base>
+        <tran loc="fr">Ｇ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>363.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｏ</base>
+        <tran loc="fr">ｏ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>244.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">Ｔ</base>
+        <tran loc="fr">Ｔ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>319.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾌ</base>
+        <tran loc="fr">ﾌ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>485.title</Position>
+      <TranslationSet>
+        <base loc="en">け</base>
+        <tran loc="fr">け</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>530.title</Position>
+      <TranslationSet>
+        <base loc="en">ラ</base>
+        <tran loc="fr">ラ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>471.title</Position>
+      <TranslationSet>
+        <base loc="en">め</base>
+        <tran loc="fr">め</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>255.title</Position>
+      <TranslationSet>
+        <base loc="en">3</base>
+        <tran loc="fr">3</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>335.title</Position>
+      <TranslationSet>
+        <base loc="en">ぷ</base>
+        <tran loc="fr">ぷ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>476.title</Position>
+      <TranslationSet>
+        <base loc="en">ェ</base>
+        <tran loc="fr">ェ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>253.title</Position>
+      <TranslationSet>
+        <base loc="en">ハ</base>
+        <tran loc="fr">ハ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>522.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｺ</base>
+        <tran loc="fr">ｺ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>523.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">２</base>
+        <tran loc="fr">２</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>358.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｩ</base>
+        <tran loc="fr">ｩ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>204.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">！</base>
+        <tran loc="fr">！</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>351.title</Position>
+      <TranslationSet>
+        <base loc="en">！</base>
+        <tran loc="fr">！</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>396.title</Position>
+      <TranslationSet>
+        <base loc="en">！</base>
+        <tran loc="fr">！</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>472.title</Position>
+      <TranslationSet>
+        <base loc="en">ゴ</base>
+        <tran loc="fr">ゴ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>365.title</Position>
+      <TranslationSet>
+        <base loc="en">ボ</base>
+        <tran loc="fr">ボ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>219.title</Position>
+      <TranslationSet>
+        <base loc="en">「</base>
+        <tran loc="fr">「</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>428.title</Position>
+      <TranslationSet>
+        <base loc="en">「</base>
+        <tran loc="fr">「</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>275.title</Position>
+      <TranslationSet>
+        <base loc="en">つ</base>
+        <tran loc="fr">つ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>231.title</Position>
+      <TranslationSet>
+        <base loc="en">H</base>
+        <tran loc="fr">H</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>273.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">’</base>
+        <tran loc="fr">’</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>472.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｺﾞ</base>
+        <tran loc="fr">ｺﾞ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>430.title</Position>
+      <TranslationSet>
+        <base loc="en">l</base>
+        <tran loc="fr">l</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>310.title</Position>
+      <TranslationSet>
+        <base loc="en">ゐ</base>
+        <tran loc="fr">ゐ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>441.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｍ</base>
+        <tran loc="fr">ｍ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>211.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">Ｅ</base>
+        <tran loc="fr">Ｅ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>499.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾝ</base>
+        <tran loc="fr">ﾝ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>439.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾎ</base>
+        <tran loc="fr">ﾎ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>490.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">Ｖ</base>
+        <tran loc="fr">Ｖ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>380.title</Position>
+      <TranslationSet>
+        <base loc="en">ゃ</base>
+        <tran loc="fr">ゃ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>460.title</Position>
+      <TranslationSet>
+        <base loc="en">ル</base>
+        <tran loc="fr">ル</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>474.title</Position>
+      <TranslationSet>
+        <base loc="en">こ</base>
+        <tran loc="fr">こ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>312.title</Position>
+      <TranslationSet>
+        <base loc="en">1</base>
+        <tran loc="fr">1</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>480.title</Position>
+      <TranslationSet>
+        <base loc="en">Y</base>
+        <tran loc="fr">Y</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>224.title</Position>
+      <TranslationSet>
+        <base loc="en">ネ</base>
+        <tran loc="fr">ネ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>358.title</Position>
+      <TranslationSet>
+        <base loc="en">ゥ</base>
+        <tran loc="fr">ゥ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>240.title</Position>
+      <TranslationSet>
+        <base loc="en">ふ</base>
+        <tran loc="fr">ふ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>260.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">０</base>
+        <tran loc="fr">０</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>200.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｸ</base>
+        <tran loc="fr">ｸ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>508.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾋﾞ</base>
+        <tran loc="fr">ﾋﾞ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>409.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｫ</base>
+        <tran loc="fr">ｫ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>362.title</Position>
+      <TranslationSet>
+        <base loc="en">て</base>
+        <tran loc="fr">て</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>226.title</Position>
+      <TranslationSet>
+        <base loc="en">マ</base>
+        <tran loc="fr">マ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>399.title</Position>
+      <TranslationSet>
+        <base loc="en">ザ</base>
+        <tran loc="fr">ザ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>516.title</Position>
+      <TranslationSet>
+        <base loc="en">J</base>
+        <tran loc="fr">J</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>239.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾃﾞ</base>
+        <tran loc="fr">ﾃﾞ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>206.title</Position>
+      <TranslationSet>
+        <base loc="en">j</base>
+        <tran loc="fr">j</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>398.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">Ｃ</base>
+        <tran loc="fr">Ｃ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>249.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｋ</base>
+        <tran loc="fr">ｋ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>210.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾛ</base>
+        <tran loc="fr">ﾛ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>242.title</Position>
+      <TranslationSet>
+        <base loc="en">う</base>
+        <tran loc="fr">う</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>210.title</Position>
+      <TranslationSet>
+        <base loc="en">ロ</base>
+        <tran loc="fr">ロ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>320.title</Position>
+      <TranslationSet>
+        <base loc="en">ゅ</base>
+        <tran loc="fr">ゅ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>392.title</Position>
+      <TranslationSet>
+        <base loc="en">さ</base>
+        <tran loc="fr">さ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>224.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾈ</base>
+        <tran loc="fr">ﾈ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>373.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">Ｐ</base>
+        <tran loc="fr">Ｐ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>420.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｘ</base>
+        <tran loc="fr">ｘ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>450.title</Position>
+      <TranslationSet>
+        <base loc="en">y</base>
+        <tran loc="fr">y</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>217.title</Position>
+      <TranslationSet>
+        <base loc="en">_</base>
+        <tran loc="fr">_</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>383.title</Position>
+      <TranslationSet>
+        <base loc="en">7</base>
+        <tran loc="fr">7</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>512.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｾ</base>
+        <tran loc="fr">ｾ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>340.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">６</base>
+        <tran loc="fr">６</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>432.title</Position>
+      <TranslationSet>
+        <base loc="en">ィ</base>
+        <tran loc="fr">ィ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>417.title</Position>
+      <TranslationSet>
+        <base loc="en">ニ</base>
+        <tran loc="fr">ニ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>214.title</Position>
+      <TranslationSet>
+        <base loc="en">び</base>
+        <tran loc="fr">び</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>252.title</Position>
+      <TranslationSet>
+        <base loc="en">だ</base>
+        <tran loc="fr">だ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>397.title</Position>
+      <TranslationSet>
+        <base loc="en">グ</base>
+        <tran loc="fr">グ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>250.title</Position>
+      <TranslationSet>
+        <base loc="en">ヘ</base>
+        <tran loc="fr">ヘ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>500.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｭ</base>
+        <tran loc="fr">ｭ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>469.title</Position>
+      <TranslationSet>
+        <base loc="en">L</base>
+        <tran loc="fr">L</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>376.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">”</base>
+        <tran loc="fr">”</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>290.title</Position>
+      <TranslationSet>
+        <base loc="en">h</base>
+        <tran loc="fr">h</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>460.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾙ</base>
+        <tran loc="fr">ﾙ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>443.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｉ</base>
+        <tran loc="fr">ｉ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>247.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">Ａ</base>
+        <tran loc="fr">Ａ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>300.title</Position>
+      <TranslationSet>
+        <base loc="en">ー</base>
+        <tran loc="fr">ー</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>325.title</Position>
+      <TranslationSet>
+        <base loc="en">ー</base>
+        <tran loc="fr">ー</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>400.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾎﾟ</base>
+        <tran loc="fr">ﾎﾟ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>435.title</Position>
+      <TranslationSet>
+        <base loc="en">い</base>
+        <tran loc="fr">い</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>332.title</Position>
+      <TranslationSet>
+        <base loc="en">し</base>
+        <tran loc="fr">し</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>466.title</Position>
+      <TranslationSet>
+        <base loc="en">ょ</base>
+        <tran loc="fr">ょ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>303.title</Position>
+      <TranslationSet>
+        <base loc="en">ワ</base>
+        <tran loc="fr">ワ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>470.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｳﾞ</base>
+        <tran loc="fr">ｳﾞ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>237.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｚ</base>
+        <tran loc="fr">ｚ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>446.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">Ｒ</base>
+        <tran loc="fr">Ｒ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100534.title</Position>
+      <TranslationSet>
+        <base loc="en">Use Full-width</base>
+        <tran loc="fr">Largeur complète</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>253.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾊ</base>
+        <tran loc="fr">ﾊ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>399.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｻﾞ</base>
+        <tran loc="fr">ｻﾞ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>225.title</Position>
+      <TranslationSet>
+        <base loc="en">5</base>
+        <tran loc="fr">5</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>215.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾂﾞ</base>
+        <tran loc="fr">ﾂﾞ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>473.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾊﾞ</base>
+        <tran loc="fr">ﾊﾞ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>334.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">４</base>
+        <tran loc="fr">４</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>344.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｼ</base>
+        <tran loc="fr">ｼ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>316.title</Position>
+      <TranslationSet>
+        <base loc="en">ぱ</base>
+        <tran loc="fr">ぱ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>388.title</Position>
+      <TranslationSet>
+        <base loc="en">ド</base>
+        <tran loc="fr">ド</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>293.title</Position>
+      <TranslationSet>
+        <base loc="en">ァ</base>
+        <tran loc="fr">ァ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>361.title</Position>
+      <TranslationSet>
+        <base loc="en">ペ</base>
+        <tran loc="fr">ペ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>258.title</Position>
+      <TranslationSet>
+        <base loc="en">ゲ</base>
+        <tran loc="fr">ゲ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>297.title</Position>
+      <TranslationSet>
+        <base loc="en">ぢ</base>
+        <tran loc="fr">ぢ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>203.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｯ</base>
+        <tran loc="fr">ｯ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>347.title</Position>
+      <TranslationSet>
+        <base loc="en">N</base>
+        <tran loc="fr">N</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>384.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾔ</base>
+        <tran loc="fr">ﾔ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>469.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">Ｌ</base>
+        <tran loc="fr">Ｌ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>510.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｄ</base>
+        <tran loc="fr">ｄ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>331.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ヱ</base>
+        <tran loc="fr">ヱ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>331.title</Position>
+      <TranslationSet>
+        <base loc="en">ヱ</base>
+        <tran loc="fr">ヱ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>338.title</Position>
+      <TranslationSet>
+        <base loc="en">ぉ</base>
+        <tran loc="fr">ぉ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>264.title</Position>
+      <TranslationSet>
+        <base loc="en">e</base>
+        <tran loc="fr">e</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>410.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｼﾞ</base>
+        <tran loc="fr">ｼﾞ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>514.title</Position>
+      <TranslationSet>
+        <base loc="en">v</base>
+        <tran loc="fr">v</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>228.title</Position>
+      <TranslationSet>
+        <base loc="en">ず</base>
+        <tran loc="fr">ず</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>478.title</Position>
+      <TranslationSet>
+        <base loc="en">モ</base>
+        <tran loc="fr">モ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>465.title</Position>
+      <TranslationSet>
+        <base loc="en">り</base>
+        <tran loc="fr">り</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>217.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">＿</base>
+        <tran loc="fr">＿</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>403.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｗ</base>
+        <tran loc="fr">ｗ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>463.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾇ</base>
+        <tran loc="fr">ﾇ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100298.title</Position>
+      <TranslationSet>
+        <base loc="en">Convert</base>
+        <tran loc="fr">Convertir</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>517.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｱ</base>
+        <tran loc="fr">ｱ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>505.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">９</base>
+        <tran loc="fr">９</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>232.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾍﾞ</base>
+        <tran loc="fr">ﾍﾞ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>269.title</Position>
+      <TranslationSet>
+        <base loc="en">ぼ</base>
+        <tran loc="fr">ぼ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>282.title</Position>
+      <TranslationSet>
+        <base loc="en">ガ</base>
+        <tran loc="fr">ガ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>229.title</Position>
+      <TranslationSet>
+        <base loc="en">ツ</base>
+        <tran loc="fr">ツ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>373.title</Position>
+      <TranslationSet>
+        <base loc="en">P</base>
+        <tran loc="fr">P</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>357.title</Position>
+      <TranslationSet>
+        <base loc="en">8</base>
+        <tran loc="fr">8</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>398.title</Position>
+      <TranslationSet>
+        <base loc="en">C</base>
+        <tran loc="fr">C</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>423.title</Position>
+      <TranslationSet>
+        <base loc="en">タ</base>
+        <tran loc="fr">タ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>292.title</Position>
+      <TranslationSet>
+        <base loc="en">プ</base>
+        <tran loc="fr">プ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>218.title</Position>
+      <TranslationSet>
+        <base loc="en">は</base>
+        <tran loc="fr">は</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>219.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">｢</base>
+        <tran loc="fr">｢</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>475.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｆ</base>
+        <tran loc="fr">ｆ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>347.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">Ｎ</base>
+        <tran loc="fr">Ｎ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>406.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾖ</base>
+        <tran loc="fr">ﾖ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>511.title</Position>
+      <TranslationSet>
+        <base loc="en">か</base>
+        <tran loc="fr">か</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>499.title</Position>
+      <TranslationSet>
+        <base loc="en">ン</base>
+        <tran loc="fr">ン</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>305.title</Position>
+      <TranslationSet>
+        <base loc="en">g</base>
+        <tran loc="fr">g</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>367.title</Position>
+      <TranslationSet>
+        <base loc="en">t</base>
+        <tran loc="fr">t</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>356.title</Position>
+      <TranslationSet>
+        <base loc="en">よ</base>
+        <tran loc="fr">よ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>462.title</Position>
+      <TranslationSet>
+        <base loc="en">ム</base>
+        <tran loc="fr">ム</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>495.title</Position>
+      <TranslationSet>
+        <base loc="en">じ</base>
+        <tran loc="fr">じ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>208.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾅ</base>
+        <tran loc="fr">ﾅ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>402.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｕ</base>
+        <tran loc="fr">ｕ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>209.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｳ</base>
+        <tran loc="fr">ｳ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>287.title</Position>
+      <TranslationSet>
+        <base loc="en">テ</base>
+        <tran loc="fr">テ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>309.title</Position>
+      <TranslationSet>
+        <base loc="en">ギ</base>
+        <tran loc="fr">ギ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>528.title</Position>
+      <TranslationSet>
+        <base loc="en">ま</base>
+        <tran loc="fr">ま</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>328.title</Position>
+      <TranslationSet>
+        <base loc="en">:</base>
+        <tran loc="fr"> :</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>446.title</Position>
+      <TranslationSet>
+        <base loc="en">R</base>
+        <tran loc="fr">R</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100327.title</Position>
+      <TranslationSet>
+        <base loc="en">Confirm</base>
+        <tran loc="fr">Confirmer</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>301.title</Position>
+      <TranslationSet>
+        <base loc="en">)</base>
+        <tran loc="fr">)</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>486.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">)</base>
+        <tran loc="fr">)</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>247.title</Position>
+      <TranslationSet>
+        <base loc="en">A</base>
+        <tran loc="fr">A</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>251.label</Position>
+      <TranslationSet>
+        <base loc="en">A</base>
+        <tran loc="fr">A</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>493.title</Position>
+      <TranslationSet>
+        <base loc="en">ね</base>
+        <tran loc="fr">ね</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>319.title</Position>
+      <TranslationSet>
+        <base loc="en">フ</base>
+        <tran loc="fr">フ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>304.title</Position>
+      <TranslationSet>
+        <base loc="en">ソ</base>
+        <tran loc="fr">ソ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>370.title</Position>
+      <TranslationSet>
+        <base loc="en">（</base>
+        <tran loc="fr">（</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>385.title</Position>
+      <TranslationSet>
+        <base loc="en">（</base>
+        <tran loc="fr">（</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>421.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">（</base>
+        <tran loc="fr">（</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>418.title</Position>
+      <TranslationSet>
+        <base loc="en">き</base>
+        <tran loc="fr">き</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>231.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">Ｈ</base>
+        <tran loc="fr">Ｈ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>436.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾐ</base>
+        <tran loc="fr">ﾐ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>307.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｽﾞ</base>
+        <tran loc="fr">ｽﾞ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100632.title</Position>
+      <TranslationSet>
+        <base loc="en">Space</base>
+        <tran loc="fr">Espace</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100637.title</Position>
+      <TranslationSet>
+        <base loc="en">Space</base>
+        <tran loc="fr">Espace</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100639.title</Position>
+      <TranslationSet>
+        <base loc="en">Space</base>
+        <tran loc="fr">Espace</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100407.title</Position>
+      <TranslationSet>
+        <base loc="en">←</base>
+        <tran loc="fr">←</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100616.title</Position>
+      <TranslationSet>
+        <base loc="en">←</base>
+        <tran loc="fr">←</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100620.title</Position>
+      <TranslationSet>
+        <base loc="en">←</base>
+        <tran loc="fr">←</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>207.title</Position>
+      <TranslationSet>
+        <base loc="en">a</base>
+        <tran loc="fr">a</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>386.title</Position>
+      <TranslationSet>
+        <base loc="en">r</base>
+        <tran loc="fr">r</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>287.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾃ</base>
+        <tran loc="fr">ﾃ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>289.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｓ</base>
+        <tran loc="fr">ｓ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>393.title</Position>
+      <TranslationSet>
+        <base loc="en">ユ</base>
+        <tran loc="fr">ユ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>286.title</Position>
+      <TranslationSet>
+        <base loc="en">ぞ</base>
+        <tran loc="fr">ぞ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>479.title</Position>
+      <TranslationSet>
+        <base loc="en">エ</base>
+        <tran loc="fr">エ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>496.title</Position>
+      <TranslationSet>
+        <base loc="en">ダ</base>
+        <tran loc="fr">ダ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>354.title</Position>
+      <TranslationSet>
+        <base loc="en">へ</base>
+        <tran loc="fr">へ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>387.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｵ</base>
+        <tran loc="fr">ｵ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>244.title</Position>
+      <TranslationSet>
+        <base loc="en">T</base>
+        <tran loc="fr">T</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>457.title</Position>
+      <TranslationSet>
+        <base loc="en">G</base>
+        <tran loc="fr">G</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>504.title</Position>
+      <TranslationSet>
+        <base loc="en">/</base>
+        <tran loc="fr">/</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>388.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾄﾞ</base>
+        <tran loc="fr">ﾄﾞ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>519.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｦ</base>
+        <tran loc="fr">ｦ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>317.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">．</base>
+        <tran loc="fr">．</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>246.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾌﾞ</base>
+        <tran loc="fr">ﾌﾞ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>434.title</Position>
+      <TranslationSet>
+        <base loc="en">に</base>
+        <tran loc="fr">に</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>512.title</Position>
+      <TranslationSet>
+        <base loc="en">セ</base>
+        <tran loc="fr">セ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>508.title</Position>
+      <TranslationSet>
+        <base loc="en">ビ</base>
+        <tran loc="fr">ビ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>376.title</Position>
+      <TranslationSet>
+        <base loc="en">\"</base>
+        <tran loc="fr">\"</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>296.title</Position>
+      <TranslationSet>
+        <base loc="en">く</base>
+        <tran loc="fr">く</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>521.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾒ</base>
+        <tran loc="fr">ﾒ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>324.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｂ</base>
+        <tran loc="fr">ｂ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>516.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">Ｊ</base>
+        <tran loc="fr">Ｊ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>502.title</Position>
+      <TranslationSet>
+        <base loc="en">c</base>
+        <tran loc="fr">c</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100468.title</Position>
+      <TranslationSet>
+        <base loc="en">→</base>
+        <tran loc="fr">→</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100617.title</Position>
+      <TranslationSet>
+        <base loc="en">→</base>
+        <tran loc="fr">→</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>100622.title</Position>
+      <TranslationSet>
+        <base loc="en">→</base>
+        <tran loc="fr">→</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>501.title</Position>
+      <TranslationSet>
+        <base loc="en">p</base>
+        <tran loc="fr">p</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>532.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｑ</base>
+        <tran loc="fr">ｑ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>480.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">Ｙ</base>
+        <tran loc="fr">Ｙ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>415.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾁ</base>
+        <tran loc="fr">ﾁ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>271.title</Position>
+      <TranslationSet>
+        <base loc="en">ぜ</base>
+        <tran loc="fr">ぜ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>369.title</Position>
+      <TranslationSet>
+        <base loc="en">れ</base>
+        <tran loc="fr">れ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>384.title</Position>
+      <TranslationSet>
+        <base loc="en">ヤ</base>
+        <tran loc="fr">ヤ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>375.title</Position>
+      <TranslationSet>
+        <base loc="en">ぺ</base>
+        <tran loc="fr">ぺ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>533.title</Position>
+      <TranslationSet>
+        <base loc="en">ヂ</base>
+        <tran loc="fr">ヂ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>387.title</Position>
+      <TranslationSet>
+        <base loc="en">オ</base>
+        <tran loc="fr">オ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>223.title</Position>
+      <TranslationSet>
+        <base loc="en">？</base>
+        <tran loc="fr">？</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>235.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">？</base>
+        <tran loc="fr">？</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>238.title</Position>
+      <TranslationSet>
+        <base loc="en">？</base>
+        <tran loc="fr">？</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>220.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｷ</base>
+        <tran loc="fr">ｷ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>490.title</Position>
+      <TranslationSet>
+        <base loc="en">V</base>
+        <tran loc="fr">V</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>329.title</Position>
+      <TranslationSet>
+        <base loc="en">-</base>
+        <tran loc="fr">-</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>211.title</Position>
+      <TranslationSet>
+        <base loc="en">E</base>
+        <tran loc="fr">E</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>311.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">，</base>
+        <tran loc="fr">，</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>440.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">､</base>
+        <tran loc="fr">､</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>404.title</Position>
+      <TranslationSet>
+        <base loc="en">パ</base>
+        <tran loc="fr">パ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>437.title</Position>
+      <TranslationSet>
+        <base loc="en">ス</base>
+        <tran loc="fr">ス</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>222.title</Position>
+      <TranslationSet>
+        <base loc="en">ど</base>
+        <tran loc="fr">ど</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>314.title</Position>
+      <TranslationSet>
+        <base loc="en">、</base>
+        <tran loc="fr">、</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>440.title</Position>
+      <TranslationSet>
+        <base loc="en">、</base>
+        <tran loc="fr">、</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>441.title</Position>
+      <TranslationSet>
+        <base loc="en">m</base>
+        <tran loc="fr">m</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>199.title</Position>
+      <TranslationSet>
+        <base loc="en">ゑ</base>
+        <tran loc="fr">ゑ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>447.title</Position>
+      <TranslationSet>
+        <base loc="en">ぁ</base>
+        <tran loc="fr">ぁ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>303.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾜ</base>
+        <tran loc="fr">ﾜ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>430.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｌ</base>
+        <tran loc="fr">ｌ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>520.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">Ｄ</base>
+        <tran loc="fr">Ｄ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>488.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">Ｗ</base>
+        <tran loc="fr">Ｗ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>226.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾏ</base>
+        <tran loc="fr">ﾏ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>343.title</Position>
+      <TranslationSet>
+        <base loc="en">げ</base>
+        <tran loc="fr">げ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>416.title</Position>
+      <TranslationSet>
+        <base loc="en">も</base>
+        <tran loc="fr">も</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>322.title</Position>
+      <TranslationSet>
+        <base loc="en">リ</base>
+        <tran loc="fr">リ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>422.title</Position>
+      <TranslationSet>
+        <base loc="en">~</base>
+        <tran loc="fr">~</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>350.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｾﾞ</base>
+        <tran loc="fr">ｾﾞ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>260.title</Position>
+      <TranslationSet>
+        <base loc="en">0</base>
+        <tran loc="fr">0</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>452.title</Position>
+      <TranslationSet>
+        <base loc="en">X</base>
+        <tran loc="fr">X</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>525.title</Position>
+      <TranslationSet>
+        <base loc="en">ぴ</base>
+        <tran loc="fr">ぴ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>422.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">〜</base>
+        <tran loc="fr">〜</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>463.title</Position>
+      <TranslationSet>
+        <base loc="en">ヌ</base>
+        <tran loc="fr">ヌ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>487.title</Position>
+      <TranslationSet>
+        <base loc="en">イ</base>
+        <tran loc="fr">イ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>312.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">１</base>
+        <tran loc="fr">１</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>282.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｶﾞ</base>
+        <tran loc="fr">ｶﾞ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>278.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｹ</base>
+        <tran loc="fr">ｹ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>382.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾋﾟ</base>
+        <tran loc="fr">ﾋﾟ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>476.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｪ</base>
+        <tran loc="fr">ｪ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>436.title</Position>
+      <TranslationSet>
+        <base loc="en">ミ</base>
+        <tran loc="fr">ミ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>344.title</Position>
+      <TranslationSet>
+        <base loc="en">シ</base>
+        <tran loc="fr">シ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>426.title</Position>
+      <TranslationSet>
+        <base loc="en">で</base>
+        <tran loc="fr">で</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>419.title</Position>
+      <TranslationSet>
+        <base loc="en">K</base>
+        <tran loc="fr">K</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>363.title</Position>
+      <TranslationSet>
+        <base loc="en">o</base>
+        <tran loc="fr">o</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>526.title</Position>
+      <TranslationSet>
+        <base loc="en">ぃ</base>
+        <tran loc="fr">ぃ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>266.title</Position>
+      <TranslationSet>
+        <base loc="en">ん</base>
+        <tran loc="fr">ん</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>261.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">Ｆ</base>
+        <tran loc="fr">Ｆ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>467.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｎ</base>
+        <tran loc="fr">ｎ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>250.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾍ</base>
+        <tran loc="fr">ﾍ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>288.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">￥</base>
+        <tran loc="fr">￥</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>371.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">Ｕ</base>
+        <tran loc="fr">Ｕ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>406.title</Position>
+      <TranslationSet>
+        <base loc="en">ヨ</base>
+        <tran loc="fr">ヨ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>364.title</Position>
+      <TranslationSet>
+        <base loc="en">む</base>
+        <tran loc="fr">む</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>458.title</Position>
+      <TranslationSet>
+        <base loc="en">ぐ</base>
+        <tran loc="fr">ぐ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>509.title</Position>
+      <TranslationSet>
+        <base loc="en">Z</base>
+        <tran loc="fr">Z</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>523.title</Position>
+      <TranslationSet>
+        <base loc="en">2</base>
+        <tran loc="fr">2</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>209.title</Position>
+      <TranslationSet>
+        <base loc="en">ウ</base>
+        <tran loc="fr">ウ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>294.title</Position>
+      <TranslationSet>
+        <base loc="en">ノ</base>
+        <tran loc="fr">ノ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>333.title</Position>
+      <TranslationSet>
+        <base loc="en">ぶ</base>
+        <tran loc="fr">ぶ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>449.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｻ</base>
+        <tran loc="fr">ｻ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>255.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">３</base>
+        <tran loc="fr">３</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>432.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｨ</base>
+        <tran loc="fr">ｨ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>268.title</Position>
+      <TranslationSet>
+        <base loc="en">」</base>
+        <tran loc="fr">」</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>536.title</Position>
+      <TranslationSet>
+        <base loc="en">」</base>
+        <tran loc="fr">」</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>394.title</Position>
+      <TranslationSet>
+        <base loc="en">づ</base>
+        <tran loc="fr">づ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>449.title</Position>
+      <TranslationSet>
+        <base loc="en">サ</base>
+        <tran loc="fr">サ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>400.title</Position>
+      <TranslationSet>
+        <base loc="en">ポ</base>
+        <tran loc="fr">ポ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>339.title</Position>
+      <TranslationSet>
+        <base loc="en">I</base>
+        <tran loc="fr">I</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>204.title</Position>
+      <TranslationSet>
+        <base loc="en">!</base>
+        <tran loc="fr">!</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>396.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">!</base>
+        <tran loc="fr">!</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>443.title</Position>
+      <TranslationSet>
+        <base loc="en">i</base>
+        <tran loc="fr">i</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>290.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｈ</base>
+        <tran loc="fr">ｈ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>414.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">＠</base>
+        <tran loc="fr">＠</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>322.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾘ</base>
+        <tran loc="fr">ﾘ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>359.title</Position>
+      <TranslationSet>
+        <base loc="en">ぅ</base>
+        <tran loc="fr">ぅ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>365.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾎﾞ</base>
+        <tran loc="fr">ﾎﾞ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>254.title</Position>
+      <TranslationSet>
+        <base loc="en">ゆ</base>
+        <tran loc="fr">ゆ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>241.title</Position>
+      <TranslationSet>
+        <base loc="en">ざ</base>
+        <tran loc="fr">ざ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>411.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾋ</base>
+        <tran loc="fr">ﾋ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>348.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">Ｓ</base>
+        <tran loc="fr">Ｓ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>237.title</Position>
+      <TranslationSet>
+        <base loc="en">z</base>
+        <tran loc="fr">z</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>334.title</Position>
+      <TranslationSet>
+        <base loc="en">4</base>
+        <tran loc="fr">4</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>216.title</Position>
+      <TranslationSet>
+        <base loc="en">Box</base>
+        <tran loc="fr">Box</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>355.title</Position>
+      <TranslationSet>
+        <base loc="en">Box</base>
+        <tran loc="fr">Box</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>379.title</Position>
+      <TranslationSet>
+        <base loc="en">Box</base>
+        <tran loc="fr">Box</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>603.title</Position>
+      <TranslationSet>
+        <base loc="en">Box</base>
+        <tran loc="fr">Box</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>607.title</Position>
+      <TranslationSet>
+        <base loc="en">Box</base>
+        <tran loc="fr">Box</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>610.title</Position>
+      <TranslationSet>
+        <base loc="en">Box</base>
+        <tran loc="fr">Box</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>404.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾊﾟ</base>
+        <tran loc="fr">ﾊﾟ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>225.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">５</base>
+        <tran loc="fr">５</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>437.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｽ</base>
+        <tran loc="fr">ｽ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>531.title</Position>
+      <TranslationSet>
+        <base loc="en">ト</base>
+        <tran loc="fr">ト</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>413.title</Position>
+      <TranslationSet>
+        <base loc="en">ば</base>
+        <tran loc="fr">ば</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>205.title</Position>
+      <TranslationSet>
+        <base loc="en">っ</base>
+        <tran loc="fr">っ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>439.title</Position>
+      <TranslationSet>
+        <base loc="en">ホ</base>
+        <tran loc="fr">ホ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>522.title</Position>
+      <TranslationSet>
+        <base loc="en">コ</base>
+        <tran loc="fr">コ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>442.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｮ</base>
+        <tran loc="fr">ｮ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>309.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｷﾞ</base>
+        <tran loc="fr">ｷﾞ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>378.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｿﾞ</base>
+        <tran loc="fr">ｿﾞ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>273.title</Position>
+      <TranslationSet>
+        <base loc="en">'</base>
+        <tran loc="fr">'</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>425.title</Position>
+      <TranslationSet>
+        <base loc="en">O</base>
+        <tran loc="fr">O</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>249.title</Position>
+      <TranslationSet>
+        <base loc="en">k</base>
+        <tran loc="fr">k</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>306.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾚ</base>
+        <tran loc="fr">ﾚ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>459.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">Ｂ</base>
+        <tran loc="fr">Ｂ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>206.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｊ</base>
+        <tran loc="fr">ｊ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>401.title</Position>
+      <TranslationSet>
+        <base loc="en">ぇ</base>
+        <tran loc="fr">ぇ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>507.title</Position>
+      <TranslationSet>
+        <base loc="en">ご</base>
+        <tran loc="fr">ご</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>306.title</Position>
+      <TranslationSet>
+        <base loc="en">レ</base>
+        <tran loc="fr">レ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>524.title</Position>
+      <TranslationSet>
+        <base loc="en">や</base>
+        <tran loc="fr">や</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>279.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">Ｑ</base>
+        <tran loc="fr">Ｑ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>450.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｙ</base>
+        <tran loc="fr">ｙ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>294.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ﾉ</base>
+        <tran loc="fr">ﾉ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>420.title</Position>
+      <TranslationSet>
+        <base loc="en">x</base>
+        <tran loc="fr">x</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>340.title</Position>
+      <TranslationSet>
+        <base loc="en">6</base>
+        <tran loc="fr">6</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>304.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｿ</base>
+        <tran loc="fr">ｿ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>383.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">７</base>
+        <tran loc="fr">７</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>513.title</Position>
+      <TranslationSet>
+        <base loc="en">ひ</base>
+        <tran loc="fr">ひ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>257.label</Position>
+      <TranslationSet>
+        <base loc="en">ア</base>
+        <tran loc="fr">ア</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>517.title</Position>
+      <TranslationSet>
+        <base loc="en">ア</base>
+        <tran loc="fr">ア</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>208.title</Position>
+      <TranslationSet>
+        <base loc="en">ナ</base>
+        <tran loc="fr">ナ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>278.title</Position>
+      <TranslationSet>
+        <base loc="en">ケ</base>
+        <tran loc="fr">ケ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>232.title</Position>
+      <TranslationSet>
+        <base loc="en">ベ</base>
+        <tran loc="fr">ベ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>352.title</Position>
+      <TranslationSet>
+        <base loc="en">ち</base>
+        <tran loc="fr">ち</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>498.alternateTitle</Position>
+      <TranslationSet>
+        <base loc="en">ｬ</base>
+        <tran loc="fr">ｬ</tran>
+      </TranslationSet>
+    </TextItem>
+    <TextItem>
+      <Description/>
+      <Position>313.title</Position>
+      <TranslationSet>
+        <base loc="en">M</base>
+        <tran loc="fr">M</tran>
+      </TranslationSet>
+    </TextItem>
+  </File>
+</Proj>

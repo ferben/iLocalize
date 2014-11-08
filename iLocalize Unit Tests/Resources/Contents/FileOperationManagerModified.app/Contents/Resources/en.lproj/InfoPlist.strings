@@ -1,0 +1,4 @@
+﻿/* Localized versions of Info.plist keys */
+
+CFBundleName = "MyApp 1.0-modified";
+NSHumanReadableCopyright = "© Arizona Software, 2005";

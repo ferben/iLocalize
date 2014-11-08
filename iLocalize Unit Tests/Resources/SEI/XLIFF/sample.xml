@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xml:space="preserve">
+  <file original="Localizable.strings" source-language="en" target-language="fr_CH" datatype="x-ilocalize" path="/Users/bovet/Test.app/Contents/Resources/English.lproj/Localizable.strings">
+    <body>
+      <trans-unit id="0" resname="title">
+        <source>Main Window</source>
+        <target>Fenetre &quot;principale&quot;</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Another.strings" source-language="en" target-language="fr_CH" datatype="x-ilocalize" path="/Users/bovet/Test.app/Contents/Resources/English.lproj/Another.strings">
+    <body>
+      <trans-unit id="0" resname="button.title">
+        <source>Choose</source>
+        <target>Choisir</target>
+      </trans-unit>
+      <trans-unit id="1" resname="button.tooltip">
+        <source>Button to choose the file</source>
+        <target>Bouton pour choisir le fichier</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

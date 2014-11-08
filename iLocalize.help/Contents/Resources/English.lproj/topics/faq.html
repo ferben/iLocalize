@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Frequently Asked Questions</title>
+		<meta name="description" content="Frequently asked questions."/>
+		<link rel="stylesheet" type="text/css" media="screen" href="../style.css" />
+		
+		<script type="text/javascript"><!--
+function HideContent(d) {
+document.getElementById(d).style.display = "none";
+}
+function ShowContent(d) {
+document.getElementById(d).style.display = "block";
+}
+function ReverseDisplay(d) {
+if(document.getElementById(d).style.display == "none") { document.getElementById(d).style.display = "block"; }
+else { document.getElementById(d).style.display = "none"; }
+}
+//--></script>
+
+	</head>
+	<body>
+		<div class="navbar"><a href="../index.html">iLocalize Help</a> > Frequently Asked Questions</div>
+		<h1>Frequently Asked Questions</h1>		
+		<div class="description">
+			<ul>
+				<li><a href="javascript:ReverseDisplay('a')">Where do I find ibtool?</a>
+					<div id="a" style="display:none;">
+						<ul>
+							<li>iLocalize requires to have ibtool installed. This piece of software is used by iLocalize to extract and update nib or xib files. Install the latest Xcode version from Apple and ibtool will be installed automatically.</li>
+						</ul>
+					</div>
+				</li>
+				
+				<li><a href="javascript:ReverseDisplay('b')">What is the Rebuild command?</a>
+					<div id="b" style="display:none;">
+						<ul>
+							<li>The Rebuild command allows to re-construct a nib file of a particular language using the base language nib file. This command is often used if a localized nib is damaged or if the layout needs to be reset.</li>
+						</ul>
+					</div>
+				</li>
+
+				<li><a href="javascript:ReverseDisplay('c')">iLocalize complains that a nib file is compiled. What should I do?</a>
+					<div id="c" style="display:none;">
+						<ul>
+							<li>A compiled nib file is a nib file that has been compacted to take less space on the disk but that cannot be localized anymore. If this happens, contact the author of the nib file and ask him to send you the non-compiled version of the nib file (in Xcode, under the target build settings of the project, go to the "Interface Builder Compiler" section and make sure the flag "Flatten Compiled XIB files" is turned off (IBC_FLATTEN_NIBS=NO)).</li>
+						</ul>
+					</div>
+				</li>
+
+				<li><a href="javascript:ReverseDisplay('e')">What is the meaning of each file status symbol?</a>
+					<div id="e" style="display:none;">
+							<table class="t1">
+							<tbody>
+								<tr>
+									<th>Status</th>
+									<th>Description</th>
+								</tr>
+
+								<tr>
+									<td><img src="../../shared/status/filechecklayout.gif" alt="Check Layout"/></td>
+									<td class="description">The layout of the nib file needs to be checked in Interface Builder.<br/>Note: if the layout has changed too much, it is possible to reset the layout to the base language layout by using the command Project > Rebuild Selected Files. To remove this symbol, use the command Translate > Approve File or Approve from the contextual menu</td>
+								</tr>
+
+								<tr>
+									<td><img src="../../shared/status/fileupdateadded.png" alt="File Updated"/></td>
+									<td class="description">The file has been added during the last update operation. Use the command Translate > Clear Updated File Symbols to clear this symbol from the selected files</td>
+								</tr>
+
+								<tr>
+									<td><img src="../../shared/status/fileupdateupdated.png" alt="File Added"/></td>
+									<td class="description">The file has been updated during the last update operation. Use the command Translate > Clear Updated File Symbols to clear this symbol from the selected files</td>
+								</tr>
+
+								<tr>
+									<td><img src="../../shared/status/warning.gif" alt="Warning"/></td>
+									<td class="description">The file has some inconsistencies. Double-click the icon to see more information about these inconsistencies. Depending on the kind of inconsistencies, it is recommended to rebuild the file from the base language using the command Project > Rebuild Selected Files</td>
+								</tr>
+
+								<tr>
+									<td><img src="../../shared/status/filenotfound.png" alt="File Not Found"/></td>
+									<td class="description">The file does not exist on the disk. It is not necessary to fix this warning if the file really does not exist for the localized language. However, if the file needs to exist, use the command Project > Rebuild Selected Files to rebuild a new file from the base language</td>
+								</tr>
+
+								<tr>
+									<td><img src="../../shared/status/filesynchfromdisk.gif" alt="Sync from Disk"/></td>
+									<td class="description">The content of the file must be reloaded from disk. iLocalize automatically reloads the content of the file each time it becomes the active application</td>
+								</tr>
+
+								<tr>
+									<td><img src="../../shared/status/currentfile.png" alt="Current File"/></td>
+									<td class="description">When more than one file is selected, this symbol shows the file whose string is currently selected in the string table</td>
+								</tr>
+
+							</tbody>
+							</table>
+					</div>
+				</li>
+
+				<li><a href="javascript:ReverseDisplay('f')">What is the meaning of each string status symbol?</a>
+					<div id="f" style="display:none;">
+							<table class="t1">
+							<tbody>
+								<tr>
+									<th>Status</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td><img src="../../shared/status/stringtotranslate.gif" alt="To Translate"/></td>
+									<td class="description">The string needs to be translated. Double-click the symbol to make the string an invariant (translation is identical to base language).</td>
+								</tr>
+								<tr>
+									<td><img src="../../shared/status/stringautoinvariant.gif" alt="Auto-invariant"/></td>
+									<td class="description">The string has been automatically detected as an invariant by iLocalize. To accept this invariant, use the command Translate > Approve String or Approve from the contextual menu</td>
+								</tr>
+								<tr>
+									<td><img src="../../shared/status/stringinvariant.gif" alt="Invariant"/></td>
+									<td class="description">The string is invariant (translation is identical to base language)</td>
+								</tr>
+								<tr>
+									<td><img src="../../shared/status/stringautotranslated.gif" alt="Auto-translated"/></td>
+									<td class="description">The string has been automatically translated by iLocalize. It is suggested to review the translation. To accept the translation, use the command Translate > Approve String or Approve from the contextual menu</td>
+								</tr>
+								<tr>
+									<td><img src="../../shared/status/stringbasemodified.png" alt="Base Modified"/></td>
+									<td class="description">The base string has been modified (most of the time this happens after an update of the base language). For example, the developer fixed a typo or changed a string in the base language: it is suggested to verify the string to make sure the translation is in sync with the base language</td>
+								</tr>
+								<tr>
+									<td><img src="../../shared/status/warning.gif" alt="Warning"/></td>
+									<td class="description">The string has some inconsistencies. Double-click the icon to see more information about these inconsistencies. Depending on the kind of inconsistencies, it is recommended to rebuild the file from the base language using the command Project > Rebuild Selected Files</td>
+								</tr>
+
+							</tbody>
+							</table>
+							
+					</div>
+				</li>
+				
+			</ul>
+		</div>
+	</body>
+</html>

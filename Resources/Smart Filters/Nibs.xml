@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>local</key>
+	<false/>
+	<key>name</key>
+	<string>Nibs</string>
+	<key>predicate</key>
+	<string>pFile.pFileType CONTAINS[cd] "nib" OR pFile.pFileType CONTAINS[cd] "xib"</string>
+	<key>saveType</key>
+	<integer>1</integer>
+	<key>version</key>
+	<integer>101</integer>
+</dict>
+</plist>

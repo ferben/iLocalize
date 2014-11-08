@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tmx version="1.4" xml:space="preserve">
+  <header creationtool="iLocalize" creationtoolversion="4" segtype="sentence" o-tmf="il_glossary" adminlang="en" srclang="en" datatype="plaintext">
+    <prop type="x-target">fr-CH</prop>
+  </header>
+  <body>
+    <tu>
+      <prop type="file">/Users/bovet/Test.app/Contents/Resources/English.lproj/Localizable.strings</prop>
+      <tuv xml:lang="en">
+        <seg>Main Window</seg>
+      </tuv>
+      <tuv xml:lang="fr-CH">
+        <seg>Fenetre &quot;principale&quot;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Choose</seg>
+      </tuv>
+      <tuv xml:lang="fr-CH">
+        <seg>Choisir</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Button to choose the file</seg>
+      </tuv>
+      <tuv xml:lang="fr-CH">
+        <seg>  Bouton pour choisir le fichier  </seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>sourceLanguage</key>
+  <string>en</string>
+  <key>targetLanguage</key>
+  <string>fr_CH</string>
+  <key>entries</key>
+  <array>
+    <dict>
+      <key>source</key>
+      <string>Main Window</string>
+      <key>target</key>
+      <string>Fenetre &quot;principale&quot;</string>
+    </dict>
+    <dict>
+      <key>source</key>
+      <string>Choose</string>
+      <key>target</key>
+      <string>Choisir</string>
+    </dict>
+    <dict>
+      <key>source</key>
+      <string>Button to choose the file</string>
+      <key>target</key>
+      <string>Bouton pour choisir le fichier</string>
+    </dict>
+  </array>
+</dict>
+</plist>

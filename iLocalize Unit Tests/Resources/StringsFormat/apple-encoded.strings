@@ -1,0 +1,37 @@
+
+/* NO button */
+"NO" = "NO";
+/* YES button */
+"YES" = "YES";
+/* OK button */
+"OK" = "OK";
+
+"[" = "left square bracket";
+"\\" = "backslash";
+"]" = "right square bracket";
+
+/* small z */
+"z" = "petit z4";
+/* big Z */
+"Z" = "grand z4";
+
+/* IDP_ODWG_MALLOC_ERROR */
+"20276" = "\"critical error %1!d!, aderror %2!d! (%3!s!), terminating\"";
+
+"Symbol (*, %@, %@, %@)" = "Symbol (*, %@, %@, %@)";
+"21124" = "Vérifie la conformité du modèle et le corrige au besoin \"Vérifiez la conformité\"";
+
+/* plus vicieux */
+"\"the key\"" = "left \"square\" parenthesis\\\"";
+
+"Hello\nWorld" = "Bonjour\tMonde";
+
+"Press \"Show\" to open the Synk webpage. You may disable version checking in Synk Preferences, if desired." = "Klicken Sie \"Anzeigen\", um die Synk-Website zu öffnen. Sie können die Versionsabfrage in den Einstellungen deaktivieren, falls gewünscht.";
+
+SingleHourLabel = "one hour";
+SingleMinuteLabel = "one minute";
+
+"key1" = "value1";
+
+
+"key2" = "value2";

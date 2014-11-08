@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>BE:?xml</string>
+	<string>AK:version</string>
+	<string>AV:1.0</string>
+	<string>AK:encoding</string>
+	<string>AV:UTF-8</string>
+	<string>EE:?xml</string>
+	
+	<string>BE:html</string>
+	<string>BE:head</string>
+	
+	<string>BE:meta</string>
+	<string>AK:http-equiv</string>
+	<string>AV:foo</string>
+	<string>AK:content</string>
+	<string>AV:charset=utf-8</string>
+	<string>EE:meta</string>
+
+	<string>CM:comment</string>
+
+	<string>BE:title</string>
+	<string>CO:hello, world</string>
+	<string>EE:title</string>
+	
+	<string>EE:head</string>
+	<string>EE:html</string>
+</array>
+</plist>

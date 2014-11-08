@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx11.dtd">
+<tmx version="1.4" xml:space="preserve">
+  <header creationtool="iLocalize" creationtoolversion="4" segtype="sentence" o-tmf="il_glossary" adminlang="en" srclang="en" datatype="plaintext">
+    <prop type="x-target">fr</prop>
+  </header>
+  <body>
+	<tu creationdate="20060918T163240Z" creationid="HNAKAHASHI">
+		<tuv xml:lang="en">
+			<seg>Click on <bpt i="1" type="font">{\f214 </bpt>‘<ept i="1">}</ept>Buy Now<bpt i="2" type="font">{\f214 </bpt>’<ept i="2">}</ept> button whenever you would like to buy Skype Credit</seg>
+		</tuv>
+		<tuv xml:lang="fr">
+			<seg><bpt i="1" type="font">{\f2 </bpt>Cada vez que quieras comprar crédito de Skype, haz clic en el botón <ept i="1">}</ept><bpt i="2" type="font">{\f214 </bpt>‘<ept i="2">}</ept><bpt i="3" type="font">{\f2 </bpt>Comprar ahora<ept i="3">}</ept><bpt i="4" type="font">{\f214 </bpt>’<ept i="4">}</ept><bpt i="5" type="font">{\f2 </bpt>.<ept i="5">}</ept></seg>
+		</tuv>
+	</tu>
+    <tu>
+      <prop type="file">/Users/bovet/Test.app/Contents/Resources/English.lproj/Localizable.strings</prop>
+      <tuv xml:lang="en">
+        <seg>image_lib</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>image_lib</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en">
+        <seg>1.0</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>1.0</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en">
+        <seg>image_lib version 1.0, Copyright 2004 __MyCompanyName__.</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>image_lib version 1.0, Copyright 2004 __MyCompanyName__.</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

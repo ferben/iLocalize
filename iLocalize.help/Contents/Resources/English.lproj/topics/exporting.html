@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Exporting a Project</title>
+		<meta name="description" content="Describes how to export a project."/>
+		<link rel="stylesheet" type="text/css" media="screen" href="../style.css" />
+	</head>
+	<body>
+		<div class="navbar"><a href="../index.html">iLocalize Help</a> > Exporting a Project</div>
+		<h1>Exporting a Project</h1>
+		<div class="description">
+			<p>It is possible to export the project in the following formats:</p>
+			<ul>
+				<li>Export project into a bundle</li>
+				<li>Export project strings as XLIFF, TMX, TXML (Wordfast) or .strings format</li>
+			</ul>
+			
+			<h2>Export project into a bundle</h2>
+			<p>This option lets you export the project into a bundle. This option is usually used to send back the complete bundle to the developer. To export the project into a bundle, follow these steps:</p>
+			<ul>
+				<li>Choose Project > Export...</li>
+				<li>In the view, choose the following:
+				<ul>
+					<li><div class="argument">Options:</div>This button displays the Options dialog that allows to change the following settings:
+					<ul>
+						<li>The format of the output bundle name</li>
+						<li>The output format of the bundle itself: include only the language folders, export as a folder that can be opened in the Finder instead of a package, zip the exported bundle.</li>
+						<li>Optionally compact all the nib files</li>
+						<li>Optionally send an e-mail with the exported bundle in attachment</li>
+					</ul>
+					</li>
+					<li><div class="argument">Choose the resources to export:</div>Choose which resource to export by checking or unchecking the resource in the tree.</li>
+					<li><div class="argument">Choose the languages to export:</div>Choose which language to export by checking or unchecking the language in the tree.</li>
+					<li><div class="argument">Choose the destination folder:</div>Choose or drag the folder in which the bundle will be exported.</li>
+				</ul>
+				</li>
+				<li>Click Export to export the project</li>
+			</ul>
+			<p>Note: presets can be used to save specific configuration that can be reused later on. A menu entry will be visible in the Project menu when at least one preset is created to quickly re-execute the export using that preset. The command will be Project > Export Again As > "preset".</p>
+			
+			<h2>Export project strings as...</h2>
+			<p>The strings of all the files of a selected language (or only the selected files) can be exported under a variety of formats: XLIFF, TXML (Wordfast), TMX or .strings. The exported file can be used for translation by third-party software. The exported file can be re-imported into iLocalize (see <a href="updating.html">"Updating a project"</a>). Currently only the strings of nib and .strings files are exported. To export the strings, follow these steps:</p>			
+			<ul>
+				<li>Choose Project > Export Strings...
+				<ul>
+					<li><div class="argument">Format</div>The format of the exported file.</li>
+					<li><div class="argument">Source Language</div>Choose the source language. By default, it is the base language of the project.</li>
+					<li><div class="argument">Target Language</div>Choose the target language. By default, it is the current language of the project.</li>
+					<li><div class="argument">Output File</div>Choose the output file into which the strings of the project will be exported.</li>					
+				</ul>
+				</li>
+				<li>Click Export</li>
+			</ul>
+
+			<p>Note: individual files can be exported and updated by using the contextual menu over the file table.</p>
+		</div>
+
+	</body>
+</html>

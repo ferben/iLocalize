@@ -1,0 +1,30 @@
+//
+// Prefix header for all source files of the 'iLocalize' target in the 'iLocalize' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+	#import "NSObject+Extensions.h"
+	#import "NSArray+Extensions.h"
+	#import "NSMutableArray+Extensions.h"
+	#import "NSDictionary+Extensions.h"
+	#import "NSMutableDictionary+Extensions.h"
+	#import "NSSplitView+Extensions.h"
+	#import "NSString+Extensions.h"
+	#import "NSString+ExtensionsSmall.h"
+	#import "NSString+Levenshtein.h"
+	#import "NSMenu+Extensions.h"
+	#import "NSImage+Extensions.h"
+	#import "NSBezierPath+Extensions.h"
+	#import "NSOutlineView+Extensions.h"
+	#import "NSPopUpButton+Extensions.h"
+	#import "NSWindow+Extensions.h"
+	#import "NSException+Extensions.h"
+	#import "NSURL+Extensions.h"
+	#import "NSData+Extensions.h"
+	#import "NSView+Extensions.h"
+	#import "Utils.h"
+	#import "Constants.h"
+	#import "Logger.h"
+	#import "ProjectProvider.h"
+#endif

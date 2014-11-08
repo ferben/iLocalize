@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <body>
+      <trans-unit id="title">
+        <source>Main Window</source>
+        <target>Fenetre principale</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Another.strings" source-language="en" target-language="fr_CH" path="/Users/bovet/Test.app/Contents/Resources/English.lproj/Another.strings">
+    <body>
+      <trans-unit id="button.title"
+        <source>Choose</source>
+        <target>Choisir</target>
+      </trans-unit>
+      <trans-unit id="button.tooltip">
+        <source>Button to choose the file</source>
+        <target>Bouton pour choisir le fichier</target>
+      </trans-unit>
+	  
+  </file>
+</xliff>

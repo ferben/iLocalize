@@ -1,0 +1,1 @@
+This is in UTF-8 without BOM but e aigu: é

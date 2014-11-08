@@ -1,0 +1,13 @@
+on exloc_email(in_subject, in_content, in_file)
+	-- in_file contains a string representing the path to the attachment
+	tell application "Eudora"
+		set newMessage to make new outgoing message with properties {subject:in_subject, content:in_content}
+		tell newMessage
+			set visible to true
+			tell content
+				make new attachment with properties {file name:in_file} at after the last paragraph
+			end tell
+		end tell
+		activate
+	end tell
+end exloc_email
