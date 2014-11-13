@@ -1,0 +1,76 @@
+"%[All]@ of the following are true" = "%1$[Vše]@ z tohoto je pravda";
+"%[Any]@ of the following are true" = "%1$[Cokoliv]@ z tohoto je pravda";
+"%[None]@ of the following are true" = "%1$[Nic]@ z tohoto je pravda";
+
+"%[File Name]@ %[contains]@ %@" = "%1$[Název souboru]@ %2$[obsahuje]@ %3$@";
+"%[File Name]@ %[begins with]@ %@" = "%1$[Název souboru]@ %2$[začíná na]@ %3$@";
+"%[File Name]@ %[ends with]@ %@" = "%1$[Název souboru]@ %2$[končí na]@ %3$@";
+"%[File Name]@ %[is]@ %@" = "%1$[Název souboru]@ %2$[je]@ %3$@";
+"%[File Name]@ %[is not]@ %@" = "%1$[Název souboru]@ %2$[není]@ %3$@";
+"%[File Name]@ %[matches]@ %@" = "%1$[Název souboru]@ %2$[je shodný]@ %3$@";
+
+"%[File Type]@ %[contains]@ %@" = "%1$[Typ souboru]@ %2$[obsahuje]@ %3$@";
+"%[File Type]@ %[begins with]@ %@" = "%1$[Typ souboru]@ %2$[začíná na]@ %3$@";
+"%[File Type]@ %[ends with]@ %@" = "%1$[Typ souboru]@ %2$[končí na]@ %3$@";
+"%[File Type]@ %[is]@ %@" = "%1$[Typ souboru]@ %2$[je]@ %3$@";
+"%[File Type]@ %[is not]@ %@" = "%1$[Typ souboru]@ %2$[není]@ %3$@";
+"%[File Type]@ %[matches]@ %@" = "%1$[Typ souboru]@ %2$[je shodný]@ %3$@";
+
+"%[File Label]@ contains %@" = "%1$[Visačka souboru]@ obsahuje %2$@";
+
+
+"%[File layout needs to be checked]@" = "%1$[Návrh překladu zkontrolovat]@";
+
+"%[File added during last update]@" = "%1$[Soubor přidán při poslední aktualizaci]@";
+
+"%[File updated during last update]@" = "%1$[Soubor aktualizován při poslední aktualizaci]@";
+
+"%[File has inconsistencies]@" = "%1$[Soubor vykazuje nesrovnalosti]@";
+
+"%[File does not exist on the disk]@" = "%1$[Soubor na disku neexistuje]@";
+
+
+"%[String Value]@ %[contains]@ %@" = "%1$[Hodnota řetězce]@ %2$[obsahuje]@ %3$@";
+"%[String Value]@ %[begins with]@ %@" = "%1$[Hodnota řetězce]@ %2$[začíná na]@ %3$@";
+"%[String Value]@ %[ends with]@ %@" = "%1$[Hodnota řetězce]@ %2$[končí na]@ %3$@";
+"%[String Value]@ %[is]@ %@" = "%1$[Hodnota řetězce]@ %2$[je]@ %3$@";
+"%[String Value]@ %[is not]@ %@" = "%1$[Hodnota řetězce]@ %2$[není]@ %3$@";
+"%[String Value]@ %[matches]@ %@" = "%1$[Hodnota řetězce]@ %2$[je shodná]@ %3$@";
+
+"%[String Base Value]@ %[contains]@ %@" = "%1$[Původní řetězec]@ %2$[obsahuje]@ %3$@";
+"%[String Base Value]@ %[begins with]@ %@" = "%1$[Původní řetězec]@ %2$[začíná na]@ %3$@";
+"%[String Base Value]@ %[ends with]@ %@" = "%1$[Původní řetězec]@ %2$[končí na]@ %3$@";
+"%[String Base Value]@ %[is]@ %@" = "%1$[Původní řetězec]@ %2$[je]@ %3$@";
+"%[String Base Value]@ %[is not]@ %@" = "%1$[Původní řetězec]@ %2$[není]@ %3$@";
+"%[String Base Value]@ %[matches]@ %@" = "%1$[Původní řetězec]@ %2$[je shodný]@ %3$@";
+
+"%[String Comment]@ %[contains]@ %@" = "%1$[Komentář řetězce]@ %2$[obsahuje]@ %3$@";
+"%[String Comment]@ %[begins with]@ %@" = "%1$[Komentář řetězce]@ %2$[začíná na]@ %3$@";
+"%[String Comment]@ %[ends with]@ %@" = "%1$[Komentář řetězce]@ %2$[končí na]@ %3$@";
+"%[String Comment]@ %[is]@ %@" = "%1$[Komentář řetězce]@ %2$[je]@ %3$@";
+"%[String Comment]@ %[is not]@ %@" = "%1$[Komentář řetězce]@ %2$[není]@ %3$@";
+"%[String Comment]@ %[matches]@ %@" = "%1$[Komentář řetězce]@ %2$[je shodný]@ %3$@";
+
+"%[String Base Comment]@ %[contains]@ %@" = "%1$[Komentář řetězce původního jazyka]@ %2$[obsahuje]@ %3$@";
+"%[String Base Comment]@ %[begins with]@ %@" = "%1$[Komentář řetězce původního jazyka]@ %2$[začíná na]@ %3$@";
+"%[String Base Comment]@ %[ends with]@ %@" = "%1$[Komentář řetězce původního jazyka]@ %2$[končí na]@ %3$@";
+"%[String Base Comment]@ %[is]@ %@" = "%1$[Komentář řetězce původního jazyka]@ %2$[je]@ %3$@";
+"%[String Base Comment]@ %[is not]@ %@" = "%1$[Komentář řetězce původního jazyka]@ %2$[není]@ %3$@";
+"%[String Base Comment]@ %[matches]@ %@" = "%1$[Komentář řetězce původního jazyka]@ %2$[je shodný]@ %3$@";
+
+"%[String Label]@ contains %@" = "%1$[Visačka]@ obsahuje %2$@";
+
+
+"%[String is not translated]@" = "%1$[Řetězec nebyl přeložen]@";
+
+"%[String is translated]@" = "%1$[Řetězec byl přeložen]@";
+
+"%[String needs to be checked]@" = "%1$[Řetězec se musí ověřit]@";
+
+"%[String is an invariant]@" = "%1$[Řetězec nebyl změněn]@";
+
+"%[String has base modified]@" = "%1$[Řetězec upraven v původním jazyku]@";
+
+"%[String has inconsistencies]@" = "%1$[Řetězec vykazuje nesrovnalosti]@";
+
+"%[String is locked]@" = "%1$[Řetězec je uzamčen]@";
