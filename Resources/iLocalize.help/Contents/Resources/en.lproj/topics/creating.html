@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Creating a Project</title>
+		<meta name="description" content="Describes how to create a new project."/>
+		<link rel="stylesheet" type="text/css" media="screen" href="../style.css" />
+	</head>
+	<body>
+		<div class="navbar"><a href="../index.html">iLocalize Help</a> > Creating a Project</div>
+		<h1>Creating a Project</h1>
+		<div class="description">
+			<p>The first thing to do with iLocalize is to create a project with the bundle you would like to localize. iLocalize
+			has an assistant to guide you through the process of creating a project. Use the following steps to create a project:</p>
+			<ol>
+				<li>Choose File > New Project...</li>
+				
+				<li>In the first view, enter the following information:				
+				<ul>
+					<li><div class="argument">Bundle:</div>Choose or drag the bundle you would like to localize. It can be an application, a bundle, a framework or a folder. 
+					The bundle must contain at least one language folder (e.g. English.lproj).</li>
+					<li><div class="argument">Name:</div>Enter the name of the project</li>
+					<li><div class="argument">Destination:</div>Choose or drag the destination folder of the project. A folder named after the project will be created inside this destination.</li>
+					<li><div class="argument">Presets:</div>The presets allow you to save a certain configuration that can be reused later on.</li>
+				</ul>				
+				</li>
+				
+				<li>If any problems are detected in the bundle, they will be displayed in the next view. Common problems can be read-only files, compiled nibs, etc.</li>				
+				
+				<li>The next view allows you to choose the base language and the available languages to import.
+				<ul>
+					<li>The base language is the language in which the bundle is developed, usually English.</li>
+					<li>The languages to import are all the languages detected inside the bundle.</li>				
+					<li><div class="argument">Create non-existing localized files from base language:</div>Check that button if any file that exists in the base language but not in the imported
+					language must be created.</li>
+				</ul>
+				</li>
+				
+				<li>Click Create to start the creation of the project.</li>
+			</ol>
+		</div>
+
+		<div class="tips">
+			<h1>Tips</h1>
+			<ul>
+				<li><b>Folder Structure:</b> If you want to create a project using a folder, make sure it contains at least one language folder (e.g. English.lproj, fr.lproj).
+			For example, the following structure of a folder will work perfectly:
+						<pre>
+Folder
++- English.lproj
+|  +- .... all the resources for English
++- Italian.lproj
+|  +- .... all the resources for Italian
++- Finnish.lproj
+   +- .... all the resources for Finnish
+</pre></li>
+
+				<li><b>Compiled nib files:</b> A compiled nib file is a nib file that has been compacted to take less space on the disk but that cannot be localized anymore (see <a href="faq.html">FAQs</a> entry for more information).
+				</li>
+			</ul>			
+		</div>
+	</body>
+</html>
