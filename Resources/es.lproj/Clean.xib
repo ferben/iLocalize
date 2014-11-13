@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" promptedForUpgradeToXcode5="NO">
+    <dependencies>
+        <deployment version="1040" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CleanWC">
+            <connections>
+                <outlet property="window" destination="5" id="27"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <window title="Limpiar" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="5" userLabel="Panel" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="222" y="425" width="533" height="255"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
+            <value key="minSize" type="size" width="213" height="107"/>
+            <view key="contentView" id="6">
+                <rect key="frame" x="0.0" y="0.0" width="533" height="255"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button id="7">
+                        <rect key="frame" x="81" y="219" width="352" height="18"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="check" title="Remplazar &quot; por “ (comillas inglesas dobles)" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="35">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <binding destination="21" name="value" keyPath="values.CleanDoubleQuotationMark" id="22"/>
+                        </connections>
+                    </button>
+                    <button id="8">
+                        <rect key="frame" x="81" y="167" width="352" height="18"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="check" title="Remplazar ... por … (puntos suspensivos)" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="36">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <binding destination="21" name="value" keyPath="values.CleanEllipsis" id="23"/>
+                        </connections>
+                    </button>
+                    <button id="9">
+                        <rect key="frame" x="81" y="141" width="434" height="18"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="check" title="Asegurar espacios irrompibles antes de los signos de puntuación" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="37">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <binding destination="21" name="value" keyPath="values.CleanNonBreakableSpace" id="24"/>
+                        </connections>
+                    </button>
+                    <button id="10">
+                        <rect key="frame" x="81" y="115" width="352" height="18"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="check" title="Eliminar espacios en blanco al final del segmento" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="38">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <binding destination="21" name="value" keyPath="values.CleanTrimLastSpace" id="25"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" id="11">
+                        <rect key="frame" x="343" y="12" width="82" height="32"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="push" title="Cancelar" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="39">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="cancel:" target="-2" id="28"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" id="12">
+                        <rect key="frame" x="437" y="12" width="82" height="32"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="push" title="Limpiar" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="40">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clean:" target="-2" id="29"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" id="13">
+                        <rect key="frame" x="80" y="62" width="69" height="17"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Aplicar a:" id="41">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <popUpButton verticalHuggingPriority="750" id="14">
+                        <rect key="frame" x="144" y="55" width="182" height="26"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <popUpButtonCell key="cell" type="push" title="Todo el proyecto" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="18" id="42">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <menu key="menu" title="OtherViews" id="15">
+                                <items>
+                                    <menuItem title="Todo el proyecto" state="on" id="18"/>
+                                    <menuItem title="idioma seleccionado" id="17"/>
+                                    <menuItem title="Archivos seleccionados" id="16"/>
+                                    <menuItem title="Segmentos seleccionados" id="19"/>
+                                </items>
+                            </menu>
+                        </popUpButtonCell>
+                        <connections>
+                            <binding destination="21" name="selectedIndex" keyPath="values.CleanApplyTo" id="26"/>
+                        </connections>
+                    </popUpButton>
+                    <button id="30">
+                        <rect key="frame" x="81" y="89" width="410" height="18"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="check" title="Marcar los segmentos modificados como «por comprobar»" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="44">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <binding destination="21" name="value" keyPath="values.CleanMarkModifiedStrings" id="31"/>
+                        </connections>
+                    </button>
+                    <button id="32">
+                        <rect key="frame" x="81" y="193" width="387" height="18"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="check" title="Remplazar ' por ’ (apostrofo por comilla inglesa sencilla)" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="45">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <binding destination="21" name="value" keyPath="values.CleanQuotationMark" id="33"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+        </window>
+        <userDefaultsController representsSharedInstance="YES" id="21" userLabel="Shared Defaults"/>
+    </objects>
+</document>
