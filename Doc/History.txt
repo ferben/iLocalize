@@ -1,0 +1,12 @@
+iLocalize Open Source Development History
+================================================================================
+
+Author       : Ulf Dunkel (fd)
+Co-Authors   : -
+--------------------------------------------------------------------------------
+Things to do : -
+--------------------------------------------------------------------------------
+History:
+
+2014:
+  fd  Nov 13: localized NIB resources converted into XIBs, added to project
