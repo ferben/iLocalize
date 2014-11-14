@@ -101,6 +101,7 @@
 		12F05F621A14F94800BFB4B4 /* iLocalize.help in Resources */ = {isa = PBXBuildFile; fileRef = 12F05F611A14F94800BFB4B4 /* iLocalize.help */; };
 		12F05F681A14FB4B00BFB4B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12F05F671A14FB4B00BFB4B4 /* Images.xcassets */; };
 		12F05F6A1A14FB7400BFB4B4 /* ApplicationIcons.icns in Resources */ = {isa = PBXBuildFile; fileRef = 12F05F691A14FB7400BFB4B4 /* ApplicationIcons.icns */; };
+		12F05F7F1A1612EE00BFB4B4 /* license.txt in Resources */ = {isa = PBXBuildFile; fileRef = 12F05F7E1A1612EE00BFB4B4 /* license.txt */; };
 		A708C193133C0A240021A1EC /* XLIFFImportPreviewOVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A708C191133C0A240021A1EC /* XLIFFImportPreviewOVC.m */; };
 		A708C196133C0A3A0021A1EC /* XLIFFImportPreviewOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A708C195133C0A3A0021A1EC /* XLIFFImportPreviewOperation.m */; };
 		A70969A01363E5D100DE6327 /* SimpleFileController.m in Sources */ = {isa = PBXBuildFile; fileRef = A709699B1363E5D100DE6327 /* SimpleFileController.m */; };
@@ -1674,6 +1675,7 @@
 		12F05F671A14FB4B00BFB4B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = iLocalize/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		12F05F691A14FB7400BFB4B4 /* ApplicationIcons.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ApplicationIcons.icns; sourceTree = "<group>"; };
 		12F05F6B1A14FBD500BFB4B4 /* History.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = History.txt; path = Doc/History.txt; sourceTree = "<group>"; };
+		12F05F7E1A1612EE00BFB4B4 /* license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.txt; sourceTree = SOURCE_ROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -3719,6 +3721,7 @@
 		A7CD2F950C8B26BD00BD04F5 /* Doc */ = {
 			isa = PBXGroup;
 			children = (
+				12F05F7E1A1612EE00BFB4B4 /* license.txt */,
 				A7F0BAE40FA7E949006C6BA8 /* ReadMe.txt */,
 			);
 			path = Doc;
@@ -4539,6 +4542,7 @@
 				A751E18313045B19007635F2 /* PatchCenterBlack.png in Resources */,
 				12F05BAE1A14F7F700BFB4B4 /* Operation.xib in Resources */,
 				12F05BD31A14F7F700BFB4B4 /* XLIFFImportPreview.xib in Resources */,
+				12F05F7F1A1612EE00BFB4B4 /* license.txt in Resources */,
 				A751E18413045B19007635F2 /* PatchCenterGreen.png in Resources */,
 				12F05BB61A14F7F700BFB4B4 /* PreferencesEditors.xib in Resources */,
 				A751E18513045B19007635F2 /* PatchCenterRed.png in Resources */,
