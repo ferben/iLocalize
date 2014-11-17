@@ -28,7 +28,6 @@
 		125673781A1A681E002117B0 /* FilesTableCornerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125672DC1A1A681E002117B0 /* FilesTableCornerView.xib */; };
 		125673791A1A681E002117B0 /* FileWarning.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125672DE1A1A681E002117B0 /* FileWarning.xib */; };
 		1256737D1A1A681E002117B0 /* FMEditorStrings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125672E61A1A681E002117B0 /* FMEditorStrings.xib */; };
-		1256737E1A1A681E002117B0 /* FMEditorTXT.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125672E81A1A681E002117B0 /* FMEditorTXT.xib */; };
 		1256737F1A1A681E002117B0 /* GlossaryImport.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125672EA1A1A681E002117B0 /* GlossaryImport.xib */; };
 		125673801A1A681E002117B0 /* GlossaryManager.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125672EC1A1A681E002117B0 /* GlossaryManager.xib */; };
 		125673811A1A681E002117B0 /* GlossaryMerge.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125672EE1A1A681E002117B0 /* GlossaryMerge.xib */; };
@@ -98,6 +97,7 @@
 		125677561A1A6EF3002117B0 /* FMEditorHTML.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125677551A1A6EF3002117B0 /* FMEditorHTML.xib */; };
 		125677581A1A6FAE002117B0 /* FMEditorImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125677571A1A6FAE002117B0 /* FMEditorImage.xib */; };
 		1256775A1A1A7036002117B0 /* FMEditorRTF.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125677591A1A7036002117B0 /* FMEditorRTF.xib */; };
+		1256775C1A1A70B9002117B0 /* FMEditorTXT.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1256775B1A1A70B9002117B0 /* FMEditorTXT.xib */; };
 		12F05F681A14FB4B00BFB4B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12F05F671A14FB4B00BFB4B4 /* Images.xcassets */; };
 		12F05F6A1A14FB7400BFB4B4 /* ApplicationIcons.icns in Resources */ = {isa = PBXBuildFile; fileRef = 12F05F691A14FB7400BFB4B4 /* ApplicationIcons.icns */; };
 		12F05F7F1A1612EE00BFB4B4 /* license.txt in Resources */ = {isa = PBXBuildFile; fileRef = 12F05F7E1A1612EE00BFB4B4 /* license.txt */; };
@@ -708,7 +708,6 @@
 		125672DD1A1A681E002117B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FilesTableCornerView.xib; sourceTree = "<group>"; };
 		125672DF1A1A681E002117B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FileWarning.xib; sourceTree = "<group>"; };
 		125672E71A1A681E002117B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FMEditorStrings.xib; sourceTree = "<group>"; };
-		125672E91A1A681E002117B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FMEditorTXT.xib; sourceTree = "<group>"; };
 		125672EB1A1A681E002117B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GlossaryImport.xib; sourceTree = "<group>"; };
 		125672ED1A1A681E002117B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GlossaryManager.xib; sourceTree = "<group>"; };
 		125672EF1A1A681E002117B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GlossaryMerge.xib; sourceTree = "<group>"; };
@@ -787,7 +786,6 @@
 		125673CB1A1A6833002117B0 /* cs */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = cs; path = cs.lproj/FilesTableCornerView.xib; sourceTree = "<group>"; };
 		125673CC1A1A6833002117B0 /* cs */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = cs; path = cs.lproj/FileWarning.xib; sourceTree = "<group>"; };
 		125673D01A1A6833002117B0 /* cs */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = cs; path = cs.lproj/FMEditorStrings.xib; sourceTree = "<group>"; };
-		125673D11A1A6833002117B0 /* cs */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = cs; path = cs.lproj/FMEditorTXT.xib; sourceTree = "<group>"; };
 		125673D21A1A6833002117B0 /* cs */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = cs; path = cs.lproj/GlossaryImport.xib; sourceTree = "<group>"; };
 		125673D31A1A6833002117B0 /* cs */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = cs; path = cs.lproj/GlossaryManager.xib; sourceTree = "<group>"; };
 		125673D41A1A6833002117B0 /* cs */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = cs; path = cs.lproj/GlossaryMerge.xib; sourceTree = "<group>"; };
@@ -866,7 +864,6 @@
 		1256741E1A1A683E002117B0 /* da */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = da; path = da.lproj/FilesTableCornerView.xib; sourceTree = "<group>"; };
 		1256741F1A1A683E002117B0 /* da */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = da; path = da.lproj/FileWarning.xib; sourceTree = "<group>"; };
 		125674231A1A683E002117B0 /* da */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = da; path = da.lproj/FMEditorStrings.xib; sourceTree = "<group>"; };
-		125674241A1A683E002117B0 /* da */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = da; path = da.lproj/FMEditorTXT.xib; sourceTree = "<group>"; };
 		125674251A1A683E002117B0 /* da */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = da; path = da.lproj/GlossaryImport.xib; sourceTree = "<group>"; };
 		125674261A1A683E002117B0 /* da */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = da; path = da.lproj/GlossaryManager.xib; sourceTree = "<group>"; };
 		125674271A1A683E002117B0 /* da */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = da; path = da.lproj/GlossaryMerge.xib; sourceTree = "<group>"; };
@@ -945,7 +942,6 @@
 		125674711A1A6847002117B0 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/FilesTableCornerView.xib; sourceTree = "<group>"; };
 		125674721A1A6847002117B0 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/FileWarning.xib; sourceTree = "<group>"; };
 		125674761A1A6847002117B0 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/FMEditorStrings.xib; sourceTree = "<group>"; };
-		125674771A1A6847002117B0 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/FMEditorTXT.xib; sourceTree = "<group>"; };
 		125674781A1A6847002117B0 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/GlossaryImport.xib; sourceTree = "<group>"; };
 		125674791A1A6847002117B0 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/GlossaryManager.xib; sourceTree = "<group>"; };
 		1256747A1A1A6847002117B0 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/GlossaryMerge.xib; sourceTree = "<group>"; };
@@ -1024,7 +1020,6 @@
 		125674C41A1A6852002117B0 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/FilesTableCornerView.xib; sourceTree = "<group>"; };
 		125674C51A1A6852002117B0 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/FileWarning.xib; sourceTree = "<group>"; };
 		125674C91A1A6852002117B0 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/FMEditorStrings.xib; sourceTree = "<group>"; };
-		125674CA1A1A6852002117B0 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/FMEditorTXT.xib; sourceTree = "<group>"; };
 		125674CB1A1A6852002117B0 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/GlossaryImport.xib; sourceTree = "<group>"; };
 		125674CC1A1A6852002117B0 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/GlossaryManager.xib; sourceTree = "<group>"; };
 		125674CD1A1A6852002117B0 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/GlossaryMerge.xib; sourceTree = "<group>"; };
@@ -1103,7 +1098,6 @@
 		125675171A1A685D002117B0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/FilesTableCornerView.xib; sourceTree = "<group>"; };
 		125675181A1A685D002117B0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/FileWarning.xib; sourceTree = "<group>"; };
 		1256751C1A1A685D002117B0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/FMEditorStrings.xib; sourceTree = "<group>"; };
-		1256751D1A1A685D002117B0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/FMEditorTXT.xib; sourceTree = "<group>"; };
 		1256751E1A1A685D002117B0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/GlossaryImport.xib; sourceTree = "<group>"; };
 		1256751F1A1A685D002117B0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/GlossaryManager.xib; sourceTree = "<group>"; };
 		125675201A1A685D002117B0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/GlossaryMerge.xib; sourceTree = "<group>"; };
@@ -1182,7 +1176,6 @@
 		1256756A1A1A6866002117B0 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/FilesTableCornerView.xib; sourceTree = "<group>"; };
 		1256756B1A1A6866002117B0 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/FileWarning.xib; sourceTree = "<group>"; };
 		1256756F1A1A6866002117B0 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/FMEditorStrings.xib; sourceTree = "<group>"; };
-		125675701A1A6866002117B0 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/FMEditorTXT.xib; sourceTree = "<group>"; };
 		125675711A1A6866002117B0 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/GlossaryImport.xib; sourceTree = "<group>"; };
 		125675721A1A6866002117B0 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/GlossaryManager.xib; sourceTree = "<group>"; };
 		125675731A1A6866002117B0 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/GlossaryMerge.xib; sourceTree = "<group>"; };
@@ -1261,7 +1254,6 @@
 		125675BD1A1A6870002117B0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/FilesTableCornerView.xib; sourceTree = "<group>"; };
 		125675BE1A1A6870002117B0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/FileWarning.xib; sourceTree = "<group>"; };
 		125675C21A1A6870002117B0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/FMEditorStrings.xib; sourceTree = "<group>"; };
-		125675C31A1A6870002117B0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/FMEditorTXT.xib; sourceTree = "<group>"; };
 		125675C41A1A6870002117B0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/GlossaryImport.xib; sourceTree = "<group>"; };
 		125675C51A1A6870002117B0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/GlossaryManager.xib; sourceTree = "<group>"; };
 		125675C61A1A6870002117B0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/GlossaryMerge.xib; sourceTree = "<group>"; };
@@ -1340,7 +1332,6 @@
 		125676101A1A687A002117B0 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/FilesTableCornerView.xib; sourceTree = "<group>"; };
 		125676111A1A687A002117B0 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/FileWarning.xib; sourceTree = "<group>"; };
 		125676151A1A687A002117B0 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/FMEditorStrings.xib; sourceTree = "<group>"; };
-		125676161A1A687A002117B0 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/FMEditorTXT.xib; sourceTree = "<group>"; };
 		125676171A1A687A002117B0 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/GlossaryImport.xib; sourceTree = "<group>"; };
 		125676181A1A687A002117B0 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/GlossaryManager.xib; sourceTree = "<group>"; };
 		125676191A1A687A002117B0 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/GlossaryMerge.xib; sourceTree = "<group>"; };
@@ -1419,7 +1410,6 @@
 		125676631A1A6887002117B0 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pl; path = pl.lproj/FilesTableCornerView.xib; sourceTree = "<group>"; };
 		125676641A1A6887002117B0 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pl; path = pl.lproj/FileWarning.xib; sourceTree = "<group>"; };
 		125676681A1A6887002117B0 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pl; path = pl.lproj/FMEditorStrings.xib; sourceTree = "<group>"; };
-		125676691A1A6887002117B0 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pl; path = pl.lproj/FMEditorTXT.xib; sourceTree = "<group>"; };
 		1256766A1A1A6887002117B0 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pl; path = pl.lproj/GlossaryImport.xib; sourceTree = "<group>"; };
 		1256766B1A1A6887002117B0 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pl; path = pl.lproj/GlossaryManager.xib; sourceTree = "<group>"; };
 		1256766C1A1A6887002117B0 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pl; path = pl.lproj/GlossaryMerge.xib; sourceTree = "<group>"; };
@@ -1498,7 +1488,6 @@
 		125676B61A1A6899002117B0 /* pt_BR */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pt_BR; path = pt_BR.lproj/FilesTableCornerView.xib; sourceTree = "<group>"; };
 		125676B71A1A6899002117B0 /* pt_BR */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pt_BR; path = pt_BR.lproj/FileWarning.xib; sourceTree = "<group>"; };
 		125676BB1A1A6899002117B0 /* pt_BR */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pt_BR; path = pt_BR.lproj/FMEditorStrings.xib; sourceTree = "<group>"; };
-		125676BC1A1A6899002117B0 /* pt_BR */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pt_BR; path = pt_BR.lproj/FMEditorTXT.xib; sourceTree = "<group>"; };
 		125676BD1A1A6899002117B0 /* pt_BR */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pt_BR; path = pt_BR.lproj/GlossaryImport.xib; sourceTree = "<group>"; };
 		125676BE1A1A6899002117B0 /* pt_BR */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pt_BR; path = pt_BR.lproj/GlossaryManager.xib; sourceTree = "<group>"; };
 		125676BF1A1A6899002117B0 /* pt_BR */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pt_BR; path = pt_BR.lproj/GlossaryMerge.xib; sourceTree = "<group>"; };
@@ -1577,7 +1566,6 @@
 		125677091A1A68A2002117B0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/FilesTableCornerView.xib; sourceTree = "<group>"; };
 		1256770A1A1A68A2002117B0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/FileWarning.xib; sourceTree = "<group>"; };
 		1256770E1A1A68A2002117B0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/FMEditorStrings.xib; sourceTree = "<group>"; };
-		1256770F1A1A68A2002117B0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/FMEditorTXT.xib; sourceTree = "<group>"; };
 		125677101A1A68A2002117B0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/GlossaryImport.xib; sourceTree = "<group>"; };
 		125677111A1A68A2002117B0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/GlossaryManager.xib; sourceTree = "<group>"; };
 		125677121A1A68A2002117B0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/GlossaryMerge.xib; sourceTree = "<group>"; };
@@ -1647,6 +1635,7 @@
 		125677551A1A6EF3002117B0 /* FMEditorHTML.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMEditorHTML.xib; sourceTree = "<group>"; };
 		125677571A1A6FAE002117B0 /* FMEditorImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMEditorImage.xib; sourceTree = "<group>"; };
 		125677591A1A7036002117B0 /* FMEditorRTF.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMEditorRTF.xib; sourceTree = "<group>"; };
+		1256775B1A1A70B9002117B0 /* FMEditorTXT.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMEditorTXT.xib; sourceTree = "<group>"; };
 		12F05F631A14F97600BFB4B4 /* InfoAppStore.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InfoAppStore.plist; sourceTree = "<group>"; };
 		12F05F671A14FB4B00BFB4B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = iLocalize/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		12F05F691A14FB7400BFB4B4 /* ApplicationIcons.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ApplicationIcons.icns; sourceTree = "<group>"; };
@@ -2653,9 +2642,10 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				125677591A1A7036002117B0 /* FMEditorRTF.xib */,
-				125677571A1A6FAE002117B0 /* FMEditorImage.xib */,
 				125677551A1A6EF3002117B0 /* FMEditorHTML.xib */,
+				125677571A1A6FAE002117B0 /* FMEditorImage.xib */,
+				125677591A1A7036002117B0 /* FMEditorRTF.xib */,
+				1256775B1A1A70B9002117B0 /* FMEditorTXT.xib */,
 				125677531A1A6D4B002117B0 /* ProjectInfoViewProject.xib */,
 				125671BC1A1A67FA002117B0 /* Scripts */,
 				125671C11A1A6802002117B0 /* Smart Filters */,
@@ -2672,7 +2662,6 @@
 				125672DC1A1A681E002117B0 /* FilesTableCornerView.xib */,
 				125672DE1A1A681E002117B0 /* FileWarning.xib */,
 				125672E61A1A681E002117B0 /* FMEditorStrings.xib */,
-				125672E81A1A681E002117B0 /* FMEditorTXT.xib */,
 				125672EA1A1A681E002117B0 /* GlossaryImport.xib */,
 				125672EC1A1A681E002117B0 /* GlossaryManager.xib */,
 				125672EE1A1A681E002117B0 /* GlossaryMerge.xib */,
@@ -4513,7 +4502,6 @@
 				A751E17E13045B19007635F2 /* folder.tiff in Resources */,
 				1256739F1A1A681E002117B0 /* OperationReport.xib in Resources */,
 				A751E18013045B19007635F2 /* SmallAppIcon.tif in Resources */,
-				1256737E1A1A681E002117B0 /* FMEditorTXT.xib in Resources */,
 				A751E18113045B19007635F2 /* SmartFolder.png in Resources */,
 				A751E18313045B19007635F2 /* PatchCenterBlack.png in Resources */,
 				12F05F7F1A1612EE00BFB4B4 /* license.txt in Resources */,
@@ -4595,6 +4583,7 @@
 				125673AE1A1A681E002117B0 /* ProjectInfoViewString.xib in Resources */,
 				A7E16DD5131ADC2E00C26A3A /* propagate_all.png in Resources */,
 				A7E16DD6131ADC2E00C26A3A /* propagate_none.png in Resources */,
+				1256775C1A1A70B9002117B0 /* FMEditorTXT.xib in Resources */,
 				A7E16DD7131ADC2E00C26A3A /* propagate_selected.png in Resources */,
 				125673831A1A681E002117B0 /* GlossaryNotIndexed.xib in Resources */,
 				125671CC1A1A6802002117B0 /* To translate.xml in Resources */,
@@ -5435,25 +5424,6 @@
 				1256770E1A1A68A2002117B0 /* ru */,
 			);
 			name = FMEditorStrings.xib;
-			sourceTree = "<group>";
-		};
-		125672E81A1A681E002117B0 /* FMEditorTXT.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				125672E91A1A681E002117B0 /* en */,
-				125673D11A1A6833002117B0 /* cs */,
-				125674241A1A683E002117B0 /* da */,
-				125674771A1A6847002117B0 /* de */,
-				125674CA1A1A6852002117B0 /* es */,
-				1256751D1A1A685D002117B0 /* fr */,
-				125675701A1A6866002117B0 /* it */,
-				125675C31A1A6870002117B0 /* ja */,
-				125676161A1A687A002117B0 /* nl */,
-				125676691A1A6887002117B0 /* pl */,
-				125676BC1A1A6899002117B0 /* pt_BR */,
-				1256770F1A1A68A2002117B0 /* ru */,
-			);
-			name = FMEditorTXT.xib;
 			sourceTree = "<group>";
 		};
 		125672EA1A1A681E002117B0 /* GlossaryImport.xib */ = {
