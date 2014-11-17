@@ -10,11 +10,16 @@
 
 @class ExportProjectSettings;
 
-@interface ExportProjectOptionsOVC : OperationViewController {
+@interface ExportProjectOptionsOVC : OperationViewController
+{
 	IBOutlet NSObjectController *objectController;
 	ExportProjectSettings *settings;
 	NSSize originalSize;
+    IBOutlet NSView *hideEmailComponentsView;
 }
+
 @property (strong) ExportProjectSettings *settings;
+
 - (IBAction)email:(id)sender;
+
 @end

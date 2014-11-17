@@ -16,10 +16,12 @@
 
 - (id)init
 {
-	if(self = [super initWithNibName:@"ExportProjectOptions"]) {
+	if (self = [super initWithNibName:@"ExportProjectOptions"])
+    {
 		[self loadView];
-		originalSize = self.view.frame.size;
+        originalSize = self.view.frame.size;
 	}
+    
 	return self;
 }
 
@@ -48,7 +50,8 @@
 //- (void)updateMailPrograms
 //{
 //	[mMailProgramPopUp removeAllItems];
-//	for(NSString *program in [[ProjectExportMailScripts shared] programs]) {
+//	for(NSString *program in [[ProjectExportMailScripts shared] programs])
+//  {
 //		[mMailProgramPopUp addItemWithTitle:program];		
 //	}
 //}
@@ -60,10 +63,17 @@
 
 - (NSSize)viewSize
 {
-	if(self.settings.email) {
-		return originalSize;
-	} else {
-		return NSMakeSize(originalSize.width, originalSize.height - 228);
+	if (self.settings.email)
+    {
+        [hideEmailComponentsView setHidden:NO];
+
+        return originalSize;
+	}
+    else
+    {
+        [hideEmailComponentsView setHidden:YES];
+        
+        return NSMakeSize(originalSize.width, originalSize.height - hideEmailComponentsView.frame.size.height);
 	}
 }
 
