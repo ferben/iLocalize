@@ -78,7 +78,6 @@
 		125673AA1A1A681E002117B0 /* ProjectInfoViewFile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125673401A1A681E002117B0 /* ProjectInfoViewFile.xib */; };
 		125673AB1A1A681E002117B0 /* ProjectInfoViewGlossary.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125673421A1A681E002117B0 /* ProjectInfoViewGlossary.xib */; };
 		125673AC1A1A681E002117B0 /* ProjectInfoViewPath.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125673441A1A681E002117B0 /* ProjectInfoViewPath.xib */; };
-		125673AD1A1A681E002117B0 /* ProjectInfoViewProject.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125673461A1A681E002117B0 /* ProjectInfoViewProject.xib */; };
 		125673AE1A1A681E002117B0 /* ProjectInfoViewString.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125673481A1A681E002117B0 /* ProjectInfoViewString.xib */; };
 		125673AF1A1A681E002117B0 /* ProjectLabels.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1256734A1A1A681E002117B0 /* ProjectLabels.xib */; };
 		125673B01A1A681E002117B0 /* ProjectStatusBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1256734C1A1A681E002117B0 /* ProjectStatusBar.xib */; };
@@ -98,6 +97,7 @@
 		125673BE1A1A681E002117B0 /* XLIFFExport.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125673681A1A681E002117B0 /* XLIFFExport.xib */; };
 		125673BF1A1A681E002117B0 /* XLIFFImport.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1256736A1A1A681E002117B0 /* XLIFFImport.xib */; };
 		125673C01A1A681E002117B0 /* XLIFFImportPreview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1256736C1A1A681E002117B0 /* XLIFFImportPreview.xib */; };
+		125677541A1A6D4B002117B0 /* ProjectInfoViewProject.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125677531A1A6D4B002117B0 /* ProjectInfoViewProject.xib */; };
 		12F05F681A14FB4B00BFB4B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12F05F671A14FB4B00BFB4B4 /* Images.xcassets */; };
 		12F05F6A1A14FB7400BFB4B4 /* ApplicationIcons.icns in Resources */ = {isa = PBXBuildFile; fileRef = 12F05F691A14FB7400BFB4B4 /* ApplicationIcons.icns */; };
 		12F05F7F1A1612EE00BFB4B4 /* license.txt in Resources */ = {isa = PBXBuildFile; fileRef = 12F05F7E1A1612EE00BFB4B4 /* license.txt */; };
@@ -758,7 +758,6 @@
 		125673411A1A681E002117B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ProjectInfoViewFile.xib; sourceTree = "<group>"; };
 		125673431A1A681E002117B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ProjectInfoViewGlossary.xib; sourceTree = "<group>"; };
 		125673451A1A681E002117B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ProjectInfoViewPath.xib; sourceTree = "<group>"; };
-		125673471A1A681E002117B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ProjectInfoViewProject.xib; sourceTree = "<group>"; };
 		125673491A1A681E002117B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ProjectInfoViewString.xib; sourceTree = "<group>"; };
 		1256734B1A1A681E002117B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ProjectLabels.xib; sourceTree = "<group>"; };
 		1256734D1A1A681E002117B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ProjectStatusBar.xib; sourceTree = "<group>"; };
@@ -841,7 +840,6 @@
 		125673FD1A1A6833002117B0 /* cs */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = cs; path = cs.lproj/ProjectInfoViewFile.xib; sourceTree = "<group>"; };
 		125673FE1A1A6833002117B0 /* cs */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = cs; path = cs.lproj/ProjectInfoViewGlossary.xib; sourceTree = "<group>"; };
 		125673FF1A1A6833002117B0 /* cs */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = cs; path = cs.lproj/ProjectInfoViewPath.xib; sourceTree = "<group>"; };
-		125674001A1A6833002117B0 /* cs */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = cs; path = cs.lproj/ProjectInfoViewProject.xib; sourceTree = "<group>"; };
 		125674011A1A6833002117B0 /* cs */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = cs; path = cs.lproj/ProjectInfoViewString.xib; sourceTree = "<group>"; };
 		125674021A1A6833002117B0 /* cs */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = cs; path = cs.lproj/ProjectLabels.xib; sourceTree = "<group>"; };
 		125674031A1A6833002117B0 /* cs */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = cs; path = cs.lproj/ProjectStatusBar.xib; sourceTree = "<group>"; };
@@ -924,7 +922,6 @@
 		125674501A1A683E002117B0 /* da */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = da; path = da.lproj/ProjectInfoViewFile.xib; sourceTree = "<group>"; };
 		125674511A1A683E002117B0 /* da */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = da; path = da.lproj/ProjectInfoViewGlossary.xib; sourceTree = "<group>"; };
 		125674521A1A683E002117B0 /* da */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = da; path = da.lproj/ProjectInfoViewPath.xib; sourceTree = "<group>"; };
-		125674531A1A683E002117B0 /* da */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = da; path = da.lproj/ProjectInfoViewProject.xib; sourceTree = "<group>"; };
 		125674541A1A683E002117B0 /* da */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = da; path = da.lproj/ProjectInfoViewString.xib; sourceTree = "<group>"; };
 		125674551A1A683E002117B0 /* da */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = da; path = da.lproj/ProjectLabels.xib; sourceTree = "<group>"; };
 		125674561A1A683E002117B0 /* da */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = da; path = da.lproj/ProjectStatusBar.xib; sourceTree = "<group>"; };
@@ -1007,7 +1004,6 @@
 		125674A31A1A6847002117B0 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/ProjectInfoViewFile.xib; sourceTree = "<group>"; };
 		125674A41A1A6847002117B0 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/ProjectInfoViewGlossary.xib; sourceTree = "<group>"; };
 		125674A51A1A6847002117B0 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/ProjectInfoViewPath.xib; sourceTree = "<group>"; };
-		125674A61A1A6847002117B0 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/ProjectInfoViewProject.xib; sourceTree = "<group>"; };
 		125674A71A1A6847002117B0 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/ProjectInfoViewString.xib; sourceTree = "<group>"; };
 		125674A81A1A6847002117B0 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/ProjectLabels.xib; sourceTree = "<group>"; };
 		125674A91A1A6848002117B0 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/ProjectStatusBar.xib; sourceTree = "<group>"; };
@@ -1090,7 +1086,6 @@
 		125674F61A1A6852002117B0 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/ProjectInfoViewFile.xib; sourceTree = "<group>"; };
 		125674F71A1A6852002117B0 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/ProjectInfoViewGlossary.xib; sourceTree = "<group>"; };
 		125674F81A1A6852002117B0 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/ProjectInfoViewPath.xib; sourceTree = "<group>"; };
-		125674F91A1A6852002117B0 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/ProjectInfoViewProject.xib; sourceTree = "<group>"; };
 		125674FA1A1A6852002117B0 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/ProjectInfoViewString.xib; sourceTree = "<group>"; };
 		125674FB1A1A6852002117B0 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/ProjectLabels.xib; sourceTree = "<group>"; };
 		125674FC1A1A6852002117B0 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/ProjectStatusBar.xib; sourceTree = "<group>"; };
@@ -1173,7 +1168,6 @@
 		125675491A1A685D002117B0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/ProjectInfoViewFile.xib; sourceTree = "<group>"; };
 		1256754A1A1A685D002117B0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/ProjectInfoViewGlossary.xib; sourceTree = "<group>"; };
 		1256754B1A1A685D002117B0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/ProjectInfoViewPath.xib; sourceTree = "<group>"; };
-		1256754C1A1A685D002117B0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/ProjectInfoViewProject.xib; sourceTree = "<group>"; };
 		1256754D1A1A685D002117B0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/ProjectInfoViewString.xib; sourceTree = "<group>"; };
 		1256754E1A1A685D002117B0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/ProjectLabels.xib; sourceTree = "<group>"; };
 		1256754F1A1A685D002117B0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/ProjectStatusBar.xib; sourceTree = "<group>"; };
@@ -1256,7 +1250,6 @@
 		1256759C1A1A6866002117B0 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/ProjectInfoViewFile.xib; sourceTree = "<group>"; };
 		1256759D1A1A6866002117B0 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/ProjectInfoViewGlossary.xib; sourceTree = "<group>"; };
 		1256759E1A1A6866002117B0 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/ProjectInfoViewPath.xib; sourceTree = "<group>"; };
-		1256759F1A1A6866002117B0 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/ProjectInfoViewProject.xib; sourceTree = "<group>"; };
 		125675A01A1A6866002117B0 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/ProjectInfoViewString.xib; sourceTree = "<group>"; };
 		125675A11A1A6866002117B0 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/ProjectLabels.xib; sourceTree = "<group>"; };
 		125675A21A1A6866002117B0 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/ProjectStatusBar.xib; sourceTree = "<group>"; };
@@ -1339,7 +1332,6 @@
 		125675EF1A1A6870002117B0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/ProjectInfoViewFile.xib; sourceTree = "<group>"; };
 		125675F01A1A6870002117B0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/ProjectInfoViewGlossary.xib; sourceTree = "<group>"; };
 		125675F11A1A6870002117B0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/ProjectInfoViewPath.xib; sourceTree = "<group>"; };
-		125675F21A1A6870002117B0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/ProjectInfoViewProject.xib; sourceTree = "<group>"; };
 		125675F31A1A6870002117B0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/ProjectInfoViewString.xib; sourceTree = "<group>"; };
 		125675F41A1A6870002117B0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/ProjectLabels.xib; sourceTree = "<group>"; };
 		125675F51A1A6870002117B0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/ProjectStatusBar.xib; sourceTree = "<group>"; };
@@ -1422,7 +1414,6 @@
 		125676421A1A687A002117B0 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/ProjectInfoViewFile.xib; sourceTree = "<group>"; };
 		125676431A1A687A002117B0 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/ProjectInfoViewGlossary.xib; sourceTree = "<group>"; };
 		125676441A1A687A002117B0 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/ProjectInfoViewPath.xib; sourceTree = "<group>"; };
-		125676451A1A687A002117B0 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/ProjectInfoViewProject.xib; sourceTree = "<group>"; };
 		125676461A1A687A002117B0 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/ProjectInfoViewString.xib; sourceTree = "<group>"; };
 		125676471A1A687A002117B0 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/ProjectLabels.xib; sourceTree = "<group>"; };
 		125676481A1A687A002117B0 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/ProjectStatusBar.xib; sourceTree = "<group>"; };
@@ -1505,7 +1496,6 @@
 		125676951A1A6887002117B0 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pl; path = pl.lproj/ProjectInfoViewFile.xib; sourceTree = "<group>"; };
 		125676961A1A6887002117B0 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pl; path = pl.lproj/ProjectInfoViewGlossary.xib; sourceTree = "<group>"; };
 		125676971A1A6887002117B0 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pl; path = pl.lproj/ProjectInfoViewPath.xib; sourceTree = "<group>"; };
-		125676981A1A6887002117B0 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pl; path = pl.lproj/ProjectInfoViewProject.xib; sourceTree = "<group>"; };
 		125676991A1A6887002117B0 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pl; path = pl.lproj/ProjectInfoViewString.xib; sourceTree = "<group>"; };
 		1256769A1A1A6887002117B0 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pl; path = pl.lproj/ProjectLabels.xib; sourceTree = "<group>"; };
 		1256769B1A1A6887002117B0 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pl; path = pl.lproj/ProjectStatusBar.xib; sourceTree = "<group>"; };
@@ -1588,7 +1578,6 @@
 		125676E81A1A6899002117B0 /* pt_BR */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pt_BR; path = pt_BR.lproj/ProjectInfoViewFile.xib; sourceTree = "<group>"; };
 		125676E91A1A6899002117B0 /* pt_BR */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pt_BR; path = pt_BR.lproj/ProjectInfoViewGlossary.xib; sourceTree = "<group>"; };
 		125676EA1A1A6899002117B0 /* pt_BR */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pt_BR; path = pt_BR.lproj/ProjectInfoViewPath.xib; sourceTree = "<group>"; };
-		125676EB1A1A6899002117B0 /* pt_BR */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pt_BR; path = pt_BR.lproj/ProjectInfoViewProject.xib; sourceTree = "<group>"; };
 		125676EC1A1A6899002117B0 /* pt_BR */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pt_BR; path = pt_BR.lproj/ProjectInfoViewString.xib; sourceTree = "<group>"; };
 		125676ED1A1A6899002117B0 /* pt_BR */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pt_BR; path = pt_BR.lproj/ProjectLabels.xib; sourceTree = "<group>"; };
 		125676EE1A1A6899002117B0 /* pt_BR */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pt_BR; path = pt_BR.lproj/ProjectStatusBar.xib; sourceTree = "<group>"; };
@@ -1671,7 +1660,6 @@
 		1256773B1A1A68A2002117B0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/ProjectInfoViewFile.xib; sourceTree = "<group>"; };
 		1256773C1A1A68A2002117B0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/ProjectInfoViewGlossary.xib; sourceTree = "<group>"; };
 		1256773D1A1A68A2002117B0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/ProjectInfoViewPath.xib; sourceTree = "<group>"; };
-		1256773E1A1A68A2002117B0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/ProjectInfoViewProject.xib; sourceTree = "<group>"; };
 		1256773F1A1A68A2002117B0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/ProjectInfoViewString.xib; sourceTree = "<group>"; };
 		125677401A1A68A2002117B0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/ProjectLabels.xib; sourceTree = "<group>"; };
 		125677411A1A68A2002117B0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/ProjectStatusBar.xib; sourceTree = "<group>"; };
@@ -1691,6 +1679,7 @@
 		1256774F1A1A68A2002117B0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/XLIFFExport.xib; sourceTree = "<group>"; };
 		125677501A1A68A2002117B0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/XLIFFImport.xib; sourceTree = "<group>"; };
 		125677511A1A68A2002117B0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/XLIFFImportPreview.xib; sourceTree = "<group>"; };
+		125677531A1A6D4B002117B0 /* ProjectInfoViewProject.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectInfoViewProject.xib; sourceTree = "<group>"; };
 		12F05F631A14F97600BFB4B4 /* InfoAppStore.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InfoAppStore.plist; sourceTree = "<group>"; };
 		12F05F671A14FB4B00BFB4B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = iLocalize/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		12F05F691A14FB7400BFB4B4 /* ApplicationIcons.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ApplicationIcons.icns; sourceTree = "<group>"; };
@@ -2697,6 +2686,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				125677531A1A6D4B002117B0 /* ProjectInfoViewProject.xib */,
+				125671BC1A1A67FA002117B0 /* Scripts */,
+				125671C11A1A6802002117B0 /* Smart Filters */,
 				125672C81A1A681E002117B0 /* About.xib */,
 				125672CA1A1A681E002117B0 /* AddCustomLanguage.xib */,
 				125672CC1A1A681E002117B0 /* AddLanguage.xib */,
@@ -2760,7 +2752,6 @@
 				125673401A1A681E002117B0 /* ProjectInfoViewFile.xib */,
 				125673421A1A681E002117B0 /* ProjectInfoViewGlossary.xib */,
 				125673441A1A681E002117B0 /* ProjectInfoViewPath.xib */,
-				125673461A1A681E002117B0 /* ProjectInfoViewProject.xib */,
 				125673481A1A681E002117B0 /* ProjectInfoViewString.xib */,
 				1256734A1A1A681E002117B0 /* ProjectLabels.xib */,
 				1256734C1A1A681E002117B0 /* ProjectStatusBar.xib */,
@@ -2780,8 +2771,6 @@
 				125673681A1A681E002117B0 /* XLIFFExport.xib */,
 				1256736A1A1A681E002117B0 /* XLIFFImport.xib */,
 				1256736C1A1A681E002117B0 /* XLIFFImportPreview.xib */,
-				125671BC1A1A67FA002117B0 /* Scripts */,
-				125671C11A1A6802002117B0 /* Smart Filters */,
 			);
 			path = Resources;
 			sourceTree = SOURCE_ROOT;
@@ -4521,6 +4510,7 @@
 				125673A01A1A681E002117B0 /* OperationWindowController.xib in Resources */,
 				A751E16913045B19007635F2 /* Glossary.icns in Resources */,
 				1256738D1A1A681E002117B0 /* ImportFilesSelection.xib in Resources */,
+				125677541A1A6D4B002117B0 /* ProjectInfoViewProject.xib in Resources */,
 				125673801A1A681E002117B0 /* GlossaryManager.xib in Resources */,
 				A751E16A13045B19007635F2 /* Project.icns in Resources */,
 				125673941A1A681E002117B0 /* LocalizableFilters.strings in Resources */,
@@ -4531,7 +4521,6 @@
 				125673921A1A681E002117B0 /* Localizable.strings in Resources */,
 				A751E16C13045B19007635F2 /* SmallFilesGeneric.tif in Resources */,
 				1256737F1A1A681E002117B0 /* GlossaryImport.xib in Resources */,
-				125673AD1A1A681E002117B0 /* ProjectInfoViewProject.xib in Resources */,
 				A751E16D13045B19007635F2 /* label_black.png in Resources */,
 				A751E16E13045B19007635F2 /* label_blue.png in Resources */,
 				A751E16F13045B19007635F2 /* label_green.png in Resources */,
@@ -6429,25 +6418,6 @@
 				1256773D1A1A68A2002117B0 /* ru */,
 			);
 			name = ProjectInfoViewPath.xib;
-			sourceTree = "<group>";
-		};
-		125673461A1A681E002117B0 /* ProjectInfoViewProject.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				125673471A1A681E002117B0 /* en */,
-				125674001A1A6833002117B0 /* cs */,
-				125674531A1A683E002117B0 /* da */,
-				125674A61A1A6847002117B0 /* de */,
-				125674F91A1A6852002117B0 /* es */,
-				1256754C1A1A685D002117B0 /* fr */,
-				1256759F1A1A6866002117B0 /* it */,
-				125675F21A1A6870002117B0 /* ja */,
-				125676451A1A687A002117B0 /* nl */,
-				125676981A1A6887002117B0 /* pl */,
-				125676EB1A1A6899002117B0 /* pt_BR */,
-				1256773E1A1A68A2002117B0 /* ru */,
-			);
-			name = ProjectInfoViewProject.xib;
 			sourceTree = "<group>";
 		};
 		125673481A1A681E002117B0 /* ProjectInfoViewString.xib */ = {
