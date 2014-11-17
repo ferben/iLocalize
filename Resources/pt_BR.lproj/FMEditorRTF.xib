@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" promptedForUpgradeToXcode5="NO">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
@@ -14,27 +14,26 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="5" userLabel="base">
             <rect key="frame" x="0.0" y="0.0" width="470" height="262"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="7">
+                <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7">
                     <rect key="frame" x="0.0" y="0.0" width="470" height="262"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <clipView key="contentView" id="GBa-ng-fSH">
+                    <clipView key="contentView" id="AWr-m0-RR6">
                         <rect key="frame" x="0.0" y="0.0" width="455" height="262"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" quoteSubstitution="YES" dashSubstitution="YES" textReplacement="YES" spellingCorrection="YES" smartInsertDelete="YES" id="8" customClass="TextViewCustom">
                                 <rect key="frame" x="0.0" y="0.0" width="455" height="262"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="minSize" width="455" height="262"/>
-                                <size key="maxSize" width="455" height="10000000"/>
+                                <size key="maxSize" width="470" height="10000000"/>
                                 <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                 <size key="minSize" width="455" height="262"/>
-                                <size key="maxSize" width="455" height="10000000"/>
+                                <size key="maxSize" width="470" height="10000000"/>
                                 <connections>
                                     <outlet property="delegate" destination="-2" id="19"/>
                                 </connections>
@@ -52,21 +51,26 @@
                     </scroller>
                 </scrollView>
             </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="7" secondAttribute="bottom" id="Gpv-3U-rAM"/>
+                <constraint firstItem="7" firstAttribute="top" secondItem="5" secondAttribute="top" id="THA-m1-GbP"/>
+                <constraint firstAttribute="trailing" secondItem="7" secondAttribute="trailing" id="d6i-fp-Q7J"/>
+                <constraint firstItem="7" firstAttribute="leading" secondItem="5" secondAttribute="leading" id="vbS-ch-Ofc"/>
+            </constraints>
         </customView>
         <customView id="6" userLabel="localized">
             <rect key="frame" x="0.0" y="0.0" width="659" height="262"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <splitView dividerStyle="thin" vertical="YES" id="13">
+                <splitView dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="13">
                     <rect key="frame" x="0.0" y="0.0" width="659" height="262"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
-                        <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="10">
+                        <scrollView fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="10">
                             <rect key="frame" x="0.0" y="0.0" width="329" height="262"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <clipView key="contentView" id="3nq-m4-ZXc">
+                            <clipView key="contentView" id="Ag6-Cw-6bh">
                                 <rect key="frame" x="0.0" y="0.0" width="314" height="262"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <textView findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" quoteSubstitution="YES" dashSubstitution="YES" textReplacement="YES" spellingCorrection="YES" smartInsertDelete="YES" id="9" customClass="TextViewCustom">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="262"/>
@@ -93,12 +97,12 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
                         </scrollView>
-                        <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="11">
+                        <scrollView fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="11">
                             <rect key="frame" x="330" y="0.0" width="329" height="262"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <clipView key="contentView" id="fcg-SL-xn9">
+                            <clipView key="contentView" id="Gur-tr-R3p">
                                 <rect key="frame" x="0.0" y="0.0" width="314" height="262"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <textView findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" quoteSubstitution="YES" dashSubstitution="YES" textReplacement="YES" spellingCorrection="YES" smartInsertDelete="YES" id="12" customClass="TextViewCustom">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="262"/>
@@ -132,6 +136,12 @@
                     </holdingPriorities>
                 </splitView>
             </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="13" secondAttribute="bottom" id="LpP-ge-gzr"/>
+                <constraint firstAttribute="trailing" secondItem="13" secondAttribute="trailing" id="MUl-Rh-p5T"/>
+                <constraint firstItem="13" firstAttribute="top" secondItem="6" secondAttribute="top" id="k5g-z0-4x2"/>
+                <constraint firstItem="13" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="yQE-UP-a0a"/>
+            </constraints>
         </customView>
     </objects>
 </document>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment version="1060" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
     <objects>
@@ -25,10 +24,9 @@
             <rect key="frame" x="0.0" y="0.0" width="653" height="349"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <button id="10">
-                    <rect key="frame" x="39" y="254" width="593" height="18"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="check" title="Obnovit rozvržení každého lokalizovaného nibu podle rozvržení jeho původního jazyka" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="53">
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="10">
+                    <rect key="frame" x="37" y="254" width="598" height="18"/>
+                    <buttonCell key="cell" type="check" title="Obnovit rozvržení každého lokalizovaného NIBu podle rozvržení jeho původního jazyka" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="53">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -37,18 +35,19 @@
                         <binding destination="44" name="value" keyPath="values.updateKeepLayout" id="46"/>
                     </connections>
                 </button>
-                <textField verticalHuggingPriority="750" id="8">
-                    <rect key="frame" x="38" y="278" width="598" height="28"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8">
+                    <rect key="frame" x="37" y="278" width="598" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="00y-74-OyR"/>
+                    </constraints>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="&lt;do not localize - placeholder for file information &gt;" id="52">
                         <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button id="11">
-                    <rect key="frame" x="18" y="312" width="614" height="18"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="11">
+                    <rect key="frame" x="18" y="312" width="617" height="18"/>
                     <buttonCell key="cell" type="radio" title="Aktualizovat projekt podle souborů nové verze" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="54">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="systemBold"/>
@@ -57,9 +56,8 @@
                         <action selector="importBaseRadio:" target="-2" id="25"/>
                     </connections>
                 </button>
-                <button id="7">
-                    <rect key="frame" x="18" y="217" width="614" height="18"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="7">
+                    <rect key="frame" x="18" y="218" width="617" height="18"/>
                     <buttonCell key="cell" type="radio" title="Aktualizovat lokalizovaný jazyk podle těchto souborů" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="51">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="systemBold"/>
@@ -68,21 +66,20 @@
                         <action selector="importOtherRadio:" target="-2" id="26"/>
                     </connections>
                 </button>
-                <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="6">
-                    <rect key="frame" x="41" y="75" width="592" height="114"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6">
+                    <rect key="frame" x="39" y="75" width="594" height="114"/>
                     <clipView key="contentView" drawsBackground="NO" id="h7w-zp-tAU">
                         <rect key="frame" x="1" y="1" width="590" height="112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView focusRingType="none" appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" selectionHighlightStyle="sourceList" columnReordering="NO" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" id="9" customClass="TableViewCustom">
-                                <rect key="frame" x="0.0" y="0.0" width="590" height="19"/>
+                                <rect key="frame" x="0.0" y="0.0" width="592" height="19"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                 <tableColumns>
-                                    <tableColumn editable="NO" width="586.51397705078125" minWidth="59.513999938964844" maxWidth="1000" id="14">
+                                    <tableColumn editable="NO" width="588.51400000000001" minWidth="59.514000000000003" maxWidth="1000" id="14">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Jazyk">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -117,33 +114,24 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
-                <textField verticalHuggingPriority="750" id="13">
-                    <rect key="frame" x="38" y="197" width="598" height="14"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="13">
+                    <rect key="frame" x="37" y="197" width="598" height="14"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Vyberte jazyk k aktualizaci:" id="56">
                         <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField verticalHuggingPriority="750" id="36">
-                    <rect key="frame" x="59" y="25" width="358" height="14"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Ověřte lokalizované soubory nib, má-li každý správné rozvržení." id="59">
-                        <font key="font" metaFont="smallSystem"/>
-                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <imageView id="37">
-                    <rect key="frame" x="41" y="20" width="17" height="25"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <imageView translatesAutoresizingMaskIntoConstraints="NO" id="37">
+                    <rect key="frame" x="51" y="20" width="17" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="17" id="xFx-ex-TCy"/>
+                    </constraints>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="_warning" id="60"/>
                 </imageView>
-                <button id="38">
-                    <rect key="frame" x="39" y="51" width="593" height="18"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <buttonCell key="cell" type="check" title="Aktualizovat rozvržení nibů podle importovaných rozvržení" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="61">
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="38">
+                    <rect key="frame" x="37" y="51" width="598" height="18"/>
+                    <buttonCell key="cell" type="check" title="Aktualizovat rozvržení NIBů podle importovaných rozvržení" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="61">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -151,7 +139,45 @@
                         <action selector="importNibLayouts:" target="-2" id="41"/>
                     </connections>
                 </button>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="36">
+                    <rect key="frame" x="74" y="25" width="561" height="14"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Ověřte lokalizované soubory NIB, má-li každý správné rozvržení." id="59">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
+            <constraints>
+                <constraint firstItem="8" firstAttribute="top" secondItem="11" secondAttribute="bottom" constant="7" id="1vF-JX-AZb"/>
+                <constraint firstItem="13" firstAttribute="top" secondItem="7" secondAttribute="bottom" constant="8" symbolic="YES" id="2pl-I6-BVz"/>
+                <constraint firstAttribute="trailing" secondItem="11" secondAttribute="trailing" constant="20" symbolic="YES" id="4l2-dQ-ERH"/>
+                <constraint firstItem="38" firstAttribute="top" secondItem="6" secondAttribute="bottom" constant="8" symbolic="YES" id="6BH-AE-PTy"/>
+                <constraint firstItem="8" firstAttribute="trailing" secondItem="10" secondAttribute="trailing" id="6iF-9c-GrA"/>
+                <constraint firstItem="7" firstAttribute="leading" secondItem="11" secondAttribute="leading" id="FZV-y6-R6Q"/>
+                <constraint firstItem="11" firstAttribute="top" secondItem="68" secondAttribute="top" constant="20" symbolic="YES" id="HPk-jY-XVI"/>
+                <constraint firstItem="10" firstAttribute="top" secondItem="8" secondAttribute="bottom" constant="8" symbolic="YES" id="K4L-Lc-fuF"/>
+                <constraint firstItem="36" firstAttribute="leading" secondItem="37" secondAttribute="trailing" constant="8" symbolic="YES" id="RL1-3e-0cC"/>
+                <constraint firstItem="37" firstAttribute="top" secondItem="38" secondAttribute="bottom" constant="8" symbolic="YES" id="S55-YU-a6n"/>
+                <constraint firstItem="8" firstAttribute="leading" secondItem="68" secondAttribute="leading" constant="39" id="UFH-i3-UqT"/>
+                <constraint firstItem="7" firstAttribute="trailing" secondItem="10" secondAttribute="trailing" id="Ue7-5y-Prw"/>
+                <constraint firstItem="6" firstAttribute="trailing" secondItem="38" secondAttribute="trailing" id="ZSG-VA-6V3"/>
+                <constraint firstItem="6" firstAttribute="leading" secondItem="13" secondAttribute="leading" id="b1I-8i-Ce5"/>
+                <constraint firstAttribute="bottom" secondItem="37" secondAttribute="bottom" constant="20" symbolic="YES" id="bZI-ON-STe"/>
+                <constraint firstItem="6" firstAttribute="top" secondItem="13" secondAttribute="bottom" constant="8" symbolic="YES" id="cMn-F0-7Sf"/>
+                <constraint firstItem="36" firstAttribute="top" secondItem="38" secondAttribute="bottom" constant="14" id="cuR-q7-GzU"/>
+                <constraint firstItem="7" firstAttribute="top" secondItem="10" secondAttribute="bottom" constant="21" id="dzd-TU-lkS"/>
+                <constraint firstItem="37" firstAttribute="centerY" secondItem="36" secondAttribute="centerY" id="gQx-nH-0x2"/>
+                <constraint firstItem="8" firstAttribute="leading" secondItem="10" secondAttribute="leading" id="h0t-yY-sVT"/>
+                <constraint firstItem="7" firstAttribute="centerX" secondItem="68" secondAttribute="centerX" id="hIA-Yw-YFF"/>
+                <constraint firstItem="6" firstAttribute="trailing" secondItem="13" secondAttribute="trailing" id="icf-BI-KGU"/>
+                <constraint firstItem="38" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="ml4-Al-VeE"/>
+                <constraint firstItem="37" firstAttribute="leading" secondItem="68" secondAttribute="leading" constant="51" id="oXp-Uu-h0S"/>
+                <constraint firstItem="36" firstAttribute="trailing" secondItem="38" secondAttribute="trailing" id="wiC-1q-iWX"/>
+                <constraint firstItem="11" firstAttribute="trailing" secondItem="8" secondAttribute="trailing" id="z8Y-rA-1W9"/>
+                <constraint firstItem="10" firstAttribute="leading" secondItem="13" secondAttribute="leading" id="zAA-R7-70N"/>
+                <constraint firstItem="13" firstAttribute="trailing" secondItem="7" secondAttribute="trailing" id="zxh-Fj-zA3"/>
+            </constraints>
         </customView>
         <arrayController selectsInsertedObjects="NO" clearsFilterPredicateOnInsertion="NO" id="19" userLabel="Controller">
             <declaredKeys>

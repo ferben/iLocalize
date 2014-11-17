@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment version="1050" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
     <objects>
@@ -17,36 +16,32 @@
             <rect key="frame" x="0.0" y="0.0" width="624" height="255"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <textField verticalHuggingPriority="750" id="313">
-                    <rect key="frame" x="18" y="103" width="252" height="17"/>
-                    <autoresizingMask key="autoresizingMask"/>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="313">
+                    <rect key="frame" x="17" y="103" width="242" height="17"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Basistaal:" id="483">
                         <font key="font" metaFont="systemBold"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField verticalHuggingPriority="750" id="490">
-                    <rect key="frame" x="18" y="65" width="252" height="17"/>
-                    <autoresizingMask key="autoresizingMask"/>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="490">
+                    <rect key="frame" x="17" y="65" width="242" height="17"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Gebruik dezelfde vertaling in:" id="491">
                         <font key="font" metaFont="systemBold"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField verticalHuggingPriority="750" id="Fom-hd-vvs">
-                    <rect key="frame" x="18" y="22" width="252" height="17"/>
-                    <autoresizingMask key="autoresizingMask"/>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fom-hd-vvs">
+                    <rect key="frame" x="17" y="22" width="242" height="17"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Herstel alle dialoogwaarschuwingen:" id="UVZ-qQ-zdX">
                         <font key="font" metaFont="systemBold"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button id="312">
-                    <rect key="frame" x="275" y="102" width="344" height="18"/>
-                    <autoresizingMask key="autoresizingMask"/>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="312">
+                    <rect key="frame" x="262" y="102" width="344" height="18"/>
                     <buttonCell key="cell" type="check" title="Alleen-lezen" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="482">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
@@ -55,9 +50,8 @@
                         <binding destination="10" name="value" keyPath="values.baseLanguageReadOnly" id="314"/>
                     </connections>
                 </button>
-                <button toolTip="Beschouw stuurtekens en escape-tekens als identiek" id="330">
-                    <rect key="frame" x="275" y="139" width="344" height="18"/>
-                    <autoresizingMask key="autoresizingMask"/>
+                <button toolTip="Beschouw stuurtekens en escape-tekens als identiek" translatesAutoresizingMaskIntoConstraints="NO" id="330">
+                    <rect key="frame" x="262" y="139" width="344" height="18"/>
                     <buttonCell key="cell" type="check" title="Negeer stuurtekens" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="484">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
@@ -67,27 +61,27 @@
                         <binding destination="10" name="value" keyPath="values.translateIgnoreControlCharacters" id="332"/>
                     </connections>
                 </button>
-                <textField verticalHuggingPriority="750" id="295">
-                    <rect key="frame" x="18" y="160" width="252" height="17"/>
-                    <autoresizingMask key="autoresizingMask"/>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="295">
+                    <rect key="frame" x="17" y="160" width="242" height="17"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Vertaling:" id="476">
                         <font key="font" metaFont="systemBold"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField verticalHuggingPriority="750" id="500">
-                    <rect key="frame" x="18" y="218" width="252" height="17"/>
-                    <autoresizingMask key="autoresizingMask"/>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="500">
+                    <rect key="frame" x="17" y="218" width="242" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="238" id="5RJ-uv-5P3"/>
+                    </constraints>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Modus:" id="501">
                         <font key="font" metaFont="systemBold"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button id="271">
-                    <rect key="frame" x="275" y="159" width="344" height="18"/>
-                    <autoresizingMask key="autoresizingMask"/>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="271">
+                    <rect key="frame" x="262" y="159" width="344" height="18"/>
                     <buttonCell key="cell" type="check" title="Negeer hoofdletters" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="474">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
@@ -96,9 +90,8 @@
                         <binding destination="10" name="value" keyPath="values.translateIgnoreCase" id="274"/>
                     </connections>
                 </button>
-                <popUpButton verticalHuggingPriority="750" id="492">
-                    <rect key="frame" x="274" y="59" width="251" height="26"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="492">
+                    <rect key="frame" x="261" y="59" width="251" height="26"/>
                     <popUpButtonCell key="cell" type="push" title="Niet actief" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="495" id="493">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="menu"/>
@@ -114,9 +107,21 @@
                         <binding destination="10" name="selectedIndex" keyPath="values.autoPropagateTranslationMode" id="499"/>
                     </connections>
                 </popUpButton>
-                <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" id="502">
-                    <rect key="frame" x="277" y="197" width="340" height="38"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QgM-ZQ-TMZ">
+                    <rect key="frame" x="259" y="13" width="256" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="244" id="8DJ-Jf-XVo"/>
+                    </constraints>
+                    <buttonCell key="cell" type="push" title="Stel waarschuwingen opnieuw in" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4qb-iu-nB5">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="resetDialogWarnings:" target="-2" id="MRC-dW-a9g"/>
+                    </connections>
+                </button>
+                <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" translatesAutoresizingMaskIntoConstraints="NO" id="502">
+                    <rect key="frame" x="264" y="197" width="340" height="38"/>
                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     <size key="cellSize" width="340" height="18"/>
                     <size key="intercellSpacing" width="4" height="2"/>
@@ -140,18 +145,39 @@
                         <binding destination="10" name="selectedIndex" keyPath="values.behaviorMode" id="508"/>
                     </connections>
                 </matrix>
-                <button verticalHuggingPriority="750" id="QgM-ZQ-TMZ">
-                    <rect key="frame" x="270" y="13" width="245" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="push" title="Stel waarschuwingen opnieuw in" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4qb-iu-nB5">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="resetDialogWarnings:" target="-2" id="MRC-dW-a9g"/>
-                    </connections>
-                </button>
             </subviews>
+            <constraints>
+                <constraint firstItem="271" firstAttribute="baseline" secondItem="295" secondAttribute="baseline" id="0b5-3b-0xW"/>
+                <constraint firstItem="271" firstAttribute="top" secondItem="502" secondAttribute="bottom" constant="22" id="2jI-5H-WC5"/>
+                <constraint firstItem="490" firstAttribute="baseline" secondItem="492" secondAttribute="baseline" id="3x6-K8-bnV"/>
+                <constraint firstItem="330" firstAttribute="leading" secondItem="271" secondAttribute="leading" id="90f-l7-7Z3"/>
+                <constraint firstItem="271" firstAttribute="leading" secondItem="502" secondAttribute="leading" id="9pw-B1-QKK"/>
+                <constraint firstItem="502" firstAttribute="leading" secondItem="500" secondAttribute="trailing" constant="7" id="Bg5-SY-Uvg"/>
+                <constraint firstAttribute="trailing" secondItem="502" secondAttribute="trailing" constant="20" symbolic="YES" id="CA1-Fh-gZ4"/>
+                <constraint firstAttribute="bottom" secondItem="QgM-ZQ-TMZ" secondAttribute="bottom" constant="20" symbolic="YES" id="Lzj-Ju-w9E"/>
+                <constraint firstItem="492" firstAttribute="leading" secondItem="490" secondAttribute="trailing" constant="6" id="OD1-wg-dEL"/>
+                <constraint firstItem="QgM-ZQ-TMZ" firstAttribute="top" secondItem="492" secondAttribute="bottom" constant="21" id="QYx-7e-wmH"/>
+                <constraint firstItem="500" firstAttribute="trailing" secondItem="295" secondAttribute="trailing" id="Qi1-Wv-cqh"/>
+                <constraint firstItem="500" firstAttribute="leading" secondItem="295" secondAttribute="leading" id="R7z-Zu-ZYc"/>
+                <constraint firstItem="490" firstAttribute="top" secondItem="313" secondAttribute="bottom" constant="21" id="ULk-Dn-hXw"/>
+                <constraint firstItem="330" firstAttribute="trailing" secondItem="271" secondAttribute="trailing" id="VCI-TS-PcN"/>
+                <constraint firstItem="502" firstAttribute="trailing" secondItem="271" secondAttribute="trailing" id="ac4-iH-l7g"/>
+                <constraint firstItem="490" firstAttribute="trailing" secondItem="313" secondAttribute="trailing" id="beu-9f-oMc"/>
+                <constraint firstItem="490" firstAttribute="leading" secondItem="313" secondAttribute="leading" id="ccd-cP-CnH"/>
+                <constraint firstItem="QgM-ZQ-TMZ" firstAttribute="trailing" secondItem="492" secondAttribute="trailing" id="dcd-fO-gzA"/>
+                <constraint firstItem="Fom-hd-vvs" firstAttribute="leading" secondItem="490" secondAttribute="leading" id="dqv-tp-Wav"/>
+                <constraint firstItem="313" firstAttribute="baseline" secondItem="312" secondAttribute="baseline" id="dvj-6y-ZSb"/>
+                <constraint firstItem="330" firstAttribute="top" secondItem="271" secondAttribute="bottom" constant="6" symbolic="YES" id="gwA-oD-vvl"/>
+                <constraint firstItem="QgM-ZQ-TMZ" firstAttribute="leading" secondItem="Fom-hd-vvs" secondAttribute="trailing" constant="8" symbolic="YES" id="h3r-8N-nRv"/>
+                <constraint firstItem="502" firstAttribute="top" secondItem="500" secondAttribute="top" id="ixc-68-H2j"/>
+                <constraint firstItem="313" firstAttribute="trailing" secondItem="295" secondAttribute="trailing" id="j9M-PG-nTk"/>
+                <constraint firstItem="330" firstAttribute="leading" secondItem="312" secondAttribute="leading" id="mnx-eJ-qnx"/>
+                <constraint firstItem="QgM-ZQ-TMZ" firstAttribute="centerY" secondItem="Fom-hd-vvs" secondAttribute="centerY" id="nBS-rd-mjj"/>
+                <constraint firstItem="313" firstAttribute="leading" secondItem="295" secondAttribute="leading" id="qDK-3d-4zL"/>
+                <constraint firstItem="500" firstAttribute="top" secondItem="170" secondAttribute="top" constant="20" symbolic="YES" id="tcm-9y-4lL"/>
+                <constraint firstItem="Fom-hd-vvs" firstAttribute="trailing" secondItem="490" secondAttribute="trailing" id="wig-2e-vw5"/>
+                <constraint firstItem="312" firstAttribute="trailing" secondItem="330" secondAttribute="trailing" id="xNr-qo-yGS"/>
+            </constraints>
         </customView>
     </objects>
 </document>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" promptedForUpgradeToXcode5="NO">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment version="1060" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
         <plugIn identifier="com.apple.WebKitIBPlugin" version="6250"/>
     </dependencies>
@@ -19,21 +18,20 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="5" userLabel="base">
             <rect key="frame" x="0.0" y="0.0" width="550" height="622"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <splitView dividerStyle="paneSplitter" id="106">
+                <splitView dividerStyle="paneSplitter" translatesAutoresizingMaskIntoConstraints="NO" id="106">
                     <rect key="frame" x="0.0" y="-2" width="550" height="624"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
-                        <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="7">
+                        <scrollView fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="7">
                             <rect key="frame" x="0.0" y="0.0" width="550" height="327"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <clipView key="contentView" id="pa9-dt-KbD">
+                            <clipView key="contentView" id="Que-GV-WLr">
                                 <rect key="frame" x="0.0" y="0.0" width="550" height="327"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <textView findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" quoteSubstitution="YES" dashSubstitution="YES" textReplacement="YES" spellingCorrection="YES" smartInsertDelete="YES" id="8">
                                         <rect key="frame" x="0.0" y="0.0" width="550" height="327"/>
@@ -60,10 +58,12 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
                         </scrollView>
-                        <webView id="29">
+                        <webView fixedFrame="YES" id="29">
                             <rect key="frame" x="0.0" y="337" width="550" height="287"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12"/>
+                            <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12">
+                                <nil key="identifier"/>
+                            </webPreferences>
                         </webView>
                     </subviews>
                     <holdingPriorities>
@@ -72,25 +72,30 @@
                     </holdingPriorities>
                 </splitView>
             </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="106" secondAttribute="bottom" constant="-2" id="5gP-Yh-L0D"/>
+                <constraint firstAttribute="trailing" secondItem="106" secondAttribute="trailing" id="CMr-9u-qp5"/>
+                <constraint firstItem="106" firstAttribute="leading" secondItem="5" secondAttribute="leading" id="CWP-2m-2s0"/>
+                <constraint firstItem="106" firstAttribute="top" secondItem="5" secondAttribute="top" id="Kno-xo-ubi"/>
+            </constraints>
         </customView>
         <customView id="6" userLabel="localized">
             <rect key="frame" x="0.0" y="0.0" width="741" height="652"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <splitView dividerStyle="paneSplitter" vertical="YES" id="109">
+                <splitView dividerStyle="paneSplitter" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="109">
                     <rect key="frame" x="0.0" y="-2" width="741" height="654"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
-                        <splitView dividerStyle="paneSplitter" id="107">
+                        <splitView fixedFrame="YES" dividerStyle="paneSplitter" id="107">
                             <rect key="frame" x="0.0" y="0.0" width="346" height="654"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
-                                <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="10">
+                                <scrollView fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="10">
                                     <rect key="frame" x="0.0" y="0.0" width="346" height="335"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <clipView key="contentView" id="YNw-Vw-ip2">
+                                    <clipView key="contentView" id="Nqz-gD-X4Z">
                                         <rect key="frame" x="0.0" y="0.0" width="346" height="335"/>
-                                        <autoresizingMask key="autoresizingMask"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <textView findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" quoteSubstitution="YES" dashSubstitution="YES" textReplacement="YES" spellingCorrection="YES" smartInsertDelete="YES" id="9">
                                                 <rect key="frame" x="0.0" y="15" width="346" height="335"/>
@@ -117,10 +122,12 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                     </scroller>
                                 </scrollView>
-                                <webView id="51">
+                                <webView fixedFrame="YES" id="51">
                                     <rect key="frame" x="0.0" y="345" width="346" height="309"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12"/>
+                                    <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12">
+                                        <nil key="identifier"/>
+                                    </webPreferences>
                                 </webView>
                             </subviews>
                             <holdingPriorities>
@@ -128,16 +135,16 @@
                                 <real value="250"/>
                             </holdingPriorities>
                         </splitView>
-                        <splitView dividerStyle="paneSplitter" id="108">
+                        <splitView fixedFrame="YES" dividerStyle="paneSplitter" id="108">
                             <rect key="frame" x="356" y="0.0" width="385" height="654"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
-                                <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="11">
+                                <scrollView fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="11">
                                     <rect key="frame" x="0.0" y="0.0" width="385" height="335"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <clipView key="contentView" id="8XO-B5-XZ1">
+                                    <clipView key="contentView" id="P9W-Rb-d08">
                                         <rect key="frame" x="0.0" y="0.0" width="385" height="335"/>
-                                        <autoresizingMask key="autoresizingMask"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <textView findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" quoteSubstitution="YES" dashSubstitution="YES" textReplacement="YES" spellingCorrection="YES" smartInsertDelete="YES" id="12">
                                                 <rect key="frame" x="0.0" y="15" width="385" height="335"/>
@@ -164,10 +171,12 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                     </scroller>
                                 </scrollView>
-                                <webView id="71">
+                                <webView fixedFrame="YES" id="71">
                                     <rect key="frame" x="0.0" y="345" width="385" height="309"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12"/>
+                                    <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12">
+                                        <nil key="identifier"/>
+                                    </webPreferences>
                                 </webView>
                             </subviews>
                             <holdingPriorities>
@@ -182,6 +191,12 @@
                     </holdingPriorities>
                 </splitView>
             </subviews>
+            <constraints>
+                <constraint firstItem="109" firstAttribute="top" secondItem="6" secondAttribute="top" id="64l-YA-1bO"/>
+                <constraint firstAttribute="bottom" secondItem="109" secondAttribute="bottom" constant="-2" id="KK7-Sx-YCe"/>
+                <constraint firstItem="109" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="UNi-Vg-69u"/>
+                <constraint firstAttribute="trailing" secondItem="109" secondAttribute="trailing" id="XPp-1t-Tsq"/>
+            </constraints>
         </customView>
     </objects>
 </document>

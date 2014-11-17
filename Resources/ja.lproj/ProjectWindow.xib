@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment version="1050" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
     <objects>
@@ -50,10 +49,10 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="562" y="312" width="816" height="564"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <value key="minSize" type="size" width="816" height="564"/>
             <view key="contentView" id="827">
-                <rect key="frame" x="7" y="11" width="816" height="564"/>
+                <rect key="frame" x="0.0" y="0.0" width="816" height="564"/>
                 <autoresizingMask key="autoresizingMask"/>
             </view>
             <toolbar key="toolbar" implicitIdentifier="74128D11-DC29-4D9F-B2B0-BBFB35E13B8D" displayMode="iconAndLabel" sizeMode="regular" id="826">
@@ -113,7 +112,7 @@
                         <nil key="toolTip"/>
                         <size key="minSize" width="180" height="22"/>
                         <size key="maxSize" width="334" height="22"/>
-                        <searchField key="view" verticalHuggingPriority="750" id="881">
+                        <searchField key="view" wantsLayer="YES" verticalHuggingPriority="750" id="881">
                             <rect key="frame" x="0.0" y="14" width="308" height="22"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" bezelStyle="round" sendsWholeSearchString="YES" id="882">
@@ -148,9 +147,11 @@
             <rect key="frame" x="0.0" y="0.0" width="441" height="92"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <textField verticalHuggingPriority="750" id="340">
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="340">
                     <rect key="frame" x="17" y="20" width="407" height="52"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="OAU-dU-Kcb"/>
+                    </constraints>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="ファイルが選択されていません" id="795">
                         <font key="font" metaFont="system" size="36"/>
                         <color key="textColor" red="0.49803922" green="0.49803922" blue="0.49803922" alpha="1" colorSpace="calibratedRGB"/>
@@ -158,18 +159,35 @@
                     </textFieldCell>
                 </textField>
             </subviews>
+            <constraints>
+                <constraint firstItem="340" firstAttribute="leading" secondItem="338" secondAttribute="leading" constant="19" id="2D2-5Y-4b7"/>
+                <constraint firstItem="340" firstAttribute="centerX" secondItem="338" secondAttribute="centerX" id="V7T-Ui-wXX"/>
+                <constraint firstItem="340" firstAttribute="top" secondItem="338" secondAttribute="top" constant="20" symbolic="YES" id="xgb-j4-frl"/>
+            </constraints>
         </customView>
         <customView id="339" userLabel="not editable">
             <rect key="frame" x="0.0" y="0.0" width="524" height="159"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <customView id="346">
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="346">
                     <rect key="frame" x="20" y="20" width="484" height="119"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <button verticalHuggingPriority="750" id="342">
-                            <rect key="frame" x="149" y="12" width="187" height="32"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="341">
+                            <rect key="frame" x="17" y="50" width="450" height="49"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="49" id="ZGU-p0-6JN"/>
+                            </constraints>
+                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="編集できません" id="796">
+                                <font key="font" metaFont="system" size="36"/>
+                                <color key="textColor" red="0.49803922" green="0.49803922" blue="0.49803922" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="342">
+                            <rect key="frame" x="117" y="13" width="250" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="238" id="1Tb-SV-gy9"/>
+                            </constraints>
                             <buttonCell key="cell" type="push" title="外部エディタで開く" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="797">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
@@ -178,26 +196,32 @@
                                 <action selector="openFilesInExternalEditor:" target="-1" id="1149"/>
                             </connections>
                         </button>
-                        <textField verticalHuggingPriority="750" id="341">
-                            <rect key="frame" x="17" y="50" width="450" height="49"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="編集できません" id="796">
-                                <font key="font" metaFont="system" size="36"/>
-                                <color key="textColor" red="0.49803922" green="0.49803922" blue="0.49803922" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                            </textFieldCell>
-                        </textField>
                     </subviews>
+                    <constraints>
+                        <constraint firstItem="342" firstAttribute="centerX" secondItem="346" secondAttribute="centerX" id="88g-GK-TAW"/>
+                        <constraint firstItem="341" firstAttribute="top" secondItem="346" secondAttribute="top" constant="20" symbolic="YES" id="ekS-WB-cm1"/>
+                        <constraint firstItem="341" firstAttribute="leading" secondItem="346" secondAttribute="leading" constant="19" id="s9B-mJ-var"/>
+                        <constraint firstAttribute="bottom" secondItem="342" secondAttribute="bottom" constant="20" symbolic="YES" id="vke-3L-b8n"/>
+                        <constraint firstItem="341" firstAttribute="centerX" secondItem="342" secondAttribute="centerX" id="xk7-sj-IRQ"/>
+                    </constraints>
                 </customView>
             </subviews>
+            <constraints>
+                <constraint firstItem="346" firstAttribute="top" secondItem="339" secondAttribute="top" constant="20" symbolic="YES" id="hRa-o5-gJ1"/>
+                <constraint firstAttribute="trailing" secondItem="346" secondAttribute="trailing" constant="20" symbolic="YES" id="q8B-Jm-lyK"/>
+                <constraint firstItem="346" firstAttribute="leading" secondItem="339" secondAttribute="leading" constant="20" symbolic="YES" id="tgc-e7-Zqu"/>
+                <constraint firstAttribute="bottom" secondItem="346" secondAttribute="bottom" constant="20" symbolic="YES" id="vHU-Ab-4b0"/>
+            </constraints>
         </customView>
         <customView id="399" userLabel="not applicable">
             <rect key="frame" x="0.0" y="0.0" width="441" height="92"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <textField verticalHuggingPriority="750" id="403">
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="403">
                     <rect key="frame" x="17" y="20" width="407" height="52"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="s4b-lp-YRj"/>
+                    </constraints>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="認識できない形式のファイルです" id="798">
                         <font key="font" metaFont="system" size="36"/>
                         <color key="textColor" red="0.49803922" green="0.49803922" blue="0.49803922" alpha="1" colorSpace="calibratedRGB"/>
@@ -205,18 +229,35 @@
                     </textFieldCell>
                 </textField>
             </subviews>
+            <constraints>
+                <constraint firstItem="403" firstAttribute="leading" secondItem="399" secondAttribute="leading" constant="19" id="52d-zW-HbL"/>
+                <constraint firstItem="403" firstAttribute="centerX" secondItem="399" secondAttribute="centerX" id="MUD-yW-9Pg"/>
+                <constraint firstItem="403" firstAttribute="top" secondItem="399" secondAttribute="top" constant="20" symbolic="YES" id="nTU-IJ-8yn"/>
+            </constraints>
         </customView>
         <customView id="598" userLabel="ignored">
             <rect key="frame" x="0.0" y="0.0" width="530" height="169"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <customView id="602">
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="602">
                     <rect key="frame" x="20" y="20" width="490" height="129"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <button verticalHuggingPriority="750" id="600">
-                            <rect key="frame" x="157" y="12" width="187" height="32"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="599">
+                            <rect key="frame" x="20" y="60" width="450" height="49"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="49" id="C3A-lI-Gzw"/>
+                            </constraints>
+                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="無視ファイルです" id="804">
+                                <font key="font" metaFont="system" size="36"/>
+                                <color key="textColor" red="0.49803922" green="0.49803922" blue="0.49803922" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="600">
+                            <rect key="frame" x="120" y="13" width="250" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="238" id="eVe-v4-Wca"/>
+                            </constraints>
                             <buttonCell key="cell" type="push" title="外部エディタで開く" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="805">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
@@ -225,22 +266,26 @@
                                 <action selector="openFilesInExternalEditor:" target="-1" id="1151"/>
                             </connections>
                         </button>
-                        <textField verticalHuggingPriority="750" id="599">
-                            <rect key="frame" x="20" y="60" width="450" height="49"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="無視ファイルです" id="804">
-                                <font key="font" metaFont="system" size="36"/>
-                                <color key="textColor" red="0.49803922" green="0.49803922" blue="0.49803922" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                            </textFieldCell>
-                        </textField>
                     </subviews>
+                    <constraints>
+                        <constraint firstItem="599" firstAttribute="top" secondItem="602" secondAttribute="top" constant="20" symbolic="YES" id="Iay-uR-IYM"/>
+                        <constraint firstItem="599" firstAttribute="centerX" secondItem="602" secondAttribute="centerX" id="Ld3-gz-k7g"/>
+                        <constraint firstItem="600" firstAttribute="centerX" secondItem="599" secondAttribute="centerX" id="YMf-kp-huv"/>
+                        <constraint firstAttribute="bottom" secondItem="600" secondAttribute="bottom" constant="20" symbolic="YES" id="aiw-9V-xOP"/>
+                        <constraint firstItem="599" firstAttribute="leading" secondItem="602" secondAttribute="leading" constant="22" id="dDZ-2f-XVq"/>
+                    </constraints>
                 </customView>
             </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="602" secondAttribute="bottom" constant="20" symbolic="YES" id="T5L-dx-xRP"/>
+                <constraint firstAttribute="trailing" secondItem="602" secondAttribute="trailing" constant="20" symbolic="YES" id="XcL-8J-tVJ"/>
+                <constraint firstItem="602" firstAttribute="top" secondItem="598" secondAttribute="top" constant="20" symbolic="YES" id="c0R-aI-If4"/>
+                <constraint firstItem="602" firstAttribute="leading" secondItem="598" secondAttribute="leading" constant="20" symbolic="YES" id="ydr-dJ-d8v"/>
+            </constraints>
         </customView>
     </objects>
     <resources>
-        <image name="_glossary" width="7.679999828338623" height="7.679999828338623"/>
-        <image name="_launch" width="128" height="128"/>
+        <image name="_glossary" width="32" height="32"/>
+        <image name="_launch" width="32" height="32"/>
     </resources>
 </document>

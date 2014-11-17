@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment version="1050" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
     <objects>
@@ -17,18 +16,19 @@
             <rect key="frame" x="0.0" y="0.0" width="843" height="501"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField verticalHuggingPriority="750" id="18">
-                    <rect key="frame" x="17" y="463" width="718" height="17"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="18">
+                    <rect key="frame" x="18" y="463" width="691" height="17"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Folgende Dateien werden verarbeitet:" id="113">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button verticalHuggingPriority="750" id="45">
-                    <rect key="frame" x="734" y="453" width="95" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="45">
+                    <rect key="frame" x="709" y="453" width="120" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="108" id="xwo-Gr-jby"/>
+                    </constraints>
                     <buttonCell key="cell" type="push" title="Export …" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="114">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -37,9 +37,8 @@
                         <action selector="export:" target="-2" id="46"/>
                     </connections>
                 </button>
-                <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="20" horizontalPageScroll="10" verticalLineScroll="20" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="130">
-                    <rect key="frame" x="20" y="20" width="803" height="433"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="20" horizontalPageScroll="10" verticalLineScroll="20" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="130">
+                    <rect key="frame" x="20" y="22" width="803" height="433"/>
                     <clipView key="contentView" drawsBackground="NO" id="TaS-ko-t4y">
                         <rect key="frame" x="1" y="1" width="801" height="431"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,6 +90,18 @@
                     </scroller>
                 </scrollView>
             </subviews>
+            <constraints>
+                <constraint firstItem="45" firstAttribute="leading" secondItem="18" secondAttribute="trailing" constant="8" symbolic="YES" id="0CJ-Fi-geC"/>
+                <constraint firstItem="18" firstAttribute="leading" secondItem="127" secondAttribute="leading" constant="20" symbolic="YES" id="8qq-zQ-kPk"/>
+                <constraint firstItem="130" firstAttribute="top" secondItem="18" secondAttribute="bottom" constant="8" symbolic="YES" id="Suw-kc-dr2"/>
+                <constraint firstItem="45" firstAttribute="baseline" secondItem="18" secondAttribute="baseline" id="aAT-tS-tHS"/>
+                <constraint firstAttribute="bottom" secondItem="130" secondAttribute="bottom" constant="22" id="crv-sz-IGZ"/>
+                <constraint firstItem="130" firstAttribute="trailing" secondItem="45" secondAttribute="trailing" id="kPB-oO-fdi"/>
+                <constraint firstItem="130" firstAttribute="leading" secondItem="18" secondAttribute="leading" id="rEg-z5-hCt"/>
+                <constraint firstAttribute="trailing" secondItem="45" secondAttribute="trailing" constant="20" symbolic="YES" id="tIV-wG-1wL"/>
+                <constraint firstItem="45" firstAttribute="top" secondItem="127" secondAttribute="top" constant="20" symbolic="YES" id="txA-Jx-Ghm"/>
+            </constraints>
+            <point key="canvasLocation" x="565.5" y="662.5"/>
         </customView>
     </objects>
 </document>

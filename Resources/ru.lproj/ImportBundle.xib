@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
@@ -41,13 +41,12 @@
             </declaredKeys>
         </objectController>
         <customView id="178">
-            <rect key="frame" x="0.0" y="0.0" width="868" height="393"/>
+            <rect key="frame" x="0.0" y="-5" width="868" height="393"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button id="15">
-                    <rect key="frame" x="42" y="305" width="712" height="18"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="check" title="Восстановить разметку локализованного nib файла из макета базового языка" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="153">
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="15">
+                    <rect key="frame" x="39" y="306" width="811" height="18"/>
+                    <buttonCell key="cell" type="check" title="Восстановить разметку локализованного NIB файла из макета базового языка" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="153">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -57,9 +56,8 @@
                         <binding destination="111" name="enabled" keyPath="selection.updateBaseLanguage" id="119"/>
                     </connections>
                 </button>
-                <button id="10">
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="10">
                     <rect key="frame" x="18" y="357" width="832" height="18"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <string key="toolTip">Обновление базового языка и перебазирование всех других языков. Все строки на других языках будут локализованы согласно текущему переводу.</string>
                     <buttonCell key="cell" type="check" title="Обновить проект из новой версии пакета:" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="152">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -70,9 +68,8 @@
                         <binding destination="111" name="value" keyPath="selection.updateBaseLanguage" id="135"/>
                     </connections>
                 </button>
-                <button id="17">
-                    <rect key="frame" x="18" y="267" width="832" height="18"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="17">
+                    <rect key="frame" x="18" y="268" width="832" height="18"/>
                     <buttonCell key="cell" type="check" title="Обновить языки локализации проекта из пакета:" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="154">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
@@ -82,19 +79,17 @@
                         <binding destination="111" name="value" keyPath="selection.updateLocalizedLanguage" id="113"/>
                     </connections>
                 </button>
-                <textField verticalHuggingPriority="750" id="8">
-                    <rect key="frame" x="41" y="217" width="810" height="14"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8">
+                    <rect key="frame" x="39" y="218" width="811" height="14"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Выберите язык(и) для обновления:" id="151">
                         <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button id="50">
-                    <rect key="frame" x="42" y="71" width="654" height="18"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <buttonCell key="cell" type="check" title="Обновить разметки nib из импортируемых макетов" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="155">
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="50">
+                    <rect key="frame" x="39" y="71" width="811" height="18"/>
+                    <buttonCell key="cell" type="check" title="Обновить разметки NIB из импортируемых макетов" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="155">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -104,23 +99,15 @@
                         <binding destination="111" name="enabled" keyPath="selection.updateLocalizedLanguage" id="120"/>
                     </connections>
                 </button>
-                <textField verticalHuggingPriority="750" id="55">
-                    <rect key="frame" x="98" y="25" width="753" height="14"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Просмотрите локализованные nib файлы, для подтверждения правильности разметки макета." id="156">
-                        <font key="font" metaFont="smallSystem"/>
-                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <imageView id="56">
-                    <rect key="frame" x="77" y="20" width="17" height="25"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <imageView translatesAutoresizingMaskIntoConstraints="NO" id="56">
+                    <rect key="frame" x="53" y="20" width="17" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="17" id="gk5-Wv-RPE"/>
+                    </constraints>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="_warning" id="157"/>
                 </imageView>
-                <button id="90">
-                    <rect key="frame" x="42" y="51" width="808" height="18"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="90">
+                    <rect key="frame" x="39" y="51" width="811" height="18"/>
                     <buttonCell key="cell" type="check" title="Создать несуществующие файлы локализации из базового языка" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="158">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
@@ -130,21 +117,20 @@
                         <binding destination="111" name="enabled" keyPath="selection.updateLocalizedLanguage" id="121"/>
                     </connections>
                 </button>
-                <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="180">
-                    <rect key="frame" x="44" y="95" width="804" height="115"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="180">
+                    <rect key="frame" x="41" y="95" width="807" height="115"/>
                     <clipView key="contentView" id="0Q1-p7-vTO">
                         <rect key="frame" x="1" y="1" width="802" height="113"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <outlineView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" indentationPerLevel="16" autoresizesOutlineColumn="YES" outlineTableColumn="185" id="183">
-                                <rect key="frame" x="0.0" y="0.0" width="802" height="19"/>
+                                <rect key="frame" x="0.0" y="0.0" width="805" height="19"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                 <tableColumns>
-                                    <tableColumn identifier="language" width="799" minWidth="16" maxWidth="1000" id="185">
+                                    <tableColumn identifier="language" width="802" minWidth="16" maxWidth="1000" id="185">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -170,9 +156,8 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
-                <pathControl verticalHuggingPriority="750" allowsExpansionToolTips="YES" id="191">
-                    <rect key="frame" x="41" y="330" width="711" height="22"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                <pathControl verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="191">
+                    <rect key="frame" x="41" y="330" width="672" height="22"/>
                     <pathCell key="cell" selectable="YES" editable="YES" alignment="left" id="192">
                         <font key="font" metaFont="system"/>
                         <url key="url" string="file://localhost/Applications/"/>
@@ -186,9 +171,8 @@
                         </binding>
                     </connections>
                 </pathControl>
-                <pathControl verticalHuggingPriority="750" allowsExpansionToolTips="YES" id="193">
-                    <rect key="frame" x="41" y="240" width="711" height="22"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                <pathControl verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="193">
+                    <rect key="frame" x="41" y="240" width="672" height="22"/>
                     <pathCell key="cell" selectable="YES" editable="YES" alignment="left" id="194">
                         <font key="font" metaFont="system"/>
                         <url key="url" string="file://localhost/Applications/"/>
@@ -202,9 +186,8 @@
                         </binding>
                     </connections>
                 </pathControl>
-                <button verticalHuggingPriority="750" id="202">
-                    <rect key="frame" x="754" y="235" width="100" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="202">
+                    <rect key="frame" x="715" y="234" width="139" height="32"/>
                     <buttonCell key="cell" type="push" title="Выбрать…" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="203">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -214,9 +197,11 @@
                         <binding destination="111" name="enabled" keyPath="selection.updateLocalizedLanguage" id="209"/>
                     </connections>
                 </button>
-                <button verticalHuggingPriority="750" id="204">
-                    <rect key="frame" x="754" y="324" width="100" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="204">
+                    <rect key="frame" x="715" y="324" width="139" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="127" id="CTG-Na-1Mt"/>
+                    </constraints>
                     <buttonCell key="cell" type="push" title="Выбрать…" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="205">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -226,7 +211,57 @@
                         <binding destination="111" name="enabled" keyPath="selection.updateBaseLanguage" id="210"/>
                     </connections>
                 </button>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="55">
+                    <rect key="frame" x="76" y="25" width="774" height="14"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Просмотрите локализованные NIB файлы, для подтверждения правильности разметки макета." id="156">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
+            <constraints>
+                <constraint firstItem="17" firstAttribute="trailing" secondItem="202" secondAttribute="trailing" id="2N9-Y2-gZf"/>
+                <constraint firstItem="204" firstAttribute="leading" secondItem="202" secondAttribute="leading" id="3AG-BX-nEi"/>
+                <constraint firstItem="15" firstAttribute="top" secondItem="191" secondAttribute="bottom" constant="8" symbolic="YES" id="3Hj-k9-fav"/>
+                <constraint firstItem="50" firstAttribute="top" secondItem="180" secondAttribute="bottom" constant="8" symbolic="YES" id="6V3-2m-THz"/>
+                <constraint firstItem="17" firstAttribute="top" secondItem="15" secondAttribute="bottom" constant="24" id="6pa-HZ-fGj"/>
+                <constraint firstItem="10" firstAttribute="leading" secondItem="17" secondAttribute="leading" id="7Mu-zb-onQ"/>
+                <constraint firstItem="202" firstAttribute="leading" secondItem="193" secondAttribute="trailing" constant="8" symbolic="YES" id="7m0-nP-X5f"/>
+                <constraint firstItem="191" firstAttribute="leading" secondItem="15" secondAttribute="leading" id="8op-6N-FiU"/>
+                <constraint firstItem="191" firstAttribute="baseline" secondItem="204" secondAttribute="baseline" id="D9E-gU-8gu"/>
+                <constraint firstItem="180" firstAttribute="top" secondItem="8" secondAttribute="bottom" constant="8" symbolic="YES" id="Dpq-7S-7t1"/>
+                <constraint firstItem="180" firstAttribute="leading" secondItem="50" secondAttribute="leading" id="EU4-bi-5PQ"/>
+                <constraint firstItem="204" firstAttribute="leading" secondItem="191" secondAttribute="trailing" constant="8" symbolic="YES" id="Hz8-Kw-NCg"/>
+                <constraint firstItem="90" firstAttribute="top" secondItem="50" secondAttribute="bottom" constant="6" symbolic="YES" id="IGo-pf-in7"/>
+                <constraint firstItem="56" firstAttribute="centerY" secondItem="55" secondAttribute="centerY" id="IYf-Rd-CHB"/>
+                <constraint firstItem="90" firstAttribute="leading" secondItem="50" secondAttribute="leading" id="KrA-zh-ov9"/>
+                <constraint firstItem="10" firstAttribute="leading" secondItem="178" secondAttribute="leading" constant="20" symbolic="YES" id="Mks-Qt-YOP"/>
+                <constraint firstItem="191" firstAttribute="leading" secondItem="178" secondAttribute="leading" constant="41" id="NqV-Kf-VUP"/>
+                <constraint firstItem="50" firstAttribute="trailing" secondItem="180" secondAttribute="trailing" id="OYU-HF-cl3"/>
+                <constraint firstItem="55" firstAttribute="leading" secondItem="56" secondAttribute="trailing" constant="8" symbolic="YES" id="OjF-jA-9Cs"/>
+                <constraint firstItem="193" firstAttribute="top" secondItem="17" secondAttribute="bottom" constant="8" symbolic="YES" id="OoA-rS-CMx"/>
+                <constraint firstItem="90" firstAttribute="trailing" secondItem="50" secondAttribute="trailing" id="PL0-4K-IYf"/>
+                <constraint firstItem="204" firstAttribute="trailing" secondItem="15" secondAttribute="trailing" id="aCb-GQ-OJK"/>
+                <constraint firstItem="193" firstAttribute="baseline" secondItem="202" secondAttribute="baseline" id="dNx-HK-l7G"/>
+                <constraint firstItem="90" firstAttribute="trailing" secondItem="55" secondAttribute="trailing" id="fPb-Bx-evs"/>
+                <constraint firstItem="8" firstAttribute="leading" secondItem="180" secondAttribute="leading" id="hkK-rQ-zNG"/>
+                <constraint firstItem="56" firstAttribute="leading" secondItem="178" secondAttribute="leading" constant="53" id="iko-bb-Qa2"/>
+                <constraint firstItem="55" firstAttribute="top" secondItem="90" secondAttribute="bottom" constant="14" id="l9K-KQ-ovv"/>
+                <constraint firstItem="202" firstAttribute="trailing" secondItem="8" secondAttribute="trailing" id="lFg-ds-onU"/>
+                <constraint firstItem="204" firstAttribute="trailing" secondItem="10" secondAttribute="trailing" id="leV-rU-LFN"/>
+                <constraint firstItem="191" firstAttribute="top" secondItem="10" secondAttribute="bottom" constant="7" id="qNf-kC-nk7"/>
+                <constraint firstItem="8" firstAttribute="leading" secondItem="193" secondAttribute="leading" id="tIh-kN-ya7"/>
+                <constraint firstItem="193" firstAttribute="leading" secondItem="15" secondAttribute="leading" id="usK-6Z-WVd"/>
+                <constraint firstItem="17" firstAttribute="trailing" secondItem="15" secondAttribute="trailing" id="vl8-Rz-Z2a"/>
+                <constraint firstAttribute="trailing" secondItem="10" secondAttribute="trailing" constant="20" symbolic="YES" id="voK-yj-ffw"/>
+                <constraint firstItem="10" firstAttribute="top" secondItem="178" secondAttribute="top" constant="20" symbolic="YES" id="w8e-EM-DAm"/>
+                <constraint firstAttribute="bottom" secondItem="56" secondAttribute="bottom" constant="20" symbolic="YES" id="x1y-Aj-aSJ"/>
+                <constraint firstItem="8" firstAttribute="top" secondItem="193" secondAttribute="bottom" constant="8" symbolic="YES" id="xCO-D5-FKK"/>
+                <constraint firstItem="56" firstAttribute="top" secondItem="90" secondAttribute="bottom" constant="8" symbolic="YES" id="xpT-uS-WsB"/>
+                <constraint firstItem="180" firstAttribute="trailing" secondItem="8" secondAttribute="trailing" id="yzs-0L-1wJ"/>
+            </constraints>
+            <point key="canvasLocation" x="503" y="662.5"/>
         </customView>
     </objects>
     <resources>

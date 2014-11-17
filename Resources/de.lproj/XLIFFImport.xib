@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" promptedForUpgradeToXcode5="NO">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
@@ -12,23 +12,27 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="1">
-            <rect key="frame" x="0.0" y="0.0" width="579" height="106"/>
+            <rect key="frame" x="0.0" y="0.0" width="657" height="93"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField verticalHuggingPriority="750" id="18">
-                    <rect key="frame" x="17" y="67" width="129" height="17"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="18">
+                    <rect key="frame" x="18" y="53" width="129" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="125" id="9ir-uM-8gi"/>
+                    </constraints>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Strings-Datei:" id="19">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button verticalHuggingPriority="750" id="22">
-                    <rect key="frame" x="464" y="56" width="100" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="22">
+                    <rect key="frame" x="464" y="45" width="120" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="108" id="DOb-Dg-nZH"/>
+                    </constraints>
                     <buttonCell key="cell" type="push" title="Wählen …" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="23">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -37,17 +41,15 @@
                         <action selector="chooseFile:" target="-2" id="35"/>
                     </connections>
                 </button>
-                <pathControl verticalHuggingPriority="750" allowsExpansionToolTips="YES" id="24">
-                    <rect key="frame" x="152" y="64" width="310" height="22"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                <pathControl verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="24">
+                    <rect key="frame" x="152" y="51" width="310" height="22"/>
                     <pathCell key="cell" selectable="YES" editable="YES" alignment="left" placeholderString="Keine Datei gewählt" id="25">
                         <font key="font" metaFont="system"/>
                         <url key="url" string="file://localhost/Applications/foo.txt"/>
                     </pathCell>
                 </pathControl>
-                <button id="36">
-                    <rect key="frame" x="150" y="27" width="410" height="18"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="36">
+                    <rect key="frame" x="150" y="11" width="430" height="34"/>
                     <string key="toolTip">By default iLocalize uses the &lt;source&gt; element of XLIFF to match the translations. By checking this button, iLocalize will use the resname attribute, if available, to match the translations.</string>
                     <buttonCell key="cell" type="check" title="Match translations using resname instead of source" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="37">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -55,6 +57,20 @@
                     </buttonCell>
                 </button>
             </subviews>
+            <constraints>
+                <constraint firstItem="22" firstAttribute="baseline" secondItem="24" secondAttribute="baseline" id="C6S-O4-904"/>
+                <constraint firstItem="18" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="Cde-LJ-zjK"/>
+                <constraint firstItem="36" firstAttribute="leading" secondItem="24" secondAttribute="leading" id="Jq1-QW-HoG"/>
+                <constraint firstItem="22" firstAttribute="trailing" secondItem="36" secondAttribute="trailing" id="POq-xG-s0z"/>
+                <constraint firstItem="18" firstAttribute="top" secondItem="1" secondAttribute="top" constant="23" id="VQR-gy-eXr"/>
+                <constraint firstItem="22" firstAttribute="leading" secondItem="24" secondAttribute="trailing" constant="8" symbolic="YES" id="WGa-5v-pwE"/>
+                <constraint firstAttribute="bottom" secondItem="36" secondAttribute="bottom" constant="13" id="aH9-43-Rbl"/>
+                <constraint firstItem="24" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" symbolic="YES" id="eHm-tj-gOs"/>
+                <constraint firstAttribute="trailing" secondItem="22" secondAttribute="trailing" constant="79" id="kWd-VH-5n7"/>
+                <constraint firstItem="24" firstAttribute="leading" secondItem="18" secondAttribute="trailing" constant="7" id="rni-k9-1Rq"/>
+                <constraint firstItem="36" firstAttribute="top" secondItem="24" secondAttribute="bottom" constant="8" symbolic="YES" id="zz1-Sj-M2K"/>
+            </constraints>
+            <point key="canvasLocation" x="421.5" y="195.5"/>
         </customView>
     </objects>
 </document>

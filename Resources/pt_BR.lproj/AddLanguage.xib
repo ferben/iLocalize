@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" promptedForUpgradeToXcode5="NO">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment version="1060" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
     <objects>
@@ -14,29 +13,22 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <window title="Adicionar Idioma" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="132" userLabel="AddLanguage">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="745" y="774" width="430" height="134"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
+            <rect key="contentRect" x="745" y="774" width="434" height="164"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <value key="minSize" type="size" width="213" height="107"/>
             <view key="contentView" id="133">
-                <rect key="frame" x="0.0" y="0.0" width="430" height="134"/>
+                <rect key="frame" x="0.0" y="0.0" width="434" height="164"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField verticalHuggingPriority="750" id="139">
-                        <rect key="frame" x="17" y="96" width="110" height="17"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Nome do Idioma:" id="184">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <button verticalHuggingPriority="750" id="146">
-                        <rect key="frame" x="238" y="12" width="82" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="146">
+                        <rect key="frame" x="201" y="13" width="110" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="98" id="lWL-2b-MyF"/>
+                        </constraints>
                         <buttonCell key="cell" type="push" title="Cancelar" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="187">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -48,9 +40,11 @@ Gw
                             <action selector="cancel:" target="-2" id="154"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" id="147">
-                        <rect key="frame" x="320" y="12" width="96" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="147">
+                        <rect key="frame" x="310" y="13" width="110" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="98" id="RX3-iC-0Aj"/>
+                        </constraints>
                         <buttonCell key="cell" type="push" title="Adicionar" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" inset="2" id="188">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -62,34 +56,62 @@ DQ
                             <action selector="add:" target="-2" id="211"/>
                         </connections>
                     </button>
-                    <button id="199">
-                        <rect key="frame" x="130" y="58" width="282" height="18"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <buttonCell key="cell" type="check" title="Preencher tradução com idioma base" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="200">
-                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <binding destination="201" name="value" keyPath="values.autoFillTranslationWithBaseForNewLanguage" id="203"/>
-                        </connections>
-                    </button>
-                    <popUpButton verticalHuggingPriority="750" id="204">
-                        <rect key="frame" x="129" y="90" width="284" height="26"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="207" id="205">
-                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                            <menu key="menu" title="Outras Visualizações" id="206">
-                                <items>
-                                    <menuItem title="Item 1" state="on" id="207"/>
-                                    <menuItem title="Item 2" id="208"/>
-                                    <menuItem title="Item 3" id="209"/>
-                                </items>
-                            </menu>
-                        </popUpButtonCell>
-                    </popUpButton>
+                    <box autoresizesSubviews="NO" title="Nome do Idioma" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="220">
+                        <rect key="frame" x="17" y="57" width="400" height="87"/>
+                        <view key="contentView">
+                            <rect key="frame" x="1" y="1" width="398" height="71"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="204">
+                                    <rect key="frame" x="16" y="37" width="367" height="26"/>
+                                    <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="207" id="205">
+                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="menu"/>
+                                        <menu key="menu" title="Outras Visualizações" id="206">
+                                            <items>
+                                                <menuItem title="Item 1" state="on" id="207"/>
+                                                <menuItem title="Item 2" id="208"/>
+                                                <menuItem title="Item 3" id="209"/>
+                                            </items>
+                                        </menu>
+                                    </popUpButtonCell>
+                                </popUpButton>
+                                <button translatesAutoresizingMaskIntoConstraints="NO" id="199">
+                                    <rect key="frame" x="16" y="12" width="366" height="18"/>
+                                    <buttonCell key="cell" type="check" title="Preencher tradução com idioma base" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="200">
+                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <binding destination="201" name="value" keyPath="values.autoFillTranslationWithBaseForNewLanguage" id="203"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </view>
+                        <constraints>
+                            <constraint firstItem="199" firstAttribute="trailing" secondItem="204" secondAttribute="trailing" id="HSd-pX-roi"/>
+                            <constraint firstItem="204" firstAttribute="top" secondItem="220" secondAttribute="top" constant="25" id="IW7-Mw-5WD"/>
+                            <constraint firstAttribute="bottom" secondItem="199" secondAttribute="bottom" constant="11" id="SOr-cg-kQ5"/>
+                            <constraint firstItem="204" firstAttribute="leading" secondItem="220" secondAttribute="leading" constant="16" id="TsF-gA-6bq"/>
+                            <constraint firstItem="204" firstAttribute="leading" secondItem="199" secondAttribute="leading" id="n4J-yu-Zm6"/>
+                            <constraint firstAttribute="trailing" secondItem="204" secondAttribute="trailing" constant="16" id="zfw-Zk-dWh"/>
+                        </constraints>
+                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </box>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="147" firstAttribute="leading" secondItem="146" secondAttribute="trailing" constant="11" id="Idw-oi-Pxh"/>
+                    <constraint firstItem="147" firstAttribute="baseline" secondItem="146" secondAttribute="baseline" id="J2Z-Ei-6yc"/>
+                    <constraint firstItem="220" firstAttribute="trailing" secondItem="147" secondAttribute="trailing" id="Mpu-WN-BGH"/>
+                    <constraint firstItem="146" firstAttribute="top" secondItem="220" secondAttribute="bottom" constant="20" symbolic="YES" id="VlG-QL-mMn"/>
+                    <constraint firstItem="220" firstAttribute="leading" secondItem="133" secondAttribute="leading" constant="20" symbolic="YES" id="ax3-bs-1v1"/>
+                    <constraint firstAttribute="trailing" secondItem="220" secondAttribute="trailing" constant="20" symbolic="YES" id="cfb-Od-r6i"/>
+                    <constraint firstItem="220" firstAttribute="top" secondItem="133" secondAttribute="top" constant="20" symbolic="YES" id="i6u-Cf-dz3"/>
+                    <constraint firstAttribute="bottom" secondItem="146" secondAttribute="bottom" constant="20" symbolic="YES" id="xod-yb-I2y"/>
+                </constraints>
             </view>
+            <point key="canvasLocation" x="206" y="171"/>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="201"/>
     </objects>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" promptedForUpgradeToXcode5="NO">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment version="1050" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
     <objects>
@@ -13,7 +12,7 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <arrayController id="5" userLabel="regex">
             <declaredKeys>
                 <string>enable</string>
@@ -37,14 +36,14 @@
                 <menuItem title="Komentarz" id="8"/>
                 <menuItem title="Wartość" id="9"/>
             </items>
+            <point key="canvasLocation" x="99.5" y="715.5"/>
         </menu>
         <customView id="11" userLabel="Filters">
             <rect key="frame" x="0.0" y="0.0" width="536" height="347"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <button id="144">
-                    <rect key="frame" x="30" y="286" width="488" height="18"/>
-                    <autoresizingMask key="autoresizingMask"/>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="144">
+                    <rect key="frame" x="29" y="286" width="489" height="18"/>
                     <buttonCell key="cell" type="check" title="puste łańcuchy bazowe" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="161">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
@@ -54,27 +53,16 @@
                         <binding destination="26" name="value" keyPath="values.FilterStringsEmptyBase" id="147"/>
                     </connections>
                 </button>
-                <textField verticalHuggingPriority="750" id="24">
-                    <rect key="frame" x="29" y="213" width="490" height="17"/>
-                    <autoresizingMask key="autoresizingMask"/>
-                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="łańcuchy pasujące do jednego z poniższych wyrażeń regularnych:" id="156">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField verticalHuggingPriority="750" id="23">
-                    <rect key="frame" x="17" y="310" width="550" height="17"/>
-                    <autoresizingMask key="autoresizingMask"/>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="23">
+                    <rect key="frame" x="18" y="310" width="500" height="17"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Ignoruj:" id="155">
                         <font key="font" metaFont="systemBold"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button id="22">
-                    <rect key="frame" x="30" y="242" width="488" height="18"/>
-                    <autoresizingMask key="autoresizingMask"/>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="22">
+                    <rect key="frame" x="29" y="246" width="489" height="18"/>
                     <buttonCell key="cell" type="check" title="łańcuchy z jedną literą" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="154">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
@@ -84,9 +72,8 @@
                         <binding destination="26" name="value" keyPath="values.FilterStringsOneLetter" id="42"/>
                     </connections>
                 </button>
-                <button id="21">
-                    <rect key="frame" x="30" y="264" width="488" height="18"/>
-                    <autoresizingMask key="autoresizingMask"/>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="21">
+                    <rect key="frame" x="29" y="266" width="489" height="18"/>
                     <buttonCell key="cell" type="check" title="łańcuchy bez liter" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="153">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
@@ -96,9 +83,11 @@
                         <binding destination="26" name="value" keyPath="values.FilterStringsNoLetter" id="30"/>
                     </connections>
                 </button>
-                <button verticalHuggingPriority="750" id="20">
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="20">
                     <rect key="frame" x="56" y="19" width="25" height="25"/>
-                    <autoresizingMask key="autoresizingMask"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="W3F-rj-L3E"/>
+                    </constraints>
                     <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSRemoveTemplate" imagePosition="only" alignment="center" borderStyle="border" inset="2" id="152">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -108,9 +97,12 @@
                         <binding destination="5" name="enabled" keyPath="canRemove" id="33"/>
                     </connections>
                 </button>
-                <button verticalHuggingPriority="750" id="19">
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="19">
                     <rect key="frame" x="32" y="19" width="25" height="25"/>
-                    <autoresizingMask key="autoresizingMask"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="23" id="0Pk-Iu-Bmh"/>
+                        <constraint firstAttribute="width" constant="25" id="tMK-kb-IUf"/>
+                    </constraints>
                     <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="151">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -119,15 +111,14 @@
                         <action selector="addFilter:" target="-2" id="31"/>
                     </connections>
                 </button>
-                <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="12">
-                    <rect key="frame" x="32" y="51" width="484" height="150"/>
-                    <autoresizingMask key="autoresizingMask"/>
-                    <clipView key="contentView" id="iKi-EL-SXk">
+                <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12">
+                    <rect key="frame" x="31" y="51" width="485" height="150"/>
+                    <clipView key="contentView" misplaced="YES" id="iOZ-mt-aw7">
                         <rect key="frame" x="1" y="17" width="482" height="132"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="171" id="13">
-                                <rect key="frame" x="0.0" y="0.0" width="482" height="132"/>
+                                <rect key="frame" x="0.0" y="0.0" width="483" height="19"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -141,7 +132,7 @@
                                         </tableHeaderCell>
                                         <buttonCell key="dataCell" type="check" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="17">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                            <font key="font" metaFont="cellTitle"/>
+                                            <font key="font" metaFont="titleBar" size="12"/>
                                             <connections>
                                                 <action selector="filterAction:" target="-2" id="48"/>
                                             </connections>
@@ -157,7 +148,7 @@
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                         </tableHeaderCell>
-                                        <popUpButtonCell key="dataCell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="border" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" id="15">
+                                        <popUpButtonCell key="dataCell" type="bevel" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="bezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" id="15">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="menu"/>
                                             <menu key="menu" id="168"/>
@@ -171,7 +162,7 @@
                                             <binding destination="5" name="selectedIndex" keyPath="arrangedObjects.element" id="39"/>
                                         </connections>
                                     </tableColumn>
-                                    <tableColumn width="303.41059999999999" minWidth="110.4106" maxWidth="1000" id="18">
+                                    <tableColumn width="304.41059999999999" minWidth="110.4106" maxWidth="1000" id="18">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Regularne wyrażenia">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -199,7 +190,7 @@
                         <rect key="frame" x="1" y="-30" width="467" height="15"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
-                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="169">
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="169">
                         <rect key="frame" x="-30" y="17" width="15" height="132"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
@@ -208,7 +199,45 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </tableHeaderView>
                 </scrollView>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="24">
+                    <rect key="frame" x="29" y="206" width="489" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="Xko-9d-uo3"/>
+                    </constraints>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="łańcuchy pasujące do jednego z poniższych wyrażeń regularnych:" id="156">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
+            <constraints>
+                <constraint firstItem="12" firstAttribute="top" secondItem="24" secondAttribute="bottom" constant="5" id="8ab-eC-Qea"/>
+                <constraint firstItem="21" firstAttribute="top" secondItem="144" secondAttribute="bottom" constant="6" symbolic="YES" id="D4D-wU-e8r"/>
+                <constraint firstItem="21" firstAttribute="leading" secondItem="22" secondAttribute="leading" id="IAe-Mi-9U5"/>
+                <constraint firstItem="144" firstAttribute="trailing" secondItem="23" secondAttribute="trailing" id="LMU-Sg-RVK"/>
+                <constraint firstItem="19" firstAttribute="bottom" secondItem="20" secondAttribute="bottom" id="LbN-Ev-8gJ"/>
+                <constraint firstItem="19" firstAttribute="top" secondItem="12" secondAttribute="bottom" constant="8" symbolic="YES" id="Noh-39-i8k"/>
+                <constraint firstItem="12" firstAttribute="leading" secondItem="24" secondAttribute="leading" id="SeP-fn-6oO"/>
+                <constraint firstItem="24" firstAttribute="trailing" secondItem="22" secondAttribute="trailing" id="Ta1-qg-Stn"/>
+                <constraint firstItem="144" firstAttribute="leading" secondItem="11" secondAttribute="leading" constant="31" id="TbF-nz-4Ey"/>
+                <constraint firstAttribute="trailing" secondItem="23" secondAttribute="trailing" constant="20" symbolic="YES" id="UKb-XC-4Bk"/>
+                <constraint firstItem="20" firstAttribute="top" secondItem="19" secondAttribute="top" id="Uxo-4s-jB4"/>
+                <constraint firstItem="24" firstAttribute="trailing" secondItem="12" secondAttribute="trailing" id="Y3u-99-5pc"/>
+                <constraint firstItem="19" firstAttribute="leading" secondItem="11" secondAttribute="leading" constant="32" id="Zew-PJ-ehj"/>
+                <constraint firstItem="144" firstAttribute="leading" secondItem="21" secondAttribute="leading" id="d2q-ah-4RE"/>
+                <constraint firstItem="21" firstAttribute="trailing" secondItem="144" secondAttribute="trailing" id="dSe-A3-ge6"/>
+                <constraint firstItem="144" firstAttribute="top" secondItem="23" secondAttribute="bottom" constant="8" symbolic="YES" id="e0i-kb-wpt"/>
+                <constraint firstItem="22" firstAttribute="trailing" secondItem="21" secondAttribute="trailing" id="jcQ-Ka-hyC"/>
+                <constraint firstItem="22" firstAttribute="top" secondItem="21" secondAttribute="bottom" constant="6" symbolic="YES" id="lqk-4a-wWq"/>
+                <constraint firstItem="23" firstAttribute="leading" secondItem="11" secondAttribute="leading" constant="20" symbolic="YES" id="mzM-4K-wft"/>
+                <constraint firstItem="22" firstAttribute="leading" secondItem="24" secondAttribute="leading" id="qMN-Oe-D1a"/>
+                <constraint firstItem="23" firstAttribute="top" secondItem="11" secondAttribute="top" constant="20" symbolic="YES" id="qMf-CC-NXn"/>
+                <constraint firstItem="20" firstAttribute="leading" secondItem="11" secondAttribute="leading" constant="56" id="qeZ-Ar-KOF"/>
+                <constraint firstAttribute="bottom" secondItem="19" secondAttribute="bottom" constant="20" symbolic="YES" id="rDZ-we-cCu"/>
+                <constraint firstItem="24" firstAttribute="top" secondItem="22" secondAttribute="bottom" constant="8" symbolic="YES" id="wOu-Qf-M3N"/>
+            </constraints>
+            <point key="canvasLocation" x="351" y="273.5"/>
         </customView>
     </objects>
     <resources>

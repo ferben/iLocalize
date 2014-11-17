@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
@@ -19,15 +19,14 @@
             <rect key="frame" x="0.0" y="0.0" width="470" height="262"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="7">
+                <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7">
                     <rect key="frame" x="0.0" y="0.0" width="470" height="262"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <clipView key="contentView" id="Z0t-sX-yxU">
-                        <rect key="frame" x="0.0" y="0.0" width="455" height="262"/>
+                        <rect key="frame" x="0.0" y="0.0" width="470" height="262"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="8" customClass="TextViewCustom">
-                                <rect key="frame" x="0.0" y="0.0" width="455" height="262"/>
+                                <rect key="frame" x="0.0" y="0.0" width="470" height="262"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="minSize" width="455" height="262"/>
@@ -52,16 +51,21 @@
                     </scroller>
                 </scrollView>
             </subviews>
+            <constraints>
+                <constraint firstItem="7" firstAttribute="top" secondItem="5" secondAttribute="top" id="88u-uh-hod"/>
+                <constraint firstItem="7" firstAttribute="leading" secondItem="5" secondAttribute="leading" id="TVY-jT-eWl"/>
+                <constraint firstAttribute="trailing" secondItem="7" secondAttribute="trailing" id="lEA-kr-cd8"/>
+                <constraint firstAttribute="bottom" secondItem="7" secondAttribute="bottom" id="uEA-Ok-euY"/>
+            </constraints>
         </customView>
         <customView id="6" userLabel="localized">
             <rect key="frame" x="0.0" y="0.0" width="659" height="262"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <splitView dividerStyle="thin" vertical="YES" id="13">
+                <splitView dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="13">
                     <rect key="frame" x="0.0" y="0.0" width="659" height="262"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
-                        <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="10">
+                        <scrollView fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="10">
                             <rect key="frame" x="0.0" y="0.0" width="329" height="262"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <clipView key="contentView" id="w7I-Pp-y6N">
@@ -93,7 +97,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
                         </scrollView>
-                        <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="11">
+                        <scrollView fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="11">
                             <rect key="frame" x="330" y="0.0" width="329" height="262"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <clipView key="contentView" id="aBe-ua-7zj">
@@ -132,6 +136,12 @@
                     </holdingPriorities>
                 </splitView>
             </subviews>
+            <constraints>
+                <constraint firstItem="13" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="SIr-H9-ov1"/>
+                <constraint firstAttribute="bottom" secondItem="13" secondAttribute="bottom" id="aER-o5-OM0"/>
+                <constraint firstItem="13" firstAttribute="top" secondItem="6" secondAttribute="top" id="mKn-Of-EaL"/>
+                <constraint firstAttribute="trailing" secondItem="13" secondAttribute="trailing" id="oM2-os-A71"/>
+            </constraints>
         </customView>
     </objects>
 </document>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment version="1050" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
     <objects>
@@ -91,7 +90,7 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="Lh6-0c-S6a"/>
-                            <menuItem title="Создать глоссарий…" id="673">
+                            <menuItem title="Создать глоссарий…" keyEquivalent="k" id="673">
                                 <connections>
                                     <action selector="newGlossary:" target="-1" id="674"/>
                                 </connections>
@@ -605,8 +604,8 @@
                                     <action selector="translateUsingExternalStringsFile:" target="-1" id="1765"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Перевести с помощью выбранного глоссария" tag="1" keyEquivalent="" id="2094">
-                                <modifierMask key="keyEquivalentModifierMask"/>
+                            <menuItem title="Перевести с помощью выбранного глоссария" tag="1" keyEquivalent="G" id="2094">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                 <connections>
                                     <action selector="translateUsingSelectedGlossaryEntry:" target="-1" id="2097"/>
                                 </connections>

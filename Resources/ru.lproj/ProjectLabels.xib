@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
@@ -17,16 +17,15 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="297" y="297" width="620" height="261"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <value key="minSize" type="size" width="620" height="261"/>
             <view key="contentView" id="32">
                 <rect key="frame" x="0.0" y="0.0" width="620" height="261"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="35">
+                    <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35">
                         <rect key="frame" x="20" y="51" width="580" height="190"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <clipView key="contentView" id="E0X-Ct-eZp">
+                        <clipView key="contentView" misplaced="YES" id="E0X-Ct-eZp">
                             <rect key="frame" x="1" y="17" width="578" height="172"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -116,9 +115,11 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
                     </scrollView>
-                    <button verticalHuggingPriority="750" id="33">
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="33">
                         <rect key="frame" x="44" y="19" width="25" height="25"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="PVo-yq-rio"/>
+                        </constraints>
                         <buttonCell key="cell" type="smallSquare" title="-" bezelStyle="smallSquare" image="NSRemoveTemplate" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" inset="2" id="70">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="smallSystem"/>
@@ -128,9 +129,11 @@
                             <binding destination="46" name="enabled" keyPath="canRemove" id="64"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" id="34">
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="34">
                         <rect key="frame" x="20" y="19" width="25" height="25"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="nQW-wZ-INJ"/>
+                        </constraints>
                         <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" inset="2" id="71">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="smallSystem"/>
@@ -139,9 +142,12 @@
                             <action selector="add:" target="46" id="52"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" id="42">
-                        <rect key="frame" x="506" y="12" width="100" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="42">
+                        <rect key="frame" x="496" y="13" width="110" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="98" id="4pE-5J-0YY"/>
+                            <constraint firstAttribute="height" constant="21" id="WIp-hr-49I"/>
+                        </constraints>
                         <buttonCell key="cell" type="push" title="ОК" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="72">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -154,6 +160,20 @@ DQ
                         </connections>
                     </button>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="34" firstAttribute="bottom" secondItem="33" secondAttribute="bottom" id="1Dl-B0-NRQ"/>
+                    <constraint firstItem="35" firstAttribute="leading" secondItem="34" secondAttribute="leading" id="2np-Rn-Oke"/>
+                    <constraint firstItem="34" firstAttribute="top" secondItem="35" secondAttribute="bottom" constant="8" symbolic="YES" id="BD9-M0-zpr"/>
+                    <constraint firstItem="33" firstAttribute="leading" secondItem="32" secondAttribute="leading" constant="44" id="Flq-JC-hvp"/>
+                    <constraint firstItem="35" firstAttribute="leading" secondItem="32" secondAttribute="leading" constant="20" symbolic="YES" id="Icq-nd-Zep"/>
+                    <constraint firstItem="35" firstAttribute="trailing" secondItem="42" secondAttribute="trailing" id="Qwy-Og-zgj"/>
+                    <constraint firstItem="42" firstAttribute="top" secondItem="35" secondAttribute="bottom" constant="10" id="bX7-4E-DLO"/>
+                    <constraint firstItem="33" firstAttribute="bottom" secondItem="42" secondAttribute="bottom" id="fBO-GT-L36"/>
+                    <constraint firstItem="35" firstAttribute="top" secondItem="32" secondAttribute="top" constant="20" symbolic="YES" id="kUt-UA-pQQ"/>
+                    <constraint firstAttribute="bottom" secondItem="34" secondAttribute="bottom" constant="20" symbolic="YES" id="npx-Nl-8Ya"/>
+                    <constraint firstItem="33" firstAttribute="top" secondItem="34" secondAttribute="top" id="v8c-o3-P9H"/>
+                    <constraint firstAttribute="trailing" secondItem="35" secondAttribute="trailing" constant="20" symbolic="YES" id="vTu-yx-oKl"/>
+                </constraints>
             </view>
         </window>
         <arrayController id="46" userLabel="LabelsController">

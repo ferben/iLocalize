@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment version="1050" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
     <objects>
@@ -15,265 +14,398 @@
         <window title="Symboler" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="Symbols" animationBehavior="default" id="782" userLabel="Symbols" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" utility="YES" nonactivatingPanel="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="384" y="523" width="541" height="303"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
-            <value key="minSize" type="size" width="163" height="5"/>
+            <rect key="contentRect" x="384" y="523" width="590" height="408"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <value key="minSize" type="size" width="163" height="408"/>
             <view key="contentView" id="783">
-                <rect key="frame" x="0.0" y="0.0" width="541" height="303"/>
+                <rect key="frame" x="0.0" y="530" width="590" height="408"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField verticalHuggingPriority="750" id="795">
-                        <rect key="frame" x="106" y="20" width="195" height="17"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="795">
+                        <rect key="frame" x="43" y="20" width="310" height="13"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Arkivindholdet skal arkiveres på disken" id="1781">
                             <font key="font" metaFont="label"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="788">
-                        <rect key="frame" x="106" y="243" width="113" height="13"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Check layout (kun nib)" id="1777">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="788">
+                        <rect key="frame" x="43" y="328" width="310" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="29" id="bG3-QP-JIz"/>
+                        </constraints>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Check layout (kun XIB/NIB)" id="1777">
                             <font key="font" metaFont="label"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <imageView id="794">
-                        <rect key="frame" x="82" y="241" width="18" height="18"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="794">
+                        <rect key="frame" x="20" y="342" width="17" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="NeD-p3-13q"/>
+                        </constraints>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="_file_check_layout" id="1780"/>
                     </imageView>
-                    <textField verticalHuggingPriority="750" id="796">
-                        <rect key="frame" x="18" y="24" width="84" height="13"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Arkivnavn i fed" id="1782">
-                            <font key="font" metaFont="systemBold" size="10"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <imageView id="908">
-                        <rect key="frame" x="82" y="160" width="18" height="18"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="908">
+                        <rect key="frame" x="20" y="190" width="17" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="KVF-xn-12j"/>
+                        </constraints>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="_warning" id="1789"/>
                     </imageView>
-                    <textField verticalHuggingPriority="750" id="909">
-                        <rect key="frame" x="106" y="162" width="196" height="13"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="909">
+                        <rect key="frame" x="43" y="176" width="310" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="mYl-5D-DYW"/>
+                        </constraints>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Arkivet indeholder uoverensstemmelser" id="1790">
                             <font key="font" metaFont="label"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <imageView id="910">
-                        <rect key="frame" x="82" y="133" width="18" height="18"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="910">
+                        <rect key="frame" x="20" y="152" width="17" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="1vp-oE-2Hi"/>
+                        </constraints>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="_warning_red" id="1791"/>
                     </imageView>
-                    <textField verticalHuggingPriority="750" id="911">
-                        <rect key="frame" x="106" y="135" width="144" height="13"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="911">
+                        <rect key="frame" x="43" y="138" width="310" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="MBJ-MU-fql"/>
+                        </constraints>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Arkivet findes ikke på disken" id="1792">
                             <font key="font" metaFont="label"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <imageView id="912">
-                        <rect key="frame" x="82" y="106" width="18" height="18"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="912">
+                        <rect key="frame" x="20" y="114" width="17" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="Wgv-hK-Oi8"/>
+                        </constraints>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="_file_sync_from_disk" id="1793"/>
                     </imageView>
-                    <textField verticalHuggingPriority="750" id="913">
-                        <rect key="frame" x="106" y="108" width="202" height="13"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="913">
+                        <rect key="frame" x="43" y="100" width="310" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="eiy-O6-5Tz"/>
+                        </constraints>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Arkivindhold skal genindlæses fra disken" id="1794">
                             <font key="font" metaFont="label"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <imageView id="914">
-                        <rect key="frame" x="82" y="214" width="18" height="18"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="914">
+                        <rect key="frame" x="20" y="304" width="17" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="ndC-7H-4RN"/>
+                        </constraints>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="_file_added" id="1795"/>
                     </imageView>
-                    <imageView id="915">
-                        <rect key="frame" x="82" y="187" width="18" height="18"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="915">
+                        <rect key="frame" x="20" y="266" width="17" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="JxF-p2-qgf"/>
+                        </constraints>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="_file_updated" id="1796"/>
                     </imageView>
-                    <imageView id="iht-pp-uMe">
-                        <rect key="frame" x="84" y="165" width="17" height="19"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="iht-pp-uMe">
+                        <rect key="frame" x="20" y="228" width="17" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="7kG-Pb-DLw"/>
+                        </constraints>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="_file_deleted" id="sog-Ea-5lc"/>
                     </imageView>
-                    <textField verticalHuggingPriority="750" id="916">
-                        <rect key="frame" x="106" y="216" width="234" height="13"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="916">
+                        <rect key="frame" x="43" y="290" width="310" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="BTy-Rx-9cm"/>
+                        </constraints>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Arkivet er blevet tilføjet ved seneste opdatering" id="1797">
                             <font key="font" metaFont="label"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="917">
-                        <rect key="frame" x="106" y="189" width="198" height="13"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="917">
+                        <rect key="frame" x="43" y="252" width="310" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="liD-LX-klS"/>
+                        </constraints>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Arkivet opdateret ved seneste operation" id="1798">
                             <font key="font" metaFont="label"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="QeL-BW-fnh">
-                        <rect key="frame" x="106" y="168" width="266" height="13"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QeL-BW-fnh">
+                        <rect key="frame" x="43" y="214" width="310" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="BSk-4E-MTG"/>
+                        </constraints>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="File has been updated during last update operation" id="hi2-yW-vJG">
                             <font key="font" metaFont="label"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="918">
-                        <rect key="frame" x="88" y="64" width="14" height="13"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="918">
+                        <rect key="frame" x="20" y="76" width="17" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="13" id="FJc-JR-KdG"/>
+                            <constraint firstAttribute="height" constant="19" id="i5G-v4-iwj"/>
+                        </constraints>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="✒" id="1799">
-                            <font key="font" metaFont="label"/>
+                            <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="919">
-                        <rect key="frame" x="106" y="51" width="255" height="26"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="919">
+                        <rect key="frame" x="43" y="62" width="310" height="30"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Identificerer arkivet indeholdende de valgte strings (kun når flere arkiver er valgt)" id="1800">
                             <font key="font" metaFont="label"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="940">
-                        <rect key="frame" x="21" y="266" width="95" height="17"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="940">
+                        <rect key="frame" x="18" y="372" width="335" height="16"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Arkivsymboler" id="1801">
                             <font key="font" metaFont="systemBold" size="12"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="942">
-                        <rect key="frame" x="395" y="267" width="114" height="16"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="942">
+                        <rect key="frame" x="372" y="372" width="200" height="16"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Strings-symboler" id="1802">
                             <font key="font" metaFont="systemBold" size="12"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <imageView id="943">
-                        <rect key="frame" x="397" y="216" width="17" height="19"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="943">
+                        <rect key="frame" x="374" y="304" width="17" height="19"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="string_auto_invariant" id="1803"/>
                     </imageView>
-                    <textField verticalHuggingPriority="750" id="944">
-                        <rect key="frame" x="417" y="219" width="85" height="13"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="944">
+                        <rect key="frame" x="397" y="290" width="175" height="30"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Auto-invariant" id="1804">
                             <font key="font" metaFont="label"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <imageView id="945">
-                        <rect key="frame" x="397" y="192" width="17" height="19"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="945">
+                        <rect key="frame" x="374" y="266" width="17" height="19"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="string_invariant" id="1805"/>
                     </imageView>
-                    <textField verticalHuggingPriority="750" id="946">
-                        <rect key="frame" x="417" y="195" width="82" height="13"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="946">
+                        <rect key="frame" x="397" y="252" width="175" height="30"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Invariant" id="1806">
                             <font key="font" metaFont="label"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="947">
-                        <rect key="frame" x="417" y="171" width="82" height="13"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="947">
+                        <rect key="frame" x="397" y="214" width="175" height="30"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Auto-oversat" id="1807">
                             <font key="font" metaFont="label"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <imageView id="948">
-                        <rect key="frame" x="397" y="168" width="17" height="19"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="948">
+                        <rect key="frame" x="374" y="228" width="17" height="19"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="string_auto_translated" id="1808"/>
                     </imageView>
-                    <textField verticalHuggingPriority="750" id="951">
-                        <rect key="frame" x="417" y="147" width="85" height="13"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="951">
+                        <rect key="frame" x="397" y="176" width="175" height="30"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Base ændret" id="1811">
                             <font key="font" metaFont="label"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <imageView id="952">
-                        <rect key="frame" x="397" y="144" width="17" height="19"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="952">
+                        <rect key="frame" x="374" y="190" width="17" height="19"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="string_base_modified" id="1812"/>
                     </imageView>
-                    <textField verticalHuggingPriority="750" id="953">
-                        <rect key="frame" x="417" y="243" width="85" height="13"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="953">
+                        <rect key="frame" x="397" y="328" width="175" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="171" id="u8g-Td-z22"/>
+                        </constraints>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Skal oversættes" id="1813">
                             <font key="font" metaFont="label"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <imageView id="954">
-                        <rect key="frame" x="397" y="240" width="17" height="19"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="954">
+                        <rect key="frame" x="374" y="342" width="17" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="17" id="d09-0o-vOc"/>
+                        </constraints>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="string_to_translate" id="1814"/>
                     </imageView>
-                    <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="955">
-                        <rect key="frame" x="20" y="262" width="349" height="5"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="955">
+                        <rect key="frame" x="20" y="367" width="331" height="5"/>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <font key="titleFont" metaFont="system"/>
                     </box>
-                    <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="957">
-                        <rect key="frame" x="394" y="262" width="98" height="5"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="957">
+                        <rect key="frame" x="374" y="367" width="196" height="5"/>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <font key="titleFont" metaFont="system"/>
                     </box>
-                    <imageView id="964">
-                        <rect key="frame" x="397" y="117" width="17" height="19"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="964">
+                        <rect key="frame" x="374" y="152" width="17" height="19"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="_warning" id="1815"/>
                     </imageView>
-                    <textField verticalHuggingPriority="750" id="965">
-                        <rect key="frame" x="417" y="116" width="106" height="17"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="965">
+                        <rect key="frame" x="397" y="138" width="175" height="30"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Uoverensstemmelser" id="1816">
                             <font key="font" metaFont="label"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="796">
+                        <rect key="frame" x="18" y="41" width="335" height="13"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Arkivnavn i fed:" id="1782">
+                            <font key="font" metaFont="systemBold" size="10"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="954" firstAttribute="top" secondItem="957" secondAttribute="bottom" constant="8" symbolic="YES" id="0Pv-3Q-iBi"/>
+                    <constraint firstItem="965" firstAttribute="leading" secondItem="951" secondAttribute="leading" id="0kf-2g-peA"/>
+                    <constraint firstItem="iht-pp-uMe" firstAttribute="top" secondItem="915" secondAttribute="bottom" constant="19" id="1ao-ke-bFW"/>
+                    <constraint firstItem="909" firstAttribute="trailing" secondItem="911" secondAttribute="trailing" id="1gx-as-1wV"/>
+                    <constraint firstItem="796" firstAttribute="leading" secondItem="912" secondAttribute="leading" id="2G8-1A-DxF"/>
+                    <constraint firstItem="795" firstAttribute="trailing" secondItem="796" secondAttribute="trailing" id="2pQ-oq-if9"/>
+                    <constraint firstItem="795" firstAttribute="top" secondItem="796" secondAttribute="bottom" constant="8" symbolic="YES" id="2sS-wL-hHQ"/>
+                    <constraint firstItem="794" firstAttribute="leading" secondItem="914" secondAttribute="leading" id="4sd-Hh-xcP"/>
+                    <constraint firstItem="909" firstAttribute="baseline" secondItem="951" secondAttribute="baseline" id="6Id-e6-nyg"/>
+                    <constraint firstItem="788" firstAttribute="baseline" secondItem="953" secondAttribute="baseline" id="6o5-GB-geY"/>
+                    <constraint firstItem="913" firstAttribute="leading" secondItem="912" secondAttribute="trailing" constant="8" symbolic="YES" id="6tY-On-Aya"/>
+                    <constraint firstItem="957" firstAttribute="leading" secondItem="954" secondAttribute="leading" id="7CU-q8-9r5"/>
+                    <constraint firstItem="940" firstAttribute="top" secondItem="783" secondAttribute="top" constant="20" symbolic="YES" id="8dR-JP-dHn"/>
+                    <constraint firstItem="914" firstAttribute="leading" secondItem="915" secondAttribute="leading" id="8vO-5o-elA"/>
+                    <constraint firstItem="788" firstAttribute="leading" secondItem="916" secondAttribute="leading" id="92K-Gm-gr5"/>
+                    <constraint firstItem="796" firstAttribute="top" secondItem="918" secondAttribute="bottom" constant="22" id="9WF-1a-QmF"/>
+                    <constraint firstItem="953" firstAttribute="top" secondItem="957" secondAttribute="bottom" constant="11" id="Ade-AN-R3C"/>
+                    <constraint firstItem="940" firstAttribute="baseline" secondItem="942" secondAttribute="baseline" id="BfW-jI-uOY"/>
+                    <constraint firstItem="QeL-BW-fnh" firstAttribute="leading" secondItem="909" secondAttribute="leading" id="Duz-Gx-Agy"/>
+                    <constraint firstItem="794" firstAttribute="leading" secondItem="955" secondAttribute="leading" id="DwQ-C5-X6X"/>
+                    <constraint firstItem="965" firstAttribute="leading" secondItem="964" secondAttribute="trailing" constant="8" symbolic="YES" id="Dy5-9m-QvL"/>
+                    <constraint firstItem="954" firstAttribute="top" secondItem="794" secondAttribute="top" id="EDT-el-mcd"/>
+                    <constraint firstItem="919" firstAttribute="trailing" secondItem="796" secondAttribute="trailing" id="GB3-cx-Ljt"/>
+                    <constraint firstItem="909" firstAttribute="top" secondItem="951" secondAttribute="top" id="GMe-ky-JOQ"/>
+                    <constraint firstItem="913" firstAttribute="leading" secondItem="911" secondAttribute="leading" id="GoI-5P-slC"/>
+                    <constraint firstItem="951" firstAttribute="leading" secondItem="952" secondAttribute="trailing" constant="8" symbolic="YES" id="Grb-LX-bwD"/>
+                    <constraint firstItem="952" firstAttribute="bottom" secondItem="908" secondAttribute="bottom" id="Grf-We-jBO"/>
+                    <constraint firstItem="910" firstAttribute="top" secondItem="964" secondAttribute="top" id="HA1-dC-PIt"/>
+                    <constraint firstItem="952" firstAttribute="leading" secondItem="964" secondAttribute="leading" id="HGb-9S-NFd"/>
+                    <constraint firstItem="948" firstAttribute="leading" secondItem="945" secondAttribute="leading" id="ISr-um-8IE"/>
+                    <constraint firstItem="947" firstAttribute="trailing" secondItem="951" secondAttribute="trailing" id="JJW-oH-1Uk"/>
+                    <constraint firstItem="945" firstAttribute="bottom" secondItem="915" secondAttribute="bottom" id="KGy-ca-HLB"/>
+                    <constraint firstItem="QeL-BW-fnh" firstAttribute="top" secondItem="917" secondAttribute="bottom" constant="8" symbolic="YES" id="Lko-PH-Hy6"/>
+                    <constraint firstItem="911" firstAttribute="leading" secondItem="910" secondAttribute="trailing" constant="8" symbolic="YES" id="Lwh-E5-8FV"/>
+                    <constraint firstItem="909" firstAttribute="leading" secondItem="911" secondAttribute="leading" id="Lz3-9N-Xvg"/>
+                    <constraint firstItem="955" firstAttribute="top" secondItem="957" secondAttribute="top" id="MAc-Xi-GZr"/>
+                    <constraint firstItem="952" firstAttribute="top" secondItem="908" secondAttribute="top" id="MPW-dE-fRi"/>
+                    <constraint firstItem="909" firstAttribute="top" secondItem="QeL-BW-fnh" secondAttribute="bottom" constant="8" symbolic="YES" id="MRZ-M5-YYt"/>
+                    <constraint firstItem="913" firstAttribute="top" secondItem="911" secondAttribute="bottom" constant="8" symbolic="YES" id="OA3-hP-uo8"/>
+                    <constraint firstItem="788" firstAttribute="top" secondItem="955" secondAttribute="bottom" constant="12" id="OCc-GE-ohg"/>
+                    <constraint firstItem="946" firstAttribute="baseline" secondItem="917" secondAttribute="baseline" id="PC2-D1-Lhq"/>
+                    <constraint firstItem="908" firstAttribute="top" secondItem="iht-pp-uMe" secondAttribute="bottom" constant="19" id="PCL-b0-tIG"/>
+                    <constraint firstItem="951" firstAttribute="leading" secondItem="947" secondAttribute="leading" id="PeD-qN-Hq0"/>
+                    <constraint firstItem="911" firstAttribute="top" secondItem="909" secondAttribute="bottom" constant="8" symbolic="YES" id="QxU-mm-xKU"/>
+                    <constraint firstItem="946" firstAttribute="leading" secondItem="947" secondAttribute="leading" id="RGW-DK-rmt"/>
+                    <constraint firstItem="917" firstAttribute="top" secondItem="916" secondAttribute="bottom" constant="8" symbolic="YES" id="RRv-7Z-Xrn"/>
+                    <constraint firstItem="953" firstAttribute="leading" secondItem="954" secondAttribute="trailing" constant="8" symbolic="YES" id="Rmz-vg-uA2"/>
+                    <constraint firstItem="953" firstAttribute="trailing" secondItem="957" secondAttribute="trailing" id="S0a-gk-MKt"/>
+                    <constraint firstItem="955" firstAttribute="trailing" secondItem="788" secondAttribute="trailing" id="SgT-Lk-MKy"/>
+                    <constraint firstItem="942" firstAttribute="trailing" secondItem="957" secondAttribute="trailing" id="SmX-by-5pX"/>
+                    <constraint firstItem="788" firstAttribute="leading" secondItem="794" secondAttribute="trailing" constant="8" symbolic="YES" id="TAM-2r-HXD"/>
+                    <constraint firstItem="943" firstAttribute="top" secondItem="914" secondAttribute="top" id="UAB-hE-b46"/>
+                    <constraint firstItem="912" firstAttribute="top" secondItem="910" secondAttribute="bottom" constant="19" id="Ug2-2a-L2f"/>
+                    <constraint firstAttribute="bottom" secondItem="795" secondAttribute="bottom" constant="20" symbolic="YES" id="Uh6-W3-d0g"/>
+                    <constraint firstItem="965" firstAttribute="top" secondItem="911" secondAttribute="top" id="VEu-rL-Qtw"/>
+                    <constraint firstItem="946" firstAttribute="leading" secondItem="944" secondAttribute="leading" id="VIm-JS-9hb"/>
+                    <constraint firstItem="944" firstAttribute="leading" secondItem="943" secondAttribute="trailing" constant="8" symbolic="YES" id="WK1-I7-GY0"/>
+                    <constraint firstItem="944" firstAttribute="trailing" secondItem="953" secondAttribute="trailing" id="Xze-Rt-lPo"/>
+                    <constraint firstItem="965" firstAttribute="trailing" secondItem="951" secondAttribute="trailing" id="Y6G-sn-XgG"/>
+                    <constraint firstItem="918" firstAttribute="top" secondItem="912" secondAttribute="bottom" constant="19" id="Y8w-4b-L94"/>
+                    <constraint firstItem="913" firstAttribute="trailing" secondItem="919" secondAttribute="trailing" id="ZND-qf-hkT"/>
+                    <constraint firstItem="947" firstAttribute="leading" secondItem="948" secondAttribute="trailing" constant="8" symbolic="YES" id="ZNU-QQ-osZ"/>
+                    <constraint firstItem="917" firstAttribute="leading" secondItem="916" secondAttribute="leading" id="bLd-As-GJQ"/>
+                    <constraint firstItem="946" firstAttribute="trailing" secondItem="944" secondAttribute="trailing" id="dGN-RC-cdN"/>
+                    <constraint firstItem="916" firstAttribute="leading" secondItem="914" secondAttribute="trailing" constant="8" symbolic="YES" id="e2m-Cf-vMx"/>
+                    <constraint firstItem="919" firstAttribute="top" secondItem="913" secondAttribute="bottom" constant="8" symbolic="YES" id="elA-2g-8Np"/>
+                    <constraint firstItem="957" firstAttribute="leading" secondItem="942" secondAttribute="leading" id="eme-AT-mPp"/>
+                    <constraint firstItem="947" firstAttribute="baseline" secondItem="QeL-BW-fnh" secondAttribute="baseline" id="fJ0-LI-Zdr"/>
+                    <constraint firstItem="iht-pp-uMe" firstAttribute="bottom" secondItem="948" secondAttribute="bottom" id="fXE-5g-PjO"/>
+                    <constraint firstItem="915" firstAttribute="leading" secondItem="iht-pp-uMe" secondAttribute="leading" id="gOg-63-HZw"/>
+                    <constraint firstItem="940" firstAttribute="leading" secondItem="955" secondAttribute="leading" id="gyE-VE-uqW"/>
+                    <constraint firstItem="916" firstAttribute="baseline" secondItem="944" secondAttribute="baseline" id="hEm-wD-f9r"/>
+                    <constraint firstItem="947" firstAttribute="top" secondItem="QeL-BW-fnh" secondAttribute="top" id="hR1-dn-V9A"/>
+                    <constraint firstItem="796" firstAttribute="top" secondItem="919" secondAttribute="bottom" constant="8" symbolic="YES" id="hix-fp-ibi"/>
+                    <constraint firstItem="910" firstAttribute="leading" secondItem="912" secondAttribute="leading" id="hpQ-Fz-Xtu"/>
+                    <constraint firstItem="909" firstAttribute="leading" secondItem="908" secondAttribute="trailing" constant="8" symbolic="YES" id="hza-oy-5YJ"/>
+                    <constraint firstItem="QeL-BW-fnh" firstAttribute="leading" secondItem="917" secondAttribute="leading" id="io6-iq-Vis"/>
+                    <constraint firstItem="940" firstAttribute="leading" secondItem="783" secondAttribute="leading" constant="20" symbolic="YES" id="j3I-Af-7d9"/>
+                    <constraint firstItem="948" firstAttribute="top" secondItem="iht-pp-uMe" secondAttribute="top" id="jF7-GW-Fss"/>
+                    <constraint firstItem="QeL-BW-fnh" firstAttribute="trailing" secondItem="917" secondAttribute="trailing" id="jNs-8x-tUd"/>
+                    <constraint firstItem="917" firstAttribute="leading" secondItem="915" secondAttribute="trailing" constant="8" symbolic="YES" id="jn4-Ff-D88"/>
+                    <constraint firstItem="955" firstAttribute="trailing" secondItem="940" secondAttribute="trailing" id="jwk-Gw-Mrg"/>
+                    <constraint firstItem="915" firstAttribute="top" secondItem="945" secondAttribute="top" id="l4G-pn-gMn"/>
+                    <constraint firstItem="946" firstAttribute="leading" secondItem="945" secondAttribute="trailing" constant="8" symbolic="YES" id="lKW-Ec-P7r"/>
+                    <constraint firstItem="910" firstAttribute="bottom" secondItem="964" secondAttribute="bottom" id="lmq-WR-FdQ"/>
+                    <constraint firstItem="965" firstAttribute="baseline" secondItem="911" secondAttribute="baseline" id="mOt-Gg-7Fi"/>
+                    <constraint firstItem="953" firstAttribute="leading" secondItem="944" secondAttribute="leading" id="mWj-bB-H6O"/>
+                    <constraint firstItem="908" firstAttribute="leading" secondItem="iht-pp-uMe" secondAttribute="leading" id="n8z-8S-C4m"/>
+                    <constraint firstItem="945" firstAttribute="leading" secondItem="943" secondAttribute="leading" id="o8y-X0-Mk5"/>
+                    <constraint firstItem="QeL-BW-fnh" firstAttribute="leading" secondItem="iht-pp-uMe" secondAttribute="trailing" constant="8" symbolic="YES" id="ofA-0b-HOg"/>
+                    <constraint firstItem="954" firstAttribute="leading" secondItem="943" secondAttribute="leading" id="p6i-AT-jRx"/>
+                    <constraint firstItem="QeL-BW-fnh" firstAttribute="trailing" secondItem="909" secondAttribute="trailing" id="pXK-38-6aw"/>
+                    <constraint firstItem="946" firstAttribute="top" secondItem="917" secondAttribute="top" id="q5X-nu-mJQ"/>
+                    <constraint firstItem="794" firstAttribute="bottom" secondItem="954" secondAttribute="bottom" id="qGn-GF-OOz"/>
+                    <constraint firstAttribute="trailing" secondItem="942" secondAttribute="trailing" constant="20" symbolic="YES" id="qkC-kD-NgG"/>
+                    <constraint firstItem="952" firstAttribute="leading" secondItem="948" secondAttribute="leading" id="r3C-8T-aJ5"/>
+                    <constraint firstItem="916" firstAttribute="top" secondItem="788" secondAttribute="bottom" constant="8" symbolic="YES" id="rQO-xR-hFZ"/>
+                    <constraint firstItem="942" firstAttribute="leading" secondItem="940" secondAttribute="trailing" constant="23" id="tG8-k0-fBl"/>
+                    <constraint firstItem="913" firstAttribute="leading" secondItem="919" secondAttribute="leading" id="tO5-yx-0r2"/>
+                    <constraint firstItem="796" firstAttribute="leading" secondItem="795" secondAttribute="leading" id="tSy-Ao-igt"/>
+                    <constraint firstItem="914" firstAttribute="bottom" secondItem="943" secondAttribute="bottom" id="u4Z-c4-6UV"/>
+                    <constraint firstItem="910" firstAttribute="top" secondItem="908" secondAttribute="bottom" constant="19" id="v1k-Oo-AIF"/>
+                    <constraint firstItem="917" firstAttribute="trailing" secondItem="916" secondAttribute="trailing" id="vcq-ya-NWd"/>
+                    <constraint firstItem="916" firstAttribute="top" secondItem="944" secondAttribute="top" id="vwG-cg-gP8"/>
+                    <constraint firstItem="910" firstAttribute="leading" secondItem="908" secondAttribute="leading" id="wJW-as-6ag"/>
+                    <constraint firstItem="946" firstAttribute="trailing" secondItem="947" secondAttribute="trailing" id="x1V-7F-go0"/>
+                    <constraint firstItem="913" firstAttribute="trailing" secondItem="911" secondAttribute="trailing" id="x2d-w3-g2h"/>
+                    <constraint firstItem="919" firstAttribute="leading" secondItem="918" secondAttribute="trailing" constant="10" id="xIY-yP-vA8"/>
+                    <constraint firstItem="912" firstAttribute="centerX" secondItem="918" secondAttribute="centerX" id="xRL-CT-voJ"/>
+                    <constraint firstItem="914" firstAttribute="top" secondItem="794" secondAttribute="bottom" constant="19" id="xf2-9X-6zE"/>
+                    <constraint firstItem="916" firstAttribute="trailing" secondItem="788" secondAttribute="trailing" id="zPP-v7-KVR"/>
+                    <constraint firstItem="915" firstAttribute="top" secondItem="914" secondAttribute="bottom" constant="19" id="zot-XU-pB2"/>
+                </constraints>
             </view>
+            <point key="canvasLocation" x="512" y="731"/>
         </window>
         <view id="799">
             <rect key="frame" x="0.0" y="0.0" width="125" height="1"/>

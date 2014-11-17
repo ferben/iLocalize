@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment version="1060" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
     <objects>
@@ -25,24 +24,22 @@
         <window title="Gérer les Glossaires" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" frameAutosaveName="Browse Glossaries" animationBehavior="default" id="109" userLabel="Glossaries">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="650" y="604" width="649" height="351"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
+            <rect key="contentRect" x="539" y="426" width="649" height="351"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <value key="minSize" type="size" width="649" height="351"/>
             <view key="contentView" id="110">
-                <rect key="frame" x="7" y="11" width="649" height="351"/>
+                <rect key="frame" x="0.0" y="0.0" width="649" height="351"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <splitView dividerStyle="thin" vertical="YES" id="150">
+                    <splitView dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="150">
                         <rect key="frame" x="0.0" y="0.0" width="649" height="351"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <customView id="147">
                                 <rect key="frame" x="0.0" y="0.0" width="186" height="351"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="20" horizontalPageScroll="10" verticalLineScroll="20" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="111">
+                                    <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="20" horizontalPageScroll="10" verticalLineScroll="20" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="111">
                                         <rect key="frame" x="0.0" y="24" width="186" height="327"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <clipView key="contentView" drawsBackground="NO" id="Uwl-oy-AF9">
                                             <rect key="frame" x="0.0" y="0.0" width="186" height="327"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,9 +85,12 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                     </scrollView>
-                                    <popUpButton verticalHuggingPriority="750" id="140">
-                                        <rect key="frame" x="-1" y="0.0" width="31" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="140">
+                                        <rect key="frame" x="-1" y="0.0" width="39" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="39" id="FpH-dq-RDa"/>
+                                            <constraint firstAttribute="height" constant="22" id="We3-Gs-K76"/>
+                                        </constraints>
                                         <popUpButtonCell key="cell" type="smallSquare" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" pullsDown="YES" selectedItem="143" id="141" customClass="AZGlassPopUpButtonCell">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="menu"/>
@@ -106,21 +106,31 @@
                                             <outlet property="menu" destination="151" id="261"/>
                                         </connections>
                                     </popUpButton>
-                                    <customView id="146" customClass="AZSplitViewThumbView">
-                                        <rect key="frame" x="30" y="0.0" width="156" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="146" customClass="AZSplitViewThumbView">
+                                        <rect key="frame" x="38" y="0.0" width="148" height="24"/>
                                     </customView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="111" firstAttribute="top" secondItem="147" secondAttribute="top" id="CTI-rf-1ae"/>
+                                    <constraint firstItem="146" firstAttribute="centerY" secondItem="140" secondAttribute="centerY" id="FIh-KR-iQT"/>
+                                    <constraint firstItem="146" firstAttribute="top" secondItem="111" secondAttribute="bottom" id="IEP-6t-7YT"/>
+                                    <constraint firstAttribute="trailing" secondItem="146" secondAttribute="trailing" id="Ut1-d0-lxB"/>
+                                    <constraint firstAttribute="bottom" secondItem="146" secondAttribute="bottom" id="X8o-3W-s0V"/>
+                                    <constraint firstItem="140" firstAttribute="top" secondItem="111" secondAttribute="bottom" constant="1" id="XBV-4W-l60"/>
+                                    <constraint firstItem="111" firstAttribute="leading" secondItem="147" secondAttribute="leading" id="aqq-K0-Fam"/>
+                                    <constraint firstItem="146" firstAttribute="leading" secondItem="140" secondAttribute="trailing" id="btk-D9-Dvj"/>
+                                    <constraint firstItem="146" firstAttribute="trailing" secondItem="111" secondAttribute="trailing" id="gwl-cf-y8r"/>
+                                    <constraint firstItem="140" firstAttribute="leading" secondItem="147" secondAttribute="leading" constant="-1" id="pHR-9t-ZUl"/>
+                                </constraints>
                             </customView>
                             <customView id="148">
                                 <rect key="frame" x="187" y="0.0" width="462" height="351"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <scrollView horizontalLineScroll="22" horizontalPageScroll="10" verticalLineScroll="22" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="220">
+                                    <scrollView horizontalLineScroll="22" horizontalPageScroll="10" verticalLineScroll="22" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="220">
                                         <rect key="frame" x="-1" y="23" width="463" height="329"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <clipView key="contentView" id="Bfq-pZ-cUt">
-                                            <rect key="frame" x="1" y="17" width="446" height="311"/>
+                                        <clipView key="contentView" misplaced="YES" id="Bfq-pZ-cUt">
+                                            <rect key="frame" x="1" y="17" width="461" height="311"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <outlineView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" columnReordering="NO" autosaveColumns="NO" rowHeight="20" headerView="224" indentationPerLevel="10" autoresizesOutlineColumn="YES" outlineTableColumn="225" id="223">
@@ -207,21 +217,23 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="221">
-                                            <rect key="frame" x="447" y="17" width="15" height="311"/>
+                                            <rect key="frame" x="446" y="17" width="16" height="311"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                         <tableHeaderView key="headerView" id="224">
-                                            <rect key="frame" x="0.0" y="0.0" width="446" height="17"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="461" height="17"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableHeaderView>
                                     </scrollView>
-                                    <customView id="139" customClass="AZGlassView">
-                                        <rect key="frame" x="30" y="0.0" width="432" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="139" customClass="AZGlassView">
+                                        <rect key="frame" x="38" y="0.0" width="424" height="24"/>
                                     </customView>
-                                    <popUpButton verticalHuggingPriority="750" id="133">
-                                        <rect key="frame" x="-1" y="0.0" width="31" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="133">
+                                        <rect key="frame" x="-1" y="0.0" width="39" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="39" id="6ly-C7-jbB"/>
+                                            <constraint firstAttribute="height" constant="22" id="gdw-Rq-axd"/>
+                                        </constraints>
                                         <popUpButtonCell key="cell" type="smallSquare" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" pullsDown="YES" selectedItem="138" id="134" customClass="AZGlassPopUpButtonCell">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="menu"/>
@@ -238,6 +250,18 @@
                                         </connections>
                                     </popUpButton>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="139" secondAttribute="trailing" id="Jed-Bk-QZh"/>
+                                    <constraint firstItem="220" firstAttribute="leading" secondItem="148" secondAttribute="leading" constant="-1" id="MrZ-YZ-p5f"/>
+                                    <constraint firstItem="220" firstAttribute="leading" secondItem="133" secondAttribute="leading" id="PG3-Ep-qP1"/>
+                                    <constraint firstItem="139" firstAttribute="trailing" secondItem="220" secondAttribute="trailing" id="eeA-mI-Zm7"/>
+                                    <constraint firstItem="133" firstAttribute="top" secondItem="220" secondAttribute="bottom" id="gPC-JC-HBm"/>
+                                    <constraint firstItem="139" firstAttribute="leading" secondItem="133" secondAttribute="trailing" id="hIe-Kf-Fqg"/>
+                                    <constraint firstItem="220" firstAttribute="top" secondItem="148" secondAttribute="top" constant="-1" id="jAE-4v-ouP"/>
+                                    <constraint firstAttribute="bottom" secondItem="133" secondAttribute="bottom" constant="1" id="mRI-oS-AjW"/>
+                                    <constraint firstAttribute="bottom" secondItem="139" secondAttribute="bottom" id="usa-Xu-fHY"/>
+                                    <constraint firstItem="139" firstAttribute="centerY" secondItem="133" secondAttribute="centerY" id="wmg-TN-q2K"/>
+                                </constraints>
                             </customView>
                         </subviews>
                         <holdingPriorities>
@@ -249,6 +273,12 @@
                         </connections>
                     </splitView>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="150" secondAttribute="trailing" id="5ob-IG-hCN"/>
+                    <constraint firstAttribute="bottom" secondItem="150" secondAttribute="bottom" id="7YL-CA-ZIc"/>
+                    <constraint firstItem="150" firstAttribute="leading" secondItem="110" secondAttribute="leading" id="Jf5-LS-TmU"/>
+                    <constraint firstItem="150" firstAttribute="top" secondItem="110" secondAttribute="top" id="s85-jq-tP6"/>
+                </constraints>
             </view>
             <toolbar key="toolbar" implicitIdentifier="CE130159-81F6-4467-9C07-B756E9F29832" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconOnly" sizeMode="regular" id="271">
                 <allowedToolbarItems>
@@ -263,7 +293,7 @@
                         <nil key="toolTip"/>
                         <size key="minSize" width="96" height="22"/>
                         <size key="maxSize" width="292" height="22"/>
-                        <searchField key="view" verticalHuggingPriority="750" id="279">
+                        <searchField key="view" wantsLayer="YES" verticalHuggingPriority="750" id="279">
                             <rect key="frame" x="0.0" y="14" width="292" height="22"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" recentsAutosaveName="glossary-manager" id="280">

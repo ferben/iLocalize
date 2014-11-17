@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
@@ -16,15 +16,17 @@
             <windowStyleMask key="styleMask" titled="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="391" y="473" width="769" height="384"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <value key="minSize" type="size" width="700" height="300"/>
             <view key="contentView" id="2">
                 <rect key="frame" x="0.0" y="0.0" width="769" height="384"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button verticalHuggingPriority="750" id="3">
-                        <rect key="frame" x="567" y="12" width="188" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3">
+                        <rect key="frame" x="555" y="13" width="200" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="188" id="xfp-p1-bdd"/>
+                        </constraints>
                         <buttonCell key="cell" type="push" title="選択したファイルを翻訳" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -36,9 +38,8 @@ DQ
                             <action selector="translateSelectedFiles:" target="-2" id="28"/>
                         </connections>
                     </button>
-                    <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="5">
+                    <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5">
                         <rect key="frame" x="-1" y="60" width="771" height="287"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" id="X1K-Ze-ChU">
                             <rect key="frame" x="1" y="1" width="769" height="285"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,18 +81,32 @@ DQ
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
-                    <textField verticalHuggingPriority="750" id="19">
-                        <rect key="frame" x="17" y="355" width="735" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="19">
+                        <rect key="frame" x="18" y="355" width="733" height="17"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="翻訳に使用する用語集を選択して下さい:" id="20">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button verticalHuggingPriority="750" id="22">
-                        <rect key="frame" x="286" y="12" width="96" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="24">
+                        <rect key="frame" x="355" y="13" width="200" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="188" id="kFR-ym-9iT"/>
+                        </constraints>
+                        <buttonCell key="cell" type="push" title="すべてのファイルを翻訳" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="25">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="translateAllFiles:" target="-2" id="27"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="22">
+                        <rect key="frame" x="245" y="13" width="110" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="98" id="zTd-zB-Iu0"/>
+                        </constraints>
                         <buttonCell key="cell" type="push" title="キャンセル" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="23">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -103,18 +118,22 @@ Gw
                             <action selector="cancel:" target="-2" id="26"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" id="24">
-                        <rect key="frame" x="394" y="12" width="173" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                        <buttonCell key="cell" type="push" title="すべてのファイルを翻訳" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="25">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="translateAllFiles:" target="-2" id="27"/>
-                        </connections>
-                    </button>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="3" firstAttribute="baseline" secondItem="24" secondAttribute="baseline" id="9Lv-Eh-b81"/>
+                    <constraint firstAttribute="trailing" secondItem="5" secondAttribute="trailing" constant="-1" id="Efy-lc-qZf"/>
+                    <constraint firstItem="3" firstAttribute="leading" secondItem="24" secondAttribute="trailing" constant="12" symbolic="YES" id="KOp-Gp-Hoo"/>
+                    <constraint firstItem="24" firstAttribute="leading" secondItem="22" secondAttribute="trailing" constant="12" symbolic="YES" id="MU2-4m-zdT"/>
+                    <constraint firstItem="24" firstAttribute="baseline" secondItem="22" secondAttribute="baseline" id="PLH-tk-Ez7"/>
+                    <constraint firstAttribute="bottom" secondItem="22" secondAttribute="bottom" constant="20" symbolic="YES" id="dgA-G5-mam"/>
+                    <constraint firstItem="19" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="20" symbolic="YES" id="gy3-bx-8VV"/>
+                    <constraint firstItem="5" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="-1" id="kUb-rh-6qi"/>
+                    <constraint firstItem="5" firstAttribute="top" secondItem="19" secondAttribute="bottom" constant="8" symbolic="YES" id="lCJ-vi-ycr"/>
+                    <constraint firstItem="19" firstAttribute="top" secondItem="2" secondAttribute="top" constant="12" id="o4k-c0-PY5"/>
+                    <constraint firstItem="19" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" id="tqU-5k-aXT"/>
+                    <constraint firstItem="22" firstAttribute="top" secondItem="5" secondAttribute="bottom" constant="19" id="uVW-Fh-3I5"/>
+                    <constraint firstItem="19" firstAttribute="centerX" secondItem="5" secondAttribute="centerX" id="xEx-zz-P08"/>
+                </constraints>
             </view>
         </window>
     </objects>

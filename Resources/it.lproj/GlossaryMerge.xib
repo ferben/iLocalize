@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" promptedForUpgradeToXcode5="NO">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment version="1060" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
     <objects>
@@ -14,26 +13,25 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <window title="Unisci" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="5" userLabel="Merge" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="202" y="368" width="614" height="333"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <value key="minSize" type="size" width="614" height="333"/>
             <view key="contentView" id="6">
                 <rect key="frame" x="0.0" y="0.0" width="614" height="333"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="14">
+                    <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14">
                         <rect key="frame" x="20" y="113" width="574" height="175"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <clipView key="contentView" id="v86-v4-XJi">
+                        <clipView key="contentView" id="I5v-ka-PAr">
                             <rect key="frame" x="1" y="1" width="572" height="173"/>
-                            <autoresizingMask key="autoresizingMask"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" id="15">
-                                    <rect key="frame" x="0.0" y="0.0" width="572" height="173"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="572" height="19"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -47,7 +45,7 @@
                                             </tableHeaderCell>
                                             <buttonCell key="dataCell" type="check" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="17">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="cellTitle"/>
+                                                <font key="font" metaFont="titleBar" size="12"/>
                                             </buttonCell>
                                             <connections>
                                                 <binding destination="21" name="value" keyPath="arrangedObjects.selected" id="28"/>
@@ -87,30 +85,27 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
-                    <textField verticalHuggingPriority="750" id="19">
-                        <rect key="frame" x="17" y="296" width="580" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="19">
+                        <rect key="frame" x="18" y="296" width="578" height="17"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Unisci i glossari seguenti:" id="39">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="12">
-                        <rect key="frame" x="17" y="88" width="580" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="12">
+                        <rect key="frame" x="18" y="88" width="578" height="17"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="In questo glossario:" id="37">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <popUpButton verticalHuggingPriority="750" id="7">
+                    <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7">
                         <rect key="frame" x="17" y="56" width="580" height="26"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                        <popUpButtonCell key="cell" type="push" title="Item1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="10" id="36">
+                        <popUpButtonCell key="cell" type="push" title="Item1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="10" id="36">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="menu"/>
                             <menu key="menu" title="OtherViews" id="8">
                                 <items>
                                     <menuItem title="Item1" state="on" id="10"/>
@@ -120,9 +115,11 @@
                             </menu>
                         </popUpButtonCell>
                     </popUpButton>
-                    <button verticalHuggingPriority="750" id="20">
-                        <rect key="frame" x="436" y="12" width="82" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="20">
+                        <rect key="frame" x="380" y="13" width="110" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="98" id="NOc-71-AMd"/>
+                        </constraints>
                         <buttonCell key="cell" type="push" title="Annulla" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="40">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -134,9 +131,11 @@ Gw
                             <action selector="cancel:" target="-2" id="25"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" id="13">
-                        <rect key="frame" x="518" y="12" width="82" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="13">
+                        <rect key="frame" x="490" y="13" width="110" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="98" id="JAD-ZO-f6v"/>
+                        </constraints>
                         <buttonCell key="cell" type="push" title="Unisci" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="38">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -148,9 +147,8 @@ DQ
                             <action selector="merge:" target="-2" id="26"/>
                         </connections>
                     </button>
-                    <button id="30">
-                        <rect key="frame" x="18" y="21" width="418" height="18"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="30">
+                        <rect key="frame" x="18" y="21" width="362" height="18"/>
                         <buttonCell key="cell" type="check" title="Rimuovi Inserimenti Doppi" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="41">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
@@ -160,6 +158,28 @@ DQ
                         </connections>
                     </button>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="13" firstAttribute="leading" secondItem="20" secondAttribute="trailing" constant="12" symbolic="YES" id="AX7-Wa-9Gq"/>
+                    <constraint firstItem="20" firstAttribute="top" secondItem="7" secondAttribute="bottom" constant="18" id="Bka-Ml-BzZ"/>
+                    <constraint firstItem="20" firstAttribute="leading" secondItem="30" secondAttribute="trailing" constant="8" symbolic="YES" id="E2V-bH-bvj"/>
+                    <constraint firstItem="14" firstAttribute="leading" secondItem="19" secondAttribute="leading" id="Elz-J3-xyj"/>
+                    <constraint firstItem="20" firstAttribute="centerY" secondItem="30" secondAttribute="centerY" id="IWk-zx-QdL"/>
+                    <constraint firstAttribute="bottom" secondItem="20" secondAttribute="bottom" constant="20" symbolic="YES" id="JI0-HA-U6E"/>
+                    <constraint firstAttribute="trailing" secondItem="19" secondAttribute="trailing" constant="20" symbolic="YES" id="NNR-JU-uZT"/>
+                    <constraint firstItem="30" firstAttribute="leading" secondItem="12" secondAttribute="leading" id="O3N-Ln-uS2"/>
+                    <constraint firstItem="19" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="20" symbolic="YES" id="TUF-7W-0Dg"/>
+                    <constraint firstItem="7" firstAttribute="top" secondItem="12" secondAttribute="bottom" constant="8" symbolic="YES" id="Uje-2R-7tf"/>
+                    <constraint firstItem="19" firstAttribute="top" secondItem="6" secondAttribute="top" constant="20" symbolic="YES" id="VOa-nF-2ci"/>
+                    <constraint firstItem="12" firstAttribute="top" secondItem="14" secondAttribute="bottom" constant="8" symbolic="YES" id="gYw-dE-jVg"/>
+                    <constraint firstItem="13" firstAttribute="trailing" secondItem="7" secondAttribute="trailing" id="hQ9-TK-gKD"/>
+                    <constraint firstItem="14" firstAttribute="leading" secondItem="12" secondAttribute="leading" id="hys-Vy-6kv"/>
+                    <constraint firstItem="14" firstAttribute="trailing" secondItem="12" secondAttribute="trailing" id="iee-QC-Uvg"/>
+                    <constraint firstItem="14" firstAttribute="trailing" secondItem="19" secondAttribute="trailing" id="jq6-Al-m3a"/>
+                    <constraint firstItem="14" firstAttribute="top" secondItem="19" secondAttribute="bottom" constant="8" symbolic="YES" id="m9c-iY-QFg"/>
+                    <constraint firstItem="13" firstAttribute="baseline" secondItem="20" secondAttribute="baseline" id="rbk-Jh-fwg"/>
+                    <constraint firstItem="7" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="19" id="uFX-qI-d1g"/>
+                    <constraint firstItem="7" firstAttribute="trailing" secondItem="12" secondAttribute="trailing" id="yFH-dY-pdt"/>
+                </constraints>
             </view>
         </window>
         <arrayController id="21" userLabel="MergeCtrl">

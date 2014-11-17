@@ -1,240 +1,254 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="ExportProjectOptionsOVC">
             <connections>
+                <outlet property="hideEmailComponentsView" destination="u5Z-v4-Tsa" id="bgK-Bt-iaq"/>
                 <outlet property="objectController" destination="31" id="234"/>
+                <outlet property="postProcessingBox" destination="O8e-tz-Pid" id="W5A-mY-rD4"/>
                 <outlet property="view" destination="226" id="231"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="226">
-            <rect key="frame" x="0.0" y="0.0" width="686" height="509"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <rect key="frame" x="0.0" y="6" width="704" height="548"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button id="26">
-                    <rect key="frame" x="30" y="264" width="636" height="18"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <string key="toolTip">La compattazione dei files nib riduce le dimensioni dei files nib ma impedisce che vengano localizzati o aperti i Interface Builder. Utilizzate questa opzione solo per la produzione di applicazioni.</string>
-                    <buttonCell key="cell" type="check" title="Compatta nib files" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="170">
-                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <binding destination="31" name="value" keyPath="selection.compactNib" id="187"/>
-                    </connections>
-                </button>
-                <button id="287">
-                    <rect key="frame" x="30" y="242" width="636" height="18"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <string key="toolTip">Compacting nib files reduces the size of the nib files but also prevents them to be localized or opened in Interface Builder. Use this option only for production application.</string>
-                    <buttonCell key="cell" type="check" title="Convert nib to xib files" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="288">
-                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <binding destination="31" name="value" keyPath="selection.upgradeNib" id="290"/>
-                    </connections>
-                </button>
-                <button id="76">
-                    <rect key="frame" x="32" y="323" width="636" height="18"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="check" title="Zipped" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="177">
-                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <binding destination="31" name="value" keyPath="selection.compress" id="235"/>
-                    </connections>
-                </button>
-                <button toolTip="Esporta solo cartelle che contengono una lingua (lproj)" id="253">
-                    <rect key="frame" x="32" y="367" width="636" height="18"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="check" title="Solo cartelle lingue" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="254">
-                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <binding destination="31" name="value" keyPath="selection.exportLanguageFoldersOnly" id="259"/>
-                    </connections>
-                </button>
-                <button toolTip="Esporta il progetto come una cartella che il Finder possa aprire invece di usare l’estensione originale del bundle" id="256">
-                    <rect key="frame" x="32" y="345" width="636" height="18"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="check" title="Cartella" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="257">
-                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <binding destination="31" name="value" keyPath="selection.exportAsFolder" id="260"/>
-                    </connections>
-                </button>
-                <button toolTip="Apri il client di posta di default e allega il file esportato a una nuova e-mail vuota" id="77">
-                    <rect key="frame" x="30" y="239" width="636" height="18"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="check" title="Prepara automaticamente una e-mail in Mail" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="178">
-                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="email:" target="-2" id="286"/>
-                        <binding destination="31" name="value" keyPath="selection.email" id="236"/>
-                    </connections>
-                </button>
-                <textField verticalHuggingPriority="750" id="214">
-                    <rect key="frame" x="105" y="196" width="560" height="22"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="215">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                    <connections>
-                        <binding destination="31" name="editable" keyPath="selection.email" id="242"/>
-                        <binding destination="31" name="enabled" keyPath="selection.email" previousBinding="242" id="251"/>
-                        <binding destination="31" name="value" keyPath="selection.emailToAddress" id="d1S-np-O0Q">
-                            <dictionary key="options">
-                                <bool key="NSContinuouslyUpdatesValue" value="YES"/>
-                                <string key="NSNullPlaceholder">Enter the recipient e-mail address</string>
-                            </dictionary>
-                        </binding>
-                    </connections>
-                </textField>
-                <textField focusRingType="none" verticalHuggingPriority="750" id="216">
-                    <rect key="frame" x="105" y="20" width="560" height="156"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" focusRingType="none" drawsBackground="YES" id="217">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                    <connections>
-                        <binding destination="31" name="editable" keyPath="selection.email" id="243"/>
-                        <binding destination="31" name="enabled" keyPath="selection.email" previousBinding="243" id="249"/>
-                        <binding destination="31" name="value" keyPath="selection.emailMessage" id="248">
-                            <dictionary key="options">
-                                <bool key="NSContinuouslyUpdatesValue" value="YES"/>
-                            </dictionary>
-                        </binding>
-                        <outlet property="delegate" destination="-2" id="261"/>
-                    </connections>
-                </textField>
-                <textField verticalHuggingPriority="750" id="218">
-                    <rect key="frame" x="42" y="198" width="58" height="17"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Oggetto:" id="219">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField verticalHuggingPriority="750" id="3dv-Pk-JNw">
-                    <rect key="frame" x="105" y="147" width="560" height="22"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="dhD-Zv-o1e">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                    <connections>
-                        <binding destination="31" name="editable" keyPath="selection.email" id="BCl-6V-6tR"/>
-                        <binding destination="31" name="enabled" keyPath="selection.email" previousBinding="BCl-6V-6tR" id="MRY-1H-F82"/>
-                        <binding destination="31" name="value" keyPath="selection.emailSubject" id="jbL-CX-1Zi">
-                            <dictionary key="options">
-                                <bool key="NSContinuouslyUpdatesValue" value="YES"/>
-                                <string key="NSNullPlaceholder">Enter the subject of the e-mail</string>
-                            </dictionary>
-                        </binding>
-                    </connections>
-                </textField>
-                <textField verticalHuggingPriority="750" id="5xb-uo-RIx">
-                    <rect key="frame" x="42" y="149" width="58" height="17"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Subject:" id="dgD-W1-lcF">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField verticalHuggingPriority="750" id="220">
-                    <rect key="frame" x="29" y="160" width="71" height="17"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Messaggio:" id="221">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField verticalHuggingPriority="750" id="275">
-                    <rect key="frame" x="17" y="472" width="95" height="17"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Nome d’uscita:" id="276">
-                        <font key="font" metaFont="systemBold"/>
-                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField verticalHuggingPriority="750" id="273">
-                    <rect key="frame" x="19" y="288" width="233" height="17"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Post-processing:" id="274">
-                        <font key="font" metaFont="systemBold"/>
-                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField verticalHuggingPriority="750" id="271">
-                    <rect key="frame" x="18" y="391" width="233" height="17"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Formato Uscita:" id="272">
-                        <font key="font" metaFont="systemBold"/>
-                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <button toolTip="Esporta solo cartelle che contengono una lingua (lproj)" id="262">
-                    <rect key="frame" x="32" y="448" width="636" height="18"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="check" title="Includi versione" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="263">
-                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <binding destination="31" name="value" keyPath="selection.nameIncludesBuildNumber" id="280"/>
-                    </connections>
-                </button>
-                <button toolTip="Esporta solo cartelle che contengono una lingua (lproj)" id="265">
-                    <rect key="frame" x="32" y="426" width="636" height="18"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="check" title="Includi nomi delle lingue esportate" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="266">
-                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <binding destination="31" name="value" keyPath="selection.nameIncludesLanguages" id="281"/>
-                    </connections>
-                </button>
-                <textField verticalHuggingPriority="750" id="277">
-                    <rect key="frame" x="117" y="472" width="552" height="17"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="&lt;nome-uscita-esempio&gt;" id="278">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                    <connections>
-                        <binding destination="31" name="value" keyPath="selection.targetName" id="283">
-                            <dictionary key="options">
-                                <bool key="NSContinuouslyUpdatesValue" value="YES"/>
-                            </dictionary>
-                        </binding>
-                    </connections>
-                </textField>
+                <box autoresizesSubviews="NO" title="Nome d’uscita" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="hzV-oN-mXT">
+                    <rect key="frame" x="17" y="429" width="670" height="99"/>
+                    <view key="contentView">
+                        <rect key="frame" x="1" y="1" width="668" height="83"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="277">
+                                <rect key="frame" x="16" y="56" width="636" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="&lt;nome-uscita-esempio&gt;" id="278">
+                                    <font key="font" metaFont="systemBold"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="31" name="value" keyPath="selection.targetName" id="283">
+                                        <dictionary key="options">
+                                            <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
+                            </textField>
+                            <button toolTip="Esporta solo cartelle che contengono una lingua (lproj)" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="262">
+                                <rect key="frame" x="16" y="12" width="636" height="18"/>
+                                <buttonCell key="cell" type="check" title="Includi versione" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="263">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="31" name="value" keyPath="selection.nameIncludesBuildNumber" id="280"/>
+                                </connections>
+                            </button>
+                            <button toolTip="Esporta solo cartelle che contengono una lingua (lproj)" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="265">
+                                <rect key="frame" x="16" y="32" width="636" height="18"/>
+                                <buttonCell key="cell" type="check" title="Includi nomi delle lingue esportate" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="266">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="31" name="value" keyPath="selection.nameIncludesLanguages" id="281"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+                <box autoresizesSubviews="NO" title="Formato Uscita" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="4LP-Rt-bQH">
+                    <rect key="frame" x="17" y="327" width="670" height="98"/>
+                    <view key="contentView">
+                        <rect key="frame" x="1" y="1" width="668" height="82"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="76">
+                                <rect key="frame" x="16" y="12" width="636" height="18"/>
+                                <buttonCell key="cell" type="check" title="Zipped" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="177">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="31" name="value" keyPath="selection.compress" id="235"/>
+                                </connections>
+                            </button>
+                            <button toolTip="Esporta solo cartelle che contengono una lingua (lproj)" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="253">
+                                <rect key="frame" x="16" y="56" width="636" height="18"/>
+                                <buttonCell key="cell" type="check" title="Solo cartelle lingue" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="254">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="31" name="value" keyPath="selection.exportLanguageFoldersOnly" id="259"/>
+                                </connections>
+                            </button>
+                            <button toolTip="Esporta il progetto come una cartella che il Finder possa aprire invece di usare l’estensione originale del bundle" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="256">
+                                <rect key="frame" x="16" y="34" width="636" height="18"/>
+                                <buttonCell key="cell" type="check" title="Cartella" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="257">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="31" name="value" keyPath="selection.exportAsFolder" id="260"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+                <box autoresizesSubviews="NO" title="Post-produzione" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="O8e-tz-Pid">
+                    <rect key="frame" x="17" y="16" width="670" height="307"/>
+                    <view key="contentView">
+                        <rect key="frame" x="1" y="1" width="668" height="291"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="287">
+                                <rect key="frame" x="16" y="243" width="636" height="18"/>
+                                <string key="toolTip">La compattazione dei files NIB riduce le dimensioni dei files NIB ma impedisce che vengano localizzati o aperti i Interface Builder.</string>
+                                <buttonCell key="cell" type="check" title="Convert nib to xib files" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="288">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="31" name="value" keyPath="selection.upgradeNib" id="290"/>
+                                </connections>
+                            </button>
+                            <button toolTip="Apri il client di posta di default e allega il file esportato a una nuova e-mail vuota" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="77">
+                                <rect key="frame" x="16" y="221" width="636" height="18"/>
+                                <buttonCell key="cell" type="check" title="Prepara automaticamente una e-mail in Mail" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="178">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="email:" target="-2" id="286"/>
+                                    <binding destination="31" name="value" keyPath="selection.email" id="236"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="26">
+                                <rect key="frame" x="16" y="265" width="636" height="18"/>
+                                <string key="toolTip">La compattazione dei files NIB riduce le dimensioni dei files NIB ma impedisce che vengano localizzati o aperti i Interface Builder.</string>
+                                <buttonCell key="cell" type="check" title="Compatta NIB files" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="170">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="31" name="value" keyPath="selection.compactNib" id="187"/>
+                                </connections>
+                            </button>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u5Z-v4-Tsa">
+                                <rect key="frame" x="32" y="14" width="618" height="200"/>
+                                <subviews>
+                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="218">
+                                        <rect key="frame" x="-2" y="180" width="100" height="17"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Oggetto:" id="219">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="214">
+                                        <rect key="frame" x="104" y="178" width="514" height="22"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="215">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <connections>
+                                            <binding destination="31" name="editable" keyPath="selection.email" id="242"/>
+                                            <binding destination="31" name="enabled" keyPath="selection.email" previousBinding="242" id="251"/>
+                                            <binding destination="31" name="value" keyPath="selection.emailToAddress" id="d1S-np-O0Q">
+                                                <dictionary key="options">
+                                                    <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                                    <string key="NSNullPlaceholder">Enter the recipient e-mail address</string>
+                                                </dictionary>
+                                            </binding>
+                                        </connections>
+                                    </textField>
+                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3dv-Pk-JNw">
+                                        <rect key="frame" x="104" y="146" width="514" height="22"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="dhD-Zv-o1e">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <connections>
+                                            <binding destination="31" name="editable" keyPath="selection.email" id="BCl-6V-6tR"/>
+                                            <binding destination="31" name="enabled" keyPath="selection.email" previousBinding="BCl-6V-6tR" id="MRY-1H-F82"/>
+                                            <binding destination="31" name="value" keyPath="selection.emailSubject" id="jbL-CX-1Zi">
+                                                <dictionary key="options">
+                                                    <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                                    <string key="NSNullPlaceholder">Enter the subject of the e-mail</string>
+                                                </dictionary>
+                                            </binding>
+                                        </connections>
+                                    </textField>
+                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5xb-uo-RIx">
+                                        <rect key="frame" x="-2" y="148" width="100" height="17"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Subject:" id="dgD-W1-lcF">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="220">
+                                        <rect key="frame" x="-2" y="0.0" width="100" height="136"/>
+                                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Messaggio:" id="221">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="216">
+                                        <rect key="frame" x="104" y="0.0" width="514" height="136"/>
+                                        <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" focusRingType="none" drawsBackground="YES" id="217">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <connections>
+                                            <binding destination="31" name="editable" keyPath="selection.email" id="243"/>
+                                            <binding destination="31" name="enabled" keyPath="selection.email" previousBinding="243" id="249"/>
+                                            <binding destination="31" name="value" keyPath="selection.emailMessage" id="248">
+                                                <dictionary key="options">
+                                                    <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                                </dictionary>
+                                            </binding>
+                                            <outlet property="delegate" destination="-2" id="261"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </customView>
+                        </subviews>
+                    </view>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
             </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="O8e-tz-Pid" secondAttribute="bottom" constant="20" symbolic="YES" id="1lF-Kg-LZp"/>
+                <constraint firstItem="O8e-tz-Pid" firstAttribute="top" secondItem="4LP-Rt-bQH" secondAttribute="bottom" constant="8" symbolic="YES" id="90d-yz-u8e"/>
+                <constraint firstItem="4LP-Rt-bQH" firstAttribute="top" secondItem="hzV-oN-mXT" secondAttribute="bottom" constant="8" symbolic="YES" id="G7N-pP-pGu"/>
+                <constraint firstItem="O8e-tz-Pid" firstAttribute="leading" secondItem="4LP-Rt-bQH" secondAttribute="leading" id="I8E-gP-Ruq"/>
+                <constraint firstItem="O8e-tz-Pid" firstAttribute="top" secondItem="226" secondAttribute="top" constant="225" id="Umk-VM-2Dm"/>
+                <constraint firstItem="hzV-oN-mXT" firstAttribute="leading" secondItem="226" secondAttribute="leading" constant="20" symbolic="YES" id="Yac-8o-YWK"/>
+                <constraint firstItem="4LP-Rt-bQH" firstAttribute="top" secondItem="226" secondAttribute="top" constant="123" id="Ynm-SK-5ke"/>
+                <constraint firstItem="4LP-Rt-bQH" firstAttribute="leading" secondItem="hzV-oN-mXT" secondAttribute="leading" id="cxT-Jt-t5R"/>
+                <constraint firstItem="hzV-oN-mXT" firstAttribute="top" secondItem="226" secondAttribute="top" constant="20" symbolic="YES" id="dHB-d9-2VS"/>
+                <constraint firstItem="4LP-Rt-bQH" firstAttribute="trailing" secondItem="O8e-tz-Pid" secondAttribute="trailing" id="fAY-wu-aZn"/>
+                <constraint firstItem="hzV-oN-mXT" firstAttribute="trailing" secondItem="4LP-Rt-bQH" secondAttribute="trailing" id="o8f-1W-MwP"/>
+                <constraint firstAttribute="trailing" secondItem="hzV-oN-mXT" secondAttribute="trailing" constant="20" symbolic="YES" id="wna-JM-SW4"/>
+            </constraints>
+            <point key="canvasLocation" x="472" y="668"/>
         </customView>
         <objectController objectClassName="ExportProjectSettings" id="31" userLabel="GUI">
             <declaredKeys>

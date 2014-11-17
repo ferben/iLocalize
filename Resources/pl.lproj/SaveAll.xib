@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" promptedForUpgradeToXcode5="NO">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment version="1030" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
     <objects>
@@ -17,26 +16,25 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="15" userLabel="Save All" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="202" y="288" width="664" height="386"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <value key="minSize" type="size" width="213" height="107"/>
             <view key="contentView" id="7">
                 <rect key="frame" x="0.0" y="0.0" width="664" height="386"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <scrollView horizontalLineScroll="36" horizontalPageScroll="10" verticalLineScroll="36" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="17">
+                    <scrollView horizontalLineScroll="36" horizontalPageScroll="10" verticalLineScroll="36" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17">
                         <rect key="frame" x="20" y="60" width="624" height="234"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <clipView key="contentView" id="4sZ-93-er9">
+                        <clipView key="contentView" id="F9M-xq-fJn">
                             <rect key="frame" x="1" y="1" width="607" height="232"/>
-                            <autoresizingMask key="autoresizingMask"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnReordering="NO" columnResizing="NO" autosaveColumns="NO" rowHeight="34" id="12" customClass="TableViewCustom">
-                                    <rect key="frame" x="0.0" y="0.0" width="607" height="232"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="607" height="36"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -109,9 +107,11 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
-                    <button verticalHuggingPriority="750" id="8">
-                        <rect key="frame" x="484" y="12" width="166" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8">
+                        <rect key="frame" x="500" y="12" width="150" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="138" id="rfQ-cb-FD2"/>
+                        </constraints>
                         <buttonCell key="cell" type="push" title="Odśwież wszystko" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="48">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -123,9 +123,11 @@ DQ
                             <action selector="saveAll:" target="-2" id="33"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" id="14">
-                        <rect key="frame" x="402" y="12" width="82" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="14">
+                        <rect key="frame" x="390" y="12" width="110" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="98" id="nwq-83-SOW"/>
+                        </constraints>
                         <buttonCell key="cell" type="push" title="Anuluj" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="50">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -137,9 +139,11 @@ Gw
                             <action selector="cancel:" target="-2" id="32"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" id="11">
-                        <rect key="frame" x="14" y="12" width="122" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="11">
+                        <rect key="frame" x="14" y="12" width="150" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="138" id="gaN-Nf-Eki"/>
+                        </constraints>
                         <buttonCell key="cell" type="push" title="Nie odświeżaj" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="49">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -150,21 +154,43 @@ Gw
                             <action selector="dontSave:" target="-2" id="31"/>
                         </connections>
                     </button>
-                    <imageView id="37">
-                        <rect key="frame" x="20" y="302" width="64" height="64"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSApplicationIcon" id="51"/>
-                    </imageView>
-                    <textField verticalHuggingPriority="750" id="38">
-                        <rect key="frame" x="108" y="320" width="539" height="29"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="38">
+                        <rect key="frame" x="108" y="320" width="538" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="29" id="gGX-0Z-WMZ"/>
+                        </constraints>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Odśwież pliki zmienione poza programem" id="52">
                             <font key="font" metaFont="system" size="18"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="37">
+                        <rect key="frame" x="20" y="302" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="64" id="QTP-Ok-haA"/>
+                        </constraints>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSApplicationIcon" id="51"/>
+                    </imageView>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="38" firstAttribute="leading" secondItem="37" secondAttribute="trailing" constant="26" id="0St-ha-cbm"/>
+                    <constraint firstItem="11" firstAttribute="leading" secondItem="17" secondAttribute="leading" id="1FD-cc-Apj"/>
+                    <constraint firstAttribute="trailing" secondItem="38" secondAttribute="trailing" constant="20" symbolic="YES" id="3Ou-VT-NCO"/>
+                    <constraint firstItem="8" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" id="ANl-op-Wve"/>
+                    <constraint firstItem="17" firstAttribute="top" secondItem="37" secondAttribute="bottom" constant="8" symbolic="YES" id="Jpt-qi-dI0"/>
+                    <constraint firstItem="37" firstAttribute="leading" secondItem="7" secondAttribute="leading" constant="20" symbolic="YES" id="LVJ-Uw-Var"/>
+                    <constraint firstItem="37" firstAttribute="centerY" secondItem="38" secondAttribute="centerY" id="QQB-92-QB0"/>
+                    <constraint firstItem="17" firstAttribute="top" secondItem="38" secondAttribute="bottom" constant="26" id="Qrc-j1-uz6"/>
+                    <constraint firstItem="8" firstAttribute="baseline" secondItem="14" secondAttribute="baseline" id="WjA-Ih-dHn"/>
+                    <constraint firstItem="37" firstAttribute="top" secondItem="7" secondAttribute="top" constant="20" symbolic="YES" id="b7g-N8-VTF"/>
+                    <constraint firstAttribute="bottom" secondItem="11" secondAttribute="bottom" constant="19" id="eDS-Vt-UFx"/>
+                    <constraint firstItem="17" firstAttribute="trailing" secondItem="38" secondAttribute="trailing" id="fEl-hL-M1b"/>
+                    <constraint firstItem="11" firstAttribute="top" secondItem="17" secondAttribute="bottom" constant="20" symbolic="YES" id="r2W-CC-1iM"/>
+                    <constraint firstItem="8" firstAttribute="leading" secondItem="14" secondAttribute="trailing" constant="12" symbolic="YES" id="rNg-aH-khU"/>
+                    <constraint firstItem="37" firstAttribute="leading" secondItem="17" secondAttribute="leading" id="tts-aY-pkZ"/>
+                    <constraint firstItem="11" firstAttribute="baseline" secondItem="14" secondAttribute="baseline" id="zOj-l8-McA"/>
+                </constraints>
             </view>
         </window>
         <arrayController objectClassName="FileController" clearsFilterPredicateOnInsertion="NO" id="22" userLabel="Controller">
