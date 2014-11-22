@@ -98,6 +98,7 @@
 		125677581A1A6FAE002117B0 /* FMEditorImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125677571A1A6FAE002117B0 /* FMEditorImage.xib */; };
 		1256775A1A1A7036002117B0 /* FMEditorRTF.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125677591A1A7036002117B0 /* FMEditorRTF.xib */; };
 		1256775C1A1A70B9002117B0 /* FMEditorTXT.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1256775B1A1A70B9002117B0 /* FMEditorTXT.xib */; };
+		12E7D8F61A204E2D0081037B /* ilocalize.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 12E7D8F51A204E2D0081037B /* ilocalize.sdef */; };
 		12F05F681A14FB4B00BFB4B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12F05F671A14FB4B00BFB4B4 /* Images.xcassets */; };
 		12F05F6A1A14FB7400BFB4B4 /* ApplicationIcons.icns in Resources */ = {isa = PBXBuildFile; fileRef = 12F05F691A14FB7400BFB4B4 /* ApplicationIcons.icns */; };
 		12F05F7F1A1612EE00BFB4B4 /* license.txt in Resources */ = {isa = PBXBuildFile; fileRef = 12F05F7E1A1612EE00BFB4B4 /* license.txt */; };
@@ -1603,6 +1604,7 @@
 		125677571A1A6FAE002117B0 /* FMEditorImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMEditorImage.xib; sourceTree = "<group>"; };
 		125677591A1A7036002117B0 /* FMEditorRTF.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMEditorRTF.xib; sourceTree = "<group>"; };
 		1256775B1A1A70B9002117B0 /* FMEditorTXT.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMEditorTXT.xib; sourceTree = "<group>"; };
+		12E7D8F51A204E2D0081037B /* ilocalize.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ilocalize.sdef; sourceTree = SOURCE_ROOT; };
 		12F05F631A14F97600BFB4B4 /* InfoAppStore.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InfoAppStore.plist; sourceTree = "<group>"; };
 		12F05F671A14FB4B00BFB4B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = iLocalize/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		12F05F691A14FB7400BFB4B4 /* ApplicationIcons.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ApplicationIcons.icns; sourceTree = "<group>"; };
@@ -2609,6 +2611,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				12E7D8F51A204E2D0081037B /* ilocalize.sdef */,
 				125677551A1A6EF3002117B0 /* FMEditorHTML.xib */,
 				125677571A1A6FAE002117B0 /* FMEditorImage.xib */,
 				125677591A1A7036002117B0 /* FMEditorRTF.xib */,
@@ -4507,6 +4510,7 @@
 				125673BD1A1A681E002117B0 /* WindowLayer.xib in Resources */,
 				125673721A1A681E002117B0 /* AnalyzeBundle.xib in Resources */,
 				125673BC1A1A681E002117B0 /* ToolLaunchApp.xib in Resources */,
+				12E7D8F61A204E2D0081037B /* ilocalize.sdef in Resources */,
 				A751E19E13045B19007635F2 /* TableViewCornerIcon.tif in Resources */,
 				A751E19F13045B19007635F2 /* TableViewGreyHeader.tif in Resources */,
 				125671CB1A1A6802002117B0 /* To check.xml in Resources */,
