@@ -46,39 +46,47 @@
 	mString = string;
 }
 
-- (BOOL)scanAttributesOfElement:(NSString*)element
+- (BOOL)scanAttributesOfElement:(NSString *)element
 {
 	// Attribute encountered
 	NSString *attributeName;
-	while([mScanner scanCharactersFromSet:mIdentifierSet intoString:&attributeName]) {
-		if(![mScanner scanString:@"=" intoString:nil]) {
-			[mDelegate parser:self error:@"No '=' found between attribute name and content"];
+    
+	while ([mScanner scanCharactersFromSet:mIdentifierSet intoString:&attributeName])
+    {
+		if (![mScanner scanString:@"=" intoString:nil])
+        {
+			[mDelegate parser:self error:[NSString stringWithFormat:@"NSString [%@] - No '=' found between attribute name and content", attributeName]];
 			mError = YES;
 			return NO;
 		}
 		
 		// Content of attribute
-		if(![mScanner scanString:@"\"" intoString:nil]) {
-			[mDelegate parser:self error:@"Attribute content does not begin with a '\"' sign"];
+		if (![mScanner scanString:@"\"" intoString:nil])
+        {
+			[mDelegate parser:self error:[NSString stringWithFormat:@"NSString [%@] - Attribute content does not begin with a '\"' sign", element]];
 			mError = YES;
 			return NO;
 		}
 		
 		NSString *attributeContent;		
 		unsigned startLocation = [mScanner scanLocation];
-		if(![mScanner scanUpToString:@"\"" intoString:&attributeContent]) {
-			[mDelegate parser:self error:@"Attribute content does not end with a '\"' sign"];
+		
+        if (![mScanner scanUpToString:@"\"" intoString:&attributeContent])
+        {
+			[mDelegate parser:self error:[NSString stringWithFormat:@"NSString [%@] - Attribute content does not end with a '\"' sign", element]];
 			mError = YES;
 			return NO;
 		}
-		unsigned endLocation = [mScanner scanLocation];
+		
+        unsigned endLocation = [mScanner scanLocation];
 		[mScanner scanString:@"\"" intoString:nil];
 		
 		NSMutableDictionary *info = [NSMutableDictionary dictionary];
 		info[INFO_START_LOCATION] = [NSNumber numberWithInt:startLocation];
 		info[INFO_END_LOCATION] = [NSNumber numberWithInt:endLocation];
 		[mDelegate parser:self element:element attributeName:attributeName content:attributeContent info:info];
-	}			
+	}
+    
 	return YES;
 }
 
@@ -179,25 +187,36 @@
 
 - (BOOL)scanHeader
 {
-	if([mScanner scanString:@"<?xml" intoString:nil]) {
+	if ([mScanner scanString:@"<?xml" intoString:nil])
+    {
 		[mDelegate parser:self beginElement:@"?xml"];
 		[self scanAttributesOfElement:@"?xml"];
-		if(![mScanner scanString:@"?>" intoString:nil]) {
+        
+		if (![mScanner scanString:@"?>" intoString:nil])
+        {
 			[mDelegate parser:self error:@"<?xml does not end with ?>"];
 			mError = YES;
 			return NO;
 		}
+        
 		[mDelegate parser:self endElement:@"?xml"];
 		return YES;
-	} else if([mScanner scanString:@"<!DOCTYPE" intoString:nil]) {
+	}
+    else if ([mScanner scanString:@"<!DOCTYPE" intoString:nil])
+    {
 		[mScanner scanUpToString:@">" intoString:nil];
-		if(![mScanner scanString:@">" intoString:nil]) {
+        
+		if (![mScanner scanString:@">" intoString:nil])
+        {
 			[mDelegate parser:self error:@"<!DOCTYPE does not end with >"];
 			mError = YES;
 			return NO;
 		}
+        
 		return YES;
-	} else {
+	}
+    else
+    {
 		return NO;
 	}
 }
