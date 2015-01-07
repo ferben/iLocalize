@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="ProjectDetailsController">
@@ -20,7 +20,7 @@
                     <rect key="frame" x="26" y="20" width="100" height="26"/>
                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     <size key="cellSize" width="25" height="26"/>
-                    <buttonCell key="prototype" type="square" bezelStyle="shadowlessSquare" image="0DE53989-71B2-43E9-BFC9-3510AF92E4CA" imagePosition="only" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="51" customClass="AZGlassButtonCell">
+                    <buttonCell key="prototype" type="square" bezelStyle="shadowlessSquare" image="B39B30B6-4D1A-47F7-A8A6-3D04C8785DCA" imagePosition="only" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="51" customClass="AZGlassButtonCell">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -72,7 +72,7 @@
         </customView>
     </objects>
     <resources>
-        <image name="0DE53989-71B2-43E9-BFC9-3510AF92E4CA" width="1" height="1">
+        <image name="B39B30B6-4D1A-47F7-A8A6-3D04C8785DCA" width="1" height="1">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

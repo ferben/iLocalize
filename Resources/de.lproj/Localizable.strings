@@ -1,4 +1,4 @@
-﻿/* Status Bar */
+/* Status Bar */
 " and %d need to be verified" = " und %d müssen geprüft werden";
 
 /* Status Bar */
@@ -127,6 +127,7 @@
 /* All Selection Node
    Explorer list node */
 
+
 "All" = "Alle";
 
 /* No comment provided by engineer. */
@@ -195,6 +196,8 @@
 /* Preset Alert Cancel Button
    Rebuild Base File Alert
    Replace Localized File Alert */
+
+
 
 
 "Cancel" = "Abbrechen";
@@ -276,6 +279,7 @@
 
 /* String Information
    Toggle between comment and value button */
+
 
 "Comment" = "Kommentar";
 
@@ -507,10 +511,12 @@
 /* Project Information
    Status Bar */
 
+
 "hour" = "Stunde";
 
 /* Project Information
    Status Bar */
+
 
 "hours" = "Stunden";
 
@@ -556,10 +562,12 @@
 /* Rebuild Base File Alert
    Replace Localized File Alert */
 
+
 "Keep localized nib layouts" = "Lokalisiertes NIB-Layout behalten";
 
 /* Search Context Button
    String Information */
+
 
 "Key" = "Schlüssel";
 
@@ -599,10 +607,12 @@
 /* Project Information
    Status Bar */
 
+
 "minute" = "Minute";
 
 /* Project Information
    Status Bar */
+
 
 "minutes" = "Minuten";
 
@@ -677,6 +687,7 @@
 
 /* Language
    Preset Alert OK Button */
+
 
 "OK" = "OK";
 
@@ -761,6 +772,7 @@
 /* Rebuild Base File Alert
    Replace Localized File Alert */
 
+
 "Rebuild" = "Reorganisieren";
 
 /* Rebuild Base File Alert */
@@ -817,6 +829,7 @@
 
 /* Language
    Preset Alert Rename Button */
+
 
 "Rename" = "Umbenennen";
 
@@ -922,6 +935,8 @@
 /* File Information
    Project Information
    Strings Display Name Format */
+
+
 
 
 "Strings" = "Zeichenfolgen";

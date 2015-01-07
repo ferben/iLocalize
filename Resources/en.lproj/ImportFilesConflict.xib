@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="ImportFilesConflict">
@@ -211,7 +211,7 @@ Select the one to be used.</string>
                         <constraints>
                             <constraint firstAttribute="width" constant="17" id="E5g-pO-BWG"/>
                         </constraints>
-                        <imageCell key="cell" enabled="NO" refusesFirstResponder="YES" alignment="left" image="warning" id="104"/>
+                        <imageCell key="cell" enabled="NO" refusesFirstResponder="YES" alignment="left" image="_warning" id="104"/>
                     </imageView>
                     <box title="Updated File" translatesAutoresizingMaskIntoConstraints="NO" id="47">
                         <rect key="frame" x="17" y="62" width="643" height="199"/>
@@ -408,6 +408,6 @@ DQ
         </window>
     </objects>
     <resources>
-        <image name="warning" width="15" height="13"/>
+        <image name="_warning" width="18" height="18"/>
     </resources>
 </document>

@@ -1,4 +1,4 @@
-﻿/* Status Bar */
+/* Status Bar */
 " and %d need to be verified" = "また、%d 個はチェックが必要。";
 
 /* Status Bar */
@@ -127,6 +127,7 @@
 /* All Selection Node
    Explorer list node */
 
+
 "All" = "すべて";
 
 /* No comment provided by engineer. */
@@ -195,6 +196,8 @@
 /* Preset Alert Cancel Button
    Rebuild Base File Alert
    Replace Localized File Alert */
+
+
 
 
 "Cancel" = "キャンセル";
@@ -276,6 +279,7 @@
 
 /* String Information
    Toggle between comment and value button */
+
 
 "Comment" = "コメント";
 
@@ -507,10 +511,12 @@
 /* Project Information
    Status Bar */
 
+
 "hour" = "時間";
 
 /* Project Information
    Status Bar */
+
 
 "hours" = "時間";
 
@@ -556,10 +562,12 @@
 /* Rebuild Base File Alert
    Replace Localized File Alert */
 
+
 "Keep localized nib layouts" = "ローカライズした NIB のレイアウトを変更しない";
 
 /* Search Context Button
    String Information */
+
 
 "Key" = "キー";
 
@@ -599,10 +607,12 @@
 /* Project Information
    Status Bar */
 
+
 "minute" = "分";
 
 /* Project Information
    Status Bar */
+
 
 "minutes" = "分";
 
@@ -677,6 +687,7 @@
 
 /* Language
    Preset Alert OK Button */
+
 
 "OK" = "OK";
 
@@ -761,6 +772,7 @@
 /* Rebuild Base File Alert
    Replace Localized File Alert */
 
+
 "Rebuild" = "再構築";
 
 /* Rebuild Base File Alert */
@@ -816,6 +828,7 @@
 
 /* Language
    Preset Alert Rename Button */
+
 
 "Rename" = "名称変更";
 
@@ -921,6 +934,8 @@
 /* File Information
    Project Information
    Strings Display Name Format */
+
+
 
 
 "Strings" = "Strings";
