@@ -27,10 +27,13 @@ static id _shared = nil;
 
 - (id)init
 {
-	if((self = [super init])) {
-		[NSBundle loadNibNamed:@"PreferencesLocalization" owner:self];
+	if ((self = [super init]))
+    {
+        NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+        [bundle loadNibNamed:@"PreferencesLocalization" owner:self topLevelObjects:nil];
 	}
-	return self;
+
+    return self;
 }
 
 - (IBAction)ignoreControlCharactersChanged:(id)sender

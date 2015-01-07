@@ -17,13 +17,16 @@
 
 @implementation AbstractTableCornerView
 
-- (id)initWithFrame:(NSRect)r controller:(ProjectWC*)controller
+- (id)initWithFrame:(NSRect)r controller:(ProjectWC *)controller
 {
-	if(self = [super initWithFrame:r]) {
-		[NSBundle loadNibNamed:[self viewNibName] owner:self];
+	if (self = [super initWithFrame:r])
+    {
+        NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+        [bundle loadNibNamed:[self viewNibName] owner:self topLevelObjects:nil];
 		mMainWindowController = controller;
 	}
-	return self;
+
+    return self;
 }
 
 - (NSString*)viewNibName

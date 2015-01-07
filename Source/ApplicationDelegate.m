@@ -79,7 +79,9 @@
 	}
 	
 	mSymbolWindowController = [[NSWindowController alloc] init];
-	[NSBundle loadNibNamed:@"Symbols" owner:mSymbolWindowController];
+    
+    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    [bundle loadNibNamed:@"Symbols" owner:mSymbolWindowController topLevelObjects:nil];
 	
 	[[RecentDocuments createInstanceForDocumentExtensions:@[@"ilocalize"] identifier:@"projects"] setMenu:mOpenRecentProjectMenu];
 	[[RecentDocuments createInstanceForDocumentExtensions:[[SEIManager sharedInstance] allImportableExtensions] identifier:@"glossaries"] setMenu:mOpenRecentGlossaryMenu];

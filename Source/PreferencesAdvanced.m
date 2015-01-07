@@ -24,10 +24,13 @@ static id _shared = nil;
 
 - (id)init
 {
-	if(self = [super init]) {
-		[NSBundle loadNibNamed:@"PreferencesAdvanced" owner:self];		
+	if (self = [super init])
+    {
+        NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+        [bundle loadNibNamed:@"PreferencesAdvanced" owner:self topLevelObjects:nil];
 	}
-	return self;
+
+    return self;
 }
 
 

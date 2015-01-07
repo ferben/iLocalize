@@ -108,14 +108,17 @@ static id _shared = nil;
 
 - (id)init
 {
-	if(self = [super init]) {
-		[NSBundle loadNibNamed:@"PreferencesLanguages" owner:self];
+	if (self = [super init])
+    {
+        NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+        [bundle loadNibNamed:@"PreferencesLanguages" owner:self topLevelObjects:nil];
 		
 		mLanguagesCache = nil;
         
         [[NSUserDefaults standardUserDefaults] addObserver:self forKeyPath:@"QuoteSubstitution" options:NSKeyValueObservingOptionNew context:nil];		
 	}
-	return self;
+
+    return self;
 }
 
 - (void)dealloc

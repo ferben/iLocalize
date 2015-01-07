@@ -74,9 +74,13 @@ static PreferencesFilters* prefs = nil;
 
 - (id)init
 {
-	if(self = [super init]) {
+	if (self = [super init])
+    {
 		prefs = self;
-		[NSBundle loadNibNamed:@"PreferencesFilters" owner:self];
+
+        NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+        [bundle loadNibNamed:@"PreferencesFilters" owner:self topLevelObjects:nil];
+
 		mCachedRegexArray = [[NSMutableArray alloc] init];
 		mUpdateRegexCache = YES;
 		

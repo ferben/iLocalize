@@ -41,8 +41,10 @@
 													 name:ILNotificationEngineDidReload
 												   object:nil];
 		
-		[NSBundle loadNibNamed:[self nibname] owner:self];
-		[self registerToPreferences];
+        NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+        [bundle loadNibNamed:[self nibname] owner:self topLevelObjects:nil];
+
+        [self registerToPreferences];
 	}
 	return self;
 }
