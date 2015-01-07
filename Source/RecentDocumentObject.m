@@ -48,15 +48,19 @@
 	return [[self menuAttributedTitle] string];
 }
 
-- (NSAttributedString*)attributedStringWithImage:(NSImage*)image
+- (NSAttributedString *)attributedStringWithImage:(NSImage *)image
 {
-    NSTextAttachment* ta = [[NSTextAttachment alloc] init];
-    NSTextAttachmentCell* tac = [[NSTextAttachmentCell alloc] init];
+    NSTextAttachment *ta = [[NSTextAttachment alloc] init];
+    NSTextAttachmentCell *tac = [[NSTextAttachmentCell alloc] init];
+    
 	image.size = NSMakeSize(16, 16);
-	[image setScalesWhenResized:YES];
+    //  [image setScalesWhenResized:YES];  // no longer required since Mac OS X 10.6
+
     [tac setImage:image];
     [ta setAttachmentCell: tac];
-	NSAttributedString* as = [NSAttributedString attributedStringWithAttachment: ta];
+
+    NSAttributedString *as = [NSAttributedString attributedStringWithAttachment:ta];
+    
 	return as;
 }
 

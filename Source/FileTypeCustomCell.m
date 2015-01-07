@@ -16,7 +16,8 @@
 	[super drawInteriorWithFrame:cellFrame inView:controlView];
 	
 	NSImage *image = [[self fileController] typeImage];
-	if(!image)
+
+    if(!image)
 		return;
 
 	// For some reason we need to disable the interpolation otherwise the
@@ -28,9 +29,9 @@
 	[image setSize:imageSize];
 	
 	NSPoint p = cellFrame.origin;
-	p.x += cellFrame.size.width*0.5-imageSize.width*0.5;
-	p.y += cellFrame.size.height*0.5-imageSize.height*0.5;
-	[image setFlipped:YES];
+	p.x += cellFrame.size.width  * 0.5 - imageSize.width  * 0.5;
+	p.y += cellFrame.size.height * 0.5 - imageSize.height * 0.5;
+    // [image setFlipped:YES];
 	[image drawInRect:NSMakeRect(p.x, p.y, imageSize.width, imageSize.height)
 			operation:NSCompositeSourceOver 
 			 fraction:1];

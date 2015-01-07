@@ -31,7 +31,7 @@ static ImageTool *shared = nil;
 }
 
 
-- (NSImage*)imageSelectedUsingImage:(NSImage*)source
+- (NSImage *)imageSelectedUsingImage:(NSImage *)source
 {
 	NSSize imageSize = [source size];
 	NSRect r = NSMakeRect(0, 0, imageSize.width, imageSize.height);
@@ -44,7 +44,7 @@ static ImageTool *shared = nil;
 	
 	NSImage *target = [[NSImage alloc] initWithSize:imageSize];
 	[target lockFocus];
-	[source setFlipped:YES];
+    // [source setFlipped:YES];
 	[source drawInRect:r operation:NSCompositeSourceOver fraction:1];
 	[selectedLayer drawInRect:r operation:NSCompositeSourceAtop fraction:1];
 	[target unlockFocus];	

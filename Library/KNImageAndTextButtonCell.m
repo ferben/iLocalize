@@ -60,14 +60,14 @@
 
 #define KNImageAndTextButtonCellPadding 5 // Distance between the end of the image and the start of the text.
 
-- (void)drawWithFrame:(NSRect)cellFrame inView:(NSView *)controlView {
-    
+- (void)drawWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
+{
 	// Draw the original button first, then the image.
 	
 	[super drawWithFrame:cellFrame inView:controlView];
 	
-	if (image != nil) {
-		
+	if (image != nil)
+    {
         NSRect imageFrame;
 		
         NSSize imageSize = [image size];
@@ -76,11 +76,11 @@
         imageFrame.origin.x += imageFrame.size.width;
         imageFrame.size = imageSize;
 				
-		BOOL oldFlipped = [image isFlipped];
-        [image setFlipped:![controlView isFlipped]];
+        // BOOL oldFlipped = [image isFlipped];
+        // [image setFlipped:![controlView isFlipped]];
         [image drawInRect:imageFrame fraction:1];
-		[image setFlipped:oldFlipped];		
-	} 	
+        // [image setFlipped:oldFlipped];
+	}
 }
 
 
