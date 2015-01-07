@@ -285,19 +285,30 @@ NSInteger glossaryPathSort(id doc1, id doc2, void *context)
 
 - (BOOL)performDragOperation:(NSDragOperation)operation sourcePath:(NSString*)source targetFolderPath:(NSString*)targetFolder
 {
-	NSString *target = [targetFolder stringByAppendingPathComponent:[source lastPathComponent]];	
-	if([target isPathExisting])
+	NSString *target = [targetFolder stringByAppendingPathComponent:[source lastPathComponent]];
+    
+	if ([target isPathExisting])
 		return YES;
 	
 	[[FileTool shared] preparePath:target atomic:YES skipLastComponent:YES];
 	
-	switch(operation) {
+	switch (operation)
+    {
 		case NSDragOperationCopy:
 			return [[NSFileManager defaultManager] copyItemAtPath:source toPath:target error:nil];
 		case NSDragOperationMove:
 			return [[NSFileManager defaultManager] moveItemAtPath:source toPath:target error:nil];
 		case NSDragOperationLink:
 			return [FileTool createAliasOfFile:source toFile:target];
+
+        // unused so far
+        case NSDragOperationAll_Obsolete:
+        case NSDragOperationDelete:
+        case NSDragOperationEvery:
+        case NSDragOperationGeneric:
+        case NSDragOperationNone:
+        case NSDragOperationPrivate:
+            ;
 	}
 	
 	return NO;
