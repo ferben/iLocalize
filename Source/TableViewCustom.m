@@ -404,9 +404,24 @@
 	return [mDefaultDelegate textView:tv shouldChangeTextInRange:affectedCharRange replacementString:replacementString];
 }
 
+// replacement for deprecated -(NSDragOperation)draggingSourceOperationMaskForLocal:(BOOL)isLocal
+- (NSDragOperation)draggingSession:(NSDraggingSession *)session sourceOperationMaskForDraggingContext:(NSDraggingContext)context
+{
+    switch (context)
+    {
+        case NSDraggingContextOutsideApplication:
+            return NSDragOperationCopy | NSDragOperationMove | NSDragOperationLink;
+            
+        case NSDraggingContextWithinApplication:
+        default:
+            return NSDragOperationEvery;
+    }
+}
+
 #pragma mark -
 
 /* Needs to override this method in order to allow cross-application drag and drop */
+/*
 - (NSDragOperation)draggingSourceOperationMaskForLocal:(BOOL)isLocal
 {
 	if(isLocal)
@@ -414,6 +429,7 @@
 	else
 		return NSDragOperationCopy | NSDragOperationMove | NSDragOperationLink;
 }
+*/
 
 - (void)flagsChanged:(NSEvent *)theEvent
 {
