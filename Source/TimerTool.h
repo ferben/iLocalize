@@ -8,11 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
-typedef unsigned long long ltime_t;
+// typedef unsigned long long ltime_t;
 
 @interface TimerTool : NSObject {
 
 }
-+ (ltime_t)microseconds;
-+ (float)seconds;
+// + (ltime_t)microseconds;
+// + (float)seconds;
 @end
