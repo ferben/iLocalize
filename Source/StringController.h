@@ -70,6 +70,7 @@
 - (void)setStatusWarning:(BOOL)flag;
 - (BOOL)statusWarning;
 
+- (void)setKey:(NSString *)key;
 - (NSString*)key;
 
 - (void)setBaseComment:(NSString*)comment;

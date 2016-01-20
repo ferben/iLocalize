@@ -50,6 +50,7 @@ typedef void(^StringModelCommentBlock)(NSString *comment, unsigned type, int row
 - (int)valueType;
 
 - (NSString*)comment;
+- (void)setKey:(NSString *)key;
 - (NSString*)key;
 - (NSString*)value;
 
