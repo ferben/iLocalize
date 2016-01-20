@@ -61,7 +61,7 @@
 	return [filename isPathPackage] || [filename isPathDirectory];
 }
 
-- (BOOL)panel:(id)sender isValidFilename:(NSString *)filename
+- (BOOL)panel:(id)sender validateURL:(NSURL *)url error:(NSError *__autoreleasing *)outError
 {
 	return YES;	
 }

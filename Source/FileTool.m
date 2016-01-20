@@ -372,18 +372,23 @@ while the real file is on the disk stored in legacy language.
 	return result;
 }
 
-+ (BOOL)isPathAnAlias:(NSString*)path
++ (BOOL)isPathAnAlias:(NSString *)path
 {
 	FSRef fsRef;
-	if([FileTool buildFSRef:&fsRef fromPath:path]) {
+    
+	if ([FileTool buildFSRef:&fsRef fromPath:path])
+    {
 		Boolean isAlias = NO;
 		Boolean isFolder = NO;
-		OSErr err = FSIsAliasFile(&fsRef, &isAlias, &isFolder);
-		if(err != noErr)
+        OSErr err = FSIsAliasFile(&fsRef, &isAlias, &isFolder);
+        // OSErr err = CFURLCopyResourcePropertyForKey (CFURLRef url, CFStringRef key, void *propertyValueTypeRefPtr, CFErrorRef *error);
+        
+        if (err != noErr)
 			return NO;
 		
 		return isAlias;
-	} else
+	}
+    else
 		return NO;
 }
 
