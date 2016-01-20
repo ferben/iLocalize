@@ -30,8 +30,9 @@ static AboutWindow *aboutWindow = nil;
 	
 	[versionTextField setStringValue:[NSString stringWithFormat:@"%@ %@ (%@)", NSLocalizedString(@"Version", @"About Box Version"), shortVersion, buildNumber]];
 	[copyrightTextField setStringValue:copyright];
-    
-    [licenseTextButton setHidden:YES];
+
+#warning Do we still need the License Text button?
+    // [licenseTextButton setHidden:YES];
 }
 
 - (NSBundle*)helpBundle
