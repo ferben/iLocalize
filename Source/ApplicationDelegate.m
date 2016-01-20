@@ -66,15 +66,18 @@
 {    			
 	// To activate:
 	// $ defaults write ch.arizona-software.iLocalize ch.arizona-software.ilocalize.debug YES
-	if([[NSUserDefaults standardUserDefaults] boolForKey:@"ch.arizona-software.ilocalize.debug"]) {
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"ch.arizona-software.ilocalize.debug"])
+    {
 		NSMenu *mainMenuBar = [NSApp mainMenu];
 		NSMenuItem *debugMenuItem = [[NSMenuItem alloc] initWithTitle:@"Debug" action:nil keyEquivalent:@""];
 		NSMenu *submenu = [[NSMenu alloc] initWithTitle:@"Debug"];
-		[submenu addItemWithTitle:@"Detect Encoding of Selected File" action:@selector(detectEncoding:) keyEquivalent:@""];
+
+        [submenu addItemWithTitle:@"Detect Encoding of Selected File" action:@selector(detectEncoding:) keyEquivalent:@""];
 		[submenu addItemWithTitle:@"Check Selected File" action:@selector(checkSelectedFile:) keyEquivalent:@""];
 		[submenu addItemWithTitle:@"Convert nibs to xibs" action:@selector(convertNibsToXibs:) keyEquivalent:@""];
 		[submenu addItemWithTitle:@"TMX Performance Test" action:@selector(tmxPerformanceTest:) keyEquivalent:@""];
-		[debugMenuItem setSubmenu:submenu];
+
+        [debugMenuItem setSubmenu:submenu];
 		[mainMenuBar addItem:debugMenuItem];
 	}
 	
@@ -156,13 +159,14 @@ static NSDictionary *customHelpMenuDic = nil;
     int openDocumentMenuItemIndex = [mFileMenu indexOfItemWithTarget:nil
 														   andAction:@selector(openDocument:)];
 	
-    if (openDocumentMenuItemIndex>=0 &&
-        [[mFileMenu itemAtIndex:openDocumentMenuItemIndex+1] hasSubmenu])
+    if (    (openDocumentMenuItemIndex >= 0)
+         && ([[mFileMenu itemAtIndex:openDocumentMenuItemIndex + 1] hasSubmenu])
+       )
     {
 		// We'll presume it's the Open Recent menu item, because this is
 		// the heuristic that NSDocumentController uses to add it to the
 		// File menu
-		[mFileMenu removeItemAtIndex:openDocumentMenuItemIndex+1];
+		[mFileMenu removeItemAtIndex:openDocumentMenuItemIndex + 1];
     }	
 }
 
@@ -208,7 +212,9 @@ static NSDictionary *customHelpMenuDic = nil;
 - (void)checkForNibTool
 {	
 	BOOL ibToolOK = [NibEngine ensureTool];
-	if(!ibToolOK) {
+    
+	if (!ibToolOK)
+    {
 		NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Required Tool Missing", nil)
 										 defaultButton:NSLocalizedString(@"OK", nil)
 									   alternateButton:nil
@@ -218,7 +224,7 @@ static NSDictionary *customHelpMenuDic = nil;
 	}	
 }
 
-- (NSArray*)openProjectURLs
+- (NSArray *)openProjectURLs
 {
 	return [[RecentDocuments findInstanceWithID:@"projects"] urls];
 	/*
@@ -237,18 +243,27 @@ static NSDictionary *customHelpMenuDic = nil;
 
 - (void)openLastOpenedDocuments
 {
-	NSArray *paths = [[NSUserDefaults standardUserDefaults] objectForKey:@"lastOpenedDocumentPaths"];
-	if(paths.count > 0) {
-		for(NSString *path in paths) {
-			if([path isPathExisting]) {
-				NSError *error = nil;
-				if(![[NSDocumentController sharedDocumentController] openDocumentWithContentsOfURL:[NSURL fileURLWithPath:path] display:YES error:&error] && error) {
-					ERROR(@"Unable to open recent document %@: %@", path, error);
-				}
-			}
-		}			
-	} else {
-		[self performSelector:@selector(newProject:) withObject:self afterDelay:0];			
+    // remove duplicates if any
+    NSOrderedSet *documentPaths = [NSOrderedSet orderedSetWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"lastOpenedDocumentPaths"]];
+    
+    if (documentPaths.count > 0)
+    {
+        for (NSString *path in documentPaths)
+        {
+            if ([path isPathExisting])
+            {
+                NSError *error = nil;
+                
+                if (![[NSDocumentController sharedDocumentController] openDocumentWithContentsOfURL:[NSURL fileURLWithPath:path] display:YES error:&error] && error)
+                {
+                    ERROR(@"Unable to open recent document %@: %@", path, error);
+                }
+            }
+        }
+    }
+    else
+    {
+        [self performSelector:@selector(newProject:) withObject:self afterDelay:0];
 	}
 }
 
@@ -258,20 +273,30 @@ static NSDictionary *customHelpMenuDic = nil;
 	// - open the last projects if any windows were open
 	// - open the Project Browser is no window were open
 	NSMutableArray *openDocumentPaths = [NSMutableArray array];
-	for(NSDocument *doc in [[NSDocumentController sharedDocumentController] documents]) {
+    
+	for (NSDocument *doc in [[NSDocumentController sharedDocumentController] documents])
+    {
 		[openDocumentPaths addObject:[[doc fileURL] path]];
 	}
 
-	if(openDocumentPaths.count > 0) {
+    // remove duplicates if any
+    NSArray *documentPaths = [[NSSet setWithArray:openDocumentPaths] allObjects];
+    
+    if (documentPaths.count > 0)
+    {
 		[[NSUserDefaults standardUserDefaults] setInteger:STARTUP_OPEN_LAST_USED forKey:@"actionAtStartup"];
-		[[NSUserDefaults standardUserDefaults] setObject:openDocumentPaths forKey:@"lastOpenedDocumentPaths"];
-	} else {
+		[[NSUserDefaults standardUserDefaults] setObject:documentPaths forKey:@"lastOpenedDocumentPaths"];
+	}
+    else
+    {
 		[[NSUserDefaults standardUserDefaults] setInteger:STARTUP_PROJECT_BROWSER forKey:@"actionAtStartup"];
 	}
 	
 	// Save all the projects automatically when the application closes
-	for(NSDocument *doc in [[NSDocumentController sharedDocumentController] documents]) {
-		if([doc isKindOfClass:[ProjectDocument class]]) {
+	for (NSDocument *doc in [[NSDocumentController sharedDocumentController] documents])
+    {
+		if ([doc isKindOfClass:[ProjectDocument class]])
+        {
 			// Need this little hack so saveDocument really saves the document
 			// because the document isDocumentEdited flag can be NO
 			// while there are still data to save (internal data).
@@ -296,7 +321,8 @@ static NSDictionary *customHelpMenuDic = nil;
 
 - (void)applicationWillFinishLaunching:(NSNotification *)notif
 {
-    if (IsTestRunning()) {
+    if (IsTestRunning())
+    {
         return;
     }
     
@@ -308,7 +334,7 @@ static NSDictionary *customHelpMenuDic = nil;
 */	
 	// Count the number of time it started (used by the RegistrationAndUpdate class)	
 	int startCount = [[NSUserDefaults standardUserDefaults] integerForKey:@"startCount"];
-	[[NSUserDefaults standardUserDefaults] setInteger:startCount+1 forKey:@"startCount"];
+	[[NSUserDefaults standardUserDefaults] setInteger:startCount + 1 forKey:@"startCount"];
 	
 	// Create the document controller here: it will then be used as the shared document controller
 	// See http://developer.apple.com/documentation/Cocoa/Conceptual/Documents/Tasks/SubclassController.html
@@ -322,28 +348,38 @@ static NSDictionary *customHelpMenuDic = nil;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notif
 {
-    if (IsTestRunning()) {
+    if (IsTestRunning())
+    {
         return;
     }
     
 	[self removeOpenRecentMenuItem];
 		
-	if([[NSApp orderedDocuments] count])
+	if ([[NSApp orderedDocuments] count])
 		return;
 	
 	BOOL firstStartup;
-	if([[NSUserDefaults standardUserDefaults] objectForKey:@"firstStartup"] == nil) {
+    
+	if ([[NSUserDefaults standardUserDefaults] objectForKey:@"firstStartup"] == nil)
+    {
 		firstStartup = YES;
-	} else {
+	}
+    else
+    {
 		firstStartup = [[NSUserDefaults standardUserDefaults] boolForKey:@"firstStartup"];
 	}
+    
 	[[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstStartup"];
 	
-	if(firstStartup) {
+	if (firstStartup)
+    {
 		[self performSelector:@selector(newProject:) withObject:self afterDelay:0];		
-	} else {
-		switch([[NSUserDefaults standardUserDefaults] integerForKey:@"actionAtStartup"]) {
-			case STARTUP_OPEN_LAST_USED:
+	}
+    else
+    {
+        switch ([[NSUserDefaults standardUserDefaults] integerForKey:@"actionAtStartup"])
+        {
+            case STARTUP_OPEN_LAST_USED:
 				[self openLastOpenedDocuments];
 				break;
 			case STARTUP_NEW_PROJET:
@@ -353,7 +389,7 @@ static NSDictionary *customHelpMenuDic = nil;
 			case STARTUP_PROJECT_BROWSER:
 				[self performSelector:@selector(browseProjects:) withObject:self afterDelay:0];
 				break;
-		}			
+        }
 	}
 }
 
@@ -373,7 +409,7 @@ static NSDictionary *customHelpMenuDic = nil;
 														object:nil];
 }
 
-- (ProjectWC*)findFirstProjectWC
+- (ProjectWC *)findFirstProjectWC
 {
 	NSEnumerator *enumerator = [[NSApp orderedWindows] objectEnumerator];
 	NSWindow *window;
@@ -445,30 +481,38 @@ static NSDictionary *customHelpMenuDic = nil;
 	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://developer.apple.com/internationalization/download/"]];
 }
 
-- (IBAction)makeDonation:(id)sender {
+- (IBAction)makeDonation:(id)sender
+{
 	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4L937JJJQHDLA"]];    
 }
 
 #pragma mark AppleScriptSupport
 
-- (NSArray*)projects
+- (NSArray *)projects
 {	
 	NSMutableArray *projects = [NSMutableArray array];
 	NSEnumerator *enumerator = [[[NSDocumentController sharedDocumentController] documents] objectEnumerator];
 	NSDocument *doc;
-	while(doc = [enumerator nextObject]) {
-		if([doc isKindOfClass:[ProjectDocument class]]) {
+    
+	while (doc = [enumerator nextObject])
+    {
+		if ([doc isKindOfClass:[ProjectDocument class]])
+        {
 			[projects addObject:[ASProject projectWithDocument:(ProjectDocument*)doc]];
 		}
 	}
+    
 	return projects;
 }
 
 - (BOOL)application:(NSApplication *)sender delegateHandlesKey:(NSString *)key
 {
-    if ([key isEqualToString:@"projects"]) {
+    if ([key isEqualToString:@"projects"])
+    {
         return YES;
-    } else {
+    }
+    else
+    {
         return NO;
     }
 }
