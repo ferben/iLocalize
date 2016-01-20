@@ -116,7 +116,9 @@
 
 #define ILErrorDomain @"ILErrorDomain"
 
-#define REPAIR_DOCUMENT [[NSUserDefaults standardUserDefaults] boolForKey:@"repair"]
+// #define REPAIR_DOCUMENT [[NSUserDefaults standardUserDefaults] boolForKey:@"repair"]
+#define REPAIR_DOCUMENT  YES
+
 // Re-enable concurrent operations in 4.1 when we have enough time to test it.
 //#define CONCURRENT_OP_OPTIONS ([[NSUserDefaults standardUserDefaults] boolForKey:@"nonConcurrentOp"]?0:NSEnumerationConcurrent)
 #define CONCURRENT_OP_OPTIONS 0
