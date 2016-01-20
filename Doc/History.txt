@@ -1,12 +1,21 @@
-iLocalize Open Source Development History
-================================================================================
-
-Author       : Ulf Dunkel (fd)
-Co-Authors   : -
---------------------------------------------------------------------------------
-Things to do : -
---------------------------------------------------------------------------------
-History:
-
-2014:
-  fd  Nov 13: localized NIB resources converted into XIBs, added to project
+# iLocalize Open Source Development History
+# ================================================================================
+#
+# Author       : Ulf Dunkel (fd)
+# Co-Authors   : -
+# --------------------------------------------------------------------------------
+# Things to do : -
+# --------------------------------------------------------------------------------
+# History:
+#
+# 2014:
+#   fd  Nov 13: localized NIB resources converted into XIBs, added to project
+#   fd  Nov 17: all XIBs set to auto-layout, re-layouted
+# 2015:
+#   fd  Jan 07: - many adjustments for SDK 10.10
+#               - target set to OS X 10.8 because of auto-layout
+#               - started to replace deprecated functions
+#   fd  Feb 04: - TableViewCustom.m: replacement for deprecated -(NSDragOperation)draggingSourceOperationMaskForLocal:(BOOL)isLocal
+#               - TimerTool stuff deactivated (deprecated and unused so far)
+#
+# --------------------------------------------------------------------------------
