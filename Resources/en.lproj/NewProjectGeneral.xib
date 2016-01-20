@@ -34,23 +34,23 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="qo1-Qv-rwe"/>
                     </constraints>
-                    <popUpButtonCell key="cell" type="push" title="&lt;setting-name&gt;" bezelStyle="rounded" alignment="left" lineBreakMode="clipping" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="82" id="634">
+                    <popUpButtonCell key="cell" type="push" title="Delete" bezelStyle="rounded" alignment="left" lineBreakMode="clipping" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="685" id="634">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="menu"/>
                         <menu key="menu" title="OtherViews" id="83">
                             <items>
-                                <menuItem title="&lt;setting-name&gt;" state="on" id="82"/>
+                                <menuItem title="&lt;setting-name&gt;" id="82"/>
                                 <menuItem isSeparatorItem="YES" id="677"/>
-                                <menuItem title="Save" onStateImage="CA15CFFD-3269-4685-8EF7-00E291B687D1" mixedStateImage="EF2514DC-1D8A-4E0E-BAE4-9AA10A2DB2D3" id="682">
+                                <menuItem title="Save" id="682">
                                     <modifierMask key="keyEquivalentModifierMask"/>
                                 </menuItem>
-                                <menuItem title="Save As…" onStateImage="972BEBFA-06DF-4EA7-84F7-B1CECDEB1561" mixedStateImage="F04F544B-C3CA-4A04-81EA-8011B9530CE6" id="683">
+                                <menuItem title="Save As…" id="683">
                                     <modifierMask key="keyEquivalentModifierMask"/>
                                 </menuItem>
-                                <menuItem title="Rename…" onStateImage="A6E52F38-2A36-48FB-9E03-EED2C18B111D" mixedStateImage="2152BE1D-C172-4620-874C-265EAAD5957C" id="684">
+                                <menuItem title="Rename…" id="684">
                                     <modifierMask key="keyEquivalentModifierMask"/>
                                 </menuItem>
-                                <menuItem title="Delete" onStateImage="6EF9DB80-37AE-471B-B542-1C1763E6637B" mixedStateImage="64FC6EEF-28D6-47F5-A9A5-E98A77A7F804" id="685">
+                                <menuItem title="Delete" state="on" id="685">
                                     <modifierMask key="keyEquivalentModifierMask"/>
                                 </menuItem>
                             </items>
@@ -204,14 +204,4 @@
         </customView>
         <userDefaultsController representsSharedInstance="YES" id="128" userLabel="Shared Defaults"/>
     </objects>
-    <resources>
-        <image name="2152BE1D-C172-4620-874C-265EAAD5957C" width="128" height="128"/>
-        <image name="64FC6EEF-28D6-47F5-A9A5-E98A77A7F804" width="128" height="128"/>
-        <image name="6EF9DB80-37AE-471B-B542-1C1763E6637B" width="128" height="128"/>
-        <image name="972BEBFA-06DF-4EA7-84F7-B1CECDEB1561" width="128" height="128"/>
-        <image name="A6E52F38-2A36-48FB-9E03-EED2C18B111D" width="128" height="128"/>
-        <image name="CA15CFFD-3269-4685-8EF7-00E291B687D1" width="128" height="128"/>
-        <image name="EF2514DC-1D8A-4E0E-BAE4-9AA10A2DB2D3" width="128" height="128"/>
-        <image name="F04F544B-C3CA-4A04-81EA-8011B9530CE6" width="128" height="128"/>
-    </resources>
 </document>
