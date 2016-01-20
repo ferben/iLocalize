@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="GlossaryImportWC">
@@ -132,7 +134,7 @@ DQ
             <subviews>
                 <box autoresizesSubviews="NO" title="Import" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="sjn-Ag-wmj">
                     <rect key="frame" x="17" y="15" width="200" height="78"/>
-                    <view key="contentView">
+                    <view key="contentView" id="r38-MO-YzA">
                         <rect key="frame" x="1" y="1" width="198" height="62"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -161,9 +163,9 @@ DQ
                         </subviews>
                     </view>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="38" secondAttribute="bottom" constant="11" id="Ad0-8l-K59"/>
-                        <constraint firstItem="38" firstAttribute="leading" secondItem="sjn-Ag-wmj" secondAttribute="leading" constant="16" id="JBK-Mn-sFP"/>
-                        <constraint firstItem="38" firstAttribute="top" secondItem="sjn-Ag-wmj" secondAttribute="top" constant="25" id="ijm-nw-y5o"/>
+                        <constraint firstItem="38" firstAttribute="top" secondItem="sjn-Ag-wmj" secondAttribute="top" constant="25" id="JSy-lI-dPp"/>
+                        <constraint firstItem="38" firstAttribute="leading" secondItem="sjn-Ag-wmj" secondAttribute="leading" constant="16" id="NCz-rl-5rd"/>
+                        <constraint firstAttribute="bottom" secondItem="38" secondAttribute="bottom" constant="11" id="bgv-hY-jvS"/>
                     </constraints>
                     <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                     <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

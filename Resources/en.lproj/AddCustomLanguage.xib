@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="AddCustomLanguageWC">
@@ -58,7 +60,7 @@ DQ
                     </button>
                     <box autoresizesSubviews="NO" title="Language" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="196">
                         <rect key="frame" x="17" y="57" width="482" height="87"/>
-                        <view key="contentView">
+                        <view key="contentView" id="yOk-RS-8PN">
                             <rect key="frame" x="1" y="1" width="480" height="71"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -91,12 +93,12 @@ DQ
                             </subviews>
                         </view>
                         <constraints>
-                            <constraint firstItem="180" firstAttribute="top" secondItem="196" secondAttribute="top" constant="25" id="Kqh-Fc-ffZ"/>
-                            <constraint firstItem="181" firstAttribute="leading" secondItem="196" secondAttribute="leading" constant="16" id="PW2-xE-wqL"/>
-                            <constraint firstItem="180" firstAttribute="centerX" secondItem="181" secondAttribute="centerX" id="dep-9T-yFW"/>
-                            <constraint firstAttribute="trailing" secondItem="180" secondAttribute="trailing" constant="16" id="gnv-Ry-mTZ"/>
-                            <constraint firstItem="181" firstAttribute="top" secondItem="180" secondAttribute="bottom" constant="8" symbolic="YES" id="mB8-4P-UD6"/>
-                            <constraint firstItem="180" firstAttribute="trailing" secondItem="181" secondAttribute="trailing" id="q68-8S-lVV"/>
+                            <constraint firstItem="180" firstAttribute="top" secondItem="196" secondAttribute="top" constant="25" id="C4K-b8-kb3"/>
+                            <constraint firstAttribute="trailing" secondItem="180" secondAttribute="trailing" constant="16" id="HkR-31-eKi"/>
+                            <constraint firstItem="181" firstAttribute="top" secondItem="180" secondAttribute="bottom" constant="8" symbolic="YES" id="Qje-HE-gRs"/>
+                            <constraint firstItem="181" firstAttribute="leading" secondItem="196" secondAttribute="leading" constant="16" id="f81-8i-3T7"/>
+                            <constraint firstItem="180" firstAttribute="trailing" secondItem="181" secondAttribute="trailing" id="uxK-UO-G6j"/>
+                            <constraint firstItem="180" firstAttribute="centerX" secondItem="181" secondAttribute="centerX" id="zSQ-mN-RdG"/>
                         </constraints>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

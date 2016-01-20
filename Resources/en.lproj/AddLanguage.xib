@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="AddLanguageWC">
@@ -58,7 +60,7 @@ DQ
                     </button>
                     <box autoresizesSubviews="NO" title="Language Name" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="220">
                         <rect key="frame" x="17" y="57" width="400" height="87"/>
-                        <view key="contentView">
+                        <view key="contentView" id="UXU-yz-xp6">
                             <rect key="frame" x="1" y="1" width="398" height="71"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -89,12 +91,12 @@ DQ
                             </subviews>
                         </view>
                         <constraints>
-                            <constraint firstItem="199" firstAttribute="trailing" secondItem="204" secondAttribute="trailing" id="HSd-pX-roi"/>
-                            <constraint firstItem="204" firstAttribute="top" secondItem="220" secondAttribute="top" constant="25" id="IW7-Mw-5WD"/>
-                            <constraint firstAttribute="bottom" secondItem="199" secondAttribute="bottom" constant="11" id="SOr-cg-kQ5"/>
-                            <constraint firstItem="204" firstAttribute="leading" secondItem="220" secondAttribute="leading" constant="16" id="TsF-gA-6bq"/>
-                            <constraint firstItem="204" firstAttribute="leading" secondItem="199" secondAttribute="leading" id="n4J-yu-Zm6"/>
-                            <constraint firstAttribute="trailing" secondItem="204" secondAttribute="trailing" constant="16" id="zfw-Zk-dWh"/>
+                            <constraint firstAttribute="trailing" secondItem="204" secondAttribute="trailing" constant="16" id="0UU-gh-RE4"/>
+                            <constraint firstAttribute="bottom" secondItem="199" secondAttribute="bottom" constant="11" id="VWE-wA-nVt"/>
+                            <constraint firstItem="204" firstAttribute="leading" secondItem="199" secondAttribute="leading" id="anw-QX-kdC"/>
+                            <constraint firstItem="204" firstAttribute="leading" secondItem="220" secondAttribute="leading" constant="16" id="bEB-LR-XxL"/>
+                            <constraint firstItem="199" firstAttribute="trailing" secondItem="204" secondAttribute="trailing" id="bcO-cK-A3K"/>
+                            <constraint firstItem="204" firstAttribute="top" secondItem="220" secondAttribute="top" constant="25" id="yGo-NI-PaE"/>
                         </constraints>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
