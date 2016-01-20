@@ -10,28 +10,33 @@
 
 @implementation XMLParser
 
-+ (void)parseString:(NSString*)string
++ (void)parseString:(NSString *)string
 {
 	XMLParser *parser = [[XMLParser alloc] init];
 	[parser setString:string];
 	[parser parse];
 }
 
-+ (void)parseFile:(NSString*)file
++ (void)parseFile:(NSString *)file
 {
 	return [XMLParser parseString:[NSString stringWithContentsOfFile:file usedEncoding:nil error:nil]];
 }
 
 - (id)init
 {
-	if(self = [super init]) {
+	if (self = [super init])
+    {
 		mDelegate = nil;
 		mString = nil;
-		mScanner = nil;		
+		mScanner = nil;
+        
 		mIdentifierSet = [[NSMutableCharacterSet alloc] init];
 		[mIdentifierSet formUnionWithCharacterSet:[NSCharacterSet letterCharacterSet]];
 		[mIdentifierSet formUnionWithCharacterSet:[NSCharacterSet characterSetWithCharactersInString:@"-_"]];
+        
+        mQuotesSet = [NSCharacterSet characterSetWithCharactersInString:@"\"'"];
 	}
+    
 	return self;
 }
 
@@ -41,7 +46,7 @@
 	mDelegate = delegate;
 }
 
-- (void)setString:(NSString*)string
+- (void)setString:(NSString *)string
 {
 	mString = string;
 }
@@ -55,31 +60,38 @@
     {
 		if (![mScanner scanString:@"=" intoString:nil])
         {
+            NSLog(@"Attribut: %@, Element: %@", attributeName, element);
+            
 			[mDelegate parser:self error:[NSString stringWithFormat:@"NSString [%@] - No '=' found between attribute name and content", attributeName]];
 			mError = YES;
 			return NO;
 		}
 		
-		// Content of attribute
-		if (![mScanner scanString:@"\"" intoString:nil])
+		// check begin of attribute content
+        if (![mScanner scanCharactersFromSet:mQuotesSet intoString:nil])
         {
-			[mDelegate parser:self error:[NSString stringWithFormat:@"NSString [%@] - Attribute content does not begin with a '\"' sign", element]];
+            NSLog(@"Attribut: %@, Element: %@", attributeName, element);
+            
+			[mDelegate parser:self error:[NSString stringWithFormat:@"NSString [%@] - Attribute content does not begin with a '\"' or '\'' sign", element]];
 			mError = YES;
 			return NO;
 		}
 		
 		NSString *attributeContent;		
 		unsigned startLocation = [mScanner scanLocation];
-		
-        if (![mScanner scanUpToString:@"\"" intoString:&attributeContent])
+        
+        // check end of attribute string
+        if (![mScanner scanUpToCharactersFromSet:mQuotesSet intoString:&attributeContent])
         {
-			[mDelegate parser:self error:[NSString stringWithFormat:@"NSString [%@] - Attribute content does not end with a '\"' sign", element]];
+            NSLog(@"Attribut: %@, Element: %@", attributeName, element);
+            
+			[mDelegate parser:self error:[NSString stringWithFormat:@"NSString [%@] - Attribute content does not end with a '\"' or '\'' sign", element]];
 			mError = YES;
 			return NO;
 		}
 		
         unsigned endLocation = [mScanner scanLocation];
-		[mScanner scanString:@"\"" intoString:nil];
+		[mScanner scanCharactersFromSet:mQuotesSet intoString:nil];
 		
 		NSMutableDictionary *info = [NSMutableDictionary dictionary];
 		info[INFO_START_LOCATION] = [NSNumber numberWithInt:startLocation];
@@ -92,50 +104,71 @@
 
 - (BOOL)scanContent
 {
-	if([mScanner scanString:@"<![CDATA[" intoString:nil]) {
+	if ([mScanner scanString:@"<![CDATA[" intoString:nil])
+    {
 		// CDATA
 		[mScanner scanUpToString:@"]]>" intoString:nil];
-		if(![mScanner scanString:@"]]>" intoString:nil]) {
+        
+		if (![mScanner scanString:@"]]>" intoString:nil])
+        {
 			[mDelegate parser:self error:@"CDATA does not end with ]]>"];
 			mError = YES;
 			return NO;
 		}
+        
 		return YES;
-	} else {
+	}
+    else
+    {
 		NSString *content;
-		if([mScanner scanUpToString:@"<" intoString:&content]) {
+        
+		if ([mScanner scanUpToString:@"<" intoString:&content])
+        {
 			[mDelegate parser:self content:[content xmlUnescaped]];
 			return YES;
 		}
+        
 		return NO;
 	}
 }
 
 - (BOOL)scanTag
 {
+    // COMMENT
 	// Comment: <!-- ... -->
-	if([mScanner scanString:@"<!--" intoString:nil]) {
-		// Comment
+	if ([mScanner scanString:@"<!--" intoString:nil])
+    {
 		NSString *comment;
 		[mScanner scanUpToString:@"-->" intoString:&comment];
-		if(![mScanner scanString:@"-->" intoString:nil]) {
+        
+		if (![mScanner scanString:@"-->" intoString:nil])
+        {
 			[mDelegate parser:self error:@"Comment does not end with -->"];
 			mError = YES;
 			return NO;
 		}
+        
 		[mDelegate parser:self comment:comment];
 		return YES;
-	} else if([mScanner scanString:@"<!DOCTYPE" intoString:nil]) {
-		// DOCTYPE
-		// Example: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/sgml/loosedtd.html">
+	}
+    // DOCTYPE
+    // Example: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/sgml/loosedtd.html">
+    else if ([mScanner scanString:@"<!DOCTYPE" intoString:nil])
+    {
 		[mScanner scanUpToString:@">" intoString:nil];
-		if(![mScanner scanString:@">" intoString:nil]) {
+        
+		if (![mScanner scanString:@">" intoString:nil])
+        {
 			[mDelegate parser:self error:@"DOCTYPE does not end with >"];
 			mError = YES;
 			return NO;
 		}
+        
 		return YES;		
-	} else if(![mScanner scanString:@"<" intoString:nil]) {
+	}
+    // TAG
+    else if(![mScanner scanString:@"<" intoString:nil])
+    {
 		// Content?
 		return [self scanContent];
 	}
@@ -143,36 +176,52 @@
 	BOOL closingTag = [mScanner scanString:@"/" intoString:nil];
 
 	NSString *name;
-	if(![mScanner scanUpToCharactersFromSet:[NSCharacterSet characterSetWithCharactersInString:@" \n\r\t>/"] intoString:&name]) return NO;
 	
-	if([mScanner scanString:@"/>" intoString:nil]) {
+    if (![mScanner scanUpToCharactersFromSet:[NSCharacterSet characterSetWithCharactersInString:@" \n\r\t>/"] intoString:&name])
+        return NO;
+	
+	if ([mScanner scanString:@"/>" intoString:nil])
+    {
 		// Empty element
 		[mDelegate parser:self beginElement:name];
 		[mDelegate parser:self endElement:name];
 		return YES;
-	} else if([mScanner scanString:@">" intoString:nil]) {
+	}
+    else if ([mScanner scanString:@">" intoString:nil])
+    {
 		// Complete element
-		if(closingTag) {
+		if (closingTag)
+        {
 			[mDelegate parser:self endElement:name];
-		} else {
+		}
+        else
+        {
 			[mDelegate parser:self beginElement:name];
 		}
-		return YES;
-	} else {
+		
+        return YES;
+	}
+    else
+    {
 		[mDelegate parser:self beginElement:name];
 
-		if(![self scanAttributesOfElement:name]) return NO;
+		if (![self scanAttributesOfElement:name])
+            return NO;
 		
 		// handle special case for <?xml ... ?>
 		// Example: <?xml version="1.0" encoding="utf-8"?>
-		if([name isEqualToString:@"?xml"] && [mScanner scanString:@"?>" intoString:nil]) {
+		if ([name isEqualToString:@"?xml"] && [mScanner scanString:@"?>" intoString:nil])
+        {
 			return YES;
 		}
 		
-		if([mScanner scanString:@">" intoString:nil]) {
+		if ([mScanner scanString:@">" intoString:nil])
+        {
 			return YES;
 		}
-		if([mScanner scanString:@"/>" intoString:nil]) {
+        
+		if ([mScanner scanString:@"/>" intoString:nil])
+        {
 			[mDelegate parser:self endElement:name];
 			return YES;
 		}
@@ -182,11 +231,9 @@
 	}
 }
 
-// <?xml version="1.0" encoding="UTF-8"?>
-// <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
 - (BOOL)scanHeader
 {
+    // <?xml version="1.0" encoding="UTF-8"?>
 	if ([mScanner scanString:@"<?xml" intoString:nil])
     {
 		[mDelegate parser:self beginElement:@"?xml"];
@@ -202,6 +249,7 @@
 		[mDelegate parser:self endElement:@"?xml"];
 		return YES;
 	}
+    // <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
     else if ([mScanner scanString:@"<!DOCTYPE" intoString:nil])
     {
 		[mScanner scanUpToString:@">" intoString:nil];
@@ -228,12 +276,16 @@
 	
 	mScanner = [[NSScanner alloc] initWithString:mString];
 		
-	while([self scanHeader]) {
-		if(mAbort) return YES;
+	while ([self scanHeader])
+    {
+		if (mAbort)
+            return YES;
 	}
 	
-	while([self scanTag]) {
-		if(mAbort) return YES;
+	while ([self scanTag])
+    {
+		if (mAbort)
+            return YES;
 	}
 	
 	return !mError;
