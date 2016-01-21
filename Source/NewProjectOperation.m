@@ -122,9 +122,22 @@
 		[[FileTool shared] preparePath:file atomic:YES skipLastComponent:YES];
 	[[NSFileManager defaultManager] createFileAtPath:file contents:NULL attributes:NULL];
 	
-	ProjectDocument *document = [[NSDocumentController sharedDocumentController] openDocumentWithContentsOfURL:[NSURL fileURLWithPath:file] display:NO error:nil];
-	[self prepareProjectModel:[document projectModel]];	
-	[self notifyNewProjectProvider:document];
+    NSDocumentController *documentController = [NSDocumentController sharedDocumentController];
+    NSDocument *document;
+    
+    [documentController openDocumentWithContentsOfURL:[NSURL fileURLWithPath:file] display:NO completionHandler:
+    ^(NSDocument *document, BOOL documentWasAlreadyOpen, NSError *error)
+    {
+        if (error)
+        {
+            [documentController presentError:error];
+        }
+    }];
+
+    ProjectDocument *myDocument = (ProjectDocument *)document;
+    
+	[self prepareProjectModel:[myDocument projectModel]];
+	[self notifyNewProjectProvider:myDocument];
 }
 
 - (BOOL)cancellable

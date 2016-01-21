@@ -175,10 +175,21 @@
 	else
 		[[FileTool shared] preparePath:g.file atomic:YES skipLastComponent:YES];
 	
-	if([g writeToFile:error]) {
-		[[NSDocumentController sharedDocumentController] openDocumentWithContentsOfURL:[NSURL fileURLWithPath:g.file] display:YES error:nil];
+	if ([g writeToFile:error])
+    {
+        NSDocumentController *documentController = [NSDocumentController sharedDocumentController];
+        
+        [documentController openDocumentWithContentsOfURL:[NSURL fileURLWithPath:g.file] display:YES completionHandler:
+         ^(NSDocument *document, BOOL documentWasAlreadyOpen, NSError *myError)
+         {
+             if (myError)
+                 [documentController presentError:myError];
+         }];
+        
 		return YES;
-	} else {
+	}
+    else
+    {
 		return NO;
 	}
 }

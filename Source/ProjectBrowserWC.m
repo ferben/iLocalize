@@ -365,14 +365,22 @@ static ProjectBrowserWC *shared = nil;
 - (void)openSelectedProject
 {
 	ProjectItem *item = [self selectedProjectItem];
-	if(!item) return;
+    
+	if (!item)
+        return;
 	
-	NSError *error = nil;
-	if([[NSDocumentController sharedDocumentController] openDocumentWithContentsOfURL:[NSURL fileURLWithPath:item.path] display:YES error:&error] != nil) {
-		[[self window] close];		
-	} else if(error) {
-		[[NSAlert alertWithError:error] beginSheetModalForWindow:[self window] modalDelegate:self didEndSelector:nil contextInfo:nil];
-	}
+    NSDocumentController *documentController = [NSDocumentController sharedDocumentController];
+    
+    [documentController openDocumentWithContentsOfURL:[NSURL fileURLWithPath:item.path] display:YES completionHandler:
+    ^(NSDocument *document, BOOL documentWasAlreadyOpen, NSError *error)
+    {
+        if (error)
+        {
+            [documentController presentError:error];
+            // [[NSAlert alertWithError:error] beginSheetModalForWindow:[self window] modalDelegate:self didEndSelector:nil contextInfo:nil];
+            [[self window] close];
+        }
+    }];
 }
 
 - (void)keyDown:(NSEvent *)theEvent

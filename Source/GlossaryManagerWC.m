@@ -424,8 +424,16 @@ NSInteger glossaryPathSort(id doc1, id doc2, void *context)
 
 - (IBAction)glossaryOpen:(id)sender
 {
-	for(Glossary *g in [self selectedGlossaries]) {
-		[[NSDocumentController sharedDocumentController] openDocumentWithContentsOfURL:[NSURL fileURLWithPath:g.targetFile] display:YES error:nil];
+    NSDocumentController *documentController = [NSDocumentController sharedDocumentController];
+    
+	for (Glossary *g in [self selectedGlossaries])
+    {
+        [documentController openDocumentWithContentsOfURL:[NSURL fileURLWithPath:g.targetFile] display:YES completionHandler:
+         ^(NSDocument *document, BOOL documentWasAlreadyOpen, NSError *error)
+         {
+             if (error)
+                 [documentController presentError:error];
+         }];
 	}
 }
 

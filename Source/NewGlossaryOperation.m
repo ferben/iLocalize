@@ -90,11 +90,22 @@ typedef NS_ENUM(NSInteger, NewGlossaryOptions) {
     return NO;
 }
 
-- (void)openGeneratedGlossaries {
-    for (NSString *language in self.languages) {
+- (void)openGeneratedGlossaries
+{
+    NSDocumentController *documentController = [NSDocumentController sharedDocumentController];
+    
+    for (NSString *language in self.languages)
+    {
         NSString *path = [self glossaryPathWithTargetLanguage:language];
-        if ([path isPathExisting]) {
-            [[NSDocumentController sharedDocumentController] openDocumentWithContentsOfURL:[NSURL fileURLWithPath:path] display:YES error:nil];
+        
+        if ([path isPathExisting])
+        {
+            [documentController openDocumentWithContentsOfURL:[NSURL fileURLWithPath:path] display:YES completionHandler:
+             ^(NSDocument *document, BOOL documentWasAlreadyOpen, NSError *error)
+             {
+                 if (error)
+                     [documentController presentError:error];
+             }];
         }
     }
 }

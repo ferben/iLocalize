@@ -252,17 +252,14 @@ static NSDictionary *customHelpMenuDic = nil;
         {
             for (NSString *path in documentPaths)
             {
-                if ([path isPathExisting])
+                NSDocumentController *documentController = [NSDocumentController sharedDocumentController];
+                 
+                [documentController openDocumentWithContentsOfURL:[NSURL fileURLWithPath:path] display:YES completionHandler:
+                ^(NSDocument *document, BOOL documentWasAlreadyOpen, NSError *error)
                 {
-                    NSDocumentController *documentController = [NSDocumentController sharedDocumentController];
-                    
-                    [documentController openDocumentWithContentsOfURL:[NSURL fileURLWithPath:path] display:YES completionHandler:
-                     ^(NSDocument *document, BOOL documentWasAlreadyOpen, NSError *error)
-                     {
-                         if (error)
-                             [documentController presentError:error];
-                     }];
-                }
+                    if (error)
+                        [documentController presentError:error];
+                }];
             }
         }
         else
