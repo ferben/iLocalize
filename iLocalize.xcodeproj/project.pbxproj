@@ -5133,7 +5133,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-licucore";
 				PROVISIONING_PROFILE = "";
-				SDKROOT = macosx10.10;
+				SDKROOT = macosx;
 				STRINGS_FILE_OUTPUT_ENCODING = "UTF-8";
 				VALID_ARCHS = x86_64;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -5173,7 +5173,7 @@
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "-licucore";
 				PROVISIONING_PROFILE = "";
-				SDKROOT = macosx10.10;
+				SDKROOT = macosx;
 				STRINGS_FILE_OUTPUT_ENCODING = "UTF-8";
 				VALID_ARCHS = x86_64;
 				VERSIONING_SYSTEM = "apple-generic";
