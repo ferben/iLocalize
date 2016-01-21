@@ -15,9 +15,20 @@
 - (id)performDefaultImplementation
 {
 	NSURL *url = [self directParameter];
-	ProjectDocument *document = [[NSDocumentController sharedDocumentController] openDocumentWithContentsOfURL:url
-																									   display:YES];	
-	return [ASProject projectWithDocument:document];
+    NSDocument *document;
+
+    NSDocumentController *documentController = [NSDocumentController sharedDocumentController];
+    
+    [documentController openDocumentWithContentsOfURL:url display:YES completionHandler:
+    ^(NSDocument *document, BOOL documentWasAlreadyOpen, NSError *error)
+    {
+        if (error)
+            [documentController presentError:error];
+    }];
+    
+    ProjectDocument *myDocument = (ProjectDocument *)document;
+    
+	return [ASProject projectWithDocument:myDocument];
 }
 
 @end

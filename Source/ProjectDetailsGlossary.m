@@ -268,13 +268,26 @@
 
 - (IBAction)reveal:(id)sender
 {
-	IGroupElementGlossary *element = [self selectedGlossaryElement]; 
-	if(element) {
-		NSDocument *doc = [[NSDocumentController sharedDocumentController] openDocumentWithContentsOfURL:[NSURL fileURLWithPath:element.glossary.targetFile]
-																								 display:YES error:nil];
-		GlossaryWC *wc = [(GlossaryDocument*)doc glossaryWC];
-		if(wc) {
-			[wc selectEntryWithBase:element.source translation:element.target];				
+    IGroupElementGlossary *element = [self selectedGlossaryElement];
+    
+	if (element)
+    {
+        NSDocument *document;
+        
+        NSDocumentController *documentController = [NSDocumentController sharedDocumentController];
+        
+        [documentController openDocumentWithContentsOfURL:[NSURL fileURLWithPath:element.glossary.targetFile] display:YES completionHandler:
+        ^(NSDocument *document, BOOL documentWasAlreadyOpen, NSError *error)
+        {
+            if (error)
+                [documentController presentError:error];
+        }];
+
+        GlossaryWC *wc = [(GlossaryDocument *)document glossaryWC];
+        
+		if (wc)
+        {
+            [wc selectEntryWithBase:element.source translation:element.target];
 		}
 	}
 }
