@@ -144,7 +144,10 @@ static GlossaryManagerWC *shared = nil;
 
 NSInteger projectDocumentSort(id doc1, id doc2, void *context)
 {
-	return [[doc1 fileName] caseInsensitiveCompare:[doc2 fileName]];
+    NSString *fileName1 = [doc1 fileURL].path;
+    NSString *fileName2 = [doc2 fileURL].path;
+    
+	return [fileName1 caseInsensitiveCompare:fileName2];
 }
 
 - (NSArray*)projectDocumentGlossaries

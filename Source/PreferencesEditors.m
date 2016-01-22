@@ -62,7 +62,8 @@ static PreferencesEditors* prefs = nil;
 
 - (id)init
 {
-	if(self = [super init]) {
+	if(self = [super init])
+    {
 		prefs = self;
 		mEditingEditor = nil;
 		[NSBundle loadNibNamed:@"PreferencesEditors" owner:self];

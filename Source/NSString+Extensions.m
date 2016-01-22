@@ -47,21 +47,15 @@
 
 - (BOOL)isPathAlias
 {
-	BOOL result = NO;
-	CFURLRef url = CFURLCreateWithFileSystemPath(NULL /*allocator*/, (CFStringRef)self, kCFURLPOSIXPathStyle, NO /*isDirectory*/);
-	FSRef fsRef;
-	if(url) {
-		if(CFURLGetFSRef(url, &fsRef)) {
-			Boolean isAlias = NO;
-			Boolean isFolder = NO;
-			OSErr err = FSIsAliasFile(&fsRef, &isAlias, &isFolder);
-			if(err == noErr) {
-				result = isAlias;
-			}
-		}
-		CFRelease(url);				
-	}
-	return result;
+    Boolean isAlias = NO;
+    
+    NSURL *theURL = [NSURL fileURLWithPath:self];
+    NSNumber *number = NULL;
+    
+    if ([theURL getResourceValue:&number forKey:NSURLIsAliasFileKey error:nil])
+        isAlias = [number boolValue];
+    
+    return isAlias;
 }
 
 - (BOOL)isPathFlat

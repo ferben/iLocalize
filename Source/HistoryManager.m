@@ -37,7 +37,7 @@
 {
     mProjectController = controller;
     
-    NSString *projectFile = [[[[mProjectController projectProvider] projectWC] document] fileName];
+    NSString *projectFile = [[[[mProjectController projectProvider] projectWC] document] fileURL].path;
     NSString *name = [NSString stringWithFormat:@"%@.history", [[projectFile lastPathComponent] stringByDeletingPathExtension]];
     mFile = [[projectFile stringByDeletingLastPathComponent] stringByAppendingPathComponent:name];    
 }

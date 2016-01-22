@@ -137,13 +137,19 @@
 
 - (void)checkIfGlossaryIsIndexed
 {
-    if(![[self document] fileName]) {
+    NSString *filename = [[self document] fileURL].path;
+    
+    if(!filename)
+    {
         return;
     }
     	
-	if([[GlossaryManager sharedInstance] isGlossaryFileIndexed:[[self document] fileName]]) {
+	if([[GlossaryManager sharedInstance] isGlossaryFileIndexed:filename])
+    {
 		[mTopRightWindowView removeFromSuperview];
-	} else {
+	}
+    else
+    {
 		// Establish the top-right corner view if the glossary is not indexed
 		NSView *themeFrame = [[self.window contentView] superview];
 		NSRect c = [themeFrame frame];  // c for "container"
@@ -228,7 +234,7 @@
 		[[weakSelf document] setFileURL:[NSURL fileURLWithPath:[weakSelf.indexedWC targetPath]]];
 		[weakSelf checkIfGlossaryIsIndexed];
 	};
-	[self.indexedWC setGlossaryPath:[[self document] fileName]];
+	[self.indexedWC setGlossaryPath:[[self document] fileURL].path];
 	[self.indexedWC showWithParent:[self window]];
 }
 
@@ -316,8 +322,9 @@
 	[self checkIfGlossaryIsIndexed];
 
 	// Revert the document if it changed
-	NSString *file = [[self document] fileName];
-	if([gn.modifiedFiles containsObject:file]) {
+	NSString *file = [[self document] fileURL].path;
+	if([gn.modifiedFiles containsObject:file])
+    {
 		NSError *err = nil;
 		if([self.document revertToContentsOfURL:[NSURL fileURLWithPath:file] ofType:[self.document fileType] error:&err]) {
 			[self reload];

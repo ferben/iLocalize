@@ -286,7 +286,8 @@
 
 - (void)deselectAll
 {
-	[mFilesController setSelectedObjects:nil];
+    NSIndexSet *emptySelection = [NSIndexSet indexSet];
+	[mFilesController setSelectionIndexes:emptySelection];
 }
 
 - (void)setNeedsDisplayToAllTableViews

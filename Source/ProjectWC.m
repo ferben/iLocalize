@@ -1040,7 +1040,8 @@
 	}
 	
 	NSArrayController *c = [self filesController];
-	[c setSelectedObjects:nil]; // make sure to trigger the selection...
+    NSIndexSet *emptySelection = [NSIndexSet indexSet];
+	[c setSelectionIndexes:emptySelection]; // make sure to trigger the selection...
 	[c setFilterPredicate:p];
 	if([[c content] count] > 0) {
 		[c setSelectionIndex:0]; // ... when we select the first object
