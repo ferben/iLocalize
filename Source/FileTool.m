@@ -374,44 +374,60 @@ while the real file is on the disk stored in legacy language.
 
 + (BOOL)isPathAnAlias:(NSString *)path
 {
-	FSRef fsRef;
+    Boolean isAlias = NO;
+
+    NSURL *theURL = [NSURL fileURLWithPath:path];
+    NSNumber *number = NULL;
     
-	if ([FileTool buildFSRef:&fsRef fromPath:path])
-    {
-		Boolean isAlias = NO;
-		Boolean isFolder = NO;
-        OSErr err = FSIsAliasFile(&fsRef, &isAlias, &isFolder);
-        // OSErr err = CFURLCopyResourcePropertyForKey (CFURLRef url, CFStringRef key, void *propertyValueTypeRefPtr, CFErrorRef *error);
-        
-        if (err != noErr)
-			return NO;
-		
-		return isAlias;
-	}
-    else
-		return NO;
+    if ([theURL getResourceValue:&number forKey:NSURLIsAliasFileKey error:nil])
+        isAlias = [number boolValue];
+    
+    return isAlias;
 }
 
 + (NSString*)resolvedPathOfAliasPath:(NSString*)alias
 {
-	FSRef fsRef;
-	if(![FileTool buildFSRef:&fsRef fromPath:alias])
-		return nil;
-	
-	NSString *resolvedPath = nil;
-	
-	Boolean targetIsFolder, wasAliased;
-	if (FSResolveAliasFile (&fsRef, true /*resolveAliasChains*/, 
-							&targetIsFolder, &wasAliased) == noErr && wasAliased)
-	{
-		CFURLRef resolvedUrl = CFURLCreateFromFSRef(NULL, &fsRef);
-		if(resolvedUrl != NULL)
-		{
-			resolvedPath = (NSString*)CFBridgingRelease(CFURLCopyFileSystemPath(resolvedUrl, kCFURLPOSIXPathStyle));
-			CFRelease(resolvedUrl);
-		}
-	}
-	return resolvedPath;
+    NSURL *url = nil;
+    
+    for(;;)
+    {
+        if ( alias == nil )
+            break;
+        
+        url = [[NSURL fileURLWithPath:alias] URLByResolvingSymlinksInPath];
+        
+        if( url == nil )
+            break;
+        
+        NSError * error = nil;
+        NSNumber * isAlias = nil;
+        if (![url getResourceValue:&isAlias forKey:NSURLIsAliasFileKey error:&error])
+            break;
+        
+        if([isAlias boolValue])
+        {
+            NSData * bookmark = [NSURL bookmarkDataWithContentsOfURL:url error:&error];
+            if (bookmark == nil)
+                break;
+            
+            BOOL isStale = NO;
+            NSURLBookmarkResolutionOptions options = NSURLBookmarkResolutionWithoutUI|NSURLBookmarkResolutionWithoutMounting;
+            
+            NSURL *resolvedURL = [NSURL URLByResolvingBookmarkData:bookmark options:options relativeToURL:nil bookmarkDataIsStale:&isStale error:&error];
+            
+            if (resolvedURL != nil)
+                url = resolvedURL;
+        }
+        
+        break;
+    }
+    
+    if (url)
+    {
+        return [url path];
+    }
+    
+    return NULL;
 }
 
 + (BOOL)createAliasOfFile:(NSString*)source toFile:(NSString*)target
