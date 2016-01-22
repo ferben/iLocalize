@@ -35,11 +35,13 @@
 {
 	NSAttributedString *as = [fileController modelContent];	
 	NSString *file = [fileController absoluteFilePath];
-		
+
+    NSDictionary *dict = [[NSDictionary alloc] init];
+    
 	if([file isPathRTF])
-		[[as RTFFromRange:NSMakeRange(0, [as length]) documentAttributes:nil] writeToFile:file atomically:NO];
+		[[as RTFFromRange:NSMakeRange(0, [as length]) documentAttributes:dict] writeToFile:file atomically:NO];
 	else if([file isPathRTFD])
-		[[as RTFDFileWrapperFromRange:NSMakeRange(0, [as length]) documentAttributes:nil] writeToFile:file atomically:NO updateFilenames:NO];
+		[[as RTFDFileWrapperFromRange:NSMakeRange(0, [as length]) documentAttributes:dict] writeToFile:file atomically:NO updateFilenames:NO];
 }
 
 @end
