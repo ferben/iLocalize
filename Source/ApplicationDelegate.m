@@ -254,12 +254,14 @@ static NSDictionary *customHelpMenuDic = nil;
             {
                 if ([path isPathExisting])
                 {
-                    NSError *error = nil;
+                    NSDocumentController *documentController = [NSDocumentController sharedDocumentController];
                     
-                    if (![[NSDocumentController sharedDocumentController] openDocumentWithContentsOfURL:[NSURL fileURLWithPath:path] display:YES error:&error] && error)
-                    {
-                        ERROR(@"Unable to open recent document %@: %@", path, error);
-                    }
+                    [documentController openDocumentWithContentsOfURL:[NSURL fileURLWithPath:path] display:YES completionHandler:
+                     ^(NSDocument *document, BOOL documentWasAlreadyOpen, NSError *error)
+                     {
+                         if (error)
+                             [documentController presentError:error];
+                     }];
                 }
             }
         }
