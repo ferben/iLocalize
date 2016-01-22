@@ -243,28 +243,31 @@ static NSDictionary *customHelpMenuDic = nil;
 
 - (void)openLastOpenedDocuments
 {
-    // remove duplicates if any
-    NSOrderedSet *documentPaths = [NSOrderedSet orderedSetWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"lastOpenedDocumentPaths"]];
-    
-    if (documentPaths.count > 0)
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"reopenLastProjects"])
     {
-        for (NSString *path in documentPaths)
+        // remove duplicates if any
+        NSOrderedSet *documentPaths = [NSOrderedSet orderedSetWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"lastOpenedDocumentPaths"]];
+        
+        if (documentPaths.count > 0)
         {
-            if ([path isPathExisting])
+            for (NSString *path in documentPaths)
             {
-                NSError *error = nil;
-                
-                if (![[NSDocumentController sharedDocumentController] openDocumentWithContentsOfURL:[NSURL fileURLWithPath:path] display:YES error:&error] && error)
+                if ([path isPathExisting])
                 {
-                    ERROR(@"Unable to open recent document %@: %@", path, error);
+                    NSError *error = nil;
+                    
+                    if (![[NSDocumentController sharedDocumentController] openDocumentWithContentsOfURL:[NSURL fileURLWithPath:path] display:YES error:&error] && error)
+                    {
+                        ERROR(@"Unable to open recent document %@: %@", path, error);
+                    }
                 }
             }
         }
+        else
+        {
+            [self performSelector:@selector(newProject:) withObject:self afterDelay:0];
+        }
     }
-    else
-    {
-        [self performSelector:@selector(newProject:) withObject:self afterDelay:0];
-	}
 }
 
 - (void)closeApplication

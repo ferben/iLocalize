@@ -3533,7 +3533,7 @@
 						TestTargetID = A751E15813045B19007635F2;
 					};
 					A751E15813045B19007635F2 = {
-						DevelopmentTeam = 6WH3C43QRG;
+						DevelopmentTeam = FAVZJT8J4U;
 					};
 				};
 			};
@@ -5010,6 +5010,7 @@
 		A751E36013045B19007635F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = iLocalize_Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -5017,6 +5018,7 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_BUNDLE_IDENTIFIER = "ch.arizona-software.iLocalize";
 				PRODUCT_NAME = iLocalize;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -5024,6 +5026,7 @@
 		A751E36113045B19007635F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = iLocalize_Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -5031,6 +5034,7 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_BUNDLE_IDENTIFIER = "ch.arizona-software.iLocalize";
 				PRODUCT_NAME = iLocalize;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

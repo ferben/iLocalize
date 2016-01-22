@@ -37,7 +37,9 @@ static id _shared = nil;
 	dic[@"autoSaveProjectDelay"] = @10;		
 	
 	dic[@"recentDocumentsOnlyProject"] = @YES;
-    
+
+    dic[@"reopenLastProjects"] = @NO;
+
 	// Localization
     dic[@"behaviorMode"] = @0;		
 	dic[@"translateIgnoreControlCharacters"] = @NO;		
