@@ -63,9 +63,10 @@
     BOOL success = NO;
     @try {
         NSError *error = nil;
+        NSDictionary *dict = [[NSDictionary alloc] init];
         NSRunningApplication *ra = [[NSWorkspace sharedWorkspace] launchApplicationAtURL:[NSURL fileURLWithPath:app]
                                                                                  options:NSWorkspaceLaunchWithoutAddingToRecents|NSWorkspaceLaunchNewInstance
-                                                                           configuration:nil
+                                                                           configuration:dict
                                                                                    error:&error];
         if (nil == ra) {
             NSLog(@"Failed to launch the application: %@", [error localizedDescription]);
