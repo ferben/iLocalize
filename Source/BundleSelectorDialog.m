@@ -56,8 +56,10 @@
     }];
 }
 
-- (BOOL)panel:(id)sender shouldShowFilename:(NSString *)filename
+- (BOOL)panel:(id)sender shouldEnableURL:(nonnull NSURL *)url
 {
+    NSString *filename = url.path;
+    
 	return [filename isPathPackage] || [filename isPathDirectory];
 }
 
