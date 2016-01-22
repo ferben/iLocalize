@@ -81,10 +81,13 @@
 	}
 	
     int index = [mMergeDestPopUp indexOfSelectedItem];
-    if(index == 0) {
-        // New glossary
+
+    if (index == 0)
+    {
+        NSError *outError = nil;
         
-        GlossaryDocument *document = [[NSDocumentController sharedDocumentController] makeUntitledDocumentOfType:@"TMX Glossary"];
+        // New glossary
+        GlossaryDocument *document = [[NSDocumentController sharedDocumentController] makeUntitledDocumentOfType:@"TMX Glossary" error:&outError];
         [[NSDocumentController sharedDocumentController] addDocument:document];
         
 		[document setGlossary:mergedGlossary];
@@ -93,12 +96,16 @@
         
         GlossaryWC *glossary = [document glossaryWC];
         [[glossary window] makeKeyAndOrderFront:self];            
-    } else {
+    }
+    else
+    {
         Glossary *g = [[mMergeDestPopUp selectedItem] representedObject];
 		[g removeAllEntries];
 		[g addEntries:mergedGlossary.entries];
 		NSError *error = nil;
-		if(![g writeToFile:&error]) {
+        
+		if (![g writeToFile:&error])
+        {
 			NSAlert *alert = [NSAlert alertWithError:error];
 			[alert beginSheetModalForWindow:[self window] modalDelegate:self didEndSelector:nil contextInfo:nil];
 		}
