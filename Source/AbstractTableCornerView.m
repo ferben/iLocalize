@@ -22,7 +22,15 @@
 	if (self = [super initWithFrame:r])
     {
         NSBundle *bundle = [NSBundle bundleForClass:[self class]];
-        [bundle loadNibNamed:[self viewNibName] owner:self topLevelObjects:nil];
+
+        if (![bundle loadNibNamed:[self viewNibName] owner:self topLevelObjects:nil])
+        {
+            // throw exception
+            @throw [NSException exceptionWithName:@"View initialization failed"
+                                           reason:@"AbstractTableCornerView: Could not load resources!"
+                                         userInfo:nil];
+        }
+
 		mMainWindowController = controller;
 	}
 

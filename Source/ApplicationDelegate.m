@@ -84,8 +84,15 @@
 	mSymbolWindowController = [[NSWindowController alloc] init];
     
     NSBundle *bundle = [NSBundle bundleForClass:[self class]];
-    [bundle loadNibNamed:@"Symbols" owner:mSymbolWindowController topLevelObjects:nil];
-	
+
+    if (![bundle loadNibNamed:@"Symbols" owner:mSymbolWindowController topLevelObjects:nil])
+    {
+        // throw exception
+        @throw [NSException exceptionWithName:@"View initialization failed"
+                                       reason:@"Symbols: Could not load resources!"
+                                     userInfo:nil];
+    }
+    	
 	[[RecentDocuments createInstanceForDocumentExtensions:@[@"ilocalize"] identifier:@"projects"] setMenu:mOpenRecentProjectMenu];
 	[[RecentDocuments createInstanceForDocumentExtensions:[[SEIManager sharedInstance] allImportableExtensions] identifier:@"glossaries"] setMenu:mOpenRecentGlossaryMenu];
 	

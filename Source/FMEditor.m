@@ -28,7 +28,8 @@
 
 - (id)init
 {
-	if((self = [super init])) {
+	if ((self = [super init]))
+    {
 		mEngine = NULL;
 		
 		mWindow = NULL;
@@ -42,10 +43,18 @@
 												   object:nil];
 		
         NSBundle *bundle = [NSBundle bundleForClass:[self class]];
-        [bundle loadNibNamed:[self nibname] owner:self topLevelObjects:nil];
 
+        if (![bundle loadNibNamed:[self nibname] owner:self topLevelObjects:nil])
+        {
+            // throw exception
+            @throw [NSException exceptionWithName:@"View initialization failed"
+                                           reason:@"FMEditor: Could not load resources!"
+                                         userInfo:nil];
+        }
+        
         [self registerToPreferences];
 	}
+    
 	return self;
 }
 

@@ -30,7 +30,14 @@ static id _shared = nil;
 	if ((self = [super init]))
     {
         NSBundle *bundle = [NSBundle bundleForClass:[self class]];
-        [bundle loadNibNamed:@"PreferencesLocalization" owner:self topLevelObjects:nil];
+        
+        if (![bundle loadNibNamed:@"PreferencesLocalization" owner:self topLevelObjects:nil])
+        {
+            // throw exception
+            @throw [NSException exceptionWithName:@"View initialization failed"
+                                           reason:@"PreferencesLocalization: Could not load resources!"
+                                         userInfo:nil];
+        }
 	}
 
     return self;

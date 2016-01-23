@@ -12,26 +12,29 @@
 
 @implementation PreferencesEditors
 
-static PreferencesEditors* prefs = nil;
+static PreferencesEditors *prefs = nil;
 
 + (id)shared
 {
-    @synchronized(self) {
-        if(prefs == nil)
-            prefs = [[PreferencesEditors alloc] init];        
+    @synchronized(self)
+    {
+        if (prefs == nil)
+            prefs = [[PreferencesEditors alloc] init];
     }
+    
 	return prefs;
 }
 
-+ (NSMutableDictionary*)editor:(NSString*)editor extension:(NSString*)extension
++ (NSMutableDictionary *)editor:(NSString *)editor extension:(NSString *)extension
 {
 	NSMutableDictionary *dic = [NSMutableDictionary dictionary];
 	dic[@"editor"] = editor;
 	dic[@"extension"] = extension;
+    
 	return dic;
 }
 
-+ (NSMutableArray*)defaultEditors
++ (NSMutableArray *)defaultEditors
 {
 	NSMutableArray *editors = [NSMutableArray array];
 	
@@ -62,12 +65,23 @@ static PreferencesEditors* prefs = nil;
 
 - (id)init
 {
-	if(self = [super init])
+	if (self = [super init])
     {
 		prefs = self;
 		mEditingEditor = nil;
-		[NSBundle loadNibNamed:@"PreferencesEditors" owner:self];
+        
+        NSBundle *myBundle = [NSBundle bundleForClass:[self class]];
+        
+        // load my resources
+        if (![myBundle loadNibNamed:@"PreferencesEditors" owner:self topLevelObjects:nil])
+        {
+            // throw exception
+            @throw [NSException exceptionWithName:@"View initialization failed"
+                                           reason:@"PreferencesEditors: Could not load resources!"
+                                         userInfo:nil];
+        }
 	}
+    
 	return self;
 }
 

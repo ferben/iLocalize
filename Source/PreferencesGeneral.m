@@ -32,8 +32,20 @@ static id _shared = nil;
 {
 	if (self = [super init])
     {
+        // 2016-01-23 fd: There is no PreferencesGeneral.xib any longer.
+        // We're using PreferencesLocalization.xib instead.
+        
+        /* 
         NSBundle *bundle = [NSBundle bundleForClass:[self class]];
-        [bundle loadNibNamed:@"PreferencesGeneral" owner:self topLevelObjects:nil];
+        
+        if (![bundle loadNibNamed:@"PreferencesGeneral" owner:self topLevelObjects:nil])
+        {
+            // throw exception
+            @throw [NSException exceptionWithName:@"View initialization failed"
+                                           reason:@"PreferencesGeneral: Could not load resources!"
+                                         userInfo:nil];
+        }
+        */
 	}
 
     return self;

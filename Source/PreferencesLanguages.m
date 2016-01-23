@@ -111,7 +111,14 @@ static id _shared = nil;
 	if (self = [super init])
     {
         NSBundle *bundle = [NSBundle bundleForClass:[self class]];
-        [bundle loadNibNamed:@"PreferencesLanguages" owner:self topLevelObjects:nil];
+        
+        if (![bundle loadNibNamed:@"PreferencesLanguages" owner:self topLevelObjects:nil])
+        {
+            // throw exception
+            @throw [NSException exceptionWithName:@"View initialization failed"
+                                           reason:@"PreferencesLanguages: Could not load resources!"
+                                         userInfo:nil];
+        }
 		
 		mLanguagesCache = nil;
         

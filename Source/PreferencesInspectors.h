@@ -8,7 +8,8 @@
 
 #import "PreferencesObject.h"
 
-@interface PreferencesInspectors : PreferencesObject {
+@interface PreferencesInspectors : PreferencesObject
+{
 
 }
 

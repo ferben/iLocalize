@@ -10,7 +10,8 @@
 
 @class FMModule;
 
-@interface PreferencesEditors : PreferencesObject {
+@interface PreferencesEditors : PreferencesObject
+{
 	IBOutlet NSTableView		*mEditorsTableView;
 	IBOutlet NSArrayController	*mEditorsController;
     
@@ -27,12 +28,12 @@
 
 + (id)shared;
 
-- (void)loadData:(NSDictionary*)data;
-- (NSDictionary*)data;
+- (void)loadData:(NSDictionary *)data;
+- (NSDictionary  *)data;
 
-- (NSString*)editorForExtension:(NSString*)extension;
+- (NSString *)editorForExtension:(NSString*)extension;
 
-- (FMModule*)moduleForExtension:(NSString*)extension;
+- (FMModule *)moduleForExtension:(NSString*)extension;
 
 - (IBAction)addExternalEditor:(id)sender;
 - (IBAction)addInternalEditor:(id)sender;

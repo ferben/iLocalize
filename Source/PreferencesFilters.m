@@ -79,7 +79,14 @@ static PreferencesFilters* prefs = nil;
 		prefs = self;
 
         NSBundle *bundle = [NSBundle bundleForClass:[self class]];
-        [bundle loadNibNamed:@"PreferencesFilters" owner:self topLevelObjects:nil];
+
+        if (![bundle loadNibNamed:@"PreferencesFilters" owner:self topLevelObjects:nil])
+        {
+            // throw exception
+            @throw [NSException exceptionWithName:@"View initialization failed"
+                                           reason:@"PreferencesFilters: Could not load resources!"
+                                         userInfo:nil];
+        }
 
 		mCachedRegexArray = [[NSMutableArray alloc] init];
 		mUpdateRegexCache = YES;

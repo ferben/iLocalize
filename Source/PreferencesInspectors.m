@@ -40,9 +40,13 @@ static id _shared = nil;
 
 - (id)init
 {
-	if(self = [super init]) {
-		[NSBundle loadNibNamed:@"PreferencesInspectors" owner:self];
+	if (self = [super init])
+    {
+        // 2016-01-23 fd: There is no PreferencesInspectors.xib at all?!?
+        
+        // [NSBundle loadNibNamed:@"PreferencesInspectors" owner:self];
 	}
+    
 	return self;
 }
 

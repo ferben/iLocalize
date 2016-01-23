@@ -27,7 +27,14 @@ static id _shared = nil;
 	if (self = [super init])
     {
         NSBundle *bundle = [NSBundle bundleForClass:[self class]];
-        [bundle loadNibNamed:@"PreferencesAdvanced" owner:self topLevelObjects:nil];
+        
+        if (![bundle loadNibNamed:@"PreferencesAdvanced" owner:self topLevelObjects:nil])
+        {
+            // throw exception
+            @throw [NSException exceptionWithName:@"View initialization failed"
+                                           reason:@"PreferencesAdvanced: Could not load resources!"
+                                         userInfo:nil];
+        }
 	}
 
     return self;
