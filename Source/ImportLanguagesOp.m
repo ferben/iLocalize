@@ -33,25 +33,33 @@
 
 #pragma mark Update Engine
 
-- (void)updateFileController:(FileController*)fileController layout:(BOOL)layout usingFile:(NSString*)file resolveConflict:(BOOL)resolveConflict
+- (void)updateFileController:(FileController *)fileController layout:(BOOL)layout usingFile:(NSString *)file resolveConflict:(BOOL)resolveConflict
 {	
-	if([fileController ignore]) return;
+	if ([fileController ignore])
+        return;
 	
 	file = [FileTool resolveEquivalentFile:file];
 	
 	// FIX IL-196: ignore non-existing file in source
-	if(![file isPathExisting]) {
-		[[self console] addLog:[NSString stringWithFormat:@"Skip updating file \"%@\" because \"%@\" does not exist.", [fileController relativeFilePath], file] 
+	if (![file isPathExisting])
+    {
+		[[self console] addLog:[NSString stringWithFormat:@"Skip updating file \"%@\" because \"%@\" does not exist.",
+                                [fileController relativeFilePath], file]
                          class:[self class]];
 		return;
 	}
 	
-	[[self console] beginOperation:[NSString stringWithFormat:@"Update file \"%@\" using \"%@\"", [fileController relativeFilePath], file] class:[self class]];		
+	[[self console] beginOperation:[NSString stringWithFormat:@"Update file \"%@\" using \"%@\"",
+                                    [fileController relativeFilePath], file]
+                             class:[self class]];
 	
 	FMEngine *engine = [self.projectProvider fileModuleEngineForFile:file];
-	if([engine supportsContentTranslation]) {
+    
+	if ([engine supportsContentTranslation])
+    {
 		// FIX CASE 40 - if the localized file does not exist, copy the one from the base language so the update will work completely
-		if(![fileController isBaseFileController] && ![[fileController absoluteFilePath] isPathExisting]) {
+		if (![fileController isBaseFileController] && ![[fileController absoluteFilePath] isPathExisting])
+        {
 			[[FileTool shared] copySourceFile:[fileController absoluteBaseFilePath]
 								toReplaceFile:[fileController absoluteFilePath]
 									  console:[self console]];				
@@ -59,7 +67,8 @@
 		
 		[[self.projectProvider fileModuleEngineForFile:file] reloadFileController:fileController usingFile:file];
 		
-		if(layout && [file isPathNib]) {
+		if (layout && [file isPathNib])
+        {
 			// Used when updating a nib file. We have also to update the layout (i.e. the translator has updated the same version layout
 			// and the programmer wants to update its project to the latest modification of the translator)
 			
@@ -73,12 +82,18 @@
 		
 		// Synchronize back to disk (should never be used but leave it here in case of)
 		[[[self engineProvider] synchronizeEngine] synchronizeToDiskIfNeeded:fileController];
-	} else if(resolveConflict) {
-		if([ImportFilesConflict resolveConflictBetweenProjectFile:[fileController absoluteFilePath] andImportedFile:file provider:[self projectProvider]] == RESOLVE_USE_IMPORTED_FILE) {		
+	}
+    else if (resolveConflict)
+    {
+		if ([ImportFilesConflict resolveConflictBetweenProjectFile:[fileController absoluteFilePath]
+                                                   andImportedFile:file
+                                                          provider:[self projectProvider]] == RESOLVE_USE_IMPORTED_FILE)
+        {
 			[[FileTool shared] copySourceFile:file
 								toReplaceFile:[fileController absoluteFilePath]
 									  console:[self console]];	
-			[fileController setModificationDate:[[fileController absoluteFilePath] pathModificationDate]];
+		
+            [fileController setModificationDate:[[fileController absoluteFilePath] pathModificationDate]];
 			[[self.projectProvider fileModuleEngineForFile:file] reloadFileController:fileController usingFile:[fileController absoluteFilePath]];
 		}
 	}
