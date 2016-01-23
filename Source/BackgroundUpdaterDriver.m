@@ -11,28 +11,35 @@
 
 @implementation BackgroundUpdaterDriver
 
-enum {
+enum
+{
     STATE_BACKGROUND_OP,
 };
 
 - (id)operationForState:(int)state
 {
 	id op = nil;
-	switch (state) {
-		case STATE_BACKGROUND_OP: {
+    
+	switch (state)
+    {
+		case STATE_BACKGROUND_OP:
+        {
 			BackgroundUpdaterOperation *operation = [BackgroundUpdaterOperation operation];
             operation.fcs = [self arguments][@"fcs"];
 			op = operation;
 			break;
 		}
 	}
+    
 	return op;
 }
 
 - (int)previousState:(int)state
 {
 	int previousState = STATE_ERROR;
-	switch (state) {
+    
+	switch (state)
+    {
 		case STATE_INITIAL:
 			previousState = STATE_END;
 			break;
@@ -41,13 +48,16 @@ enum {
 			previousState = STATE_END;
 			break;
 	}
+    
 	return previousState;
 }
 
 - (int)nextState:(int)state
 {
 	int nextState = STATE_ERROR;
-	switch (state) {
+    
+	switch (state)
+    {
 		case STATE_INITIAL:
             nextState = STATE_BACKGROUND_OP;
 			break;
@@ -56,6 +66,7 @@ enum {
 			nextState = STATE_END;
 			break;
 	}
+    
 	return nextState;
 }
 

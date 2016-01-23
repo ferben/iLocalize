@@ -36,18 +36,21 @@
 
 static BackgroundUpdater *_shared = nil;
 
-+ (BackgroundUpdater*)shared
++ (BackgroundUpdater *)shared
 {
-    @synchronized(self) {
-        if(_shared == nil)
+    @synchronized(self)
+    {
+        if (_shared == nil)
             _shared = [[BackgroundUpdater alloc] init];        
     }
+    
 	return _shared;
 }
 
 - (id)init
 {
-	if(self = [super init]) {
+	if (self = [super init])
+    {
 		mLock = [[NSLock alloc] init];
 		mSafeStatus = [[SafeStatus alloc] init];
 		[mSafeStatus setStatus:STOPPED];
@@ -57,6 +60,7 @@ static BackgroundUpdater *_shared = nil;
 													 name:ILNotificationProjectProviderWillClose
 												   object:nil];		
 	}
+    
 	return self;
 }
 
@@ -74,13 +78,18 @@ static BackgroundUpdater *_shared = nil;
 {
     NSMutableArray *fcToUpdate = [NSMutableArray array];
     
-	for(LanguageController *languageController in [[projectProvider projectController] languageControllers]) {
-		if([mSafeStatus status] == STOP) break;
+	for (LanguageController *languageController in [[projectProvider projectController] languageControllers])
+    {
+		if ([mSafeStatus status] == STOP)
+            break;
 		
-		for(FileController *fileController in [languageController fileControllers]) {
-			if([mSafeStatus status] == STOP) break;
+		for (FileController *fileController in [languageController fileControllers])
+        {
+			if ([mSafeStatus status] == STOP)
+                break;
 			
-            if ([fileController needsToUpdateStatus]) {
+            if ([fileController needsToUpdateStatus])
+            {
                 [fcToUpdate addObject:fileController];
             }
 		}
@@ -99,13 +108,16 @@ static BackgroundUpdater *_shared = nil;
 
 - (void)updateAllProjects
 {
-	for(NSWindow *window in [NSApp windows]) {
+	for (NSWindow *window in [NSApp windows])
+    {
 		id controller = [window windowController];
-		if([controller isKindOfClass:[ProjectWC class]]) {
+        
+		if ([controller isKindOfClass:[ProjectWC class]])
+        {
 			[self performUpdateWithProjectProvider:[controller projectDocument]];
 		}
 		
-		if([mSafeStatus status] == STOP)
+		if ([mSafeStatus status] == STOP)
 			break;
 	}	
 }
@@ -120,21 +132,24 @@ static BackgroundUpdater *_shared = nil;
 - (void)performUpdate
 {	
 	// Do not execute the background more than one at a time
-	if(![mLock tryLock])
+	if (![mLock tryLock])
 		return;
 			
-	@try {
+	@try
+    {
 		[mSafeStatus waitForStatus:STOPPED];
 		[mSafeStatus setStatus:RUNNING];
 
 		[self updateAllProjects];
 		[self updateGlossaryPaths];
 	}
-	@catch(id exception) {
+	@catch(id exception)
+    {
 		[exception printStackTrace];
 		NSLog(@"[BackgroundUpdater] Exception while performing background update: %@", exception);		
 	}
-	@finally {
+	@finally
+    {
 		[mSafeStatus setStatus:STOPPED];
 		[mLock unlock];		
 	}
@@ -157,8 +172,10 @@ static BackgroundUpdater *_shared = nil;
 
 - (void)stopAndWaitForCompletion
 {
-	if([mSafeStatus setStatus:STOP ifStatusEquals:RUNNING]) {
-		while([mSafeStatus status] != STOPPED) {
+	if ([mSafeStatus setStatus:STOP ifStatusEquals:RUNNING])
+    {
+		while ([mSafeStatus status] != STOPPED)
+        {
 			[[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.01]];
 		}
 	}
