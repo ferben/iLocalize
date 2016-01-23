@@ -86,11 +86,13 @@ static BackgroundUpdater *_shared = nil;
 		}
 	}
 
-    if (fcToUpdate.count > 0) {
+    if (fcToUpdate.count > 0)
+    {
         NSLog(@"[BackgroundUpdater] Going to update %ld files", fcToUpdate.count);
         
-        dispatch_sync(dispatch_get_main_queue(), ^{
-            [[BackgroundUpdaterDriver driverWithProjectProvider:projectProvider] executeWithArguments:@{@"fcs": fcToUpdate}];
+        dispatch_async(dispatch_get_main_queue(), ^
+        {
+            [[BackgroundUpdaterDriver driverWithProjectProvider:projectProvider] executeWithArguments:@{@"fcs":fcToUpdate}];
         });        
     }
 }

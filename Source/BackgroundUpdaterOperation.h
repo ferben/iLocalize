@@ -8,7 +8,8 @@
 
 #import "Operation.h"
 
-@interface BackgroundUpdaterOperation : Operation {
+@interface BackgroundUpdaterOperation : Operation
+{
     NSArray *fcs;
 }
 

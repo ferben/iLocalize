@@ -9,12 +9,13 @@
 @class ProjectController;
 @class SafeStatus;
 
-@interface BackgroundUpdater : NSObject {
+@interface BackgroundUpdater : NSObject
+{
 	NSLock		*mLock;
 	SafeStatus	*mSafeStatus;
 }
 
-+ (BackgroundUpdater*)shared;
++ (BackgroundUpdater *)shared;
 
 - (void)performUpdate;
 - (BOOL)tryLockFor:(NSTimeInterval)seconds;

@@ -17,27 +17,34 @@
 
 @synthesize fcs;
 
-- (BOOL)cancellable {
+- (BOOL)cancellable
+{
     return NO;
 }
 
-- (void)execute {
+- (void)execute
+{
     [self setOperationName:NSLocalizedString(@"Updating Files…", nil)];
     [self setProgressMax:self.fcs.count];
     
-    dispatch_sync(dispatch_get_main_queue(), ^{
+    dispatch_async(dispatch_get_main_queue(),^
+    {
         BOOL manualSynchFromDisk = NO;
         [[self.projectProvider projectController] beginOperation];
 
-        for (FileController *fc in self.fcs) {
+        for (FileController *fc in self.fcs)
+        {
             [fc beginDirty];
             [fc updateStatus];
-            if([fc statusSynchFromDisk]) {
-                if([[PreferencesGeneral shared] automaticallyReloadFiles])
+            
+            if ([fc statusSynchFromDisk])
+            {
+                if ([[PreferencesGeneral shared] automaticallyReloadFiles])
                     [[[self.projectProvider engineProvider] synchronizeEngine] synchronizeFromDiskIfNeeded:fc];
                 else
                     manualSynchFromDisk = YES;
             }
+            
             [fc endDirty];
             
             [self progressIncrement];
@@ -45,7 +52,7 @@
         
         [[self.projectProvider projectController] endOperation];
         
-        if(manualSynchFromDisk)
+        if (manualSynchFromDisk)
             [[SaveAllOperation operationWithProjectProvider:self.projectProvider] reloadFiles];
         else
             [self.projectProvider rearrangeFilesController];
