@@ -32,7 +32,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" id="15">
-                                    <rect key="frame" x="0.0" y="0.0" width="572" height="19"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="572" height="173"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -52,7 +52,7 @@
                                                 <binding destination="21" name="value" keyPath="arrangedObjects.selected" id="28"/>
                                             </connections>
                                         </tableColumn>
-                                        <tableColumn editable="NO" width="526" minWidth="40" maxWidth="1000" id="18">
+                                        <tableColumn editable="NO" width="524.5" minWidth="40" maxWidth="1000" id="18">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
