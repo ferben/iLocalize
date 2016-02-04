@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="OperationWC">
@@ -38,7 +38,7 @@
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="10">
                         <rect key="frame" x="261" y="13" width="110" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="98" id="CUM-Wj-LPz"/>
+                            <constraint firstAttribute="width" constant="98" id="WEO-qM-M70"/>
                         </constraints>
                         <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="30">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -50,14 +50,14 @@
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="8" secondAttribute="trailing" constant="20" symbolic="YES" id="14A-Ta-nrc"/>
-                    <constraint firstItem="8" firstAttribute="trailing" secondItem="7" secondAttribute="trailing" id="Jt7-lX-Od2"/>
-                    <constraint firstItem="8" firstAttribute="top" secondItem="6" secondAttribute="top" constant="20" symbolic="YES" id="PHL-iZ-YUc"/>
-                    <constraint firstItem="8" firstAttribute="leading" secondItem="7" secondAttribute="leading" id="c9q-Se-KlO"/>
-                    <constraint firstItem="7" firstAttribute="top" secondItem="8" secondAttribute="bottom" constant="8" symbolic="YES" id="i3o-nf-IMX"/>
-                    <constraint firstItem="8" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="20" symbolic="YES" id="o3b-0w-Wye"/>
-                    <constraint firstItem="10" firstAttribute="top" secondItem="7" secondAttribute="bottom" constant="20" symbolic="YES" id="sQs-gj-I6i"/>
-                    <constraint firstItem="10" firstAttribute="centerX" secondItem="7" secondAttribute="centerX" id="zHJ-sX-WF5"/>
+                    <constraint firstItem="8" firstAttribute="top" secondItem="6" secondAttribute="top" constant="20" symbolic="YES" id="4c4-n6-sjh"/>
+                    <constraint firstItem="10" firstAttribute="centerX" secondItem="7" secondAttribute="centerX" id="NQO-uI-6Kn"/>
+                    <constraint firstItem="7" firstAttribute="trailing" secondItem="8" secondAttribute="trailing" id="T6C-4E-VLu"/>
+                    <constraint firstItem="8" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="20" symbolic="YES" id="YjY-4W-fpd"/>
+                    <constraint firstItem="7" firstAttribute="top" secondItem="8" secondAttribute="bottom" constant="8" symbolic="YES" id="Yon-Uy-QfI"/>
+                    <constraint firstAttribute="trailing" secondItem="8" secondAttribute="trailing" constant="20" symbolic="YES" id="gw0-lI-POj"/>
+                    <constraint firstItem="8" firstAttribute="leading" secondItem="7" secondAttribute="leading" id="lpN-xG-BZ2"/>
+                    <constraint firstItem="10" firstAttribute="top" secondItem="7" secondAttribute="bottom" constant="20" symbolic="YES" id="rt2-sc-pSU"/>
                 </constraints>
             </view>
             <point key="canvasLocation" x="565.5" y="654"/>

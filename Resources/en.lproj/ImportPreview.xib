@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="ImportPreviewOVC">
@@ -28,7 +28,7 @@
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="45">
                     <rect key="frame" x="709" y="453" width="120" height="32"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="108" id="xwo-Gr-jby"/>
+                        <constraint firstAttribute="width" constant="108" id="JIh-pS-wVz"/>
                     </constraints>
                     <buttonCell key="cell" type="push" title="Export…" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="114">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -92,15 +92,15 @@
                 </scrollView>
             </subviews>
             <constraints>
-                <constraint firstItem="45" firstAttribute="leading" secondItem="18" secondAttribute="trailing" constant="8" symbolic="YES" id="0CJ-Fi-geC"/>
-                <constraint firstItem="18" firstAttribute="leading" secondItem="127" secondAttribute="leading" constant="20" symbolic="YES" id="8qq-zQ-kPk"/>
-                <constraint firstItem="130" firstAttribute="top" secondItem="18" secondAttribute="bottom" constant="8" symbolic="YES" id="Suw-kc-dr2"/>
-                <constraint firstItem="45" firstAttribute="baseline" secondItem="18" secondAttribute="baseline" id="aAT-tS-tHS"/>
-                <constraint firstAttribute="bottom" secondItem="130" secondAttribute="bottom" constant="22" id="crv-sz-IGZ"/>
-                <constraint firstItem="130" firstAttribute="trailing" secondItem="45" secondAttribute="trailing" id="kPB-oO-fdi"/>
-                <constraint firstItem="130" firstAttribute="leading" secondItem="18" secondAttribute="leading" id="rEg-z5-hCt"/>
-                <constraint firstAttribute="trailing" secondItem="45" secondAttribute="trailing" constant="20" symbolic="YES" id="tIV-wG-1wL"/>
-                <constraint firstItem="45" firstAttribute="top" secondItem="127" secondAttribute="top" constant="20" symbolic="YES" id="txA-Jx-Ghm"/>
+                <constraint firstAttribute="trailing" secondItem="45" secondAttribute="trailing" constant="20" symbolic="YES" id="61u-hH-Zzn"/>
+                <constraint firstItem="45" firstAttribute="leading" secondItem="18" secondAttribute="trailing" constant="8" symbolic="YES" id="DTa-47-9Fn"/>
+                <constraint firstItem="18" firstAttribute="leading" secondItem="127" secondAttribute="leading" constant="20" symbolic="YES" id="Lqy-Yi-7SS"/>
+                <constraint firstItem="45" firstAttribute="baseline" secondItem="18" secondAttribute="baseline" id="Vo0-90-jpQ"/>
+                <constraint firstItem="130" firstAttribute="leading" secondItem="18" secondAttribute="leading" id="bQp-Xd-VGa"/>
+                <constraint firstItem="45" firstAttribute="trailing" secondItem="130" secondAttribute="trailing" id="ieq-QZ-YnO"/>
+                <constraint firstItem="130" firstAttribute="top" secondItem="18" secondAttribute="bottom" constant="8" symbolic="YES" id="lXJ-ch-XG6"/>
+                <constraint firstAttribute="bottom" secondItem="130" secondAttribute="bottom" constant="22" id="pRS-BA-M9P"/>
+                <constraint firstItem="45" firstAttribute="top" secondItem="127" secondAttribute="top" constant="20" symbolic="YES" id="xbm-je-Zop"/>
             </constraints>
             <point key="canvasLocation" x="565.5" y="662.5"/>
         </customView>

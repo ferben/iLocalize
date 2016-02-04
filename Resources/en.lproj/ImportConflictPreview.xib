@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="ImportLocalizedResolveConflictsOVC">
@@ -137,8 +138,8 @@ Choose the merging direction for each of them:</string>
                 <button toolTip="This will select to use the Source file for all files in the list below" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="81">
                     <rect key="frame" x="652" y="323" width="71" height="16"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="71" id="G9j-kd-lZy"/>
-                        <constraint firstAttribute="height" constant="14" id="h9o-a7-vSL"/>
+                        <constraint firstAttribute="height" constant="14" id="455-Om-WbE"/>
+                        <constraint firstAttribute="width" constant="71" id="P7U-1C-LXq"/>
                     </constraints>
                     <buttonCell key="cell" type="smallSquare" title="All Source" bezelStyle="smallSquare" alignment="center" controlSize="mini" borderStyle="border" inset="2" id="107">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -151,7 +152,7 @@ Choose the merging direction for each of them:</string>
                 <button toolTip="This will select to use the Project file for all files in the list below" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="82">
                     <rect key="frame" x="730" y="323" width="71" height="16"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="71" id="8UI-Hw-UPZ"/>
+                        <constraint firstAttribute="width" constant="71" id="OGa-Qr-qe0"/>
                     </constraints>
                     <buttonCell key="cell" type="smallSquare" title="All Project" bezelStyle="smallSquare" alignment="center" controlSize="mini" borderStyle="border" inset="2" id="108">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -164,7 +165,7 @@ Choose the merging direction for each of them:</string>
                 <pathControl focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="115">
                     <rect key="frame" x="474" y="48" width="346" height="20"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="346" id="TCd-AM-BT7"/>
+                        <constraint firstAttribute="width" constant="346" id="R7l-Hr-ZGc"/>
                     </constraints>
                     <pathCell key="cell" controlSize="small" selectable="YES" focusRingType="none" alignment="left" id="116">
                         <font key="font" metaFont="smallSystem"/>
@@ -265,7 +266,7 @@ Choose the merging direction for each of them:</string>
                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="125">
                     <rect key="frame" x="282" y="83" width="190" height="14"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="186" id="Igf-xq-eQG"/>
+                        <constraint firstAttribute="width" constant="186" id="lNI-cD-fib"/>
                     </constraints>
                     <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Modified" id="126">
                         <font key="font" metaFont="smallSystem"/>
@@ -275,49 +276,49 @@ Choose the merging direction for each of them:</string>
                 </textField>
             </subviews>
             <constraints>
-                <constraint firstItem="38" firstAttribute="baseline" secondItem="34" secondAttribute="baseline" id="1Y5-LM-mC1"/>
-                <constraint firstItem="125" firstAttribute="leading" secondItem="29" secondAttribute="leading" id="22r-1h-qVV"/>
-                <constraint firstItem="81" firstAttribute="baseline" secondItem="82" secondAttribute="baseline" id="2dj-hg-5HF"/>
-                <constraint firstItem="29" firstAttribute="trailing" secondItem="34" secondAttribute="trailing" id="2fS-EX-t4D"/>
-                <constraint firstItem="117" firstAttribute="top" secondItem="115" secondAttribute="bottom" constant="8" symbolic="YES" id="3RJ-Tv-s8o"/>
-                <constraint firstItem="38" firstAttribute="leading" secondItem="121" secondAttribute="trailing" constant="8" symbolic="YES" id="7c5-eM-BHM"/>
-                <constraint firstItem="125" firstAttribute="trailing" secondItem="29" secondAttribute="trailing" id="9UA-9M-loG"/>
-                <constraint firstItem="117" firstAttribute="baseline" secondItem="34" secondAttribute="baseline" id="9yH-X7-EFT"/>
-                <constraint firstItem="28" firstAttribute="baseline" secondItem="119" secondAttribute="baseline" id="DAV-IL-SSi"/>
-                <constraint firstAttribute="trailing" secondItem="17" secondAttribute="trailing" constant="20" symbolic="YES" id="FBu-Im-aJN"/>
-                <constraint firstItem="29" firstAttribute="leading" secondItem="28" secondAttribute="trailing" constant="8" symbolic="YES" id="FI6-ug-TZm"/>
-                <constraint firstItem="115" firstAttribute="leading" secondItem="117" secondAttribute="leading" id="FdO-1H-78f"/>
-                <constraint firstAttribute="trailing" secondItem="82" secondAttribute="trailing" constant="39" id="Ge1-ZF-R6o"/>
-                <constraint firstItem="119" firstAttribute="leading" secondItem="113" secondAttribute="leading" constant="20" symbolic="YES" id="KKr-SX-0Ni"/>
-                <constraint firstItem="129" firstAttribute="trailing" secondItem="115" secondAttribute="trailing" id="NF2-M9-jLb"/>
-                <constraint firstItem="125" firstAttribute="baseline" secondItem="123" secondAttribute="baseline" id="Ow6-B4-cIF"/>
-                <constraint firstItem="121" firstAttribute="centerX" secondItem="119" secondAttribute="centerX" id="RJJ-Uv-oZ3"/>
-                <constraint firstItem="81" firstAttribute="top" secondItem="17" secondAttribute="bottom" constant="8" symbolic="YES" id="UZI-H3-m0o"/>
-                <constraint firstItem="7" firstAttribute="leading" secondItem="121" secondAttribute="leading" id="UrV-9g-7vU"/>
-                <constraint firstItem="115" firstAttribute="leading" secondItem="29" secondAttribute="trailing" constant="4" id="VUY-Tm-vPv"/>
-                <constraint firstItem="28" firstAttribute="leading" secondItem="129" secondAttribute="leading" id="Vfm-kj-6NW"/>
-                <constraint firstItem="81" firstAttribute="top" secondItem="82" secondAttribute="top" id="W89-ff-HBr"/>
-                <constraint firstItem="7" firstAttribute="leading" secondItem="17" secondAttribute="leading" id="XrB-X2-FdB"/>
-                <constraint firstItem="29" firstAttribute="baseline" secondItem="28" secondAttribute="baseline" id="ZAq-M4-leJ"/>
-                <constraint firstItem="29" firstAttribute="baseline" secondItem="115" secondAttribute="baseline" id="dBw-W4-cZX"/>
-                <constraint firstAttribute="bottom" secondItem="117" secondAttribute="bottom" constant="20" symbolic="YES" id="dlL-0y-Pup"/>
-                <constraint firstItem="7" firstAttribute="top" secondItem="81" secondAttribute="bottom" constant="8" symbolic="YES" id="fHg-On-l6o"/>
-                <constraint firstItem="129" firstAttribute="top" secondItem="123" secondAttribute="bottom" constant="8" symbolic="YES" id="fOd-8g-x1E"/>
-                <constraint firstItem="38" firstAttribute="leading" secondItem="28" secondAttribute="leading" id="kIw-9d-SPg"/>
-                <constraint firstItem="123" firstAttribute="leading" secondItem="113" secondAttribute="leading" constant="87" id="nbp-tQ-9V4"/>
-                <constraint firstItem="34" firstAttribute="leading" secondItem="29" secondAttribute="leading" id="p64-E1-1eh"/>
-                <constraint firstItem="34" firstAttribute="leading" secondItem="38" secondAttribute="trailing" constant="8" symbolic="YES" id="pvF-gp-WfW"/>
-                <constraint firstItem="82" firstAttribute="leading" secondItem="81" secondAttribute="trailing" constant="7" id="q1y-2W-Lee"/>
-                <constraint firstItem="123" firstAttribute="leading" secondItem="129" secondAttribute="leading" id="rOU-FD-6yq"/>
-                <constraint firstItem="121" firstAttribute="baseline" secondItem="38" secondAttribute="baseline" id="rsq-Ga-Nn7"/>
-                <constraint firstItem="115" firstAttribute="top" secondItem="129" secondAttribute="bottom" constant="6" id="sRX-1H-uVf"/>
-                <constraint firstItem="28" firstAttribute="leading" secondItem="119" secondAttribute="trailing" constant="8" symbolic="YES" id="uQh-sI-Uxe"/>
-                <constraint firstItem="115" firstAttribute="trailing" secondItem="117" secondAttribute="trailing" id="uei-co-1k3"/>
-                <constraint firstItem="129" firstAttribute="trailing" secondItem="7" secondAttribute="trailing" id="uvM-xC-eWE"/>
-                <constraint firstItem="17" firstAttribute="top" secondItem="113" secondAttribute="top" constant="20" symbolic="YES" id="v2v-wH-Q3x"/>
-                <constraint firstItem="125" firstAttribute="leading" secondItem="123" secondAttribute="trailing" constant="8" symbolic="YES" id="vJi-W3-mrD"/>
-                <constraint firstItem="7" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" id="wts-nw-Re8"/>
-                <constraint firstItem="123" firstAttribute="top" secondItem="7" secondAttribute="bottom" constant="8" symbolic="YES" id="xtC-bS-raz"/>
+                <constraint firstItem="115" firstAttribute="baseline" secondItem="29" secondAttribute="baseline" id="098-W1-DdC"/>
+                <constraint firstItem="121" firstAttribute="leading" secondItem="7" secondAttribute="leading" id="224-ij-Bcg"/>
+                <constraint firstItem="29" firstAttribute="leading" secondItem="28" secondAttribute="trailing" constant="8" symbolic="YES" id="2Ap-3Y-JxV"/>
+                <constraint firstItem="17" firstAttribute="leading" secondItem="7" secondAttribute="leading" id="3TJ-yI-u5v"/>
+                <constraint firstItem="123" firstAttribute="leading" secondItem="129" secondAttribute="leading" id="3iH-sv-nEu"/>
+                <constraint firstItem="115" firstAttribute="trailing" secondItem="129" secondAttribute="trailing" id="5tq-Kl-Bex"/>
+                <constraint firstItem="29" firstAttribute="leading" secondItem="34" secondAttribute="leading" id="6gE-dY-Zhx"/>
+                <constraint firstItem="117" firstAttribute="top" secondItem="115" secondAttribute="bottom" constant="8" symbolic="YES" id="7af-ro-HDB"/>
+                <constraint firstAttribute="trailing" secondItem="82" secondAttribute="trailing" constant="39" id="7rQ-Py-A1e"/>
+                <constraint firstItem="129" firstAttribute="trailing" secondItem="7" secondAttribute="trailing" id="8cD-Wk-Bna"/>
+                <constraint firstItem="81" firstAttribute="baseline" secondItem="82" secondAttribute="baseline" id="9sy-jQ-6dM"/>
+                <constraint firstItem="17" firstAttribute="trailing" secondItem="7" secondAttribute="trailing" id="AHU-nX-Ig8"/>
+                <constraint firstItem="29" firstAttribute="leading" secondItem="125" secondAttribute="leading" id="Bha-88-qb6"/>
+                <constraint firstItem="129" firstAttribute="top" secondItem="123" secondAttribute="bottom" constant="8" symbolic="YES" id="CBZ-Mf-oCG"/>
+                <constraint firstItem="82" firstAttribute="leading" secondItem="81" secondAttribute="trailing" constant="7" id="Ca2-kv-I68"/>
+                <constraint firstItem="28" firstAttribute="leading" secondItem="129" secondAttribute="leading" id="G0I-ow-lsI"/>
+                <constraint firstItem="123" firstAttribute="leading" secondItem="113" secondAttribute="leading" constant="87" id="JNe-xc-Wfh"/>
+                <constraint firstItem="28" firstAttribute="leading" secondItem="38" secondAttribute="leading" id="JVt-Sd-SL0"/>
+                <constraint firstItem="29" firstAttribute="trailing" secondItem="125" secondAttribute="trailing" id="KMl-gR-wb2"/>
+                <constraint firstItem="115" firstAttribute="top" secondItem="129" secondAttribute="bottom" constant="6" id="LFD-WI-HCP"/>
+                <constraint firstItem="115" firstAttribute="leading" secondItem="117" secondAttribute="leading" id="Ldn-RF-oiy"/>
+                <constraint firstItem="34" firstAttribute="trailing" secondItem="29" secondAttribute="trailing" id="M6u-Hr-GfU"/>
+                <constraint firstItem="119" firstAttribute="leading" secondItem="113" secondAttribute="leading" constant="20" symbolic="YES" id="McT-zQ-ff6"/>
+                <constraint firstItem="28" firstAttribute="baseline" secondItem="29" secondAttribute="baseline" id="Mgf-8V-4Sf"/>
+                <constraint firstItem="123" firstAttribute="top" secondItem="7" secondAttribute="bottom" constant="8" symbolic="YES" id="Qis-7v-13v"/>
+                <constraint firstItem="119" firstAttribute="centerX" secondItem="121" secondAttribute="centerX" id="RcZ-s2-dWM"/>
+                <constraint firstItem="28" firstAttribute="leading" secondItem="119" secondAttribute="trailing" constant="8" symbolic="YES" id="XSg-hU-5cW"/>
+                <constraint firstItem="121" firstAttribute="baseline" secondItem="38" secondAttribute="baseline" id="Y4s-KV-7qB"/>
+                <constraint firstItem="7" firstAttribute="top" secondItem="81" secondAttribute="bottom" constant="8" symbolic="YES" id="YMj-gq-9vc"/>
+                <constraint firstItem="34" firstAttribute="baseline" secondItem="38" secondAttribute="baseline" id="cXH-Nf-ZfG"/>
+                <constraint firstItem="117" firstAttribute="baseline" secondItem="34" secondAttribute="baseline" id="de7-Rc-REh"/>
+                <constraint firstItem="81" firstAttribute="top" secondItem="17" secondAttribute="bottom" constant="8" symbolic="YES" id="fKA-Ah-EYi"/>
+                <constraint firstItem="82" firstAttribute="firstBaseline" secondItem="81" secondAttribute="firstBaseline" id="fQd-tz-ExX"/>
+                <constraint firstItem="115" firstAttribute="trailing" secondItem="117" secondAttribute="trailing" id="kpz-oJ-UK7"/>
+                <constraint firstItem="125" firstAttribute="baseline" secondItem="123" secondAttribute="baseline" id="lL2-3Z-MgB"/>
+                <constraint firstItem="28" firstAttribute="baseline" secondItem="119" secondAttribute="baseline" id="oWL-4C-O4d"/>
+                <constraint firstItem="17" firstAttribute="top" secondItem="113" secondAttribute="top" constant="20" symbolic="YES" id="qr7-w7-b9l"/>
+                <constraint firstItem="125" firstAttribute="leading" secondItem="123" secondAttribute="trailing" constant="8" symbolic="YES" id="rgb-nJ-0oi"/>
+                <constraint firstItem="34" firstAttribute="leading" secondItem="38" secondAttribute="trailing" constant="8" symbolic="YES" id="tB4-y4-oPJ"/>
+                <constraint firstAttribute="trailing" secondItem="17" secondAttribute="trailing" constant="20" symbolic="YES" id="tkc-Lb-6fR"/>
+                <constraint firstAttribute="bottom" secondItem="117" secondAttribute="bottom" constant="20" symbolic="YES" id="w9k-HA-d9W"/>
+                <constraint firstItem="38" firstAttribute="leading" secondItem="121" secondAttribute="trailing" constant="8" symbolic="YES" id="wLu-Gn-VnK"/>
+                <constraint firstItem="115" firstAttribute="leading" secondItem="29" secondAttribute="trailing" constant="4" id="zEx-Ry-Xwt"/>
             </constraints>
             <point key="canvasLocation" x="503" y="682"/>
         </customView>
