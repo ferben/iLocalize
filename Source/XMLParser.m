@@ -60,9 +60,9 @@
     {
 		if (![mScanner scanString:@"=" intoString:nil])
         {
-            NSLog(@"Attribut: %@, Element: %@", attributeName, element);
+            NSLog(@"Element: %@, Attribut: %@", element, attributeName);
             
-			[mDelegate parser:self error:[NSString stringWithFormat:@"NSString [%@] - No '=' found between attribute name and content", attributeName]];
+			[mDelegate parser:self error:[NSString stringWithFormat:@"NSString [element: %@] [attribute: %@] - No '=' found between attribute name and content", element, attributeName]];
 			mError = YES;
 			return NO;
 		}
@@ -70,9 +70,9 @@
 		// check begin of attribute content
         if (![mScanner scanCharactersFromSet:mQuotesSet intoString:nil])
         {
-            NSLog(@"Attribut: %@, Element: %@", attributeName, element);
+            NSLog(@"Element: %@, Attribut: %@", element, attributeName);
             
-			[mDelegate parser:self error:[NSString stringWithFormat:@"NSString [%@] - Attribute content does not begin with a '\"' or '\'' sign", element]];
+			[mDelegate parser:self error:[NSString stringWithFormat:@"NSString [element: %@] [attribute: %@] - Attribute content does not begin with a '\"' or '\'' sign", element, attributeName]];
 			mError = YES;
 			return NO;
 		}
@@ -83,9 +83,9 @@
         // check end of attribute string
         if (![mScanner scanUpToCharactersFromSet:mQuotesSet intoString:&attributeContent])
         {
-            NSLog(@"Attribut: %@, Element: %@", attributeName, element);
+            NSLog(@"Element: %@, Attribut: %@", element, attributeName);
             
-			[mDelegate parser:self error:[NSString stringWithFormat:@"NSString [%@] - Attribute content does not end with a '\"' or '\'' sign", element]];
+			[mDelegate parser:self error:[NSString stringWithFormat:@"NSString [element: %@] [attribute: %@] - Attribute content does not end with a '\"' or '\'' sign", element, attributeName]];
 			mError = YES;
 			return NO;
 		}
