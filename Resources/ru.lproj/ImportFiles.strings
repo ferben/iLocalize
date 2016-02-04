@@ -1,0 +1,24 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Язык"; ObjectID = "14"; */
+"14.headerCell.title" = "Язык";
+
+/* Class = "NSButtonCell"; title = "Обновить языки локализации из этих файлов"; ObjectID = "51"; */
+"51.title" = "Обновить языки локализации из этих файлов";
+
+/* Class = "NSTextFieldCell"; title = "<do not localize - placeholder for file information >"; ObjectID = "52"; */
+"52.title" = "<do not localize - placeholder for file information >";
+
+/* Class = "NSButtonCell"; title = "Восстановить разметку локализованного NIB файла из макета базового языка"; ObjectID = "53"; */
+"53.title" = "Восстановить разметку локализованного NIB файла из макета базового языка";
+
+/* Class = "NSButtonCell"; title = "Обновить проекта из новой версией этих файлов"; ObjectID = "54"; */
+"54.title" = "Обновить проекта из новой версией этих файлов";
+
+/* Class = "NSTextFieldCell"; title = "Выберите язык(и) для обновления:"; ObjectID = "56"; */
+"56.title" = "Выберите язык(и) для обновления:";
+
+/* Class = "NSTextFieldCell"; title = "Просмотрите локализованные NIB файлы, для подтверждения правильности разметки макета."; ObjectID = "59"; */
+"59.title" = "Просмотрите локализованные NIB файлы, для подтверждения правильности разметки макета.";
+
+/* Class = "NSButtonCell"; title = "Обновить разметки NIB из импортируемых разметок макета"; ObjectID = "61"; */
+"61.title" = "Обновить разметки NIB из импортируемых разметок макета";

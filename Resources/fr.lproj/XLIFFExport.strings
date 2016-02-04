@@ -1,0 +1,54 @@
+
+/* Class = "NSTextFieldCell"; title = "Langue source :"; ObjectID = "3"; */
+"3.title" = "Langue source :";
+
+/* Class = "NSTextFieldCell"; title = "Langue cible :"; ObjectID = "5"; */
+"5.title" = "Langue cible :";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "8"; */
+"8.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "9"; */
+"9.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "10"; */
+"10.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "11"; */
+"11.title" = "Item 3";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "14"; */
+"14.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "15"; */
+"15.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "16"; */
+"16.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "17"; */
+"17.title" = "Item 3";
+
+/* Class = "NSTextFieldCell"; title = "Fichier de sortie :"; ObjectID = "19"; */
+"19.title" = "Fichier de sortie :";
+
+/* Class = "NSButtonCell"; title = "Sélectionner…"; ObjectID = "23"; */
+"23.title" = "Sélectionner…";
+
+/* Class = "NSPathCell"; placeholderString = "Aucun fichier sélectionné"; ObjectID = "25"; */
+"25.placeholderString" = "Aucun fichier sélectionné";
+
+/* Class = "NSTextFieldCell"; title = "Format :"; ObjectID = "42"; */
+"42.title" = "Format :";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "48"; */
+"48.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "49"; */
+"49.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "50"; */
+"50.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "51"; */
+"51.title" = "Item 3";

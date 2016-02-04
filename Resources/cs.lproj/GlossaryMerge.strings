@@ -1,0 +1,30 @@
+
+/* Class = "NSWindow"; title = "Sloučit"; ObjectID = "5"; */
+"5.title" = "Sloučit";
+
+/* Class = "NSMenu"; title = "Jiný pohled"; ObjectID = "8"; */
+"8.title" = "Jiný pohled";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "9"; */
+"9.title" = "Item2";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "10"; */
+"10.title" = "Item1";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "11"; */
+"11.title" = "Item3";
+
+/* Class = "NSTextFieldCell"; title = "Do tohoto slovníku:"; ObjectID = "37"; */
+"37.title" = "Do tohoto slovníku:";
+
+/* Class = "NSButtonCell"; title = "Sloučit"; ObjectID = "38"; */
+"38.title" = "Sloučit";
+
+/* Class = "NSTextFieldCell"; title = "Sloučit následující slovníky:"; ObjectID = "39"; */
+"39.title" = "Sloučit následující slovníky:";
+
+/* Class = "NSButtonCell"; title = "Zrušit"; ObjectID = "40"; */
+"40.title" = "Zrušit";
+
+/* Class = "NSButtonCell"; title = "Odebrat duplicitní výrazy"; ObjectID = "41"; */
+"41.title" = "Odebrat duplicitní výrazy";

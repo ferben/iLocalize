@@ -1,0 +1,39 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "Aktualizuje původní jazyk a vrátí všechny ostatní jazyky.Všechny soubory v ostatních jazycích budou přeloženy odpovídajícím současným překladem."; ObjectID = "10"; */
+"10.ibShadowedToolTip" = "Aktualizuje původní jazyk a vrátí všechny ostatní jazyky.Všechny soubory v ostatních jazycích budou přeloženy odpovídajícím současným překladem.";
+
+/* Class = "NSTextFieldCell"; title = "Vyberte jazyky, jenž chcete aktualizovat:"; ObjectID = "151"; */
+"151.title" = "Vyberte jazyky, jenž chcete aktualizovat:";
+
+/* Class = "NSButtonCell"; title = "Aktualizovat projekt podle nové verze balíčku:"; ObjectID = "152"; */
+"152.title" = "Aktualizovat projekt podle nové verze balíčku:";
+
+/* Class = "NSButtonCell"; title = "Obnovit rozvržení každého lokalizovaného NIBu podle rozvržení jeho původního jazyka"; ObjectID = "153"; */
+"153.title" = "Obnovit rozvržení každého lokalizovaného NIBu podle rozvržení jeho původního jazyka";
+
+/* Class = "NSButtonCell"; title = "Aktualizovat lokalizované jazyky projektu podle balíčku:"; ObjectID = "154"; */
+"154.title" = "Aktualizovat lokalizované jazyky projektu podle balíčku:";
+
+/* Class = "NSButtonCell"; title = "Aktualizovat rozvržení NIBů podle importovaných rozvržení"; ObjectID = "155"; */
+"155.title" = "Aktualizovat rozvržení NIBů podle importovaných rozvržení";
+
+/* Class = "NSTextFieldCell"; title = "Ověřte lokalizované soubory NIB, má-li každý správné rozvržení."; ObjectID = "156"; */
+"156.title" = "Ověřte lokalizované soubory NIB, má-li každý správné rozvržení.";
+
+/* Class = "NSButtonCell"; title = "Neexistující řetězce v překladu, zkopírovat z původního jazyka"; ObjectID = "158"; */
+"158.title" = "Neexistující řetězce v překladu, zkopírovat z původního jazyka";
+
+/* Class = "NSButtonCell"; title = "Ověřit"; ObjectID = "189"; */
+"189.title" = "Ověřit";
+
+/* Class = "NSButtonCell"; title = "Vybrat…"; ObjectID = "203"; */
+"203.title" = "Vybrat…";
+
+/* Class = "NSButtonCell"; title = "Vybrat…"; ObjectID = "205"; */
+"205.title" = "Vybrat…";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Vyberte nebo přetáhněte sem balíček"; ObjectID = "213"; */
+"213.ibShadowedIsNilPlaceholder" = "Vyberte nebo přetáhněte sem balíček";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Vyberte nebo přetáhněte sem balíček"; ObjectID = "214"; */
+"214.ibShadowedIsNilPlaceholder" = "Vyberte nebo přetáhněte sem balíček";

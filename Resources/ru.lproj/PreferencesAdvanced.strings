@@ -1,0 +1,48 @@
+
+/* Class = "NSTextField"; ibShadowedToolTip = "Путь к исполняемому ibtool (обычно usr/bin/ibtool). Этот инструмент доступен только в Leopard."; ObjectID = "484"; */
+"484.ibShadowedToolTip" = "Путь к исполняемому ibtool (обычно usr/bin/ibtool). Этот инструмент доступен только в Leopard.";
+
+/* Class = "NSButtonCell"; title = "Вывести сообщение в консоли на системной консоли"; ObjectID = "564"; */
+"564.title" = "Вывести сообщение в консоли на системной консоли";
+
+/* Class = "NSTextFieldCell"; title = "ZIP:"; ObjectID = "567"; */
+"567.title" = "ZIP:";
+
+/* Class = "NSTextFieldCell"; title = "Путь к ibtool:"; ObjectID = "577"; */
+"577.title" = "Путь к ibtool:";
+
+/* Class = "NSButtonCell"; title = "Выбрать…"; ObjectID = "593"; */
+"593.title" = "Выбрать…";
+
+/* Class = "NSTabViewItem"; label = "Инструменты"; ObjectID = "600"; */
+"600.label" = "Инструменты";
+
+/* Class = "NSTabViewItem"; label = "Размещения"; ObjectID = "603"; */
+"603.label" = "Размещения";
+
+/* Class = "NSTabViewItem"; label = "Установки"; ObjectID = "605"; */
+"605.label" = "Установки";
+
+/* Class = "NSTextFieldCell"; title = "Interface Builder 3:"; ObjectID = "610"; */
+"610.title" = "Interface Builder 3:";
+
+/* Class = "NSButtonCell"; title = "Выбрать…"; ObjectID = "617"; */
+"617.title" = "Выбрать…";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "635"; */
+"635.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Дополнения для ibtool:"; ObjectID = "636"; */
+"636.title" = "Дополнения для ibtool:";
+
+/* Class = "NSTextFieldCell"; title = "Папка проекта по умолчанию:"; ObjectID = "638"; */
+"638.title" = "Папка проекта по умолчанию:";
+
+/* Class = "NSButtonCell"; title = "Вывести все команды NIB в консоли"; ObjectID = "655"; */
+"655.title" = "Вывести все команды NIB в консоли";
+
+/* Class = "NSButtonCell"; title = "Сравнить NIB файлы с помощью структуры XML (медленнее, но более точно)"; ObjectID = "658"; */
+"658.title" = "Сравнить NIB файлы с помощью структуры XML (медленнее, но более точно)";
+
+/* Class = "NSTextFieldCell"; title = "diff:"; ObjectID = "663"; */
+"663.title" = "diff:";

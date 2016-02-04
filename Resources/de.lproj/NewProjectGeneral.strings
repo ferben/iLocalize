@@ -1,0 +1,51 @@
+
+/* Class = "NSMenuItem"; title = "<setting-name>"; ObjectID = "82"; */
+"82.title" = "<setting-name>";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "83"; */
+"83.title" = "OtherViews";
+
+/* Class = "NSTextFieldCell"; title = "Name:"; ObjectID = "625"; */
+"625.title" = "Name:";
+
+/* Class = "NSTextFieldCell"; title = "Ziel:"; ObjectID = "626"; */
+"626.title" = "Ziel:";
+
+/* Class = "NSTextFieldCell"; title = "Rechner"; ObjectID = "627"; */
+"627.title" = "Rechner";
+
+/* Class = "NSButtonCell"; title = "Wählen …"; ObjectID = "629"; */
+"629.title" = "Wählen …";
+
+/* Class = "NSButtonCell"; title = "Wählen …"; ObjectID = "632"; */
+"632.title" = "Wählen …";
+
+/* Class = "NSTextFieldCell"; title = "Standards:"; ObjectID = "635"; */
+"635.title" = "Standards:";
+
+/* Class = "NSTextFieldCell"; title = "Um loszulegen, wählen Sie das Bundle, das Sie lokalisieren möchten:"; ObjectID = "676"; */
+"676.title" = "Um loszulegen, wählen Sie das Bundle, das Sie lokalisieren möchten:";
+
+/* Class = "NSMenuItem"; title = "Sichern"; ObjectID = "682"; */
+"682.title" = "Sichern";
+
+/* Class = "NSMenuItem"; title = "Sichern unter …"; ObjectID = "683"; */
+"683.title" = "Sichern unter …";
+
+/* Class = "NSMenuItem"; title = "Umbenennen …"; ObjectID = "684"; */
+"684.title" = "Umbenennen …";
+
+/* Class = "NSMenuItem"; title = "Löschen"; ObjectID = "685"; */
+"685.title" = "Löschen";
+
+/* Class = "NSTextFieldCell"; title = "Bundle:"; ObjectID = "802"; */
+"802.title" = "Bundle:";
+
+/* Class = "NSPathCell"; placeholderString = "Lassen Sie das zu lokalisierende Bundle hier fallen"; ObjectID = "808"; */
+"808.placeholderString" = "Lassen Sie das zu lokalisierende Bundle hier fallen";
+
+/* Class = "NSPathCell"; placeholderString = "Lassen Sie den Ordner hier fallen, in dem das Projekt erzeugt werden soll"; ObjectID = "810"; */
+"810.placeholderString" = "Lassen Sie den Ordner hier fallen, in dem das Projekt erzeugt werden soll";
+
+/* Class = "NSTextFieldCell"; title = "<do not localize>"; ObjectID = "828"; */
+"828.title" = "<do not localize>";

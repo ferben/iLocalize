@@ -1,0 +1,51 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "Rozpatruj znaki kontrolne i wyjściowe jako identyczne"; ObjectID = "330"; */
+"330.ibShadowedToolTip" = "Rozpatruj znaki kontrolne i wyjściowe jako identyczne";
+
+/* Class = "NSButtonCell"; title = "ignoruj wielkość liter"; ObjectID = "474"; */
+"474.title" = "ignoruj wielkość liter";
+
+/* Class = "NSTextFieldCell"; title = "Tłumaczenie:"; ObjectID = "476"; */
+"476.title" = "Tłumaczenie:";
+
+/* Class = "NSButtonCell"; title = "tylko do odczytu"; ObjectID = "482"; */
+"482.title" = "tylko do odczytu";
+
+/* Class = "NSTextFieldCell"; title = "Język bazowy:"; ObjectID = "483"; */
+"483.title" = "Język bazowy:";
+
+/* Class = "NSButtonCell"; title = "ignoruj znaki kontrolne"; ObjectID = "484"; */
+"484.title" = "ignoruj znaki kontrolne";
+
+/* Class = "NSTextFieldCell"; title = "Powiel tłumaczenie:"; ObjectID = "491"; */
+"491.title" = "Powiel tłumaczenie:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "494"; */
+"494.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "wyłącz"; ObjectID = "495"; */
+"495.title" = "wyłącz";
+
+/* Class = "NSMenuItem"; title = "automatycznie w wybranych plikach"; ObjectID = "496"; */
+"496.title" = "automatycznie w wybranych plikach";
+
+/* Class = "NSMenuItem"; title = "automatycznie we wszystkich plikach"; ObjectID = "497"; */
+"497.title" = "automatycznie we wszystkich plikach";
+
+/* Class = "NSTextFieldCell"; title = "Tryb:"; ObjectID = "501"; */
+"501.title" = "Tryb:";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "503"; */
+"503.title" = "Radio";
+
+/* Class = "NSButtonCell"; title = "programista"; ObjectID = "504"; */
+"504.title" = "programista";
+
+/* Class = "NSButtonCell"; title = "tłumacz"; ObjectID = "509"; */
+"509.title" = "tłumacz";
+
+/* Class = "NSButtonCell"; title = "Reset Warnings"; ObjectID = "4qb-iu-nB5"; */
+"4qb-iu-nB5.title" = "Reset Warnings";
+
+/* Class = "NSTextFieldCell"; title = "Wyzeruj wszystkie okna ostrzeżeń:"; ObjectID = "UVZ-qQ-zdX"; */
+"UVZ-qQ-zdX.title" = "Wyzeruj wszystkie okna ostrzeżeń:";

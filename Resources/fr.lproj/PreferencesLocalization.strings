@@ -1,0 +1,51 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "Considérer les caractères de contrôle et les caractères d’échappement de manière identique"; ObjectID = "330"; */
+"330.ibShadowedToolTip" = "Considérer les caractères de contrôle et les caractères d’échappement de manière identique";
+
+/* Class = "NSButtonCell"; title = "Ignorer la casse"; ObjectID = "474"; */
+"474.title" = "Ignorer la casse";
+
+/* Class = "NSTextFieldCell"; title = "Comportement général :"; ObjectID = "476"; */
+"476.title" = "Comportement général :";
+
+/* Class = "NSButtonCell"; title = "En lecture seule"; ObjectID = "482"; */
+"482.title" = "En lecture seule";
+
+/* Class = "NSTextFieldCell"; title = "Langue de référence :"; ObjectID = "483"; */
+"483.title" = "Langue de référence :";
+
+/* Class = "NSButtonCell"; title = "Ignorer les caractères de contrôle"; ObjectID = "484"; */
+"484.title" = "Ignorer les caractères de contrôle";
+
+/* Class = "NSTextFieldCell"; title = "Propagation de la traduction :"; ObjectID = "491"; */
+"491.title" = "Propagation de la traduction :";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "494"; */
+"494.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Désactivée"; ObjectID = "495"; */
+"495.title" = "Désactivée";
+
+/* Class = "NSMenuItem"; title = "Automatique aux fichiers sélectionnés"; ObjectID = "496"; */
+"496.title" = "Automatique aux fichiers sélectionnés";
+
+/* Class = "NSMenuItem"; title = "Automatique à tous les fichiers"; ObjectID = "497"; */
+"497.title" = "Automatique à tous les fichiers";
+
+/* Class = "NSTextFieldCell"; title = "Mode :"; ObjectID = "501"; */
+"501.title" = "Mode :";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "503"; */
+"503.title" = "Radio";
+
+/* Class = "NSButtonCell"; title = "Développeur"; ObjectID = "504"; */
+"504.title" = "Développeur";
+
+/* Class = "NSButtonCell"; title = "Traducteur"; ObjectID = "509"; */
+"509.title" = "Traducteur";
+
+/* Class = "NSButtonCell"; title = "Réinitialiser les alertes"; ObjectID = "4qb-iu-nB5"; */
+"4qb-iu-nB5.title" = "Réinitialiser les alertes";
+
+/* Class = "NSTextFieldCell"; title = "Réinitialiser les alertes des dialogues :"; ObjectID = "UVZ-qQ-zdX"; */
+"UVZ-qQ-zdX.title" = "Réinitialiser les alertes des dialogues :";

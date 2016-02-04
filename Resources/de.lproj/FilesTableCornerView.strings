@@ -1,0 +1,18 @@
+
+/* Class = "NSMenuItem"; title = "   Nach Pfad sortieren"; ObjectID = "5"; */
+"5.title" = "   Nach Pfad sortieren";
+
+/* Class = "NSMenu"; title = "Menü"; ObjectID = "6"; */
+"6.title" = "Menü";
+
+/* Class = "NSMenuItem"; title = "   Nach Name sortieren"; ObjectID = "7"; */
+"7.title" = "   Nach Name sortieren";
+
+/* Class = "NSMenuItem"; title = "   Nach Anzahl der Zeichenfolgen sortieren"; ObjectID = "8"; */
+"8.title" = "   Nach Anzahl der Zeichenfolgen sortieren";
+
+/* Class = "NSMenuItem"; title = "Dateispalte"; ObjectID = "9"; */
+"9.title" = "Dateispalte";
+
+/* Class = "NSMenuItem"; title = "   Zwischen kurzem/langem Pfad wechseln"; ObjectID = "15"; */
+"15.title" = "   Zwischen kurzem/langem Pfad wechseln";

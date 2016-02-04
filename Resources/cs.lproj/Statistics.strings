@@ -1,0 +1,57 @@
+
+/* Class = "NSWindow"; title = "Statistiky"; ObjectID = "5"; */
+"5.title" = "Statistiky";
+
+/* Class = "NSMenu"; title = "Jiný pohled"; ObjectID = "19"; */
+"19.title" = "Jiný pohled";
+
+/* Class = "NSMenuItem"; title = "lklkl"; ObjectID = "20"; */
+"20.title" = "lklkl";
+
+/* Class = "NSMenuItem"; title = "abab"; ObjectID = "21"; */
+"21.title" = "abab";
+
+/* Class = "NSMenuItem"; title = "Vše"; ObjectID = "22"; */
+"22.title" = "Vše";
+
+/* Class = "NSMenu"; title = "Jiný pohled"; ObjectID = "67"; */
+"67.title" = "Jiný pohled";
+
+/* Class = "NSMenuItem"; title = "za řetězec"; ObjectID = "68"; */
+"68.title" = "za řetězec";
+
+/* Class = "NSMenuItem"; title = "za znak"; ObjectID = "69"; */
+"69.title" = "za znak";
+
+/* Class = "NSMenuItem"; title = "za slovo"; ObjectID = "70"; */
+"70.title" = "za slovo";
+
+/* Class = "NSTableColumn"; headerCell.title = "#"; ObjectID = "108"; */
+"108.headerCell.title" = "#";
+
+/* Class = "NSTableColumn"; headerCell.title = "Vše"; ObjectID = "109"; */
+"109.headerCell.title" = "Vše";
+
+/* Class = "NSTableColumn"; headerCell.title = "Přeložit"; ObjectID = "110"; */
+"110.headerCell.title" = "Přeložit";
+
+/* Class = "NSButtonCell"; title = "Kopírovat do schránky"; ObjectID = "120"; */
+"120.title" = "Kopírovat do schránky";
+
+/* Class = "NSButtonCell"; title = "Zavřít"; ObjectID = "121"; */
+"121.title" = "Zavřít";
+
+/* Class = "NSTextFieldCell"; title = "Jazyk:"; ObjectID = "122"; */
+"122.title" = "Jazyk:";
+
+/* Class = "NSTextFieldCell"; title = "Poznámka: tyto statistiky jsou použité pouze na řetězce a soubory XIB/NIB"; ObjectID = "124"; */
+"124.title" = "Poznámka: tyto statistiky jsou použité pouze na řetězce a soubory XIB/NIB";
+
+/* Class = "NSTextFieldCell"; title = "Sestavují se statistiky…"; ObjectID = "125"; */
+"125.title" = "Sestavují se statistiky…";
+
+/* Class = "NSTextFieldCell"; title = "1"; ObjectID = "127"; */
+"127.title" = "1";
+
+/* Class = "NSTextFieldCell"; title = "Počítat:"; ObjectID = "128"; */
+"128.title" = "Počítat:";

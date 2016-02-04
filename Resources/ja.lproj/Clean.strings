@@ -1,0 +1,45 @@
+
+/* Class = "NSWindow"; title = "クリーニング"; ObjectID = "5"; */
+"5.title" = "クリーニング";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "15"; */
+"15.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "選択されたファイル"; ObjectID = "16"; */
+"16.title" = "選択されたファイル";
+
+/* Class = "NSMenuItem"; title = "選択された言語"; ObjectID = "17"; */
+"17.title" = "選択された言語";
+
+/* Class = "NSMenuItem"; title = "プロジェクト全体"; ObjectID = "18"; */
+"18.title" = "プロジェクト全体";
+
+/* Class = "NSMenuItem"; title = "選択された文字列"; ObjectID = "19"; */
+"19.title" = "選択された文字列";
+
+/* Class = "NSButtonCell"; title = "\" を “ (二重引用符) で置換"; ObjectID = "35"; */
+"35.title" = "\" を “ (二重引用符) で置換";
+
+/* Class = "NSButtonCell"; title = "... を … (省略符号) で置換"; ObjectID = "36"; */
+"36.title" = "... を … (省略符号) で置換";
+
+/* Class = "NSButtonCell"; title = "句読点の前の余分な空白を取り除く"; ObjectID = "37"; */
+"37.title" = "句読点の前の余分な空白を取り除く";
+
+/* Class = "NSButtonCell"; title = "文字列の末尾にある余分な空白を取り除く"; ObjectID = "38"; */
+"38.title" = "文字列の末尾にある余分な空白を取り除く";
+
+/* Class = "NSButtonCell"; title = "キャンセル"; ObjectID = "39"; */
+"39.title" = "キャンセル";
+
+/* Class = "NSButtonCell"; title = "クリーニング"; ObjectID = "40"; */
+"40.title" = "クリーニング";
+
+/* Class = "NSTextFieldCell"; title = "実行対象:"; ObjectID = "41"; */
+"41.title" = "実行対象:";
+
+/* Class = "NSButtonCell"; title = "変更された文字列を “チェックが必要” にする"; ObjectID = "44"; */
+"44.title" = "変更された文字列を “チェックが必要” にする";
+
+/* Class = "NSButtonCell"; title = "' を ’ (単一引用符) で置換"; ObjectID = "45"; */
+"45.title" = "' を ’ (単一引用符) で置換";

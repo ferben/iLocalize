@@ -1,0 +1,30 @@
+
+/* Class = "NSWindow"; title = "Istantanea"; ObjectID = "5"; */
+"5.title" = "Istantanea";
+
+/* Class = "NSTableColumn"; headerCell.title = "Istantanea"; ObjectID = "9"; */
+"9.headerCell.title" = "Istantanea";
+
+/* Class = "NSTableColumn"; headerCell.title = "Data"; ObjectID = "10"; */
+"10.headerCell.title" = "Data";
+
+/* Class = "NSWindow"; title = "Nuova Istantanea"; ObjectID = "14"; */
+"14.title" = "Nuova Istantanea";
+
+/* Class = "NSDateFormatter"; ibShadowedDateFormat = "%d.%m.%y %H:%M"; ObjectID = "46"; */
+"46.ibShadowedDateFormat" = "%d.%m.%y %H:%M";
+
+/* Class = "NSButtonCell"; title = "Elimina"; ObjectID = "48"; */
+"48.title" = "Elimina";
+
+/* Class = "NSButtonCell"; title = "Chiudi"; ObjectID = "49"; */
+"49.title" = "Chiudi";
+
+/* Class = "NSTextFieldCell"; title = "Nome Istantanea:"; ObjectID = "50"; */
+"50.title" = "Nome Istantanea:";
+
+/* Class = "NSButtonCell"; title = "Crea"; ObjectID = "52"; */
+"52.title" = "Crea";
+
+/* Class = "NSButtonCell"; title = "Annulla"; ObjectID = "53"; */
+"53.title" = "Annulla";

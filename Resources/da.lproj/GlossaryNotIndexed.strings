@@ -1,0 +1,33 @@
+
+/* Class = "NSWindow"; title = "Ikke indekseret ordbog"; ObjectID = "5"; */
+"5.title" = "Ikke indekseret ordbog";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "43"; */
+"43.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Lokal"; ObjectID = "44"; */
+"44.title" = "Lokal";
+
+/* Class = "NSMenuItem"; title = "Globale"; ObjectID = "45"; */
+"45.title" = "Globale";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "96"; */
+"96.title" = "OK";
+
+/* Class = "NSButtonCell"; title = "Annuller"; ObjectID = "97"; */
+"97.title" = "Annuller";
+
+/* Class = "NSTextFieldCell"; title = "Denne ordbog er ikke placeret i nogen af iLocalizes kendte ordbogsstier. For at kunne bruge denne ordbog ved oversættelse af et projekt, skal den enten flyttes eller der skal oprettes en henvisning til den i en kendt ordbogssti."; ObjectID = "101"; */
+"101.title" = "Denne ordbog er ikke placeret i nogen af iLocalizes kendte ordbogsstier. For at kunne bruge denne ordbog ved oversættelse af et projekt, skal den enten flyttes eller der skal oprettes en henvisning til den i en kendt ordbogssti.";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "110"; */
+"110.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Flyt ordbogen"; ObjectID = "111"; */
+"111.title" = "Flyt ordbogen";
+
+/* Class = "NSMenuItem"; title = "Opret en henvisning til ordbogen"; ObjectID = "112"; */
+"112.title" = "Opret en henvisning til ordbogen";
+
+/* Class = "NSTextFieldCell"; title = "i ordbogsstien"; ObjectID = "115"; */
+"115.title" = "i ordbogsstien";

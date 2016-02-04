@@ -1,0 +1,12 @@
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "10"; */
+"10.title" = "Text Cell";
+
+/* Class = "NSButtonCell"; title = "Kopírovat do schránky"; ObjectID = "12"; */
+"12.title" = "Kopírovat do schránky";
+
+/* Class = "NSButtonCell"; title = "Ukázat ve Finderu"; ObjectID = "14"; */
+"14.title" = "Ukázat ve Finderu";
+
+/* Class = "NSTextFieldCell"; title = "Následující, zjištěné problémy, vyžadují Vaši pozornost:"; ObjectID = "24"; */
+"24.title" = "Následující, zjištěné problémy, vyžadují Vaši pozornost:";

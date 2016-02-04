@@ -1,0 +1,63 @@
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "444"; */
+"444.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "445"; */
+"445.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "446"; */
+"446.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "447"; */
+"447.title" = "Item 1";
+
+/* Class = "NSTextFieldCell"; title = "ファイルが選択されていません"; ObjectID = "795"; */
+"795.title" = "ファイルが選択されていません";
+
+/* Class = "NSTextFieldCell"; title = "編集できません"; ObjectID = "796"; */
+"796.title" = "編集できません";
+
+/* Class = "NSButtonCell"; title = "外部エディタで開く"; ObjectID = "797"; */
+"797.title" = "外部エディタで開く";
+
+/* Class = "NSTextFieldCell"; title = "認識できない形式のファイルです"; ObjectID = "798"; */
+"798.title" = "認識できない形式のファイルです";
+
+/* Class = "NSTextFieldCell"; title = "無視ファイルです"; ObjectID = "804"; */
+"804.title" = "無視ファイルです";
+
+/* Class = "NSButtonCell"; title = "外部エディタで開く"; ObjectID = "805"; */
+"805.title" = "外部エディタで開く";
+
+/* Class = "NSWindow"; title = "プロジェクト"; ObjectID = "825"; */
+"825.title" = "プロジェクト";
+
+/* Class = "NSToolbarItem"; label = "検索"; ObjectID = "863"; */
+"863.label" = "検索";
+
+/* Class = "NSToolbarItem"; paletteLabel = "検索"; ObjectID = "863"; */
+"863.paletteLabel" = "検索";
+
+/* Class = "NSToolbarItem"; label = "進捗"; ObjectID = "864"; */
+"864.label" = "進捗";
+
+/* Class = "NSToolbarItem"; paletteLabel = "進捗"; ObjectID = "864"; */
+"864.paletteLabel" = "進捗";
+
+/* Class = "NSToolbarItem"; label = "言語"; ObjectID = "884"; */
+"884.label" = "言語";
+
+/* Class = "NSToolbarItem"; paletteLabel = "言語"; ObjectID = "884"; */
+"884.paletteLabel" = "言語";
+
+/* Class = "NSToolbarItem"; label = "用語集"; ObjectID = "1152"; */
+"1152.label" = "用語集";
+
+/* Class = "NSToolbarItem"; paletteLabel = "用語集"; ObjectID = "1152"; */
+"1152.paletteLabel" = "用語集";
+
+/* Class = "NSToolbarItem"; label = "起動"; ObjectID = "1157"; */
+"1157.label" = "起動";
+
+/* Class = "NSToolbarItem"; paletteLabel = "起動"; ObjectID = "1157"; */
+"1157.paletteLabel" = "起動";

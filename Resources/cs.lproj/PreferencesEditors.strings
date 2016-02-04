@@ -1,0 +1,48 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Přípona"; ObjectID = "8"; */
+"8.headerCell.title" = "Přípona";
+
+/* Class = "NSTableColumn"; headerCell.title = "Název, nebo celá cesta k aplikaci"; ObjectID = "9"; */
+"9.headerCell.title" = "Název, nebo celá cesta k aplikaci";
+
+/* Class = "NSMenu"; title = "Jiný pohled"; ObjectID = "42"; */
+"42.title" = "Jiný pohled";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "43"; */
+"43.title" = "Item3";
+
+/* Class = "NSMenuItem"; title = "Obrázky"; ObjectID = "44"; */
+"44.title" = "Obrázky";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "45"; */
+"45.title" = "Item2";
+
+/* Class = "NSTableColumn"; headerCell.title = "Přípona"; ObjectID = "48"; */
+"48.headerCell.title" = "Přípona";
+
+/* Class = "NSWindow"; title = "Panel"; ObjectID = "95"; */
+"95.title" = "Panel";
+
+/* Class = "NSTextFieldCell"; title = "Přípona:"; ObjectID = "203"; */
+"203.title" = "Přípona:";
+
+/* Class = "NSTextFieldCell"; title = "Aplikace:"; ObjectID = "204"; */
+"204.title" = "Aplikace:";
+
+/* Class = "NSButtonCell"; title = "Vybrat…"; ObjectID = "207"; */
+"207.title" = "Vybrat…";
+
+/* Class = "NSButtonCell"; title = "Budiž"; ObjectID = "208"; */
+"208.title" = "Budiž";
+
+/* Class = "NSButtonCell"; title = "Zrušit"; ObjectID = "209"; */
+"209.title" = "Zrušit";
+
+/* Class = "NSTabViewItem"; label = "Vestavěné"; ObjectID = "222"; */
+"222.label" = "Vestavěné";
+
+/* Class = "NSTabViewItem"; label = "Externí"; ObjectID = "223"; */
+"223.label" = "Externí";
+
+/* Class = "NSTextFieldCell"; title = "Typ:"; ObjectID = "231"; */
+"231.title" = "Typ:";

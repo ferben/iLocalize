@@ -1,0 +1,30 @@
+
+/* Class = "NSWindow"; title = "スナップショット"; ObjectID = "5"; */
+"5.title" = "スナップショット";
+
+/* Class = "NSTableColumn"; headerCell.title = "スナップショット"; ObjectID = "9"; */
+"9.headerCell.title" = "スナップショット";
+
+/* Class = "NSTableColumn"; headerCell.title = "日付"; ObjectID = "10"; */
+"10.headerCell.title" = "日付";
+
+/* Class = "NSWindow"; title = "新規スナップショット"; ObjectID = "14"; */
+"14.title" = "新規スナップショット";
+
+/* Class = "NSDateFormatter"; ibShadowedDateFormat = "%d.%m.%y %H:%M"; ObjectID = "46"; */
+"46.ibShadowedDateFormat" = "%d.%m.%y %H:%M";
+
+/* Class = "NSButtonCell"; title = "削除"; ObjectID = "48"; */
+"48.title" = "削除";
+
+/* Class = "NSButtonCell"; title = "閉じる"; ObjectID = "49"; */
+"49.title" = "閉じる";
+
+/* Class = "NSTextFieldCell"; title = "名前："; ObjectID = "50"; */
+"50.title" = "名前：";
+
+/* Class = "NSButtonCell"; title = "作成"; ObjectID = "52"; */
+"52.title" = "作成";
+
+/* Class = "NSButtonCell"; title = "キャンセル"; ObjectID = "53"; */
+"53.title" = "キャンセル";

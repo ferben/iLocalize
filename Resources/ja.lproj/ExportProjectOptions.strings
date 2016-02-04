@@ -1,0 +1,72 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "NIB ファイルを圧縮すると、NIB ファイルのサイズが小さくなるだけではなく、Interface Builder を使って開いたり、ローカライズすることもできなくなります。"; ObjectID = "26"; */
+"26.ibShadowedToolTip" = "NIB ファイルを圧縮すると、NIB ファイルのサイズが小さくなるだけではなく、Interface Builder を使って開いたり、ローカライズすることもできなくなります。";
+
+/* Class = "NSButton"; ibShadowedToolTip = "デフォルトのメールクライアントを開き、書き出したファイルを添付した新規メールを作成します"; ObjectID = "77"; */
+"77.ibShadowedToolTip" = "デフォルトのメールクライアントを開き、書き出したファイルを添付した新規メールを作成します";
+
+/* Class = "NSButtonCell"; title = "NIB ファイルを圧縮する"; ObjectID = "170"; */
+"170.title" = "NIB ファイルを圧縮する";
+
+/* Class = "NSButtonCell"; title = "圧縮する"; ObjectID = "177"; */
+"177.title" = "圧縮する";
+
+/* Class = "NSButtonCell"; title = "自動的に Mail.app でメールを送信する準備を行う"; ObjectID = "178"; */
+"178.title" = "自動的に Mail.app でメールを送信する準備を行う";
+
+/* Class = "NSTextFieldCell"; title = "表題:"; ObjectID = "219"; */
+"219.title" = "表題:";
+
+/* Class = "NSTextFieldCell"; title = "本文:"; ObjectID = "221"; */
+"221.title" = "本文:";
+
+/* Class = "NSButton"; ibShadowedToolTip = "言語リソース (lproj) を含むフォルダだけを書き出します"; ObjectID = "253"; */
+"253.ibShadowedToolTip" = "言語リソース (lproj) を含むフォルダだけを書き出します";
+
+/* Class = "NSButtonCell"; title = "言語フォルダのみ"; ObjectID = "254"; */
+"254.title" = "言語フォルダのみ";
+
+/* Class = "NSButton"; ibShadowedToolTip = "元のバンドル拡張子を使わずに、Finder で開くことができるフォルダとしてプロジェクトを書き出します"; ObjectID = "256"; */
+"256.ibShadowedToolTip" = "元のバンドル拡張子を使わずに、Finder で開くことができるフォルダとしてプロジェクトを書き出します";
+
+/* Class = "NSButtonCell"; title = "フォルダ"; ObjectID = "257"; */
+"257.title" = "フォルダ";
+
+/* Class = "NSButton"; ibShadowedToolTip = "言語リソース (lproj) を含むフォルダだけを書き出します"; ObjectID = "262"; */
+"262.ibShadowedToolTip" = "言語リソース (lproj) を含むフォルダだけを書き出します";
+
+/* Class = "NSButtonCell"; title = "バージョンを含める"; ObjectID = "263"; */
+"263.title" = "バージョンを含める";
+
+/* Class = "NSButton"; ibShadowedToolTip = "言語リソース (lproj) を含むフォルダだけを書き出します"; ObjectID = "265"; */
+"265.ibShadowedToolTip" = "言語リソース (lproj) を含むフォルダだけを書き出します";
+
+/* Class = "NSButtonCell"; title = "書き出した言語の名前を含める"; ObjectID = "266"; */
+"266.title" = "書き出した言語の名前を含める";
+
+/* Class = "NSTextFieldCell"; title = "<サンプル出力名>"; ObjectID = "278"; */
+"278.title" = "<サンプル出力名>";
+
+/* Class = "NSButton"; ibShadowedToolTip = "NIB ファイルを圧縮すると、NIB ファイルのサイズが小さくなるだけではなく、Interface Builder を使って開いたり、ローカライズすることもできなくなります。"; ObjectID = "287"; */
+"287.ibShadowedToolTip" = "NIB ファイルを圧縮すると、NIB ファイルのサイズが小さくなるだけではなく、Interface Builder を使って開いたり、ローカライズすることもできなくなります。";
+
+/* Class = "NSButtonCell"; title = "NIB を XIB ファイルへ変換"; ObjectID = "288"; */
+"288.title" = "NIB を XIB ファイルへ変換";
+
+/* Class = "NSBox"; title = "出力形式"; ObjectID = "4LP-Rt-bQH"; */
+"4LP-Rt-bQH.title" = "出力形式";
+
+/* Class = "NSBox"; title = "後処理"; ObjectID = "O8e-tz-Pid"; */
+"O8e-tz-Pid.title" = "後処理";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Enter the recipient e-mail address"; ObjectID = "d1S-np-O0Q"; */
+"d1S-np-O0Q.ibShadowedIsNilPlaceholder" = "Enter the recipient e-mail address";
+
+/* Class = "NSTextFieldCell"; title = "Subject:"; ObjectID = "dgD-W1-lcF"; */
+"dgD-W1-lcF.title" = "Subject:";
+
+/* Class = "NSBox"; title = "出力名称"; ObjectID = "hzV-oN-mXT"; */
+"hzV-oN-mXT.title" = "出力名称";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Enter the subject of the e-mail"; ObjectID = "jbL-CX-1Zi"; */
+"jbL-CX-1Zi.ibShadowedIsNilPlaceholder" = "Enter the subject of the e-mail";

@@ -1,0 +1,45 @@
+
+/* Class = "NSWindow"; title = "Schoon op"; ObjectID = "5"; */
+"5.title" = "Schoon op";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "15"; */
+"15.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Geselecteerde bestanden"; ObjectID = "16"; */
+"16.title" = "Geselecteerde bestanden";
+
+/* Class = "NSMenuItem"; title = "Geselecteerde taal"; ObjectID = "17"; */
+"17.title" = "Geselecteerde taal";
+
+/* Class = "NSMenuItem"; title = "Hele project"; ObjectID = "18"; */
+"18.title" = "Hele project";
+
+/* Class = "NSMenuItem"; title = "Geselecteerde strings"; ObjectID = "19"; */
+"19.title" = "Geselecteerde strings";
+
+/* Class = "NSButtonCell"; title = "Vervang \" door “ (dubbele aanhalingstekens)"; ObjectID = "35"; */
+"35.title" = "Vervang \" door “ (dubbele aanhalingstekens)";
+
+/* Class = "NSButtonCell"; title = "Vervang ... door … (ellips)"; ObjectID = "36"; */
+"36.title" = "Vervang ... door … (ellips)";
+
+/* Class = "NSButtonCell"; title = "Zorg voor niet-afbreekbare spatie voor punctuatie"; ObjectID = "37"; */
+"37.title" = "Zorg voor niet-afbreekbare spatie voor punctuatie";
+
+/* Class = "NSButtonCell"; title = "Verwijder extra witruimte achter een string"; ObjectID = "38"; */
+"38.title" = "Verwijder extra witruimte achter een string";
+
+/* Class = "NSButtonCell"; title = "Annuleer"; ObjectID = "39"; */
+"39.title" = "Annuleer";
+
+/* Class = "NSButtonCell"; title = "Schoon op"; ObjectID = "40"; */
+"40.title" = "Schoon op";
+
+/* Class = "NSTextFieldCell"; title = "Pas toe op:"; ObjectID = "41"; */
+"41.title" = "Pas toe op:";
+
+/* Class = "NSButtonCell"; title = "Markeer gewijzigde tekst als \"ter controle\""; ObjectID = "44"; */
+"44.title" = "Markeer gewijzigde tekst als \"ter controle\"";
+
+/* Class = "NSButtonCell"; title = "Vervang ' door ' (apostrof door enkel aanhalingsteken)"; ObjectID = "45"; */
+"45.title" = "Vervang ' door ' (apostrof door enkel aanhalingsteken)";

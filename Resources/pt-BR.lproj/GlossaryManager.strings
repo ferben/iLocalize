@@ -1,0 +1,78 @@
+
+/* Class = "NSWindow"; title = "Navegador de Glossários"; ObjectID = "109"; */
+"109.title" = "Navegador de Glossários";
+
+/* Class = "NSTableColumn"; headerCell.title = "Caminho"; ObjectID = "116"; */
+"116.headerCell.title" = "Caminho";
+
+/* Class = "NSTextFieldCell"; title = "Célula de Texto"; ObjectID = "119"; */
+"119.title" = "Célula de Texto";
+
+/* Class = "NSMenu"; title = "Outras Visualizações"; ObjectID = "135"; */
+"135.title" = "Outras Visualizações";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "136"; */
+"136.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "137"; */
+"137.title" = "Item 2";
+
+/* Class = "NSMenu"; title = "Outras Visualizações"; ObjectID = "142"; */
+"142.title" = "Outras Visualizações";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "144"; */
+"144.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "145"; */
+"145.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Mostrar no Finder"; ObjectID = "157"; */
+"157.title" = "Mostrar no Finder";
+
+/* Class = "NSMenuItem"; title = "Combinar…"; ObjectID = "169"; */
+"169.title" = "Combinar…";
+
+/* Class = "NSMenuItem"; title = "Excluir"; ObjectID = "170"; */
+"170.title" = "Excluir";
+
+/* Class = "NSMenuItem"; title = "Abrir"; ObjectID = "172"; */
+"172.title" = "Abrir";
+
+/* Class = "NSMenuItem"; title = "Mostrar no Finder"; ObjectID = "201"; */
+"201.title" = "Mostrar no Finder";
+
+/* Class = "NSMenuItem"; title = "Remover"; ObjectID = "206"; */
+"206.title" = "Remover";
+
+/* Class = "NSTableColumn"; headerCell.title = "Nome"; ObjectID = "225"; */
+"225.headerCell.title" = "Nome";
+
+/* Class = "NSTableColumn"; headerCell.title = "Idioma Base"; ObjectID = "226"; */
+"226.headerCell.title" = "Idioma Base";
+
+/* Class = "NSTextFieldCell"; title = "Célula de Texto"; ObjectID = "227"; */
+"227.title" = "Célula de Texto";
+
+/* Class = "NSTextFieldCell"; title = "Célula de Texto"; ObjectID = "228"; */
+"228.title" = "Célula de Texto";
+
+/* Class = "NSTableColumn"; headerCell.title = "Idioma de Destino"; ObjectID = "229"; */
+"229.headerCell.title" = "Idioma de Destino";
+
+/* Class = "NSTextFieldCell"; title = "Célula de Texto"; ObjectID = "230"; */
+"230.title" = "Célula de Texto";
+
+/* Class = "NSTableColumn"; headerCell.title = "Itens"; ObjectID = "231"; */
+"231.headerCell.title" = "Itens";
+
+/* Class = "NSTextFieldCell"; title = "Célula de Texto"; ObjectID = "232"; */
+"232.title" = "Célula de Texto";
+
+/* Class = "NSMenuItem"; title = "Adicionar…"; ObjectID = "263"; */
+"263.title" = "Adicionar…";
+
+/* Class = "NSToolbarItem"; label = "Buscar"; ObjectID = "281"; */
+"281.label" = "Buscar";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Buscar"; ObjectID = "281"; */
+"281.paletteLabel" = "Buscar";

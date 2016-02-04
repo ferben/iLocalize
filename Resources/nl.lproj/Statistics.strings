@@ -1,0 +1,57 @@
+
+/* Class = "NSWindow"; title = "Statistieken"; ObjectID = "5"; */
+"5.title" = "Statistieken";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "19"; */
+"19.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "lklkl"; ObjectID = "20"; */
+"20.title" = "lklkl";
+
+/* Class = "NSMenuItem"; title = "abab"; ObjectID = "21"; */
+"21.title" = "abab";
+
+/* Class = "NSMenuItem"; title = "Alles"; ObjectID = "22"; */
+"22.title" = "Alles";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "67"; */
+"67.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "per string"; ObjectID = "68"; */
+"68.title" = "per string";
+
+/* Class = "NSMenuItem"; title = "per teken"; ObjectID = "69"; */
+"69.title" = "per teken";
+
+/* Class = "NSMenuItem"; title = "per woord"; ObjectID = "70"; */
+"70.title" = "per woord";
+
+/* Class = "NSTableColumn"; headerCell.title = "#"; ObjectID = "108"; */
+"108.headerCell.title" = "#";
+
+/* Class = "NSTableColumn"; headerCell.title = "Alles"; ObjectID = "109"; */
+"109.headerCell.title" = "Alles";
+
+/* Class = "NSTableColumn"; headerCell.title = "Te vertalen"; ObjectID = "110"; */
+"110.headerCell.title" = "Te vertalen";
+
+/* Class = "NSButtonCell"; title = "Kopieer naar klembord"; ObjectID = "120"; */
+"120.title" = "Kopieer naar klembord";
+
+/* Class = "NSButtonCell"; title = "Sluit"; ObjectID = "121"; */
+"121.title" = "Sluit";
+
+/* Class = "NSTextFieldCell"; title = "Taal:"; ObjectID = "122"; */
+"122.title" = "Taal:";
+
+/* Class = "NSTextFieldCell"; title = "Opmerking: deze statistieken zijn alleen van toepassing op strings en XIBs/NIBs."; ObjectID = "124"; */
+"124.title" = "Opmerking: deze statistieken zijn alleen van toepassing op strings en XIBs/NIBs.";
+
+/* Class = "NSTextFieldCell"; title = "Statistieken verzamelen…"; ObjectID = "125"; */
+"125.title" = "Statistieken verzamelen…";
+
+/* Class = "NSTextFieldCell"; title = "1"; ObjectID = "127"; */
+"127.title" = "1";
+
+/* Class = "NSTextFieldCell"; title = "Tarief:"; ObjectID = "128"; */
+"128.title" = "Tarief:";

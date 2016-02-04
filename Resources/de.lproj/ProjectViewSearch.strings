@@ -1,0 +1,15 @@
+
+/* Class = "NSButtonCell"; title = "Sichern"; ObjectID = "14"; */
+"14.title" = "Sichern";
+
+/* Class = "NSTextFieldCell"; placeholderString = "Ersatz-Zeichenfolge eingeben"; ObjectID = "28"; */
+"28.placeholderString" = "Ersatz-Zeichenfolge eingeben";
+
+/* Class = "NSButtonCell"; title = "Ersetzen"; ObjectID = "30"; */
+"30.title" = "Ersetzen";
+
+/* Class = "NSButtonCell"; title = "Alles ersetzen"; ObjectID = "33"; */
+"33.title" = "Alles ersetzen";
+
+/* Class = "NSTextFieldCell"; title = "Bereich:"; ObjectID = "98"; */
+"98.title" = "Bereich:";

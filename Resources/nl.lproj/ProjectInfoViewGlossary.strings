@@ -1,0 +1,18 @@
+
+/* Class = "NSTextFieldCell"; title = "Tekst"; ObjectID = "60"; */
+"60.title" = "Tekst";
+
+/* Class = "NSMenuItem"; title = "Gebruik selectie"; ObjectID = "83"; */
+"83.title" = "Gebruik selectie";
+
+/* Class = "NSMenuItem"; title = "Kopieer selectie naar klembord"; ObjectID = "84"; */
+"84.title" = "Kopieer selectie naar klembord";
+
+/* Class = "NSMenuItem"; title = "Blader door woordenlijsten…"; ObjectID = "85"; */
+"85.title" = "Blader door woordenlijsten…";
+
+/* Class = "NSMenuItem"; title = "Bereik…"; ObjectID = "88"; */
+"88.title" = "Bereik…";
+
+/* Class = "NSMenuItem"; title = "Toon selectie"; ObjectID = "97"; */
+"97.title" = "Toon selectie";

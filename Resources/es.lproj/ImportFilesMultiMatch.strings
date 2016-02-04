@@ -1,0 +1,9 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Origen"; ObjectID = "8"; */
+"8.headerCell.title" = "Origen";
+
+/* Class = "NSTableColumn"; headerCell.title = "Archivo correspondiente del proyecto"; ObjectID = "9"; */
+"9.headerCell.title" = "Archivo correspondiente del proyecto";
+
+/* Class = "NSTextFieldCell"; title = "Los nombres de los siguientes archivos coinciden con más de un archivo del proyecto.\nSeleccione el archivo correspondiente del proyecto para cada uno."; ObjectID = "137"; */
+"137.title" = "Los nombres de los siguientes archivos coinciden con más de un archivo del proyecto.\nSeleccione el archivo correspondiente del proyecto para cada uno.";

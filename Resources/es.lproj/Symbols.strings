@@ -1,0 +1,66 @@
+
+/* Class = "NSWindow"; title = "Símbolos"; ObjectID = "782"; */
+"782.title" = "Símbolos";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "955"; */
+"955.title" = "Box";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "957"; */
+"957.title" = "Box";
+
+/* Class = "NSTextFieldCell"; title = "Comprobar el diseño (solo archivos XIB/NIB)"; ObjectID = "1777"; */
+"1777.title" = "Comprobar el diseño (solo archivos XIB/NIB)";
+
+/* Class = "NSTextFieldCell"; title = "El contenido del archivo se debe guardar en el disco"; ObjectID = "1781"; */
+"1781.title" = "El contenido del archivo se debe guardar en el disco";
+
+/* Class = "NSTextFieldCell"; title = "Nombre de archivo en negrita:"; ObjectID = "1782"; */
+"1782.title" = "Nombre de archivo en negrita:";
+
+/* Class = "NSTextFieldCell"; title = "El archivo tiene incoherencias"; ObjectID = "1790"; */
+"1790.title" = "El archivo tiene incoherencias";
+
+/* Class = "NSTextFieldCell"; title = "El archivo no existe en el disco"; ObjectID = "1792"; */
+"1792.title" = "El archivo no existe en el disco";
+
+/* Class = "NSTextFieldCell"; title = "El contenido del archivo se debe volver a cargar desde el disco"; ObjectID = "1794"; */
+"1794.title" = "El contenido del archivo se debe volver a cargar desde el disco";
+
+/* Class = "NSTextFieldCell"; title = "El archivo se ha añadido en la última operación de actualización"; ObjectID = "1797"; */
+"1797.title" = "El archivo se ha añadido en la última operación de actualización";
+
+/* Class = "NSTextFieldCell"; title = "El archivo se ha actualizado en la última operación de actualización"; ObjectID = "1798"; */
+"1798.title" = "El archivo se ha actualizado en la última operación de actualización";
+
+/* Class = "NSTextFieldCell"; title = "✒"; ObjectID = "1799"; */
+"1799.title" = "✒";
+
+/* Class = "NSTextFieldCell"; title = "Identifica el archivo que contiene los segmentos seleccionados (solo cuando se seleccionan varios archivos)"; ObjectID = "1800"; */
+"1800.title" = "Identifica el archivo que contiene los segmentos seleccionados (solo cuando se seleccionan varios archivos)";
+
+/* Class = "NSTextFieldCell"; title = "Símbolos de archivos"; ObjectID = "1801"; */
+"1801.title" = "Símbolos de archivos";
+
+/* Class = "NSTextFieldCell"; title = "Símbolos de segmento"; ObjectID = "1802"; */
+"1802.title" = "Símbolos de segmento";
+
+/* Class = "NSTextFieldCell"; title = "Autoinvariante"; ObjectID = "1804"; */
+"1804.title" = "Autoinvariante";
+
+/* Class = "NSTextFieldCell"; title = "Invariante"; ObjectID = "1806"; */
+"1806.title" = "Invariante";
+
+/* Class = "NSTextFieldCell"; title = "Autotraducido"; ObjectID = "1807"; */
+"1807.title" = "Autotraducido";
+
+/* Class = "NSTextFieldCell"; title = "Base modificada"; ObjectID = "1811"; */
+"1811.title" = "Base modificada";
+
+/* Class = "NSTextFieldCell"; title = "Por traducir"; ObjectID = "1813"; */
+"1813.title" = "Por traducir";
+
+/* Class = "NSTextFieldCell"; title = "Incoherencias"; ObjectID = "1816"; */
+"1816.title" = "Incoherencias";
+
+/* Class = "NSTextFieldCell"; title = "File has been updated during last update operation"; ObjectID = "hi2-yW-vJG"; */
+"hi2-yW-vJG.title" = "File has been updated during last update operation";

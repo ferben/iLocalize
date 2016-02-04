@@ -1,0 +1,51 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "Considerar caracteres de controle e caracteres de escape como idênticos"; ObjectID = "330"; */
+"330.ibShadowedToolTip" = "Considerar caracteres de controle e caracteres de escape como idênticos";
+
+/* Class = "NSButtonCell"; title = "Ignorar maiúsc./minúsc."; ObjectID = "474"; */
+"474.title" = "Ignorar maiúsc./minúsc.";
+
+/* Class = "NSTextFieldCell"; title = "Tradução:"; ObjectID = "476"; */
+"476.title" = "Tradução:";
+
+/* Class = "NSButtonCell"; title = "Somente leitura"; ObjectID = "482"; */
+"482.title" = "Somente leitura";
+
+/* Class = "NSTextFieldCell"; title = "Idioma Base:"; ObjectID = "483"; */
+"483.title" = "Idioma Base:";
+
+/* Class = "NSButtonCell"; title = "Ignorar caracteres de controle"; ObjectID = "484"; */
+"484.title" = "Ignorar caracteres de controle";
+
+/* Class = "NSTextFieldCell"; title = "Propagar Tradução:"; ObjectID = "491"; */
+"491.title" = "Propagar Tradução:";
+
+/* Class = "NSMenu"; title = "Outras Visualizações"; ObjectID = "494"; */
+"494.title" = "Outras Visualizações";
+
+/* Class = "NSMenuItem"; title = "Desativado"; ObjectID = "495"; */
+"495.title" = "Desativado";
+
+/* Class = "NSMenuItem"; title = "Automaticamente Para Arquivos Selecionados"; ObjectID = "496"; */
+"496.title" = "Automaticamente Para Arquivos Selecionados";
+
+/* Class = "NSMenuItem"; title = "Automaticamente para Todos os Arquivos"; ObjectID = "497"; */
+"497.title" = "Automaticamente para Todos os Arquivos";
+
+/* Class = "NSTextFieldCell"; title = "Modo:"; ObjectID = "501"; */
+"501.title" = "Modo:";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "503"; */
+"503.title" = "Radio";
+
+/* Class = "NSButtonCell"; title = "Desenvolvedor"; ObjectID = "504"; */
+"504.title" = "Desenvolvedor";
+
+/* Class = "NSButtonCell"; title = "Tradutor"; ObjectID = "509"; */
+"509.title" = "Tradutor";
+
+/* Class = "NSButtonCell"; title = "Reset Warnings"; ObjectID = "4qb-iu-nB5"; */
+"4qb-iu-nB5.title" = "Reset Warnings";
+
+/* Class = "NSTextFieldCell"; title = "Reset all dialog warnings:"; ObjectID = "UVZ-qQ-zdX"; */
+"UVZ-qQ-zdX.title" = "Reset all dialog warnings:";

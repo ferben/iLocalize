@@ -1,0 +1,33 @@
+
+/* Class = "NSWindow"; title = "Konzole"; ObjectID = "5"; */
+"5.title" = "Konzole";
+
+/* Class = "NSMenu"; title = "Jiný pohled"; ObjectID = "77"; */
+"77.title" = "Jiný pohled";
+
+/* Class = "NSMenuItem"; title = "Ukázat Protokoly a chyby"; ObjectID = "79"; */
+"79.title" = "Ukázat Protokoly a chyby";
+
+/* Class = "NSMenuItem"; title = "Ukázat Pouze chyby"; ObjectID = "81"; */
+"81.title" = "Ukázat Pouze chyby";
+
+/* Class = "NSMenuItem"; title = "Ukázat Pouze Protokoly"; ObjectID = "82"; */
+"82.title" = "Ukázat Pouze Protokoly";
+
+/* Class = "NSButtonCell"; title = "Vyčistit"; ObjectID = "109"; */
+"109.title" = "Vyčistit";
+
+/* Class = "NSButtonCell"; title = "Obnovit"; ObjectID = "111"; */
+"111.title" = "Obnovit";
+
+/* Class = "NSTextFieldCell"; title = "Smazat Protokoly starší než"; ObjectID = "112"; */
+"112.title" = "Smazat Protokoly starší než";
+
+/* Class = "NSTextFieldCell"; title = "7"; ObjectID = "113"; */
+"113.title" = "7";
+
+/* Class = "NSButtonCell"; title = "Exportovat..."; ObjectID = "117"; */
+"117.title" = "Exportovat...";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "135"; */
+"135.title" = "Text Cell";

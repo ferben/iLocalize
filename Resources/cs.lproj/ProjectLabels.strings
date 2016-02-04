@@ -1,0 +1,36 @@
+
+/* Class = "NSWindow"; title = "Visačky"; ObjectID = "31"; */
+"31.title" = "Visačky";
+
+/* Class = "NSTableColumn"; headerCell.title = "Popis"; ObjectID = "37"; */
+"37.headerCell.title" = "Popis";
+
+/* Class = "NSTableColumn"; headerCell.title = "ID"; ObjectID = "38"; */
+"38.headerCell.title" = "ID";
+
+/* Class = "NSTableColumn"; headerCell.title = "Barva"; ObjectID = "39"; */
+"39.headerCell.title" = "Barva";
+
+/* Class = "NSMenu"; title = "Nabídka"; ObjectID = "55"; */
+"55.title" = "Nabídka";
+
+/* Class = "NSMenuItem"; title = "Bílá"; ObjectID = "56"; */
+"56.title" = "Bílá";
+
+/* Class = "NSMenuItem"; title = "Černá"; ObjectID = "57"; */
+"57.title" = "Černá";
+
+/* Class = "NSMenuItem"; title = "Červená"; ObjectID = "58"; */
+"58.title" = "Červená";
+
+/* Class = "NSMenuItem"; title = "Zelená"; ObjectID = "59"; */
+"59.title" = "Zelená";
+
+/* Class = "NSMenuItem"; title = "Modrá"; ObjectID = "60"; */
+"60.title" = "Modrá";
+
+/* Class = "NSButtonCell"; title = "-"; ObjectID = "70"; */
+"70.title" = "-";
+
+/* Class = "NSButtonCell"; title = "Budiž"; ObjectID = "72"; */
+"72.title" = "Budiž";

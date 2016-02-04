@@ -1,0 +1,45 @@
+
+/* Class = "NSWindow"; title = "Limpiar"; ObjectID = "5"; */
+"5.title" = "Limpiar";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "15"; */
+"15.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Archivos seleccionados"; ObjectID = "16"; */
+"16.title" = "Archivos seleccionados";
+
+/* Class = "NSMenuItem"; title = "idioma seleccionado"; ObjectID = "17"; */
+"17.title" = "idioma seleccionado";
+
+/* Class = "NSMenuItem"; title = "Todo el proyecto"; ObjectID = "18"; */
+"18.title" = "Todo el proyecto";
+
+/* Class = "NSMenuItem"; title = "Segmentos seleccionados"; ObjectID = "19"; */
+"19.title" = "Segmentos seleccionados";
+
+/* Class = "NSButtonCell"; title = "Remplazar \" por “ (comillas inglesas dobles)"; ObjectID = "35"; */
+"35.title" = "Remplazar \" por “ (comillas inglesas dobles)";
+
+/* Class = "NSButtonCell"; title = "Remplazar ... por … (puntos suspensivos)"; ObjectID = "36"; */
+"36.title" = "Remplazar ... por … (puntos suspensivos)";
+
+/* Class = "NSButtonCell"; title = "Asegurar espacios irrompibles antes de los signos de puntuación"; ObjectID = "37"; */
+"37.title" = "Asegurar espacios irrompibles antes de los signos de puntuación";
+
+/* Class = "NSButtonCell"; title = "Eliminar espacios en blanco al final del segmento"; ObjectID = "38"; */
+"38.title" = "Eliminar espacios en blanco al final del segmento";
+
+/* Class = "NSButtonCell"; title = "Cancelar"; ObjectID = "39"; */
+"39.title" = "Cancelar";
+
+/* Class = "NSButtonCell"; title = "Limpiar"; ObjectID = "40"; */
+"40.title" = "Limpiar";
+
+/* Class = "NSTextFieldCell"; title = "Aplicar a:"; ObjectID = "41"; */
+"41.title" = "Aplicar a:";
+
+/* Class = "NSButtonCell"; title = "Marcar los segmentos modificados como «por comprobar»"; ObjectID = "44"; */
+"44.title" = "Marcar los segmentos modificados como «por comprobar»";
+
+/* Class = "NSButtonCell"; title = "Remplazar ' por ’ (apostrofo por comilla inglesa sencilla)"; ObjectID = "45"; */
+"45.title" = "Remplazar ' por ’ (apostrofo por comilla inglesa sencilla)";

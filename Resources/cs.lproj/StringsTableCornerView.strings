@@ -1,0 +1,27 @@
+
+/* Class = "NSMenuItem"; title = "   Třídit dle hodnoty"; ObjectID = "5"; */
+"5.title" = "   Třídit dle hodnoty";
+
+/* Class = "NSMenuItem"; title = "   Třídit dle komentáře"; ObjectID = "6"; */
+"6.title" = "   Třídit dle komentáře";
+
+/* Class = "NSMenuItem"; title = "   Třídit dle hodnoty"; ObjectID = "7"; */
+"7.title" = "   Třídit dle hodnoty";
+
+/* Class = "NSMenuItem"; title = "Sloupec původního jazyka"; ObjectID = "8"; */
+"8.title" = "Sloupec původního jazyka";
+
+/* Class = "NSMenu"; title = "Nabídka"; ObjectID = "9"; */
+"9.title" = "Nabídka";
+
+/* Class = "NSMenuItem"; title = "Sloupec překladu"; ObjectID = "11"; */
+"11.title" = "Sloupec překladu";
+
+/* Class = "NSMenuItem"; title = "   Třídit dle komentáře"; ObjectID = "12"; */
+"12.title" = "   Třídit dle komentáře";
+
+/* Class = "NSMenuItem"; title = "Zobrazení"; ObjectID = "18"; */
+"18.title" = "Zobrazení";
+
+/* Class = "NSMenuItem"; title = "   Šuplík komentářů"; ObjectID = "19"; */
+"19.title" = "   Šuplík komentářů";

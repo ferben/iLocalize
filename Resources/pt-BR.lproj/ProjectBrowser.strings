@@ -1,0 +1,39 @@
+
+/* Class = "NSWindow"; title = "Navegador de Projetos"; ObjectID = "5"; */
+"5.title" = "Navegador de Projetos";
+
+/* Class = "BindingConnection"; ibShadowedDisplayName = "Nome"; ObjectID = "70"; */
+"70.ibShadowedDisplayName" = "Nome";
+
+/* Class = "NSButtonCell"; title = "Nova…"; ObjectID = "72"; */
+"72.title" = "Nova…";
+
+/* Class = "NSMenuItem"; title = "Apagar…"; ObjectID = "90"; */
+"90.title" = "Apagar…";
+
+/* Class = "NSMenuItem"; title = "Mostrar no Finder"; ObjectID = "91"; */
+"91.title" = "Mostrar no Finder";
+
+/* Class = "NSMenuItem"; title = "Abrir"; ObjectID = "92"; */
+"92.title" = "Abrir";
+
+/* Class = "NSMenuItem"; title = "Ordenar por"; ObjectID = "95"; */
+"95.title" = "Ordenar por";
+
+/* Class = "NSMenu"; title = "Ordenar por"; ObjectID = "96"; */
+"96.title" = "Ordenar por";
+
+/* Class = "NSMenuItem"; title = "Data de Modificação"; ObjectID = "98"; */
+"98.title" = "Data de Modificação";
+
+/* Class = "NSMenuItem"; title = "Nome"; ObjectID = "99"; */
+"99.title" = "Nome";
+
+/* Class = "NSMenu"; title = "Outras Visualizações"; ObjectID = "109"; */
+"109.title" = "Outras Visualizações";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "111"; */
+"111.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "112"; */
+"112.title" = "Item 3";

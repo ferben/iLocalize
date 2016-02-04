@@ -1,0 +1,51 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "Cчитать управляющие знаки и знаки перехода идентичными"; ObjectID = "330"; */
+"330.ibShadowedToolTip" = "Cчитать управляющие знаки и знаки перехода идентичными";
+
+/* Class = "NSButtonCell"; title = "Не учитывать регистр"; ObjectID = "474"; */
+"474.title" = "Не учитывать регистр";
+
+/* Class = "NSTextFieldCell"; title = "Перевод:"; ObjectID = "476"; */
+"476.title" = "Перевод:";
+
+/* Class = "NSButtonCell"; title = "Только чтение"; ObjectID = "482"; */
+"482.title" = "Только чтение";
+
+/* Class = "NSTextFieldCell"; title = "Базовый язык:"; ObjectID = "483"; */
+"483.title" = "Базовый язык:";
+
+/* Class = "NSButtonCell"; title = "Не учитывать управляющие знаки"; ObjectID = "484"; */
+"484.title" = "Не учитывать управляющие знаки";
+
+/* Class = "NSTextFieldCell"; title = "Распространять перевод:"; ObjectID = "491"; */
+"491.title" = "Распространять перевод:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "494"; */
+"494.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Отключено"; ObjectID = "495"; */
+"495.title" = "Отключено";
+
+/* Class = "NSMenuItem"; title = "Автоматически для выбранных файлов"; ObjectID = "496"; */
+"496.title" = "Автоматически для выбранных файлов";
+
+/* Class = "NSMenuItem"; title = "Автоматически для всех файлов"; ObjectID = "497"; */
+"497.title" = "Автоматически для всех файлов";
+
+/* Class = "NSTextFieldCell"; title = "Режим:"; ObjectID = "501"; */
+"501.title" = "Режим:";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "503"; */
+"503.title" = "Radio";
+
+/* Class = "NSButtonCell"; title = "Разработчик"; ObjectID = "504"; */
+"504.title" = "Разработчик";
+
+/* Class = "NSButtonCell"; title = "Переводчик"; ObjectID = "509"; */
+"509.title" = "Переводчик";
+
+/* Class = "NSButtonCell"; title = "Reset Warnings"; ObjectID = "4qb-iu-nB5"; */
+"4qb-iu-nB5.title" = "Reset Warnings";
+
+/* Class = "NSTextFieldCell"; title = "Reset all dialog warnings:"; ObjectID = "UVZ-qQ-zdX"; */
+"UVZ-qQ-zdX.title" = "Reset all dialog warnings:";

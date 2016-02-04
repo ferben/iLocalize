@@ -1,0 +1,15 @@
+
+/* Class = "NSButtonCell"; title = "保存"; ObjectID = "14"; */
+"14.title" = "保存";
+
+/* Class = "NSTextFieldCell"; placeholderString = "置換する文字列を入力して下さい"; ObjectID = "28"; */
+"28.placeholderString" = "置換する文字列を入力して下さい";
+
+/* Class = "NSButtonCell"; title = "置換"; ObjectID = "30"; */
+"30.title" = "置換";
+
+/* Class = "NSButtonCell"; title = "すべて置換"; ObjectID = "33"; */
+"33.title" = "すべて置換";
+
+/* Class = "NSTextFieldCell"; title = "検索範囲:"; ObjectID = "98"; */
+"98.title" = "検索範囲:";

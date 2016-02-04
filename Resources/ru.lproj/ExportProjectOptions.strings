@@ -1,0 +1,72 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "Сжатие NIB файлов уменьшает размер NIB файлов, но также и предотвращает возможность локализовать их или открыть в Interface Builder."; ObjectID = "26"; */
+"26.ibShadowedToolTip" = "Сжатие NIB файлов уменьшает размер NIB файлов, но также и предотвращает возможность локализовать их или открыть в Interface Builder.";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Откройте почтовый клиент по умолчанию и вложите экспортируемый файл в новое пустое сообщение электронной почты"; ObjectID = "77"; */
+"77.ibShadowedToolTip" = "Откройте почтовый клиент по умолчанию и вложите экспортируемый файл в новое пустое сообщение электронной почты";
+
+/* Class = "NSButtonCell"; title = "Сжать NIB файлы"; ObjectID = "170"; */
+"170.title" = "Сжать NIB файлы";
+
+/* Class = "NSButtonCell"; title = "Сжатая ZIP-папка"; ObjectID = "177"; */
+"177.title" = "Сжатая ZIP-папка";
+
+/* Class = "NSButtonCell"; title = "Автоматически подготовить к отправке по электронной почте"; ObjectID = "178"; */
+"178.title" = "Автоматически подготовить к отправке по электронной почте";
+
+/* Class = "NSTextFieldCell"; title = "Тема:"; ObjectID = "219"; */
+"219.title" = "Тема:";
+
+/* Class = "NSTextFieldCell"; title = "Сообщение:"; ObjectID = "221"; */
+"221.title" = "Сообщение:";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Экспортировать только те папки, которые содержат язык (lproj)"; ObjectID = "253"; */
+"253.ibShadowedToolTip" = "Экспортировать только те папки, которые содержат язык (lproj)";
+
+/* Class = "NSButtonCell"; title = "Только языковые папки"; ObjectID = "254"; */
+"254.title" = "Только языковые папки";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Экспорт проекта в качестве папки, которую Finder может открыть вместо использования оригинального расширения пакета"; ObjectID = "256"; */
+"256.ibShadowedToolTip" = "Экспорт проекта в качестве папки, которую Finder может открыть вместо использования оригинального расширения пакета";
+
+/* Class = "NSButtonCell"; title = "Папка"; ObjectID = "257"; */
+"257.title" = "Папка";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Экспортировать только те папки, которые содержат язык (lproj)"; ObjectID = "262"; */
+"262.ibShadowedToolTip" = "Экспортировать только те папки, которые содержат язык (lproj)";
+
+/* Class = "NSButtonCell"; title = "Включить номер версии"; ObjectID = "263"; */
+"263.title" = "Включить номер версии";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Экспортировать только те папки, которые содержат язык (lproj)"; ObjectID = "265"; */
+"265.ibShadowedToolTip" = "Экспортировать только те папки, которые содержат язык (lproj)";
+
+/* Class = "NSButtonCell"; title = "Включить имена экспортируемых языков"; ObjectID = "266"; */
+"266.title" = "Включить имена экспортируемых языков";
+
+/* Class = "NSTextFieldCell"; title = "<output-name-sample>"; ObjectID = "278"; */
+"278.title" = "<output-name-sample>";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Сжатие NIB файлов уменьшает размер NIB файлов, но также и предотвращает возможность локализовать их или открыть в Interface Builder."; ObjectID = "287"; */
+"287.ibShadowedToolTip" = "Сжатие NIB файлов уменьшает размер NIB файлов, но также и предотвращает возможность локализовать их или открыть в Interface Builder.";
+
+/* Class = "NSButtonCell"; title = "Convert nib to xib files"; ObjectID = "288"; */
+"288.title" = "Convert nib to xib files";
+
+/* Class = "NSBox"; title = "Формат выхода"; ObjectID = "4LP-Rt-bQH"; */
+"4LP-Rt-bQH.title" = "Формат выхода";
+
+/* Class = "NSBox"; title = "Последующая обработка"; ObjectID = "O8e-tz-Pid"; */
+"O8e-tz-Pid.title" = "Последующая обработка";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Enter the recipient e-mail address"; ObjectID = "d1S-np-O0Q"; */
+"d1S-np-O0Q.ibShadowedIsNilPlaceholder" = "Enter the recipient e-mail address";
+
+/* Class = "NSTextFieldCell"; title = "Subject:"; ObjectID = "dgD-W1-lcF"; */
+"dgD-W1-lcF.title" = "Subject:";
+
+/* Class = "NSBox"; title = "Имя выхода"; ObjectID = "hzV-oN-mXT"; */
+"hzV-oN-mXT.title" = "Имя выхода";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Enter the subject of the e-mail"; ObjectID = "jbL-CX-1Zi"; */
+"jbL-CX-1Zi.ibShadowedIsNilPlaceholder" = "Enter the subject of the e-mail";

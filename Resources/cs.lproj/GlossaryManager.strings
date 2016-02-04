@@ -1,0 +1,78 @@
+
+/* Class = "NSWindow"; title = "Správa slovníků"; ObjectID = "109"; */
+"109.title" = "Správa slovníků";
+
+/* Class = "NSTableColumn"; headerCell.title = "Cesta"; ObjectID = "116"; */
+"116.headerCell.title" = "Cesta";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "119"; */
+"119.title" = "Text Cell";
+
+/* Class = "NSMenu"; title = "Jiný pohled"; ObjectID = "135"; */
+"135.title" = "Jiný pohled";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "136"; */
+"136.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "137"; */
+"137.title" = "Item 2";
+
+/* Class = "NSMenu"; title = "Jiný pohled"; ObjectID = "142"; */
+"142.title" = "Jiný pohled";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "144"; */
+"144.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "145"; */
+"145.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Ukázat ve Finderu"; ObjectID = "157"; */
+"157.title" = "Ukázat ve Finderu";
+
+/* Class = "NSMenuItem"; title = "Sloučit…"; ObjectID = "169"; */
+"169.title" = "Sloučit…";
+
+/* Class = "NSMenuItem"; title = "Smazat"; ObjectID = "170"; */
+"170.title" = "Smazat";
+
+/* Class = "NSMenuItem"; title = "Otevřít"; ObjectID = "172"; */
+"172.title" = "Otevřít";
+
+/* Class = "NSMenuItem"; title = "Ukázat ve Finderu"; ObjectID = "201"; */
+"201.title" = "Ukázat ve Finderu";
+
+/* Class = "NSMenuItem"; title = "Odebrat"; ObjectID = "206"; */
+"206.title" = "Odebrat";
+
+/* Class = "NSTableColumn"; headerCell.title = "Názvu"; ObjectID = "225"; */
+"225.headerCell.title" = "Názvu";
+
+/* Class = "NSTableColumn"; headerCell.title = "Původní jazyk"; ObjectID = "226"; */
+"226.headerCell.title" = "Původní jazyk";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "227"; */
+"227.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "228"; */
+"228.title" = "Text Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "Cílový jazyk"; ObjectID = "229"; */
+"229.headerCell.title" = "Cílový jazyk";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "230"; */
+"230.title" = "Text Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "pol."; ObjectID = "231"; */
+"231.headerCell.title" = "pol.";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "232"; */
+"232.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Přidat…"; ObjectID = "263"; */
+"263.title" = "Přidat…";
+
+/* Class = "NSToolbarItem"; label = "Hledat"; ObjectID = "281"; */
+"281.label" = "Hledat";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Hledat"; ObjectID = "281"; */
+"281.paletteLabel" = "Hledat";

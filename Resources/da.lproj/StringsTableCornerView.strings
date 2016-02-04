@@ -1,0 +1,27 @@
+
+/* Class = "NSMenuItem"; title = "   Sorter efter værdi"; ObjectID = "5"; */
+"5.title" = "   Sorter efter værdi";
+
+/* Class = "NSMenuItem"; title = "   Sorter efter kommentar"; ObjectID = "6"; */
+"6.title" = "   Sorter efter kommentar";
+
+/* Class = "NSMenuItem"; title = "   Sorter efter værdi"; ObjectID = "7"; */
+"7.title" = "   Sorter efter værdi";
+
+/* Class = "NSMenuItem"; title = "Base-kolonne"; ObjectID = "8"; */
+"8.title" = "Base-kolonne";
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "9"; */
+"9.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "Oversættelseskolonne"; ObjectID = "11"; */
+"11.title" = "Oversættelseskolonne";
+
+/* Class = "NSMenuItem"; title = "   Sorter efter kommentar"; ObjectID = "12"; */
+"12.title" = "   Sorter efter kommentar";
+
+/* Class = "NSMenuItem"; title = "Vis"; ObjectID = "18"; */
+"18.title" = "Vis";
+
+/* Class = "NSMenuItem"; title = "   Vis/Skjul kommentarer"; ObjectID = "19"; */
+"19.title" = "   Vis/Skjul kommentarer";

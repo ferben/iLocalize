@@ -1,0 +1,18 @@
+
+/* Class = "NSButtonCell"; title = "Agradecimientos"; ObjectID = "4"; */
+"4.title" = "Agradecimientos";
+
+/* Class = "NSButtonCell"; title = "Acuerdo de licencia"; ObjectID = "6"; */
+"6.title" = "Acuerdo de licencia";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "9"; */
+"9.title" = "Box";
+
+/* Class = "NSTextFieldCell"; title = "iLocalize"; ObjectID = "11"; */
+"11.title" = "iLocalize";
+
+/* Class = "NSTextFieldCell"; title = "Versión 4.0"; ObjectID = "13"; */
+"13.title" = "Versión 4.0";
+
+/* Class = "NSTextFieldCell"; title = "Copyright (c) 2010 Arizona Software"; ObjectID = "15"; */
+"15.title" = "Copyright (c) 2010 Arizona Software";

@@ -1,0 +1,24 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Idioma"; ObjectID = "14"; */
+"14.headerCell.title" = "Idioma";
+
+/* Class = "NSButtonCell"; title = "Actualizar un idioma localizado con estos archivos"; ObjectID = "51"; */
+"51.title" = "Actualizar un idioma localizado con estos archivos";
+
+/* Class = "NSTextFieldCell"; title = "Actualizar el idioma base y rehacer la base de los demás idiomas. Todos los segmentos de los demás idiomas quedarán localizados de acuerdo con la traducción activa."; ObjectID = "52"; */
+"52.title" = "Actualizar el idioma base y rehacer la base de los demás idiomas. Todos los segmentos de los demás idiomas quedarán localizados de acuerdo con la traducción activa.";
+
+/* Class = "NSButtonCell"; title = "Reajustar el diseño de cada archivo NIB localizado con el diseño del archivo del idioma base"; ObjectID = "53"; */
+"53.title" = "Reajustar el diseño de cada archivo NIB localizado con el diseño del archivo del idioma base";
+
+/* Class = "NSButtonCell"; title = "Actualizar el proyecto con una versión nueva de estos archivos"; ObjectID = "54"; */
+"54.title" = "Actualizar el proyecto con una versión nueva de estos archivos";
+
+/* Class = "NSTextFieldCell"; title = "Seleccione el idioma que quiera actualizar"; ObjectID = "56"; */
+"56.title" = "Seleccione el idioma que quiera actualizar";
+
+/* Class = "NSTextFieldCell"; title = "Revise los archivos NIB localizados para asegurarse de que todos los diseños son correctos."; ObjectID = "59"; */
+"59.title" = "Revise los archivos NIB localizados para asegurarse de que todos los diseños son correctos.";
+
+/* Class = "NSButtonCell"; title = "Actualizar los diseños de los archivos NIB con los diseños de los archivos importados"; ObjectID = "61"; */
+"61.title" = "Actualizar los diseños de los archivos NIB con los diseños de los archivos importados";

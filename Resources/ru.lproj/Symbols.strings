@@ -1,0 +1,66 @@
+
+/* Class = "NSWindow"; title = "Символы"; ObjectID = "782"; */
+"782.title" = "Символы";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "955"; */
+"955.title" = "Box";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "957"; */
+"957.title" = "Box";
+
+/* Class = "NSTextFieldCell"; title = "Проверьте разметку макета (только для XIB/NIB)"; ObjectID = "1777"; */
+"1777.title" = "Проверьте разметку макета (только для XIB/NIB)";
+
+/* Class = "NSTextFieldCell"; title = "Содержимое файла следует сохранить на диске"; ObjectID = "1781"; */
+"1781.title" = "Содержимое файла следует сохранить на диске";
+
+/* Class = "NSTextFieldCell"; title = "Имя выделено полужирным:"; ObjectID = "1782"; */
+"1782.title" = "Имя выделено полужирным:";
+
+/* Class = "NSTextFieldCell"; title = "Файл имеет некоторые несоответствия"; ObjectID = "1790"; */
+"1790.title" = "Файл имеет некоторые несоответствия";
+
+/* Class = "NSTextFieldCell"; title = "Файл отсутствует на диске"; ObjectID = "1792"; */
+"1792.title" = "Файл отсутствует на диске";
+
+/* Class = "NSTextFieldCell"; title = "Содержимое файла должено быть перезагружено с диска"; ObjectID = "1794"; */
+"1794.title" = "Содержимое файла должено быть перезагружено с диска";
+
+/* Class = "NSTextFieldCell"; title = "Файл был добавлен во время последнего обновления"; ObjectID = "1797"; */
+"1797.title" = "Файл был добавлен во время последнего обновления";
+
+/* Class = "NSTextFieldCell"; title = "Файл был обновлен во время последнего обновления"; ObjectID = "1798"; */
+"1798.title" = "Файл был обновлен во время последнего обновления";
+
+/* Class = "NSTextFieldCell"; title = "✒"; ObjectID = "1799"; */
+"1799.title" = "✒";
+
+/* Class = "NSTextFieldCell"; title = "Указывает файл, содержащий выбранные строки (только когда выбрано несколько файлов)"; ObjectID = "1800"; */
+"1800.title" = "Указывает файл, содержащий выбранные строки (только когда выбрано несколько файлов)";
+
+/* Class = "NSTextFieldCell"; title = "Символы файла"; ObjectID = "1801"; */
+"1801.title" = "Символы файла";
+
+/* Class = "NSTextFieldCell"; title = "Символы строки"; ObjectID = "1802"; */
+"1802.title" = "Символы строки";
+
+/* Class = "NSTextFieldCell"; title = "Авто-инвариант"; ObjectID = "1804"; */
+"1804.title" = "Авто-инвариант";
+
+/* Class = "NSTextFieldCell"; title = "Инвариант"; ObjectID = "1806"; */
+"1806.title" = "Инвариант";
+
+/* Class = "NSTextFieldCell"; title = "Авто-перевод"; ObjectID = "1807"; */
+"1807.title" = "Авто-перевод";
+
+/* Class = "NSTextFieldCell"; title = "Последнее изменение"; ObjectID = "1811"; */
+"1811.title" = "Последнее изменение";
+
+/* Class = "NSTextFieldCell"; title = "Нужно перевсести"; ObjectID = "1813"; */
+"1813.title" = "Нужно перевсести";
+
+/* Class = "NSTextFieldCell"; title = "Несоответствия"; ObjectID = "1816"; */
+"1816.title" = "Несоответствия";
+
+/* Class = "NSTextFieldCell"; title = "File has been updated during last update operation"; ObjectID = "hi2-yW-vJG"; */
+"hi2-yW-vJG.title" = "File has been updated during last update operation";

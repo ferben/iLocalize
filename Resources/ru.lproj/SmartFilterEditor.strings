@@ -1,0 +1,51 @@
+
+/* Class = "NSWindow"; title = "Редактор промежуточных фильтров"; ObjectID = "1"; */
+"1.title" = "Редактор промежуточных фильтров";
+
+/* Class = "NSMenuItem"; title = "из след. условий выполняются"; ObjectID = "25"; */
+"25.title" = "из след. условий выполняются";
+
+/* Class = "NSMenuItem"; title = "Любое"; ObjectID = "26"; */
+"26.title" = "Любое";
+
+/* Class = "NSMenuItem"; title = "Все"; ObjectID = "27"; */
+"27.title" = "Все";
+
+/* Class = "NSTextFieldCell"; title = "Имя фильтра:"; ObjectID = "51"; */
+"51.title" = "Имя фильтра:";
+
+/* Class = "NSButtonCell"; title = "ОК"; ObjectID = "55"; */
+"55.title" = "ОК";
+
+/* Class = "NSButtonCell"; title = "Отменить"; ObjectID = "57"; */
+"57.title" = "Отменить";
+
+/* Class = "NSMenuItem"; title = "как"; ObjectID = "128"; */
+"128.title" = "как";
+
+/* Class = "NSMenuItem"; title = "адрес"; ObjectID = "129"; */
+"129.title" = "адрес";
+
+/* Class = "NSMenuItem"; title = "подпись"; ObjectID = "130"; */
+"130.title" = "подпись";
+
+/* Class = "NSMenuItem"; title = "содержит"; ObjectID = "132"; */
+"132.title" = "содержит";
+
+/* Class = "NSMenuItem"; title = "начинается с"; ObjectID = "133"; */
+"133.title" = "начинается с";
+
+/* Class = "NSMenuItem"; title = "заканчивается на"; ObjectID = "134"; */
+"134.title" = "заканчивается на";
+
+/* Class = "NSMenuItem"; title = "совпадает с"; ObjectID = "135"; */
+"135.title" = "совпадает с";
+
+/* Class = "NSMenuItem"; title = "не совпадает с"; ObjectID = "136"; */
+"136.title" = "не совпадает с";
+
+/* Class = "NSButtonCell"; title = "Доступный во всех проектах"; ObjectID = "142"; */
+"142.title" = "Доступный во всех проектах";
+
+/* Class = "NSTextFieldCell"; title = "Нажмите клавишу ⌥ (клавиша Option) для получения дополнительных параметров"; ObjectID = "145"; */
+"145.title" = "Нажмите клавишу ⌥ (клавиша Option) для получения дополнительных параметров";

@@ -1,0 +1,54 @@
+
+/* Class = "NSWindow"; title = "新規用語集"; ObjectID = "5"; */
+"5.title" = "新規用語集";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "9"; */
+"9.title" = "Item2";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "10"; */
+"10.title" = "Item1";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "11"; */
+"11.title" = "Item3";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "12"; */
+"12.title" = "OtherViews";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "41"; */
+"41.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "選択された文字列"; ObjectID = "42"; */
+"42.title" = "選択された文字列";
+
+/* Class = "NSMenuItem"; title = "すべてのファイル"; ObjectID = "43"; */
+"43.title" = "すべてのファイル";
+
+/* Class = "NSMenuItem"; title = "選択されたファイル"; ObjectID = "45"; */
+"45.title" = "選択されたファイル";
+
+/* Class = "NSTextFieldCell"; title = "用語集の名前:"; ObjectID = "71"; */
+"71.title" = "用語集の名前:";
+
+/* Class = "NSTextFieldCell"; title = "使用範囲:"; ObjectID = "72"; */
+"72.title" = "使用範囲:";
+
+/* Class = "NSTextFieldCell"; title = "含める文字列:"; ObjectID = "75"; */
+"75.title" = "含める文字列:";
+
+/* Class = "NSButtonCell"; title = "作成"; ObjectID = "77"; */
+"77.title" = "作成";
+
+/* Class = "NSButtonCell"; title = "キャンセル"; ObjectID = "78"; */
+"78.title" = "キャンセル";
+
+/* Class = "NSTextFieldCell"; title = "文字列の追加元:"; ObjectID = "79"; */
+"79.title" = "文字列の追加元:";
+
+/* Class = "NSButtonCell"; title = "翻訳済みの文字列"; ObjectID = "82"; */
+"82.title" = "翻訳済みの文字列";
+
+/* Class = "NSButtonCell"; title = "翻訳が必要な文字列"; ObjectID = "83"; */
+"83.title" = "翻訳が必要な文字列";
+
+/* Class = "NSButtonCell"; title = "ロックされている文字列"; ObjectID = "84"; */
+"84.title" = "ロックされている文字列";

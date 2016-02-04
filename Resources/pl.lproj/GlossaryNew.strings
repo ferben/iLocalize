@@ -1,0 +1,54 @@
+
+/* Class = "NSWindow"; title = "Nowy słownik"; ObjectID = "5"; */
+"5.title" = "Nowy słownik";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "9"; */
+"9.title" = "Item2";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "10"; */
+"10.title" = "Item1";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "11"; */
+"11.title" = "Item3";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "12"; */
+"12.title" = "OtherViews";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "41"; */
+"41.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "wybrane łańcuchy"; ObjectID = "42"; */
+"42.title" = "wybrane łańcuchy";
+
+/* Class = "NSMenuItem"; title = "wszystkie pliki"; ObjectID = "43"; */
+"43.title" = "wszystkie pliki";
+
+/* Class = "NSMenuItem"; title = "zaznaczone pliki"; ObjectID = "45"; */
+"45.title" = "zaznaczone pliki";
+
+/* Class = "NSTextFieldCell"; title = "Nazwa słownika:"; ObjectID = "71"; */
+"71.title" = "Nazwa słownika:";
+
+/* Class = "NSTextFieldCell"; title = "Dostępny w:"; ObjectID = "72"; */
+"72.title" = "Dostępny w:";
+
+/* Class = "NSTextFieldCell"; title = "Dołącz:"; ObjectID = "75"; */
+"75.title" = "Dołącz:";
+
+/* Class = "NSButtonCell"; title = "Utwórz"; ObjectID = "77"; */
+"77.title" = "Utwórz";
+
+/* Class = "NSButtonCell"; title = "Anuluj"; ObjectID = "78"; */
+"78.title" = "Anuluj";
+
+/* Class = "NSTextFieldCell"; title = "Dodaj łańcuchy z:"; ObjectID = "79"; */
+"79.title" = "Dodaj łańcuchy z:";
+
+/* Class = "NSButtonCell"; title = "Przetłumaczone łańcuchy"; ObjectID = "82"; */
+"82.title" = "Przetłumaczone łańcuchy";
+
+/* Class = "NSButtonCell"; title = "Nieprzetłumaczone łańcuchy"; ObjectID = "83"; */
+"83.title" = "Nieprzetłumaczone łańcuchy";
+
+/* Class = "NSButtonCell"; title = "Łańcuchy zablokowane"; ObjectID = "84"; */
+"84.title" = "Łańcuchy zablokowane";

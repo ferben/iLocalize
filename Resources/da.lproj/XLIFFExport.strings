@@ -1,0 +1,54 @@
+
+/* Class = "NSTextFieldCell"; title = "Kilde-sprog:"; ObjectID = "3"; */
+"3.title" = "Kilde-sprog:";
+
+/* Class = "NSTextFieldCell"; title = "Mål-sprog:"; ObjectID = "5"; */
+"5.title" = "Mål-sprog:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "8"; */
+"8.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "9"; */
+"9.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "10"; */
+"10.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "11"; */
+"11.title" = "Item 3";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "14"; */
+"14.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "15"; */
+"15.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "16"; */
+"16.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "17"; */
+"17.title" = "Item 3";
+
+/* Class = "NSTextFieldCell"; title = "Output-arkiv:"; ObjectID = "19"; */
+"19.title" = "Output-arkiv:";
+
+/* Class = "NSButtonCell"; title = "Vælg…"; ObjectID = "23"; */
+"23.title" = "Vælg…";
+
+/* Class = "NSPathCell"; placeholderString = "Intet arkiv valgt"; ObjectID = "25"; */
+"25.placeholderString" = "Intet arkiv valgt";
+
+/* Class = "NSTextFieldCell"; title = "Format:"; ObjectID = "42"; */
+"42.title" = "Format:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "48"; */
+"48.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "49"; */
+"49.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "50"; */
+"50.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "51"; */
+"51.title" = "Item 3";

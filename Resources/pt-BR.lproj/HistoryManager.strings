@@ -1,0 +1,30 @@
+
+/* Class = "NSWindow"; title = "Instantâneos"; ObjectID = "5"; */
+"5.title" = "Instantâneos";
+
+/* Class = "NSTableColumn"; headerCell.title = "Captura"; ObjectID = "9"; */
+"9.headerCell.title" = "Captura";
+
+/* Class = "NSTableColumn"; headerCell.title = "Data"; ObjectID = "10"; */
+"10.headerCell.title" = "Data";
+
+/* Class = "NSWindow"; title = "Nova Captura"; ObjectID = "14"; */
+"14.title" = "Nova Captura";
+
+/* Class = "NSDateFormatter"; ibShadowedDateFormat = "%d.%m.%y %H:%M"; ObjectID = "46"; */
+"46.ibShadowedDateFormat" = "%d.%m.%y %H:%M";
+
+/* Class = "NSButtonCell"; title = "Excluir"; ObjectID = "48"; */
+"48.title" = "Excluir";
+
+/* Class = "NSButtonCell"; title = "Fechar"; ObjectID = "49"; */
+"49.title" = "Fechar";
+
+/* Class = "NSTextFieldCell"; title = "Nome da Captura:"; ObjectID = "50"; */
+"50.title" = "Nome da Captura:";
+
+/* Class = "NSButtonCell"; title = "Criar"; ObjectID = "52"; */
+"52.title" = "Criar";
+
+/* Class = "NSButtonCell"; title = "Cancelar"; ObjectID = "53"; */
+"53.title" = "Cancelar";

@@ -1,0 +1,9 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Bron"; ObjectID = "8"; */
+"8.headerCell.title" = "Bron";
+
+/* Class = "NSTableColumn"; headerCell.title = "Overeenkomend projectbestand"; ObjectID = "9"; */
+"9.headerCell.title" = "Overeenkomend projectbestand";
+
+/* Class = "NSTextFieldCell"; title = "De volgende bestanden hebben meerdere overeenkomsten binnen het project. Selecteer voor elke het overeenkomstige bestand:"; ObjectID = "137"; */
+"137.title" = "De volgende bestanden hebben meerdere overeenkomsten binnen het project. Selecteer voor elke het overeenkomstige bestand:";

@@ -1,0 +1,15 @@
+
+/* Class = "NSWindow"; title = "Kontroller projekt"; ObjectID = "5"; */
+"5.title" = "Kontroller projekt";
+
+/* Class = "NSTextFieldCell"; title = "Kontroller for uoverensstemmelser i de følgende sprog:"; ObjectID = "34"; */
+"34.title" = "Kontroller for uoverensstemmelser i de følgende sprog:";
+
+/* Class = "NSButtonCell"; title = "Annuller"; ObjectID = "35"; */
+"35.title" = "Annuller";
+
+/* Class = "NSButtonCell"; title = "Kontroller"; ObjectID = "36"; */
+"36.title" = "Kontroller";
+
+/* Class = "NSButtonCell"; title = "Kontroller"; ObjectID = "51"; */
+"51.title" = "Kontroller";

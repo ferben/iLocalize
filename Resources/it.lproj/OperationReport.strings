@@ -1,0 +1,21 @@
+
+/* Class = "NSWindow"; title = "Rapporto Azione"; ObjectID = "5"; */
+"5.title" = "Rapporto Azione";
+
+/* Class = "NSTableColumn"; headerCell.title = "Tipo"; ObjectID = "11"; */
+"11.headerCell.title" = "Tipo";
+
+/* Class = "NSTableColumn"; headerCell.title = "Descrizione"; ObjectID = "64"; */
+"64.headerCell.title" = "Descrizione";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "65"; */
+"65.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "L’azione si è completata con i seguenti errori e avvisi:"; ObjectID = "78"; */
+"78.title" = "L’azione si è completata con i seguenti errori e avvisi:";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "79"; */
+"79.title" = "OK";
+
+/* Class = "NSButtonCell"; title = "Esporta…"; ObjectID = "80"; */
+"80.title" = "Esporta…";

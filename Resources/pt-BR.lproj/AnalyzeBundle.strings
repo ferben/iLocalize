@@ -1,0 +1,12 @@
+
+/* Class = "NSTextFieldCell"; title = "Célula de Texto"; ObjectID = "10"; */
+"10.title" = "Célula de Texto";
+
+/* Class = "NSButtonCell"; title = "Copiar para Área de Transferência"; ObjectID = "12"; */
+"12.title" = "Copiar para Área de Transferência";
+
+/* Class = "NSButtonCell"; title = "Mostrar no Finder"; ObjectID = "14"; */
+"14.title" = "Mostrar no Finder";
+
+/* Class = "NSTextFieldCell"; title = "Os seguintes problemas foram detectados e exigem sua atenção:"; ObjectID = "24"; */
+"24.title" = "Os seguintes problemas foram detectados e exigem sua atenção:";

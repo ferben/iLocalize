@@ -1,0 +1,18 @@
+
+/* Class = "NSMenuItem"; title = "   Classer par chemin d’accès"; ObjectID = "5"; */
+"5.title" = "   Classer par chemin d’accès";
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "6"; */
+"6.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "   Classer par nom"; ObjectID = "7"; */
+"7.title" = "   Classer par nom";
+
+/* Class = "NSMenuItem"; title = "   Classer par numéro de chaînes"; ObjectID = "8"; */
+"8.title" = "   Classer par numéro de chaînes";
+
+/* Class = "NSMenuItem"; title = "Colonne Fichier"; ObjectID = "9"; */
+"9.title" = "Colonne Fichier";
+
+/* Class = "NSMenuItem"; title = "   Commuter entre chemin d’accès optimal et complet"; ObjectID = "15"; */
+"15.title" = "   Commuter entre chemin d’accès optimal et complet";

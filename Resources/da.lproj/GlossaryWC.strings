@@ -1,0 +1,45 @@
+
+/* Class = "NSWindow"; title = "<ordbog>"; ObjectID = "5"; */
+"5.title" = "<ordbog>";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "160"; */
+"160.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "161"; */
+"161.title" = "Text Cell";
+
+/* Class = "NSToolbarItem"; label = "Søg"; ObjectID = "177"; */
+"177.label" = "Søg";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Søg"; ObjectID = "177"; */
+"177.paletteLabel" = "Søg";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "193"; */
+"193.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "195"; */
+"195.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "196"; */
+"196.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Slet valgte emner"; ObjectID = "202"; */
+"202.title" = "Slet valgte emner";
+
+/* Class = "NSMenuItem"; title = "Fjern dubletter"; ObjectID = "203"; */
+"203.title" = "Fjern dubletter";
+
+/* Class = "NSMenuItem"; title = "Omdøb base-sprog…"; ObjectID = "204"; */
+"204.title" = "Omdøb base-sprog…";
+
+/* Class = "NSMenuItem"; title = "Omdøb mål-sprog…"; ObjectID = "206"; */
+"206.title" = "Omdøb mål-sprog…";
+
+/* Class = "NSTextFieldCell"; title = "<-----do not localize------>"; ObjectID = "221"; */
+"221.title" = "<-----do not localize------>";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Info"; ObjectID = "222"; */
+"222.paletteLabel" = "Info";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Denne ordbog befinder sig ikke i nogen af iLocalizes kendte stier. Klik for at afgøre, hvad der skal gøres med den."; ObjectID = "230"; */
+"230.ibShadowedToolTip" = "Denne ordbog befinder sig ikke i nogen af iLocalizes kendte stier. Klik for at afgøre, hvad der skal gøres med den.";

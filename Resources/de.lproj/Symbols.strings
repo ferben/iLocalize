@@ -1,0 +1,66 @@
+
+/* Class = "NSWindow"; title = "Symbole"; ObjectID = "782"; */
+"782.title" = "Symbole";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "955"; */
+"955.title" = "Box";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "957"; */
+"957.title" = "Box";
+
+/* Class = "NSTextFieldCell"; title = "Layout kontrollieren (nur XIB/NIB)"; ObjectID = "1777"; */
+"1777.title" = "Layout kontrollieren (nur XIB/NIB)";
+
+/* Class = "NSTextFieldCell"; title = "Sichern erforderlich"; ObjectID = "1781"; */
+"1781.title" = "Sichern erforderlich";
+
+/* Class = "NSTextFieldCell"; title = "Dateiname fett:"; ObjectID = "1782"; */
+"1782.title" = "Dateiname fett:";
+
+/* Class = "NSTextFieldCell"; title = "Die Datei weist Inkonsistenzen auf"; ObjectID = "1790"; */
+"1790.title" = "Die Datei weist Inkonsistenzen auf";
+
+/* Class = "NSTextFieldCell"; title = "Datei auf Festplatte nicht vorhanden"; ObjectID = "1792"; */
+"1792.title" = "Datei auf Festplatte nicht vorhanden";
+
+/* Class = "NSTextFieldCell"; title = "Aktualisierung von Festplatte erforderlich"; ObjectID = "1794"; */
+"1794.title" = "Aktualisierung von Festplatte erforderlich";
+
+/* Class = "NSTextFieldCell"; title = "Die Datei wurde während der letzten Aktualisierung hinzugefügt"; ObjectID = "1797"; */
+"1797.title" = "Die Datei wurde während der letzten Aktualisierung hinzugefügt";
+
+/* Class = "NSTextFieldCell"; title = "Die Datei wurde während der letzten Aktualisierung geändert"; ObjectID = "1798"; */
+"1798.title" = "Die Datei wurde während der letzten Aktualisierung geändert";
+
+/* Class = "NSTextFieldCell"; title = "✒"; ObjectID = "1799"; */
+"1799.title" = "✒";
+
+/* Class = "NSTextFieldCell"; title = "Zeigt die aktuelle Datei an (bei Auswahl mehrerer Dateien)."; ObjectID = "1800"; */
+"1800.title" = "Zeigt die aktuelle Datei an (bei Auswahl mehrerer Dateien).";
+
+/* Class = "NSTextFieldCell"; title = "Dateisymbole"; ObjectID = "1801"; */
+"1801.title" = "Dateisymbole";
+
+/* Class = "NSTextFieldCell"; title = "Zeichenfolgensymbole"; ObjectID = "1802"; */
+"1802.title" = "Zeichenfolgensymbole";
+
+/* Class = "NSTextFieldCell"; title = "Unverändert übernommen"; ObjectID = "1804"; */
+"1804.title" = "Unverändert übernommen";
+
+/* Class = "NSTextFieldCell"; title = "Unverändert"; ObjectID = "1806"; */
+"1806.title" = "Unverändert";
+
+/* Class = "NSTextFieldCell"; title = "Automatisch übersetzt"; ObjectID = "1807"; */
+"1807.title" = "Automatisch übersetzt";
+
+/* Class = "NSTextFieldCell"; title = "Ausgangssprache geändert"; ObjectID = "1811"; */
+"1811.title" = "Ausgangssprache geändert";
+
+/* Class = "NSTextFieldCell"; title = "Zu übersetzen"; ObjectID = "1813"; */
+"1813.title" = "Zu übersetzen";
+
+/* Class = "NSTextFieldCell"; title = "Inkonsistenzen"; ObjectID = "1816"; */
+"1816.title" = "Inkonsistenzen";
+
+/* Class = "NSTextFieldCell"; title = "File has been updated during last update operation"; ObjectID = "hi2-yW-vJG"; */
+"hi2-yW-vJG.title" = "File has been updated during last update operation";

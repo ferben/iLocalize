@@ -1,0 +1,12 @@
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "10"; */
+"10.title" = "Text Cell";
+
+/* Class = "NSButtonCell"; title = "Copiar en el Portapapeles"; ObjectID = "12"; */
+"12.title" = "Copiar en el Portapapeles";
+
+/* Class = "NSButtonCell"; title = "Revelar en el Finder"; ObjectID = "14"; */
+"14.title" = "Revelar en el Finder";
+
+/* Class = "NSTextFieldCell"; title = "Se han detectado los siguientes problemas que precisan que les preste atención:"; ObjectID = "24"; */
+"24.title" = "Se han detectado los siguientes problemas que precisan que les preste atención:";

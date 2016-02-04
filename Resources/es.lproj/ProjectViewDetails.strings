@@ -1,0 +1,12 @@
+
+/* Class = "NSButtonCell"; ibExternalAccessibilityDescription = "Vista de glosarios"; ObjectID = "52"; */
+"52.ibExternalAccessibilityDescription" = "Vista de glosarios";
+
+/* Class = "NSButtonCell"; ibExternalAccessibilityDescription = "Vista de información del segmento"; ObjectID = "53"; */
+"53.ibExternalAccessibilityDescription" = "Vista de información del segmento";
+
+/* Class = "NSButtonCell"; ibExternalAccessibilityDescription = "Vista alternativa"; ObjectID = "55"; */
+"55.ibExternalAccessibilityDescription" = "Vista alternativa";
+
+/* Class = "NSButtonCell"; ibExternalAccessibilityDescription = "Vista de información de archivos"; ObjectID = "74"; */
+"74.ibExternalAccessibilityDescription" = "Vista de información de archivos";

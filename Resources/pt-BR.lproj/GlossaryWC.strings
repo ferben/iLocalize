@@ -1,0 +1,45 @@
+
+/* Class = "NSWindow"; title = "<glossário>"; ObjectID = "5"; */
+"5.title" = "<glossário>";
+
+/* Class = "NSTextFieldCell"; title = "Célula de Texto"; ObjectID = "160"; */
+"160.title" = "Célula de Texto";
+
+/* Class = "NSTextFieldCell"; title = "Célula de Texto"; ObjectID = "161"; */
+"161.title" = "Célula de Texto";
+
+/* Class = "NSToolbarItem"; label = "Buscar"; ObjectID = "177"; */
+"177.label" = "Buscar";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Buscar"; ObjectID = "177"; */
+"177.paletteLabel" = "Buscar";
+
+/* Class = "NSMenu"; title = "Outras Visualizações"; ObjectID = "193"; */
+"193.title" = "Outras Visualizações";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "195"; */
+"195.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "196"; */
+"196.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Apagar Entradas Selecionadas"; ObjectID = "202"; */
+"202.title" = "Apagar Entradas Selecionadas";
+
+/* Class = "NSMenuItem"; title = "Remover Entradas Selecionadas"; ObjectID = "203"; */
+"203.title" = "Remover Entradas Selecionadas";
+
+/* Class = "NSMenuItem"; title = "Renomear Idioma Base…"; ObjectID = "204"; */
+"204.title" = "Renomear Idioma Base…";
+
+/* Class = "NSMenuItem"; title = "Renomear Idioma de Destino…"; ObjectID = "206"; */
+"206.title" = "Renomear Idioma de Destino…";
+
+/* Class = "NSTextFieldCell"; title = "<-----do not localize------>"; ObjectID = "221"; */
+"221.title" = "<-----do not localize------>";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Informações"; ObjectID = "222"; */
+"222.paletteLabel" = "Informações";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Este glossário não está localizado em nenhum dos caminhos conhecidos do iLocalize. Clique para decidir o que fazer com ele."; ObjectID = "230"; */
+"230.ibShadowedToolTip" = "Este glossário não está localizado em nenhum dos caminhos conhecidos do iLocalize. Clique para decidir o que fazer com ele.";

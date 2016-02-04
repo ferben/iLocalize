@@ -1,0 +1,114 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "進捗"; ObjectID = "31"; */
+"31.headerCell.title" = "進捗";
+
+/* Class = "NSTableColumn"; headerCell.title = "タイプ"; ObjectID = "32"; */
+"32.headerCell.title" = "タイプ";
+
+/* Class = "NSTableColumn"; headerCell.title = "ファイル"; ObjectID = "33"; */
+"33.headerCell.title" = "ファイル";
+
+/* Class = "NSTableColumn"; headerCell.title = "行数"; ObjectID = "104"; */
+"104.headerCell.title" = "行数";
+
+/* Class = "NSMenuItem"; title = "保存"; ObjectID = "264"; */
+"264.title" = "保存";
+
+/* Class = "NSMenuItem"; title = "Finder に表示"; ObjectID = "265"; */
+"265.title" = "Finder に表示";
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "266"; */
+"266.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "外部エディタで開く"; ObjectID = "267"; */
+"267.title" = "外部エディタで開く";
+
+/* Class = "NSMenuItem"; title = "削除"; ObjectID = "278"; */
+"278.title" = "削除";
+
+/* Class = "NSMenuItem"; title = "承認"; ObjectID = "323"; */
+"323.title" = "承認";
+
+/* Class = "NSMenuItem"; title = "英語から再構築"; ObjectID = "336"; */
+"336.title" = "英語から再構築";
+
+/* Class = "NSMenuItem"; title = "再読み込み"; ObjectID = "378"; */
+"378.title" = "再読み込み";
+
+/* Class = "NSMenuItem"; title = "行末コードを変換…"; ObjectID = "397"; */
+"397.title" = "行末コードを変換…";
+
+/* Class = "NSMenuItem"; title = "Strings ファイルとして書き出す…"; ObjectID = "434"; */
+"434.title" = "Strings ファイルとして書き出す…";
+
+/* Class = "NSMenuItem"; title = "Strings ファイルを使って翻訳…"; ObjectID = "436"; */
+"436.title" = "Strings ファイルを使って翻訳…";
+
+/* Class = "NSMenuItem"; title = "警告を表示…"; ObjectID = "541"; */
+"541.title" = "警告を表示…";
+
+/* Class = "NSMenuItem"; title = "更新ファイルを示すシンボルを消去"; ObjectID = "544"; */
+"544.title" = "更新ファイルを示すシンボルを消去";
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "559"; */
+"559.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "ファイル"; ObjectID = "560"; */
+"560.title" = "ファイル";
+
+/* Class = "NSMenuItem"; title = "タイプ"; ObjectID = "561"; */
+"561.title" = "タイプ";
+
+/* Class = "NSMenuItem"; title = "行数"; ObjectID = "563"; */
+"563.title" = "行数";
+
+/* Class = "NSMenuItem"; title = "進捗"; ObjectID = "564"; */
+"564.title" = "進捗";
+
+/* Class = "NSMenuItem"; title = "エンコーディング"; ObjectID = "580"; */
+"580.title" = "エンコーディング";
+
+/* Class = "NSTableColumn"; headerCell.title = "ラベル"; ObjectID = "583"; */
+"583.headerCell.title" = "ラベル";
+
+/* Class = "NSMenuItem"; title = "ラベル"; ObjectID = "587"; */
+"587.title" = "ラベル";
+
+/* Class = "NSMenuItem"; title = "ラベル"; ObjectID = "593"; */
+"593.title" = "ラベル";
+
+/* Class = "NSMenuItem"; title = "無視"; ObjectID = "596"; */
+"596.title" = "無視";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "809"; */
+"809.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "810"; */
+"810.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "811"; */
+"811.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "812"; */
+"812.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "815"; */
+"815.title" = "Text Cell";
+
+/* Class = "NSButtonCell"; title = "文字列がベース文字列と異なる場合にのみ翻訳する"; ObjectID = "1145"; */
+"1145.title" = "文字列がベース文字列と異なる場合にのみ翻訳する";
+
+/* Class = "NSTableColumn"; headerCell.title = "状態"; ObjectID = "1160"; */
+"1160.headerCell.title" = "状態";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "1161"; */
+"1161.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "状態"; ObjectID = "1163"; */
+"1163.title" = "状態";
+
+/* Class = "NSMenuItem"; title = "直前のファイルと現在のファイルを外部エディタで開く"; ObjectID = "1173"; */
+"1173.title" = "直前のファイルと現在のファイルを外部エディタで開く";
+
+/* Class = "NSMenuItem"; title = "直前のファイルとの差分を表示"; ObjectID = "1174"; */
+"1174.title" = "直前のファイルとの差分を表示";

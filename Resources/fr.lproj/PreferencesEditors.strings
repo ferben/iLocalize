@@ -1,0 +1,48 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Extension"; ObjectID = "8"; */
+"8.headerCell.title" = "Extension";
+
+/* Class = "NSTableColumn"; headerCell.title = "Nom ou chemin d’accès complet de l’application"; ObjectID = "9"; */
+"9.headerCell.title" = "Nom ou chemin d’accès complet de l’application";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "42"; */
+"42.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "43"; */
+"43.title" = "Item3";
+
+/* Class = "NSMenuItem"; title = "Images"; ObjectID = "44"; */
+"44.title" = "Images";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "45"; */
+"45.title" = "Item2";
+
+/* Class = "NSTableColumn"; headerCell.title = "Extension"; ObjectID = "48"; */
+"48.headerCell.title" = "Extension";
+
+/* Class = "NSWindow"; title = "Tableau"; ObjectID = "95"; */
+"95.title" = "Tableau";
+
+/* Class = "NSTextFieldCell"; title = "Extension :"; ObjectID = "203"; */
+"203.title" = "Extension :";
+
+/* Class = "NSTextFieldCell"; title = "Application :"; ObjectID = "204"; */
+"204.title" = "Application :";
+
+/* Class = "NSButtonCell"; title = "Sélectionner…"; ObjectID = "207"; */
+"207.title" = "Sélectionner…";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "208"; */
+"208.title" = "OK";
+
+/* Class = "NSButtonCell"; title = "Annuler"; ObjectID = "209"; */
+"209.title" = "Annuler";
+
+/* Class = "NSTabViewItem"; label = "Intégré"; ObjectID = "222"; */
+"222.label" = "Intégré";
+
+/* Class = "NSTabViewItem"; label = "Externe"; ObjectID = "223"; */
+"223.label" = "Externe";
+
+/* Class = "NSTextFieldCell"; title = "Type :"; ObjectID = "231"; */
+"231.title" = "Type :";

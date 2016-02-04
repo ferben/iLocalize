@@ -1,0 +1,18 @@
+
+/* Class = "NSMenuItem"; title = "   Třídit dle cesty"; ObjectID = "5"; */
+"5.title" = "   Třídit dle cesty";
+
+/* Class = "NSMenu"; title = "Nabídka"; ObjectID = "6"; */
+"6.title" = "Nabídka";
+
+/* Class = "NSMenuItem"; title = "   Třídit dle názvu"; ObjectID = "7"; */
+"7.title" = "   Třídit dle názvu";
+
+/* Class = "NSMenuItem"; title = "   Třídit dle počtu řetězců"; ObjectID = "8"; */
+"8.title" = "   Třídit dle počtu řetězců";
+
+/* Class = "NSMenuItem"; title = "Sloupec soubor"; ObjectID = "9"; */
+"9.title" = "Sloupec soubor";
+
+/* Class = "NSMenuItem"; title = "   Šuplík Chytré/Plné cesty"; ObjectID = "15"; */
+"15.title" = "   Šuplík Chytré/Plné cesty";

@@ -2,7 +2,7 @@
 # ================================================================================
 #
 # Author       : Ulf Dunkel (fd)
-# Co-Authors   : -
+# Co-Authors   : Thorsten Lemke (TL)
 # --------------------------------------------------------------------------------
 # Things to do : -
 # --------------------------------------------------------------------------------
@@ -17,5 +17,10 @@
 #               - started to replace deprecated functions
 #   fd  Feb 04: - TableViewCustom.m: replacement for deprecated -(NSDragOperation)draggingSourceOperationMaskForLocal:(BOOL)isLocal
 #               - TimerTool stuff deactivated (deprecated and unused so far)
+# 2016:
+#   fd  Jan:    debugging for OS X 10.11
+#   TL  Jan:    debugging for OS X 10.11
+#   fd  Feb 04: - using Base Internationalization (Base I18n)
+#               - all localized stuff re-added
 #
 # --------------------------------------------------------------------------------

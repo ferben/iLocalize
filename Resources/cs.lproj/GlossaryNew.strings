@@ -1,0 +1,54 @@
+
+/* Class = "NSWindow"; title = "Nový slovník"; ObjectID = "5"; */
+"5.title" = "Nový slovník";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "9"; */
+"9.title" = "Item2";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "10"; */
+"10.title" = "Item1";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "11"; */
+"11.title" = "Item3";
+
+/* Class = "NSMenu"; title = "Jiný pohled"; ObjectID = "12"; */
+"12.title" = "Jiný pohled";
+
+/* Class = "NSMenu"; title = "Jiný pohled"; ObjectID = "41"; */
+"41.title" = "Jiný pohled";
+
+/* Class = "NSMenuItem"; title = "Vybrané řetězce"; ObjectID = "42"; */
+"42.title" = "Vybrané řetězce";
+
+/* Class = "NSMenuItem"; title = "Všechny soubory"; ObjectID = "43"; */
+"43.title" = "Všechny soubory";
+
+/* Class = "NSMenuItem"; title = "Vybrané soubory"; ObjectID = "45"; */
+"45.title" = "Vybrané soubory";
+
+/* Class = "NSTextFieldCell"; title = "Název slovníku:"; ObjectID = "71"; */
+"71.title" = "Název slovníku:";
+
+/* Class = "NSTextFieldCell"; title = "Cesta:"; ObjectID = "72"; */
+"72.title" = "Cesta:";
+
+/* Class = "NSTextFieldCell"; title = "Zahrnout řetězce:"; ObjectID = "75"; */
+"75.title" = "Zahrnout řetězce:";
+
+/* Class = "NSButtonCell"; title = "Vytvořit"; ObjectID = "77"; */
+"77.title" = "Vytvořit";
+
+/* Class = "NSButtonCell"; title = "Zrušit"; ObjectID = "78"; */
+"78.title" = "Zrušit";
+
+/* Class = "NSTextFieldCell"; title = "Rozsah:"; ObjectID = "79"; */
+"79.title" = "Rozsah:";
+
+/* Class = "NSButtonCell"; title = "Přeložené"; ObjectID = "82"; */
+"82.title" = "Přeložené";
+
+/* Class = "NSButtonCell"; title = "Nepřeložené"; ObjectID = "83"; */
+"83.title" = "Nepřeložené";
+
+/* Class = "NSButtonCell"; title = "Zamčené"; ObjectID = "84"; */
+"84.title" = "Zamčené";

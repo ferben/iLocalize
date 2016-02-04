@@ -1,0 +1,12 @@
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "10"; */
+"10.title" = "Text Cell";
+
+/* Class = "NSButtonCell"; title = "In Zwischenablage kopieren"; ObjectID = "12"; */
+"12.title" = "In Zwischenablage kopieren";
+
+/* Class = "NSButtonCell"; title = "Im Finder zeigen"; ObjectID = "14"; */
+"14.title" = "Im Finder zeigen";
+
+/* Class = "NSTextFieldCell"; title = "Die folgenden Probleme wurden gefunden und sollten überprüft werden:"; ObjectID = "24"; */
+"24.title" = "Die folgenden Probleme wurden gefunden und sollten überprüft werden:";

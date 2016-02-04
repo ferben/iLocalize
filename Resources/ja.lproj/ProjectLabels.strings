@@ -1,0 +1,36 @@
+
+/* Class = "NSWindow"; title = "ラベル"; ObjectID = "31"; */
+"31.title" = "ラベル";
+
+/* Class = "NSTableColumn"; headerCell.title = "説明"; ObjectID = "37"; */
+"37.headerCell.title" = "説明";
+
+/* Class = "NSTableColumn"; headerCell.title = "ID"; ObjectID = "38"; */
+"38.headerCell.title" = "ID";
+
+/* Class = "NSTableColumn"; headerCell.title = "カラー"; ObjectID = "39"; */
+"39.headerCell.title" = "カラー";
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "55"; */
+"55.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "白"; ObjectID = "56"; */
+"56.title" = "白";
+
+/* Class = "NSMenuItem"; title = "黒"; ObjectID = "57"; */
+"57.title" = "黒";
+
+/* Class = "NSMenuItem"; title = "赤"; ObjectID = "58"; */
+"58.title" = "赤";
+
+/* Class = "NSMenuItem"; title = "グリーン"; ObjectID = "59"; */
+"59.title" = "グリーン";
+
+/* Class = "NSMenuItem"; title = "ブルー"; ObjectID = "60"; */
+"60.title" = "ブルー";
+
+/* Class = "NSButtonCell"; title = "-"; ObjectID = "70"; */
+"70.title" = "-";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "72"; */
+"72.title" = "OK";

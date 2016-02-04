@@ -1,0 +1,72 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "Compacter les fichiers NIB permet de réduire leur taille, mais évite également qu'ils soient localisés ou ouverts dans Interface Builder."; ObjectID = "26"; */
+"26.ibShadowedToolTip" = "Compacter les fichiers NIB permet de réduire leur taille, mais évite également qu'ils soient localisés ou ouverts dans Interface Builder.";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Ouvre le logiciel de courrier électronique et joint le fichier exporté à un courrier vierge"; ObjectID = "77"; */
+"77.ibShadowedToolTip" = "Ouvre le logiciel de courrier électronique et joint le fichier exporté à un courrier vierge";
+
+/* Class = "NSButtonCell"; title = "Compacter les fichiers NIB"; ObjectID = "170"; */
+"170.title" = "Compacter les fichiers NIB";
+
+/* Class = "NSButtonCell"; title = "Créer une archive zip du projet exporté"; ObjectID = "177"; */
+"177.title" = "Créer une archive zip du projet exporté";
+
+/* Class = "NSButtonCell"; title = "Générer automatiquement un courrier électronique avec Mail"; ObjectID = "178"; */
+"178.title" = "Générer automatiquement un courrier électronique avec Mail";
+
+/* Class = "NSTextFieldCell"; title = "À :"; ObjectID = "219"; */
+"219.title" = "À :";
+
+/* Class = "NSTextFieldCell"; title = "Message :"; ObjectID = "221"; */
+"221.title" = "Message :";
+
+/* Class = "NSButton"; ibShadowedToolTip = "N'exporter que les dossiers contenant une langue (lproj)"; ObjectID = "253"; */
+"253.ibShadowedToolTip" = "N'exporter que les dossiers contenant une langue (lproj)";
+
+/* Class = "NSButtonCell"; title = "N'exporter que les dossiers langue"; ObjectID = "254"; */
+"254.title" = "N'exporter que les dossiers langue";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Exporter le projet dans un dossier que le Finder peut ouvrir au lieu d'utiliser l'extension du bundle d'origine"; ObjectID = "256"; */
+"256.ibShadowedToolTip" = "Exporter le projet dans un dossier que le Finder peut ouvrir au lieu d'utiliser l'extension du bundle d'origine";
+
+/* Class = "NSButtonCell"; title = "Exporter dans un dossier"; ObjectID = "257"; */
+"257.title" = "Exporter dans un dossier";
+
+/* Class = "NSButton"; ibShadowedToolTip = "N'exporter que les dossiers contenant une langue (lproj)"; ObjectID = "262"; */
+"262.ibShadowedToolTip" = "N'exporter que les dossiers contenant une langue (lproj)";
+
+/* Class = "NSButtonCell"; title = "Inclure le numéro version"; ObjectID = "263"; */
+"263.title" = "Inclure le numéro version";
+
+/* Class = "NSButton"; ibShadowedToolTip = "N'exporter que les dossiers contenant une langue (lproj)"; ObjectID = "265"; */
+"265.ibShadowedToolTip" = "N'exporter que les dossiers contenant une langue (lproj)";
+
+/* Class = "NSButtonCell"; title = "Inclure le nom des langues exportées"; ObjectID = "266"; */
+"266.title" = "Inclure le nom des langues exportées";
+
+/* Class = "NSTextFieldCell"; title = "<exemple-nom-du-livrable>"; ObjectID = "278"; */
+"278.title" = "<exemple-nom-du-livrable>";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Compacter les fichiers NIB permet de réduire leur taille, mais évite également qu'ils soient localisés ou ouverts dans Interface Builder."; ObjectID = "287"; */
+"287.ibShadowedToolTip" = "Compacter les fichiers NIB permet de réduire leur taille, mais évite également qu'ils soient localisés ou ouverts dans Interface Builder.";
+
+/* Class = "NSButtonCell"; title = "Convertir les fichiers NIB en fichiers XIB"; ObjectID = "288"; */
+"288.title" = "Convertir les fichiers NIB en fichiers XIB";
+
+/* Class = "NSBox"; title = "Format du livrable"; ObjectID = "4LP-Rt-bQH"; */
+"4LP-Rt-bQH.title" = "Format du livrable";
+
+/* Class = "NSBox"; title = "Post-traitement"; ObjectID = "O8e-tz-Pid"; */
+"O8e-tz-Pid.title" = "Post-traitement";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Saisir l’adresse électronique du destinataire"; ObjectID = "d1S-np-O0Q"; */
+"d1S-np-O0Q.ibShadowedIsNilPlaceholder" = "Saisir l’adresse électronique du destinataire";
+
+/* Class = "NSTextFieldCell"; title = "Objet :"; ObjectID = "dgD-W1-lcF"; */
+"dgD-W1-lcF.title" = "Objet :";
+
+/* Class = "NSBox"; title = "Nom du livrable"; ObjectID = "hzV-oN-mXT"; */
+"hzV-oN-mXT.title" = "Nom du livrable";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Saisir l’objet du courriel"; ObjectID = "jbL-CX-1Zi"; */
+"jbL-CX-1Zi.ibShadowedIsNilPlaceholder" = "Saisir l’objet du courriel";

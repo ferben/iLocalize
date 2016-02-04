@@ -1,0 +1,45 @@
+
+/* Class = "NSWindow"; title = "Porządkuj"; ObjectID = "5"; */
+"5.title" = "Porządkuj";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "15"; */
+"15.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "zaznaczone pliki"; ObjectID = "16"; */
+"16.title" = "zaznaczone pliki";
+
+/* Class = "NSMenuItem"; title = "Zaznaczonego języka"; ObjectID = "17"; */
+"17.title" = "Zaznaczonego języka";
+
+/* Class = "NSMenuItem"; title = "Wszystkie z projektu"; ObjectID = "18"; */
+"18.title" = "Wszystkie z projektu";
+
+/* Class = "NSMenuItem"; title = "wybrane łańcuchy"; ObjectID = "19"; */
+"19.title" = "wybrane łańcuchy";
+
+/* Class = "NSButtonCell"; title = "zastąp \" na “ (cudzysłowem)"; ObjectID = "35"; */
+"35.title" = "zastąp \" na “ (cudzysłowem)";
+
+/* Class = "NSButtonCell"; title = "zastąp ... na … (wielokropkiem)"; ObjectID = "36"; */
+"36.title" = "zastąp ... na … (wielokropkiem)";
+
+/* Class = "NSButtonCell"; title = "wstaw łączliwą spację przed znakami interpunkcyjnymi"; ObjectID = "37"; */
+"37.title" = "wstaw łączliwą spację przed znakami interpunkcyjnymi";
+
+/* Class = "NSButtonCell"; title = "usuń dodatkowe białe spacje na końcu łańcucha"; ObjectID = "38"; */
+"38.title" = "usuń dodatkowe białe spacje na końcu łańcucha";
+
+/* Class = "NSButtonCell"; title = "Anuluj"; ObjectID = "39"; */
+"39.title" = "Anuluj";
+
+/* Class = "NSButtonCell"; title = "Porządkuj"; ObjectID = "40"; */
+"40.title" = "Porządkuj";
+
+/* Class = "NSTextFieldCell"; title = "Zastosuj do:"; ObjectID = "41"; */
+"41.title" = "Zastosuj do:";
+
+/* Class = "NSButtonCell"; title = "Oznacz zmienione łańcuchy jako „do sprawdzenia”"; ObjectID = "44"; */
+"44.title" = "Oznacz zmienione łańcuchy jako „do sprawdzenia”";
+
+/* Class = "NSButtonCell"; title = "zastąp ' na ’ (apostrofem)"; ObjectID = "45"; */
+"45.title" = "zastąp ' na ’ (apostrofem)";

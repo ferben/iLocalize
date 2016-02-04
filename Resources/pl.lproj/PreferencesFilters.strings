@@ -1,0 +1,42 @@
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "6"; */
+"6.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "Klucze"; ObjectID = "7"; */
+"7.title" = "Klucze";
+
+/* Class = "NSMenuItem"; title = "Komentarz"; ObjectID = "8"; */
+"8.title" = "Komentarz";
+
+/* Class = "NSMenuItem"; title = "Wartość"; ObjectID = "9"; */
+"9.title" = "Wartość";
+
+/* Class = "NSMenuItem"; title = "Wszystko"; ObjectID = "10"; */
+"10.title" = "Wszystko";
+
+/* Class = "NSTableColumn"; headerCell.title = "Element"; ObjectID = "14"; */
+"14.headerCell.title" = "Element";
+
+/* Class = "NSTableColumn"; headerCell.title = "Włącz"; ObjectID = "16"; */
+"16.headerCell.title" = "Włącz";
+
+/* Class = "NSTableColumn"; headerCell.title = "Regularne wyrażenia"; ObjectID = "18"; */
+"18.headerCell.title" = "Regularne wyrażenia";
+
+/* Class = "NSButtonCell"; title = "łańcuchy bez liter"; ObjectID = "153"; */
+"153.title" = "łańcuchy bez liter";
+
+/* Class = "NSButtonCell"; title = "łańcuchy z jedną literą"; ObjectID = "154"; */
+"154.title" = "łańcuchy z jedną literą";
+
+/* Class = "NSTextFieldCell"; title = "Ignoruj:"; ObjectID = "155"; */
+"155.title" = "Ignoruj:";
+
+/* Class = "NSTextFieldCell"; title = "łańcuchy pasujące do jednego z poniższych wyrażeń regularnych:"; ObjectID = "156"; */
+"156.title" = "łańcuchy pasujące do jednego z poniższych wyrażeń regularnych:";
+
+/* Class = "NSButtonCell"; title = "puste łańcuchy bazowe"; ObjectID = "161"; */
+"161.title" = "puste łańcuchy bazowe";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "162"; */
+"162.title" = "Text Cell";

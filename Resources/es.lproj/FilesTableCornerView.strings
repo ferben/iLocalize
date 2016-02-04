@@ -1,0 +1,18 @@
+
+/* Class = "NSMenuItem"; title = "   Ordenar por ruta"; ObjectID = "5"; */
+"5.title" = "   Ordenar por ruta";
+
+/* Class = "NSMenu"; title = "Menú"; ObjectID = "6"; */
+"6.title" = "Menú";
+
+/* Class = "NSMenuItem"; title = "   Ordenar por nombre"; ObjectID = "7"; */
+"7.title" = "   Ordenar por nombre";
+
+/* Class = "NSMenuItem"; title = "   Ordenar por el número de segmentos"; ObjectID = "8"; */
+"8.title" = "   Ordenar por el número de segmentos";
+
+/* Class = "NSMenuItem"; title = "Columna de archivos"; ObjectID = "9"; */
+"9.title" = "Columna de archivos";
+
+/* Class = "NSMenuItem"; title = "   Conmutar entre la ruta inteligente y la completa"; ObjectID = "15"; */
+"15.title" = "   Conmutar entre la ruta inteligente y la completa";

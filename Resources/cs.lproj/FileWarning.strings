@@ -1,0 +1,21 @@
+
+/* Class = "NSWindow"; title = "Varování"; ObjectID = "5"; */
+"5.title" = "Varování";
+
+/* Class = "NSTableColumn"; headerCell.title = "Klíč"; ObjectID = "9"; */
+"9.headerCell.title" = "Klíč";
+
+/* Class = "NSTableColumn"; headerCell.title = "Hodnota"; ObjectID = "10"; */
+"10.headerCell.title" = "Hodnota";
+
+/* Class = "NSTableColumn"; headerCell.title = "Varování"; ObjectID = "54"; */
+"54.headerCell.title" = "Varování";
+
+/* Class = "NSTextFieldCell"; title = "Tento soubor vykazuje nějaké nesrovnalosti, které je nutno opravit, protože mohou narušit běh překladu."; ObjectID = "66"; */
+"66.title" = "Tento soubor vykazuje nějaké nesrovnalosti, které je nutno opravit, protože mohou narušit běh překladu.";
+
+/* Class = "NSButtonCell"; title = "Budiž"; ObjectID = "68"; */
+"68.title" = "Budiž";
+
+/* Class = "NSButtonCell"; title = "Exportovat..."; ObjectID = "69"; */
+"69.title" = "Exportovat...";

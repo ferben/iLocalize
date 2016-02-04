@@ -1,0 +1,51 @@
+
+/* Class = "NSTextFieldCell"; title = "Kies de te exporteren onderdelen:"; ObjectID = "175"; */
+"175.title" = "Kies de te exporteren onderdelen:";
+
+/* Class = "NSTextFieldCell"; title = "Kies de te exporteren talen:"; ObjectID = "224"; */
+"224.title" = "Kies de te exporteren talen:";
+
+/* Class = "NSButtonCell"; title = "Controleer"; ObjectID = "226"; */
+"226.title" = "Controleer";
+
+/* Class = "NSTableColumn"; headerCell.title = "Taal"; ObjectID = "244"; */
+"244.headerCell.title" = "Taal";
+
+/* Class = "NSTableColumn"; headerCell.title = "Voortgang"; ObjectID = "245"; */
+"245.headerCell.title" = "Voortgang";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "246"; */
+"246.title" = "Text Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "Waarschuwing"; ObjectID = "248"; */
+"248.headerCell.title" = "Waarschuwing";
+
+/* Class = "NSButtonCell"; title = "Controleer"; ObjectID = "250"; */
+"250.title" = "Controleer";
+
+/* Class = "NSTextFieldCell"; title = "Kies de doelmap:"; ObjectID = "254"; */
+"254.title" = "Kies de doelmap:";
+
+/* Class = "NSButtonCell"; title = "Kies…"; ObjectID = "258"; */
+"258.title" = "Kies…";
+
+/* Class = "NSButtonCell"; title = "Opties…"; ObjectID = "260"; */
+"260.title" = "Opties…";
+
+/* Class = "NSTextFieldCell"; title = "Presets:"; ObjectID = "262"; */
+"262.title" = "Presets:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "265"; */
+"265.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 1"; ObjectID = "266"; */
+"266.title" = "Onderdeel 1";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 2"; ObjectID = "267"; */
+"267.title" = "Onderdeel 2";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 3"; ObjectID = "268"; */
+"268.title" = "Onderdeel 3";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "269"; */
+"269.title" = "Box";

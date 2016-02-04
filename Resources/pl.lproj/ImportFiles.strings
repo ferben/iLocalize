@@ -1,0 +1,24 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Języki"; ObjectID = "14"; */
+"14.headerCell.title" = "Języki";
+
+/* Class = "NSButtonCell"; title = "Uaktualnij lokalizowany język z tych plików"; ObjectID = "51"; */
+"51.title" = "Uaktualnij lokalizowany język z tych plików";
+
+/* Class = "NSTextFieldCell"; title = "<do not localize - placeholder for file information >"; ObjectID = "52"; */
+"52.title" = "<do not localize - placeholder for file information >";
+
+/* Class = "NSButtonCell"; title = "Przywróć wygląd każdego przetłumaczonego pliku NIB zgodnie z wyglądem bazowym"; ObjectID = "53"; */
+"53.title" = "Przywróć wygląd każdego przetłumaczonego pliku NIB zgodnie z wyglądem bazowym";
+
+/* Class = "NSButtonCell"; title = "Uaktualnij projekt z nowej wersji tych plików"; ObjectID = "54"; */
+"54.title" = "Uaktualnij projekt z nowej wersji tych plików";
+
+/* Class = "NSTextFieldCell"; title = "Wybierz język do uaktualnienia:"; ObjectID = "56"; */
+"56.title" = "Wybierz język do uaktualnienia:";
+
+/* Class = "NSTextFieldCell"; title = "Przejrzyj ponownie tłumaczone pliki NIB, by upewnić się, że ich wygląd jest prawidłowy."; ObjectID = "59"; */
+"59.title" = "Przejrzyj ponownie tłumaczone pliki NIB, by upewnić się, że ich wygląd jest prawidłowy.";
+
+/* Class = "NSButtonCell"; title = "Uaktualnij wygląd plików NIB za pomocą importowanych plików"; ObjectID = "61"; */
+"61.title" = "Uaktualnij wygląd plików NIB za pomocą importowanych plików";

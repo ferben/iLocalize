@@ -1,0 +1,24 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Status"; ObjectID = "10"; */
+"10.headerCell.title" = "Status";
+
+/* Class = "NSTableColumn"; headerCell.title = "Ablage"; ObjectID = "16"; */
+"16.headerCell.title" = "Ablage";
+
+/* Class = "NSTableColumn"; headerCell.title = "Typ"; ObjectID = "18"; */
+"18.headerCell.title" = "Typ";
+
+/* Class = "NSButtonCell"; title = "Alle erneut laden"; ObjectID = "48"; */
+"48.title" = "Alle erneut laden";
+
+/* Class = "NSButtonCell"; title = "Nicht erneut laden"; ObjectID = "49"; */
+"49.title" = "Nicht erneut laden";
+
+/* Class = "NSButtonCell"; title = "Abbrechen"; ObjectID = "50"; */
+"50.title" = "Abbrechen";
+
+/* Class = "NSTextFieldCell"; title = "Extern bearbeitete Dateien erneut laden"; ObjectID = "52"; */
+"52.title" = "Extern bearbeitete Dateien erneut laden";
+
+/* Class = "NSTextFieldCell"; title = "Los Gatos"; ObjectID = "54"; */
+"54.title" = "Los Gatos";

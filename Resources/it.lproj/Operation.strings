@@ -1,0 +1,9 @@
+
+/* Class = "NSWindow"; title = "Operazione"; ObjectID = "5"; */
+"5.title" = "Operazione";
+
+/* Class = "NSTextFieldCell"; title = "<title of the operation - do not translate>"; ObjectID = "28"; */
+"28.title" = "<title of the operation - do not translate>";
+
+/* Class = "NSButtonCell"; title = "Annulla"; ObjectID = "30"; */
+"30.title" = "Annulla";

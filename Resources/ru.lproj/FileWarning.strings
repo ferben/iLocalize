@@ -1,0 +1,21 @@
+
+/* Class = "NSWindow"; title = "Предупреждения"; ObjectID = "5"; */
+"5.title" = "Предупреждения";
+
+/* Class = "NSTableColumn"; headerCell.title = "Раздел"; ObjectID = "9"; */
+"9.headerCell.title" = "Раздел";
+
+/* Class = "NSTableColumn"; headerCell.title = "Значение"; ObjectID = "10"; */
+"10.headerCell.title" = "Значение";
+
+/* Class = "NSTableColumn"; headerCell.title = "Предупреждения"; ObjectID = "54"; */
+"54.headerCell.title" = "Предупреждения";
+
+/* Class = "NSTextFieldCell"; title = "Этот файл имеет некоторые несоответствия, которые должны быть устранены для выполния правильного перевода."; ObjectID = "66"; */
+"66.title" = "Этот файл имеет некоторые несоответствия, которые должны быть устранены для выполния правильного перевода.";
+
+/* Class = "NSButtonCell"; title = "ОК"; ObjectID = "68"; */
+"68.title" = "ОК";
+
+/* Class = "NSButtonCell"; title = "Экспорт…"; ObjectID = "69"; */
+"69.title" = "Экспорт…";

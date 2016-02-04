@@ -1,0 +1,54 @@
+
+/* Class = "NSWindow"; title = "Создание нового глоссария"; ObjectID = "5"; */
+"5.title" = "Создание нового глоссария";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "9"; */
+"9.title" = "Item2";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "10"; */
+"10.title" = "Item1";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "11"; */
+"11.title" = "Item3";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "12"; */
+"12.title" = "OtherViews";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "41"; */
+"41.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Выбранных строк"; ObjectID = "42"; */
+"42.title" = "Выбранных строк";
+
+/* Class = "NSMenuItem"; title = "Всех файлов"; ObjectID = "43"; */
+"43.title" = "Всех файлов";
+
+/* Class = "NSMenuItem"; title = "Выбранных файлов"; ObjectID = "45"; */
+"45.title" = "Выбранных файлов";
+
+/* Class = "NSTextFieldCell"; title = "Имя глоссария:"; ObjectID = "71"; */
+"71.title" = "Имя глоссария:";
+
+/* Class = "NSTextFieldCell"; title = "Имеющийся в:"; ObjectID = "72"; */
+"72.title" = "Имеющийся в:";
+
+/* Class = "NSTextFieldCell"; title = "Включить:"; ObjectID = "75"; */
+"75.title" = "Включить:";
+
+/* Class = "NSButtonCell"; title = "Создать"; ObjectID = "77"; */
+"77.title" = "Создать";
+
+/* Class = "NSButtonCell"; title = "Отменить"; ObjectID = "78"; */
+"78.title" = "Отменить";
+
+/* Class = "NSTextFieldCell"; title = "Добавить строки из:"; ObjectID = "79"; */
+"79.title" = "Добавить строки из:";
+
+/* Class = "NSButtonCell"; title = "Переведенные строки"; ObjectID = "82"; */
+"82.title" = "Переведенные строки";
+
+/* Class = "NSButtonCell"; title = "Не переведенные строки"; ObjectID = "83"; */
+"83.title" = "Не переведенные строки";
+
+/* Class = "NSButtonCell"; title = "Заблокированные строки"; ObjectID = "84"; */
+"84.title" = "Заблокированные строки";

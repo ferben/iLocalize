@@ -1,0 +1,21 @@
+
+/* Class = "NSWindow"; title = "Advarsel"; ObjectID = "5"; */
+"5.title" = "Advarsel";
+
+/* Class = "NSTableColumn"; headerCell.title = "Key"; ObjectID = "9"; */
+"9.headerCell.title" = "Key";
+
+/* Class = "NSTableColumn"; headerCell.title = "Værdi"; ObjectID = "10"; */
+"10.headerCell.title" = "Værdi";
+
+/* Class = "NSTableColumn"; headerCell.title = "Advarsel"; ObjectID = "54"; */
+"54.headerCell.title" = "Advarsel";
+
+/* Class = "NSTextFieldCell"; title = "Arkivet indeholder uoverensstemmelser, du bør rette for at sikre en korrekt oversættelse."; ObjectID = "66"; */
+"66.title" = "Arkivet indeholder uoverensstemmelser, du bør rette for at sikre en korrekt oversættelse.";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "68"; */
+"68.title" = "OK";
+
+/* Class = "NSButtonCell"; title = "Eksporter…"; ObjectID = "69"; */
+"69.title" = "Eksporter…";

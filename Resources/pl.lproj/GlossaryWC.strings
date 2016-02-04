@@ -1,0 +1,45 @@
+
+/* Class = "NSWindow"; title = "<słownik>"; ObjectID = "5"; */
+"5.title" = "<słownik>";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "160"; */
+"160.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "161"; */
+"161.title" = "Text Cell";
+
+/* Class = "NSToolbarItem"; label = "Znajdź"; ObjectID = "177"; */
+"177.label" = "Znajdź";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Znajdź"; ObjectID = "177"; */
+"177.paletteLabel" = "Znajdź";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "193"; */
+"193.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "195"; */
+"195.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "196"; */
+"196.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Usuń zaznaczone wpisy"; ObjectID = "202"; */
+"202.title" = "Usuń zaznaczone wpisy";
+
+/* Class = "NSMenuItem"; title = "Usuń identyczne wpisy"; ObjectID = "203"; */
+"203.title" = "Usuń identyczne wpisy";
+
+/* Class = "NSMenuItem"; title = "Zmień nazwę języka bazowego..."; ObjectID = "204"; */
+"204.title" = "Zmień nazwę języka bazowego...";
+
+/* Class = "NSMenuItem"; title = "Zmień nazwę języka docelowego…"; ObjectID = "206"; */
+"206.title" = "Zmień nazwę języka docelowego…";
+
+/* Class = "NSTextFieldCell"; title = "<-----do not localize------>"; ObjectID = "221"; */
+"221.title" = "<-----do not localize------>";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Informacje"; ObjectID = "222"; */
+"222.paletteLabel" = "Informacje";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Słownik ten zlokalizowany jest w nieznanej ścieżce słowników iLocalize. Kliknij, aby zdecydować, co z nim zrobić."; ObjectID = "230"; */
+"230.ibShadowedToolTip" = "Słownik ten zlokalizowany jest w nieznanej ścieżce słowników iLocalize. Kliknij, aby zdecydować, co z nim zrobić.";

@@ -1,0 +1,21 @@
+
+/* Class = "NSWindow"; title = "Warnung"; ObjectID = "5"; */
+"5.title" = "Warnung";
+
+/* Class = "NSTableColumn"; headerCell.title = "Schlüssel"; ObjectID = "9"; */
+"9.headerCell.title" = "Schlüssel";
+
+/* Class = "NSTableColumn"; headerCell.title = "Wert"; ObjectID = "10"; */
+"10.headerCell.title" = "Wert";
+
+/* Class = "NSTableColumn"; headerCell.title = "Warnung"; ObjectID = "54"; */
+"54.headerCell.title" = "Warnung";
+
+/* Class = "NSTextFieldCell"; title = "Diese Datei weist einige Inkonsistenzen auf, die behoben werden sollten, um eine korrekte Übersetzung zu gewährleisten."; ObjectID = "66"; */
+"66.title" = "Diese Datei weist einige Inkonsistenzen auf, die behoben werden sollten, um eine korrekte Übersetzung zu gewährleisten.";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "68"; */
+"68.title" = "OK";
+
+/* Class = "NSButtonCell"; title = "Exportieren …"; ObjectID = "69"; */
+"69.title" = "Exportieren …";

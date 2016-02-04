@@ -1,0 +1,27 @@
+
+/* Class = "NSWindow"; title = "Přidat jazyk"; ObjectID = "132"; */
+"132.title" = "Přidat jazyk";
+
+/* Class = "NSButtonCell"; title = "Zrušit"; ObjectID = "187"; */
+"187.title" = "Zrušit";
+
+/* Class = "NSButtonCell"; title = "Přidat"; ObjectID = "188"; */
+"188.title" = "Přidat";
+
+/* Class = "NSButtonCell"; title = "Vyplnit překlad původním jazykem"; ObjectID = "200"; */
+"200.title" = "Vyplnit překlad původním jazykem";
+
+/* Class = "NSMenu"; title = "Jiný pohled"; ObjectID = "206"; */
+"206.title" = "Jiný pohled";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "207"; */
+"207.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "208"; */
+"208.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "209"; */
+"209.title" = "Item 3";
+
+/* Class = "NSBox"; title = "Označení jazyka"; ObjectID = "220"; */
+"220.title" = "Označení jazyka";

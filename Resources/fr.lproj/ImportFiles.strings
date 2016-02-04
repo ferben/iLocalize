@@ -1,0 +1,24 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Langue"; ObjectID = "14"; */
+"14.headerCell.title" = "Langue";
+
+/* Class = "NSButtonCell"; title = "Mettre à jour des langues localisées avec ces fichiers"; ObjectID = "51"; */
+"51.title" = "Mettre à jour des langues localisées avec ces fichiers";
+
+/* Class = "NSTextFieldCell"; title = "<do not localize - placeholder for file information >"; ObjectID = "52"; */
+"52.title" = "<do not localize - placeholder for file information >";
+
+/* Class = "NSButtonCell"; title = "Réinitialiser la mise en page des fichiers NIB localisés avec celle de la langue de référence"; ObjectID = "53"; */
+"53.title" = "Réinitialiser la mise en page des fichiers NIB localisés avec celle de la langue de référence";
+
+/* Class = "NSButtonCell"; title = "Mettre à jour le projet avec une nouvelle version de ces fichiers"; ObjectID = "54"; */
+"54.title" = "Mettre à jour le projet avec une nouvelle version de ces fichiers";
+
+/* Class = "NSTextFieldCell"; title = "Sélectionner les langues à mettre à jour :"; ObjectID = "56"; */
+"56.title" = "Sélectionner les langues à mettre à jour :";
+
+/* Class = "NSTextFieldCell"; title = "Passez en revue les fichiers NIB localisés pour vous assurer que leur mise en page est correcte."; ObjectID = "59"; */
+"59.title" = "Passez en revue les fichiers NIB localisés pour vous assurer que leur mise en page est correcte.";
+
+/* Class = "NSButtonCell"; title = "Mettre à jour les mises en page avec celles qui sont importées"; ObjectID = "61"; */
+"61.title" = "Mettre à jour les mises en page avec celles qui sont importées";

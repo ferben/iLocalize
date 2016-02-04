@@ -1,0 +1,45 @@
+
+/* Class = "NSWindow"; title = "Ryd op"; ObjectID = "5"; */
+"5.title" = "Ryd op";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "15"; */
+"15.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Valgte arkiver"; ObjectID = "16"; */
+"16.title" = "Valgte arkiver";
+
+/* Class = "NSMenuItem"; title = "Valgt sprog"; ObjectID = "17"; */
+"17.title" = "Valgt sprog";
+
+/* Class = "NSMenuItem"; title = "Brug projekt"; ObjectID = "18"; */
+"18.title" = "Brug projekt";
+
+/* Class = "NSMenuItem"; title = "Valgte strings"; ObjectID = "19"; */
+"19.title" = "Valgte strings";
+
+/* Class = "NSButtonCell"; title = "Erstat \" med “ (dobbelt cicationstegn)"; ObjectID = "35"; */
+"35.title" = "Erstat \" med “ (dobbelt cicationstegn)";
+
+/* Class = "NSButtonCell"; title = "Erstat ... med … (ellipsis)"; ObjectID = "36"; */
+"36.title" = "Erstat ... med … (ellipsis)";
+
+/* Class = "NSButtonCell"; title = "Sørg for et fast mellemrum før tegnsætning"; ObjectID = "37"; */
+"37.title" = "Sørg for et fast mellemrum før tegnsætning";
+
+/* Class = "NSButtonCell"; title = "Fjern ekstra mellemrum i slutningen af string"; ObjectID = "38"; */
+"38.title" = "Fjern ekstra mellemrum i slutningen af string";
+
+/* Class = "NSButtonCell"; title = "Annuller"; ObjectID = "39"; */
+"39.title" = "Annuller";
+
+/* Class = "NSButtonCell"; title = "Ryd op"; ObjectID = "40"; */
+"40.title" = "Ryd op";
+
+/* Class = "NSTextFieldCell"; title = "Anvend i:"; ObjectID = "41"; */
+"41.title" = "Anvend i:";
+
+/* Class = "NSButtonCell"; title = "Marker ændrede strings med „skal checkes“"; ObjectID = "44"; */
+"44.title" = "Marker ændrede strings med „skal checkes“";
+
+/* Class = "NSButtonCell"; title = "Erstat ' med ’ (apostrof med enkelt citationstegn)"; ObjectID = "45"; */
+"45.title" = "Erstat ' med ’ (apostrof med enkelt citationstegn)";

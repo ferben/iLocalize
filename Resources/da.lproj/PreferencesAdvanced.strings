@@ -1,0 +1,48 @@
+
+/* Class = "NSTextField"; ibShadowedToolTip = "Stien til ibtool (normalt /usr/bin/ibtool). Dette værktøj findes kun til Leopard."; ObjectID = "484"; */
+"484.ibShadowedToolTip" = "Stien til ibtool (normalt /usr/bin/ibtool). Dette værktøj findes kun til Leopard.";
+
+/* Class = "NSButtonCell"; title = "Send meddelsen fra konsol til systemets Konsol"; ObjectID = "564"; */
+"564.title" = "Send meddelsen fra konsol til systemets Konsol";
+
+/* Class = "NSTextFieldCell"; title = "zip:"; ObjectID = "567"; */
+"567.title" = "zip:";
+
+/* Class = "NSTextFieldCell"; title = "Sti til ibtool:"; ObjectID = "577"; */
+"577.title" = "Sti til ibtool:";
+
+/* Class = "NSButtonCell"; title = "Vælg…"; ObjectID = "593"; */
+"593.title" = "Vælg…";
+
+/* Class = "NSTabViewItem"; label = "Værktøjer"; ObjectID = "600"; */
+"600.label" = "Værktøjer";
+
+/* Class = "NSTabViewItem"; label = "Stier"; ObjectID = "603"; */
+"603.label" = "Stier";
+
+/* Class = "NSTabViewItem"; label = "Indstillinger"; ObjectID = "605"; */
+"605.label" = "Indstillinger";
+
+/* Class = "NSTextFieldCell"; title = "Editor for XIB/NIB-arkiver:"; ObjectID = "610"; */
+"610.title" = "Editor for XIB/NIB-arkiver:";
+
+/* Class = "NSButtonCell"; title = "Vælg…"; ObjectID = "617"; */
+"617.title" = "Vælg…";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "635"; */
+"635.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Plugins til ibtool:"; ObjectID = "636"; */
+"636.title" = "Plugins til ibtool:";
+
+/* Class = "NSTextFieldCell"; title = "Standard projektmappe:"; ObjectID = "638"; */
+"638.title" = "Standard projektmappe:";
+
+/* Class = "NSButtonCell"; title = "Send alle NIB-kommandoer til konsollen"; ObjectID = "655"; */
+"655.title" = "Send alle NIB-kommandoer til konsollen";
+
+/* Class = "NSButtonCell"; title = "Sammenlign NIB-arkivers XML-struktur (langsommere men mere nøjagtig)"; ObjectID = "658"; */
+"658.title" = "Sammenlign NIB-arkivers XML-struktur (langsommere men mere nøjagtig)";
+
+/* Class = "NSTextFieldCell"; title = "diff:"; ObjectID = "663"; */
+"663.title" = "diff:";

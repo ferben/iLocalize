@@ -1,0 +1,114 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Voortgang"; ObjectID = "31"; */
+"31.headerCell.title" = "Voortgang";
+
+/* Class = "NSTableColumn"; headerCell.title = "Type"; ObjectID = "32"; */
+"32.headerCell.title" = "Type";
+
+/* Class = "NSTableColumn"; headerCell.title = "Bestand"; ObjectID = "33"; */
+"33.headerCell.title" = "Bestand";
+
+/* Class = "NSTableColumn"; headerCell.title = "Inhoud"; ObjectID = "104"; */
+"104.headerCell.title" = "Inhoud";
+
+/* Class = "NSMenuItem"; title = "Bewaar"; ObjectID = "264"; */
+"264.title" = "Bewaar";
+
+/* Class = "NSMenuItem"; title = "Toon in Finder"; ObjectID = "265"; */
+"265.title" = "Toon in Finder";
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "266"; */
+"266.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "Open in externe editor"; ObjectID = "267"; */
+"267.title" = "Open in externe editor";
+
+/* Class = "NSMenuItem"; title = "Verwijder"; ObjectID = "278"; */
+"278.title" = "Verwijder";
+
+/* Class = "NSMenuItem"; title = "Keur goed"; ObjectID = "323"; */
+"323.title" = "Keur goed";
+
+/* Class = "NSMenuItem"; title = "Bouw opnieuw vanuit Engels"; ObjectID = "336"; */
+"336.title" = "Bouw opnieuw vanuit Engels";
+
+/* Class = "NSMenuItem"; title = "Ververs"; ObjectID = "378"; */
+"378.title" = "Ververs";
+
+/* Class = "NSMenuItem"; title = "Converteer regeleinden…"; ObjectID = "397"; */
+"397.title" = "Converteer regeleinden…";
+
+/* Class = "NSMenuItem"; title = "Exporteer strings…"; ObjectID = "434"; */
+"434.title" = "Exporteer strings…";
+
+/* Class = "NSMenuItem"; title = "Update strings…"; ObjectID = "436"; */
+"436.title" = "Update strings…";
+
+/* Class = "NSMenuItem"; title = "Toon waarschuwing…"; ObjectID = "541"; */
+"541.title" = "Toon waarschuwing…";
+
+/* Class = "NSMenuItem"; title = "Wis markering \"Bijgewerkt bestand\""; ObjectID = "544"; */
+"544.title" = "Wis markering \"Bijgewerkt bestand\"";
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "559"; */
+"559.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "Archief"; ObjectID = "560"; */
+"560.title" = "Archief";
+
+/* Class = "NSMenuItem"; title = "Type"; ObjectID = "561"; */
+"561.title" = "Type";
+
+/* Class = "NSMenuItem"; title = "Inhoud"; ObjectID = "563"; */
+"563.title" = "Inhoud";
+
+/* Class = "NSMenuItem"; title = "Voortgang"; ObjectID = "564"; */
+"564.title" = "Voortgang";
+
+/* Class = "NSMenuItem"; title = "Codering"; ObjectID = "580"; */
+"580.title" = "Codering";
+
+/* Class = "NSTableColumn"; headerCell.title = "Labels"; ObjectID = "583"; */
+"583.headerCell.title" = "Labels";
+
+/* Class = "NSMenuItem"; title = "Labels"; ObjectID = "587"; */
+"587.title" = "Labels";
+
+/* Class = "NSMenuItem"; title = "Labels"; ObjectID = "593"; */
+"593.title" = "Labels";
+
+/* Class = "NSMenuItem"; title = "Negeer"; ObjectID = "596"; */
+"596.title" = "Negeer";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "809"; */
+"809.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "810"; */
+"810.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "811"; */
+"811.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "812"; */
+"812.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "815"; */
+"815.title" = "Text Cell";
+
+/* Class = "NSButtonCell"; title = "Vertaal alleen als de string anders is dan de basisstring"; ObjectID = "1145"; */
+"1145.title" = "Vertaal alleen als de string anders is dan de basisstring";
+
+/* Class = "NSTableColumn"; headerCell.title = "Status"; ObjectID = "1160"; */
+"1160.headerCell.title" = "Status";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "1161"; */
+"1161.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Status"; ObjectID = "1163"; */
+"1163.title" = "Status";
+
+/* Class = "NSMenuItem"; title = "Open vorige & huidige in externe editor"; ObjectID = "1173"; */
+"1173.title" = "Open vorige & huidige in externe editor";
+
+/* Class = "NSMenuItem"; title = "Diff met voorgaande"; ObjectID = "1174"; */
+"1174.title" = "Diff met voorgaande";

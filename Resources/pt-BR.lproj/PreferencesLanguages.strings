@@ -1,0 +1,75 @@
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "490"; */
+"490.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "491"; */
+"491.title" = "Item1";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "492"; */
+"492.title" = "Item2";
+
+/* Class = "NSMenu"; title = "Outras Visualizações"; ObjectID = "499"; */
+"499.title" = "Outras Visualizações";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "500"; */
+"500.title" = "Item3";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "501"; */
+"501.title" = "Item2";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "502"; */
+"502.title" = "Item1";
+
+/* Class = "NSTextFieldCell"; title = "Codificação Padrão:"; ObjectID = "518"; */
+"518.title" = "Codificação Padrão:";
+
+/* Class = "NSTableColumn"; headerCell.title = "Fechando '"; ObjectID = "532"; */
+"532.headerCell.title" = "Fechando '";
+
+/* Class = "NSTableColumn"; headerCell.title = "Abrindo '"; ObjectID = "533"; */
+"533.headerCell.title" = "Abrindo '";
+
+/* Class = "NSTableColumn"; headerCell.title = "Idioma"; ObjectID = "534"; */
+"534.headerCell.title" = "Idioma";
+
+/* Class = "NSTableColumn"; headerCell.title = "Abrindo \""; ObjectID = "535"; */
+"535.headerCell.title" = "Abrindo \"";
+
+/* Class = "NSTableColumn"; headerCell.title = "Fechando \""; ObjectID = "536"; */
+"536.headerCell.title" = "Fechando \"";
+
+/* Class = "NSTextFieldCell"; title = "Célula de Texto"; ObjectID = "537"; */
+"537.title" = "Célula de Texto";
+
+/* Class = "NSTextFieldCell"; title = "Célula de Texto"; ObjectID = "538"; */
+"538.title" = "Célula de Texto";
+
+/* Class = "NSTextFieldCell"; title = "Célula de Texto"; ObjectID = "540"; */
+"540.title" = "Célula de Texto";
+
+/* Class = "NSTextFieldCell"; title = "Célula de Texto"; ObjectID = "541"; */
+"541.title" = "Célula de Texto";
+
+/* Class = "NSTableColumn"; headerCell.title = "Codificação Padrão"; ObjectID = "544"; */
+"544.headerCell.title" = "Codificação Padrão";
+
+/* Class = "NSMenu"; title = "Outras Visualizações"; ObjectID = "549"; */
+"549.title" = "Outras Visualizações";
+
+/* Class = "NSMenuItem"; title = "Local"; ObjectID = "550"; */
+"550.title" = "Local";
+
+/* Class = "NSMenu"; title = "Outras Visualizações"; ObjectID = "576"; */
+"576.title" = "Outras Visualizações";
+
+/* Class = "NSMenuItem"; title = "Local"; ObjectID = "577"; */
+"577.title" = "Local";
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "578"; */
+"578.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "579"; */
+"579.title" = "Item2";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "580"; */
+"580.title" = "Item1";

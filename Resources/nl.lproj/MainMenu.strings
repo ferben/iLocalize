@@ -1,0 +1,462 @@
+
+/* Class = "NSMenuItem"; title = "Alles op voorgrond"; ObjectID = "5"; */
+"5.title" = "Alles op voorgrond";
+
+/* Class = "NSMenuItem"; title = "Venster"; ObjectID = "19"; */
+"19.title" = "Venster";
+
+/* Class = "NSMenuItem"; title = "Minimaliseer"; ObjectID = "23"; */
+"23.title" = "Minimaliseer";
+
+/* Class = "NSMenu"; title = "Venster"; ObjectID = "24"; */
+"24.title" = "Venster";
+
+/* Class = "NSMenu"; title = "HoofdMenu"; ObjectID = "29"; */
+"29.title" = "HoofdMenu";
+
+/* Class = "NSMenuItem"; title = "iLocalize"; ObjectID = "56"; */
+"56.title" = "iLocalize";
+
+/* Class = "NSMenu"; title = "iLocalize"; ObjectID = "57"; */
+"57.title" = "iLocalize";
+
+/* Class = "NSMenuItem"; title = "Over iLocalize"; ObjectID = "58"; */
+"58.title" = "Over iLocalize";
+
+/* Class = "NSMenuItem"; title = "Open…"; ObjectID = "72"; */
+"72.title" = "Open…";
+
+/* Class = "NSMenuItem"; title = "Sluit"; ObjectID = "73"; */
+"73.title" = "Sluit";
+
+/* Class = "NSMenuItem"; title = "Bewaar"; ObjectID = "75"; */
+"75.title" = "Bewaar";
+
+/* Class = "NSMenu"; title = "Archief"; ObjectID = "81"; */
+"81.title" = "Archief";
+
+/* Class = "NSMenuItem"; title = "Nieuw project…"; ObjectID = "82"; */
+"82.title" = "Nieuw project…";
+
+/* Class = "NSMenuItem"; title = "Archief"; ObjectID = "83"; */
+"83.title" = "Archief";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "103"; */
+"103.title" = "Help";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "106"; */
+"106.title" = "Help";
+
+/* Class = "NSMenuItem"; title = "iLocalize help"; ObjectID = "111"; */
+"111.title" = "iLocalize help";
+
+/* Class = "NSMenuItem"; title = "Voorkeuren…"; ObjectID = "129"; */
+"129.title" = "Voorkeuren…";
+
+/* Class = "NSMenu"; title = "Voorzieningen"; ObjectID = "130"; */
+"130.title" = "Voorzieningen";
+
+/* Class = "NSMenuItem"; title = "Voorzieningen"; ObjectID = "131"; */
+"131.title" = "Voorzieningen";
+
+/* Class = "NSMenuItem"; title = "Verberg iLocalize"; ObjectID = "134"; */
+"134.title" = "Verberg iLocalize";
+
+/* Class = "NSMenuItem"; title = "Stop iLocalize"; ObjectID = "136"; */
+"136.title" = "Stop iLocalize";
+
+/* Class = "NSMenuItem"; title = "Verberg andere"; ObjectID = "145"; */
+"145.title" = "Verberg andere";
+
+/* Class = "NSMenuItem"; title = "Toon alles"; ObjectID = "150"; */
+"150.title" = "Toon alles";
+
+/* Class = "NSMenuItem"; title = "Zoek…"; ObjectID = "154"; */
+"154.title" = "Zoek…";
+
+/* Class = "NSMenuItem"; title = "Ga naar selectie"; ObjectID = "155"; */
+"155.title" = "Ga naar selectie";
+
+/* Class = "NSMenuItem"; title = "Kopieer"; ObjectID = "157"; */
+"157.title" = "Kopieer";
+
+/* Class = "NSMenuItem"; title = "Herstel"; ObjectID = "158"; */
+"158.title" = "Herstel";
+
+/* Class = "NSMenu"; title = "Zoek"; ObjectID = "159"; */
+"159.title" = "Zoek";
+
+/* Class = "NSMenuItem"; title = "Knip"; ObjectID = "160"; */
+"160.title" = "Knip";
+
+/* Class = "NSMenuItem"; title = "Gebruik selectie voor zoekactie"; ObjectID = "161"; */
+"161.title" = "Gebruik selectie voor zoekactie";
+
+/* Class = "NSMenuItem"; title = "Zoek vorige"; ObjectID = "162"; */
+"162.title" = "Zoek vorige";
+
+/* Class = "NSMenuItem"; title = "Wijzig"; ObjectID = "163"; */
+"163.title" = "Wijzig";
+
+/* Class = "NSMenuItem"; title = "Verwijder"; ObjectID = "164"; */
+"164.title" = "Verwijder";
+
+/* Class = "NSMenuItem"; title = "Zoek volgende"; ObjectID = "167"; */
+"167.title" = "Zoek volgende";
+
+/* Class = "NSMenuItem"; title = "Zoek"; ObjectID = "168"; */
+"168.title" = "Zoek";
+
+/* Class = "NSMenu"; title = "Wijzig"; ObjectID = "169"; */
+"169.title" = "Wijzig";
+
+/* Class = "NSMenuItem"; title = "Plak"; ObjectID = "171"; */
+"171.title" = "Plak";
+
+/* Class = "NSMenuItem"; title = "Selecteer alles"; ObjectID = "172"; */
+"172.title" = "Selecteer alles";
+
+/* Class = "NSMenuItem"; title = "Opnieuw"; ObjectID = "173"; */
+"173.title" = "Opnieuw";
+
+/* Class = "NSMenuItem"; title = "Spelling"; ObjectID = "184"; */
+"184.title" = "Spelling";
+
+/* Class = "NSMenu"; title = "Spelling"; ObjectID = "185"; */
+"185.title" = "Spelling";
+
+/* Class = "NSMenuItem"; title = "Spelling…"; ObjectID = "187"; */
+"187.title" = "Spelling…";
+
+/* Class = "NSMenuItem"; title = "Controleer spelling"; ObjectID = "189"; */
+"189.title" = "Controleer spelling";
+
+/* Class = "NSMenuItem"; title = "Controleer spelling tijdens typen"; ObjectID = "191"; */
+"191.title" = "Controleer spelling tijdens typen";
+
+/* Class = "NSMenuItem"; title = "Zoom"; ObjectID = "203"; */
+"203.title" = "Zoom";
+
+/* Class = "NSMenuItem"; title = "Project"; ObjectID = "383"; */
+"383.title" = "Project";
+
+/* Class = "NSMenu"; title = "Project"; ObjectID = "385"; */
+"385.title" = "Project";
+
+/* Class = "NSMenuItem"; title = "Voeg bestanden toe aan project…"; ObjectID = "392"; */
+"392.title" = "Voeg bestanden toe aan project…";
+
+/* Class = "NSMenuItem"; title = "Wis geselecteerde bestanden…"; ObjectID = "393"; */
+"393.title" = "Wis geselecteerde bestanden…";
+
+/* Class = "NSMenuItem"; title = "Update met bundel…"; ObjectID = "397"; */
+"397.title" = "Update met bundel…";
+
+/* Class = "NSMenuItem"; ibShadowedToolTip = "Start het programma van de gegenereerde map"; ObjectID = "461"; */
+"461.ibShadowedToolTip" = "Start het programma van de gegenereerde map";
+
+/* Class = "NSMenuItem"; title = "Start \"English\""; ObjectID = "461"; */
+"461.title" = "Start \"English\"";
+
+/* Class = "NSMenuItem"; ibShadowedToolTip = "Vervang de geselecteerde vertaalde bestanden door hun corresponderende basisbestanden"; ObjectID = "468"; */
+"468.ibShadowedToolTip" = "Vervang de geselecteerde vertaalde bestanden door hun corresponderende basisbestanden";
+
+/* Class = "NSMenuItem"; title = "Bouw geselecteerde bestanden opnieuw op uit \"English\""; ObjectID = "468"; */
+"468.title" = "Bouw geselecteerde bestanden opnieuw op uit \"English\"";
+
+/* Class = "NSMenuItem"; ibShadowedToolTip = "Maak een nieuwe lege taal"; ObjectID = "475"; */
+"475.ibShadowedToolTip" = "Maak een nieuwe lege taal";
+
+/* Class = "NSMenuItem"; title = "Voeg taal toe…"; ObjectID = "475"; */
+"475.title" = "Voeg taal toe…";
+
+/* Class = "NSMenuItem"; title = "Verwijder"; ObjectID = "481"; */
+"481.title" = "Verwijder";
+
+/* Class = "NSMenuItem"; ibShadowedToolTip = "Synchroniseer de gegevens in geheugen met het bestand op schijf."; ObjectID = "509"; */
+"509.ibShadowedToolTip" = "Synchroniseer de gegevens in geheugen met het bestand op schijf.";
+
+/* Class = "NSMenuItem"; title = "Laad extern gewijzigde bestanden opnieuw"; ObjectID = "509"; */
+"509.title" = "Laad extern gewijzigde bestanden opnieuw";
+
+/* Class = "NSMenuItem"; title = "Symbolen"; ObjectID = "571"; */
+"571.title" = "Symbolen";
+
+/* Class = "NSMenuItem"; title = "Open in externe editor"; ObjectID = "607"; */
+"607.title" = "Open in externe editor";
+
+/* Class = "NSMenuItem"; title = "Toon in Finder"; ObjectID = "609"; */
+"609.title" = "Toon in Finder";
+
+/* Class = "NSMenuItem"; title = "Toon console"; ObjectID = "614"; */
+"614.title" = "Toon console";
+
+/* Class = "NSMenuItem"; title = "Schoon op…"; ObjectID = "619"; */
+"619.title" = "Schoon op…";
+
+/* Class = "NSMenuItem"; title = "Statistieken…"; ObjectID = "620"; */
+"620.title" = "Statistieken…";
+
+/* Class = "NSMenuItem"; title = "Nieuwe woordenlijst…"; ObjectID = "673"; */
+"673.title" = "Nieuwe woordenlijst…";
+
+/* Class = "NSMenuItem"; title = "Blader door woordenlijsten…"; ObjectID = "675"; */
+"675.title" = "Blader door woordenlijsten…";
+
+/* Class = "NSMenuItem"; title = "Vertaal"; ObjectID = "688"; */
+"688.title" = "Vertaal";
+
+/* Class = "NSMenu"; title = "Vertaal"; ObjectID = "689"; */
+"689.title" = "Vertaal";
+
+/* Class = "NSMenuItem"; title = "Wis opmerking"; ObjectID = "690"; */
+"690.title" = "Wis opmerking";
+
+/* Class = "NSMenuItem"; title = "Wis opmerking vertaling"; ObjectID = "691"; */
+"691.title" = "Wis opmerking vertaling";
+
+/* Class = "NSMenuItem"; title = "Keur identieke tekst in geselecteerde bestanden goed"; ObjectID = "692"; */
+"692.title" = "Keur identieke tekst in geselecteerde bestanden goed";
+
+/* Class = "NSMenuItem"; title = "Keur string goed"; ObjectID = "693"; */
+"693.title" = "Keur string goed";
+
+/* Class = "NSMenuItem"; title = "Gebruik dezelfde vertaling voor identieke strings in alle bestanden"; ObjectID = "694"; */
+"694.title" = "Gebruik dezelfde vertaling voor identieke strings in alle bestanden";
+
+/* Class = "NSMenuItem"; title = "Kopieer basis naar vertaling"; ObjectID = "695"; */
+"695.title" = "Kopieer basis naar vertaling";
+
+/* Class = "NSMenuItem"; title = "Keur identieke tekst in alle bestanden goed"; ObjectID = "697"; */
+"697.title" = "Keur identieke tekst in alle bestanden goed";
+
+/* Class = "NSMenuItem"; title = "Verwissel basis en vertaling"; ObjectID = "699"; */
+"699.title" = "Verwissel basis en vertaling";
+
+/* Class = "NSMenuItem"; title = "Gebruik dezelfde vertaling voor identieke strings in geselecteerde bestanden"; ObjectID = "702"; */
+"702.title" = "Gebruik dezelfde vertaling voor identieke strings in geselecteerde bestanden";
+
+/* Class = "NSMenuItem"; title = "Wis opmerking basis"; ObjectID = "703"; */
+"703.title" = "Wis opmerking basis";
+
+/* Class = "NSMenuItem"; title = "Keur bestand goed"; ObjectID = "727"; */
+"727.title" = "Keur bestand goed";
+
+/* Class = "NSMenuItem"; title = "Vertaling onder Mac OS X"; ObjectID = "730"; */
+"730.title" = "Vertaling onder Mac OS X";
+
+/* Class = "NSMenuItem"; title = "Apple woordenlijsten"; ObjectID = "731"; */
+"731.title" = "Apple woordenlijsten";
+
+/* Class = "NSMenuItem"; title = "Keur auto-vertaalde tekst in geselecteerde bestanden goed"; ObjectID = "742"; */
+"742.title" = "Keur auto-vertaalde tekst in geselecteerde bestanden goed";
+
+/* Class = "NSMenuItem"; title = "Keur auto-vertaalde tekst in alle bestanden goed"; ObjectID = "744"; */
+"744.title" = "Keur auto-vertaalde tekst in alle bestanden goed";
+
+/* Class = "NSMenuItem"; title = "Keur auto-ongewijzigde tekst in alle bestanden goed"; ObjectID = "745"; */
+"745.title" = "Keur auto-ongewijzigde tekst in alle bestanden goed";
+
+/* Class = "NSMenuItem"; title = "Keur auto-ongewijzigde tekst in geselecteerde bestanden goed"; ObjectID = "747"; */
+"747.title" = "Keur auto-ongewijzigde tekst in geselecteerde bestanden goed";
+
+/* Class = "NSMenuItem"; title = "Keur auto-verwerkte tekst in geselecteerde bestanden goed"; ObjectID = "748"; */
+"748.title" = "Keur auto-verwerkte tekst in geselecteerde bestanden goed";
+
+/* Class = "NSMenuItem"; title = "Keur auto-verwerkte tekst in alle bestanden goed"; ObjectID = "749"; */
+"749.title" = "Keur auto-verwerkte tekst in alle bestanden goed";
+
+/* Class = "NSMenuItem"; title = "Wis vertaling"; ObjectID = "768"; */
+"768.title" = "Wis vertaling";
+
+/* Class = "NSMenuItem"; title = "Blader door projecten…"; ObjectID = "773"; */
+"773.title" = "Blader door projecten…";
+
+/* Class = "NSMenuItem"; title = "Labels…"; ObjectID = "894"; */
+"894.title" = "Labels…";
+
+/* Class = "NSMenuItem"; title = "Zoek in project…"; ObjectID = "896"; */
+"896.title" = "Zoek in project…";
+
+/* Class = "NSMenuItem"; title = "Vervang…"; ObjectID = "899"; */
+"899.title" = "Vervang…";
+
+/* Class = "NSMenuItem"; title = "Nieuw filter…"; ObjectID = "901"; */
+"901.title" = "Nieuw filter…";
+
+/* Class = "NSMenuItem"; title = "Converteer regeleinden…"; ObjectID = "903"; */
+"903.title" = "Converteer regeleinden…";
+
+/* Class = "NSMenuItem"; title = "Controleer…"; ObjectID = "905"; */
+"905.title" = "Controleer…";
+
+/* Class = "NSMenuItem"; title = "Wis markering \"Bijgewerkt bestand\""; ObjectID = "959"; */
+"959.title" = "Wis markering \"Bijgewerkt bestand\"";
+
+/* Class = "NSMenuItem"; title = "Tekstcodering"; ObjectID = "966"; */
+"966.title" = "Tekstcodering";
+
+/* Class = "NSMenuItem"; title = "Wijzig naam…"; ObjectID = "968"; */
+"968.title" = "Wijzig naam…";
+
+/* Class = "NSMenuItem"; ibShadowedToolTip = "Maak een nieuwe lege taal"; ObjectID = "969"; */
+"969.ibShadowedToolTip" = "Maak een nieuwe lege taal";
+
+/* Class = "NSMenuItem"; title = "Voeg aangepaste taal toe…"; ObjectID = "969"; */
+"969.title" = "Voeg aangepaste taal toe…";
+
+/* Class = "NSMenuItem"; title = "Voeg bestanden toe aan taal…"; ObjectID = "975"; */
+"975.title" = "Voeg bestanden toe aan taal…";
+
+/* Class = "NSMenuItem"; title = "Update bestanden specifiek voor taal…"; ObjectID = "978"; */
+"978.title" = "Update bestanden specifiek voor taal…";
+
+/* Class = "NSMenuItem"; title = "Open vorige versie"; ObjectID = "1089"; */
+"1089.title" = "Open vorige versie";
+
+/* Class = "NSMenuItem"; title = "Exporteer…"; ObjectID = "1190"; */
+"1190.title" = "Exporteer…";
+
+/* Class = "NSMenuItem"; title = "Verwijder markering vertaald"; ObjectID = "1243"; */
+"1243.title" = "Verwijder markering vertaald";
+
+/* Class = "NSMenuItem"; title = "Markeer als vertaald"; ObjectID = "1245"; */
+"1245.title" = "Markeer als vertaald";
+
+/* Class = "NSMenuItem"; title = "Negeer geselecteerde bestanden"; ObjectID = "1354"; */
+"1354.title" = "Negeer geselecteerde bestanden";
+
+/* Class = "NSMenuItem"; title = "Laad bestand opnieuw"; ObjectID = "1759"; */
+"1759.title" = "Laad bestand opnieuw";
+
+/* Class = "NSMenuItem"; title = "Vertaal met extern strings-bestand…"; ObjectID = "1762"; */
+"1762.title" = "Vertaal met extern strings-bestand…";
+
+/* Class = "NSMenuItem"; title = "Weergave"; ObjectID = "1823"; */
+"1823.title" = "Weergave";
+
+/* Class = "NSMenu"; title = "Weergave"; ObjectID = "1824"; */
+"1824.title" = "Weergave";
+
+/* Class = "NSMenuItem"; title = "Toon onzichtbare tekens"; ObjectID = "1825"; */
+"1825.title" = "Toon onzichtbare tekens";
+
+/* Class = "NSMenuItem"; title = "Toon woordenlijstvertalingen"; ObjectID = "1829"; */
+"1829.title" = "Toon woordenlijstvertalingen";
+
+/* Class = "NSMenuItem"; title = "Toon alternatieve vertalingen"; ObjectID = "1830"; */
+"1830.title" = "Toon alternatieve vertalingen";
+
+/* Class = "NSMenuItem"; title = "Vervanging slimme aanhalingstekens"; ObjectID = "1836"; */
+"1836.title" = "Vervanging slimme aanhalingstekens";
+
+/* Class = "NSMenuItem"; title = "Vergrendel geselecteerde strings"; ObjectID = "1838"; */
+"1838.title" = "Vergrendel geselecteerde strings";
+
+/* Class = "NSMenuItem"; ibShadowedToolTip = "Maak een nieuwe lege taal"; ObjectID = "1922"; */
+"1922.ibShadowedToolTip" = "Maak een nieuwe lege taal";
+
+/* Class = "NSMenuItem"; title = "Wijzig naam aangepaste taal…"; ObjectID = "1922"; */
+"1922.title" = "Wijzig naam aangepaste taal…";
+
+/* Class = "NSMenuItem"; title = "Open recent project"; ObjectID = "1924"; */
+"1924.title" = "Open recent project";
+
+/* Class = "NSMenu"; title = "Open recent project"; ObjectID = "1925"; */
+"1925.title" = "Open recent project";
+
+/* Class = "NSMenuItem"; title = "Onderdeel"; ObjectID = "1926"; */
+"1926.title" = "Onderdeel";
+
+/* Class = "NSMenuItem"; title = "Open recente woordenlijst"; ObjectID = "1927"; */
+"1927.title" = "Open recente woordenlijst";
+
+/* Class = "NSMenu"; title = "Open recente woordenlijst"; ObjectID = "1928"; */
+"1928.title" = "Open recente woordenlijst";
+
+/* Class = "NSMenuItem"; title = "Onderdeel"; ObjectID = "1929"; */
+"1929.title" = "Onderdeel";
+
+/* Class = "NSMenuItem"; title = "Toon knoppenbalk"; ObjectID = "1937"; */
+"1937.title" = "Toon knoppenbalk";
+
+/* Class = "NSMenuItem"; title = "Pas knoppenbalk aan…"; ObjectID = "1938"; */
+"1938.title" = "Pas knoppenbalk aan…";
+
+/* Class = "NSMenuItem"; title = "Toon bestanden die alle talen hebben"; ObjectID = "1946"; */
+"1946.title" = "Toon bestanden die alle talen hebben";
+
+/* Class = "NSMenuItem"; title = "Toon bestanden specifiek voor <taal>"; ObjectID = "1947"; */
+"1947.title" = "Toon bestanden specifiek voor <taal>";
+
+/* Class = "NSMenuItem"; title = "Vertaal met woordenlijsten…"; ObjectID = "1972"; */
+"1972.title" = "Vertaal met woordenlijsten…";
+
+/* Class = "NSMenuItem"; title = "Toon stringinformatie"; ObjectID = "1976"; */
+"1976.title" = "Toon stringinformatie";
+
+/* Class = "NSMenuItem"; title = "Toon tekstzone"; ObjectID = "1981"; */
+"1981.title" = "Toon tekstzone";
+
+/* Class = "NSMenuItem"; title = "Toon kolom Sleutel"; ObjectID = "1984"; */
+"1984.title" = "Toon kolom Sleutel";
+
+/* Class = "NSMenuItem"; title = "Toon structuurweergave"; ObjectID = "2000"; */
+"2000.title" = "Toon structuurweergave";
+
+/* Class = "NSMenuItem"; title = "Toon stringinformatie"; ObjectID = "2002"; */
+"2002.title" = "Toon stringinformatie";
+
+/* Class = "NSMenuItem"; title = "Toon statusbalk"; ObjectID = "2012"; */
+"2012.title" = "Toon statusbalk";
+
+/* Class = "NSMenuItem"; title = "Exporteer opnieuw als"; ObjectID = "2016"; */
+"2016.title" = "Exporteer opnieuw als";
+
+/* Class = "NSMenu"; title = "Exporteer opnieuw als"; ObjectID = "2017"; */
+"2017.title" = "Exporteer opnieuw als";
+
+/* Class = "NSMenuItem"; title = "Onderdeel"; ObjectID = "2018"; */
+"2018.title" = "Onderdeel";
+
+/* Class = "NSMenuItem"; title = "Toon taal"; ObjectID = "2020"; */
+"2020.title" = "Toon taal";
+
+/* Class = "NSMenuItem"; title = "Update strings…"; ObjectID = "2026"; */
+"2026.title" = "Update strings…";
+
+/* Class = "NSMenuItem"; title = "Update met bestanden…"; ObjectID = "2028"; */
+"2028.title" = "Update met bestanden…";
+
+/* Class = "NSMenuItem"; title = "Exporteer strings…"; ObjectID = "2030"; */
+"2030.title" = "Exporteer strings…";
+
+/* Class = "NSMenuItem"; title = "Bewaar als…"; ObjectID = "2067"; */
+"2067.title" = "Bewaar als…";
+
+/* Class = "NSMenuItem"; title = "Laatst bewaarde versie"; ObjectID = "2083"; */
+"2083.title" = "Laatst bewaarde versie";
+
+/* Class = "NSMenuItem"; title = "Bewaar in…"; ObjectID = "2085"; */
+"2085.title" = "Bewaar in…";
+
+/* Class = "NSMenuItem"; title = "Open en repareer…"; ObjectID = "2089"; */
+"2089.title" = "Open en repareer…";
+
+/* Class = "NSMenuItem"; title = "Vertaal met geselecteerde woordenlijstinvoer"; ObjectID = "2094"; */
+"2094.title" = "Vertaal met geselecteerde woordenlijstinvoer";
+
+/* Class = "NSMenuItem"; title = "Open vorige & huidige in externe editor"; ObjectID = "2098"; */
+"2098.title" = "Open vorige & huidige in externe editor";
+
+/* Class = "NSMenuItem"; title = "Diff met voorgaande"; ObjectID = "2100"; */
+"2100.title" = "Diff met voorgaande";
+
+/* Class = "NSMenuItem"; title = "Donatie…"; ObjectID = "2102"; */
+"2102.title" = "Donatie…";
+
+/* Class = "NSMenuItem"; title = "Maak woordenlijsten met alle talen"; ObjectID = "VQP-eR-tjC"; */
+"VQP-eR-tjC.title" = "Maak woordenlijsten met alle talen";
+
+/* Class = "NSMenuItem"; title = "Maak woordenlijst met huidige taal"; ObjectID = "cme-B7-7ha"; */
+"cme-B7-7ha.title" = "Maak woordenlijst met huidige taal";

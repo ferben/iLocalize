@@ -1,0 +1,75 @@
+
+/* Class = "NSMenu"; title = "Меню"; ObjectID = "490"; */
+"490.title" = "Меню";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "491"; */
+"491.title" = "Item1";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "492"; */
+"492.title" = "Item2";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "499"; */
+"499.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "500"; */
+"500.title" = "Item3";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "501"; */
+"501.title" = "Item2";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "502"; */
+"502.title" = "Item1";
+
+/* Class = "NSTextFieldCell"; title = "Кодировка по умолчанию:"; ObjectID = "518"; */
+"518.title" = "Кодировка по умолчанию:";
+
+/* Class = "NSTableColumn"; headerCell.title = "Закрывающая '"; ObjectID = "532"; */
+"532.headerCell.title" = "Закрывающая '";
+
+/* Class = "NSTableColumn"; headerCell.title = "Открывающая '"; ObjectID = "533"; */
+"533.headerCell.title" = "Открывающая '";
+
+/* Class = "NSTableColumn"; headerCell.title = "Язык"; ObjectID = "534"; */
+"534.headerCell.title" = "Язык";
+
+/* Class = "NSTableColumn"; headerCell.title = "Открывающая \""; ObjectID = "535"; */
+"535.headerCell.title" = "Открывающая \"";
+
+/* Class = "NSTableColumn"; headerCell.title = "Закрывающая \""; ObjectID = "536"; */
+"536.headerCell.title" = "Закрывающая \"";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "537"; */
+"537.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "538"; */
+"538.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "540"; */
+"540.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "541"; */
+"541.title" = "Text Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "Кодировка по умолчанию"; ObjectID = "544"; */
+"544.headerCell.title" = "Кодировка по умолчанию";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "549"; */
+"549.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Pop Up"; ObjectID = "550"; */
+"550.title" = "Pop Up";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "576"; */
+"576.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Pop Up"; ObjectID = "577"; */
+"577.title" = "Pop Up";
+
+/* Class = "NSMenu"; title = "Меню"; ObjectID = "578"; */
+"578.title" = "Меню";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "579"; */
+"579.title" = "Item2";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "580"; */
+"580.title" = "Item1";

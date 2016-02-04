@@ -1,0 +1,45 @@
+
+/* Class = "NSWindow"; title = "Apagar"; ObjectID = "5"; */
+"5.title" = "Apagar";
+
+/* Class = "NSMenu"; title = "Outras Visualizações"; ObjectID = "15"; */
+"15.title" = "Outras Visualizações";
+
+/* Class = "NSMenuItem"; title = "Arquivos Selecionados"; ObjectID = "16"; */
+"16.title" = "Arquivos Selecionados";
+
+/* Class = "NSMenuItem"; title = "Idioma Selecionado"; ObjectID = "17"; */
+"17.title" = "Idioma Selecionado";
+
+/* Class = "NSMenuItem"; title = "Todo Projeto"; ObjectID = "18"; */
+"18.title" = "Todo Projeto";
+
+/* Class = "NSMenuItem"; title = "Strings Selecionadas"; ObjectID = "19"; */
+"19.title" = "Strings Selecionadas";
+
+/* Class = "NSButtonCell"; title = "Substituir \" por “ (aspas duplas)"; ObjectID = "35"; */
+"35.title" = "Substituir \" por “ (aspas duplas)";
+
+/* Class = "NSButtonCell"; title = "Substituir ... por … (reticências)"; ObjectID = "36"; */
+"36.title" = "Substituir ... por … (reticências)";
+
+/* Class = "NSButtonCell"; title = "Certifique-se de espaço não quebrável antes da pontuação"; ObjectID = "37"; */
+"37.title" = "Certifique-se de espaço não quebrável antes da pontuação";
+
+/* Class = "NSButtonCell"; title = "Remover espaço(s) em branco extra(s) no final da sequência"; ObjectID = "38"; */
+"38.title" = "Remover espaço(s) em branco extra(s) no final da sequência";
+
+/* Class = "NSButtonCell"; title = "Cancelar"; ObjectID = "39"; */
+"39.title" = "Cancelar";
+
+/* Class = "NSButtonCell"; title = "Apagar"; ObjectID = "40"; */
+"40.title" = "Apagar";
+
+/* Class = "NSTextFieldCell"; title = "Aplicar para:"; ObjectID = "41"; */
+"41.title" = "Aplicar para:";
+
+/* Class = "NSButtonCell"; title = "Marcar strings modificadas como \"verificar\""; ObjectID = "44"; */
+"44.title" = "Marcar strings modificadas como \"verificar\"";
+
+/* Class = "NSButtonCell"; title = "Substituir ' por ’ (apóstrofe por aspas simples)"; ObjectID = "45"; */
+"45.title" = "Substituir ' por ’ (apóstrofe por aspas simples)";

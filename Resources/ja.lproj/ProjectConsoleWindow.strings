@@ -1,0 +1,33 @@
+
+/* Class = "NSWindow"; title = "コンソール"; ObjectID = "5"; */
+"5.title" = "コンソール";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "77"; */
+"77.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "番組ログとエラー"; ObjectID = "79"; */
+"79.title" = "番組ログとエラー";
+
+/* Class = "NSMenuItem"; title = "番組エラーのみ表示"; ObjectID = "81"; */
+"81.title" = "番組エラーのみ表示";
+
+/* Class = "NSMenuItem"; title = "番組ログのみ"; ObjectID = "82"; */
+"82.title" = "番組ログのみ";
+
+/* Class = "NSButtonCell"; title = "消去"; ObjectID = "109"; */
+"109.title" = "消去";
+
+/* Class = "NSButtonCell"; title = "更新"; ObjectID = "111"; */
+"111.title" = "更新";
+
+/* Class = "NSTextFieldCell"; title = "ログを"; ObjectID = "112"; */
+"112.title" = "ログを";
+
+/* Class = "NSTextFieldCell"; title = "7"; ObjectID = "113"; */
+"113.title" = "7";
+
+/* Class = "NSButtonCell"; title = "書き出す…"; ObjectID = "117"; */
+"117.title" = "書き出す…";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "135"; */
+"135.title" = "Text Cell";

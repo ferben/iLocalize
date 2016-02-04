@@ -1,0 +1,108 @@
+
+/* Class = "NSMenu"; title = "Меню"; ObjectID = "5"; */
+"5.title" = "Меню";
+
+/* Class = "NSMenuItem"; title = "Преобразовать управляющие знаки в управляющие последовательности"; ObjectID = "6"; */
+"6.title" = "Преобразовать управляющие знаки в управляющие последовательности";
+
+/* Class = "NSMenuItem"; title = "Преобразовать управляющие последовательности в управляющие знаки"; ObjectID = "8"; */
+"8.title" = "Преобразовать управляющие последовательности в управляющие знаки";
+
+/* Class = "NSTableColumn"; headerCell.title = "Статус"; ObjectID = "11"; */
+"11.headerCell.title" = "Статус";
+
+/* Class = "NSTableColumn"; headerCell.title = "Раздел"; ObjectID = "14"; */
+"14.headerCell.title" = "Раздел";
+
+/* Class = "NSTableColumn"; headerCell.title = "Перевод"; ObjectID = "23"; */
+"23.headerCell.title" = "Перевод";
+
+/* Class = "NSMenuItem"; title = "Очистить примечания перевода"; ObjectID = "35"; */
+"35.title" = "Очистить примечания перевода";
+
+/* Class = "NSMenuItem"; title = "Очистить примечания базового языка"; ObjectID = "36"; */
+"36.title" = "Очистить примечания базового языка";
+
+/* Class = "NSMenuItem"; title = "Поменять местами базовый язык и перевод"; ObjectID = "37"; */
+"37.title" = "Поменять местами базовый язык и перевод";
+
+/* Class = "NSMenuItem"; title = "Очистить примечания"; ObjectID = "41"; */
+"41.title" = "Очистить примечания";
+
+/* Class = "NSMenuItem"; title = "Утвердить"; ObjectID = "42"; */
+"42.title" = "Утвердить";
+
+/* Class = "NSMenu"; title = "Меню"; ObjectID = "43"; */
+"43.title" = "Меню";
+
+/* Class = "NSMenuItem"; title = "Скопировать базовый язык в перевод"; ObjectID = "45"; */
+"45.title" = "Скопировать базовый язык в перевод";
+
+/* Class = "NSTableColumn"; headerCell.title = "Базовый"; ObjectID = "98"; */
+"98.headerCell.title" = "Базовый";
+
+/* Class = "NSMenuItem"; title = "Утвердить идентичные строки в выбранных файлах"; ObjectID = "139"; */
+"139.title" = "Утвердить идентичные строки в выбранных файлах";
+
+/* Class = "NSMenuItem"; title = "Распространить перевод на идентичные строки в выбранных файлах"; ObjectID = "140"; */
+"140.title" = "Распространить перевод на идентичные строки в выбранных файлах";
+
+/* Class = "NSMenuItem"; title = "Утвердить идентичные строки во всех файлах"; ObjectID = "144"; */
+"144.title" = "Утвердить идентичные строки во всех файлах";
+
+/* Class = "NSMenuItem"; title = "Распространить перевод на идентичные строки во всех файлах"; ObjectID = "146"; */
+"146.title" = "Распространить перевод на идентичные строки во всех файлах";
+
+/* Class = "NSMenuItem"; title = "Очистить перевод"; ObjectID = "202"; */
+"202.title" = "Очистить перевод";
+
+/* Class = "NSTableColumn"; headerCell.title = "Метки"; ObjectID = "209"; */
+"209.headerCell.title" = "Метки";
+
+/* Class = "NSMenuItem"; title = "Метки"; ObjectID = "218"; */
+"218.title" = "Метки";
+
+/* Class = "NSMenuItem"; title = "Пометить как переведено"; ObjectID = "253"; */
+"253.title" = "Пометить как переведено";
+
+/* Class = "NSMenuItem"; title = "Убрать отметку переведено"; ObjectID = "255"; */
+"255.title" = "Убрать отметку переведено";
+
+/* Class = "NSTextFieldCell"; title = "Нет строки"; ObjectID = "395"; */
+"395.title" = "Нет строки";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "398"; */
+"398.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "399"; */
+"399.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "400"; */
+"400.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "401"; */
+"401.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Заблокировать"; ObjectID = "470"; */
+"470.title" = "Заблокировать";
+
+/* Class = "NSMenuItem"; title = "Показать текстовую область"; ObjectID = "488"; */
+"488.title" = "Показать текстовую область";
+
+/* Class = "NSMenuItem"; title = "Показать столбец разделов"; ObjectID = "489"; */
+"489.title" = "Показать столбец разделов";
+
+/* Class = "NSTableColumn"; headerCell.title = "Базовый"; ObjectID = "496"; */
+"496.headerCell.title" = "Базовый";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "497"; */
+"497.title" = "Text Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "Раздел"; ObjectID = "502"; */
+"502.headerCell.title" = "Раздел";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "503"; */
+"503.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Обновить в глоссарии…"; ObjectID = "530"; */
+"530.title" = "Обновить в глоссарии…";

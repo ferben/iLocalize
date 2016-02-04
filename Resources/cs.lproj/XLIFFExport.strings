@@ -1,0 +1,54 @@
+
+/* Class = "NSTextFieldCell"; title = "Původní jazyk:"; ObjectID = "3"; */
+"3.title" = "Původní jazyk:";
+
+/* Class = "NSTextFieldCell"; title = "Cílový jazyk:"; ObjectID = "5"; */
+"5.title" = "Cílový jazyk:";
+
+/* Class = "NSMenu"; title = "Jiný pohled"; ObjectID = "8"; */
+"8.title" = "Jiný pohled";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "9"; */
+"9.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "10"; */
+"10.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "11"; */
+"11.title" = "Item 3";
+
+/* Class = "NSMenu"; title = "Jiný pohled"; ObjectID = "14"; */
+"14.title" = "Jiný pohled";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "15"; */
+"15.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "16"; */
+"16.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "17"; */
+"17.title" = "Item 3";
+
+/* Class = "NSTextFieldCell"; title = "Výstupní soubor:"; ObjectID = "19"; */
+"19.title" = "Výstupní soubor:";
+
+/* Class = "NSButtonCell"; title = "Vybrat…"; ObjectID = "23"; */
+"23.title" = "Vybrat…";
+
+/* Class = "NSPathCell"; placeholderString = "Není vybrán žádný soubor"; ObjectID = "25"; */
+"25.placeholderString" = "Není vybrán žádný soubor";
+
+/* Class = "NSTextFieldCell"; title = "Formát:"; ObjectID = "42"; */
+"42.title" = "Formát:";
+
+/* Class = "NSMenu"; title = "Jiný pohled"; ObjectID = "48"; */
+"48.title" = "Jiný pohled";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "49"; */
+"49.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "50"; */
+"50.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "51"; */
+"51.title" = "Item 3";

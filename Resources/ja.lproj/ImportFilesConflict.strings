@@ -1,0 +1,87 @@
+
+/* Class = "NSWindow"; title = "アップデートの競合"; ObjectID = "5"; */
+"5.title" = "アップデートの競合";
+
+/* Class = "NSBox"; title = "プロジェクトのファイル"; ObjectID = "12"; */
+"12.title" = "プロジェクトのファイル";
+
+/* Class = "NSBox"; title = "更新されたファイル"; ObjectID = "47"; */
+"47.title" = "更新されたファイル";
+
+/* Class = "NSTextFieldCell"; title = "iLocalize はこれらのファイルをマージできませんでした。\n使用するファイルを選択してください。"; ObjectID = "90"; */
+"90.title" = "iLocalize はこれらのファイルをマージできませんでした。\n使用するファイルを選択してください。";
+
+/* Class = "NSTextFieldCell"; title = "パス:"; ObjectID = "91"; */
+"91.title" = "パス:";
+
+/* Class = "NSTextFieldCell"; title = "/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path"; ObjectID = "92"; */
+"92.title" = "/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path";
+
+/* Class = "NSTextFieldCell"; title = "作成日:"; ObjectID = "93"; */
+"93.title" = "作成日:";
+
+/* Class = "NSTextFieldCell"; title = "July 7, 2005"; ObjectID = "94"; */
+"94.title" = "July 7, 2005";
+
+/* Class = "NSTextFieldCell"; title = "最終更新日:"; ObjectID = "95"; */
+"95.title" = "最終更新日:";
+
+/* Class = "NSTextFieldCell"; title = "July 7, 2005"; ObjectID = "96"; */
+"96.title" = "July 7, 2005";
+
+/* Class = "NSButtonCell"; title = "開く"; ObjectID = "97"; */
+"97.title" = "開く";
+
+/* Class = "NSTextFieldCell"; title = "名前:"; ObjectID = "98"; */
+"98.title" = "名前:";
+
+/* Class = "NSTextFieldCell"; title = "example.jpg"; ObjectID = "99"; */
+"99.title" = "example.jpg";
+
+/* Class = "NSButtonCell"; title = "Finder に表示"; ObjectID = "100"; */
+"100.title" = "Finder に表示";
+
+/* Class = "NSButtonCell"; title = "このファイルを使用"; ObjectID = "101"; */
+"101.title" = "このファイルを使用";
+
+/* Class = "NSButtonCell"; title = "続ける"; ObjectID = "102"; */
+"102.title" = "続ける";
+
+/* Class = "NSButtonCell"; title = "すべてに適用"; ObjectID = "103"; */
+"103.title" = "すべてに適用";
+
+/* Class = "NSButtonCell"; title = "開く"; ObjectID = "105"; */
+"105.title" = "開く";
+
+/* Class = "NSTextFieldCell"; title = "パス:"; ObjectID = "106"; */
+"106.title" = "パス:";
+
+/* Class = "NSTextFieldCell"; title = "名前:"; ObjectID = "107"; */
+"107.title" = "名前:";
+
+/* Class = "NSButtonCell"; title = "Finder に表示"; ObjectID = "108"; */
+"108.title" = "Finder に表示";
+
+/* Class = "NSTextFieldCell"; title = "/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path"; ObjectID = "109"; */
+"109.title" = "/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path";
+
+/* Class = "NSTextFieldCell"; title = "July 7, 2005"; ObjectID = "110"; */
+"110.title" = "July 7, 2005";
+
+/* Class = "NSTextFieldCell"; title = "July 7, 2005"; ObjectID = "111"; */
+"111.title" = "July 7, 2005";
+
+/* Class = "NSTextFieldCell"; title = "最終更新日:"; ObjectID = "112"; */
+"112.title" = "最終更新日:";
+
+/* Class = "NSTextFieldCell"; title = "作成日:"; ObjectID = "113"; */
+"113.title" = "作成日:";
+
+/* Class = "NSTextFieldCell"; title = "example.jpg"; ObjectID = "114"; */
+"114.title" = "example.jpg";
+
+/* Class = "NSButtonCell"; title = "このファイルを使用"; ObjectID = "115"; */
+"115.title" = "このファイルを使用";
+
+/* Class = "NSButtonCell"; title = "Apply to All Languages"; ObjectID = "We8-Ds-STm"; */
+"We8-Ds-STm.title" = "Apply to All Languages";

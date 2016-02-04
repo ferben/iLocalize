@@ -1,0 +1,66 @@
+
+/* Class = "NSWindow"; title = "Symbole"; ObjectID = "782"; */
+"782.title" = "Symbole";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "955"; */
+"955.title" = "Box";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "957"; */
+"957.title" = "Box";
+
+/* Class = "NSTextFieldCell"; title = "Sprawdź układ (tylko pliki XIB/NIB)"; ObjectID = "1777"; */
+"1777.title" = "Sprawdź układ (tylko pliki XIB/NIB)";
+
+/* Class = "NSTextFieldCell"; title = "Zawartość pliku musi być zachowana na dysku"; ObjectID = "1781"; */
+"1781.title" = "Zawartość pliku musi być zachowana na dysku";
+
+/* Class = "NSTextFieldCell"; title = "Pogrubiona nazwa:"; ObjectID = "1782"; */
+"1782.title" = "Pogrubiona nazwa:";
+
+/* Class = "NSTextFieldCell"; title = "Plik zawiera kilka niezgodności"; ObjectID = "1790"; */
+"1790.title" = "Plik zawiera kilka niezgodności";
+
+/* Class = "NSTextFieldCell"; title = "Brak pliku na dysku"; ObjectID = "1792"; */
+"1792.title" = "Brak pliku na dysku";
+
+/* Class = "NSTextFieldCell"; title = "Zawartość pliku musi być odświeżona z dysku"; ObjectID = "1794"; */
+"1794.title" = "Zawartość pliku musi być odświeżona z dysku";
+
+/* Class = "NSTextFieldCell"; title = "Plik został dodany podczas ostatniego uaktualnienia"; ObjectID = "1797"; */
+"1797.title" = "Plik został dodany podczas ostatniego uaktualnienia";
+
+/* Class = "NSTextFieldCell"; title = "Plik został uaktualniony podczas ost. uaktualnienia"; ObjectID = "1798"; */
+"1798.title" = "Plik został uaktualniony podczas ost. uaktualnienia";
+
+/* Class = "NSTextFieldCell"; title = "✒"; ObjectID = "1799"; */
+"1799.title" = "✒";
+
+/* Class = "NSTextFieldCell"; title = "Identyfikuje plik zawierający wybrane łańcuchy (tylko gdy wybrano wiele plików)"; ObjectID = "1800"; */
+"1800.title" = "Identyfikuje plik zawierający wybrane łańcuchy (tylko gdy wybrano wiele plików)";
+
+/* Class = "NSTextFieldCell"; title = "Symbole plików"; ObjectID = "1801"; */
+"1801.title" = "Symbole plików";
+
+/* Class = "NSTextFieldCell"; title = "Symbole łańcuchów"; ObjectID = "1802"; */
+"1802.title" = "Symbole łańcuchów";
+
+/* Class = "NSTextFieldCell"; title = "Auto. niezmienny"; ObjectID = "1804"; */
+"1804.title" = "Auto. niezmienny";
+
+/* Class = "NSTextFieldCell"; title = "Niezmienny"; ObjectID = "1806"; */
+"1806.title" = "Niezmienny";
+
+/* Class = "NSTextFieldCell"; title = "Auto. przetłumaczony"; ObjectID = "1807"; */
+"1807.title" = "Auto. przetłumaczony";
+
+/* Class = "NSTextFieldCell"; title = "Zmieniona baza"; ObjectID = "1811"; */
+"1811.title" = "Zmieniona baza";
+
+/* Class = "NSTextFieldCell"; title = "Do przetłumaczenia"; ObjectID = "1813"; */
+"1813.title" = "Do przetłumaczenia";
+
+/* Class = "NSTextFieldCell"; title = "Niezgodności"; ObjectID = "1816"; */
+"1816.title" = "Niezgodności";
+
+/* Class = "NSTextFieldCell"; title = "File has been updated during last update operation"; ObjectID = "hi2-yW-vJG"; */
+"hi2-yW-vJG.title" = "File has been updated during last update operation";

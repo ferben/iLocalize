@@ -1,0 +1,15 @@
+
+/* Class = "NSButtonCell"; title = "Arkiver"; ObjectID = "14"; */
+"14.title" = "Arkiver";
+
+/* Class = "NSTextFieldCell"; placeholderString = "Angiv string til erstatning"; ObjectID = "28"; */
+"28.placeholderString" = "Angiv string til erstatning";
+
+/* Class = "NSButtonCell"; title = "Erstat"; ObjectID = "30"; */
+"30.title" = "Erstat";
+
+/* Class = "NSButtonCell"; title = "Erstat alle"; ObjectID = "33"; */
+"33.title" = "Erstat alle";
+
+/* Class = "NSTextFieldCell"; title = "Omfang:"; ObjectID = "98"; */
+"98.title" = "Omfang:";

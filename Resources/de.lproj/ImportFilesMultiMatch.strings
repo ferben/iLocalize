@@ -1,0 +1,9 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Quelle"; ObjectID = "8"; */
+"8.headerCell.title" = "Quelle";
+
+/* Class = "NSTableColumn"; headerCell.title = "Entsprechende Projektdatei"; ObjectID = "9"; */
+"9.headerCell.title" = "Entsprechende Projektdatei";
+
+/* Class = "NSTextFieldCell"; title = "Folgende Dateien haben mehrere Entsprechungen im Projekt. Legen Sie für jede Datei die entsprechende Projektdatei fest:"; ObjectID = "137"; */
+"137.title" = "Folgende Dateien haben mehrere Entsprechungen im Projekt. Legen Sie für jede Datei die entsprechende Projektdatei fest:";

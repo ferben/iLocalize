@@ -1,0 +1,15 @@
+
+/* Class = "NSButtonCell"; title = "Zachowaj"; ObjectID = "14"; */
+"14.title" = "Zachowaj";
+
+/* Class = "NSTextFieldCell"; placeholderString = "Wprowadź łańcuch do zastąpienia"; ObjectID = "28"; */
+"28.placeholderString" = "Wprowadź łańcuch do zastąpienia";
+
+/* Class = "NSButtonCell"; title = "Zastąp"; ObjectID = "30"; */
+"30.title" = "Zastąp";
+
+/* Class = "NSButtonCell"; title = "Zastąp wszystko"; ObjectID = "33"; */
+"33.title" = "Zastąp wszystko";
+
+/* Class = "NSTextFieldCell"; title = "Zakres:"; ObjectID = "98"; */
+"98.title" = "Zakres:";

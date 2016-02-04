@@ -1,0 +1,57 @@
+
+/* Class = "NSWindow"; title = "Statistiken "; ObjectID = "5"; */
+"5.title" = "Statistiken ";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "19"; */
+"19.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "lklkl"; ObjectID = "20"; */
+"20.title" = "lklkl";
+
+/* Class = "NSMenuItem"; title = "abab"; ObjectID = "21"; */
+"21.title" = "abab";
+
+/* Class = "NSMenuItem"; title = "Alle"; ObjectID = "22"; */
+"22.title" = "Alle";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "67"; */
+"67.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "pro Zeichenfolge"; ObjectID = "68"; */
+"68.title" = "pro Zeichenfolge";
+
+/* Class = "NSMenuItem"; title = "pro Zeichen"; ObjectID = "69"; */
+"69.title" = "pro Zeichen";
+
+/* Class = "NSMenuItem"; title = "pro Wort"; ObjectID = "70"; */
+"70.title" = "pro Wort";
+
+/* Class = "NSTableColumn"; headerCell.title = "#"; ObjectID = "108"; */
+"108.headerCell.title" = "#";
+
+/* Class = "NSTableColumn"; headerCell.title = "Alle"; ObjectID = "109"; */
+"109.headerCell.title" = "Alle";
+
+/* Class = "NSTableColumn"; headerCell.title = "Zu übersetzen"; ObjectID = "110"; */
+"110.headerCell.title" = "Zu übersetzen";
+
+/* Class = "NSButtonCell"; title = "In die Zwischenablage kopieren"; ObjectID = "120"; */
+"120.title" = "In die Zwischenablage kopieren";
+
+/* Class = "NSButtonCell"; title = "Schließen"; ObjectID = "121"; */
+"121.title" = "Schließen";
+
+/* Class = "NSTextFieldCell"; title = "Sprache:"; ObjectID = "122"; */
+"122.title" = "Sprache:";
+
+/* Class = "NSTextFieldCell"; title = "Hinweis: Diese Statistik bezieht sich nur auf STRINGS- und XIB-/NIB-Dateien."; ObjectID = "124"; */
+"124.title" = "Hinweis: Diese Statistik bezieht sich nur auf STRINGS- und XIB-/NIB-Dateien.";
+
+/* Class = "NSTextFieldCell"; title = "Statistiken erstellen …"; ObjectID = "125"; */
+"125.title" = "Statistiken erstellen …";
+
+/* Class = "NSTextFieldCell"; title = "1"; ObjectID = "127"; */
+"127.title" = "1";
+
+/* Class = "NSTextFieldCell"; title = "Rate:"; ObjectID = "128"; */
+"128.title" = "Rate:";

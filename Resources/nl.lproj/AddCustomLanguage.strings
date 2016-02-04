@@ -1,0 +1,15 @@
+
+/* Class = "NSWindow"; title = "Voeg taal toe"; ObjectID = "132"; */
+"132.title" = "Voeg taal toe";
+
+/* Class = "NSButtonCell"; title = "Annuleer"; ObjectID = "191"; */
+"191.title" = "Annuleer";
+
+/* Class = "NSButtonCell"; title = "Voeg toe"; ObjectID = "192"; */
+"192.title" = "Voeg toe";
+
+/* Class = "NSTextFieldCell"; title = "Gebruik van eigen talen wordt sterk afgeraden"; ObjectID = "194"; */
+"194.title" = "Gebruik van eigen talen wordt sterk afgeraden";
+
+/* Class = "NSBox"; title = "Taal"; ObjectID = "196"; */
+"196.title" = "Taal";

@@ -1,0 +1,51 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "Considera i caratteri controllo ed escape come identici"; ObjectID = "330"; */
+"330.ibShadowedToolTip" = "Considera i caratteri controllo ed escape come identici";
+
+/* Class = "NSButtonCell"; title = "Ignora case"; ObjectID = "474"; */
+"474.title" = "Ignora case";
+
+/* Class = "NSTextFieldCell"; title = "Traduzione:"; ObjectID = "476"; */
+"476.title" = "Traduzione:";
+
+/* Class = "NSButtonCell"; title = "Solo-lettura"; ObjectID = "482"; */
+"482.title" = "Solo-lettura";
+
+/* Class = "NSTextFieldCell"; title = "Lingua base:"; ObjectID = "483"; */
+"483.title" = "Lingua base:";
+
+/* Class = "NSButtonCell"; title = "Ignora caratteri di controllo"; ObjectID = "484"; */
+"484.title" = "Ignora caratteri di controllo";
+
+/* Class = "NSTextFieldCell"; title = "Propaga Traduzione:"; ObjectID = "491"; */
+"491.title" = "Propaga Traduzione:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "494"; */
+"494.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Disabilitato"; ObjectID = "495"; */
+"495.title" = "Disabilitato";
+
+/* Class = "NSMenuItem"; title = "Automaticamente nei Files Selezionati"; ObjectID = "496"; */
+"496.title" = "Automaticamente nei Files Selezionati";
+
+/* Class = "NSMenuItem"; title = "Automaticamente a Tutti i Files"; ObjectID = "497"; */
+"497.title" = "Automaticamente a Tutti i Files";
+
+/* Class = "NSTextFieldCell"; title = "Mode:"; ObjectID = "501"; */
+"501.title" = "Mode:";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "503"; */
+"503.title" = "Radio";
+
+/* Class = "NSButtonCell"; title = "Developer"; ObjectID = "504"; */
+"504.title" = "Developer";
+
+/* Class = "NSButtonCell"; title = "Translator"; ObjectID = "509"; */
+"509.title" = "Translator";
+
+/* Class = "NSButtonCell"; title = "Reset Warnings"; ObjectID = "4qb-iu-nB5"; */
+"4qb-iu-nB5.title" = "Reset Warnings";
+
+/* Class = "NSTextFieldCell"; title = "Azzera avvisi finestre di dialogo:"; ObjectID = "UVZ-qQ-zdX"; */
+"UVZ-qQ-zdX.title" = "Azzera avvisi finestre di dialogo:";

@@ -1,0 +1,39 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "ベース言語を更新し、他の言語をすべてベース言語に合わせて更新します。他の言語に含まれる文字列はすべて現在の翻訳に従ってローカライズされます。"; ObjectID = "10"; */
+"10.ibShadowedToolTip" = "ベース言語を更新し、他の言語をすべてベース言語に合わせて更新します。他の言語に含まれる文字列はすべて現在の翻訳に従ってローカライズされます。";
+
+/* Class = "NSTextFieldCell"; title = "アップデートする言語を選択してください:"; ObjectID = "151"; */
+"151.title" = "アップデートする言語を選択してください:";
+
+/* Class = "NSButtonCell"; title = "バンドルの新バージョンからプロジェクトをアップデート:"; ObjectID = "152"; */
+"152.title" = "バンドルの新バージョンからプロジェクトをアップデート:";
+
+/* Class = "NSButtonCell"; title = "ベース言語の NIB ファイルを元に各言語の nib ファイルのレイアウトをリセット"; ObjectID = "153"; */
+"153.title" = "ベース言語の NIB ファイルを元に各言語の nib ファイルのレイアウトをリセット";
+
+/* Class = "NSButtonCell"; title = "バンドルからプロジェクトのローカライズ済み言語をアップデート:"; ObjectID = "154"; */
+"154.title" = "バンドルからプロジェクトのローカライズ済み言語をアップデート:";
+
+/* Class = "NSButtonCell"; title = "読み込んだレイアウトから NIB のレイアウトをアップデート"; ObjectID = "155"; */
+"155.title" = "読み込んだレイアウトから NIB のレイアウトをアップデート";
+
+/* Class = "NSTextFieldCell"; title = "レイアウトが正しいかどうかローカライズ済み NIB ファイルを精査してください。"; ObjectID = "156"; */
+"156.title" = "レイアウトが正しいかどうかローカライズ済み NIB ファイルを精査してください。";
+
+/* Class = "NSButtonCell"; title = "ベース言語から存在しないローカライズファイルを作成"; ObjectID = "158"; */
+"158.title" = "ベース言語から存在しないローカライズファイルを作成";
+
+/* Class = "NSButtonCell"; title = "チェック"; ObjectID = "189"; */
+"189.title" = "チェック";
+
+/* Class = "NSButtonCell"; title = "選択…"; ObjectID = "203"; */
+"203.title" = "選択…";
+
+/* Class = "NSButtonCell"; title = "選択…"; ObjectID = "205"; */
+"205.title" = "選択…";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "バンドルを選択するかドラッグして下さい"; ObjectID = "213"; */
+"213.ibShadowedIsNilPlaceholder" = "バンドルを選択するかドラッグして下さい";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "バンドルを選択するかドラッグして下さい"; ObjectID = "214"; */
+"214.ibShadowedIsNilPlaceholder" = "バンドルを選択するかドラッグして下さい";

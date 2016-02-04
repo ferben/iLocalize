@@ -1,0 +1,21 @@
+
+/* Class = "NSWindow"; title = "Bewerkingsverslag"; ObjectID = "5"; */
+"5.title" = "Bewerkingsverslag";
+
+/* Class = "NSTableColumn"; headerCell.title = "Type"; ObjectID = "11"; */
+"11.headerCell.title" = "Type";
+
+/* Class = "NSTableColumn"; headerCell.title = "Beschrijving"; ObjectID = "64"; */
+"64.headerCell.title" = "Beschrijving";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "65"; */
+"65.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "De bewerking is voltooid met de volgende fouten en waarschuwingen:"; ObjectID = "78"; */
+"78.title" = "De bewerking is voltooid met de volgende fouten en waarschuwingen:";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "79"; */
+"79.title" = "OK";
+
+/* Class = "NSButtonCell"; title = "Exporteer…"; ObjectID = "80"; */
+"80.title" = "Exporteer…";

@@ -1,0 +1,27 @@
+
+/* Class = "NSWindow"; title = "言語の追加"; ObjectID = "132"; */
+"132.title" = "言語の追加";
+
+/* Class = "NSButtonCell"; title = "キャンセル"; ObjectID = "187"; */
+"187.title" = "キャンセル";
+
+/* Class = "NSButtonCell"; title = "追加"; ObjectID = "188"; */
+"188.title" = "追加";
+
+/* Class = "NSButtonCell"; title = "ベース言語を訳語としてすべてコピーする"; ObjectID = "200"; */
+"200.title" = "ベース言語を訳語としてすべてコピーする";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "206"; */
+"206.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "207"; */
+"207.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "208"; */
+"208.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "209"; */
+"209.title" = "Item 3";
+
+/* Class = "NSBox"; title = "言語名"; ObjectID = "220"; */
+"220.title" = "言語名";

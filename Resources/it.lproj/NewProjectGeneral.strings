@@ -1,0 +1,51 @@
+
+/* Class = "NSMenuItem"; title = "<definisci-nome>"; ObjectID = "82"; */
+"82.title" = "<definisci-nome>";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "83"; */
+"83.title" = "OtherViews";
+
+/* Class = "NSTextFieldCell"; title = "Nome:"; ObjectID = "625"; */
+"625.title" = "Nome:";
+
+/* Class = "NSTextFieldCell"; title = "Destinazione:"; ObjectID = "626"; */
+"626.title" = "Destinazione:";
+
+/* Class = "NSTextFieldCell"; title = "Calcolatore"; ObjectID = "627"; */
+"627.title" = "Calcolatore";
+
+/* Class = "NSButtonCell"; title = "Scegli..."; ObjectID = "629"; */
+"629.title" = "Scegli...";
+
+/* Class = "NSButtonCell"; title = "Scegli..."; ObjectID = "632"; */
+"632.title" = "Scegli...";
+
+/* Class = "NSTextFieldCell"; title = "Predefinito:"; ObjectID = "635"; */
+"635.title" = "Predefinito:";
+
+/* Class = "NSTextFieldCell"; title = "Per iniziare, selezionate il bundle che volete localizzare:"; ObjectID = "676"; */
+"676.title" = "Per iniziare, selezionate il bundle che volete localizzare:";
+
+/* Class = "NSMenuItem"; title = "Salva"; ObjectID = "682"; */
+"682.title" = "Salva";
+
+/* Class = "NSMenuItem"; title = "Salva col Nome…"; ObjectID = "683"; */
+"683.title" = "Salva col Nome…";
+
+/* Class = "NSMenuItem"; title = "Rinomina…"; ObjectID = "684"; */
+"684.title" = "Rinomina…";
+
+/* Class = "NSMenuItem"; title = "Elimina"; ObjectID = "685"; */
+"685.title" = "Elimina";
+
+/* Class = "NSTextFieldCell"; title = "Bundle:"; ObjectID = "802"; */
+"802.title" = "Bundle:";
+
+/* Class = "NSPathCell"; placeholderString = "Rilascia il bundle da localizzare"; ObjectID = "808"; */
+"808.placeholderString" = "Rilascia il bundle da localizzare";
+
+/* Class = "NSPathCell"; placeholderString = "Rilascia la cartella nella quale il progetto verrà creato"; ObjectID = "810"; */
+"810.placeholderString" = "Rilascia la cartella nella quale il progetto verrà creato";
+
+/* Class = "NSTextFieldCell"; title = "<do not localize>"; ObjectID = "828"; */
+"828.title" = "<do not localize>";

@@ -1,0 +1,45 @@
+
+/* Class = "NSWindow"; title = "Pulisci"; ObjectID = "5"; */
+"5.title" = "Pulisci";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "15"; */
+"15.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Files Selezionati"; ObjectID = "16"; */
+"16.title" = "Files Selezionati";
+
+/* Class = "NSMenuItem"; title = "Lingua Selezionata"; ObjectID = "17"; */
+"17.title" = "Lingua Selezionata";
+
+/* Class = "NSMenuItem"; title = "Tutti i Progetti"; ObjectID = "18"; */
+"18.title" = "Tutti i Progetti";
+
+/* Class = "NSMenuItem"; title = "Strings Selezionate"; ObjectID = "19"; */
+"19.title" = "Strings Selezionate";
+
+/* Class = "NSButtonCell"; title = "Sostituisci “ con “ (doppia vigoletta)"; ObjectID = "35"; */
+"35.title" = "Sostituisci “ con “ (doppia vigoletta)";
+
+/* Class = "NSButtonCell"; title = "Sostituisci … con … (ellipsis)"; ObjectID = "36"; */
+"36.title" = "Sostituisci … con … (ellipsis)";
+
+/* Class = "NSButtonCell"; title = "Assicura spazio non divisibile prima della punteggiatura"; ObjectID = "37"; */
+"37.title" = "Assicura spazio non divisibile prima della punteggiatura";
+
+/* Class = "NSButtonCell"; title = "Rimuovi spazi bianchi extra alla fine della string"; ObjectID = "38"; */
+"38.title" = "Rimuovi spazi bianchi extra alla fine della string";
+
+/* Class = "NSButtonCell"; title = "Annulla"; ObjectID = "39"; */
+"39.title" = "Annulla";
+
+/* Class = "NSButtonCell"; title = "Pulisci"; ObjectID = "40"; */
+"40.title" = "Pulisci";
+
+/* Class = "NSTextFieldCell"; title = "Applica a:"; ObjectID = "41"; */
+"41.title" = "Applica a:";
+
+/* Class = "NSButtonCell"; title = "Identifica le string modificate come “da controllare”"; ObjectID = "44"; */
+"44.title" = "Identifica le string modificate come “da controllare”";
+
+/* Class = "NSButtonCell"; title = "Sostituisci ’ con ’ (apostrofo con simbolo singolo virgoletta)"; ObjectID = "45"; */
+"45.title" = "Sostituisci ’ con ’ (apostrofo con simbolo singolo virgoletta)";

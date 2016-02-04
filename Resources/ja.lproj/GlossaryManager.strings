@@ -1,0 +1,78 @@
+
+/* Class = "NSWindow"; title = "用語集の一覧表示"; ObjectID = "109"; */
+"109.title" = "用語集の一覧表示";
+
+/* Class = "NSTableColumn"; headerCell.title = "パス"; ObjectID = "116"; */
+"116.headerCell.title" = "パス";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "119"; */
+"119.title" = "Text Cell";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "135"; */
+"135.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "136"; */
+"136.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "137"; */
+"137.title" = "Item 2";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "142"; */
+"142.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "144"; */
+"144.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "145"; */
+"145.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Finder に表示"; ObjectID = "157"; */
+"157.title" = "Finder に表示";
+
+/* Class = "NSMenuItem"; title = "マージ…"; ObjectID = "169"; */
+"169.title" = "マージ…";
+
+/* Class = "NSMenuItem"; title = "削除"; ObjectID = "170"; */
+"170.title" = "削除";
+
+/* Class = "NSMenuItem"; title = "開く"; ObjectID = "172"; */
+"172.title" = "開く";
+
+/* Class = "NSMenuItem"; title = "Finder に表示"; ObjectID = "201"; */
+"201.title" = "Finder に表示";
+
+/* Class = "NSMenuItem"; title = "削除"; ObjectID = "206"; */
+"206.title" = "削除";
+
+/* Class = "NSTableColumn"; headerCell.title = "名前"; ObjectID = "225"; */
+"225.headerCell.title" = "名前";
+
+/* Class = "NSTableColumn"; headerCell.title = "ベース言語"; ObjectID = "226"; */
+"226.headerCell.title" = "ベース言語";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "227"; */
+"227.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "228"; */
+"228.title" = "Text Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "ターゲット言語"; ObjectID = "229"; */
+"229.headerCell.title" = "ターゲット言語";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "230"; */
+"230.title" = "Text Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "項目"; ObjectID = "231"; */
+"231.headerCell.title" = "項目";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "232"; */
+"232.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "追加…"; ObjectID = "263"; */
+"263.title" = "追加…";
+
+/* Class = "NSToolbarItem"; label = "検索"; ObjectID = "281"; */
+"281.label" = "検索";
+
+/* Class = "NSToolbarItem"; paletteLabel = "検索"; ObjectID = "281"; */
+"281.paletteLabel" = "検索";

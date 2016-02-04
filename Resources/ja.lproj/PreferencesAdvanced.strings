@@ -1,0 +1,48 @@
+
+/* Class = "NSTextField"; ibShadowedToolTip = "ibtool の実行ファイルのパス (通常は、/usr/bin/ibtool)。このツールは、Leopard でのみ有効です。"; ObjectID = "484"; */
+"484.ibShadowedToolTip" = "ibtool の実行ファイルのパス (通常は、/usr/bin/ibtool)。このツールは、Leopard でのみ有効です。";
+
+/* Class = "NSButtonCell"; title = "コンソールメッセージをシステムコンソールへ出力"; ObjectID = "564"; */
+"564.title" = "コンソールメッセージをシステムコンソールへ出力";
+
+/* Class = "NSTextFieldCell"; title = "圧縮ツール:"; ObjectID = "567"; */
+"567.title" = "圧縮ツール:";
+
+/* Class = "NSTextFieldCell"; title = "ibtool のパス:"; ObjectID = "577"; */
+"577.title" = "ibtool のパス:";
+
+/* Class = "NSButtonCell"; title = "選択…"; ObjectID = "593"; */
+"593.title" = "選択…";
+
+/* Class = "NSTabViewItem"; label = "ツール"; ObjectID = "600"; */
+"600.label" = "ツール";
+
+/* Class = "NSTabViewItem"; label = "パス"; ObjectID = "603"; */
+"603.label" = "パス";
+
+/* Class = "NSTabViewItem"; label = "設定"; ObjectID = "605"; */
+"605.label" = "設定";
+
+/* Class = "NSTextFieldCell"; title = "Interface Builder 3:"; ObjectID = "610"; */
+"610.title" = "Interface Builder 3:";
+
+/* Class = "NSButtonCell"; title = "選択…"; ObjectID = "617"; */
+"617.title" = "選択…";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "635"; */
+"635.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "ibtool のプラグイン:"; ObjectID = "636"; */
+"636.title" = "ibtool のプラグイン:";
+
+/* Class = "NSTextFieldCell"; title = "デフォルトのプロジェクトフォルダ:"; ObjectID = "638"; */
+"638.title" = "デフォルトのプロジェクトフォルダ:";
+
+/* Class = "NSButtonCell"; title = "NIB コマンド出力をすべてコンソールに出力"; ObjectID = "655"; */
+"655.title" = "NIB コマンド出力をすべてコンソールに出力";
+
+/* Class = "NSButtonCell"; title = "NIB ファイルの XML 構造を比較する (処理は遅いですが、より正確です)"; ObjectID = "658"; */
+"658.title" = "NIB ファイルの XML 構造を比較する (処理は遅いですが、より正確です)";
+
+/* Class = "NSTextFieldCell"; title = "差分ツール:"; ObjectID = "663"; */
+"663.title" = "差分ツール:";

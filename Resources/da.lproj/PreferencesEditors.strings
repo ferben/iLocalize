@@ -1,0 +1,48 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Endelse"; ObjectID = "8"; */
+"8.headerCell.title" = "Endelse";
+
+/* Class = "NSTableColumn"; headerCell.title = "Navn eller fuldstændig stil til program"; ObjectID = "9"; */
+"9.headerCell.title" = "Navn eller fuldstændig stil til program";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "42"; */
+"42.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "43"; */
+"43.title" = "Item3";
+
+/* Class = "NSMenuItem"; title = "Billeder"; ObjectID = "44"; */
+"44.title" = "Billeder";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "45"; */
+"45.title" = "Item2";
+
+/* Class = "NSTableColumn"; headerCell.title = "Endelse"; ObjectID = "48"; */
+"48.headerCell.title" = "Endelse";
+
+/* Class = "NSWindow"; title = "Panel"; ObjectID = "95"; */
+"95.title" = "Panel";
+
+/* Class = "NSTextFieldCell"; title = "Endelse:"; ObjectID = "203"; */
+"203.title" = "Endelse:";
+
+/* Class = "NSTextFieldCell"; title = "Program:"; ObjectID = "204"; */
+"204.title" = "Program:";
+
+/* Class = "NSButtonCell"; title = "Vælg…"; ObjectID = "207"; */
+"207.title" = "Vælg…";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "208"; */
+"208.title" = "OK";
+
+/* Class = "NSButtonCell"; title = "Annuller"; ObjectID = "209"; */
+"209.title" = "Annuller";
+
+/* Class = "NSTabViewItem"; label = "Indbygget"; ObjectID = "222"; */
+"222.label" = "Indbygget";
+
+/* Class = "NSTabViewItem"; label = "Ekstern"; ObjectID = "223"; */
+"223.label" = "Ekstern";
+
+/* Class = "NSTextFieldCell"; title = "Type:"; ObjectID = "231"; */
+"231.title" = "Type:";

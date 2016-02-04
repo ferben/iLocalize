@@ -1,0 +1,15 @@
+
+/* Class = "NSButtonCell"; title = "Сохранить"; ObjectID = "14"; */
+"14.title" = "Сохранить";
+
+/* Class = "NSTextFieldCell"; placeholderString = "Введите строку для замены"; ObjectID = "28"; */
+"28.placeholderString" = "Введите строку для замены";
+
+/* Class = "NSButtonCell"; title = "Заменить"; ObjectID = "30"; */
+"30.title" = "Заменить";
+
+/* Class = "NSButtonCell"; title = "Заменить все"; ObjectID = "33"; */
+"33.title" = "Заменить все";
+
+/* Class = "NSTextFieldCell"; title = "Область поиска:"; ObjectID = "98"; */
+"98.title" = "Область поиска:";

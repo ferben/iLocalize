@@ -1,0 +1,36 @@
+
+/* Class = "NSWindow"; title = "Konwerter zakończeń linii"; ObjectID = "5"; */
+"5.title" = "Konwerter zakończeń linii";
+
+/* Class = "NSMenuItem"; title = "Unix (LF)"; ObjectID = "8"; */
+"8.title" = "Unix (LF)";
+
+/* Class = "NSMenuItem"; title = "Macintosh (CR)"; ObjectID = "9"; */
+"9.title" = "Macintosh (CR)";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "10"; */
+"10.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Windows (CR/LF)"; ObjectID = "11"; */
+"11.title" = "Windows (CR/LF)";
+
+/* Class = "NSTextFieldCell"; title = "Przekształć następujące zakończenia wiersza"; ObjectID = "30"; */
+"30.title" = "Przekształć następujące zakończenia wiersza";
+
+/* Class = "NSButtonCell"; title = "Macintosh (CR)"; ObjectID = "32"; */
+"32.title" = "Macintosh (CR)";
+
+/* Class = "NSButtonCell"; title = "Unix (LF)"; ObjectID = "33"; */
+"33.title" = "Unix (LF)";
+
+/* Class = "NSButtonCell"; title = "Windows (CR/LF)"; ObjectID = "34"; */
+"34.title" = "Windows (CR/LF)";
+
+/* Class = "NSTextFieldCell"; title = "w zakończenie wiersza"; ObjectID = "35"; */
+"35.title" = "w zakończenie wiersza";
+
+/* Class = "NSButtonCell"; title = "Anuluj"; ObjectID = "36"; */
+"36.title" = "Anuluj";
+
+/* Class = "NSButtonCell"; title = "Przekształć"; ObjectID = "37"; */
+"37.title" = "Przekształć";

@@ -1,0 +1,57 @@
+
+/* Class = "NSWindow"; title = "Statistiche"; ObjectID = "5"; */
+"5.title" = "Statistiche";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "19"; */
+"19.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "lklkl"; ObjectID = "20"; */
+"20.title" = "lklkl";
+
+/* Class = "NSMenuItem"; title = "abab"; ObjectID = "21"; */
+"21.title" = "abab";
+
+/* Class = "NSMenuItem"; title = "Tutto"; ObjectID = "22"; */
+"22.title" = "Tutto";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "67"; */
+"67.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "per string"; ObjectID = "68"; */
+"68.title" = "per string";
+
+/* Class = "NSMenuItem"; title = "per carattere"; ObjectID = "69"; */
+"69.title" = "per carattere";
+
+/* Class = "NSMenuItem"; title = "per parola"; ObjectID = "70"; */
+"70.title" = "per parola";
+
+/* Class = "NSTableColumn"; headerCell.title = "#"; ObjectID = "108"; */
+"108.headerCell.title" = "#";
+
+/* Class = "NSTableColumn"; headerCell.title = "Tutto"; ObjectID = "109"; */
+"109.headerCell.title" = "Tutto";
+
+/* Class = "NSTableColumn"; headerCell.title = "Da Tradurre"; ObjectID = "110"; */
+"110.headerCell.title" = "Da Tradurre";
+
+/* Class = "NSButtonCell"; title = "Copia nell’Archivio Appunti"; ObjectID = "120"; */
+"120.title" = "Copia nell’Archivio Appunti";
+
+/* Class = "NSButtonCell"; title = "Chiudi"; ObjectID = "121"; */
+"121.title" = "Chiudi";
+
+/* Class = "NSTextFieldCell"; title = "Lingua:"; ObjectID = "122"; */
+"122.title" = "Lingua:";
+
+/* Class = "NSTextFieldCell"; title = "Nota: queste statistiche si applicano solo alle strings e files XIB/NIB."; ObjectID = "124"; */
+"124.title" = "Nota: queste statistiche si applicano solo alle strings e files XIB/NIB.";
+
+/* Class = "NSTextFieldCell"; title = "Raccolgo statistiche…"; ObjectID = "125"; */
+"125.title" = "Raccolgo statistiche…";
+
+/* Class = "NSTextFieldCell"; title = "1"; ObjectID = "127"; */
+"127.title" = "1";
+
+/* Class = "NSTextFieldCell"; title = "Tariffa:"; ObjectID = "128"; */
+"128.title" = "Tariffa:";

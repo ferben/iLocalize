@@ -1,0 +1,15 @@
+
+/* Class = "NSWindow"; title = "Verificar Projeto"; ObjectID = "5"; */
+"5.title" = "Verificar Projeto";
+
+/* Class = "NSTextFieldCell"; title = "Verifique se há inconsistências nos seguintes idiomas:"; ObjectID = "34"; */
+"34.title" = "Verifique se há inconsistências nos seguintes idiomas:";
+
+/* Class = "NSButtonCell"; title = "Cancelar"; ObjectID = "35"; */
+"35.title" = "Cancelar";
+
+/* Class = "NSButtonCell"; title = "Verificar"; ObjectID = "36"; */
+"36.title" = "Verificar";
+
+/* Class = "NSButtonCell"; title = "Verificar"; ObjectID = "51"; */
+"51.title" = "Verificar";

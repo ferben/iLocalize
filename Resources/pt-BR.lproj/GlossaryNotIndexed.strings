@@ -1,0 +1,33 @@
+
+/* Class = "NSWindow"; title = "Glossário Não Indexado"; ObjectID = "5"; */
+"5.title" = "Glossário Não Indexado";
+
+/* Class = "NSMenu"; title = "Outras Visualizações"; ObjectID = "43"; */
+"43.title" = "Outras Visualizações";
+
+/* Class = "NSMenuItem"; title = "Local"; ObjectID = "44"; */
+"44.title" = "Local";
+
+/* Class = "NSMenuItem"; title = "Global"; ObjectID = "45"; */
+"45.title" = "Global";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "96"; */
+"96.title" = "OK";
+
+/* Class = "NSButtonCell"; title = "Cancelar"; ObjectID = "97"; */
+"97.title" = "Cancelar";
+
+/* Class = "NSTextFieldCell"; title = "Este glossário não está localizado em nenhum dos caminhos conhecidos do iLocalize. Para utilizar este glossário ao traduzir um projeto, é preciso criar um atalho em um caminho conhecido de glossários."; ObjectID = "101"; */
+"101.title" = "Este glossário não está localizado em nenhum dos caminhos conhecidos do iLocalize. Para utilizar este glossário ao traduzir um projeto, é preciso criar um atalho em um caminho conhecido de glossários.";
+
+/* Class = "NSMenu"; title = "Outras Visualizações"; ObjectID = "110"; */
+"110.title" = "Outras Visualizações";
+
+/* Class = "NSMenuItem"; title = "Mover o glossário"; ObjectID = "111"; */
+"111.title" = "Mover o glossário";
+
+/* Class = "NSMenuItem"; title = "Criar um atalho do glossário"; ObjectID = "112"; */
+"112.title" = "Criar um atalho do glossário";
+
+/* Class = "NSTextFieldCell"; title = "no caminho do glossário"; ObjectID = "115"; */
+"115.title" = "no caminho do glossário";

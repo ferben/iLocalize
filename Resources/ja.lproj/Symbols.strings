@@ -1,0 +1,66 @@
+
+/* Class = "NSWindow"; title = "シンボル"; ObjectID = "782"; */
+"782.title" = "シンボル";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "955"; */
+"955.title" = "Box";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "957"; */
+"957.title" = "Box";
+
+/* Class = "NSTextFieldCell"; title = "レイアウトのチェックが必要 (XIB/NIB のみ)"; ObjectID = "1777"; */
+"1777.title" = "レイアウトのチェックが必要 (XIB/NIB のみ)";
+
+/* Class = "NSTextFieldCell"; title = "内容をディスクに保存する必要があるファイル"; ObjectID = "1781"; */
+"1781.title" = "内容をディスクに保存する必要があるファイル";
+
+/* Class = "NSTextFieldCell"; title = "ボールドのファイル名:"; ObjectID = "1782"; */
+"1782.title" = "ボールドのファイル名:";
+
+/* Class = "NSTextFieldCell"; title = "不整合があるファイル"; ObjectID = "1790"; */
+"1790.title" = "不整合があるファイル";
+
+/* Class = "NSTextFieldCell"; title = "ディスクに存在しないファイル"; ObjectID = "1792"; */
+"1792.title" = "ディスクに存在しないファイル";
+
+/* Class = "NSTextFieldCell"; title = "内容をディスクから読み込む必要があるファイル"; ObjectID = "1794"; */
+"1794.title" = "内容をディスクから読み込む必要があるファイル";
+
+/* Class = "NSTextFieldCell"; title = "最新のアップデート操作で追加されたファイル"; ObjectID = "1797"; */
+"1797.title" = "最新のアップデート操作で追加されたファイル";
+
+/* Class = "NSTextFieldCell"; title = "最新のアップデート操作で更新されたファイル"; ObjectID = "1798"; */
+"1798.title" = "最新のアップデート操作で更新されたファイル";
+
+/* Class = "NSTextFieldCell"; title = "✒"; ObjectID = "1799"; */
+"1799.title" = "✒";
+
+/* Class = "NSTextFieldCell"; title = "選択した文字列が含まれるファイルであることを示します (複数ファイル選択時のみ)"; ObjectID = "1800"; */
+"1800.title" = "選択した文字列が含まれるファイルであることを示します (複数ファイル選択時のみ)";
+
+/* Class = "NSTextFieldCell"; title = "ファイルシンボル"; ObjectID = "1801"; */
+"1801.title" = "ファイルシンボル";
+
+/* Class = "NSTextFieldCell"; title = "文字列シンボル"; ObjectID = "1802"; */
+"1802.title" = "文字列シンボル";
+
+/* Class = "NSTextFieldCell"; title = "自動でコピー済み"; ObjectID = "1804"; */
+"1804.title" = "自動でコピー済み";
+
+/* Class = "NSTextFieldCell"; title = "ベースと同じ"; ObjectID = "1806"; */
+"1806.title" = "ベースと同じ";
+
+/* Class = "NSTextFieldCell"; title = "自動で翻訳済み"; ObjectID = "1807"; */
+"1807.title" = "自動で翻訳済み";
+
+/* Class = "NSTextFieldCell"; title = "ベースが変更された"; ObjectID = "1811"; */
+"1811.title" = "ベースが変更された";
+
+/* Class = "NSTextFieldCell"; title = "翻訳が必要"; ObjectID = "1813"; */
+"1813.title" = "翻訳が必要";
+
+/* Class = "NSTextFieldCell"; title = "不整合あり"; ObjectID = "1816"; */
+"1816.title" = "不整合あり";
+
+/* Class = "NSTextFieldCell"; title = "File has been updated during last update operation"; ObjectID = "hi2-yW-vJG"; */
+"hi2-yW-vJG.title" = "File has been updated during last update operation";

@@ -1,0 +1,108 @@
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "5"; */
+"5.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "制御文字をエスケープシーケンスに変換"; ObjectID = "6"; */
+"6.title" = "制御文字をエスケープシーケンスに変換";
+
+/* Class = "NSMenuItem"; title = "エスケープシーケンスを制御文字に変換"; ObjectID = "8"; */
+"8.title" = "エスケープシーケンスを制御文字に変換";
+
+/* Class = "NSTableColumn"; headerCell.title = "状態"; ObjectID = "11"; */
+"11.headerCell.title" = "状態";
+
+/* Class = "NSTableColumn"; headerCell.title = "キー"; ObjectID = "14"; */
+"14.headerCell.title" = "キー";
+
+/* Class = "NSTableColumn"; headerCell.title = "翻訳"; ObjectID = "23"; */
+"23.headerCell.title" = "翻訳";
+
+/* Class = "NSMenuItem"; title = "訳語のコメントを消去"; ObjectID = "35"; */
+"35.title" = "訳語のコメントを消去";
+
+/* Class = "NSMenuItem"; title = "ベースコメントを消去"; ObjectID = "36"; */
+"36.title" = "ベースコメントを消去";
+
+/* Class = "NSMenuItem"; title = "ベースと訳語を交換"; ObjectID = "37"; */
+"37.title" = "ベースと訳語を交換";
+
+/* Class = "NSMenuItem"; title = "コメントを消去"; ObjectID = "41"; */
+"41.title" = "コメントを消去";
+
+/* Class = "NSMenuItem"; title = "承認"; ObjectID = "42"; */
+"42.title" = "承認";
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "43"; */
+"43.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "ベースを訳語にコピー"; ObjectID = "45"; */
+"45.title" = "ベースを訳語にコピー";
+
+/* Class = "NSTableColumn"; headerCell.title = "ベース言語"; ObjectID = "98"; */
+"98.headerCell.title" = "ベース言語";
+
+/* Class = "NSMenuItem"; title = "選択中のファイルにある同一の文字列をすべて承認"; ObjectID = "139"; */
+"139.title" = "選択中のファイルにある同一の文字列をすべて承認";
+
+/* Class = "NSMenuItem"; title = "選択中のファイルにある同一の文字列すべてに訳語を伝播"; ObjectID = "140"; */
+"140.title" = "選択中のファイルにある同一の文字列すべてに訳語を伝播";
+
+/* Class = "NSMenuItem"; title = "すべてのファイルにある同一の文字列をすべて承認"; ObjectID = "144"; */
+"144.title" = "すべてのファイルにある同一の文字列をすべて承認";
+
+/* Class = "NSMenuItem"; title = "すべてのファイルにある同一の文字列すべてに訳語を伝播"; ObjectID = "146"; */
+"146.title" = "すべてのファイルにある同一の文字列すべてに訳語を伝播";
+
+/* Class = "NSMenuItem"; title = "訳語を消去"; ObjectID = "202"; */
+"202.title" = "訳語を消去";
+
+/* Class = "NSTableColumn"; headerCell.title = "ラベル"; ObjectID = "209"; */
+"209.headerCell.title" = "ラベル";
+
+/* Class = "NSMenuItem"; title = "ラベル"; ObjectID = "218"; */
+"218.title" = "ラベル";
+
+/* Class = "NSMenuItem"; title = "翻訳済みにする"; ObjectID = "253"; */
+"253.title" = "翻訳済みにする";
+
+/* Class = "NSMenuItem"; title = "未翻訳にする"; ObjectID = "255"; */
+"255.title" = "未翻訳にする";
+
+/* Class = "NSTextFieldCell"; title = "文字列がありません"; ObjectID = "395"; */
+"395.title" = "文字列がありません";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "398"; */
+"398.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "399"; */
+"399.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "400"; */
+"400.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "401"; */
+"401.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "ロック"; ObjectID = "470"; */
+"470.title" = "ロック";
+
+/* Class = "NSMenuItem"; title = "テキストゾーンを表示"; ObjectID = "488"; */
+"488.title" = "テキストゾーンを表示";
+
+/* Class = "NSMenuItem"; title = "キー列を表示"; ObjectID = "489"; */
+"489.title" = "キー列を表示";
+
+/* Class = "NSTableColumn"; headerCell.title = "ベース"; ObjectID = "496"; */
+"496.headerCell.title" = "ベース";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "497"; */
+"497.title" = "Text Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "キー"; ObjectID = "502"; */
+"502.headerCell.title" = "キー";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "503"; */
+"503.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "用語集を更新…"; ObjectID = "530"; */
+"530.title" = "用語集を更新…";

@@ -1,0 +1,30 @@
+
+/* Class = "NSWindow"; title = "Fusionner"; ObjectID = "5"; */
+"5.title" = "Fusionner";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "8"; */
+"8.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "9"; */
+"9.title" = "Item2";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "10"; */
+"10.title" = "Item1";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "11"; */
+"11.title" = "Item3";
+
+/* Class = "NSTextFieldCell"; title = "Dans ce glossaire :"; ObjectID = "37"; */
+"37.title" = "Dans ce glossaire :";
+
+/* Class = "NSButtonCell"; title = "Fusionner"; ObjectID = "38"; */
+"38.title" = "Fusionner";
+
+/* Class = "NSTextFieldCell"; title = "Fusionner les glossaires suivants :"; ObjectID = "39"; */
+"39.title" = "Fusionner les glossaires suivants :";
+
+/* Class = "NSButtonCell"; title = "Annuler"; ObjectID = "40"; */
+"40.title" = "Annuler";
+
+/* Class = "NSButtonCell"; title = "Supprimer les entrées doublons"; ObjectID = "41"; */
+"41.title" = "Supprimer les entrées doublons";

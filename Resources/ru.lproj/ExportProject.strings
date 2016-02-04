@@ -1,0 +1,51 @@
+
+/* Class = "NSTextFieldCell"; title = "Выберите ресурсы для экспорта:"; ObjectID = "175"; */
+"175.title" = "Выберите ресурсы для экспорта:";
+
+/* Class = "NSTextFieldCell"; title = "Выберите языки для экспорта:"; ObjectID = "224"; */
+"224.title" = "Выберите языки для экспорта:";
+
+/* Class = "NSButtonCell"; title = "Check"; ObjectID = "226"; */
+"226.title" = "Check";
+
+/* Class = "NSTableColumn"; headerCell.title = "Язык"; ObjectID = "244"; */
+"244.headerCell.title" = "Язык";
+
+/* Class = "NSTableColumn"; headerCell.title = "Состояние"; ObjectID = "245"; */
+"245.headerCell.title" = "Состояние";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "246"; */
+"246.title" = "Text Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "Предупреждения"; ObjectID = "248"; */
+"248.headerCell.title" = "Предупреждения";
+
+/* Class = "NSButtonCell"; title = "Check"; ObjectID = "250"; */
+"250.title" = "Check";
+
+/* Class = "NSTextFieldCell"; title = "Выберите папку назначения:"; ObjectID = "254"; */
+"254.title" = "Выберите папку назначения:";
+
+/* Class = "NSButtonCell"; title = "Выбрать…"; ObjectID = "258"; */
+"258.title" = "Выбрать…";
+
+/* Class = "NSButtonCell"; title = "Параметры…"; ObjectID = "260"; */
+"260.title" = "Параметры…";
+
+/* Class = "NSTextFieldCell"; title = "Наборы настроек:"; ObjectID = "262"; */
+"262.title" = "Наборы настроек:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "265"; */
+"265.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "266"; */
+"266.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "267"; */
+"267.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "268"; */
+"268.title" = "Item 3";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "269"; */
+"269.title" = "Box";

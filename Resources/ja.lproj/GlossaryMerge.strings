@@ -1,0 +1,30 @@
+
+/* Class = "NSWindow"; title = "マージ"; ObjectID = "5"; */
+"5.title" = "マージ";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "8"; */
+"8.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "9"; */
+"9.title" = "Item2";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "10"; */
+"10.title" = "Item1";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "11"; */
+"11.title" = "Item3";
+
+/* Class = "NSTextFieldCell"; title = "次の用語集にマージします:"; ObjectID = "37"; */
+"37.title" = "次の用語集にマージします:";
+
+/* Class = "NSButtonCell"; title = "マージする"; ObjectID = "38"; */
+"38.title" = "マージする";
+
+/* Class = "NSTextFieldCell"; title = "以下の用語集を:"; ObjectID = "39"; */
+"39.title" = "以下の用語集を:";
+
+/* Class = "NSButtonCell"; title = "キャンセル"; ObjectID = "40"; */
+"40.title" = "キャンセル";
+
+/* Class = "NSButtonCell"; title = "重複エントリを取り除く"; ObjectID = "41"; */
+"41.title" = "重複エントリを取り除く";

@@ -1,0 +1,462 @@
+
+/* Class = "NSMenuItem"; title = "Все окна - на передний план"; ObjectID = "5"; */
+"5.title" = "Все окна - на передний план";
+
+/* Class = "NSMenuItem"; title = "Окно"; ObjectID = "19"; */
+"19.title" = "Окно";
+
+/* Class = "NSMenuItem"; title = "Убрать в Dock"; ObjectID = "23"; */
+"23.title" = "Убрать в Dock";
+
+/* Class = "NSMenu"; title = "Окно"; ObjectID = "24"; */
+"24.title" = "Окно";
+
+/* Class = "NSMenu"; title = "MainMenu"; ObjectID = "29"; */
+"29.title" = "MainMenu";
+
+/* Class = "NSMenuItem"; title = "iLocalize"; ObjectID = "56"; */
+"56.title" = "iLocalize";
+
+/* Class = "NSMenu"; title = "iLocalize"; ObjectID = "57"; */
+"57.title" = "iLocalize";
+
+/* Class = "NSMenuItem"; title = "О программе iLocalize"; ObjectID = "58"; */
+"58.title" = "О программе iLocalize";
+
+/* Class = "NSMenuItem"; title = "Открыть…"; ObjectID = "72"; */
+"72.title" = "Открыть…";
+
+/* Class = "NSMenuItem"; title = "Закрыть"; ObjectID = "73"; */
+"73.title" = "Закрыть";
+
+/* Class = "NSMenuItem"; title = "Сохранить"; ObjectID = "75"; */
+"75.title" = "Сохранить";
+
+/* Class = "NSMenu"; title = "Файл"; ObjectID = "81"; */
+"81.title" = "Файл";
+
+/* Class = "NSMenuItem"; title = "Создать проект…"; ObjectID = "82"; */
+"82.title" = "Создать проект…";
+
+/* Class = "NSMenuItem"; title = "Файл"; ObjectID = "83"; */
+"83.title" = "Файл";
+
+/* Class = "NSMenuItem"; title = "Справка"; ObjectID = "103"; */
+"103.title" = "Справка";
+
+/* Class = "NSMenu"; title = "Справка"; ObjectID = "106"; */
+"106.title" = "Справка";
+
+/* Class = "NSMenuItem"; title = "Справка iLocalize"; ObjectID = "111"; */
+"111.title" = "Справка iLocalize";
+
+/* Class = "NSMenuItem"; title = "Настройки…"; ObjectID = "129"; */
+"129.title" = "Настройки…";
+
+/* Class = "NSMenu"; title = "Службы"; ObjectID = "130"; */
+"130.title" = "Службы";
+
+/* Class = "NSMenuItem"; title = "Службы"; ObjectID = "131"; */
+"131.title" = "Службы";
+
+/* Class = "NSMenuItem"; title = "Скрыть iLocalize"; ObjectID = "134"; */
+"134.title" = "Скрыть iLocalize";
+
+/* Class = "NSMenuItem"; title = "Завершить iLocalize"; ObjectID = "136"; */
+"136.title" = "Завершить iLocalize";
+
+/* Class = "NSMenuItem"; title = "Скрыть остальные"; ObjectID = "145"; */
+"145.title" = "Скрыть остальные";
+
+/* Class = "NSMenuItem"; title = "Показать все"; ObjectID = "150"; */
+"150.title" = "Показать все";
+
+/* Class = "NSMenuItem"; title = "Найти…"; ObjectID = "154"; */
+"154.title" = "Найти…";
+
+/* Class = "NSMenuItem"; title = "Перейти к выбранному"; ObjectID = "155"; */
+"155.title" = "Перейти к выбранному";
+
+/* Class = "NSMenuItem"; title = "Скопировать"; ObjectID = "157"; */
+"157.title" = "Скопировать";
+
+/* Class = "NSMenuItem"; title = "Отменить"; ObjectID = "158"; */
+"158.title" = "Отменить";
+
+/* Class = "NSMenu"; title = "Поиск"; ObjectID = "159"; */
+"159.title" = "Поиск";
+
+/* Class = "NSMenuItem"; title = "Вырезать"; ObjectID = "160"; */
+"160.title" = "Вырезать";
+
+/* Class = "NSMenuItem"; title = "Найти выбранное"; ObjectID = "161"; */
+"161.title" = "Найти выбранное";
+
+/* Class = "NSMenuItem"; title = "Найти предыдущее"; ObjectID = "162"; */
+"162.title" = "Найти предыдущее";
+
+/* Class = "NSMenuItem"; title = "Правка"; ObjectID = "163"; */
+"163.title" = "Правка";
+
+/* Class = "NSMenuItem"; title = "Удалить"; ObjectID = "164"; */
+"164.title" = "Удалить";
+
+/* Class = "NSMenuItem"; title = "Найти далее"; ObjectID = "167"; */
+"167.title" = "Найти далее";
+
+/* Class = "NSMenuItem"; title = "Поиск"; ObjectID = "168"; */
+"168.title" = "Поиск";
+
+/* Class = "NSMenu"; title = "Правка"; ObjectID = "169"; */
+"169.title" = "Правка";
+
+/* Class = "NSMenuItem"; title = "Вставить"; ObjectID = "171"; */
+"171.title" = "Вставить";
+
+/* Class = "NSMenuItem"; title = "Выбрать все"; ObjectID = "172"; */
+"172.title" = "Выбрать все";
+
+/* Class = "NSMenuItem"; title = "Повторить"; ObjectID = "173"; */
+"173.title" = "Повторить";
+
+/* Class = "NSMenuItem"; title = "Правописание"; ObjectID = "184"; */
+"184.title" = "Правописание";
+
+/* Class = "NSMenu"; title = "Правописание"; ObjectID = "185"; */
+"185.title" = "Правописание";
+
+/* Class = "NSMenuItem"; title = "Правописание…"; ObjectID = "187"; */
+"187.title" = "Правописание…";
+
+/* Class = "NSMenuItem"; title = "Проверить правописание"; ObjectID = "189"; */
+"189.title" = "Проверить правописание";
+
+/* Class = "NSMenuItem"; title = "Проверять правописание при вводе текста"; ObjectID = "191"; */
+"191.title" = "Проверять правописание при вводе текста";
+
+/* Class = "NSMenuItem"; title = "Изменить масштаб"; ObjectID = "203"; */
+"203.title" = "Изменить масштаб";
+
+/* Class = "NSMenuItem"; title = "Проект"; ObjectID = "383"; */
+"383.title" = "Проект";
+
+/* Class = "NSMenu"; title = "Проект"; ObjectID = "385"; */
+"385.title" = "Проект";
+
+/* Class = "NSMenuItem"; title = "Добавить файлы в проект…"; ObjectID = "392"; */
+"392.title" = "Добавить файлы в проект…";
+
+/* Class = "NSMenuItem"; title = "Удалить выбранные файлы…"; ObjectID = "393"; */
+"393.title" = "Удалить выбранные файлы…";
+
+/* Class = "NSMenuItem"; title = "Обновить из пакета…"; ObjectID = "397"; */
+"397.title" = "Обновить из пакета…";
+
+/* Class = "NSMenuItem"; ibShadowedToolTip = "Запустить приложение из созданной папки"; ObjectID = "461"; */
+"461.ibShadowedToolTip" = "Запустить приложение из созданной папки";
+
+/* Class = "NSMenuItem"; title = "Запустить «Английский»"; ObjectID = "461"; */
+"461.title" = "Запустить «Английский»";
+
+/* Class = "NSMenuItem"; ibShadowedToolTip = "Заменить выбранные локализованные файлы их соответствующими базовыми файлами"; ObjectID = "468"; */
+"468.ibShadowedToolTip" = "Заменить выбранные локализованные файлы их соответствующими базовыми файлами";
+
+/* Class = "NSMenuItem"; title = "Перестроить выбранные файлы используя «Английский»"; ObjectID = "468"; */
+"468.title" = "Перестроить выбранные файлы используя «Английский»";
+
+/* Class = "NSMenuItem"; ibShadowedToolTip = "Создать новый пустой язык"; ObjectID = "475"; */
+"475.ibShadowedToolTip" = "Создать новый пустой язык";
+
+/* Class = "NSMenuItem"; title = "Добавить язык…"; ObjectID = "475"; */
+"475.title" = "Добавить язык…";
+
+/* Class = "NSMenuItem"; title = "Удалить"; ObjectID = "481"; */
+"481.title" = "Удалить";
+
+/* Class = "NSMenuItem"; ibShadowedToolTip = "Синхрониирзовать данные в памяти с файлом на диске"; ObjectID = "509"; */
+"509.ibShadowedToolTip" = "Синхрониирзовать данные в памяти с файлом на диске";
+
+/* Class = "NSMenuItem"; title = "Перезагрузить измененные внешней программой файлы"; ObjectID = "509"; */
+"509.title" = "Перезагрузить измененные внешней программой файлы";
+
+/* Class = "NSMenuItem"; title = "Символы"; ObjectID = "571"; */
+"571.title" = "Символы";
+
+/* Class = "NSMenuItem"; title = "Открыть во внешнем редакторе"; ObjectID = "607"; */
+"607.title" = "Открыть во внешнем редакторе";
+
+/* Class = "NSMenuItem"; title = "Показать в Finder"; ObjectID = "609"; */
+"609.title" = "Показать в Finder";
+
+/* Class = "NSMenuItem"; title = "Показать консоль"; ObjectID = "614"; */
+"614.title" = "Показать консоль";
+
+/* Class = "NSMenuItem"; title = "Очистить…"; ObjectID = "619"; */
+"619.title" = "Очистить…";
+
+/* Class = "NSMenuItem"; title = "Статистика…"; ObjectID = "620"; */
+"620.title" = "Статистика…";
+
+/* Class = "NSMenuItem"; title = "Создать глоссарий…"; ObjectID = "673"; */
+"673.title" = "Создать глоссарий…";
+
+/* Class = "NSMenuItem"; title = "Просмотреть глоссарии…"; ObjectID = "675"; */
+"675.title" = "Просмотреть глоссарии…";
+
+/* Class = "NSMenuItem"; title = "Перевод"; ObjectID = "688"; */
+"688.title" = "Перевод";
+
+/* Class = "NSMenu"; title = "Перевод"; ObjectID = "689"; */
+"689.title" = "Перевод";
+
+/* Class = "NSMenuItem"; title = "Очистить примечания"; ObjectID = "690"; */
+"690.title" = "Очистить примечания";
+
+/* Class = "NSMenuItem"; title = "Очистить примечания перевода"; ObjectID = "691"; */
+"691.title" = "Очистить примечания перевода";
+
+/* Class = "NSMenuItem"; title = "Утвердить идентичные строки в выбранных файлах"; ObjectID = "692"; */
+"692.title" = "Утвердить идентичные строки в выбранных файлах";
+
+/* Class = "NSMenuItem"; title = "Утвердить строку"; ObjectID = "693"; */
+"693.title" = "Утвердить строку";
+
+/* Class = "NSMenuItem"; title = "Распространить перевод на идентичные строки во всех файлах"; ObjectID = "694"; */
+"694.title" = "Распространить перевод на идентичные строки во всех файлах";
+
+/* Class = "NSMenuItem"; title = "Скопировать базовый язык в перевод"; ObjectID = "695"; */
+"695.title" = "Скопировать базовый язык в перевод";
+
+/* Class = "NSMenuItem"; title = "Утвердить идентичные строки во всех файлах"; ObjectID = "697"; */
+"697.title" = "Утвердить идентичные строки во всех файлах";
+
+/* Class = "NSMenuItem"; title = "Поменять местами базовый язык и перевод"; ObjectID = "699"; */
+"699.title" = "Поменять местами базовый язык и перевод";
+
+/* Class = "NSMenuItem"; title = "Распространить перевод на идентичные строки в выбранных файлах"; ObjectID = "702"; */
+"702.title" = "Распространить перевод на идентичные строки в выбранных файлах";
+
+/* Class = "NSMenuItem"; title = "Очистить примечания базового языка"; ObjectID = "703"; */
+"703.title" = "Очистить примечания базового языка";
+
+/* Class = "NSMenuItem"; title = "Утвердить файл"; ObjectID = "727"; */
+"727.title" = "Утвердить файл";
+
+/* Class = "NSMenuItem"; title = "Локализация на Mac OS X"; ObjectID = "730"; */
+"730.title" = "Локализация на Mac OS X";
+
+/* Class = "NSMenuItem"; title = "Глоссарии Apple"; ObjectID = "731"; */
+"731.title" = "Глоссарии Apple";
+
+/* Class = "NSMenuItem"; title = "Утвердить авто-перевод строк в выбранных файлах"; ObjectID = "742"; */
+"742.title" = "Утвердить авто-перевод строк в выбранных файлах";
+
+/* Class = "NSMenuItem"; title = "Утвердить авто-перевод строк во всех файлах"; ObjectID = "744"; */
+"744.title" = "Утвердить авто-перевод строк во всех файлах";
+
+/* Class = "NSMenuItem"; title = "Утвердить авто-инвариант строк во всех файлах"; ObjectID = "745"; */
+"745.title" = "Утвердить авто-инвариант строк во всех файлах";
+
+/* Class = "NSMenuItem"; title = "Утвердить авто-инвариант строк в выбранных файлах"; ObjectID = "747"; */
+"747.title" = "Утвердить авто-инвариант строк в выбранных файлах";
+
+/* Class = "NSMenuItem"; title = "Утвердить авто-обработку строк в выбранных файлах"; ObjectID = "748"; */
+"748.title" = "Утвердить авто-обработку строк в выбранных файлах";
+
+/* Class = "NSMenuItem"; title = "Утвердить авто-обработку строк во всех файлах"; ObjectID = "749"; */
+"749.title" = "Утвердить авто-обработку строк во всех файлах";
+
+/* Class = "NSMenuItem"; title = "Очистить перевод"; ObjectID = "768"; */
+"768.title" = "Очистить перевод";
+
+/* Class = "NSMenuItem"; title = "Просмотреть проекты…"; ObjectID = "773"; */
+"773.title" = "Просмотреть проекты…";
+
+/* Class = "NSMenuItem"; title = "Метки…"; ObjectID = "894"; */
+"894.title" = "Метки…";
+
+/* Class = "NSMenuItem"; title = "Найти проект…"; ObjectID = "896"; */
+"896.title" = "Найти проект…";
+
+/* Class = "NSMenuItem"; title = "Заменить…"; ObjectID = "899"; */
+"899.title" = "Заменить…";
+
+/* Class = "NSMenuItem"; title = "Создать фильтр…"; ObjectID = "901"; */
+"901.title" = "Создать фильтр…";
+
+/* Class = "NSMenuItem"; title = "Преобразовать завершения строк…"; ObjectID = "903"; */
+"903.title" = "Преобразовать завершения строк…";
+
+/* Class = "NSMenuItem"; title = "Проверить…"; ObjectID = "905"; */
+"905.title" = "Проверить…";
+
+/* Class = "NSMenuItem"; title = "Удалить символы обновления файлов"; ObjectID = "959"; */
+"959.title" = "Удалить символы обновления файлов";
+
+/* Class = "NSMenuItem"; title = "Кодировка"; ObjectID = "966"; */
+"966.title" = "Кодировка";
+
+/* Class = "NSMenuItem"; title = "Переименовать…"; ObjectID = "968"; */
+"968.title" = "Переименовать…";
+
+/* Class = "NSMenuItem"; ibShadowedToolTip = "Создать новый пустой язык"; ObjectID = "969"; */
+"969.ibShadowedToolTip" = "Создать новый пустой язык";
+
+/* Class = "NSMenuItem"; title = "Добавить нестандартный язык…"; ObjectID = "969"; */
+"969.title" = "Добавить нестандартный язык…";
+
+/* Class = "NSMenuItem"; title = "Добавить файлы для языка…"; ObjectID = "975"; */
+"975.title" = "Добавить файлы для языка…";
+
+/* Class = "NSMenuItem"; title = "Обновить файлы связанные с языком…"; ObjectID = "978"; */
+"978.title" = "Обновить файлы связанные с языком…";
+
+/* Class = "NSMenuItem"; title = "Открыть предыдущую версию"; ObjectID = "1089"; */
+"1089.title" = "Открыть предыдущую версию";
+
+/* Class = "NSMenuItem"; title = "Экспортировать…"; ObjectID = "1190"; */
+"1190.title" = "Экспортировать…";
+
+/* Class = "NSMenuItem"; title = "Убрать отметку переведено"; ObjectID = "1243"; */
+"1243.title" = "Убрать отметку переведено";
+
+/* Class = "NSMenuItem"; title = "Пометить как переведено"; ObjectID = "1245"; */
+"1245.title" = "Пометить как переведено";
+
+/* Class = "NSMenuItem"; title = "Игнорировать выбранные файлы"; ObjectID = "1354"; */
+"1354.title" = "Игнорировать выбранные файлы";
+
+/* Class = "NSMenuItem"; title = "Перезагрузить файл"; ObjectID = "1759"; */
+"1759.title" = "Перезагрузить файл";
+
+/* Class = "NSMenuItem"; title = "Перевести используя строки внешнего файла…"; ObjectID = "1762"; */
+"1762.title" = "Перевести используя строки внешнего файла…";
+
+/* Class = "NSMenuItem"; title = "Вид"; ObjectID = "1823"; */
+"1823.title" = "Вид";
+
+/* Class = "NSMenu"; title = "Вид"; ObjectID = "1824"; */
+"1824.title" = "Вид";
+
+/* Class = "NSMenuItem"; title = "Показать невидимые знаки"; ObjectID = "1825"; */
+"1825.title" = "Показать невидимые знаки";
+
+/* Class = "NSMenuItem"; title = "Показать глоссарий переводов"; ObjectID = "1829"; */
+"1829.title" = "Показать глоссарий переводов";
+
+/* Class = "NSMenuItem"; title = "Показать варианты переводов"; ObjectID = "1830"; */
+"1830.title" = "Показать варианты переводов";
+
+/* Class = "NSMenuItem"; title = "Заменить прямые кавычки парными"; ObjectID = "1836"; */
+"1836.title" = "Заменить прямые кавычки парными";
+
+/* Class = "NSMenuItem"; title = "Заблокировать выбранные строки"; ObjectID = "1838"; */
+"1838.title" = "Заблокировать выбранные строки";
+
+/* Class = "NSMenuItem"; ibShadowedToolTip = "Создать новый пустой язык"; ObjectID = "1922"; */
+"1922.ibShadowedToolTip" = "Создать новый пустой язык";
+
+/* Class = "NSMenuItem"; title = "Переименовать нестандартный язык…"; ObjectID = "1922"; */
+"1922.title" = "Переименовать нестандартный язык…";
+
+/* Class = "NSMenuItem"; title = "Открыть последний проект"; ObjectID = "1924"; */
+"1924.title" = "Открыть последний проект";
+
+/* Class = "NSMenu"; title = "Открыть последний проект"; ObjectID = "1925"; */
+"1925.title" = "Открыть последний проект";
+
+/* Class = "NSMenuItem"; title = "Item"; ObjectID = "1926"; */
+"1926.title" = "Item";
+
+/* Class = "NSMenuItem"; title = "Открыть последний глоссарий"; ObjectID = "1927"; */
+"1927.title" = "Открыть последний глоссарий";
+
+/* Class = "NSMenu"; title = "Открыть последний глоссарий"; ObjectID = "1928"; */
+"1928.title" = "Открыть последний глоссарий";
+
+/* Class = "NSMenuItem"; title = "Item"; ObjectID = "1929"; */
+"1929.title" = "Item";
+
+/* Class = "NSMenuItem"; title = "Показать панель инструментов"; ObjectID = "1937"; */
+"1937.title" = "Показать панель инструментов";
+
+/* Class = "NSMenuItem"; title = "Настроить панель инструментов…"; ObjectID = "1938"; */
+"1938.title" = "Настроить панель инструментов…";
+
+/* Class = "NSMenuItem"; title = "Показать общие файлы для всех языков"; ObjectID = "1946"; */
+"1946.title" = "Показать общие файлы для всех языков";
+
+/* Class = "NSMenuItem"; title = "Показать файлы связанные с языком <language>"; ObjectID = "1947"; */
+"1947.title" = "Показать файлы связанные с языком <language>";
+
+/* Class = "NSMenuItem"; title = "Перевести используя глоссарии…"; ObjectID = "1972"; */
+"1972.title" = "Перевести используя глоссарии…";
+
+/* Class = "NSMenuItem"; title = "Показать сведения о файле"; ObjectID = "1976"; */
+"1976.title" = "Показать сведения о файле";
+
+/* Class = "NSMenuItem"; title = "Показать текстовую область"; ObjectID = "1981"; */
+"1981.title" = "Показать текстовую область";
+
+/* Class = "NSMenuItem"; title = "Показать столбец разделов"; ObjectID = "1984"; */
+"1984.title" = "Показать столбец разделов";
+
+/* Class = "NSMenuItem"; title = "Показать структуру"; ObjectID = "2000"; */
+"2000.title" = "Показать структуру";
+
+/* Class = "NSMenuItem"; title = "Показать сведения о строке"; ObjectID = "2002"; */
+"2002.title" = "Показать сведения о строке";
+
+/* Class = "NSMenuItem"; title = "Показать меню статуса"; ObjectID = "2012"; */
+"2012.title" = "Показать меню статуса";
+
+/* Class = "NSMenuItem"; title = "Экспортировать повторно как"; ObjectID = "2016"; */
+"2016.title" = "Экспортировать повторно как";
+
+/* Class = "NSMenu"; title = "Экспортировать повторно как"; ObjectID = "2017"; */
+"2017.title" = "Экспортировать повторно как";
+
+/* Class = "NSMenuItem"; title = "Item"; ObjectID = "2018"; */
+"2018.title" = "Item";
+
+/* Class = "NSMenuItem"; title = "Отобразить язык"; ObjectID = "2020"; */
+"2020.title" = "Отобразить язык";
+
+/* Class = "NSMenuItem"; title = "Обновить строки…"; ObjectID = "2026"; */
+"2026.title" = "Обновить строки…";
+
+/* Class = "NSMenuItem"; title = "Обновить из файла…"; ObjectID = "2028"; */
+"2028.title" = "Обновить из файла…";
+
+/* Class = "NSMenuItem"; title = "Экспортировать строки…"; ObjectID = "2030"; */
+"2030.title" = "Экспортировать строки…";
+
+/* Class = "NSMenuItem"; title = "Сохранить как…"; ObjectID = "2067"; */
+"2067.title" = "Сохранить как…";
+
+/* Class = "NSMenuItem"; title = "Вернуться к сохраненному"; ObjectID = "2083"; */
+"2083.title" = "Вернуться к сохраненному";
+
+/* Class = "NSMenuItem"; title = "Сохранить в…"; ObjectID = "2085"; */
+"2085.title" = "Сохранить в…";
+
+/* Class = "NSMenuItem"; title = "Открыть и восстановить…"; ObjectID = "2089"; */
+"2089.title" = "Открыть и восстановить…";
+
+/* Class = "NSMenuItem"; title = "Перевести с помощью выбранного глоссария"; ObjectID = "2094"; */
+"2094.title" = "Перевести с помощью выбранного глоссария";
+
+/* Class = "NSMenuItem"; title = "Open Previous & Current in External Editor"; ObjectID = "2098"; */
+"2098.title" = "Open Previous & Current in External Editor";
+
+/* Class = "NSMenuItem"; title = "Diff against Previous"; ObjectID = "2100"; */
+"2100.title" = "Diff against Previous";
+
+/* Class = "NSMenuItem"; title = "Make a Donation…"; ObjectID = "2102"; */
+"2102.title" = "Make a Donation…";
+
+/* Class = "NSMenuItem"; title = "Generate Glossaries with All Languages"; ObjectID = "VQP-eR-tjC"; */
+"VQP-eR-tjC.title" = "Generate Glossaries with All Languages";
+
+/* Class = "NSMenuItem"; title = "Generate Glossary with Current Language"; ObjectID = "cme-B7-7ha"; */
+"cme-B7-7ha.title" = "Generate Glossary with Current Language";

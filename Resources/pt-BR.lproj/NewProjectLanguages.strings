@@ -1,0 +1,27 @@
+
+/* Class = "NSTextFieldCell"; title = "Selecione o idioma para importar:"; ObjectID = "639"; */
+"639.title" = "Selecione o idioma para importar:";
+
+/* Class = "NSTextFieldCell"; title = "Idioma Base:"; ObjectID = "790"; */
+"790.title" = "Idioma Base:";
+
+/* Class = "NSMenu"; title = "Outras Visualizações"; ObjectID = "793"; */
+"793.title" = "Outras Visualizações";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "794"; */
+"794.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "795"; */
+"795.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "796"; */
+"796.title" = "Item 3";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Se esta opção estiver marcada qualquer arquivo de idioma base que não tem nenhum arquivo traduzido correspondente será copiado para o idioma traduzido em particular."; ObjectID = "807"; */
+"807.ibShadowedToolTip" = "Se esta opção estiver marcada qualquer arquivo de idioma base que não tem nenhum arquivo traduzido correspondente será copiado para o idioma traduzido em particular.";
+
+/* Class = "NSButtonCell"; title = "Criar arquivos traduzidos não existentes do idioma base"; ObjectID = "808"; */
+"808.title" = "Criar arquivos traduzidos não existentes do idioma base";
+
+/* Class = "NSButtonCell"; title = "Verificar"; ObjectID = "825"; */
+"825.title" = "Verificar";

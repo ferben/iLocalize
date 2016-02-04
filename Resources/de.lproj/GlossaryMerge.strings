@@ -1,0 +1,30 @@
+
+/* Class = "NSWindow"; title = "Zusammenführen"; ObjectID = "5"; */
+"5.title" = "Zusammenführen";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "8"; */
+"8.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "9"; */
+"9.title" = "Item2";
+
+/* Class = "NSMenuItem"; title = "Objekt1"; ObjectID = "10"; */
+"10.title" = "Objekt1";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "11"; */
+"11.title" = "Item3";
+
+/* Class = "NSTextFieldCell"; title = "In dieses Glossar:"; ObjectID = "37"; */
+"37.title" = "In dieses Glossar:";
+
+/* Class = "NSButtonCell"; title = "Zusammenführen"; ObjectID = "38"; */
+"38.title" = "Zusammenführen";
+
+/* Class = "NSTextFieldCell"; title = "Folgende Glossare zusammenführen:"; ObjectID = "39"; */
+"39.title" = "Folgende Glossare zusammenführen:";
+
+/* Class = "NSButtonCell"; title = "Abbrechen"; ObjectID = "40"; */
+"40.title" = "Abbrechen";
+
+/* Class = "NSButtonCell"; title = "Dubletten entfernen"; ObjectID = "41"; */
+"41.title" = "Dubletten entfernen";

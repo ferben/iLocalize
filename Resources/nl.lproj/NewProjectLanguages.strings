@@ -1,0 +1,27 @@
+
+/* Class = "NSTextFieldCell"; title = "Selecteer de te importeren talen:"; ObjectID = "639"; */
+"639.title" = "Selecteer de te importeren talen:";
+
+/* Class = "NSTextFieldCell"; title = "Basistaal:"; ObjectID = "790"; */
+"790.title" = "Basistaal:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "793"; */
+"793.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 1"; ObjectID = "794"; */
+"794.title" = "Onderdeel 1";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 2"; ObjectID = "795"; */
+"795.title" = "Onderdeel 2";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 3"; ObjectID = "796"; */
+"796.title" = "Onderdeel 3";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Met deze optie actief wordt ieder basistaalbestand zonder bijbehorend bestand in een vertaling, gekopieerd naar die vertaling."; ObjectID = "807"; */
+"807.ibShadowedToolTip" = "Met deze optie actief wordt ieder basistaalbestand zonder bijbehorend bestand in een vertaling, gekopieerd naar die vertaling.";
+
+/* Class = "NSButtonCell"; title = "Maak ontbrekende, vertaalbare bestanden uit basistaal"; ObjectID = "808"; */
+"808.title" = "Maak ontbrekende, vertaalbare bestanden uit basistaal";
+
+/* Class = "NSButtonCell"; title = "Controleer"; ObjectID = "825"; */
+"825.title" = "Controleer";

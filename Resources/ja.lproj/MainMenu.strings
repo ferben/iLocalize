@@ -1,0 +1,462 @@
+
+/* Class = "NSMenuItem"; title = "すべてを手前に移動"; ObjectID = "5"; */
+"5.title" = "すべてを手前に移動";
+
+/* Class = "NSMenuItem"; title = "ウインドウ"; ObjectID = "19"; */
+"19.title" = "ウインドウ";
+
+/* Class = "NSMenuItem"; title = "しまう"; ObjectID = "23"; */
+"23.title" = "しまう";
+
+/* Class = "NSMenu"; title = "ウインドウ"; ObjectID = "24"; */
+"24.title" = "ウインドウ";
+
+/* Class = "NSMenu"; title = "MainMenu"; ObjectID = "29"; */
+"29.title" = "MainMenu";
+
+/* Class = "NSMenuItem"; title = "iLocalize"; ObjectID = "56"; */
+"56.title" = "iLocalize";
+
+/* Class = "NSMenu"; title = "iLocalize"; ObjectID = "57"; */
+"57.title" = "iLocalize";
+
+/* Class = "NSMenuItem"; title = "iLocalize について"; ObjectID = "58"; */
+"58.title" = "iLocalize について";
+
+/* Class = "NSMenuItem"; title = "開く…"; ObjectID = "72"; */
+"72.title" = "開く…";
+
+/* Class = "NSMenuItem"; title = "閉じる"; ObjectID = "73"; */
+"73.title" = "閉じる";
+
+/* Class = "NSMenuItem"; title = "保存"; ObjectID = "75"; */
+"75.title" = "保存";
+
+/* Class = "NSMenu"; title = "ファイル"; ObjectID = "81"; */
+"81.title" = "ファイル";
+
+/* Class = "NSMenuItem"; title = "新規プロジェクト…"; ObjectID = "82"; */
+"82.title" = "新規プロジェクト…";
+
+/* Class = "NSMenuItem"; title = "ファイル"; ObjectID = "83"; */
+"83.title" = "ファイル";
+
+/* Class = "NSMenuItem"; title = "ヘルプ"; ObjectID = "103"; */
+"103.title" = "ヘルプ";
+
+/* Class = "NSMenu"; title = "ヘルプ"; ObjectID = "106"; */
+"106.title" = "ヘルプ";
+
+/* Class = "NSMenuItem"; title = "iLocalize ヘルプ"; ObjectID = "111"; */
+"111.title" = "iLocalize ヘルプ";
+
+/* Class = "NSMenuItem"; title = "環境設定…"; ObjectID = "129"; */
+"129.title" = "環境設定…";
+
+/* Class = "NSMenu"; title = "サービス"; ObjectID = "130"; */
+"130.title" = "サービス";
+
+/* Class = "NSMenuItem"; title = "サービス"; ObjectID = "131"; */
+"131.title" = "サービス";
+
+/* Class = "NSMenuItem"; title = "iLocalize を隠す"; ObjectID = "134"; */
+"134.title" = "iLocalize を隠す";
+
+/* Class = "NSMenuItem"; title = "iLocalize を終了"; ObjectID = "136"; */
+"136.title" = "iLocalize を終了";
+
+/* Class = "NSMenuItem"; title = "ほかを隠す"; ObjectID = "145"; */
+"145.title" = "ほかを隠す";
+
+/* Class = "NSMenuItem"; title = "すべてを表示"; ObjectID = "150"; */
+"150.title" = "すべてを表示";
+
+/* Class = "NSMenuItem"; title = "検索…"; ObjectID = "154"; */
+"154.title" = "検索…";
+
+/* Class = "NSMenuItem"; title = "選択部分へジャンプ"; ObjectID = "155"; */
+"155.title" = "選択部分へジャンプ";
+
+/* Class = "NSMenuItem"; title = "コピー"; ObjectID = "157"; */
+"157.title" = "コピー";
+
+/* Class = "NSMenuItem"; title = "取り消し"; ObjectID = "158"; */
+"158.title" = "取り消し";
+
+/* Class = "NSMenu"; title = "検索"; ObjectID = "159"; */
+"159.title" = "検索";
+
+/* Class = "NSMenuItem"; title = "カット"; ObjectID = "160"; */
+"160.title" = "カット";
+
+/* Class = "NSMenuItem"; title = "選択部分を検索"; ObjectID = "161"; */
+"161.title" = "選択部分を検索";
+
+/* Class = "NSMenuItem"; title = "前を検索"; ObjectID = "162"; */
+"162.title" = "前を検索";
+
+/* Class = "NSMenuItem"; title = "編集"; ObjectID = "163"; */
+"163.title" = "編集";
+
+/* Class = "NSMenuItem"; title = "削除"; ObjectID = "164"; */
+"164.title" = "削除";
+
+/* Class = "NSMenuItem"; title = "次を検索"; ObjectID = "167"; */
+"167.title" = "次を検索";
+
+/* Class = "NSMenuItem"; title = "検索"; ObjectID = "168"; */
+"168.title" = "検索";
+
+/* Class = "NSMenu"; title = "編集"; ObjectID = "169"; */
+"169.title" = "編集";
+
+/* Class = "NSMenuItem"; title = "ペースト"; ObjectID = "171"; */
+"171.title" = "ペースト";
+
+/* Class = "NSMenuItem"; title = "すべて選択"; ObjectID = "172"; */
+"172.title" = "すべて選択";
+
+/* Class = "NSMenuItem"; title = "やり直し"; ObjectID = "173"; */
+"173.title" = "やり直し";
+
+/* Class = "NSMenuItem"; title = "スペル"; ObjectID = "184"; */
+"184.title" = "スペル";
+
+/* Class = "NSMenu"; title = "スペル"; ObjectID = "185"; */
+"185.title" = "スペル";
+
+/* Class = "NSMenuItem"; title = "スペル…"; ObjectID = "187"; */
+"187.title" = "スペル…";
+
+/* Class = "NSMenuItem"; title = "スペルチェック"; ObjectID = "189"; */
+"189.title" = "スペルチェック";
+
+/* Class = "NSMenuItem"; title = "入力中に自動スペルチェック"; ObjectID = "191"; */
+"191.title" = "入力中に自動スペルチェック";
+
+/* Class = "NSMenuItem"; title = "拡大／縮小"; ObjectID = "203"; */
+"203.title" = "拡大／縮小";
+
+/* Class = "NSMenuItem"; title = "プロジェクト"; ObjectID = "383"; */
+"383.title" = "プロジェクト";
+
+/* Class = "NSMenu"; title = "プロジェクト"; ObjectID = "385"; */
+"385.title" = "プロジェクト";
+
+/* Class = "NSMenuItem"; title = "プロジェクトにファイルを追加..."; ObjectID = "392"; */
+"392.title" = "プロジェクトにファイルを追加...";
+
+/* Class = "NSMenuItem"; title = "選択されたファイルを削除"; ObjectID = "393"; */
+"393.title" = "選択されたファイルを削除";
+
+/* Class = "NSMenuItem"; title = "バンドルを使ってアップデート…"; ObjectID = "397"; */
+"397.title" = "バンドルを使ってアップデート…";
+
+/* Class = "NSMenuItem"; ibShadowedToolTip = "生成したフォルダからアプリケーションを起動"; ObjectID = "461"; */
+"461.ibShadowedToolTip" = "生成したフォルダからアプリケーションを起動";
+
+/* Class = "NSMenuItem"; title = "“英語” を起動"; ObjectID = "461"; */
+"461.title" = "“英語” を起動";
+
+/* Class = "NSMenuItem"; ibShadowedToolTip = "選択した翻訳済みのファイルを対応するベースファイルで置換します"; ObjectID = "468"; */
+"468.ibShadowedToolTip" = "選択した翻訳済みのファイルを対応するベースファイルで置換します";
+
+/* Class = "NSMenuItem"; title = "選択されたファイルを英語から再構築"; ObjectID = "468"; */
+"468.title" = "選択されたファイルを英語から再構築";
+
+/* Class = "NSMenuItem"; ibShadowedToolTip = "新規に空の言語を作成"; ObjectID = "475"; */
+"475.ibShadowedToolTip" = "新規に空の言語を作成";
+
+/* Class = "NSMenuItem"; title = "言語を追加..."; ObjectID = "475"; */
+"475.title" = "言語を追加...";
+
+/* Class = "NSMenuItem"; title = "削除"; ObjectID = "481"; */
+"481.title" = "削除";
+
+/* Class = "NSMenuItem"; ibShadowedToolTip = "メモリ上のデータとディスク上のファイルを同期します"; ObjectID = "509"; */
+"509.ibShadowedToolTip" = "メモリ上のデータとディスク上のファイルを同期します";
+
+/* Class = "NSMenuItem"; title = "外部で変更されたファイルを再読み込み"; ObjectID = "509"; */
+"509.title" = "外部で変更されたファイルを再読み込み";
+
+/* Class = "NSMenuItem"; title = "シンボル"; ObjectID = "571"; */
+"571.title" = "シンボル";
+
+/* Class = "NSMenuItem"; title = "外部エディタで開く"; ObjectID = "607"; */
+"607.title" = "外部エディタで開く";
+
+/* Class = "NSMenuItem"; title = "Finder に表示"; ObjectID = "609"; */
+"609.title" = "Finder に表示";
+
+/* Class = "NSMenuItem"; title = "コンソールを表示"; ObjectID = "614"; */
+"614.title" = "コンソールを表示";
+
+/* Class = "NSMenuItem"; title = "クリーニング..."; ObjectID = "619"; */
+"619.title" = "クリーニング...";
+
+/* Class = "NSMenuItem"; title = "統計..."; ObjectID = "620"; */
+"620.title" = "統計...";
+
+/* Class = "NSMenuItem"; title = "新規用語集..."; ObjectID = "673"; */
+"673.title" = "新規用語集...";
+
+/* Class = "NSMenuItem"; title = "用語集の一覧を表示..."; ObjectID = "675"; */
+"675.title" = "用語集の一覧を表示...";
+
+/* Class = "NSMenuItem"; title = "翻訳"; ObjectID = "688"; */
+"688.title" = "翻訳";
+
+/* Class = "NSMenu"; title = "翻訳"; ObjectID = "689"; */
+"689.title" = "翻訳";
+
+/* Class = "NSMenuItem"; title = "コメントを消去"; ObjectID = "690"; */
+"690.title" = "コメントを消去";
+
+/* Class = "NSMenuItem"; title = "訳語のコメントを消去"; ObjectID = "691"; */
+"691.title" = "訳語のコメントを消去";
+
+/* Class = "NSMenuItem"; title = "選択中のファイルにある同一の文字列をすべて承認"; ObjectID = "692"; */
+"692.title" = "選択中のファイルにある同一の文字列をすべて承認";
+
+/* Class = "NSMenuItem"; title = "文字列を承認"; ObjectID = "693"; */
+"693.title" = "文字列を承認";
+
+/* Class = "NSMenuItem"; title = "すべてのファイルにある同一の文字列すべてに訳語を伝播"; ObjectID = "694"; */
+"694.title" = "すべてのファイルにある同一の文字列すべてに訳語を伝播";
+
+/* Class = "NSMenuItem"; title = "ベースを訳語にコピー"; ObjectID = "695"; */
+"695.title" = "ベースを訳語にコピー";
+
+/* Class = "NSMenuItem"; title = "すべてのファイルにある同一の文字列をすべて承認"; ObjectID = "697"; */
+"697.title" = "すべてのファイルにある同一の文字列をすべて承認";
+
+/* Class = "NSMenuItem"; title = "ベースと訳語を交換"; ObjectID = "699"; */
+"699.title" = "ベースと訳語を交換";
+
+/* Class = "NSMenuItem"; title = "選択中のファイルにある同一の文字列すべてに訳語を伝播"; ObjectID = "702"; */
+"702.title" = "選択中のファイルにある同一の文字列すべてに訳語を伝播";
+
+/* Class = "NSMenuItem"; title = "ベースコメントを消去"; ObjectID = "703"; */
+"703.title" = "ベースコメントを消去";
+
+/* Class = "NSMenuItem"; title = "ファイルを承認"; ObjectID = "727"; */
+"727.title" = "ファイルを承認";
+
+/* Class = "NSMenuItem"; title = "Mac OS X でのローカライズ"; ObjectID = "730"; */
+"730.title" = "Mac OS X でのローカライズ";
+
+/* Class = "NSMenuItem"; title = "Apple 用語集"; ObjectID = "731"; */
+"731.title" = "Apple 用語集";
+
+/* Class = "NSMenuItem"; title = "選択中のファイルにある自動翻訳された文字列をすべて承認"; ObjectID = "742"; */
+"742.title" = "選択中のファイルにある自動翻訳された文字列をすべて承認";
+
+/* Class = "NSMenuItem"; title = "すべてのファイルにある自動翻訳された文字列をすべて承認"; ObjectID = "744"; */
+"744.title" = "すべてのファイルにある自動翻訳された文字列をすべて承認";
+
+/* Class = "NSMenuItem"; title = "すべてのファイルにある自動コピーされた文字列をすべて承認"; ObjectID = "745"; */
+"745.title" = "すべてのファイルにある自動コピーされた文字列をすべて承認";
+
+/* Class = "NSMenuItem"; title = "選択中のファイルにある自動コピーされた文字列をすべて承認"; ObjectID = "747"; */
+"747.title" = "選択中のファイルにある自動コピーされた文字列をすべて承認";
+
+/* Class = "NSMenuItem"; title = "選択中のファイルにある自動処理された文字列をすべて承認"; ObjectID = "748"; */
+"748.title" = "選択中のファイルにある自動処理された文字列をすべて承認";
+
+/* Class = "NSMenuItem"; title = "すべてのファイルにある自動処理された文字列をすべて承認"; ObjectID = "749"; */
+"749.title" = "すべてのファイルにある自動処理された文字列をすべて承認";
+
+/* Class = "NSMenuItem"; title = "訳語を消去"; ObjectID = "768"; */
+"768.title" = "訳語を消去";
+
+/* Class = "NSMenuItem"; title = "プロジェクトの一覧…"; ObjectID = "773"; */
+"773.title" = "プロジェクトの一覧…";
+
+/* Class = "NSMenuItem"; title = "ラベル…"; ObjectID = "894"; */
+"894.title" = "ラベル…";
+
+/* Class = "NSMenuItem"; title = "プロジェクト内を検索…"; ObjectID = "896"; */
+"896.title" = "プロジェクト内を検索…";
+
+/* Class = "NSMenuItem"; title = "置換…"; ObjectID = "899"; */
+"899.title" = "置換…";
+
+/* Class = "NSMenuItem"; title = "新規フィルタ…"; ObjectID = "901"; */
+"901.title" = "新規フィルタ…";
+
+/* Class = "NSMenuItem"; title = "行末コードを変換…"; ObjectID = "903"; */
+"903.title" = "行末コードを変換…";
+
+/* Class = "NSMenuItem"; title = "チェック…"; ObjectID = "905"; */
+"905.title" = "チェック…";
+
+/* Class = "NSMenuItem"; title = "更新ファイルを示すシンボルを消去"; ObjectID = "959"; */
+"959.title" = "更新ファイルを示すシンボルを消去";
+
+/* Class = "NSMenuItem"; title = "エンコーディング"; ObjectID = "966"; */
+"966.title" = "エンコーディング";
+
+/* Class = "NSMenuItem"; title = "名前を変更…"; ObjectID = "968"; */
+"968.title" = "名前を変更…";
+
+/* Class = "NSMenuItem"; ibShadowedToolTip = "新規に空の言語を作成"; ObjectID = "969"; */
+"969.ibShadowedToolTip" = "新規に空の言語を作成";
+
+/* Class = "NSMenuItem"; title = "カスタム言語を追加..."; ObjectID = "969"; */
+"969.title" = "カスタム言語を追加...";
+
+/* Class = "NSMenuItem"; title = "言語にファイルを追加..."; ObjectID = "975"; */
+"975.title" = "言語にファイルを追加...";
+
+/* Class = "NSMenuItem"; title = "言語固有のファイルを更新…"; ObjectID = "978"; */
+"978.title" = "言語固有のファイルを更新…";
+
+/* Class = "NSMenuItem"; title = "以前のバージョンを開く"; ObjectID = "1089"; */
+"1089.title" = "以前のバージョンを開く";
+
+/* Class = "NSMenuItem"; title = "書き出す…"; ObjectID = "1190"; */
+"1190.title" = "書き出す…";
+
+/* Class = "NSMenuItem"; title = "未翻訳にする"; ObjectID = "1243"; */
+"1243.title" = "未翻訳にする";
+
+/* Class = "NSMenuItem"; title = "翻訳済みにする"; ObjectID = "1245"; */
+"1245.title" = "翻訳済みにする";
+
+/* Class = "NSMenuItem"; title = "選択されたファイルを無視"; ObjectID = "1354"; */
+"1354.title" = "選択されたファイルを無視";
+
+/* Class = "NSMenuItem"; title = "ファイルを再読み込み"; ObjectID = "1759"; */
+"1759.title" = "ファイルを再読み込み";
+
+/* Class = "NSMenuItem"; title = "外部 Strings ファイルを使って翻訳…"; ObjectID = "1762"; */
+"1762.title" = "外部 Strings ファイルを使って翻訳…";
+
+/* Class = "NSMenuItem"; title = "表示"; ObjectID = "1823"; */
+"1823.title" = "表示";
+
+/* Class = "NSMenu"; title = "表示"; ObjectID = "1824"; */
+"1824.title" = "表示";
+
+/* Class = "NSMenuItem"; title = "不可視文字を表示"; ObjectID = "1825"; */
+"1825.title" = "不可視文字を表示";
+
+/* Class = "NSMenuItem"; title = "用語集の訳語を表示"; ObjectID = "1829"; */
+"1829.title" = "用語集の訳語を表示";
+
+/* Class = "NSMenuItem"; title = "代替の訳語を表示"; ObjectID = "1830"; */
+"1830.title" = "代替の訳語を表示";
+
+/* Class = "NSMenuItem"; title = "スマート引用符で置換"; ObjectID = "1836"; */
+"1836.title" = "スマート引用符で置換";
+
+/* Class = "NSMenuItem"; title = "選択した文字列をロック"; ObjectID = "1838"; */
+"1838.title" = "選択した文字列をロック";
+
+/* Class = "NSMenuItem"; ibShadowedToolTip = "新規に空の言語を作成"; ObjectID = "1922"; */
+"1922.ibShadowedToolTip" = "新規に空の言語を作成";
+
+/* Class = "NSMenuItem"; title = "カスタム言語の名前を変更…"; ObjectID = "1922"; */
+"1922.title" = "カスタム言語の名前を変更…";
+
+/* Class = "NSMenuItem"; title = "最近使ったプロジェクトを開く"; ObjectID = "1924"; */
+"1924.title" = "最近使ったプロジェクトを開く";
+
+/* Class = "NSMenu"; title = "最近使ったプロジェクトを開く"; ObjectID = "1925"; */
+"1925.title" = "最近使ったプロジェクトを開く";
+
+/* Class = "NSMenuItem"; title = "Item"; ObjectID = "1926"; */
+"1926.title" = "Item";
+
+/* Class = "NSMenuItem"; title = "最近使った用語集を開く"; ObjectID = "1927"; */
+"1927.title" = "最近使った用語集を開く";
+
+/* Class = "NSMenu"; title = "最近使った用語集を開く"; ObjectID = "1928"; */
+"1928.title" = "最近使った用語集を開く";
+
+/* Class = "NSMenuItem"; title = "Item"; ObjectID = "1929"; */
+"1929.title" = "Item";
+
+/* Class = "NSMenuItem"; title = "ツールバーを表示"; ObjectID = "1937"; */
+"1937.title" = "ツールバーを表示";
+
+/* Class = "NSMenuItem"; title = "ツールバーをカスタマイズ…"; ObjectID = "1938"; */
+"1938.title" = "ツールバーをカスタマイズ…";
+
+/* Class = "NSMenuItem"; title = "すべての言語で共通のファイルを表示"; ObjectID = "1946"; */
+"1946.title" = "すべての言語で共通のファイルを表示";
+
+/* Class = "NSMenuItem"; title = "<言語> に固有のファイルを表示"; ObjectID = "1947"; */
+"1947.title" = "<言語> に固有のファイルを表示";
+
+/* Class = "NSMenuItem"; title = "用語集を使って翻訳…"; ObjectID = "1972"; */
+"1972.title" = "用語集を使って翻訳…";
+
+/* Class = "NSMenuItem"; title = "ファイル情報を表示"; ObjectID = "1976"; */
+"1976.title" = "ファイル情報を表示";
+
+/* Class = "NSMenuItem"; title = "テキストゾーンを表示"; ObjectID = "1981"; */
+"1981.title" = "テキストゾーンを表示";
+
+/* Class = "NSMenuItem"; title = "キー列を表示"; ObjectID = "1984"; */
+"1984.title" = "キー列を表示";
+
+/* Class = "NSMenuItem"; title = "フォルダ階層ビューを表示"; ObjectID = "2000"; */
+"2000.title" = "フォルダ階層ビューを表示";
+
+/* Class = "NSMenuItem"; title = "文字列情報を表示"; ObjectID = "2002"; */
+"2002.title" = "文字列情報を表示";
+
+/* Class = "NSMenuItem"; title = "ステータスバーを表示"; ObjectID = "2012"; */
+"2012.title" = "ステータスバーを表示";
+
+/* Class = "NSMenuItem"; title = "プリセットを使用して書き出す"; ObjectID = "2016"; */
+"2016.title" = "プリセットを使用して書き出す";
+
+/* Class = "NSMenu"; title = "プリセットを使用して書き出す"; ObjectID = "2017"; */
+"2017.title" = "プリセットを使用して書き出す";
+
+/* Class = "NSMenuItem"; title = "Item"; ObjectID = "2018"; */
+"2018.title" = "Item";
+
+/* Class = "NSMenuItem"; title = "言語を表示"; ObjectID = "2020"; */
+"2020.title" = "言語を表示";
+
+/* Class = "NSMenuItem"; title = "Strings ファイルを使って翻訳…"; ObjectID = "2026"; */
+"2026.title" = "Strings ファイルを使って翻訳…";
+
+/* Class = "NSMenuItem"; title = "ファイルを使ってアップデート…"; ObjectID = "2028"; */
+"2028.title" = "ファイルを使ってアップデート…";
+
+/* Class = "NSMenuItem"; title = "Strings ファイルとして書き出す…"; ObjectID = "2030"; */
+"2030.title" = "Strings ファイルとして書き出す…";
+
+/* Class = "NSMenuItem"; title = "別名で保存…"; ObjectID = "2067"; */
+"2067.title" = "別名で保存…";
+
+/* Class = "NSMenuItem"; title = "前回保存時の状態に戻す"; ObjectID = "2083"; */
+"2083.title" = "前回保存時の状態に戻す";
+
+/* Class = "NSMenuItem"; title = "保存…"; ObjectID = "2085"; */
+"2085.title" = "保存…";
+
+/* Class = "NSMenuItem"; title = "修復して開く…"; ObjectID = "2089"; */
+"2089.title" = "修復して開く…";
+
+/* Class = "NSMenuItem"; title = "選択した用語集を使って翻訳"; ObjectID = "2094"; */
+"2094.title" = "選択した用語集を使って翻訳";
+
+/* Class = "NSMenuItem"; title = "直前のファイルと現在のファイルを外部エディタで開く"; ObjectID = "2098"; */
+"2098.title" = "直前のファイルと現在のファイルを外部エディタで開く";
+
+/* Class = "NSMenuItem"; title = "直前のファイルとの差分を表示"; ObjectID = "2100"; */
+"2100.title" = "直前のファイルとの差分を表示";
+
+/* Class = "NSMenuItem"; title = "寄付をする"; ObjectID = "2102"; */
+"2102.title" = "寄付をする";
+
+/* Class = "NSMenuItem"; title = "Generate Glossaries with All Languages"; ObjectID = "VQP-eR-tjC"; */
+"VQP-eR-tjC.title" = "Generate Glossaries with All Languages";
+
+/* Class = "NSMenuItem"; title = "Generate Glossary with Current Language"; ObjectID = "cme-B7-7ha"; */
+"cme-B7-7ha.title" = "Generate Glossary with Current Language";

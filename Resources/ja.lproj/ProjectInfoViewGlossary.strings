@@ -1,0 +1,18 @@
+
+/* Class = "NSTextFieldCell"; title = "Text"; ObjectID = "60"; */
+"60.title" = "Text";
+
+/* Class = "NSMenuItem"; title = "選択部分を使用"; ObjectID = "83"; */
+"83.title" = "選択部分を使用";
+
+/* Class = "NSMenuItem"; title = "選択部分をクリップボードにコピー"; ObjectID = "84"; */
+"84.title" = "選択部分をクリップボードにコピー";
+
+/* Class = "NSMenuItem"; title = "用語集の一覧を表示…"; ObjectID = "85"; */
+"85.title" = "用語集の一覧を表示…";
+
+/* Class = "NSMenuItem"; title = "スコープ…"; ObjectID = "88"; */
+"88.title" = "スコープ…";
+
+/* Class = "NSMenuItem"; title = "選択部分を表示"; ObjectID = "97"; */
+"97.title" = "選択部分を表示";

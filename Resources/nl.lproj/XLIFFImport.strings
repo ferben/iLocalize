@@ -1,0 +1,15 @@
+
+/* Class = "NSTextFieldCell"; title = "Stringsbestand:"; ObjectID = "19"; */
+"19.title" = "Stringsbestand:";
+
+/* Class = "NSButtonCell"; title = "Kies…"; ObjectID = "23"; */
+"23.title" = "Kies…";
+
+/* Class = "NSPathCell"; placeholderString = "Geen bestand geselecteerd"; ObjectID = "25"; */
+"25.placeholderString" = "Geen bestand geselecteerd";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Standaard gebruikt iLocalize het <source> element van XLIFF om vertalingen op te vinden. Met deze optie zal iLocalize het attribuut resname gebruiken, indien beschikbaar, om de vertalingen mee te vinden."; ObjectID = "36"; */
+"36.ibShadowedToolTip" = "Standaard gebruikt iLocalize het <source> element van XLIFF om vertalingen op te vinden. Met deze optie zal iLocalize het attribuut resname gebruiken, indien beschikbaar, om de vertalingen mee te vinden.";
+
+/* Class = "NSButtonCell"; title = "Zoek vertalingen met resname in plaats van source"; ObjectID = "37"; */
+"37.title" = "Zoek vertalingen met resname in plaats van source";

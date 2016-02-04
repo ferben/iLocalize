@@ -1,0 +1,24 @@
+
+/* Class = "NSWindow"; title = "Přidat umístění"; ObjectID = "6"; */
+"6.title" = "Přidat umístění";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "7"; */
+"7.title" = "Item3";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "8"; */
+"8.title" = "Item2";
+
+/* Class = "NSMenu"; title = "Jiný pohled"; ObjectID = "9"; */
+"9.title" = "Jiný pohled";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "11"; */
+"11.title" = "Item1";
+
+/* Class = "NSTextFieldCell"; title = "Vyberte složku, pro umístění nových souborů:"; ObjectID = "21"; */
+"21.title" = "Vyberte složku, pro umístění nových souborů:";
+
+/* Class = "NSButtonCell"; title = "Zrušit"; ObjectID = "22"; */
+"22.title" = "Zrušit";
+
+/* Class = "NSButtonCell"; title = "Přidat"; ObjectID = "23"; */
+"23.title" = "Přidat";

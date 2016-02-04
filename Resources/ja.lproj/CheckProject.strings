@@ -1,0 +1,15 @@
+
+/* Class = "NSWindow"; title = "プロジェクトのチェック"; ObjectID = "5"; */
+"5.title" = "プロジェクトのチェック";
+
+/* Class = "NSTextFieldCell"; title = "以下の言語に不整合がないかチェックします:"; ObjectID = "34"; */
+"34.title" = "以下の言語に不整合がないかチェックします:";
+
+/* Class = "NSButtonCell"; title = "キャンセル"; ObjectID = "35"; */
+"35.title" = "キャンセル";
+
+/* Class = "NSButtonCell"; title = "チェック"; ObjectID = "36"; */
+"36.title" = "チェック";
+
+/* Class = "NSButtonCell"; title = "チェック"; ObjectID = "51"; */
+"51.title" = "チェック";

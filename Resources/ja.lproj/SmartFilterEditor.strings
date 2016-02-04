@@ -1,0 +1,51 @@
+
+/* Class = "NSWindow"; title = "スマートフィルタエディタ"; ObjectID = "1"; */
+"1.title" = "スマートフィルタエディタ";
+
+/* Class = "NSMenuItem"; title = "の条件が真である場合"; ObjectID = "25"; */
+"25.title" = "の条件が真である場合";
+
+/* Class = "NSMenuItem"; title = "いずれかを満たす"; ObjectID = "26"; */
+"26.title" = "いずれかを満たす";
+
+/* Class = "NSMenuItem"; title = "すべて"; ObjectID = "27"; */
+"27.title" = "すべて";
+
+/* Class = "NSTextFieldCell"; title = "フィルタ名:"; ObjectID = "51"; */
+"51.title" = "フィルタ名:";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "55"; */
+"55.title" = "OK";
+
+/* Class = "NSButtonCell"; title = "キャンセル"; ObjectID = "57"; */
+"57.title" = "キャンセル";
+
+/* Class = "NSMenuItem"; title = "as"; ObjectID = "128"; */
+"128.title" = "as";
+
+/* Class = "NSMenuItem"; title = "address"; ObjectID = "129"; */
+"129.title" = "address";
+
+/* Class = "NSMenuItem"; title = "sign"; ObjectID = "130"; */
+"130.title" = "sign";
+
+/* Class = "NSMenuItem"; title = "含む"; ObjectID = "132"; */
+"132.title" = "含む";
+
+/* Class = "NSMenuItem"; title = "始まる"; ObjectID = "133"; */
+"133.title" = "始まる";
+
+/* Class = "NSMenuItem"; title = "終わる"; ObjectID = "134"; */
+"134.title" = "終わる";
+
+/* Class = "NSMenuItem"; title = "である"; ObjectID = "135"; */
+"135.title" = "である";
+
+/* Class = "NSMenuItem"; title = "ではない"; ObjectID = "136"; */
+"136.title" = "ではない";
+
+/* Class = "NSButtonCell"; title = "すべてのプロジェクトで使用する"; ObjectID = "142"; */
+"142.title" = "すべてのプロジェクトで使用する";
+
+/* Class = "NSTextFieldCell"; title = "⌥ (option) キーを押すとより複雑な条件を設定することができます"; ObjectID = "145"; */
+"145.title" = "⌥ (option) キーを押すとより複雑な条件を設定することができます";

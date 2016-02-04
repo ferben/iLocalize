@@ -1,0 +1,51 @@
+
+/* Class = "NSWindow"; title = "用語集の読み込み"; ObjectID = "7"; */
+"7.title" = "用語集の読み込み";
+
+/* Class = "NSButtonCell"; title = "iLocalize テキスト"; ObjectID = "42"; */
+"42.title" = "iLocalize テキスト";
+
+/* Class = "NSTextFieldCell"; title = "ソース言語:"; ObjectID = "57"; */
+"57.title" = "ソース言語:";
+
+/* Class = "NSTextFieldCell"; title = "ターゲット言語:"; ObjectID = "58"; */
+"58.title" = "ターゲット言語:";
+
+/* Class = "NSButtonCell"; title = "キャンセル"; ObjectID = "62"; */
+"62.title" = "キャンセル";
+
+/* Class = "NSButtonCell"; title = "読み込む"; ObjectID = "63"; */
+"63.title" = "読み込む";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "65"; */
+"65.title" = "Radio";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "68"; */
+"68.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "69"; */
+"69.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "70"; */
+"70.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "71"; */
+"71.title" = "Item 1";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "74"; */
+"74.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "75"; */
+"75.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "76"; */
+"76.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "77"; */
+"77.title" = "Item 1";
+
+/* Class = "NSButtonCell"; title = "PowerGlot テキスト"; ObjectID = "4Dw-c6-cD7"; */
+"4Dw-c6-cD7.title" = "PowerGlot テキスト";
+
+/* Class = "NSBox"; title = "読み込む"; ObjectID = "sjn-Ag-wmj"; */
+"sjn-Ag-wmj.title" = "読み込む";

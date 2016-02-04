@@ -1,0 +1,66 @@
+
+/* Class = "NSWindow"; title = "Symboly"; ObjectID = "782"; */
+"782.title" = "Symboly";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "955"; */
+"955.title" = "Box";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "957"; */
+"957.title" = "Box";
+
+/* Class = "NSTextFieldCell"; title = "Ověřit rozvržení (pouze XIBy/NIBy)"; ObjectID = "1777"; */
+"1777.title" = "Ověřit rozvržení (pouze XIBy/NIBy)";
+
+/* Class = "NSTextFieldCell"; title = "Obsah souboru je potřeba uložit na disk"; ObjectID = "1781"; */
+"1781.title" = "Obsah souboru je potřeba uložit na disk";
+
+/* Class = "NSTextFieldCell"; title = "Název tučně:"; ObjectID = "1782"; */
+"1782.title" = "Název tučně:";
+
+/* Class = "NSTextFieldCell"; title = "Soubor obsahuje problém"; ObjectID = "1790"; */
+"1790.title" = "Soubor obsahuje problém";
+
+/* Class = "NSTextFieldCell"; title = "Soubor na disku neexistuje"; ObjectID = "1792"; */
+"1792.title" = "Soubor na disku neexistuje";
+
+/* Class = "NSTextFieldCell"; title = "Obsah souboru je potřeba načíst znovu z disku"; ObjectID = "1794"; */
+"1794.title" = "Obsah souboru je potřeba načíst znovu z disku";
+
+/* Class = "NSTextFieldCell"; title = "Soubor byl přidán během poslední aktualizace"; ObjectID = "1797"; */
+"1797.title" = "Soubor byl přidán během poslední aktualizace";
+
+/* Class = "NSTextFieldCell"; title = "Soubor byl během poslední aktualizace pozměněn"; ObjectID = "1798"; */
+"1798.title" = "Soubor byl během poslední aktualizace pozměněn";
+
+/* Class = "NSTextFieldCell"; title = "✒"; ObjectID = "1799"; */
+"1799.title" = "✒";
+
+/* Class = "NSTextFieldCell"; title = "Označuje soubor obsahující vybrané řetězce (při výběru více souborů)"; ObjectID = "1800"; */
+"1800.title" = "Označuje soubor obsahující vybrané řetězce (při výběru více souborů)";
+
+/* Class = "NSTextFieldCell"; title = "Symboly souborů"; ObjectID = "1801"; */
+"1801.title" = "Symboly souborů";
+
+/* Class = "NSTextFieldCell"; title = "Symboly řetězce"; ObjectID = "1802"; */
+"1802.title" = "Symboly řetězce";
+
+/* Class = "NSTextFieldCell"; title = "Automatem nezměněné"; ObjectID = "1804"; */
+"1804.title" = "Automatem nezměněné";
+
+/* Class = "NSTextFieldCell"; title = "Nezměněné"; ObjectID = "1806"; */
+"1806.title" = "Nezměněné";
+
+/* Class = "NSTextFieldCell"; title = "Automaticky přeložené"; ObjectID = "1807"; */
+"1807.title" = "Automaticky přeložené";
+
+/* Class = "NSTextFieldCell"; title = "Původní jazyk byl pozměněn"; ObjectID = "1811"; */
+"1811.title" = "Původní jazyk byl pozměněn";
+
+/* Class = "NSTextFieldCell"; title = "Přeložit"; ObjectID = "1813"; */
+"1813.title" = "Přeložit";
+
+/* Class = "NSTextFieldCell"; title = "Nesrovnalosti"; ObjectID = "1816"; */
+"1816.title" = "Nesrovnalosti";
+
+/* Class = "NSTextFieldCell"; title = "File has been updated during last update operation"; ObjectID = "hi2-yW-vJG"; */
+"hi2-yW-vJG.title" = "File has been updated during last update operation";

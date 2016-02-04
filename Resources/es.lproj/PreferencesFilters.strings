@@ -1,0 +1,42 @@
+
+/* Class = "NSMenu"; title = "Menú"; ObjectID = "6"; */
+"6.title" = "Menú";
+
+/* Class = "NSMenuItem"; title = "Clave"; ObjectID = "7"; */
+"7.title" = "Clave";
+
+/* Class = "NSMenuItem"; title = "Comentario"; ObjectID = "8"; */
+"8.title" = "Comentario";
+
+/* Class = "NSMenuItem"; title = "Valor"; ObjectID = "9"; */
+"9.title" = "Valor";
+
+/* Class = "NSMenuItem"; title = "Todos"; ObjectID = "10"; */
+"10.title" = "Todos";
+
+/* Class = "NSTableColumn"; headerCell.title = "Elemento"; ObjectID = "14"; */
+"14.headerCell.title" = "Elemento";
+
+/* Class = "NSTableColumn"; headerCell.title = "Activar"; ObjectID = "16"; */
+"16.headerCell.title" = "Activar";
+
+/* Class = "NSTableColumn"; headerCell.title = "Expresión regular"; ObjectID = "18"; */
+"18.headerCell.title" = "Expresión regular";
+
+/* Class = "NSButtonCell"; title = "los segmentos que no contienen ninguna letra"; ObjectID = "153"; */
+"153.title" = "los segmentos que no contienen ninguna letra";
+
+/* Class = "NSButtonCell"; title = "los segmentos que contienen una letra"; ObjectID = "154"; */
+"154.title" = "los segmentos que contienen una letra";
+
+/* Class = "NSTextFieldCell"; title = "Ignorar:"; ObjectID = "155"; */
+"155.title" = "Ignorar:";
+
+/* Class = "NSTextFieldCell"; title = "los segmentos que corresponden a al menos una de las siguientes expresiones regulares:"; ObjectID = "156"; */
+"156.title" = "los segmentos que corresponden a al menos una de las siguientes expresiones regulares:";
+
+/* Class = "NSButtonCell"; title = "los segmentos vacíos en el idioma base"; ObjectID = "161"; */
+"161.title" = "los segmentos vacíos en el idioma base";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "162"; */
+"162.title" = "Text Cell";

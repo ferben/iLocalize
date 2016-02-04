@@ -1,0 +1,12 @@
+
+/* Class = "NSButtonCell"; ibExternalAccessibilityDescription = "Просмотр глоссариев перевода"; ObjectID = "52"; */
+"52.ibExternalAccessibilityDescription" = "Просмотр глоссариев перевода";
+
+/* Class = "NSButtonCell"; ibExternalAccessibilityDescription = "Просмотр данных строки"; ObjectID = "53"; */
+"53.ibExternalAccessibilityDescription" = "Просмотр данных строки";
+
+/* Class = "NSButtonCell"; ibExternalAccessibilityDescription = "Просмотр вариантов перевода"; ObjectID = "55"; */
+"55.ibExternalAccessibilityDescription" = "Просмотр вариантов перевода";
+
+/* Class = "NSButtonCell"; ibExternalAccessibilityDescription = "Просмотр сведений о файле"; ObjectID = "74"; */
+"74.ibExternalAccessibilityDescription" = "Просмотр сведений о файле";

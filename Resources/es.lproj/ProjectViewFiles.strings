@@ -1,0 +1,114 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Progreso"; ObjectID = "31"; */
+"31.headerCell.title" = "Progreso";
+
+/* Class = "NSTableColumn"; headerCell.title = "Tipo"; ObjectID = "32"; */
+"32.headerCell.title" = "Tipo";
+
+/* Class = "NSTableColumn"; headerCell.title = "Archivo"; ObjectID = "33"; */
+"33.headerCell.title" = "Archivo";
+
+/* Class = "NSTableColumn"; headerCell.title = "Contenido"; ObjectID = "104"; */
+"104.headerCell.title" = "Contenido";
+
+/* Class = "NSMenuItem"; title = "Guardar"; ObjectID = "264"; */
+"264.title" = "Guardar";
+
+/* Class = "NSMenuItem"; title = "Mostrar en el Finder"; ObjectID = "265"; */
+"265.title" = "Mostrar en el Finder";
+
+/* Class = "NSMenu"; title = "Menú"; ObjectID = "266"; */
+"266.title" = "Menú";
+
+/* Class = "NSMenuItem"; title = "Abrir con un editor externo"; ObjectID = "267"; */
+"267.title" = "Abrir con un editor externo";
+
+/* Class = "NSMenuItem"; title = "Borrar"; ObjectID = "278"; */
+"278.title" = "Borrar";
+
+/* Class = "NSMenuItem"; title = "Aprobar"; ObjectID = "323"; */
+"323.title" = "Aprobar";
+
+/* Class = "NSMenuItem"; title = "Reconstruir a partir del inglés"; ObjectID = "336"; */
+"336.title" = "Reconstruir a partir del inglés";
+
+/* Class = "NSMenuItem"; title = "Volver a cargar"; ObjectID = "378"; */
+"378.title" = "Volver a cargar";
+
+/* Class = "NSMenuItem"; title = "Convertir los finales de línea…"; ObjectID = "397"; */
+"397.title" = "Convertir los finales de línea…";
+
+/* Class = "NSMenuItem"; title = "Exportar los segmentos…"; ObjectID = "434"; */
+"434.title" = "Exportar los segmentos…";
+
+/* Class = "NSMenuItem"; title = "Actualizar los segmentos…"; ObjectID = "436"; */
+"436.title" = "Actualizar los segmentos…";
+
+/* Class = "NSMenuItem"; title = "Mostrar la advertencia…"; ObjectID = "541"; */
+"541.title" = "Mostrar la advertencia…";
+
+/* Class = "NSMenuItem"; title = "Borrar los símbolos de archivo actualizado"; ObjectID = "544"; */
+"544.title" = "Borrar los símbolos de archivo actualizado";
+
+/* Class = "NSMenu"; title = "Menú"; ObjectID = "559"; */
+"559.title" = "Menú";
+
+/* Class = "NSMenuItem"; title = "Archivo"; ObjectID = "560"; */
+"560.title" = "Archivo";
+
+/* Class = "NSMenuItem"; title = "Tipo"; ObjectID = "561"; */
+"561.title" = "Tipo";
+
+/* Class = "NSMenuItem"; title = "Contenido"; ObjectID = "563"; */
+"563.title" = "Contenido";
+
+/* Class = "NSMenuItem"; title = "Progreso"; ObjectID = "564"; */
+"564.title" = "Progreso";
+
+/* Class = "NSMenuItem"; title = "Codificación"; ObjectID = "580"; */
+"580.title" = "Codificación";
+
+/* Class = "NSTableColumn"; headerCell.title = "Etiquetas"; ObjectID = "583"; */
+"583.headerCell.title" = "Etiquetas";
+
+/* Class = "NSMenuItem"; title = "Etiquetas"; ObjectID = "587"; */
+"587.title" = "Etiquetas";
+
+/* Class = "NSMenuItem"; title = "Etiquetas"; ObjectID = "593"; */
+"593.title" = "Etiquetas";
+
+/* Class = "NSMenuItem"; title = "Ignorar"; ObjectID = "596"; */
+"596.title" = "Ignorar";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "809"; */
+"809.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "810"; */
+"810.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "811"; */
+"811.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "812"; */
+"812.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "815"; */
+"815.title" = "Text Cell";
+
+/* Class = "NSButtonCell"; title = "Traducir solo si el segmento es diferente del segmento de base"; ObjectID = "1145"; */
+"1145.title" = "Traducir solo si el segmento es diferente del segmento de base";
+
+/* Class = "NSTableColumn"; headerCell.title = "Estado"; ObjectID = "1160"; */
+"1160.headerCell.title" = "Estado";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "1161"; */
+"1161.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Estado"; ObjectID = "1163"; */
+"1163.title" = "Estado";
+
+/* Class = "NSMenuItem"; title = "Open Previous & Current in External Editor"; ObjectID = "1173"; */
+"1173.title" = "Open Previous & Current in External Editor";
+
+/* Class = "NSMenuItem"; title = "Diff against Previous"; ObjectID = "1174"; */
+"1174.title" = "Diff against Previous";

@@ -1,0 +1,51 @@
+
+/* Class = "NSTextFieldCell"; title = "Escolha os recursos para exportar:"; ObjectID = "175"; */
+"175.title" = "Escolha os recursos para exportar:";
+
+/* Class = "NSTextFieldCell"; title = "Escolha os idiomas para exportar:"; ObjectID = "224"; */
+"224.title" = "Escolha os idiomas para exportar:";
+
+/* Class = "NSButtonCell"; title = "Verificar"; ObjectID = "226"; */
+"226.title" = "Verificar";
+
+/* Class = "NSTableColumn"; headerCell.title = "Idioma"; ObjectID = "244"; */
+"244.headerCell.title" = "Idioma";
+
+/* Class = "NSTableColumn"; headerCell.title = "Andamento"; ObjectID = "245"; */
+"245.headerCell.title" = "Andamento";
+
+/* Class = "NSTextFieldCell"; title = "Célula de Texto"; ObjectID = "246"; */
+"246.title" = "Célula de Texto";
+
+/* Class = "NSTableColumn"; headerCell.title = "Aviso"; ObjectID = "248"; */
+"248.headerCell.title" = "Aviso";
+
+/* Class = "NSButtonCell"; title = "Verificar"; ObjectID = "250"; */
+"250.title" = "Verificar";
+
+/* Class = "NSTextFieldCell"; title = "Escolha a pasta de destino:"; ObjectID = "254"; */
+"254.title" = "Escolha a pasta de destino:";
+
+/* Class = "NSButtonCell"; title = "Escolher…"; ObjectID = "258"; */
+"258.title" = "Escolher…";
+
+/* Class = "NSButtonCell"; title = "Opções…"; ObjectID = "260"; */
+"260.title" = "Opções…";
+
+/* Class = "NSTextFieldCell"; title = "Pré-ajustes:"; ObjectID = "262"; */
+"262.title" = "Pré-ajustes:";
+
+/* Class = "NSMenu"; title = "Outras Visualizações"; ObjectID = "265"; */
+"265.title" = "Outras Visualizações";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "266"; */
+"266.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "267"; */
+"267.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "268"; */
+"268.title" = "Item 3";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "269"; */
+"269.title" = "Box";

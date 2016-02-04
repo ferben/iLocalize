@@ -1,0 +1,24 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "言語"; ObjectID = "14"; */
+"14.headerCell.title" = "言語";
+
+/* Class = "NSButtonCell"; title = "これらのファイルからローカライズ済み言語をアップデート"; ObjectID = "51"; */
+"51.title" = "これらのファイルからローカライズ済み言語をアップデート";
+
+/* Class = "NSTextFieldCell"; title = "ベース言語をアップデートしてその他の言語を再配置します。その他の言語中のすべての文字列は現在の訳語に従って翻訳する必要があります。"; ObjectID = "52"; */
+"52.title" = "ベース言語をアップデートしてその他の言語を再配置します。その他の言語中のすべての文字列は現在の訳語に従って翻訳する必要があります。";
+
+/* Class = "NSButtonCell"; title = "ベース言語の NIB ファイルを元に各言語の nib ファイルのレイアウトをリセット"; ObjectID = "53"; */
+"53.title" = "ベース言語の NIB ファイルを元に各言語の nib ファイルのレイアウトをリセット";
+
+/* Class = "NSButtonCell"; title = "これらのファイルの新バージョンからプロジェクトをアップデート"; ObjectID = "54"; */
+"54.title" = "これらのファイルの新バージョンからプロジェクトをアップデート";
+
+/* Class = "NSTextFieldCell"; title = "アップデートする言語を選択してください:"; ObjectID = "56"; */
+"56.title" = "アップデートする言語を選択してください:";
+
+/* Class = "NSTextFieldCell"; title = "レイアウトが正しいかどうかローカライズ済み NIB ファイルを精査してください。"; ObjectID = "59"; */
+"59.title" = "レイアウトが正しいかどうかローカライズ済み NIB ファイルを精査してください。";
+
+/* Class = "NSButtonCell"; title = "読み込んだレイアウトで NIB のレイアウトをアップデート"; ObjectID = "61"; */
+"61.title" = "読み込んだレイアウトで NIB のレイアウトをアップデート";

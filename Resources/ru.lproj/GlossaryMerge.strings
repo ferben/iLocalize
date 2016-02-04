@@ -1,0 +1,30 @@
+
+/* Class = "NSWindow"; title = "Объединение"; ObjectID = "5"; */
+"5.title" = "Объединение";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "8"; */
+"8.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "9"; */
+"9.title" = "Item2";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "10"; */
+"10.title" = "Item1";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "11"; */
+"11.title" = "Item3";
+
+/* Class = "NSTextFieldCell"; title = "В этот глоссарий:"; ObjectID = "37"; */
+"37.title" = "В этот глоссарий:";
+
+/* Class = "NSButtonCell"; title = "Объединить"; ObjectID = "38"; */
+"38.title" = "Объединить";
+
+/* Class = "NSTextFieldCell"; title = "Объединить следующие глоссарии:"; ObjectID = "39"; */
+"39.title" = "Объединить следующие глоссарии:";
+
+/* Class = "NSButtonCell"; title = "Отменить"; ObjectID = "40"; */
+"40.title" = "Отменить";
+
+/* Class = "NSButtonCell"; title = "Удалить повторяющиеся записи"; ObjectID = "41"; */
+"41.title" = "Удалить повторяющиеся записи";

@@ -1,0 +1,42 @@
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "6"; */
+"6.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "Key"; ObjectID = "7"; */
+"7.title" = "Key";
+
+/* Class = "NSMenuItem"; title = "Kommentar"; ObjectID = "8"; */
+"8.title" = "Kommentar";
+
+/* Class = "NSMenuItem"; title = "Værdi"; ObjectID = "9"; */
+"9.title" = "Værdi";
+
+/* Class = "NSMenuItem"; title = "Alle"; ObjectID = "10"; */
+"10.title" = "Alle";
+
+/* Class = "NSTableColumn"; headerCell.title = "Element"; ObjectID = "14"; */
+"14.headerCell.title" = "Element";
+
+/* Class = "NSTableColumn"; headerCell.title = "Slå til"; ObjectID = "16"; */
+"16.headerCell.title" = "Slå til";
+
+/* Class = "NSTableColumn"; headerCell.title = "Regulært udtryk"; ObjectID = "18"; */
+"18.headerCell.title" = "Regulært udtryk";
+
+/* Class = "NSButtonCell"; title = "Strings uden tegn"; ObjectID = "153"; */
+"153.title" = "Strings uden tegn";
+
+/* Class = "NSButtonCell"; title = "Strings indeholdende ét tegn"; ObjectID = "154"; */
+"154.title" = "Strings indeholdende ét tegn";
+
+/* Class = "NSTextFieldCell"; title = "Ignorer:"; ObjectID = "155"; */
+"155.title" = "Ignorer:";
+
+/* Class = "NSTextFieldCell"; title = "Strings matchende mindst et af de følgende regulære udtryk:"; ObjectID = "156"; */
+"156.title" = "Strings matchende mindst et af de følgende regulære udtryk:";
+
+/* Class = "NSButtonCell"; title = "Tomme base-strings"; ObjectID = "161"; */
+"161.title" = "Tomme base-strings";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "162"; */
+"162.title" = "Text Cell";

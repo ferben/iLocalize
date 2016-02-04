@@ -1,0 +1,78 @@
+
+/* Class = "NSWindow"; title = "Просмотр глоссариев"; ObjectID = "109"; */
+"109.title" = "Просмотр глоссариев";
+
+/* Class = "NSTableColumn"; headerCell.title = "Путь"; ObjectID = "116"; */
+"116.headerCell.title" = "Путь";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "119"; */
+"119.title" = "Text Cell";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "135"; */
+"135.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "136"; */
+"136.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "137"; */
+"137.title" = "Item 2";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "142"; */
+"142.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "144"; */
+"144.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "145"; */
+"145.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Показать в Finder"; ObjectID = "157"; */
+"157.title" = "Показать в Finder";
+
+/* Class = "NSMenuItem"; title = "Объединить…"; ObjectID = "169"; */
+"169.title" = "Объединить…";
+
+/* Class = "NSMenuItem"; title = "Удалить"; ObjectID = "170"; */
+"170.title" = "Удалить";
+
+/* Class = "NSMenuItem"; title = "Открыть"; ObjectID = "172"; */
+"172.title" = "Открыть";
+
+/* Class = "NSMenuItem"; title = "Показать в Finder"; ObjectID = "201"; */
+"201.title" = "Показать в Finder";
+
+/* Class = "NSMenuItem"; title = "Удалить"; ObjectID = "206"; */
+"206.title" = "Удалить";
+
+/* Class = "NSTableColumn"; headerCell.title = "Имя"; ObjectID = "225"; */
+"225.headerCell.title" = "Имя";
+
+/* Class = "NSTableColumn"; headerCell.title = "Базовый язык"; ObjectID = "226"; */
+"226.headerCell.title" = "Базовый язык";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "227"; */
+"227.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "228"; */
+"228.title" = "Text Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "Конечный язык"; ObjectID = "229"; */
+"229.headerCell.title" = "Конечный язык";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "230"; */
+"230.title" = "Text Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "Элементов"; ObjectID = "231"; */
+"231.headerCell.title" = "Элементов";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "232"; */
+"232.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Добавить…"; ObjectID = "263"; */
+"263.title" = "Добавить…";
+
+/* Class = "NSToolbarItem"; label = "Поиск"; ObjectID = "281"; */
+"281.label" = "Поиск";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Поиск"; ObjectID = "281"; */
+"281.paletteLabel" = "Поиск";

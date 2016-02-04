@@ -1,0 +1,18 @@
+
+/* Class = "NSTextFieldCell"; title = "Text"; ObjectID = "60"; */
+"60.title" = "Text";
+
+/* Class = "NSMenuItem"; title = "Auswahl für Suche verwenden"; ObjectID = "83"; */
+"83.title" = "Auswahl für Suche verwenden";
+
+/* Class = "NSMenuItem"; title = "Auswahl in die Zwischenablage kopieren"; ObjectID = "84"; */
+"84.title" = "Auswahl in die Zwischenablage kopieren";
+
+/* Class = "NSMenuItem"; title = "Glossare durchsuchen …"; ObjectID = "85"; */
+"85.title" = "Glossare durchsuchen …";
+
+/* Class = "NSMenuItem"; title = "Umfang …"; ObjectID = "88"; */
+"88.title" = "Umfang …";
+
+/* Class = "NSMenuItem"; title = "Auswahl zeigen"; ObjectID = "97"; */
+"97.title" = "Auswahl zeigen";

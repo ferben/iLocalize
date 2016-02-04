@@ -1,0 +1,54 @@
+
+/* Class = "NSTextFieldCell"; title = "Исходный язык:"; ObjectID = "3"; */
+"3.title" = "Исходный язык:";
+
+/* Class = "NSTextFieldCell"; title = "Конечный язык:"; ObjectID = "5"; */
+"5.title" = "Конечный язык:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "8"; */
+"8.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "9"; */
+"9.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "10"; */
+"10.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "11"; */
+"11.title" = "Item 3";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "14"; */
+"14.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "15"; */
+"15.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "16"; */
+"16.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "17"; */
+"17.title" = "Item 3";
+
+/* Class = "NSTextFieldCell"; title = "Выходной файл:"; ObjectID = "19"; */
+"19.title" = "Выходной файл:";
+
+/* Class = "NSButtonCell"; title = "Выбрать…"; ObjectID = "23"; */
+"23.title" = "Выбрать…";
+
+/* Class = "NSPathCell"; placeholderString = "Нет выбранных файлов"; ObjectID = "25"; */
+"25.placeholderString" = "Нет выбранных файлов";
+
+/* Class = "NSTextFieldCell"; title = "Формат:"; ObjectID = "42"; */
+"42.title" = "Формат:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "48"; */
+"48.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "49"; */
+"49.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "50"; */
+"50.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "51"; */
+"51.title" = "Item 3";

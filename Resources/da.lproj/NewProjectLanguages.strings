@@ -1,0 +1,27 @@
+
+/* Class = "NSTextFieldCell"; title = "Vælg sprog til import:"; ObjectID = "639"; */
+"639.title" = "Vælg sprog til import:";
+
+/* Class = "NSTextFieldCell"; title = "Base-sprog:"; ObjectID = "790"; */
+"790.title" = "Base-sprog:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "793"; */
+"793.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "794"; */
+"794.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "795"; */
+"795.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "796"; */
+"796.title" = "Item 3";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Afkrydset vil alle base-sprog arkiver, der ikke har et korresponderende lokaliseret arkiv, blive kopieret til dette lokaliserede sprog."; ObjectID = "807"; */
+"807.ibShadowedToolTip" = "Afkrydset vil alle base-sprog arkiver, der ikke har et korresponderende lokaliseret arkiv, blive kopieret til dette lokaliserede sprog.";
+
+/* Class = "NSButtonCell"; title = "Opret ikke-eksisterende lokaliseret arkiv fra base-sprog"; ObjectID = "808"; */
+"808.title" = "Opret ikke-eksisterende lokaliseret arkiv fra base-sprog";
+
+/* Class = "NSButtonCell"; title = "Kontroller"; ObjectID = "825"; */
+"825.title" = "Kontroller";

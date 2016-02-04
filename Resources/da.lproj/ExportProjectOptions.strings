@@ -1,0 +1,72 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "Komprimering af NIB-arkiver reducerer størrelsen af NIB-arkiverne, men forhindrer at de kan lokaliseres eller åbnes i Interface Builder."; ObjectID = "26"; */
+"26.ibShadowedToolTip" = "Komprimering af NIB-arkiver reducerer størrelsen af NIB-arkiverne, men forhindrer at de kan lokaliseres eller åbnes i Interface Builder.";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Åbn standard emailprogram og vedhæft det eksporterede arkiv til en ny, tom email"; ObjectID = "77"; */
+"77.ibShadowedToolTip" = "Åbn standard emailprogram og vedhæft det eksporterede arkiv til en ny, tom email";
+
+/* Class = "NSButtonCell"; title = "Komprimer NIB-arkiver"; ObjectID = "170"; */
+"170.title" = "Komprimer NIB-arkiver";
+
+/* Class = "NSButtonCell"; title = "Zippet"; ObjectID = "177"; */
+"177.title" = "Zippet";
+
+/* Class = "NSButtonCell"; title = "Opret automatisk e-mail i Mail"; ObjectID = "178"; */
+"178.title" = "Opret automatisk e-mail i Mail";
+
+/* Class = "NSTextFieldCell"; title = "Til:"; ObjectID = "219"; */
+"219.title" = "Til:";
+
+/* Class = "NSTextFieldCell"; title = "Meddelelse:"; ObjectID = "221"; */
+"221.title" = "Meddelelse:";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Eksporter kun mapper som indeholder et sprog (lproj)"; ObjectID = "253"; */
+"253.ibShadowedToolTip" = "Eksporter kun mapper som indeholder et sprog (lproj)";
+
+/* Class = "NSButtonCell"; title = "Kun sprogmapper"; ObjectID = "254"; */
+"254.title" = "Kun sprogmapper";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Eksporterer projektet som en mappe, som FInder kan åbne, i stedet for at bruge den originale bundle-endelse"; ObjectID = "256"; */
+"256.ibShadowedToolTip" = "Eksporterer projektet som en mappe, som FInder kan åbne, i stedet for at bruge den originale bundle-endelse";
+
+/* Class = "NSButtonCell"; title = "Mappe"; ObjectID = "257"; */
+"257.title" = "Mappe";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Eksporter kun mapper som indeholder et sprog (lproj)"; ObjectID = "262"; */
+"262.ibShadowedToolTip" = "Eksporter kun mapper som indeholder et sprog (lproj)";
+
+/* Class = "NSButtonCell"; title = "Medtag version"; ObjectID = "263"; */
+"263.title" = "Medtag version";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Eksporter kun mapper som indeholder et sprog (lproj)"; ObjectID = "265"; */
+"265.ibShadowedToolTip" = "Eksporter kun mapper som indeholder et sprog (lproj)";
+
+/* Class = "NSButtonCell"; title = "Medtag navne på eksporterede sprog"; ObjectID = "266"; */
+"266.title" = "Medtag navne på eksporterede sprog";
+
+/* Class = "NSTextFieldCell"; title = "<output-name-sample>"; ObjectID = "278"; */
+"278.title" = "<output-name-sample>";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Komprimering af NIB-arkiver reducerer størrelsen af NIB-arkiverne, men forhindrer at de kan lokaliseres eller åbnes i Interface Builder."; ObjectID = "287"; */
+"287.ibShadowedToolTip" = "Komprimering af NIB-arkiver reducerer størrelsen af NIB-arkiverne, men forhindrer at de kan lokaliseres eller åbnes i Interface Builder.";
+
+/* Class = "NSButtonCell"; title = "Konverter NIB til XIB-arkiver"; ObjectID = "288"; */
+"288.title" = "Konverter NIB til XIB-arkiver";
+
+/* Class = "NSBox"; title = "Output-format"; ObjectID = "4LP-Rt-bQH"; */
+"4LP-Rt-bQH.title" = "Output-format";
+
+/* Class = "NSBox"; title = "Efterbehandling"; ObjectID = "O8e-tz-Pid"; */
+"O8e-tz-Pid.title" = "Efterbehandling";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Angiv modtagers e-mail-adresse"; ObjectID = "d1S-np-O0Q"; */
+"d1S-np-O0Q.ibShadowedIsNilPlaceholder" = "Angiv modtagers e-mail-adresse";
+
+/* Class = "NSTextFieldCell"; title = "Emne:"; ObjectID = "dgD-W1-lcF"; */
+"dgD-W1-lcF.title" = "Emne:";
+
+/* Class = "NSBox"; title = "Output-navn"; ObjectID = "hzV-oN-mXT"; */
+"hzV-oN-mXT.title" = "Output-navn";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Skriv emne for e-mail"; ObjectID = "jbL-CX-1Zi"; */
+"jbL-CX-1Zi.ibShadowedIsNilPlaceholder" = "Skriv emne for e-mail";

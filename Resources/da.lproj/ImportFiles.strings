@@ -1,0 +1,24 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Sprog"; ObjectID = "14"; */
+"14.headerCell.title" = "Sprog";
+
+/* Class = "NSButtonCell"; title = "Opdater et lokaliseret sprog med disse arkiver"; ObjectID = "51"; */
+"51.title" = "Opdater et lokaliseret sprog med disse arkiver";
+
+/* Class = "NSTextFieldCell"; title = "<do not localize - placeholder for file information >"; ObjectID = "52"; */
+"52.title" = "<do not localize - placeholder for file information >";
+
+/* Class = "NSButtonCell"; title = "Nulstil layout for opdaterede, lokaliserede NIB-arkiver med base-sprogets layout"; ObjectID = "53"; */
+"53.title" = "Nulstil layout for opdaterede, lokaliserede NIB-arkiver med base-sprogets layout";
+
+/* Class = "NSButtonCell"; title = "Opdater projektet med en ny version af disse arkiver"; ObjectID = "54"; */
+"54.title" = "Opdater projektet med en ny version af disse arkiver";
+
+/* Class = "NSTextFieldCell"; title = "Vælg sprog der skal opdateres:"; ObjectID = "56"; */
+"56.title" = "Vælg sprog der skal opdateres:";
+
+/* Class = "NSTextFieldCell"; title = "Check lokaliserede NIB-arkiver for at sikre, at alle layouts er korrekte."; ObjectID = "59"; */
+"59.title" = "Check lokaliserede NIB-arkiver for at sikre, at alle layouts er korrekte.";
+
+/* Class = "NSButtonCell"; title = "Opdater NIB-layouts med importerede layouts"; ObjectID = "61"; */
+"61.title" = "Opdater NIB-layouts med importerede layouts";

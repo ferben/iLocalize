@@ -1,0 +1,48 @@
+
+/* Class = "NSTextField"; ibShadowedToolTip = "Pad naar het ibtool programma (meestal /usr/bin/ibtool). Deze is alleen beschikbaar onder Leopard."; ObjectID = "484"; */
+"484.ibShadowedToolTip" = "Pad naar het ibtool programma (meestal /usr/bin/ibtool). Deze is alleen beschikbaar onder Leopard.";
+
+/* Class = "NSButtonCell"; title = "Geef berichten van de console door naar de Systeemconsole"; ObjectID = "564"; */
+"564.title" = "Geef berichten van de console door naar de Systeemconsole";
+
+/* Class = "NSTextFieldCell"; title = "zip:"; ObjectID = "567"; */
+"567.title" = "zip:";
+
+/* Class = "NSTextFieldCell"; title = "Pad naar ibtool:"; ObjectID = "577"; */
+"577.title" = "Pad naar ibtool:";
+
+/* Class = "NSButtonCell"; title = "Kies…"; ObjectID = "593"; */
+"593.title" = "Kies…";
+
+/* Class = "NSTabViewItem"; label = "Hulpmiddelen"; ObjectID = "600"; */
+"600.label" = "Hulpmiddelen";
+
+/* Class = "NSTabViewItem"; label = "Paden"; ObjectID = "603"; */
+"603.label" = "Paden";
+
+/* Class = "NSTabViewItem"; label = "Instellingen"; ObjectID = "605"; */
+"605.label" = "Instellingen";
+
+/* Class = "NSTextFieldCell"; title = "Editor voor XIB-/NIB-bestanden:"; ObjectID = "610"; */
+"610.title" = "Editor voor XIB-/NIB-bestanden:";
+
+/* Class = "NSButtonCell"; title = "Kies…"; ObjectID = "617"; */
+"617.title" = "Kies…";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "635"; */
+"635.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Plug-ins voor ibtool:"; ObjectID = "636"; */
+"636.title" = "Plug-ins voor ibtool:";
+
+/* Class = "NSTextFieldCell"; title = "Standaard projectmap:"; ObjectID = "638"; */
+"638.title" = "Standaard projectmap:";
+
+/* Class = "NSButtonCell"; title = "Geef alle NIB-commando’s door naar de console"; ObjectID = "655"; */
+"655.title" = "Geef alle NIB-commando’s door naar de console";
+
+/* Class = "NSButtonCell"; title = "Vergelijk NIB-bestanden op basis van hun XML-structuur (langzamer maar exacter)"; ObjectID = "658"; */
+"658.title" = "Vergelijk NIB-bestanden op basis van hun XML-structuur (langzamer maar exacter)";
+
+/* Class = "NSTextFieldCell"; title = "diff:"; ObjectID = "663"; */
+"663.title" = "diff:";

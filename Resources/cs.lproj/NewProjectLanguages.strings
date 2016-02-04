@@ -1,0 +1,27 @@
+
+/* Class = "NSTextFieldCell"; title = "Vyberte jazyky, které se naimportují:"; ObjectID = "639"; */
+"639.title" = "Vyberte jazyky, které se naimportují:";
+
+/* Class = "NSTextFieldCell"; title = "Původní jazyk:"; ObjectID = "790"; */
+"790.title" = "Původní jazyk:";
+
+/* Class = "NSMenu"; title = "Jiný pohled"; ObjectID = "793"; */
+"793.title" = "Jiný pohled";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "794"; */
+"794.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "795"; */
+"795.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "796"; */
+"796.title" = "Item 3";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Je-li tato volba zaškrtnutá, zkopírují se všechny soubory, které v cílovém jazyce neodpovídají, z původního jazyka."; ObjectID = "807"; */
+"807.ibShadowedToolTip" = "Je-li tato volba zaškrtnutá, zkopírují se všechny soubory, které v cílovém jazyce neodpovídají, z původního jazyka.";
+
+/* Class = "NSButtonCell"; title = "Neexistující řetězce v překladu, zkopírovat z původního jazyka"; ObjectID = "808"; */
+"808.title" = "Neexistující řetězce v překladu, zkopírovat z původního jazyka";
+
+/* Class = "NSButtonCell"; title = "Ověřit"; ObjectID = "825"; */
+"825.title" = "Ověřit";

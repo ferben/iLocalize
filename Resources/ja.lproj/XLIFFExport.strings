@@ -1,0 +1,54 @@
+
+/* Class = "NSTextFieldCell"; title = "ソース言語:"; ObjectID = "3"; */
+"3.title" = "ソース言語:";
+
+/* Class = "NSTextFieldCell"; title = "ターゲット言語:"; ObjectID = "5"; */
+"5.title" = "ターゲット言語:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "8"; */
+"8.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "9"; */
+"9.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "10"; */
+"10.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "11"; */
+"11.title" = "Item 3";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "14"; */
+"14.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "15"; */
+"15.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "16"; */
+"16.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "17"; */
+"17.title" = "Item 3";
+
+/* Class = "NSTextFieldCell"; title = "出力ファイル:"; ObjectID = "19"; */
+"19.title" = "出力ファイル:";
+
+/* Class = "NSButtonCell"; title = "選択…"; ObjectID = "23"; */
+"23.title" = "選択…";
+
+/* Class = "NSPathCell"; placeholderString = "ファイルが選択されていません"; ObjectID = "25"; */
+"25.placeholderString" = "ファイルが選択されていません";
+
+/* Class = "NSTextFieldCell"; title = "フォーマット:"; ObjectID = "42"; */
+"42.title" = "フォーマット:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "48"; */
+"48.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "49"; */
+"49.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "50"; */
+"50.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "51"; */
+"51.title" = "Item 3";

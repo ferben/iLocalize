@@ -1,0 +1,18 @@
+
+/* Class = "NSMenuItem"; title = "   Сортировать по пути"; ObjectID = "5"; */
+"5.title" = "   Сортировать по пути";
+
+/* Class = "NSMenu"; title = "Меню"; ObjectID = "6"; */
+"6.title" = "Меню";
+
+/* Class = "NSMenuItem"; title = "   Сортировать по имени"; ObjectID = "7"; */
+"7.title" = "   Сортировать по имени";
+
+/* Class = "NSMenuItem"; title = "   Сортировать по номеру строки"; ObjectID = "8"; */
+"8.title" = "   Сортировать по номеру строки";
+
+/* Class = "NSMenuItem"; title = "Столбцы файла"; ObjectID = "9"; */
+"9.title" = "Столбцы файла";
+
+/* Class = "NSMenuItem"; title = "   Переключить промежуточный/полный путь"; ObjectID = "15"; */
+"15.title" = "   Переключить промежуточный/полный путь";

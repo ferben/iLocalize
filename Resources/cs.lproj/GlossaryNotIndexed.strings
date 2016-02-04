@@ -1,0 +1,33 @@
+
+/* Class = "NSWindow"; title = "Slovník není indexovaný"; ObjectID = "5"; */
+"5.title" = "Slovník není indexovaný";
+
+/* Class = "NSMenu"; title = "Jiný pohled"; ObjectID = "43"; */
+"43.title" = "Jiný pohled";
+
+/* Class = "NSMenuItem"; title = "Lokální"; ObjectID = "44"; */
+"44.title" = "Lokální";
+
+/* Class = "NSMenuItem"; title = "Globální"; ObjectID = "45"; */
+"45.title" = "Globální";
+
+/* Class = "NSButtonCell"; title = "Budiž"; ObjectID = "96"; */
+"96.title" = "Budiž";
+
+/* Class = "NSButtonCell"; title = "Zrušit"; ObjectID = "97"; */
+"97.title" = "Zrušit";
+
+/* Class = "NSTextFieldCell"; title = "Tento slovník není umístěn na žádné, iLocalize známé, cestě. Za účelem použití tohoto slovníku při překladu projektu, je třeba buď ho přesunout nebo vytvořit jeho zástupce na správné cestě pro slovníky."; ObjectID = "101"; */
+"101.title" = "Tento slovník není umístěn na žádné, iLocalize známé, cestě. Za účelem použití tohoto slovníku při překladu projektu, je třeba buď ho přesunout nebo vytvořit jeho zástupce na správné cestě pro slovníky.";
+
+/* Class = "NSMenu"; title = "Jiný pohled"; ObjectID = "110"; */
+"110.title" = "Jiný pohled";
+
+/* Class = "NSMenuItem"; title = "Přesunout slovník"; ObjectID = "111"; */
+"111.title" = "Přesunout slovník";
+
+/* Class = "NSMenuItem"; title = "Vytvořit zástupce slovníku"; ObjectID = "112"; */
+"112.title" = "Vytvořit zástupce slovníku";
+
+/* Class = "NSTextFieldCell"; title = "na cestě"; ObjectID = "115"; */
+"115.title" = "na cestě";

@@ -1,0 +1,18 @@
+
+/* Class = "NSMenuItem"; title = "   Sorter efter sti"; ObjectID = "5"; */
+"5.title" = "   Sorter efter sti";
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "6"; */
+"6.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "   Sorter efter navn"; ObjectID = "7"; */
+"7.title" = "   Sorter efter navn";
+
+/* Class = "NSMenuItem"; title = "   Sorter efter # strings"; ObjectID = "8"; */
+"8.title" = "   Sorter efter # strings";
+
+/* Class = "NSMenuItem"; title = "Arkivkolonne"; ObjectID = "9"; */
+"9.title" = "Arkivkolonne";
+
+/* Class = "NSMenuItem"; title = "   Skift smart/fuld sti"; ObjectID = "15"; */
+"15.title" = "   Skift smart/fuld sti";

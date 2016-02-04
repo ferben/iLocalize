@@ -1,0 +1,63 @@
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "444"; */
+"444.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "445"; */
+"445.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "446"; */
+"446.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "447"; */
+"447.title" = "Item 1";
+
+/* Class = "NSTextFieldCell"; title = "Нет выбранных файлов"; ObjectID = "795"; */
+"795.title" = "Нет выбранных файлов";
+
+/* Class = "NSTextFieldCell"; title = "Неизменяемый"; ObjectID = "796"; */
+"796.title" = "Неизменяемый";
+
+/* Class = "NSButtonCell"; title = "Открыть во внешнем редакторе"; ObjectID = "797"; */
+"797.title" = "Открыть во внешнем редакторе";
+
+/* Class = "NSTextFieldCell"; title = "Не применяется"; ObjectID = "798"; */
+"798.title" = "Не применяется";
+
+/* Class = "NSTextFieldCell"; title = "Пропускается"; ObjectID = "804"; */
+"804.title" = "Пропускается";
+
+/* Class = "NSButtonCell"; title = "Открыть во внешнем редакторе"; ObjectID = "805"; */
+"805.title" = "Открыть во внешнем редакторе";
+
+/* Class = "NSWindow"; title = "Проект"; ObjectID = "825"; */
+"825.title" = "Проект";
+
+/* Class = "NSToolbarItem"; label = "Поиск"; ObjectID = "863"; */
+"863.label" = "Поиск";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Поиск"; ObjectID = "863"; */
+"863.paletteLabel" = "Поиск";
+
+/* Class = "NSToolbarItem"; label = "Выполнение"; ObjectID = "864"; */
+"864.label" = "Выполнение";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Выполнение"; ObjectID = "864"; */
+"864.paletteLabel" = "Выполнение";
+
+/* Class = "NSToolbarItem"; label = "Язык"; ObjectID = "884"; */
+"884.label" = "Язык";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Язык"; ObjectID = "884"; */
+"884.paletteLabel" = "Язык";
+
+/* Class = "NSToolbarItem"; label = "Глоссарии"; ObjectID = "1152"; */
+"1152.label" = "Глоссарии";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Глоссарии"; ObjectID = "1152"; */
+"1152.paletteLabel" = "Глоссарии";
+
+/* Class = "NSToolbarItem"; label = "Запустить"; ObjectID = "1157"; */
+"1157.label" = "Запустить";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Запустить"; ObjectID = "1157"; */
+"1157.paletteLabel" = "Запустить";

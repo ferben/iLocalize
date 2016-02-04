@@ -1,0 +1,57 @@
+
+/* Class = "NSWindow"; title = "Estatísticas"; ObjectID = "5"; */
+"5.title" = "Estatísticas";
+
+/* Class = "NSMenu"; title = "Outras Visualizações"; ObjectID = "19"; */
+"19.title" = "Outras Visualizações";
+
+/* Class = "NSMenuItem"; title = "lklkl"; ObjectID = "20"; */
+"20.title" = "lklkl";
+
+/* Class = "NSMenuItem"; title = "abab"; ObjectID = "21"; */
+"21.title" = "abab";
+
+/* Class = "NSMenuItem"; title = "Todos"; ObjectID = "22"; */
+"22.title" = "Todos";
+
+/* Class = "NSMenu"; title = "Outras Visualizações"; ObjectID = "67"; */
+"67.title" = "Outras Visualizações";
+
+/* Class = "NSMenuItem"; title = "por string"; ObjectID = "68"; */
+"68.title" = "por string";
+
+/* Class = "NSMenuItem"; title = "por caractere"; ObjectID = "69"; */
+"69.title" = "por caractere";
+
+/* Class = "NSMenuItem"; title = "por palavra"; ObjectID = "70"; */
+"70.title" = "por palavra";
+
+/* Class = "NSTableColumn"; headerCell.title = "Nº"; ObjectID = "108"; */
+"108.headerCell.title" = "Nº";
+
+/* Class = "NSTableColumn"; headerCell.title = "Todos"; ObjectID = "109"; */
+"109.headerCell.title" = "Todos";
+
+/* Class = "NSTableColumn"; headerCell.title = "Para Traduzir"; ObjectID = "110"; */
+"110.headerCell.title" = "Para Traduzir";
+
+/* Class = "NSButtonCell"; title = "Copiar para Área de Transferência"; ObjectID = "120"; */
+"120.title" = "Copiar para Área de Transferência";
+
+/* Class = "NSButtonCell"; title = "Fechar"; ObjectID = "121"; */
+"121.title" = "Fechar";
+
+/* Class = "NSTextFieldCell"; title = "Idioma:"; ObjectID = "122"; */
+"122.title" = "Idioma:";
+
+/* Class = "NSTextFieldCell"; title = "Nota: estas estatísticas se aplicam apenas a strings e arquivos XIB/NIB."; ObjectID = "124"; */
+"124.title" = "Nota: estas estatísticas se aplicam apenas a strings e arquivos XIB/NIB.";
+
+/* Class = "NSTextFieldCell"; title = "Coletando Estatísticas…"; ObjectID = "125"; */
+"125.title" = "Coletando Estatísticas…";
+
+/* Class = "NSTextFieldCell"; title = "1"; ObjectID = "127"; */
+"127.title" = "1";
+
+/* Class = "NSTextFieldCell"; title = "Taxa:"; ObjectID = "128"; */
+"128.title" = "Taxa:";

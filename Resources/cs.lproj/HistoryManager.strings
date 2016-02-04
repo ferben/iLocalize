@@ -1,0 +1,30 @@
+
+/* Class = "NSWindow"; title = "Otisky"; ObjectID = "5"; */
+"5.title" = "Otisky";
+
+/* Class = "NSTableColumn"; headerCell.title = "Otisk"; ObjectID = "9"; */
+"9.headerCell.title" = "Otisk";
+
+/* Class = "NSTableColumn"; headerCell.title = "Datum"; ObjectID = "10"; */
+"10.headerCell.title" = "Datum";
+
+/* Class = "NSWindow"; title = "Přidat otisk"; ObjectID = "14"; */
+"14.title" = "Přidat otisk";
+
+/* Class = "NSDateFormatter"; ibShadowedDateFormat = "%d.%m.%y %H:%M"; ObjectID = "46"; */
+"46.ibShadowedDateFormat" = "%d.%m.%y %H:%M";
+
+/* Class = "NSButtonCell"; title = "Smazat"; ObjectID = "48"; */
+"48.title" = "Smazat";
+
+/* Class = "NSButtonCell"; title = "Zavřít"; ObjectID = "49"; */
+"49.title" = "Zavřít";
+
+/* Class = "NSTextFieldCell"; title = "Název otisku:"; ObjectID = "50"; */
+"50.title" = "Název otisku:";
+
+/* Class = "NSButtonCell"; title = "Vytvořit"; ObjectID = "52"; */
+"52.title" = "Vytvořit";
+
+/* Class = "NSButtonCell"; title = "Zrušit"; ObjectID = "53"; */
+"53.title" = "Zrušit";

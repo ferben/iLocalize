@@ -1,0 +1,108 @@
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "5"; */
+"5.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "Converter Caracteres de Controle para Sequências de Escape"; ObjectID = "6"; */
+"6.title" = "Converter Caracteres de Controle para Sequências de Escape";
+
+/* Class = "NSMenuItem"; title = "Converter Sequências de Escape para Caracteres de Controle"; ObjectID = "8"; */
+"8.title" = "Converter Sequências de Escape para Caracteres de Controle";
+
+/* Class = "NSTableColumn"; headerCell.title = "Estado"; ObjectID = "11"; */
+"11.headerCell.title" = "Estado";
+
+/* Class = "NSTableColumn"; headerCell.title = "Tecla"; ObjectID = "14"; */
+"14.headerCell.title" = "Tecla";
+
+/* Class = "NSTableColumn"; headerCell.title = "Tradução"; ObjectID = "23"; */
+"23.headerCell.title" = "Tradução";
+
+/* Class = "NSMenuItem"; title = "Limpar Comentários da Tradução"; ObjectID = "35"; */
+"35.title" = "Limpar Comentários da Tradução";
+
+/* Class = "NSMenuItem"; title = "Limpar Comentários Base"; ObjectID = "36"; */
+"36.title" = "Limpar Comentários Base";
+
+/* Class = "NSMenuItem"; title = "Trocar Entre Tradução e Base"; ObjectID = "37"; */
+"37.title" = "Trocar Entre Tradução e Base";
+
+/* Class = "NSMenuItem"; title = "Limpar COmentários"; ObjectID = "41"; */
+"41.title" = "Limpar COmentários";
+
+/* Class = "NSMenuItem"; title = "Aprovar"; ObjectID = "42"; */
+"42.title" = "Aprovar";
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "43"; */
+"43.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "Copiar Base para Tradução"; ObjectID = "45"; */
+"45.title" = "Copiar Base para Tradução";
+
+/* Class = "NSTableColumn"; headerCell.title = "Base"; ObjectID = "98"; */
+"98.headerCell.title" = "Base";
+
+/* Class = "NSMenuItem"; title = "Aprovar Strings Idênticas em Arquivos Selecionados"; ObjectID = "139"; */
+"139.title" = "Aprovar Strings Idênticas em Arquivos Selecionados";
+
+/* Class = "NSMenuItem"; title = "Propagar Tradução para Strings Idênticas em Arquivos Selecionados"; ObjectID = "140"; */
+"140.title" = "Propagar Tradução para Strings Idênticas em Arquivos Selecionados";
+
+/* Class = "NSMenuItem"; title = "Aprovar Strings Idênticas em Todos os Arquivos"; ObjectID = "144"; */
+"144.title" = "Aprovar Strings Idênticas em Todos os Arquivos";
+
+/* Class = "NSMenuItem"; title = "Propagar Tradução para Strings Idênticas em Todos os Aqruivos"; ObjectID = "146"; */
+"146.title" = "Propagar Tradução para Strings Idênticas em Todos os Aqruivos";
+
+/* Class = "NSMenuItem"; title = "Limpar Tradução"; ObjectID = "202"; */
+"202.title" = "Limpar Tradução";
+
+/* Class = "NSTableColumn"; headerCell.title = "Etiquetas"; ObjectID = "209"; */
+"209.headerCell.title" = "Etiquetas";
+
+/* Class = "NSMenuItem"; title = "Etiquetas"; ObjectID = "218"; */
+"218.title" = "Etiquetas";
+
+/* Class = "NSMenuItem"; title = "Marcar como Traduzido"; ObjectID = "253"; */
+"253.title" = "Marcar como Traduzido";
+
+/* Class = "NSMenuItem"; title = "Desmarcar como Traduzido"; ObjectID = "255"; */
+"255.title" = "Desmarcar como Traduzido";
+
+/* Class = "NSTextFieldCell"; title = "Nenhuma string"; ObjectID = "395"; */
+"395.title" = "Nenhuma string";
+
+/* Class = "NSTextFieldCell"; title = "Célula de Texto"; ObjectID = "398"; */
+"398.title" = "Célula de Texto";
+
+/* Class = "NSTextFieldCell"; title = "Célula de Texto"; ObjectID = "399"; */
+"399.title" = "Célula de Texto";
+
+/* Class = "NSTextFieldCell"; title = "Célula de Texto"; ObjectID = "400"; */
+"400.title" = "Célula de Texto";
+
+/* Class = "NSTextFieldCell"; title = "Célula de Texto"; ObjectID = "401"; */
+"401.title" = "Célula de Texto";
+
+/* Class = "NSMenuItem"; title = "Bloquear"; ObjectID = "470"; */
+"470.title" = "Bloquear";
+
+/* Class = "NSMenuItem"; title = "Exibir Zona de Texto"; ObjectID = "488"; */
+"488.title" = "Exibir Zona de Texto";
+
+/* Class = "NSMenuItem"; title = "Exibir Coluna Chave"; ObjectID = "489"; */
+"489.title" = "Exibir Coluna Chave";
+
+/* Class = "NSTableColumn"; headerCell.title = "Base"; ObjectID = "496"; */
+"496.headerCell.title" = "Base";
+
+/* Class = "NSTextFieldCell"; title = "Célula de Texto"; ObjectID = "497"; */
+"497.title" = "Célula de Texto";
+
+/* Class = "NSTableColumn"; headerCell.title = "Tecla"; ObjectID = "502"; */
+"502.headerCell.title" = "Tecla";
+
+/* Class = "NSTextFieldCell"; title = "Célula de Texto"; ObjectID = "503"; */
+"503.title" = "Célula de Texto";
+
+/* Class = "NSMenuItem"; title = "Atualizar no Glossário…"; ObjectID = "530"; */
+"530.title" = "Atualizar no Glossário…";

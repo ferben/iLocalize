@@ -1,0 +1,39 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "Met à jour la langue de référence et reconstruit les langues localisées. Les chaînes de caractères des langues localisées seront traduites en fonction de la traduction associée courante."; ObjectID = "10"; */
+"10.ibShadowedToolTip" = "Met à jour la langue de référence et reconstruit les langues localisées. Les chaînes de caractères des langues localisées seront traduites en fonction de la traduction associée courante.";
+
+/* Class = "NSTextFieldCell"; title = "Sélectionnez les langues localisées à mettre à jour dans le projet courant :"; ObjectID = "151"; */
+"151.title" = "Sélectionnez les langues localisées à mettre à jour dans le projet courant :";
+
+/* Class = "NSButtonCell"; title = "Mettre à jour la langue de référence en utilisant le bundle :"; ObjectID = "152"; */
+"152.title" = "Mettre à jour la langue de référence en utilisant le bundle :";
+
+/* Class = "NSButtonCell"; title = "Réinitialiser la mise en page des fichiers NIB localisés avec celle de la langue de référence"; ObjectID = "153"; */
+"153.title" = "Réinitialiser la mise en page des fichiers NIB localisés avec celle de la langue de référence";
+
+/* Class = "NSButtonCell"; title = "Mettre à jour des langues localisées en utilisant le bundle :"; ObjectID = "154"; */
+"154.title" = "Mettre à jour des langues localisées en utilisant le bundle :";
+
+/* Class = "NSButtonCell"; title = "Mettre à jour la mise en page des NIBs avec celles des NIBs importées"; ObjectID = "155"; */
+"155.title" = "Mettre à jour la mise en page des NIBs avec celles des NIBs importées";
+
+/* Class = "NSTextFieldCell"; title = "Passez en revue les fichiers NIB localisés pour vous assurer que leur mise en page est correcte."; ObjectID = "156"; */
+"156.title" = "Passez en revue les fichiers NIB localisés pour vous assurer que leur mise en page est correcte.";
+
+/* Class = "NSButtonCell"; title = "Créer des fichiers localisés inexistants à partir de la langue de référence"; ObjectID = "158"; */
+"158.title" = "Créer des fichiers localisés inexistants à partir de la langue de référence";
+
+/* Class = "NSButtonCell"; title = "Vérifier"; ObjectID = "189"; */
+"189.title" = "Vérifier";
+
+/* Class = "NSButtonCell"; title = "Sélectionner…"; ObjectID = "203"; */
+"203.title" = "Sélectionner…";
+
+/* Class = "NSButtonCell"; title = "Sélectionner…"; ObjectID = "205"; */
+"205.title" = "Sélectionner…";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Sélectionner et déposer un bundle"; ObjectID = "213"; */
+"213.ibShadowedIsNilPlaceholder" = "Sélectionner et déposer un bundle";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Sélectionner et déposer un bundle"; ObjectID = "214"; */
+"214.ibShadowedIsNilPlaceholder" = "Sélectionner et déposer un bundle";

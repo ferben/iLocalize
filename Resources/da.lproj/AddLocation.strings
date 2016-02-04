@@ -1,0 +1,24 @@
+
+/* Class = "NSWindow"; title = "Tilføj destination"; ObjectID = "6"; */
+"6.title" = "Tilføj destination";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "7"; */
+"7.title" = "Item3";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "8"; */
+"8.title" = "Item2";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "9"; */
+"9.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "11"; */
+"11.title" = "Item1";
+
+/* Class = "NSTextFieldCell"; title = "Vælg destinationsmappe for de(t) ny(e) arkiv(er):"; ObjectID = "21"; */
+"21.title" = "Vælg destinationsmappe for de(t) ny(e) arkiv(er):";
+
+/* Class = "NSButtonCell"; title = "Annuller"; ObjectID = "22"; */
+"22.title" = "Annuller";
+
+/* Class = "NSButtonCell"; title = "TIlføj"; ObjectID = "23"; */
+"23.title" = "TIlføj";

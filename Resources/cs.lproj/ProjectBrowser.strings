@@ -1,0 +1,39 @@
+
+/* Class = "NSWindow"; title = "Prohlížení projektů"; ObjectID = "5"; */
+"5.title" = "Prohlížení projektů";
+
+/* Class = "BindingConnection"; ibShadowedDisplayName = "Názvu"; ObjectID = "70"; */
+"70.ibShadowedDisplayName" = "Názvu";
+
+/* Class = "NSButtonCell"; title = "Nový…"; ObjectID = "72"; */
+"72.title" = "Nový…";
+
+/* Class = "NSMenuItem"; title = "Smazat…"; ObjectID = "90"; */
+"90.title" = "Smazat…";
+
+/* Class = "NSMenuItem"; title = "Ukázat ve Finderu"; ObjectID = "91"; */
+"91.title" = "Ukázat ve Finderu";
+
+/* Class = "NSMenuItem"; title = "Otevřít"; ObjectID = "92"; */
+"92.title" = "Otevřít";
+
+/* Class = "NSMenuItem"; title = "Uspořádat podle"; ObjectID = "95"; */
+"95.title" = "Uspořádat podle";
+
+/* Class = "NSMenu"; title = "Uspořádat podle"; ObjectID = "96"; */
+"96.title" = "Uspořádat podle";
+
+/* Class = "NSMenuItem"; title = "Data změny"; ObjectID = "98"; */
+"98.title" = "Data změny";
+
+/* Class = "NSMenuItem"; title = "Názvu"; ObjectID = "99"; */
+"99.title" = "Názvu";
+
+/* Class = "NSMenu"; title = "Jiný pohled"; ObjectID = "109"; */
+"109.title" = "Jiný pohled";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "111"; */
+"111.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "112"; */
+"112.title" = "Item 3";

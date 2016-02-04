@@ -1,0 +1,51 @@
+
+/* Class = "NSWindow"; title = "Smart Filter Editor"; ObjectID = "1"; */
+"1.title" = "Smart Filter Editor";
+
+/* Class = "NSMenuItem"; title = "af de følgende er sande"; ObjectID = "25"; */
+"25.title" = "af de følgende er sande";
+
+/* Class = "NSMenuItem"; title = "Enhver"; ObjectID = "26"; */
+"26.title" = "Enhver";
+
+/* Class = "NSMenuItem"; title = "Alle"; ObjectID = "27"; */
+"27.title" = "Alle";
+
+/* Class = "NSTextFieldCell"; title = "Filternavn:"; ObjectID = "51"; */
+"51.title" = "Filternavn:";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "55"; */
+"55.title" = "OK";
+
+/* Class = "NSButtonCell"; title = "Annuller"; ObjectID = "57"; */
+"57.title" = "Annuller";
+
+/* Class = "NSMenuItem"; title = "som"; ObjectID = "128"; */
+"128.title" = "som";
+
+/* Class = "NSMenuItem"; title = "adresse"; ObjectID = "129"; */
+"129.title" = "adresse";
+
+/* Class = "NSMenuItem"; title = "tegn"; ObjectID = "130"; */
+"130.title" = "tegn";
+
+/* Class = "NSMenuItem"; title = "indeholder"; ObjectID = "132"; */
+"132.title" = "indeholder";
+
+/* Class = "NSMenuItem"; title = "begynder med"; ObjectID = "133"; */
+"133.title" = "begynder med";
+
+/* Class = "NSMenuItem"; title = "ender med"; ObjectID = "134"; */
+"134.title" = "ender med";
+
+/* Class = "NSMenuItem"; title = "er"; ObjectID = "135"; */
+"135.title" = "er";
+
+/* Class = "NSMenuItem"; title = "er ikke"; ObjectID = "136"; */
+"136.title" = "er ikke";
+
+/* Class = "NSButtonCell"; title = "Tilgængelig i alle projekter"; ObjectID = "142"; */
+"142.title" = "Tilgængelig i alle projekter";
+
+/* Class = "NSTextFieldCell"; title = "Tryk ⌥ (alt-tasten) for flere valgmuligheder"; ObjectID = "145"; */
+"145.title" = "Tryk ⌥ (alt-tasten) for flere valgmuligheder";

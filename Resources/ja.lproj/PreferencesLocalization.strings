@@ -1,0 +1,51 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "制御文字とエスケープ文字を同一に見なします"; ObjectID = "330"; */
+"330.ibShadowedToolTip" = "制御文字とエスケープ文字を同一に見なします";
+
+/* Class = "NSButtonCell"; title = "大文字／小文字を無視"; ObjectID = "474"; */
+"474.title" = "大文字／小文字を無視";
+
+/* Class = "NSTextFieldCell"; title = "翻訳:"; ObjectID = "476"; */
+"476.title" = "翻訳:";
+
+/* Class = "NSButtonCell"; title = "読み込み専用"; ObjectID = "482"; */
+"482.title" = "読み込み専用";
+
+/* Class = "NSTextFieldCell"; title = "ベース言語:"; ObjectID = "483"; */
+"483.title" = "ベース言語:";
+
+/* Class = "NSButtonCell"; title = "制御文字を無視"; ObjectID = "484"; */
+"484.title" = "制御文字を無視";
+
+/* Class = "NSTextFieldCell"; title = "翻訳の伝播:"; ObjectID = "491"; */
+"491.title" = "翻訳の伝播:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "494"; */
+"494.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "一切しない"; ObjectID = "495"; */
+"495.title" = "一切しない";
+
+/* Class = "NSMenuItem"; title = "選択したファイルに自動で伝播"; ObjectID = "496"; */
+"496.title" = "選択したファイルに自動で伝播";
+
+/* Class = "NSMenuItem"; title = "すべてのファイルに自動で伝播"; ObjectID = "497"; */
+"497.title" = "すべてのファイルに自動で伝播";
+
+/* Class = "NSTextFieldCell"; title = "モード:"; ObjectID = "501"; */
+"501.title" = "モード:";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "503"; */
+"503.title" = "Radio";
+
+/* Class = "NSButtonCell"; title = "デベロッパー"; ObjectID = "504"; */
+"504.title" = "デベロッパー";
+
+/* Class = "NSButtonCell"; title = "翻訳者"; ObjectID = "509"; */
+"509.title" = "翻訳者";
+
+/* Class = "NSButtonCell"; title = "Reset Warnings"; ObjectID = "4qb-iu-nB5"; */
+"4qb-iu-nB5.title" = "Reset Warnings";
+
+/* Class = "NSTextFieldCell"; title = "すべてのダイアログの警告をリセット："; ObjectID = "UVZ-qQ-zdX"; */
+"UVZ-qQ-zdX.title" = "すべてのダイアログの警告をリセット：";

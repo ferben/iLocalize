@@ -1,0 +1,51 @@
+
+/* Class = "NSTextFieldCell"; title = "Vyberte soubory pro export:"; ObjectID = "175"; */
+"175.title" = "Vyberte soubory pro export:";
+
+/* Class = "NSTextFieldCell"; title = "Vyberte jazyky pro export:"; ObjectID = "224"; */
+"224.title" = "Vyberte jazyky pro export:";
+
+/* Class = "NSButtonCell"; title = "Ověřit"; ObjectID = "226"; */
+"226.title" = "Ověřit";
+
+/* Class = "NSTableColumn"; headerCell.title = "Jazyk"; ObjectID = "244"; */
+"244.headerCell.title" = "Jazyk";
+
+/* Class = "NSTableColumn"; headerCell.title = "Průběh"; ObjectID = "245"; */
+"245.headerCell.title" = "Průběh";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "246"; */
+"246.title" = "Text Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "Varování"; ObjectID = "248"; */
+"248.headerCell.title" = "Varování";
+
+/* Class = "NSButtonCell"; title = "Ověřit"; ObjectID = "250"; */
+"250.title" = "Ověřit";
+
+/* Class = "NSTextFieldCell"; title = "Vyberte cílovou složku:"; ObjectID = "254"; */
+"254.title" = "Vyberte cílovou složku:";
+
+/* Class = "NSButtonCell"; title = "Vybrat…"; ObjectID = "258"; */
+"258.title" = "Vybrat…";
+
+/* Class = "NSButtonCell"; title = "Volby…"; ObjectID = "260"; */
+"260.title" = "Volby…";
+
+/* Class = "NSTextFieldCell"; title = "Přednastavení:"; ObjectID = "262"; */
+"262.title" = "Přednastavení:";
+
+/* Class = "NSMenu"; title = "Jiný pohled"; ObjectID = "265"; */
+"265.title" = "Jiný pohled";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "266"; */
+"266.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "267"; */
+"267.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "268"; */
+"268.title" = "Item 3";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "269"; */
+"269.title" = "Box";

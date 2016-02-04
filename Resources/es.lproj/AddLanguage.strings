@@ -1,0 +1,27 @@
+
+/* Class = "NSWindow"; title = "Añadir un idioma"; ObjectID = "132"; */
+"132.title" = "Añadir un idioma";
+
+/* Class = "NSButtonCell"; title = "Cancelar"; ObjectID = "187"; */
+"187.title" = "Cancelar";
+
+/* Class = "NSButtonCell"; title = "Añadir"; ObjectID = "188"; */
+"188.title" = "Añadir";
+
+/* Class = "NSButtonCell"; title = "Rellenar la traducción con el idioma base"; ObjectID = "200"; */
+"200.title" = "Rellenar la traducción con el idioma base";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "206"; */
+"206.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "207"; */
+"207.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "208"; */
+"208.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "209"; */
+"209.title" = "Item 3";
+
+/* Class = "NSBox"; title = "Nombre del idioma"; ObjectID = "220"; */
+"220.title" = "Nombre del idioma";

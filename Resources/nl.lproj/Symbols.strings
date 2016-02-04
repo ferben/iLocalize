@@ -1,0 +1,66 @@
+
+/* Class = "NSWindow"; title = "Symbolen"; ObjectID = "782"; */
+"782.title" = "Symbolen";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "955"; */
+"955.title" = "Box";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "957"; */
+"957.title" = "Box";
+
+/* Class = "NSTextFieldCell"; title = "Controleer layout (alleen XIB/NIB)"; ObjectID = "1777"; */
+"1777.title" = "Controleer layout (alleen XIB/NIB)";
+
+/* Class = "NSTextFieldCell"; title = "Bestandsinhoud moet op schijf bewaard worden"; ObjectID = "1781"; */
+"1781.title" = "Bestandsinhoud moet op schijf bewaard worden";
+
+/* Class = "NSTextFieldCell"; title = "Bestandsnaam vet:"; ObjectID = "1782"; */
+"1782.title" = "Bestandsnaam vet:";
+
+/* Class = "NSTextFieldCell"; title = "Bestand heeft enkele inconsistenties"; ObjectID = "1790"; */
+"1790.title" = "Bestand heeft enkele inconsistenties";
+
+/* Class = "NSTextFieldCell"; title = "Bestand bestaat niet op schijf"; ObjectID = "1792"; */
+"1792.title" = "Bestand bestaat niet op schijf";
+
+/* Class = "NSTextFieldCell"; title = "Bestandsinhoud moet opnieuw van schijf worden geladen"; ObjectID = "1794"; */
+"1794.title" = "Bestandsinhoud moet opnieuw van schijf worden geladen";
+
+/* Class = "NSTextFieldCell"; title = "Bestand is toegevoegd tijdens laatste updatebewerking"; ObjectID = "1797"; */
+"1797.title" = "Bestand is toegevoegd tijdens laatste updatebewerking";
+
+/* Class = "NSTextFieldCell"; title = "Bestand is bijgewerkt tijdens laatste updatebewerking"; ObjectID = "1798"; */
+"1798.title" = "Bestand is bijgewerkt tijdens laatste updatebewerking";
+
+/* Class = "NSTextFieldCell"; title = "✒"; ObjectID = "1799"; */
+"1799.title" = "✒";
+
+/* Class = "NSTextFieldCell"; title = "Identificeert het bestand met de geselecteerde strings (bij selectie meerdere bestanden)"; ObjectID = "1800"; */
+"1800.title" = "Identificeert het bestand met de geselecteerde strings (bij selectie meerdere bestanden)";
+
+/* Class = "NSTextFieldCell"; title = "Bestandsymbolen"; ObjectID = "1801"; */
+"1801.title" = "Bestandsymbolen";
+
+/* Class = "NSTextFieldCell"; title = "Stringsymbolen"; ObjectID = "1802"; */
+"1802.title" = "Stringsymbolen";
+
+/* Class = "NSTextFieldCell"; title = "Auto-ongewijzigd"; ObjectID = "1804"; */
+"1804.title" = "Auto-ongewijzigd";
+
+/* Class = "NSTextFieldCell"; title = "Ongewijzigd"; ObjectID = "1806"; */
+"1806.title" = "Ongewijzigd";
+
+/* Class = "NSTextFieldCell"; title = "Auto-vertaald"; ObjectID = "1807"; */
+"1807.title" = "Auto-vertaald";
+
+/* Class = "NSTextFieldCell"; title = "Basis gewijzigd"; ObjectID = "1811"; */
+"1811.title" = "Basis gewijzigd";
+
+/* Class = "NSTextFieldCell"; title = "Te vertalen"; ObjectID = "1813"; */
+"1813.title" = "Te vertalen";
+
+/* Class = "NSTextFieldCell"; title = "Inconsistenties"; ObjectID = "1816"; */
+"1816.title" = "Inconsistenties";
+
+/* Class = "NSTextFieldCell"; title = "Bestand is bijgewerkt bij laatste updatebewerking"; ObjectID = "hi2-yW-vJG"; */
+"hi2-yW-vJG.title" = "Bestand is bijgewerkt bij laatste updatebewerking";

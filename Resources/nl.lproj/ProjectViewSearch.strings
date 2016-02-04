@@ -1,0 +1,15 @@
+
+/* Class = "NSButtonCell"; title = "Bewaar"; ObjectID = "14"; */
+"14.title" = "Bewaar";
+
+/* Class = "NSTextFieldCell"; placeholderString = "Voer vervangende tekst in"; ObjectID = "28"; */
+"28.placeholderString" = "Voer vervangende tekst in";
+
+/* Class = "NSButtonCell"; title = "Vervang"; ObjectID = "30"; */
+"30.title" = "Vervang";
+
+/* Class = "NSButtonCell"; title = "Vervang alles"; ObjectID = "33"; */
+"33.title" = "Vervang alles";
+
+/* Class = "NSTextFieldCell"; title = "Bereik:"; ObjectID = "98"; */
+"98.title" = "Bereik:";

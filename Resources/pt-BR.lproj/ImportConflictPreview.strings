@@ -1,0 +1,54 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Usar Projeto"; ObjectID = "9"; */
+"9.headerCell.title" = "Usar Projeto";
+
+/* Class = "NSTableColumn"; headerCell.title = "Usar Recurso"; ObjectID = "12"; */
+"12.headerCell.title" = "Usar Recurso";
+
+/* Class = "NSTableColumn"; headerCell.title = "Arquivo"; ObjectID = "14"; */
+"14.headerCell.title" = "Arquivo";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Isso irá selecionar para usar o arquivo de Recurso para todos os arquivos na lista abaixo"; ObjectID = "81"; */
+"81.ibShadowedToolTip" = "Isso irá selecionar para usar o arquivo de Recurso para todos os arquivos na lista abaixo";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Isso irá selecionar para usar o arquivo de Projeto para todos os arquivos na lista abaixo"; ObjectID = "82"; */
+"82.ibShadowedToolTip" = "Isso irá selecionar para usar o arquivo de Projeto para todos os arquivos na lista abaixo";
+
+/* Class = "NSTextFieldCell"; title = "Os seguintes arquivos estão em conflito, porque eles não podem ser combinados.\nEscolha a direção de mesclagem para cada um deles:"; ObjectID = "90"; */
+"90.title" = "Os seguintes arquivos estão em conflito, porque eles não podem ser combinados.\nEscolha a direção de mesclagem para cada um deles:";
+
+/* Class = "NSTextFieldCell"; title = "Dez 28, 2005 5:03:20 PM"; ObjectID = "96"; */
+"96.title" = "Dez 28, 2005 5:03:20 PM";
+
+/* Class = "NSTextFieldCell"; title = "Dez 28, 2005 5:03:20 PM"; ObjectID = "97"; */
+"97.title" = "Dez 28, 2005 5:03:20 PM";
+
+/* Class = "NSTextFieldCell"; title = "Dez 28, 2005 5:03:20 PM"; ObjectID = "100"; */
+"100.title" = "Dez 28, 2005 5:03:20 PM";
+
+/* Class = "NSTextFieldCell"; title = "Dez 28, 2005 5:03:20 PM"; ObjectID = "104"; */
+"104.title" = "Dez 28, 2005 5:03:20 PM";
+
+/* Class = "NSButtonCell"; title = "Todo Recurso"; ObjectID = "107"; */
+"107.title" = "Todo Recurso";
+
+/* Class = "NSButtonCell"; title = "Todo Projeto"; ObjectID = "108"; */
+"108.title" = "Todo Projeto";
+
+/* Class = "NSTextFieldCell"; title = "8"; ObjectID = "109"; */
+"109.title" = "8";
+
+/* Class = "NSTextFieldCell"; title = "Fonte:"; ObjectID = "120"; */
+"120.title" = "Fonte:";
+
+/* Class = "NSTextFieldCell"; title = "Projeto:"; ObjectID = "122"; */
+"122.title" = "Projeto:";
+
+/* Class = "NSTextFieldCell"; title = "Criado"; ObjectID = "124"; */
+"124.title" = "Criado";
+
+/* Class = "NSTextFieldCell"; title = "Modificado"; ObjectID = "126"; */
+"126.title" = "Modificado";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "129"; */
+"129.title" = "Box";

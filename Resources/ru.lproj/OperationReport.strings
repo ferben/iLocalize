@@ -1,0 +1,21 @@
+
+/* Class = "NSWindow"; title = "Отчет действия"; ObjectID = "5"; */
+"5.title" = "Отчет действия";
+
+/* Class = "NSTableColumn"; headerCell.title = "Тип"; ObjectID = "11"; */
+"11.headerCell.title" = "Тип";
+
+/* Class = "NSTableColumn"; headerCell.title = "Описание"; ObjectID = "64"; */
+"64.headerCell.title" = "Описание";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "65"; */
+"65.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Действие завершилась со следующей ошибками и предупреждениями:"; ObjectID = "78"; */
+"78.title" = "Действие завершилась со следующей ошибками и предупреждениями:";
+
+/* Class = "NSButtonCell"; title = "ОК"; ObjectID = "79"; */
+"79.title" = "ОК";
+
+/* Class = "NSButtonCell"; title = "Экспорт…"; ObjectID = "80"; */
+"80.title" = "Экспорт…";

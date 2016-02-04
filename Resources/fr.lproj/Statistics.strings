@@ -1,0 +1,57 @@
+
+/* Class = "NSWindow"; title = "Statistiques"; ObjectID = "5"; */
+"5.title" = "Statistiques";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "19"; */
+"19.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "lklkl"; ObjectID = "20"; */
+"20.title" = "lklkl";
+
+/* Class = "NSMenuItem"; title = "abab"; ObjectID = "21"; */
+"21.title" = "abab";
+
+/* Class = "NSMenuItem"; title = "Toutes"; ObjectID = "22"; */
+"22.title" = "Toutes";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "67"; */
+"67.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "la chaîne de caractères"; ObjectID = "68"; */
+"68.title" = "la chaîne de caractères";
+
+/* Class = "NSMenuItem"; title = "le caractère"; ObjectID = "69"; */
+"69.title" = "le caractère";
+
+/* Class = "NSMenuItem"; title = "le mot"; ObjectID = "70"; */
+"70.title" = "le mot";
+
+/* Class = "NSTableColumn"; headerCell.title = "N°"; ObjectID = "108"; */
+"108.headerCell.title" = "N°";
+
+/* Class = "NSTableColumn"; headerCell.title = "Toutes"; ObjectID = "109"; */
+"109.headerCell.title" = "Toutes";
+
+/* Class = "NSTableColumn"; headerCell.title = "À traduire"; ObjectID = "110"; */
+"110.headerCell.title" = "À traduire";
+
+/* Class = "NSButtonCell"; title = "Copier dans le Presse-papiers"; ObjectID = "120"; */
+"120.title" = "Copier dans le Presse-papiers";
+
+/* Class = "NSButtonCell"; title = "Fermer"; ObjectID = "121"; */
+"121.title" = "Fermer";
+
+/* Class = "NSTextFieldCell"; title = "Langue :"; ObjectID = "122"; */
+"122.title" = "Langue :";
+
+/* Class = "NSTextFieldCell"; title = "Nota : Ces statistiques ne s’appliquent qu’aux fichiers .strings et XIB/NIB."; ObjectID = "124"; */
+"124.title" = "Nota : Ces statistiques ne s’appliquent qu’aux fichiers .strings et XIB/NIB.";
+
+/* Class = "NSTextFieldCell"; title = "Collecte des statistiques…"; ObjectID = "125"; */
+"125.title" = "Collecte des statistiques…";
+
+/* Class = "NSTextFieldCell"; title = "1"; ObjectID = "127"; */
+"127.title" = "1";
+
+/* Class = "NSTextFieldCell"; title = "Taux :"; ObjectID = "128"; */
+"128.title" = "Taux :";

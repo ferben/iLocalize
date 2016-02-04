@@ -1,0 +1,6 @@
+
+/* Class = "NSTextFieldCell"; title = "Select the files to be overwritten:"; ObjectID = "24"; */
+"24.title" = "Select the files to be overwritten:";
+
+/* Class = "NSButtonCell"; title = "Check"; ObjectID = "25"; */
+"25.title" = "Check";

@@ -1,0 +1,15 @@
+
+/* Class = "NSTextFieldCell"; title = "Strings-arkiv:"; ObjectID = "19"; */
+"19.title" = "Strings-arkiv:";
+
+/* Class = "NSButtonCell"; title = "Vælg…"; ObjectID = "23"; */
+"23.title" = "Vælg…";
+
+/* Class = "NSPathCell"; placeholderString = "Intet arkiv valgt"; ObjectID = "25"; */
+"25.placeholderString" = "Intet arkiv valgt";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Som standard bruger iLocalize <source>-elementet i XLIFF til at matche oversættelserne. Ved at afkrydse her, vil iLocalize bruge resname-attributten, hvis den findes, til at matche oversættelserne."; ObjectID = "36"; */
+"36.ibShadowedToolTip" = "Som standard bruger iLocalize <source>-elementet i XLIFF til at matche oversættelserne. Ved at afkrydse her, vil iLocalize bruge resname-attributten, hvis den findes, til at matche oversættelserne.";
+
+/* Class = "NSButtonCell"; title = "Match oversættelser med resname i stedet for source"; ObjectID = "37"; */
+"37.title" = "Match oversættelser med resname i stedet for source";

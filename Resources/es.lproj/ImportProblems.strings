@@ -1,0 +1,12 @@
+
+/* Class = "NSWindow"; title = "Ventana"; ObjectID = "1"; */
+"1.title" = "Ventana";
+
+/* Class = "NSBox"; title = "Caja"; ObjectID = "3"; */
+"3.title" = "Caja";
+
+/* Class = "NSButtonCell"; title = "Continuar"; ObjectID = "5"; */
+"5.title" = "Continuar";
+
+/* Class = "NSButtonCell"; title = "Cancelar"; ObjectID = "7"; */
+"7.title" = "Cancelar";

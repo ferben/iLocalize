@@ -1,0 +1,18 @@
+
+/* Class = "NSMenuItem"; title = "Sortuj wg ścieżki"; ObjectID = "5"; */
+"5.title" = "Sortuj wg ścieżki";
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "6"; */
+"6.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "Sortuj wg nazwy"; ObjectID = "7"; */
+"7.title" = "Sortuj wg nazwy";
+
+/* Class = "NSMenuItem"; title = "Sortuj wg # łańcuchów"; ObjectID = "8"; */
+"8.title" = "Sortuj wg # łańcuchów";
+
+/* Class = "NSMenuItem"; title = "Kolumna pliku"; ObjectID = "9"; */
+"9.title" = "Kolumna pliku";
+
+/* Class = "NSMenuItem"; title = "Przełącz Inteligentna/Pełna ścieżka"; ObjectID = "15"; */
+"15.title" = "Przełącz Inteligentna/Pełna ścieżka";

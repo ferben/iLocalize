@@ -1,0 +1,15 @@
+
+/* Class = "NSWindow"; title = "Ajouter langue"; ObjectID = "132"; */
+"132.title" = "Ajouter langue";
+
+/* Class = "NSButtonCell"; title = "Annuler"; ObjectID = "191"; */
+"191.title" = "Annuler";
+
+/* Class = "NSButtonCell"; title = "Ajouter"; ObjectID = "192"; */
+"192.title" = "Ajouter";
+
+/* Class = "NSTextFieldCell"; title = "L'utilisation de langues personnalisées est fortement déconseillée"; ObjectID = "194"; */
+"194.title" = "L'utilisation de langues personnalisées est fortement déconseillée";
+
+/* Class = "NSBox"; title = "Langue"; ObjectID = "196"; */
+"196.title" = "Langue";

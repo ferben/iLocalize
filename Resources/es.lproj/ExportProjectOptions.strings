@@ -1,0 +1,72 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "Compactar los archivos NIB reduce su tamaño, pero también impide que se puedan abrir o localizar con Interface Builder."; ObjectID = "26"; */
+"26.ibShadowedToolTip" = "Compactar los archivos NIB reduce su tamaño, pero también impide que se puedan abrir o localizar con Interface Builder.";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Abre la aplicación de correo y adjunta el archivo exportado a un nuevo mensaje en blanco"; ObjectID = "77"; */
+"77.ibShadowedToolTip" = "Abre la aplicación de correo y adjunta el archivo exportado a un nuevo mensaje en blanco";
+
+/* Class = "NSButtonCell"; title = "Compactar los archivos NIB"; ObjectID = "170"; */
+"170.title" = "Compactar los archivos NIB";
+
+/* Class = "NSButtonCell"; title = "Comprimido"; ObjectID = "177"; */
+"177.title" = "Comprimido";
+
+/* Class = "NSButtonCell"; title = "Preparar un mensaje en Mail"; ObjectID = "178"; */
+"178.title" = "Preparar un mensaje en Mail";
+
+/* Class = "NSTextFieldCell"; title = "A:"; ObjectID = "219"; */
+"219.title" = "A:";
+
+/* Class = "NSTextFieldCell"; title = "Mensaje:"; ObjectID = "221"; */
+"221.title" = "Mensaje:";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Exporta solo las carpetas que contienen un idioma (lproj)"; ObjectID = "253"; */
+"253.ibShadowedToolTip" = "Exporta solo las carpetas que contienen un idioma (lproj)";
+
+/* Class = "NSButtonCell"; title = "Solo las carpetas de idioma"; ObjectID = "254"; */
+"254.title" = "Solo las carpetas de idioma";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Exporta el proyecto como una carpeta que el Finder puede abrir en lugar de usar la extensión original del paquete"; ObjectID = "256"; */
+"256.ibShadowedToolTip" = "Exporta el proyecto como una carpeta que el Finder puede abrir en lugar de usar la extensión original del paquete";
+
+/* Class = "NSButtonCell"; title = "Carpeta"; ObjectID = "257"; */
+"257.title" = "Carpeta";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Exporta solo las carpetas que contienen un idioma (lproj)"; ObjectID = "262"; */
+"262.ibShadowedToolTip" = "Exporta solo las carpetas que contienen un idioma (lproj)";
+
+/* Class = "NSButtonCell"; title = "Incluir la versión"; ObjectID = "263"; */
+"263.title" = "Incluir la versión";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Exporta solo las carpetas que contienen un idioma (lproj)"; ObjectID = "265"; */
+"265.ibShadowedToolTip" = "Exporta solo las carpetas que contienen un idioma (lproj)";
+
+/* Class = "NSButtonCell"; title = "Incluir los nombres de los idiomas exportados"; ObjectID = "266"; */
+"266.title" = "Incluir los nombres de los idiomas exportados";
+
+/* Class = "NSTextFieldCell"; title = "<output-name-sample>"; ObjectID = "278"; */
+"278.title" = "<output-name-sample>";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Compactar los archivos NIB reduce su tamaño, pero también impide que se puedan abrir o localizar con Interface Builder."; ObjectID = "287"; */
+"287.ibShadowedToolTip" = "Compactar los archivos NIB reduce su tamaño, pero también impide que se puedan abrir o localizar con Interface Builder.";
+
+/* Class = "NSButtonCell"; title = "Convertir los archivos NIB en archivos XIB"; ObjectID = "288"; */
+"288.title" = "Convertir los archivos NIB en archivos XIB";
+
+/* Class = "NSBox"; title = "Formato de producción"; ObjectID = "4LP-Rt-bQH"; */
+"4LP-Rt-bQH.title" = "Formato de producción";
+
+/* Class = "NSBox"; title = "Postprocesamiento"; ObjectID = "O8e-tz-Pid"; */
+"O8e-tz-Pid.title" = "Postprocesamiento";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Escriba la dirección del destinatario"; ObjectID = "d1S-np-O0Q"; */
+"d1S-np-O0Q.ibShadowedIsNilPlaceholder" = "Escriba la dirección del destinatario";
+
+/* Class = "NSTextFieldCell"; title = "Asunto:"; ObjectID = "dgD-W1-lcF"; */
+"dgD-W1-lcF.title" = "Asunto:";
+
+/* Class = "NSBox"; title = "Nombre de producción"; ObjectID = "hzV-oN-mXT"; */
+"hzV-oN-mXT.title" = "Nombre de producción";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Escriba el asunto del mensaje"; ObjectID = "jbL-CX-1Zi"; */
+"jbL-CX-1Zi.ibShadowedIsNilPlaceholder" = "Escriba el asunto del mensaje";

@@ -1,0 +1,18 @@
+
+/* Class = "NSTextFieldCell"; title = "Text"; ObjectID = "60"; */
+"60.title" = "Text";
+
+/* Class = "NSMenuItem"; title = "Použít vybrané"; ObjectID = "83"; */
+"83.title" = "Použít vybrané";
+
+/* Class = "NSMenuItem"; title = "Kopírovat vybrané do schránky"; ObjectID = "84"; */
+"84.title" = "Kopírovat vybrané do schránky";
+
+/* Class = "NSMenuItem"; title = "Správa slovníků…"; ObjectID = "85"; */
+"85.title" = "Správa slovníků…";
+
+/* Class = "NSMenuItem"; title = "Rozsah…"; ObjectID = "88"; */
+"88.title" = "Rozsah…";
+
+/* Class = "NSMenuItem"; title = "Ukázat vybrané"; ObjectID = "97"; */
+"97.title" = "Ukázat vybrané";

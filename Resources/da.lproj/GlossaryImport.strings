@@ -1,0 +1,51 @@
+
+/* Class = "NSWindow"; title = "Importer ordbog"; ObjectID = "7"; */
+"7.title" = "Importer ordbog";
+
+/* Class = "NSButtonCell"; title = "iLocalize-tekst"; ObjectID = "42"; */
+"42.title" = "iLocalize-tekst";
+
+/* Class = "NSTextFieldCell"; title = "Kilde-sprog:"; ObjectID = "57"; */
+"57.title" = "Kilde-sprog:";
+
+/* Class = "NSTextFieldCell"; title = "Mål-sprog:"; ObjectID = "58"; */
+"58.title" = "Mål-sprog:";
+
+/* Class = "NSButtonCell"; title = "Annuller"; ObjectID = "62"; */
+"62.title" = "Annuller";
+
+/* Class = "NSButtonCell"; title = "Importer"; ObjectID = "63"; */
+"63.title" = "Importer";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "65"; */
+"65.title" = "Radio";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "68"; */
+"68.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "69"; */
+"69.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "70"; */
+"70.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "71"; */
+"71.title" = "Item 1";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "74"; */
+"74.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "75"; */
+"75.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "76"; */
+"76.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "77"; */
+"77.title" = "Item 1";
+
+/* Class = "NSButtonCell"; title = "PowerGlot-tekst"; ObjectID = "4Dw-c6-cD7"; */
+"4Dw-c6-cD7.title" = "PowerGlot-tekst";
+
+/* Class = "NSBox"; title = "Importer"; ObjectID = "sjn-Ag-wmj"; */
+"sjn-Ag-wmj.title" = "Importer";

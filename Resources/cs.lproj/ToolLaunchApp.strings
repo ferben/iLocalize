@@ -1,0 +1,24 @@
+
+/* Class = "NSWindow"; title = "Spustit aplikaci"; ObjectID = "5"; */
+"5.title" = "Spustit aplikaci";
+
+/* Class = "NSMenu"; title = "Jiný pohled"; ObjectID = "9"; */
+"9.title" = "Jiný pohled";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "10"; */
+"10.title" = "Item3";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "11"; */
+"11.title" = "Item2";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "12"; */
+"12.title" = "Item1";
+
+/* Class = "NSTextFieldCell"; title = "Spustit v"; ObjectID = "20"; */
+"20.title" = "Spustit v";
+
+/* Class = "NSButtonCell"; title = "Zrušit"; ObjectID = "22"; */
+"22.title" = "Zrušit";
+
+/* Class = "NSButtonCell"; title = "Spustit"; ObjectID = "23"; */
+"23.title" = "Spustit";

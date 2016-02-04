@@ -1,0 +1,54 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "プロジェクト優先"; ObjectID = "9"; */
+"9.headerCell.title" = "プロジェクト優先";
+
+/* Class = "NSTableColumn"; headerCell.title = "ソース優先"; ObjectID = "12"; */
+"12.headerCell.title" = "ソース優先";
+
+/* Class = "NSTableColumn"; headerCell.title = "ファイル"; ObjectID = "14"; */
+"14.headerCell.title" = "ファイル";
+
+/* Class = "NSButton"; ibShadowedToolTip = "下のリスト中のすべてのファイルに対しソースファイルを使用するよう選択します。"; ObjectID = "81"; */
+"81.ibShadowedToolTip" = "下のリスト中のすべてのファイルに対しソースファイルを使用するよう選択します。";
+
+/* Class = "NSButton"; ibShadowedToolTip = "下のリスト中のすべてのファイルに対しプロジェクトファイルを使用するよう選択します。"; ObjectID = "82"; */
+"82.ibShadowedToolTip" = "下のリスト中のすべてのファイルに対しプロジェクトファイルを使用するよう選択します。";
+
+/* Class = "NSTextFieldCell"; title = "以下のファイルは統合できないため、競合状態になっています。\nどちらを基準に統合するか、それぞれ選択してください："; ObjectID = "90"; */
+"90.title" = "以下のファイルは統合できないため、競合状態になっています。\nどちらを基準に統合するか、それぞれ選択してください：";
+
+/* Class = "NSTextFieldCell"; title = "Dec 28, 2005, 11:02:38 AM"; ObjectID = "96"; */
+"96.title" = "Dec 28, 2005, 11:02:38 AM";
+
+/* Class = "NSTextFieldCell"; title = "Dec 28, 2005, 11:02:51 AM"; ObjectID = "97"; */
+"97.title" = "Dec 28, 2005, 11:02:51 AM";
+
+/* Class = "NSTextFieldCell"; title = "Dec 28, 2005, 11:03:01 AM"; ObjectID = "100"; */
+"100.title" = "Dec 28, 2005, 11:03:01 AM";
+
+/* Class = "NSTextFieldCell"; title = "Dec 28, 2005, 11:02:56 AM"; ObjectID = "104"; */
+"104.title" = "Dec 28, 2005, 11:02:56 AM";
+
+/* Class = "NSButtonCell"; title = "すべてソース"; ObjectID = "107"; */
+"107.title" = "すべてソース";
+
+/* Class = "NSButtonCell"; title = "すべてプロジェクト"; ObjectID = "108"; */
+"108.title" = "すべてプロジェクト";
+
+/* Class = "NSTextFieldCell"; title = "8"; ObjectID = "109"; */
+"109.title" = "8";
+
+/* Class = "NSTextFieldCell"; title = "ソース:"; ObjectID = "120"; */
+"120.title" = "ソース:";
+
+/* Class = "NSTextFieldCell"; title = "プロジェクト:"; ObjectID = "122"; */
+"122.title" = "プロジェクト:";
+
+/* Class = "NSTextFieldCell"; title = "作成日時"; ObjectID = "124"; */
+"124.title" = "作成日時";
+
+/* Class = "NSTextFieldCell"; title = "最終更新日時"; ObjectID = "126"; */
+"126.title" = "最終更新日時";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "129"; */
+"129.title" = "Box";

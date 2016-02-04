@@ -1,0 +1,42 @@
+
+/* Class = "NSMenu"; title = "Nabídka"; ObjectID = "6"; */
+"6.title" = "Nabídka";
+
+/* Class = "NSMenuItem"; title = "Klíč"; ObjectID = "7"; */
+"7.title" = "Klíč";
+
+/* Class = "NSMenuItem"; title = "Komentář"; ObjectID = "8"; */
+"8.title" = "Komentář";
+
+/* Class = "NSMenuItem"; title = "Hodnota"; ObjectID = "9"; */
+"9.title" = "Hodnota";
+
+/* Class = "NSMenuItem"; title = "Vše"; ObjectID = "10"; */
+"10.title" = "Vše";
+
+/* Class = "NSTableColumn"; headerCell.title = "Prvek"; ObjectID = "14"; */
+"14.headerCell.title" = "Prvek";
+
+/* Class = "NSTableColumn"; headerCell.title = "Povolit"; ObjectID = "16"; */
+"16.headerCell.title" = "Povolit";
+
+/* Class = "NSTableColumn"; headerCell.title = "Běžný výraz"; ObjectID = "18"; */
+"18.headerCell.title" = "Běžný výraz";
+
+/* Class = "NSButtonCell"; title = "Řetězce bez znaků"; ObjectID = "153"; */
+"153.title" = "Řetězce bez znaků";
+
+/* Class = "NSButtonCell"; title = "Jednoznakové řetězce"; ObjectID = "154"; */
+"154.title" = "Jednoznakové řetězce";
+
+/* Class = "NSTextFieldCell"; title = "Vynechat:"; ObjectID = "155"; */
+"155.title" = "Vynechat:";
+
+/* Class = "NSTextFieldCell"; title = "Řetězce, odpovídající alespoň jednomu z následujících symbolů:"; ObjectID = "156"; */
+"156.title" = "Řetězce, odpovídající alespoň jednomu z následujících symbolů:";
+
+/* Class = "NSButtonCell"; title = "Prázdné řetězce původního jazyka"; ObjectID = "161"; */
+"161.title" = "Prázdné řetězce původního jazyka";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "162"; */
+"162.title" = "Text Cell";

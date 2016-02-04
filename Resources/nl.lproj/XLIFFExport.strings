@@ -1,0 +1,54 @@
+
+/* Class = "NSTextFieldCell"; title = "Brontaal:"; ObjectID = "3"; */
+"3.title" = "Brontaal:";
+
+/* Class = "NSTextFieldCell"; title = "Doeltaal:"; ObjectID = "5"; */
+"5.title" = "Doeltaal:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "8"; */
+"8.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 1"; ObjectID = "9"; */
+"9.title" = "Onderdeel 1";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 2"; ObjectID = "10"; */
+"10.title" = "Onderdeel 2";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 3"; ObjectID = "11"; */
+"11.title" = "Onderdeel 3";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "14"; */
+"14.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 1"; ObjectID = "15"; */
+"15.title" = "Onderdeel 1";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 2"; ObjectID = "16"; */
+"16.title" = "Onderdeel 2";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 3"; ObjectID = "17"; */
+"17.title" = "Onderdeel 3";
+
+/* Class = "NSTextFieldCell"; title = "Uitvoerbestand:"; ObjectID = "19"; */
+"19.title" = "Uitvoerbestand:";
+
+/* Class = "NSButtonCell"; title = "Kies…"; ObjectID = "23"; */
+"23.title" = "Kies…";
+
+/* Class = "NSPathCell"; placeholderString = "Geen bestand geselecteerd"; ObjectID = "25"; */
+"25.placeholderString" = "Geen bestand geselecteerd";
+
+/* Class = "NSTextFieldCell"; title = "Structuur:"; ObjectID = "42"; */
+"42.title" = "Structuur:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "48"; */
+"48.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 1"; ObjectID = "49"; */
+"49.title" = "Onderdeel 1";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 2"; ObjectID = "50"; */
+"50.title" = "Onderdeel 2";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 3"; ObjectID = "51"; */
+"51.title" = "Onderdeel 3";

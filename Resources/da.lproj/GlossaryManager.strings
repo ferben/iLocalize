@@ -1,0 +1,78 @@
+
+/* Class = "NSWindow"; title = "Gennemse ordbøger…"; ObjectID = "109"; */
+"109.title" = "Gennemse ordbøger…";
+
+/* Class = "NSTableColumn"; headerCell.title = "Sti"; ObjectID = "116"; */
+"116.headerCell.title" = "Sti";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "119"; */
+"119.title" = "Text Cell";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "135"; */
+"135.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "136"; */
+"136.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "137"; */
+"137.title" = "Item 2";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "142"; */
+"142.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "144"; */
+"144.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "145"; */
+"145.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Vis i Finder"; ObjectID = "157"; */
+"157.title" = "Vis i Finder";
+
+/* Class = "NSMenuItem"; title = "Flet…"; ObjectID = "169"; */
+"169.title" = "Flet…";
+
+/* Class = "NSMenuItem"; title = "Slet"; ObjectID = "170"; */
+"170.title" = "Slet";
+
+/* Class = "NSMenuItem"; title = "Åbn"; ObjectID = "172"; */
+"172.title" = "Åbn";
+
+/* Class = "NSMenuItem"; title = "Vis i Finder"; ObjectID = "201"; */
+"201.title" = "Vis i Finder";
+
+/* Class = "NSMenuItem"; title = "Fjern"; ObjectID = "206"; */
+"206.title" = "Fjern";
+
+/* Class = "NSTableColumn"; headerCell.title = "Navn"; ObjectID = "225"; */
+"225.headerCell.title" = "Navn";
+
+/* Class = "NSTableColumn"; headerCell.title = "Base-sprog"; ObjectID = "226"; */
+"226.headerCell.title" = "Base-sprog";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "227"; */
+"227.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "228"; */
+"228.title" = "Text Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "Mål-sprog"; ObjectID = "229"; */
+"229.headerCell.title" = "Mål-sprog";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "230"; */
+"230.title" = "Text Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "Emner"; ObjectID = "231"; */
+"231.headerCell.title" = "Emner";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "232"; */
+"232.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Tilføj…"; ObjectID = "263"; */
+"263.title" = "Tilføj…";
+
+/* Class = "NSToolbarItem"; label = "Søg"; ObjectID = "281"; */
+"281.label" = "Søg";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Søg"; ObjectID = "281"; */
+"281.paletteLabel" = "Søg";

@@ -1,0 +1,87 @@
+
+/* Class = "NSWindow"; title = "Updateconflict"; ObjectID = "5"; */
+"5.title" = "Updateconflict";
+
+/* Class = "NSBox"; title = "Projectmap"; ObjectID = "12"; */
+"12.title" = "Projectmap";
+
+/* Class = "NSBox"; title = "Bijgewerkt bestand"; ObjectID = "47"; */
+"47.title" = "Bijgewerkt bestand";
+
+/* Class = "NSTextFieldCell"; title = "iLocalize kan de inhoud van deze bestanden niet samenvoegen.\nSelecteer welke gebruikt moet worden."; ObjectID = "90"; */
+"90.title" = "iLocalize kan de inhoud van deze bestanden niet samenvoegen.\nSelecteer welke gebruikt moet worden.";
+
+/* Class = "NSTextFieldCell"; title = "Pad:"; ObjectID = "91"; */
+"91.title" = "Pad:";
+
+/* Class = "NSTextFieldCell"; title = "/tmp/een/heel/lang/pad/tmp/een/heel/lang/pad/tmp/een/heel/lang/pad/tmp/een/heel/lang/pad/tmp/een/heel/lang/pad/tmp/een/heel/lang/pad/tmp/een/heel/lang/pad"; ObjectID = "92"; */
+"92.title" = "/tmp/een/heel/lang/pad/tmp/een/heel/lang/pad/tmp/een/heel/lang/pad/tmp/een/heel/lang/pad/tmp/een/heel/lang/pad/tmp/een/heel/lang/pad/tmp/een/heel/lang/pad";
+
+/* Class = "NSTextFieldCell"; title = "Aanmaakdatum:"; ObjectID = "93"; */
+"93.title" = "Aanmaakdatum:";
+
+/* Class = "NSTextFieldCell"; title = "7 juli 2005"; ObjectID = "94"; */
+"94.title" = "7 juli 2005";
+
+/* Class = "NSTextFieldCell"; title = "Bewerkingsdatum:"; ObjectID = "95"; */
+"95.title" = "Bewerkingsdatum:";
+
+/* Class = "NSTextFieldCell"; title = "7 juli 2005"; ObjectID = "96"; */
+"96.title" = "7 juli 2005";
+
+/* Class = "NSButtonCell"; title = "Open"; ObjectID = "97"; */
+"97.title" = "Open";
+
+/* Class = "NSTextFieldCell"; title = "Naam:"; ObjectID = "98"; */
+"98.title" = "Naam:";
+
+/* Class = "NSTextFieldCell"; title = "voorbeeld.jpg"; ObjectID = "99"; */
+"99.title" = "voorbeeld.jpg";
+
+/* Class = "NSButtonCell"; title = "Toon in Finder"; ObjectID = "100"; */
+"100.title" = "Toon in Finder";
+
+/* Class = "NSButtonCell"; title = "Gebruik dit bestand"; ObjectID = "101"; */
+"101.title" = "Gebruik dit bestand";
+
+/* Class = "NSButtonCell"; title = "Ga door"; ObjectID = "102"; */
+"102.title" = "Ga door";
+
+/* Class = "NSButtonCell"; title = "Pas toe op alles"; ObjectID = "103"; */
+"103.title" = "Pas toe op alles";
+
+/* Class = "NSButtonCell"; title = "Open"; ObjectID = "105"; */
+"105.title" = "Open";
+
+/* Class = "NSTextFieldCell"; title = "Pad:"; ObjectID = "106"; */
+"106.title" = "Pad:";
+
+/* Class = "NSTextFieldCell"; title = "Naam:"; ObjectID = "107"; */
+"107.title" = "Naam:";
+
+/* Class = "NSButtonCell"; title = "Toon in Finder"; ObjectID = "108"; */
+"108.title" = "Toon in Finder";
+
+/* Class = "NSTextFieldCell"; title = "/tmp/een/heel/lang/pad/tmp/een/heel/lang/pad/tmp/een/heel/lang/pad/tmp/een/heel/lang/pad/tmp/een/heel/lang/pad/tmp/een/heel/lang/pad/tmp/een/heel/lang/pad"; ObjectID = "109"; */
+"109.title" = "/tmp/een/heel/lang/pad/tmp/een/heel/lang/pad/tmp/een/heel/lang/pad/tmp/een/heel/lang/pad/tmp/een/heel/lang/pad/tmp/een/heel/lang/pad/tmp/een/heel/lang/pad";
+
+/* Class = "NSTextFieldCell"; title = "7 juli 2005"; ObjectID = "110"; */
+"110.title" = "7 juli 2005";
+
+/* Class = "NSTextFieldCell"; title = "7 juli 2005"; ObjectID = "111"; */
+"111.title" = "7 juli 2005";
+
+/* Class = "NSTextFieldCell"; title = "Bewerkingsdatum:"; ObjectID = "112"; */
+"112.title" = "Bewerkingsdatum:";
+
+/* Class = "NSTextFieldCell"; title = "Aanmaakdatum:"; ObjectID = "113"; */
+"113.title" = "Aanmaakdatum:";
+
+/* Class = "NSTextFieldCell"; title = "voorbeeld.jpg"; ObjectID = "114"; */
+"114.title" = "voorbeeld.jpg";
+
+/* Class = "NSButtonCell"; title = "Gebruik dit bestand"; ObjectID = "115"; */
+"115.title" = "Gebruik dit bestand";
+
+/* Class = "NSButtonCell"; title = "Apply to All Languages"; ObjectID = "We8-Ds-STm"; */
+"We8-Ds-STm.title" = "Apply to All Languages";

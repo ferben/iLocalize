@@ -1,0 +1,54 @@
+
+/* Class = "NSWindow"; title = "Nouveau glossaire"; ObjectID = "5"; */
+"5.title" = "Nouveau glossaire";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "9"; */
+"9.title" = "Item2";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "10"; */
+"10.title" = "Item1";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "11"; */
+"11.title" = "Item3";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "12"; */
+"12.title" = "OtherViews";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "41"; */
+"41.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "à partir des chaînes sélectionnées"; ObjectID = "42"; */
+"42.title" = "à partir des chaînes sélectionnées";
+
+/* Class = "NSMenuItem"; title = "à partir de tous les fichiers"; ObjectID = "43"; */
+"43.title" = "à partir de tous les fichiers";
+
+/* Class = "NSMenuItem"; title = "à partir des fichiers sélectionnés"; ObjectID = "45"; */
+"45.title" = "à partir des fichiers sélectionnés";
+
+/* Class = "NSTextFieldCell"; title = "Nom du glossaire :"; ObjectID = "71"; */
+"71.title" = "Nom du glossaire :";
+
+/* Class = "NSTextFieldCell"; title = "Disponible dans :"; ObjectID = "72"; */
+"72.title" = "Disponible dans :";
+
+/* Class = "NSTextFieldCell"; title = "Inclure :"; ObjectID = "75"; */
+"75.title" = "Inclure :";
+
+/* Class = "NSButtonCell"; title = "Créer"; ObjectID = "77"; */
+"77.title" = "Créer";
+
+/* Class = "NSButtonCell"; title = "Annuler"; ObjectID = "78"; */
+"78.title" = "Annuler";
+
+/* Class = "NSTextFieldCell"; title = "Ajouter les chaînes de :"; ObjectID = "79"; */
+"79.title" = "Ajouter les chaînes de :";
+
+/* Class = "NSButtonCell"; title = "Les chaînes traduites"; ObjectID = "82"; */
+"82.title" = "Les chaînes traduites";
+
+/* Class = "NSButtonCell"; title = "Les chaînes non traduites"; ObjectID = "83"; */
+"83.title" = "Les chaînes non traduites";
+
+/* Class = "NSButtonCell"; title = "Les chaînes verrouillées"; ObjectID = "84"; */
+"84.title" = "Les chaînes verrouillées";

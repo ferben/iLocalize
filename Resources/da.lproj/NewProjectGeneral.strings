@@ -1,0 +1,51 @@
+
+/* Class = "NSMenuItem"; title = "<setting-name>"; ObjectID = "82"; */
+"82.title" = "<setting-name>";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "83"; */
+"83.title" = "OtherViews";
+
+/* Class = "NSTextFieldCell"; title = "Navn:"; ObjectID = "625"; */
+"625.title" = "Navn:";
+
+/* Class = "NSTextFieldCell"; title = "Destination:"; ObjectID = "626"; */
+"626.title" = "Destination:";
+
+/* Class = "NSTextFieldCell"; title = "Kalkulator"; ObjectID = "627"; */
+"627.title" = "Kalkulator";
+
+/* Class = "NSButtonCell"; title = "Vælg…"; ObjectID = "629"; */
+"629.title" = "Vælg…";
+
+/* Class = "NSButtonCell"; title = "Vælg…"; ObjectID = "632"; */
+"632.title" = "Vælg…";
+
+/* Class = "NSTextFieldCell"; title = "Forudindstillinger:"; ObjectID = "635"; */
+"635.title" = "Forudindstillinger:";
+
+/* Class = "NSTextFieldCell"; title = "Vælg et bundle du vil lokalisere for at starte:"; ObjectID = "676"; */
+"676.title" = "Vælg et bundle du vil lokalisere for at starte:";
+
+/* Class = "NSMenuItem"; title = "Arkiver"; ObjectID = "682"; */
+"682.title" = "Arkiver";
+
+/* Class = "NSMenuItem"; title = "Arkiver som…"; ObjectID = "683"; */
+"683.title" = "Arkiver som…";
+
+/* Class = "NSMenuItem"; title = "Omdøb…"; ObjectID = "684"; */
+"684.title" = "Omdøb…";
+
+/* Class = "NSMenuItem"; title = "Slet"; ObjectID = "685"; */
+"685.title" = "Slet";
+
+/* Class = "NSTextFieldCell"; title = "Bundle:"; ObjectID = "802"; */
+"802.title" = "Bundle:";
+
+/* Class = "NSPathCell"; placeholderString = "Anbring bundle der skal lokaliseres"; ObjectID = "808"; */
+"808.placeholderString" = "Anbring bundle der skal lokaliseres";
+
+/* Class = "NSPathCell"; placeholderString = "Anbring mappen hvori projektet skal oprettes"; ObjectID = "810"; */
+"810.placeholderString" = "Anbring mappen hvori projektet skal oprettes";
+
+/* Class = "NSTextFieldCell"; title = "<do not localize>"; ObjectID = "828"; */
+"828.title" = "<do not localize>";

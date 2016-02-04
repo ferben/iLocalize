@@ -1,0 +1,27 @@
+
+/* Class = "NSWindow"; title = "Tilføj sprog"; ObjectID = "132"; */
+"132.title" = "Tilføj sprog";
+
+/* Class = "NSButtonCell"; title = "Annuller"; ObjectID = "187"; */
+"187.title" = "Annuller";
+
+/* Class = "NSButtonCell"; title = "TIlføj"; ObjectID = "188"; */
+"188.title" = "TIlføj";
+
+/* Class = "NSButtonCell"; title = "Udfyld oversættelse med base-sprog"; ObjectID = "200"; */
+"200.title" = "Udfyld oversættelse med base-sprog";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "206"; */
+"206.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "207"; */
+"207.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "208"; */
+"208.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "209"; */
+"209.title" = "Item 3";
+
+/* Class = "NSBox"; title = "Sprognavn"; ObjectID = "220"; */
+"220.title" = "Sprognavn";

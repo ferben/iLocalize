@@ -1,0 +1,51 @@
+
+/* Class = "NSMenuItem"; title = "<setting-name>"; ObjectID = "82"; */
+"82.title" = "<setting-name>";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "83"; */
+"83.title" = "OtherViews";
+
+/* Class = "NSTextFieldCell"; title = "Nombre:"; ObjectID = "625"; */
+"625.title" = "Nombre:";
+
+/* Class = "NSTextFieldCell"; title = "Destino:"; ObjectID = "626"; */
+"626.title" = "Destino:";
+
+/* Class = "NSTextFieldCell"; title = "Calculadora"; ObjectID = "627"; */
+"627.title" = "Calculadora";
+
+/* Class = "NSButtonCell"; title = "Seleccionar…"; ObjectID = "629"; */
+"629.title" = "Seleccionar…";
+
+/* Class = "NSButtonCell"; title = "Seleccionar…"; ObjectID = "632"; */
+"632.title" = "Seleccionar…";
+
+/* Class = "NSTextFieldCell"; title = "Preajustes:"; ObjectID = "635"; */
+"635.title" = "Preajustes:";
+
+/* Class = "NSTextFieldCell"; title = "Para empezar, seleccione el paquete que quiera localizar:"; ObjectID = "676"; */
+"676.title" = "Para empezar, seleccione el paquete que quiera localizar:";
+
+/* Class = "NSMenuItem"; title = "Guardar"; ObjectID = "682"; */
+"682.title" = "Guardar";
+
+/* Class = "NSMenuItem"; title = "Guardar como…"; ObjectID = "683"; */
+"683.title" = "Guardar como…";
+
+/* Class = "NSMenuItem"; title = "Cambiar el nombre…"; ObjectID = "684"; */
+"684.title" = "Cambiar el nombre…";
+
+/* Class = "NSMenuItem"; title = "Borrar"; ObjectID = "685"; */
+"685.title" = "Borrar";
+
+/* Class = "NSTextFieldCell"; title = "Paquete:"; ObjectID = "802"; */
+"802.title" = "Paquete:";
+
+/* Class = "NSPathCell"; placeholderString = "Arrastre y suelte aquí la carpeta que quiera localizar"; ObjectID = "808"; */
+"808.placeholderString" = "Arrastre y suelte aquí la carpeta que quiera localizar";
+
+/* Class = "NSPathCell"; placeholderString = "Arrastre y suelte aquí la carpeta en la que se creará el proyecto"; ObjectID = "810"; */
+"810.placeholderString" = "Arrastre y suelte aquí la carpeta en la que se creará el proyecto";
+
+/* Class = "NSTextFieldCell"; title = "<do not localize>"; ObjectID = "828"; */
+"828.title" = "<do not localize>";

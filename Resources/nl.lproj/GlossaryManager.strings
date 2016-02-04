@@ -1,0 +1,78 @@
+
+/* Class = "NSWindow"; title = "Blader door woordenlijsten"; ObjectID = "109"; */
+"109.title" = "Blader door woordenlijsten";
+
+/* Class = "NSTableColumn"; headerCell.title = "Pad"; ObjectID = "116"; */
+"116.headerCell.title" = "Pad";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "119"; */
+"119.title" = "Text Cell";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "135"; */
+"135.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 3"; ObjectID = "136"; */
+"136.title" = "Onderdeel 3";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 2"; ObjectID = "137"; */
+"137.title" = "Onderdeel 2";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "142"; */
+"142.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 2"; ObjectID = "144"; */
+"144.title" = "Onderdeel 2";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 3"; ObjectID = "145"; */
+"145.title" = "Onderdeel 3";
+
+/* Class = "NSMenuItem"; title = "Toon in Finder"; ObjectID = "157"; */
+"157.title" = "Toon in Finder";
+
+/* Class = "NSMenuItem"; title = "Voeg samen…"; ObjectID = "169"; */
+"169.title" = "Voeg samen…";
+
+/* Class = "NSMenuItem"; title = "Verwijder"; ObjectID = "170"; */
+"170.title" = "Verwijder";
+
+/* Class = "NSMenuItem"; title = "Open"; ObjectID = "172"; */
+"172.title" = "Open";
+
+/* Class = "NSMenuItem"; title = "Toon in Finder"; ObjectID = "201"; */
+"201.title" = "Toon in Finder";
+
+/* Class = "NSMenuItem"; title = "Verwijder"; ObjectID = "206"; */
+"206.title" = "Verwijder";
+
+/* Class = "NSTableColumn"; headerCell.title = "Naam"; ObjectID = "225"; */
+"225.headerCell.title" = "Naam";
+
+/* Class = "NSTableColumn"; headerCell.title = "Basistaal"; ObjectID = "226"; */
+"226.headerCell.title" = "Basistaal";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "227"; */
+"227.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "228"; */
+"228.title" = "Text Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "Doeltaal"; ObjectID = "229"; */
+"229.headerCell.title" = "Doeltaal";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "230"; */
+"230.title" = "Text Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "Onderdelen"; ObjectID = "231"; */
+"231.headerCell.title" = "Onderdelen";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "232"; */
+"232.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Voeg toe…"; ObjectID = "263"; */
+"263.title" = "Voeg toe…";
+
+/* Class = "NSToolbarItem"; label = "Zoek"; ObjectID = "281"; */
+"281.label" = "Zoek";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Zoek"; ObjectID = "281"; */
+"281.paletteLabel" = "Zoek";

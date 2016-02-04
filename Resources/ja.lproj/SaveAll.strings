@@ -1,0 +1,24 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "状態"; ObjectID = "10"; */
+"10.headerCell.title" = "状態";
+
+/* Class = "NSTableColumn"; headerCell.title = "ファイル"; ObjectID = "16"; */
+"16.headerCell.title" = "ファイル";
+
+/* Class = "NSTableColumn"; headerCell.title = "種類"; ObjectID = "18"; */
+"18.headerCell.title" = "種類";
+
+/* Class = "NSButtonCell"; title = "すべてを再読み込み"; ObjectID = "48"; */
+"48.title" = "すべてを再読み込み";
+
+/* Class = "NSButtonCell"; title = "再読み込みしない"; ObjectID = "49"; */
+"49.title" = "再読み込みしない";
+
+/* Class = "NSButtonCell"; title = "キャンセル"; ObjectID = "50"; */
+"50.title" = "キャンセル";
+
+/* Class = "NSTextFieldCell"; title = "外部で変更されたファイルを再読み込み"; ObjectID = "52"; */
+"52.title" = "外部で変更されたファイルを再読み込み";
+
+/* Class = "NSTextFieldCell"; title = "Los Gatos"; ObjectID = "54"; */
+"54.title" = "Los Gatos";

@@ -1,0 +1,18 @@
+
+/* Class = "NSMenuItem"; title = "   Sorteer op pad"; ObjectID = "5"; */
+"5.title" = "   Sorteer op pad";
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "6"; */
+"6.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "   Sorteer op naam"; ObjectID = "7"; */
+"7.title" = "   Sorteer op naam";
+
+/* Class = "NSMenuItem"; title = "   Sorteer op # strings"; ObjectID = "8"; */
+"8.title" = "   Sorteer op # strings";
+
+/* Class = "NSMenuItem"; title = "Bestandskolom"; ObjectID = "9"; */
+"9.title" = "Bestandskolom";
+
+/* Class = "NSMenuItem"; title = "   Schakel naar slim/volledig pad"; ObjectID = "15"; */
+"15.title" = "   Schakel naar slim/volledig pad";

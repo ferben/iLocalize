@@ -1,0 +1,54 @@
+
+/* Class = "NSTextFieldCell"; title = "Idioma de Origem:"; ObjectID = "3"; */
+"3.title" = "Idioma de Origem:";
+
+/* Class = "NSTextFieldCell"; title = "Idioma de Destino:"; ObjectID = "5"; */
+"5.title" = "Idioma de Destino:";
+
+/* Class = "NSMenu"; title = "Outras Visualizações"; ObjectID = "8"; */
+"8.title" = "Outras Visualizações";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "9"; */
+"9.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "10"; */
+"10.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "11"; */
+"11.title" = "Item 3";
+
+/* Class = "NSMenu"; title = "Outras Visualizações"; ObjectID = "14"; */
+"14.title" = "Outras Visualizações";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "15"; */
+"15.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "16"; */
+"16.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "17"; */
+"17.title" = "Item 3";
+
+/* Class = "NSTextFieldCell"; title = "Arquivo de Saída:"; ObjectID = "19"; */
+"19.title" = "Arquivo de Saída:";
+
+/* Class = "NSButtonCell"; title = "Escolher…"; ObjectID = "23"; */
+"23.title" = "Escolher…";
+
+/* Class = "NSPathCell"; placeholderString = "Nenhum Arquivo Selecionado"; ObjectID = "25"; */
+"25.placeholderString" = "Nenhum Arquivo Selecionado";
+
+/* Class = "NSTextFieldCell"; title = "Formato:"; ObjectID = "42"; */
+"42.title" = "Formato:";
+
+/* Class = "NSMenu"; title = "Outras Visualizações"; ObjectID = "48"; */
+"48.title" = "Outras Visualizações";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "49"; */
+"49.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "50"; */
+"50.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "51"; */
+"51.title" = "Item 3";

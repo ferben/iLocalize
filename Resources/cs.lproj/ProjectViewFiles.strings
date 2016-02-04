@@ -1,0 +1,114 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Průběh"; ObjectID = "31"; */
+"31.headerCell.title" = "Průběh";
+
+/* Class = "NSTableColumn"; headerCell.title = "Typ"; ObjectID = "32"; */
+"32.headerCell.title" = "Typ";
+
+/* Class = "NSTableColumn"; headerCell.title = "Soubor"; ObjectID = "33"; */
+"33.headerCell.title" = "Soubor";
+
+/* Class = "NSTableColumn"; headerCell.title = "Obsah"; ObjectID = "104"; */
+"104.headerCell.title" = "Obsah";
+
+/* Class = "NSMenuItem"; title = "Uložit"; ObjectID = "264"; */
+"264.title" = "Uložit";
+
+/* Class = "NSMenuItem"; title = "Ukázat ve Finderu"; ObjectID = "265"; */
+"265.title" = "Ukázat ve Finderu";
+
+/* Class = "NSMenu"; title = "Nabídka"; ObjectID = "266"; */
+"266.title" = "Nabídka";
+
+/* Class = "NSMenuItem"; title = "Otevřít v externím editoru"; ObjectID = "267"; */
+"267.title" = "Otevřít v externím editoru";
+
+/* Class = "NSMenuItem"; title = "Smazat"; ObjectID = "278"; */
+"278.title" = "Smazat";
+
+/* Class = "NSMenuItem"; title = "Schválit"; ObjectID = "323"; */
+"323.title" = "Schválit";
+
+/* Class = "NSMenuItem"; title = "Obnovit z Angličtiny"; ObjectID = "336"; */
+"336.title" = "Obnovit z Angličtiny";
+
+/* Class = "NSMenuItem"; title = "Načíst znovu"; ObjectID = "378"; */
+"378.title" = "Načíst znovu";
+
+/* Class = "NSMenuItem"; title = "Převést zakončování řádku…"; ObjectID = "397"; */
+"397.title" = "Převést zakončování řádku…";
+
+/* Class = "NSMenuItem"; title = "Exportovat řetězce…"; ObjectID = "434"; */
+"434.title" = "Exportovat řetězce…";
+
+/* Class = "NSMenuItem"; title = "Aktualizovat řetězce…"; ObjectID = "436"; */
+"436.title" = "Aktualizovat řetězce…";
+
+/* Class = "NSMenuItem"; title = "Zobrazit varování…"; ObjectID = "541"; */
+"541.title" = "Zobrazit varování…";
+
+/* Class = "NSMenuItem"; title = "Smazat symboly u aktualizovaných souborů"; ObjectID = "544"; */
+"544.title" = "Smazat symboly u aktualizovaných souborů";
+
+/* Class = "NSMenu"; title = "Nabídka"; ObjectID = "559"; */
+"559.title" = "Nabídka";
+
+/* Class = "NSMenuItem"; title = "Souboru"; ObjectID = "560"; */
+"560.title" = "Souboru";
+
+/* Class = "NSMenuItem"; title = "Typu"; ObjectID = "561"; */
+"561.title" = "Typu";
+
+/* Class = "NSMenuItem"; title = "Obsahu"; ObjectID = "563"; */
+"563.title" = "Obsahu";
+
+/* Class = "NSMenuItem"; title = "Průběhu"; ObjectID = "564"; */
+"564.title" = "Průběhu";
+
+/* Class = "NSMenuItem"; title = "Kódování"; ObjectID = "580"; */
+"580.title" = "Kódování";
+
+/* Class = "NSTableColumn"; headerCell.title = "Visačky"; ObjectID = "583"; */
+"583.headerCell.title" = "Visačky";
+
+/* Class = "NSMenuItem"; title = "Visačky"; ObjectID = "587"; */
+"587.title" = "Visačky";
+
+/* Class = "NSMenuItem"; title = "Visačky"; ObjectID = "593"; */
+"593.title" = "Visačky";
+
+/* Class = "NSMenuItem"; title = "Vynechat"; ObjectID = "596"; */
+"596.title" = "Vynechat";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "809"; */
+"809.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "810"; */
+"810.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "811"; */
+"811.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "812"; */
+"812.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "815"; */
+"815.title" = "Text Cell";
+
+/* Class = "NSButtonCell"; title = "Přeložit pouze, když se řetězec liší od řetězce původního jazyka"; ObjectID = "1145"; */
+"1145.title" = "Přeložit pouze, když se řetězec liší od řetězce původního jazyka";
+
+/* Class = "NSTableColumn"; headerCell.title = "Stav"; ObjectID = "1160"; */
+"1160.headerCell.title" = "Stav";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "1161"; */
+"1161.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Stavu"; ObjectID = "1163"; */
+"1163.title" = "Stavu";
+
+/* Class = "NSMenuItem"; title = "Otevřít Předchozí a Aktuální v externím editoru"; ObjectID = "1173"; */
+"1173.title" = "Otevřít Předchozí a Aktuální v externím editoru";
+
+/* Class = "NSMenuItem"; title = "Rozdíl proti předchozímu"; ObjectID = "1174"; */
+"1174.title" = "Rozdíl proti předchozímu";

@@ -1,0 +1,45 @@
+
+/* Class = "NSWindow"; title = "<glossary>"; ObjectID = "5"; */
+"5.title" = "<glossary>";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "160"; */
+"160.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "161"; */
+"161.title" = "Text Cell";
+
+/* Class = "NSToolbarItem"; label = "Search"; ObjectID = "177"; */
+"177.label" = "Search";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Search"; ObjectID = "177"; */
+"177.paletteLabel" = "Search";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "193"; */
+"193.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "195"; */
+"195.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "196"; */
+"196.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Удалить выбранные записи"; ObjectID = "202"; */
+"202.title" = "Удалить выбранные записи";
+
+/* Class = "NSMenuItem"; title = "Удалить повторяющиеся записи"; ObjectID = "203"; */
+"203.title" = "Удалить повторяющиеся записи";
+
+/* Class = "NSMenuItem"; title = "Переименовать базовый язык…"; ObjectID = "204"; */
+"204.title" = "Переименовать базовый язык…";
+
+/* Class = "NSMenuItem"; title = "Переименовать конечный язык…"; ObjectID = "206"; */
+"206.title" = "Переименовать конечный язык…";
+
+/* Class = "NSTextFieldCell"; title = "<-----do not localize------>"; ObjectID = "221"; */
+"221.title" = "<-----do not localize------>";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Свойства"; ObjectID = "222"; */
+"222.paletteLabel" = "Свойства";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Этот глоссарий не расположен ни в одном из известных глоссариев iLocalize. Нажмите, чтобы решить, что делать с ним."; ObjectID = "230"; */
+"230.ibShadowedToolTip" = "Этот глоссарий не расположен ни в одном из известных глоссариев iLocalize. Нажмите, чтобы решить, что делать с ним.";

@@ -1,0 +1,108 @@
+
+/* Class = "NSMenu"; title = "Nabídka"; ObjectID = "5"; */
+"5.title" = "Nabídka";
+
+/* Class = "NSMenuItem"; title = "Převést ctlr znaky na sekvenci esc"; ObjectID = "6"; */
+"6.title" = "Převést ctlr znaky na sekvenci esc";
+
+/* Class = "NSMenuItem"; title = "Převést esc sekvenci na ctlr znaky"; ObjectID = "8"; */
+"8.title" = "Převést esc sekvenci na ctlr znaky";
+
+/* Class = "NSTableColumn"; headerCell.title = "Stav"; ObjectID = "11"; */
+"11.headerCell.title" = "Stav";
+
+/* Class = "NSTableColumn"; headerCell.title = "Klíč"; ObjectID = "14"; */
+"14.headerCell.title" = "Klíč";
+
+/* Class = "NSTableColumn"; headerCell.title = "Překlad"; ObjectID = "23"; */
+"23.headerCell.title" = "Překlad";
+
+/* Class = "NSMenuItem"; title = "Smazat komentáře překladu"; ObjectID = "35"; */
+"35.title" = "Smazat komentáře překladu";
+
+/* Class = "NSMenuItem"; title = "Smazat komentář původního jazyka"; ObjectID = "36"; */
+"36.title" = "Smazat komentář původního jazyka";
+
+/* Class = "NSMenuItem"; title = "Prohodit původní jazyk a překlad"; ObjectID = "37"; */
+"37.title" = "Prohodit původní jazyk a překlad";
+
+/* Class = "NSMenuItem"; title = "Smazat komentáře"; ObjectID = "41"; */
+"41.title" = "Smazat komentáře";
+
+/* Class = "NSMenuItem"; title = "Schválit"; ObjectID = "42"; */
+"42.title" = "Schválit";
+
+/* Class = "NSMenu"; title = "Nabídka"; ObjectID = "43"; */
+"43.title" = "Nabídka";
+
+/* Class = "NSMenuItem"; title = "Kopírovat původní jazyk do překladu"; ObjectID = "45"; */
+"45.title" = "Kopírovat původní jazyk do překladu";
+
+/* Class = "NSTableColumn"; headerCell.title = "Původní jazyk"; ObjectID = "98"; */
+"98.headerCell.title" = "Původní jazyk";
+
+/* Class = "NSMenuItem"; title = "Schválit identické řetězce ve vybraných souborech"; ObjectID = "139"; */
+"139.title" = "Schválit identické řetězce ve vybraných souborech";
+
+/* Class = "NSMenuItem"; title = "Rozšířit překlad do identických řetězců vybraných souborů"; ObjectID = "140"; */
+"140.title" = "Rozšířit překlad do identických řetězců vybraných souborů";
+
+/* Class = "NSMenuItem"; title = "Schválit identické řetězce ve všech souborech"; ObjectID = "144"; */
+"144.title" = "Schválit identické řetězce ve všech souborech";
+
+/* Class = "NSMenuItem"; title = "Rozšířit překlad do identických řetězců všech souborů"; ObjectID = "146"; */
+"146.title" = "Rozšířit překlad do identických řetězců všech souborů";
+
+/* Class = "NSMenuItem"; title = "Smazat překlad"; ObjectID = "202"; */
+"202.title" = "Smazat překlad";
+
+/* Class = "NSTableColumn"; headerCell.title = "Visačky"; ObjectID = "209"; */
+"209.headerCell.title" = "Visačky";
+
+/* Class = "NSMenuItem"; title = "Visačky"; ObjectID = "218"; */
+"218.title" = "Visačky";
+
+/* Class = "NSMenuItem"; title = "Označit jako Přeložené"; ObjectID = "253"; */
+"253.title" = "Označit jako Přeložené";
+
+/* Class = "NSMenuItem"; title = "Odznačit jako Přeložené"; ObjectID = "255"; */
+"255.title" = "Odznačit jako Přeložené";
+
+/* Class = "NSTextFieldCell"; title = "Bez řetězce"; ObjectID = "395"; */
+"395.title" = "Bez řetězce";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "398"; */
+"398.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "399"; */
+"399.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "400"; */
+"400.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "401"; */
+"401.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Zamknout"; ObjectID = "470"; */
+"470.title" = "Zamknout";
+
+/* Class = "NSMenuItem"; title = "Zobrazit řádek textu"; ObjectID = "488"; */
+"488.title" = "Zobrazit řádek textu";
+
+/* Class = "NSMenuItem"; title = "Zobrazit sloupec klíče"; ObjectID = "489"; */
+"489.title" = "Zobrazit sloupec klíče";
+
+/* Class = "NSTableColumn"; headerCell.title = "Původní jazyk"; ObjectID = "496"; */
+"496.headerCell.title" = "Původní jazyk";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "497"; */
+"497.title" = "Text Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "Klíč"; ObjectID = "502"; */
+"502.headerCell.title" = "Klíč";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "503"; */
+"503.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Aktualizovat ve slovníku…"; ObjectID = "530"; */
+"530.title" = "Aktualizovat ve slovníku…";

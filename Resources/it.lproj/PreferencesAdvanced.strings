@@ -1,0 +1,48 @@
+
+/* Class = "NSTextField"; ibShadowedToolTip = "Percorso a ibtool excutable (abitualmente/usr/bin/ibtool). Questo tool è disponibile solo in Leopard."; ObjectID = "484"; */
+"484.ibShadowedToolTip" = "Percorso a ibtool excutable (abitualmente/usr/bin/ibtool). Questo tool è disponibile solo in Leopard.";
+
+/* Class = "NSButtonCell"; title = "Trasferisci i messaggi della console alla Console del System"; ObjectID = "564"; */
+"564.title" = "Trasferisci i messaggi della console alla Console del System";
+
+/* Class = "NSTextFieldCell"; title = "zip:"; ObjectID = "567"; */
+"567.title" = "zip:";
+
+/* Class = "NSTextFieldCell"; title = "Percorso per ibtool:"; ObjectID = "577"; */
+"577.title" = "Percorso per ibtool:";
+
+/* Class = "NSButtonCell"; title = "Scegli..."; ObjectID = "593"; */
+"593.title" = "Scegli...";
+
+/* Class = "NSTabViewItem"; label = "Strumenti"; ObjectID = "600"; */
+"600.label" = "Strumenti";
+
+/* Class = "NSTabViewItem"; label = "Percorsi"; ObjectID = "603"; */
+"603.label" = "Percorsi";
+
+/* Class = "NSTabViewItem"; label = "Settaggi"; ObjectID = "605"; */
+"605.label" = "Settaggi";
+
+/* Class = "NSTextFieldCell"; title = "Interface Builder 3:"; ObjectID = "610"; */
+"610.title" = "Interface Builder 3:";
+
+/* Class = "NSButtonCell"; title = "Scegli..."; ObjectID = "617"; */
+"617.title" = "Scegli...";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "635"; */
+"635.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Plugins per ibtool:"; ObjectID = "636"; */
+"636.title" = "Plugins per ibtool:";
+
+/* Class = "NSTextFieldCell"; title = "Cartella Progetto di Default:"; ObjectID = "638"; */
+"638.title" = "Cartella Progetto di Default:";
+
+/* Class = "NSButtonCell"; title = "Trasferisci tutti i comandi NIB alla console"; ObjectID = "655"; */
+"655.title" = "Trasferisci tutti i comandi NIB alla console";
+
+/* Class = "NSButtonCell"; title = "Paragona files NIB utilizzando la loro struttura XML (più lenta ma più accurata)"; ObjectID = "658"; */
+"658.title" = "Paragona files NIB utilizzando la loro struttura XML (più lenta ma più accurata)";
+
+/* Class = "NSTextFieldCell"; title = "diff:"; ObjectID = "663"; */
+"663.title" = "diff:";

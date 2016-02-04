@@ -1,0 +1,51 @@
+
+/* Class = "NSMenuItem"; title = "<setting-name>"; ObjectID = "82"; */
+"82.title" = "<setting-name>";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "83"; */
+"83.title" = "OtherViews";
+
+/* Class = "NSTextFieldCell"; title = "Nazwa:"; ObjectID = "625"; */
+"625.title" = "Nazwa:";
+
+/* Class = "NSTextFieldCell"; title = "Katalog projektu:"; ObjectID = "626"; */
+"626.title" = "Katalog projektu:";
+
+/* Class = "NSTextFieldCell"; title = "Kalkulator"; ObjectID = "627"; */
+"627.title" = "Kalkulator";
+
+/* Class = "NSButtonCell"; title = "Wybierz…"; ObjectID = "629"; */
+"629.title" = "Wybierz…";
+
+/* Class = "NSButtonCell"; title = "Wybierz…"; ObjectID = "632"; */
+"632.title" = "Wybierz…";
+
+/* Class = "NSTextFieldCell"; title = "Ustawienia:"; ObjectID = "635"; */
+"635.title" = "Ustawienia:";
+
+/* Class = "NSTextFieldCell"; title = "Aby rozpocząć wybierz pakiet, który chcesz tłumaczyć:"; ObjectID = "676"; */
+"676.title" = "Aby rozpocząć wybierz pakiet, który chcesz tłumaczyć:";
+
+/* Class = "NSMenuItem"; title = "Zachowaj"; ObjectID = "682"; */
+"682.title" = "Zachowaj";
+
+/* Class = "NSMenuItem"; title = "Zachowaj jako…"; ObjectID = "683"; */
+"683.title" = "Zachowaj jako…";
+
+/* Class = "NSMenuItem"; title = "Zmień nazwę…"; ObjectID = "684"; */
+"684.title" = "Zmień nazwę…";
+
+/* Class = "NSMenuItem"; title = "Usuń"; ObjectID = "685"; */
+"685.title" = "Usuń";
+
+/* Class = "NSTextFieldCell"; title = "Pakiet:"; ObjectID = "802"; */
+"802.title" = "Pakiet:";
+
+/* Class = "NSPathCell"; placeholderString = "Upuść pakiet do tłumaczenia"; ObjectID = "808"; */
+"808.placeholderString" = "Upuść pakiet do tłumaczenia";
+
+/* Class = "NSPathCell"; placeholderString = "Upuść katalog, w którym zostanie utworzony projekt"; ObjectID = "810"; */
+"810.placeholderString" = "Upuść katalog, w którym zostanie utworzony projekt";
+
+/* Class = "NSTextFieldCell"; title = "<do not localize>"; ObjectID = "828"; */
+"828.title" = "<do not localize>";

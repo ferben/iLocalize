@@ -1,0 +1,51 @@
+
+/* Class = "NSMenuItem"; title = "<設定名>"; ObjectID = "82"; */
+"82.title" = "<設定名>";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "83"; */
+"83.title" = "OtherViews";
+
+/* Class = "NSTextFieldCell"; title = "名前:"; ObjectID = "625"; */
+"625.title" = "名前:";
+
+/* Class = "NSTextFieldCell"; title = "保存先:"; ObjectID = "626"; */
+"626.title" = "保存先:";
+
+/* Class = "NSTextFieldCell"; title = "Calculator"; ObjectID = "627"; */
+"627.title" = "Calculator";
+
+/* Class = "NSButtonCell"; title = "選択…"; ObjectID = "629"; */
+"629.title" = "選択…";
+
+/* Class = "NSButtonCell"; title = "選択…"; ObjectID = "632"; */
+"632.title" = "選択…";
+
+/* Class = "NSTextFieldCell"; title = "プリセット:"; ObjectID = "635"; */
+"635.title" = "プリセット:";
+
+/* Class = "NSTextFieldCell"; title = "まず始めに、翻訳するバンドルを選択して下さい:"; ObjectID = "676"; */
+"676.title" = "まず始めに、翻訳するバンドルを選択して下さい:";
+
+/* Class = "NSMenuItem"; title = "保存"; ObjectID = "682"; */
+"682.title" = "保存";
+
+/* Class = "NSMenuItem"; title = "別名で保存..."; ObjectID = "683"; */
+"683.title" = "別名で保存...";
+
+/* Class = "NSMenuItem"; title = "名前を変更..."; ObjectID = "684"; */
+"684.title" = "名前を変更...";
+
+/* Class = "NSMenuItem"; title = "削除"; ObjectID = "685"; */
+"685.title" = "削除";
+
+/* Class = "NSTextFieldCell"; title = "バンドル:"; ObjectID = "802"; */
+"802.title" = "バンドル:";
+
+/* Class = "NSPathCell"; placeholderString = "ローカライズするバンドルをドロップして下さい"; ObjectID = "808"; */
+"808.placeholderString" = "ローカライズするバンドルをドロップして下さい";
+
+/* Class = "NSPathCell"; placeholderString = "プロジェクトを作成するフォルダをドロップして下さい"; ObjectID = "810"; */
+"810.placeholderString" = "プロジェクトを作成するフォルダをドロップして下さい";
+
+/* Class = "NSTextFieldCell"; title = "<do not localize>"; ObjectID = "828"; */
+"828.title" = "<do not localize>";

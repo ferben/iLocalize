@@ -1,0 +1,33 @@
+
+/* Class = "NSWindow"; title = "Konsola"; ObjectID = "5"; */
+"5.title" = "Konsola";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "77"; */
+"77.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Pokaż dzienniki i błędy"; ObjectID = "79"; */
+"79.title" = "Pokaż dzienniki i błędy";
+
+/* Class = "NSMenuItem"; title = "Pokaż tylko błędy"; ObjectID = "81"; */
+"81.title" = "Pokaż tylko błędy";
+
+/* Class = "NSMenuItem"; title = "Pokaż tylko dzienniki"; ObjectID = "82"; */
+"82.title" = "Pokaż tylko dzienniki";
+
+/* Class = "NSButtonCell"; title = "Wymaż"; ObjectID = "109"; */
+"109.title" = "Wymaż";
+
+/* Class = "NSButtonCell"; title = "Odśwież"; ObjectID = "111"; */
+"111.title" = "Odśwież";
+
+/* Class = "NSTextFieldCell"; title = "Usuń dzienniki starsze niż"; ObjectID = "112"; */
+"112.title" = "Usuń dzienniki starsze niż";
+
+/* Class = "NSTextFieldCell"; title = "7"; ObjectID = "113"; */
+"113.title" = "7";
+
+/* Class = "NSButtonCell"; title = "Eksportuj…"; ObjectID = "117"; */
+"117.title" = "Eksportuj…";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "135"; */
+"135.title" = "Text Cell";

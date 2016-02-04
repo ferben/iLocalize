@@ -1,0 +1,108 @@
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "5"; */
+"5.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "Konverter kontrol-tegn til escape-sekvenser"; ObjectID = "6"; */
+"6.title" = "Konverter kontrol-tegn til escape-sekvenser";
+
+/* Class = "NSMenuItem"; title = "Konverter escape-sekvenser til kontrol-tegn"; ObjectID = "8"; */
+"8.title" = "Konverter escape-sekvenser til kontrol-tegn";
+
+/* Class = "NSTableColumn"; headerCell.title = "Tilstand"; ObjectID = "11"; */
+"11.headerCell.title" = "Tilstand";
+
+/* Class = "NSTableColumn"; headerCell.title = "Key"; ObjectID = "14"; */
+"14.headerCell.title" = "Key";
+
+/* Class = "NSTableColumn"; headerCell.title = "Oversættelse"; ObjectID = "23"; */
+"23.headerCell.title" = "Oversættelse";
+
+/* Class = "NSMenuItem"; title = "Slet oversættelseskommentarer"; ObjectID = "35"; */
+"35.title" = "Slet oversættelseskommentarer";
+
+/* Class = "NSMenuItem"; title = "Slet base-kommentarer"; ObjectID = "36"; */
+"36.title" = "Slet base-kommentarer";
+
+/* Class = "NSMenuItem"; title = "Byt base og oversættelse"; ObjectID = "37"; */
+"37.title" = "Byt base og oversættelse";
+
+/* Class = "NSMenuItem"; title = "Slet kommentarer"; ObjectID = "41"; */
+"41.title" = "Slet kommentarer";
+
+/* Class = "NSMenuItem"; title = "Godkend"; ObjectID = "42"; */
+"42.title" = "Godkend";
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "43"; */
+"43.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "Kopier base til oversættelse"; ObjectID = "45"; */
+"45.title" = "Kopier base til oversættelse";
+
+/* Class = "NSTableColumn"; headerCell.title = "Base"; ObjectID = "98"; */
+"98.headerCell.title" = "Base";
+
+/* Class = "NSMenuItem"; title = "Godkend identiske strings i valgte arkiver"; ObjectID = "139"; */
+"139.title" = "Godkend identiske strings i valgte arkiver";
+
+/* Class = "NSMenuItem"; title = "Anvend oversættelse i identiske strings i valgte arkiver"; ObjectID = "140"; */
+"140.title" = "Anvend oversættelse i identiske strings i valgte arkiver";
+
+/* Class = "NSMenuItem"; title = "Godkend identiske strings i alle arkiver"; ObjectID = "144"; */
+"144.title" = "Godkend identiske strings i alle arkiver";
+
+/* Class = "NSMenuItem"; title = "Anvend oversættelse i identiske strings i alle arkiver"; ObjectID = "146"; */
+"146.title" = "Anvend oversættelse i identiske strings i alle arkiver";
+
+/* Class = "NSMenuItem"; title = "Slet oversættelse"; ObjectID = "202"; */
+"202.title" = "Slet oversættelse";
+
+/* Class = "NSTableColumn"; headerCell.title = "Mærker"; ObjectID = "209"; */
+"209.headerCell.title" = "Mærker";
+
+/* Class = "NSMenuItem"; title = "Mærker"; ObjectID = "218"; */
+"218.title" = "Mærker";
+
+/* Class = "NSMenuItem"; title = "Mærk som oversat"; ObjectID = "253"; */
+"253.title" = "Mærk som oversat";
+
+/* Class = "NSMenuItem"; title = "Fjern markering som oversat"; ObjectID = "255"; */
+"255.title" = "Fjern markering som oversat";
+
+/* Class = "NSTextFieldCell"; title = "Ingen string"; ObjectID = "395"; */
+"395.title" = "Ingen string";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "398"; */
+"398.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "399"; */
+"399.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "400"; */
+"400.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "401"; */
+"401.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Lås"; ObjectID = "470"; */
+"470.title" = "Lås";
+
+/* Class = "NSMenuItem"; title = "Vis tekstzone"; ObjectID = "488"; */
+"488.title" = "Vis tekstzone";
+
+/* Class = "NSMenuItem"; title = "Vis Key-kolonne"; ObjectID = "489"; */
+"489.title" = "Vis Key-kolonne";
+
+/* Class = "NSTableColumn"; headerCell.title = "Base"; ObjectID = "496"; */
+"496.headerCell.title" = "Base";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "497"; */
+"497.title" = "Text Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "Key"; ObjectID = "502"; */
+"502.headerCell.title" = "Key";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "503"; */
+"503.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Opdater i ordbog…"; ObjectID = "530"; */
+"530.title" = "Opdater i ordbog…";

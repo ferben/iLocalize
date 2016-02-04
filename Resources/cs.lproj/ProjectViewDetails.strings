@@ -1,0 +1,12 @@
+
+/* Class = "NSButtonCell"; ibExternalAccessibilityDescription = "Slovník"; ObjectID = "52"; */
+"52.ibExternalAccessibilityDescription" = "Slovník";
+
+/* Class = "NSButtonCell"; ibExternalAccessibilityDescription = "Info o řetězci"; ObjectID = "53"; */
+"53.ibExternalAccessibilityDescription" = "Info o řetězci";
+
+/* Class = "NSButtonCell"; ibExternalAccessibilityDescription = "Alternativy"; ObjectID = "55"; */
+"55.ibExternalAccessibilityDescription" = "Alternativy";
+
+/* Class = "NSButtonCell"; ibExternalAccessibilityDescription = "Info o souboru"; ObjectID = "74"; */
+"74.ibExternalAccessibilityDescription" = "Info o souboru";

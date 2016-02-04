@@ -1,0 +1,9 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Sorgente"; ObjectID = "8"; */
+"8.headerCell.title" = "Sorgente";
+
+/* Class = "NSTableColumn"; headerCell.title = "File Progetto Eguale"; ObjectID = "9"; */
+"9.headerCell.title" = "File Progetto Eguale";
+
+/* Class = "NSTextFieldCell"; title = "I files seguenti hanno ugualianze multiple  all'interno del progetto. Seleziona per ognuno il suo file di progetto corrispondente:"; ObjectID = "137"; */
+"137.title" = "I files seguenti hanno ugualianze multiple  all'interno del progetto. Seleziona per ognuno il suo file di progetto corrispondente:";

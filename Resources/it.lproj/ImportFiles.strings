@@ -1,0 +1,24 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Lingua"; ObjectID = "14"; */
+"14.headerCell.title" = "Lingua";
+
+/* Class = "NSButtonCell"; title = "Aggiorna una lingua localizzata con questi files"; ObjectID = "51"; */
+"51.title" = "Aggiorna una lingua localizzata con questi files";
+
+/* Class = "NSTextFieldCell"; title = "<do not localize - placeholder for file information >"; ObjectID = "52"; */
+"52.title" = "<do not localize - placeholder for file information >";
+
+/* Class = "NSButtonCell"; title = "Ripristina il layout di ogni NIB file locaizzato dal suo layout della lingua-base"; ObjectID = "53"; */
+"53.title" = "Ripristina il layout di ogni NIB file locaizzato dal suo layout della lingua-base";
+
+/* Class = "NSButtonCell"; title = "Aggiorna il progetto da una nuova versione di questi files"; ObjectID = "54"; */
+"54.title" = "Aggiorna il progetto da una nuova versione di questi files";
+
+/* Class = "NSTextFieldCell"; title = "Seleziona la lingua da aggiornare:"; ObjectID = "56"; */
+"56.title" = "Seleziona la lingua da aggiornare:";
+
+/* Class = "NSTextFieldCell"; title = "Verifica i NIB file localizzati per assicurare che ogni layout sia corretto."; ObjectID = "59"; */
+"59.title" = "Verifica i NIB file localizzati per assicurare che ogni layout sia corretto.";
+
+/* Class = "NSButtonCell"; title = "Aggiorna NIB layout con layout importati"; ObjectID = "61"; */
+"61.title" = "Aggiorna NIB layout con layout importati";

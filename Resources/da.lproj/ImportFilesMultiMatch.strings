@@ -1,0 +1,9 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Kilde"; ObjectID = "8"; */
+"8.headerCell.title" = "Kilde";
+
+/* Class = "NSTableColumn"; headerCell.title = "Matcher projektarkivet"; ObjectID = "9"; */
+"9.headerCell.title" = "Matcher projektarkivet";
+
+/* Class = "NSTextFieldCell"; title = "De følgende arkiver har flere matches i projektet. Vælg det korresponderende projektarkiv for hver enkelt:"; ObjectID = "137"; */
+"137.title" = "De følgende arkiver har flere matches i projektet. Vælg det korresponderende projektarkiv for hver enkelt:";

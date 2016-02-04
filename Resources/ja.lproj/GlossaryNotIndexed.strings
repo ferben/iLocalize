@@ -1,0 +1,33 @@
+
+/* Class = "NSWindow"; title = "索引の無い用語集"; ObjectID = "5"; */
+"5.title" = "索引の無い用語集";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "43"; */
+"43.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "ローカル"; ObjectID = "44"; */
+"44.title" = "ローカル";
+
+/* Class = "NSMenuItem"; title = "グローバル"; ObjectID = "45"; */
+"45.title" = "グローバル";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "96"; */
+"96.title" = "OK";
+
+/* Class = "NSButtonCell"; title = "キャンセル"; ObjectID = "97"; */
+"97.title" = "キャンセル";
+
+/* Class = "NSTextFieldCell"; title = "この用語集は、iLocalize に設定されているどの用語集パスにも置かれていません。プロジェクトの翻訳にこの用語集を使用するためには、既に設定されている用語集パスに移動させるか、エイリアスを作成しなくてはなりません。"; ObjectID = "101"; */
+"101.title" = "この用語集は、iLocalize に設定されているどの用語集パスにも置かれていません。プロジェクトの翻訳にこの用語集を使用するためには、既に設定されている用語集パスに移動させるか、エイリアスを作成しなくてはなりません。";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "110"; */
+"110.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "用語集を移動"; ObjectID = "111"; */
+"111.title" = "用語集を移動";
+
+/* Class = "NSMenuItem"; title = "用語集のエイリアスを作成"; ObjectID = "112"; */
+"112.title" = "用語集のエイリアスを作成";
+
+/* Class = "NSTextFieldCell"; title = "の用語集パスに"; ObjectID = "115"; */
+"115.title" = "の用語集パスに";

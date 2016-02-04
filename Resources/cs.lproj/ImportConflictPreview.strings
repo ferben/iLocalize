@@ -1,0 +1,54 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Použít projekt"; ObjectID = "9"; */
+"9.headerCell.title" = "Použít projekt";
+
+/* Class = "NSTableColumn"; headerCell.title = "Použít zdroj"; ObjectID = "12"; */
+"12.headerCell.title" = "Použít zdroj";
+
+/* Class = "NSTableColumn"; headerCell.title = "Soubor"; ObjectID = "14"; */
+"14.headerCell.title" = "Soubor";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Tato volba vybere ze seznamu všech souborů ten zdrojový soubor"; ObjectID = "81"; */
+"81.ibShadowedToolTip" = "Tato volba vybere ze seznamu všech souborů ten zdrojový soubor";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Tato volba vybere ze seznamu všech souborů ten do projektu"; ObjectID = "82"; */
+"82.ibShadowedToolTip" = "Tato volba vybere ze seznamu všech souborů ten do projektu";
+
+/* Class = "NSTextFieldCell"; title = "Následující soubory nelze použít, protože je nelze spojit.\nVyberte každému z nich způsob spojení:"; ObjectID = "90"; */
+"90.title" = "Následující soubory nelze použít, protože je nelze spojit.\nVyberte každému z nich způsob spojení:";
+
+/* Class = "NSTextFieldCell"; title = "Dec 28, 2005, 11:03:20 AM"; ObjectID = "96"; */
+"96.title" = "Dec 28, 2005, 11:03:20 AM";
+
+/* Class = "NSTextFieldCell"; title = "Dec 28, 2005, 11:03:20 AM"; ObjectID = "97"; */
+"97.title" = "Dec 28, 2005, 11:03:20 AM";
+
+/* Class = "NSTextFieldCell"; title = "Dec 28, 2005, 11:03:20 AM"; ObjectID = "100"; */
+"100.title" = "Dec 28, 2005, 11:03:20 AM";
+
+/* Class = "NSTextFieldCell"; title = "Dec 28, 2005, 11:03:20 AM"; ObjectID = "104"; */
+"104.title" = "Dec 28, 2005, 11:03:20 AM";
+
+/* Class = "NSButtonCell"; title = "Celý zdroj"; ObjectID = "107"; */
+"107.title" = "Celý zdroj";
+
+/* Class = "NSButtonCell"; title = "Vše z projektu"; ObjectID = "108"; */
+"108.title" = "Vše z projektu";
+
+/* Class = "NSTextFieldCell"; title = "8"; ObjectID = "109"; */
+"109.title" = "8";
+
+/* Class = "NSTextFieldCell"; title = "Původní jazyk:"; ObjectID = "120"; */
+"120.title" = "Původní jazyk:";
+
+/* Class = "NSTextFieldCell"; title = "Projekt:"; ObjectID = "122"; */
+"122.title" = "Projekt:";
+
+/* Class = "NSTextFieldCell"; title = "Vytvořeno"; ObjectID = "124"; */
+"124.title" = "Vytvořeno";
+
+/* Class = "NSTextFieldCell"; title = "Změněno"; ObjectID = "126"; */
+"126.title" = "Změněno";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "129"; */
+"129.title" = "Box";

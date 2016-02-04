@@ -1,0 +1,45 @@
+
+/* Class = "NSWindow"; title = "Vyčistit"; ObjectID = "5"; */
+"5.title" = "Vyčistit";
+
+/* Class = "NSMenu"; title = "Jiný pohled"; ObjectID = "15"; */
+"15.title" = "Jiný pohled";
+
+/* Class = "NSMenuItem"; title = "Vybrané soubory"; ObjectID = "16"; */
+"16.title" = "Vybrané soubory";
+
+/* Class = "NSMenuItem"; title = "Vybraný jazyk"; ObjectID = "17"; */
+"17.title" = "Vybraný jazyk";
+
+/* Class = "NSMenuItem"; title = "Celý projekt"; ObjectID = "18"; */
+"18.title" = "Celý projekt";
+
+/* Class = "NSMenuItem"; title = "Vybrané řetězce"; ObjectID = "19"; */
+"19.title" = "Vybrané řetězce";
+
+/* Class = "NSButtonCell"; title = "Nahradit \" za “ (dvojitou uvozovku)"; ObjectID = "35"; */
+"35.title" = "Nahradit \" za “ (dvojitou uvozovku)";
+
+/* Class = "NSButtonCell"; title = "Nahradit ... za … (trojtečka)"; ObjectID = "36"; */
+"36.title" = "Nahradit ... za … (trojtečka)";
+
+/* Class = "NSButtonCell"; title = "Před tečkami zajistit nezalomenou mezeru"; ObjectID = "37"; */
+"37.title" = "Před tečkami zajistit nezalomenou mezeru";
+
+/* Class = "NSButtonCell"; title = "Odebrat mezery na konci řetězce"; ObjectID = "38"; */
+"38.title" = "Odebrat mezery na konci řetězce";
+
+/* Class = "NSButtonCell"; title = "Zrušit"; ObjectID = "39"; */
+"39.title" = "Zrušit";
+
+/* Class = "NSButtonCell"; title = "Vyčistit"; ObjectID = "40"; */
+"40.title" = "Vyčistit";
+
+/* Class = "NSTextFieldCell"; title = "Aplikovat na:"; ObjectID = "41"; */
+"41.title" = "Aplikovat na:";
+
+/* Class = "NSButtonCell"; title = "Upravené řetězce označit jako \"Ověřit\""; ObjectID = "44"; */
+"44.title" = "Upravené řetězce označit jako \"Ověřit\"";
+
+/* Class = "NSButtonCell"; title = "Nahradit ' za ’ (apostrof za jednoduchou uvozovku)"; ObjectID = "45"; */
+"45.title" = "Nahradit ' za ’ (apostrof za jednoduchou uvozovku)";

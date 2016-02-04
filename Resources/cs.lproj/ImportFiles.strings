@@ -1,0 +1,24 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Jazyk"; ObjectID = "14"; */
+"14.headerCell.title" = "Jazyk";
+
+/* Class = "NSButtonCell"; title = "Aktualizovat lokalizovaný jazyk podle těchto souborů"; ObjectID = "51"; */
+"51.title" = "Aktualizovat lokalizovaný jazyk podle těchto souborů";
+
+/* Class = "NSTextFieldCell"; title = "<do not localize - placeholder for file information >"; ObjectID = "52"; */
+"52.title" = "<do not localize - placeholder for file information >";
+
+/* Class = "NSButtonCell"; title = "Obnovit rozvržení každého lokalizovaného NIBu podle rozvržení jeho původního jazyka"; ObjectID = "53"; */
+"53.title" = "Obnovit rozvržení každého lokalizovaného NIBu podle rozvržení jeho původního jazyka";
+
+/* Class = "NSButtonCell"; title = "Aktualizovat projekt podle souborů nové verze"; ObjectID = "54"; */
+"54.title" = "Aktualizovat projekt podle souborů nové verze";
+
+/* Class = "NSTextFieldCell"; title = "Vyberte jazyk k aktualizaci:"; ObjectID = "56"; */
+"56.title" = "Vyberte jazyk k aktualizaci:";
+
+/* Class = "NSTextFieldCell"; title = "Ověřte lokalizované soubory NIB, má-li každý správné rozvržení."; ObjectID = "59"; */
+"59.title" = "Ověřte lokalizované soubory NIB, má-li každý správné rozvržení.";
+
+/* Class = "NSButtonCell"; title = "Aktualizovat rozvržení NIBů podle importovaných rozvržení"; ObjectID = "61"; */
+"61.title" = "Aktualizovat rozvržení NIBů podle importovaných rozvržení";

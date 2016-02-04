@@ -1,0 +1,66 @@
+
+/* Class = "NSWindow"; title = "Symboler"; ObjectID = "782"; */
+"782.title" = "Symboler";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "955"; */
+"955.title" = "Box";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "957"; */
+"957.title" = "Box";
+
+/* Class = "NSTextFieldCell"; title = "Check layout (kun XIB/NIB)"; ObjectID = "1777"; */
+"1777.title" = "Check layout (kun XIB/NIB)";
+
+/* Class = "NSTextFieldCell"; title = "Arkivindholdet skal arkiveres på disken"; ObjectID = "1781"; */
+"1781.title" = "Arkivindholdet skal arkiveres på disken";
+
+/* Class = "NSTextFieldCell"; title = "Arkivnavn i fed:"; ObjectID = "1782"; */
+"1782.title" = "Arkivnavn i fed:";
+
+/* Class = "NSTextFieldCell"; title = "Arkivet indeholder uoverensstemmelser"; ObjectID = "1790"; */
+"1790.title" = "Arkivet indeholder uoverensstemmelser";
+
+/* Class = "NSTextFieldCell"; title = "Arkivet findes ikke på disken"; ObjectID = "1792"; */
+"1792.title" = "Arkivet findes ikke på disken";
+
+/* Class = "NSTextFieldCell"; title = "Arkivindhold skal genindlæses fra disken"; ObjectID = "1794"; */
+"1794.title" = "Arkivindhold skal genindlæses fra disken";
+
+/* Class = "NSTextFieldCell"; title = "Arkivet er blevet tilføjet ved seneste opdatering"; ObjectID = "1797"; */
+"1797.title" = "Arkivet er blevet tilføjet ved seneste opdatering";
+
+/* Class = "NSTextFieldCell"; title = "Arkivet opdateret ved seneste operation"; ObjectID = "1798"; */
+"1798.title" = "Arkivet opdateret ved seneste operation";
+
+/* Class = "NSTextFieldCell"; title = "✒"; ObjectID = "1799"; */
+"1799.title" = "✒";
+
+/* Class = "NSTextFieldCell"; title = "Identificerer arkivet indeholdende de valgte strings (kun når flere arkiver er valgt)"; ObjectID = "1800"; */
+"1800.title" = "Identificerer arkivet indeholdende de valgte strings (kun når flere arkiver er valgt)";
+
+/* Class = "NSTextFieldCell"; title = "Arkivsymboler"; ObjectID = "1801"; */
+"1801.title" = "Arkivsymboler";
+
+/* Class = "NSTextFieldCell"; title = "Strings-symboler"; ObjectID = "1802"; */
+"1802.title" = "Strings-symboler";
+
+/* Class = "NSTextFieldCell"; title = "Auto-invariant"; ObjectID = "1804"; */
+"1804.title" = "Auto-invariant";
+
+/* Class = "NSTextFieldCell"; title = "Invariant"; ObjectID = "1806"; */
+"1806.title" = "Invariant";
+
+/* Class = "NSTextFieldCell"; title = "Auto-oversat"; ObjectID = "1807"; */
+"1807.title" = "Auto-oversat";
+
+/* Class = "NSTextFieldCell"; title = "Base ændret"; ObjectID = "1811"; */
+"1811.title" = "Base ændret";
+
+/* Class = "NSTextFieldCell"; title = "Skal oversættes"; ObjectID = "1813"; */
+"1813.title" = "Skal oversættes";
+
+/* Class = "NSTextFieldCell"; title = "Uoverensstemmelser"; ObjectID = "1816"; */
+"1816.title" = "Uoverensstemmelser";
+
+/* Class = "NSTextFieldCell"; title = "File has been updated during last update operation"; ObjectID = "hi2-yW-vJG"; */
+"hi2-yW-vJG.title" = "File has been updated during last update operation";

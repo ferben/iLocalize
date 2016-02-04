@@ -1,0 +1,39 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "Opdater base-sproget og rebaser alle andre sprog.\nAlle strings i de andre sprog bliver lokaliserede svarende til den aktuelle oversættelse."; ObjectID = "10"; */
+"10.ibShadowedToolTip" = "Opdater base-sproget og rebaser alle andre sprog.\nAlle strings i de andre sprog bliver lokaliserede svarende til den aktuelle oversættelse.";
+
+/* Class = "NSTextFieldCell"; title = "Vælg de(t) sprog du ønsker at opdatere:"; ObjectID = "151"; */
+"151.title" = "Vælg de(t) sprog du ønsker at opdatere:";
+
+/* Class = "NSButtonCell"; title = "Opdater projektet fra en ny version af pakken:"; ObjectID = "152"; */
+"152.title" = "Opdater projektet fra en ny version af pakken:";
+
+/* Class = "NSButtonCell"; title = "Nulstil layout for opdaterede, lokaliserede NIB-arkiver med base-sprogets layout"; ObjectID = "153"; */
+"153.title" = "Nulstil layout for opdaterede, lokaliserede NIB-arkiver med base-sprogets layout";
+
+/* Class = "NSButtonCell"; title = "Opdater projektets lokaliserede sprog med pakke:"; ObjectID = "154"; */
+"154.title" = "Opdater projektets lokaliserede sprog med pakke:";
+
+/* Class = "NSButtonCell"; title = "Opdater NIB-layouts med importerede layouts"; ObjectID = "155"; */
+"155.title" = "Opdater NIB-layouts med importerede layouts";
+
+/* Class = "NSTextFieldCell"; title = "Check lokaliserede NIB-arkiver for at sikre, at alle layouts er korrekte."; ObjectID = "156"; */
+"156.title" = "Check lokaliserede NIB-arkiver for at sikre, at alle layouts er korrekte.";
+
+/* Class = "NSButtonCell"; title = "Opret ikke-eksisterende lokaliseret arkiv fra base-sprog"; ObjectID = "158"; */
+"158.title" = "Opret ikke-eksisterende lokaliseret arkiv fra base-sprog";
+
+/* Class = "NSButtonCell"; title = "Kontroller"; ObjectID = "189"; */
+"189.title" = "Kontroller";
+
+/* Class = "NSButtonCell"; title = "Vælg…"; ObjectID = "203"; */
+"203.title" = "Vælg…";
+
+/* Class = "NSButtonCell"; title = "Vælg…"; ObjectID = "205"; */
+"205.title" = "Vælg…";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Vælg eller træk&anbring et bundle"; ObjectID = "213"; */
+"213.ibShadowedIsNilPlaceholder" = "Vælg eller træk&anbring et bundle";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Vælg eller træk&anbring et bundle"; ObjectID = "214"; */
+"214.ibShadowedIsNilPlaceholder" = "Vælg eller træk&anbring et bundle";

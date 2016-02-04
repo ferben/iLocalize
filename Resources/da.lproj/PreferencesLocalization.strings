@@ -1,0 +1,51 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "Behandl kontrol- og espace-tegn som identiske"; ObjectID = "330"; */
+"330.ibShadowedToolTip" = "Behandl kontrol- og espace-tegn som identiske";
+
+/* Class = "NSButtonCell"; title = "Ikke forskel på STORE/små bogstaver"; ObjectID = "474"; */
+"474.title" = "Ikke forskel på STORE/små bogstaver";
+
+/* Class = "NSTextFieldCell"; title = "Oversættelse:"; ObjectID = "476"; */
+"476.title" = "Oversættelse:";
+
+/* Class = "NSButtonCell"; title = "Skrivebeskyttet"; ObjectID = "482"; */
+"482.title" = "Skrivebeskyttet";
+
+/* Class = "NSTextFieldCell"; title = "Base-sprog:"; ObjectID = "483"; */
+"483.title" = "Base-sprog:";
+
+/* Class = "NSButtonCell"; title = "Ignorer kontrol-tegn"; ObjectID = "484"; */
+"484.title" = "Ignorer kontrol-tegn";
+
+/* Class = "NSTextFieldCell"; title = "Overfør oversættelse til:"; ObjectID = "491"; */
+"491.title" = "Overfør oversættelse til:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "494"; */
+"494.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Slået fra"; ObjectID = "495"; */
+"495.title" = "Slået fra";
+
+/* Class = "NSMenuItem"; title = "Automatisk i valgte arkiver"; ObjectID = "496"; */
+"496.title" = "Automatisk i valgte arkiver";
+
+/* Class = "NSMenuItem"; title = "Automatisk i alle arkiver"; ObjectID = "497"; */
+"497.title" = "Automatisk i alle arkiver";
+
+/* Class = "NSTextFieldCell"; title = "Tilstand:"; ObjectID = "501"; */
+"501.title" = "Tilstand:";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "503"; */
+"503.title" = "Radio";
+
+/* Class = "NSButtonCell"; title = "Udvikler"; ObjectID = "504"; */
+"504.title" = "Udvikler";
+
+/* Class = "NSButtonCell"; title = "Oversætter"; ObjectID = "509"; */
+"509.title" = "Oversætter";
+
+/* Class = "NSButtonCell"; title = "Reset Warnings"; ObjectID = "4qb-iu-nB5"; */
+"4qb-iu-nB5.title" = "Reset Warnings";
+
+/* Class = "NSTextFieldCell"; title = "Nulstil alle advarsler i dialoger:"; ObjectID = "UVZ-qQ-zdX"; */
+"UVZ-qQ-zdX.title" = "Nulstil alle advarsler i dialoger:";

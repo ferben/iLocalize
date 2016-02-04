@@ -1,0 +1,45 @@
+
+/* Class = "NSWindow"; title = "Normaliser"; ObjectID = "5"; */
+"5.title" = "Normaliser";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "15"; */
+"15.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Les fichiers sélectionnés"; ObjectID = "16"; */
+"16.title" = "Les fichiers sélectionnés";
+
+/* Class = "NSMenuItem"; title = "La langue sélectionnée"; ObjectID = "17"; */
+"17.title" = "La langue sélectionnée";
+
+/* Class = "NSMenuItem"; title = "Tout le projet"; ObjectID = "18"; */
+"18.title" = "Tout le projet";
+
+/* Class = "NSMenuItem"; title = "Les chaînes sélectionnées"; ObjectID = "19"; */
+"19.title" = "Les chaînes sélectionnées";
+
+/* Class = "NSButtonCell"; title = "Remplacer \" par “ (symbole second par le symbole guillemets)"; ObjectID = "35"; */
+"35.title" = "Remplacer \" par “ (symbole second par le symbole guillemets)";
+
+/* Class = "NSButtonCell"; title = "Remplacer … par … (ellipse)"; ObjectID = "36"; */
+"36.title" = "Remplacer … par … (ellipse)";
+
+/* Class = "NSButtonCell"; title = "Mettre un espace insécable avant une ponctuation"; ObjectID = "37"; */
+"37.title" = "Mettre un espace insécable avant une ponctuation";
+
+/* Class = "NSButtonCell"; title = "Supprimer les espaces inutiles en fin de chaîne de caractères"; ObjectID = "38"; */
+"38.title" = "Supprimer les espaces inutiles en fin de chaîne de caractères";
+
+/* Class = "NSButtonCell"; title = "Annuler"; ObjectID = "39"; */
+"39.title" = "Annuler";
+
+/* Class = "NSButtonCell"; title = "Normaliser"; ObjectID = "40"; */
+"40.title" = "Normaliser";
+
+/* Class = "NSTextFieldCell"; title = "Normaliser :"; ObjectID = "41"; */
+"41.title" = "Normaliser :";
+
+/* Class = "NSButtonCell"; title = "Marquer les chaînes modifiées comme devant être “à vérifier”"; ObjectID = "44"; */
+"44.title" = "Marquer les chaînes modifiées comme devant être “à vérifier”";
+
+/* Class = "NSButtonCell"; title = "Remplacer ' par ’ (symbole prime par le symbole apostrophe)"; ObjectID = "45"; */
+"45.title" = "Remplacer ' par ’ (symbole prime par le symbole apostrophe)";

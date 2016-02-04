@@ -1,0 +1,63 @@
+
+/* Class = "NSMenu"; title = "Jiný pohled"; ObjectID = "444"; */
+"444.title" = "Jiný pohled";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "445"; */
+"445.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "446"; */
+"446.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "447"; */
+"447.title" = "Item 1";
+
+/* Class = "NSTextFieldCell"; title = "Není vybrán žádný soubor"; ObjectID = "795"; */
+"795.title" = "Není vybrán žádný soubor";
+
+/* Class = "NSTextFieldCell"; title = "Nelze editovat"; ObjectID = "796"; */
+"796.title" = "Nelze editovat";
+
+/* Class = "NSButtonCell"; title = "Otevřít v externím editoru"; ObjectID = "797"; */
+"797.title" = "Otevřít v externím editoru";
+
+/* Class = "NSTextFieldCell"; title = "Nelze aplikovat"; ObjectID = "798"; */
+"798.title" = "Nelze aplikovat";
+
+/* Class = "NSTextFieldCell"; title = "Vynecháno"; ObjectID = "804"; */
+"804.title" = "Vynecháno";
+
+/* Class = "NSButtonCell"; title = "Otevřít v externím editoru"; ObjectID = "805"; */
+"805.title" = "Otevřít v externím editoru";
+
+/* Class = "NSWindow"; title = "Projekt"; ObjectID = "825"; */
+"825.title" = "Projekt";
+
+/* Class = "NSToolbarItem"; label = "Hledat"; ObjectID = "863"; */
+"863.label" = "Hledat";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Hledat"; ObjectID = "863"; */
+"863.paletteLabel" = "Hledat";
+
+/* Class = "NSToolbarItem"; label = "Průběh"; ObjectID = "864"; */
+"864.label" = "Průběh";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Průběh"; ObjectID = "864"; */
+"864.paletteLabel" = "Průběh";
+
+/* Class = "NSToolbarItem"; label = "Jazyk"; ObjectID = "884"; */
+"884.label" = "Jazyk";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Jazyk"; ObjectID = "884"; */
+"884.paletteLabel" = "Jazyk";
+
+/* Class = "NSToolbarItem"; label = "Slovníky"; ObjectID = "1152"; */
+"1152.label" = "Slovníky";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Slovníky"; ObjectID = "1152"; */
+"1152.paletteLabel" = "Slovníky";
+
+/* Class = "NSToolbarItem"; label = "Spustit"; ObjectID = "1157"; */
+"1157.label" = "Spustit";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Spustit"; ObjectID = "1157"; */
+"1157.paletteLabel" = "Spustit";

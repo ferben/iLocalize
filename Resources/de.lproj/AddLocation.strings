@@ -1,0 +1,24 @@
+
+/* Class = "NSWindow"; title = "Ziel hinzufügen"; ObjectID = "6"; */
+"6.title" = "Ziel hinzufügen";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "7"; */
+"7.title" = "Item3";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "8"; */
+"8.title" = "Item2";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "9"; */
+"9.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Objekt1"; ObjectID = "11"; */
+"11.title" = "Objekt1";
+
+/* Class = "NSTextFieldCell"; title = "Wählen Sie einen Zielordner für die neue(n) Datei(en):"; ObjectID = "21"; */
+"21.title" = "Wählen Sie einen Zielordner für die neue(n) Datei(en):";
+
+/* Class = "NSButtonCell"; title = "Abbrechen"; ObjectID = "22"; */
+"22.title" = "Abbrechen";
+
+/* Class = "NSButtonCell"; title = "Hinzufügen"; ObjectID = "23"; */
+"23.title" = "Hinzufügen";

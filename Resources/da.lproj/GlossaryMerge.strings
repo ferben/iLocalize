@@ -1,0 +1,30 @@
+
+/* Class = "NSWindow"; title = "Flet"; ObjectID = "5"; */
+"5.title" = "Flet";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "8"; */
+"8.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "9"; */
+"9.title" = "Item2";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "10"; */
+"10.title" = "Item1";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "11"; */
+"11.title" = "Item3";
+
+/* Class = "NSTextFieldCell"; title = "Ind i denne ordbog:"; ObjectID = "37"; */
+"37.title" = "Ind i denne ordbog:";
+
+/* Class = "NSButtonCell"; title = "Flet"; ObjectID = "38"; */
+"38.title" = "Flet";
+
+/* Class = "NSTextFieldCell"; title = "Flet følgende ordbøger:"; ObjectID = "39"; */
+"39.title" = "Flet følgende ordbøger:";
+
+/* Class = "NSButtonCell"; title = "Annuller"; ObjectID = "40"; */
+"40.title" = "Annuller";
+
+/* Class = "NSButtonCell"; title = "Fjern dubletter"; ObjectID = "41"; */
+"41.title" = "Fjern dubletter";

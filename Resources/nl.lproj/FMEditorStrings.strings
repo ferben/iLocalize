@@ -1,0 +1,108 @@
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "5"; */
+"5.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "Converteer stuurtekens naar escape-opeenvolgingen"; ObjectID = "6"; */
+"6.title" = "Converteer stuurtekens naar escape-opeenvolgingen";
+
+/* Class = "NSMenuItem"; title = "Converteer escape-opeenvolgingen naar stuurtekens"; ObjectID = "8"; */
+"8.title" = "Converteer escape-opeenvolgingen naar stuurtekens";
+
+/* Class = "NSTableColumn"; headerCell.title = "Status"; ObjectID = "11"; */
+"11.headerCell.title" = "Status";
+
+/* Class = "NSTableColumn"; headerCell.title = "Sleutel"; ObjectID = "14"; */
+"14.headerCell.title" = "Sleutel";
+
+/* Class = "NSTableColumn"; headerCell.title = "Vertaling"; ObjectID = "23"; */
+"23.headerCell.title" = "Vertaling";
+
+/* Class = "NSMenuItem"; title = "Wis opmerking vertaling"; ObjectID = "35"; */
+"35.title" = "Wis opmerking vertaling";
+
+/* Class = "NSMenuItem"; title = "Wis opmerking basis"; ObjectID = "36"; */
+"36.title" = "Wis opmerking basis";
+
+/* Class = "NSMenuItem"; title = "Verwissel basis en vertaling"; ObjectID = "37"; */
+"37.title" = "Verwissel basis en vertaling";
+
+/* Class = "NSMenuItem"; title = "Wis opmerking"; ObjectID = "41"; */
+"41.title" = "Wis opmerking";
+
+/* Class = "NSMenuItem"; title = "Keur goed"; ObjectID = "42"; */
+"42.title" = "Keur goed";
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "43"; */
+"43.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "Kopieer basis naar vertaling"; ObjectID = "45"; */
+"45.title" = "Kopieer basis naar vertaling";
+
+/* Class = "NSTableColumn"; headerCell.title = "Basis"; ObjectID = "98"; */
+"98.headerCell.title" = "Basis";
+
+/* Class = "NSMenuItem"; title = "Keur identieke tekst in geselecteerde bestanden goed"; ObjectID = "139"; */
+"139.title" = "Keur identieke tekst in geselecteerde bestanden goed";
+
+/* Class = "NSMenuItem"; title = "Gebruik dezelfde vertaling voor identieke strings in geselecteerde bestanden"; ObjectID = "140"; */
+"140.title" = "Gebruik dezelfde vertaling voor identieke strings in geselecteerde bestanden";
+
+/* Class = "NSMenuItem"; title = "Keur identieke tekst in alle bestanden goed"; ObjectID = "144"; */
+"144.title" = "Keur identieke tekst in alle bestanden goed";
+
+/* Class = "NSMenuItem"; title = "Gebruik dezelfde vertaling voor identieke strings in alle bestanden"; ObjectID = "146"; */
+"146.title" = "Gebruik dezelfde vertaling voor identieke strings in alle bestanden";
+
+/* Class = "NSMenuItem"; title = "Wis vertaling"; ObjectID = "202"; */
+"202.title" = "Wis vertaling";
+
+/* Class = "NSTableColumn"; headerCell.title = "Labels"; ObjectID = "209"; */
+"209.headerCell.title" = "Labels";
+
+/* Class = "NSMenuItem"; title = "Labels"; ObjectID = "218"; */
+"218.title" = "Labels";
+
+/* Class = "NSMenuItem"; title = "Markeer als vertaald"; ObjectID = "253"; */
+"253.title" = "Markeer als vertaald";
+
+/* Class = "NSMenuItem"; title = "Verwijder markering vertaald"; ObjectID = "255"; */
+"255.title" = "Verwijder markering vertaald";
+
+/* Class = "NSTextFieldCell"; title = "Geen string"; ObjectID = "395"; */
+"395.title" = "Geen string";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "398"; */
+"398.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "399"; */
+"399.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "400"; */
+"400.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "401"; */
+"401.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Vergrendel"; ObjectID = "470"; */
+"470.title" = "Vergrendel";
+
+/* Class = "NSMenuItem"; title = "Toon tekstzone"; ObjectID = "488"; */
+"488.title" = "Toon tekstzone";
+
+/* Class = "NSMenuItem"; title = "Toon kolom Sleutel"; ObjectID = "489"; */
+"489.title" = "Toon kolom Sleutel";
+
+/* Class = "NSTableColumn"; headerCell.title = "Basis"; ObjectID = "496"; */
+"496.headerCell.title" = "Basis";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "497"; */
+"497.title" = "Text Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "Sleutel"; ObjectID = "502"; */
+"502.headerCell.title" = "Sleutel";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "503"; */
+"503.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Update in woordenlijst…"; ObjectID = "530"; */
+"530.title" = "Update in woordenlijst…";

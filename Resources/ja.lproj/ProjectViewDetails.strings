@@ -1,0 +1,12 @@
+
+/* Class = "NSButtonCell"; ibExternalAccessibilityDescription = "用語集表示"; ObjectID = "52"; */
+"52.ibExternalAccessibilityDescription" = "用語集表示";
+
+/* Class = "NSButtonCell"; ibExternalAccessibilityDescription = "文字列情報表示"; ObjectID = "53"; */
+"53.ibExternalAccessibilityDescription" = "文字列情報表示";
+
+/* Class = "NSButtonCell"; ibExternalAccessibilityDescription = "代替翻訳表示"; ObjectID = "55"; */
+"55.ibExternalAccessibilityDescription" = "代替翻訳表示";
+
+/* Class = "NSButtonCell"; ibExternalAccessibilityDescription = "ファイル情報表示"; ObjectID = "74"; */
+"74.ibExternalAccessibilityDescription" = "ファイル情報表示";

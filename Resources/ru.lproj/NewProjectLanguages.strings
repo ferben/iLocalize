@@ -1,0 +1,27 @@
+
+/* Class = "NSTextFieldCell"; title = "Выберите языки для импорта:"; ObjectID = "639"; */
+"639.title" = "Выберите языки для импорта:";
+
+/* Class = "NSTextFieldCell"; title = "Базовый язык:"; ObjectID = "790"; */
+"790.title" = "Базовый язык:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "793"; */
+"793.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "794"; */
+"794.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "795"; */
+"795.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "796"; */
+"796.title" = "Item 3";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Если установлен этот параметр, любой базовый языковой файл, который не имеет соответствующих локализованных файлов, будет скопирован в этот язык локализации."; ObjectID = "807"; */
+"807.ibShadowedToolTip" = "Если установлен этот параметр, любой базовый языковой файл, который не имеет соответствующих локализованных файлов, будет скопирован в этот язык локализации.";
+
+/* Class = "NSButtonCell"; title = "Создать несуществующие файлы локализации из базового языка"; ObjectID = "808"; */
+"808.title" = "Создать несуществующие файлы локализации из базового языка";
+
+/* Class = "NSButtonCell"; title = "Check"; ObjectID = "825"; */
+"825.title" = "Check";

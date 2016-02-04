@@ -1,0 +1,18 @@
+
+/* Class = "NSWindow"; title = "Window"; ObjectID = "1"; */
+"1.title" = "Window";
+
+/* Class = "NSButtonCell"; title = "Oversæt valgte arkiver"; ObjectID = "4"; */
+"4.title" = "Oversæt valgte arkiver";
+
+/* Class = "NSButtonCell"; title = "Kontroller"; ObjectID = "14"; */
+"14.title" = "Kontroller";
+
+/* Class = "NSTextFieldCell"; title = "Vælg de ordbøger der skal bruges i oversættelsen:"; ObjectID = "20"; */
+"20.title" = "Vælg de ordbøger der skal bruges i oversættelsen:";
+
+/* Class = "NSButtonCell"; title = "Annuller"; ObjectID = "23"; */
+"23.title" = "Annuller";
+
+/* Class = "NSButtonCell"; title = "Oversæt alle arkiver"; ObjectID = "25"; */
+"25.title" = "Oversæt alle arkiver";

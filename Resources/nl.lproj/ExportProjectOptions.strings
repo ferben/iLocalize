@@ -1,0 +1,72 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "Compact maken van NIB-bestanden beperkt de grootte van de NIB-bestanden maar voorkomt ook dat ze nog vertaald kunnen worden of geopend in Interface Builder."; ObjectID = "26"; */
+"26.ibShadowedToolTip" = "Compact maken van NIB-bestanden beperkt de grootte van de NIB-bestanden maar voorkomt ook dat ze nog vertaald kunnen worden of geopend in Interface Builder.";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Open het standaard e-mailprogramma en voeg het geëxporteerde bestand toe aan een nieuwe, lege e-mail"; ObjectID = "77"; */
+"77.ibShadowedToolTip" = "Open het standaard e-mailprogramma en voeg het geëxporteerde bestand toe aan een nieuwe, lege e-mail";
+
+/* Class = "NSButtonCell"; title = "Maak compacte NIB-bestanden"; ObjectID = "170"; */
+"170.title" = "Maak compacte NIB-bestanden";
+
+/* Class = "NSButtonCell"; title = "Zip geëxporteerd project"; ObjectID = "177"; */
+"177.title" = "Zip geëxporteerd project";
+
+/* Class = "NSButtonCell"; title = "Maak automatisch een e-mail aan in Mail"; ObjectID = "178"; */
+"178.title" = "Maak automatisch een e-mail aan in Mail";
+
+/* Class = "NSTextFieldCell"; title = "Aan:"; ObjectID = "219"; */
+"219.title" = "Aan:";
+
+/* Class = "NSTextFieldCell"; title = "Bericht:"; ObjectID = "221"; */
+"221.title" = "Bericht:";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Exporteer alleen taalmappen (lproj)"; ObjectID = "253"; */
+"253.ibShadowedToolTip" = "Exporteer alleen taalmappen (lproj)";
+
+/* Class = "NSButtonCell"; title = "Exporteer alleen taalmappen"; ObjectID = "254"; */
+"254.title" = "Exporteer alleen taalmappen";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Exporteer het project als een map die de Finder kan openen, in plaats van met de oorspronkelijke bundelextensie"; ObjectID = "256"; */
+"256.ibShadowedToolTip" = "Exporteer het project als een map die de Finder kan openen, in plaats van met de oorspronkelijke bundelextensie";
+
+/* Class = "NSButtonCell"; title = "Exporteer als map"; ObjectID = "257"; */
+"257.title" = "Exporteer als map";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Exporteer alleen taalmappen (lproj)"; ObjectID = "262"; */
+"262.ibShadowedToolTip" = "Exporteer alleen taalmappen (lproj)";
+
+/* Class = "NSButtonCell"; title = "Inclusief versie"; ObjectID = "263"; */
+"263.title" = "Inclusief versie";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Exporteer alleen taalmappen (lproj)"; ObjectID = "265"; */
+"265.ibShadowedToolTip" = "Exporteer alleen taalmappen (lproj)";
+
+/* Class = "NSButtonCell"; title = "Inclusief namen van geëxporteerde talen"; ObjectID = "266"; */
+"266.title" = "Inclusief namen van geëxporteerde talen";
+
+/* Class = "NSTextFieldCell"; title = "<uitvoernaam-voorbeeld>"; ObjectID = "278"; */
+"278.title" = "<uitvoernaam-voorbeeld>";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Compact maken van NIB-bestanden beperkt de grootte van de NIB-bestanden maar voorkomt ook dat ze nog vertaald kunnen worden of geopend in Interface Builder."; ObjectID = "287"; */
+"287.ibShadowedToolTip" = "Compact maken van NIB-bestanden beperkt de grootte van de NIB-bestanden maar voorkomt ook dat ze nog vertaald kunnen worden of geopend in Interface Builder.";
+
+/* Class = "NSButtonCell"; title = "Converteer NIB- naar XIB-bestanden"; ObjectID = "288"; */
+"288.title" = "Converteer NIB- naar XIB-bestanden";
+
+/* Class = "NSBox"; title = "Uitvoerstructuur"; ObjectID = "4LP-Rt-bQH"; */
+"4LP-Rt-bQH.title" = "Uitvoerstructuur";
+
+/* Class = "NSBox"; title = "Nabewerking"; ObjectID = "O8e-tz-Pid"; */
+"O8e-tz-Pid.title" = "Nabewerking";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Voer het e-mailadres van de ontvanger in"; ObjectID = "d1S-np-O0Q"; */
+"d1S-np-O0Q.ibShadowedIsNilPlaceholder" = "Voer het e-mailadres van de ontvanger in";
+
+/* Class = "NSTextFieldCell"; title = "Onderwerp:"; ObjectID = "dgD-W1-lcF"; */
+"dgD-W1-lcF.title" = "Onderwerp:";
+
+/* Class = "NSBox"; title = "Uitvoernaam"; ObjectID = "hzV-oN-mXT"; */
+"hzV-oN-mXT.title" = "Uitvoernaam";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Voer het onderwerp van de e-mail in"; ObjectID = "jbL-CX-1Zi"; */
+"jbL-CX-1Zi.ibShadowedIsNilPlaceholder" = "Voer het onderwerp van de e-mail in";

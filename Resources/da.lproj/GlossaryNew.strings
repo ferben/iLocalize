@@ -1,0 +1,54 @@
+
+/* Class = "NSWindow"; title = "Ny ordbog"; ObjectID = "5"; */
+"5.title" = "Ny ordbog";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "9"; */
+"9.title" = "Item2";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "10"; */
+"10.title" = "Item1";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "11"; */
+"11.title" = "Item3";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "12"; */
+"12.title" = "OtherViews";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "41"; */
+"41.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Valgte strings"; ObjectID = "42"; */
+"42.title" = "Valgte strings";
+
+/* Class = "NSMenuItem"; title = "Alle arkiver"; ObjectID = "43"; */
+"43.title" = "Alle arkiver";
+
+/* Class = "NSMenuItem"; title = "Valgte arkiver"; ObjectID = "45"; */
+"45.title" = "Valgte arkiver";
+
+/* Class = "NSTextFieldCell"; title = "Ordbogsnavn:"; ObjectID = "71"; */
+"71.title" = "Ordbogsnavn:";
+
+/* Class = "NSTextFieldCell"; title = "Tilgængelig i:"; ObjectID = "72"; */
+"72.title" = "Tilgængelig i:";
+
+/* Class = "NSTextFieldCell"; title = "Medtag:"; ObjectID = "75"; */
+"75.title" = "Medtag:";
+
+/* Class = "NSButtonCell"; title = "Opret"; ObjectID = "77"; */
+"77.title" = "Opret";
+
+/* Class = "NSButtonCell"; title = "Annuller"; ObjectID = "78"; */
+"78.title" = "Annuller";
+
+/* Class = "NSTextFieldCell"; title = "Tilføj strings fra:"; ObjectID = "79"; */
+"79.title" = "Tilføj strings fra:";
+
+/* Class = "NSButtonCell"; title = "Overstatte Strings"; ObjectID = "82"; */
+"82.title" = "Overstatte Strings";
+
+/* Class = "NSButtonCell"; title = "Ikke oversatte Strings"; ObjectID = "83"; */
+"83.title" = "Ikke oversatte Strings";
+
+/* Class = "NSButtonCell"; title = "Låste Strings"; ObjectID = "84"; */
+"84.title" = "Låste Strings";

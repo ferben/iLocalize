@@ -1,0 +1,12 @@
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "10"; */
+"10.title" = "Text Cell";
+
+/* Class = "NSButtonCell"; title = "Скопировать в буфер обмена"; ObjectID = "12"; */
+"12.title" = "Скопировать в буфер обмена";
+
+/* Class = "NSButtonCell"; title = "Показать в Finder"; ObjectID = "14"; */
+"14.title" = "Показать в Finder";
+
+/* Class = "NSTextFieldCell"; title = "Обнаружены следующие проблемы, которые требуют вашего вмешательства:"; ObjectID = "24"; */
+"24.title" = "Обнаружены следующие проблемы, которые требуют вашего вмешательства:";

@@ -1,0 +1,15 @@
+
+/* Class = "NSWindow"; title = "Ověřit projekt"; ObjectID = "5"; */
+"5.title" = "Ověřit projekt";
+
+/* Class = "NSTextFieldCell"; title = "Ověřit nesrovnalosti v následujících jazycích:"; ObjectID = "34"; */
+"34.title" = "Ověřit nesrovnalosti v následujících jazycích:";
+
+/* Class = "NSButtonCell"; title = "Zrušit"; ObjectID = "35"; */
+"35.title" = "Zrušit";
+
+/* Class = "NSButtonCell"; title = "Ověřit"; ObjectID = "36"; */
+"36.title" = "Ověřit";
+
+/* Class = "NSButtonCell"; title = "Ověřit"; ObjectID = "51"; */
+"51.title" = "Ověřit";

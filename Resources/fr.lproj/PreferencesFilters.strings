@@ -1,0 +1,42 @@
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "6"; */
+"6.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "Clé"; ObjectID = "7"; */
+"7.title" = "Clé";
+
+/* Class = "NSMenuItem"; title = "Commentaires"; ObjectID = "8"; */
+"8.title" = "Commentaires";
+
+/* Class = "NSMenuItem"; title = "Valeurs"; ObjectID = "9"; */
+"9.title" = "Valeurs";
+
+/* Class = "NSMenuItem"; title = "Tout"; ObjectID = "10"; */
+"10.title" = "Tout";
+
+/* Class = "NSTableColumn"; headerCell.title = "Élément"; ObjectID = "14"; */
+"14.headerCell.title" = "Élément";
+
+/* Class = "NSTableColumn"; headerCell.title = "Activer"; ObjectID = "16"; */
+"16.headerCell.title" = "Activer";
+
+/* Class = "NSTableColumn"; headerCell.title = "Expression régulière"; ObjectID = "18"; */
+"18.headerCell.title" = "Expression régulière";
+
+/* Class = "NSButtonCell"; title = "Les chaînes ne contenant aucune lettre"; ObjectID = "153"; */
+"153.title" = "Les chaînes ne contenant aucune lettre";
+
+/* Class = "NSButtonCell"; title = "Les chaînes ne contenant qu'une seule lettre"; ObjectID = "154"; */
+"154.title" = "Les chaînes ne contenant qu'une seule lettre";
+
+/* Class = "NSTextFieldCell"; title = "Ignorer :"; ObjectID = "155"; */
+"155.title" = "Ignorer :";
+
+/* Class = "NSTextFieldCell"; title = "Correspondant au moins à l’une des expressions régulières suivantes :"; ObjectID = "156"; */
+"156.title" = "Correspondant au moins à l’une des expressions régulières suivantes :";
+
+/* Class = "NSButtonCell"; title = "Les chaînes vides dans la langue de référence"; ObjectID = "161"; */
+"161.title" = "Les chaînes vides dans la langue de référence";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "162"; */
+"162.title" = "Text Cell";

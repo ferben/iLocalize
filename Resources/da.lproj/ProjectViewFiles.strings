@@ -1,0 +1,114 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Status"; ObjectID = "31"; */
+"31.headerCell.title" = "Status";
+
+/* Class = "NSTableColumn"; headerCell.title = "Type"; ObjectID = "32"; */
+"32.headerCell.title" = "Type";
+
+/* Class = "NSTableColumn"; headerCell.title = "Arkiv"; ObjectID = "33"; */
+"33.headerCell.title" = "Arkiv";
+
+/* Class = "NSTableColumn"; headerCell.title = "Indhold"; ObjectID = "104"; */
+"104.headerCell.title" = "Indhold";
+
+/* Class = "NSMenuItem"; title = "Arkiver"; ObjectID = "264"; */
+"264.title" = "Arkiver";
+
+/* Class = "NSMenuItem"; title = "Vis i Finder"; ObjectID = "265"; */
+"265.title" = "Vis i Finder";
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "266"; */
+"266.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "Åbn i ekstern editor"; ObjectID = "267"; */
+"267.title" = "Åbn i ekstern editor";
+
+/* Class = "NSMenuItem"; title = "Slet"; ObjectID = "278"; */
+"278.title" = "Slet";
+
+/* Class = "NSMenuItem"; title = "Godkend"; ObjectID = "323"; */
+"323.title" = "Godkend";
+
+/* Class = "NSMenuItem"; title = "Genopbyg fra English"; ObjectID = "336"; */
+"336.title" = "Genopbyg fra English";
+
+/* Class = "NSMenuItem"; title = "Genindlæs"; ObjectID = "378"; */
+"378.title" = "Genindlæs";
+
+/* Class = "NSMenuItem"; title = "Konverter linjeskift…"; ObjectID = "397"; */
+"397.title" = "Konverter linjeskift…";
+
+/* Class = "NSMenuItem"; title = "Eksporter strings…"; ObjectID = "434"; */
+"434.title" = "Eksporter strings…";
+
+/* Class = "NSMenuItem"; title = "Opdater strings…"; ObjectID = "436"; */
+"436.title" = "Opdater strings…";
+
+/* Class = "NSMenuItem"; title = "Vis advarsel…"; ObjectID = "541"; */
+"541.title" = "Vis advarsel…";
+
+/* Class = "NSMenuItem"; title = "Slet symbol for opdateret arkiv"; ObjectID = "544"; */
+"544.title" = "Slet symbol for opdateret arkiv";
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "559"; */
+"559.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "Arkiv"; ObjectID = "560"; */
+"560.title" = "Arkiv";
+
+/* Class = "NSMenuItem"; title = "Type"; ObjectID = "561"; */
+"561.title" = "Type";
+
+/* Class = "NSMenuItem"; title = "Indhold"; ObjectID = "563"; */
+"563.title" = "Indhold";
+
+/* Class = "NSMenuItem"; title = "Status"; ObjectID = "564"; */
+"564.title" = "Status";
+
+/* Class = "NSMenuItem"; title = "Kodning"; ObjectID = "580"; */
+"580.title" = "Kodning";
+
+/* Class = "NSTableColumn"; headerCell.title = "Mærker"; ObjectID = "583"; */
+"583.headerCell.title" = "Mærker";
+
+/* Class = "NSMenuItem"; title = "Mærker"; ObjectID = "587"; */
+"587.title" = "Mærker";
+
+/* Class = "NSMenuItem"; title = "Mærker"; ObjectID = "593"; */
+"593.title" = "Mærker";
+
+/* Class = "NSMenuItem"; title = "Ignorer"; ObjectID = "596"; */
+"596.title" = "Ignorer";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "809"; */
+"809.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "810"; */
+"810.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "811"; */
+"811.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "812"; */
+"812.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "815"; */
+"815.title" = "Text Cell";
+
+/* Class = "NSButtonCell"; title = "Oversæt kun, hvis string er forskellig fra base-string"; ObjectID = "1145"; */
+"1145.title" = "Oversæt kun, hvis string er forskellig fra base-string";
+
+/* Class = "NSTableColumn"; headerCell.title = "Tilstand"; ObjectID = "1160"; */
+"1160.headerCell.title" = "Tilstand";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "1161"; */
+"1161.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Tilstand"; ObjectID = "1163"; */
+"1163.title" = "Tilstand";
+
+/* Class = "NSMenuItem"; title = "Åbn forrige & nuværende i ekstern editor"; ObjectID = "1173"; */
+"1173.title" = "Åbn forrige & nuværende i ekstern editor";
+
+/* Class = "NSMenuItem"; title = "Diff mod tidligere"; ObjectID = "1174"; */
+"1174.title" = "Diff mod tidligere";

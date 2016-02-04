@@ -1,0 +1,33 @@
+
+/* Class = "NSWindow"; title = "Słownik nie został zindeksowany"; ObjectID = "5"; */
+"5.title" = "Słownik nie został zindeksowany";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "43"; */
+"43.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Lokalne"; ObjectID = "44"; */
+"44.title" = "Lokalne";
+
+/* Class = "NSMenuItem"; title = "Globalne"; ObjectID = "45"; */
+"45.title" = "Globalne";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "96"; */
+"96.title" = "OK";
+
+/* Class = "NSButtonCell"; title = "Anuluj"; ObjectID = "97"; */
+"97.title" = "Anuluj";
+
+/* Class = "NSTextFieldCell"; title = "Słownik ten zlokalizowany jest w nieznanej ścieżce słowników iLocalize. Aby korzystać z tego słownika podczas tłumaczenia projektu, musi być przeniesiony lub dodany skrót do ścieżki słowniów."; ObjectID = "101"; */
+"101.title" = "Słownik ten zlokalizowany jest w nieznanej ścieżce słowników iLocalize. Aby korzystać z tego słownika podczas tłumaczenia projektu, musi być przeniesiony lub dodany skrót do ścieżki słowniów.";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "110"; */
+"110.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Przenieś do słownika"; ObjectID = "111"; */
+"111.title" = "Przenieś do słownika";
+
+/* Class = "NSMenuItem"; title = "Utwórz skrót do słownika"; ObjectID = "112"; */
+"112.title" = "Utwórz skrót do słownika";
+
+/* Class = "NSTextFieldCell"; title = "w ścieżce słownika"; ObjectID = "115"; */
+"115.title" = "w ścieżce słownika";

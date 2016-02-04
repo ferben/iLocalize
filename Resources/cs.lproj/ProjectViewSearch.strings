@@ -1,0 +1,15 @@
+
+/* Class = "NSButtonCell"; title = "Uložit"; ObjectID = "14"; */
+"14.title" = "Uložit";
+
+/* Class = "NSTextFieldCell"; placeholderString = "Vložte řetězec, který chcete nahradit"; ObjectID = "28"; */
+"28.placeholderString" = "Vložte řetězec, který chcete nahradit";
+
+/* Class = "NSButtonCell"; title = "Nahradit"; ObjectID = "30"; */
+"30.title" = "Nahradit";
+
+/* Class = "NSButtonCell"; title = "Nahradit vše"; ObjectID = "33"; */
+"33.title" = "Nahradit vše";
+
+/* Class = "NSTextFieldCell"; title = "Rozsah:"; ObjectID = "98"; */
+"98.title" = "Rozsah:";

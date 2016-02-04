@@ -1,0 +1,51 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "Ovládací znaky a znaky změn považovat za stejné"; ObjectID = "330"; */
+"330.ibShadowedToolTip" = "Ovládací znaky a znaky změn považovat za stejné";
+
+/* Class = "NSButtonCell"; title = "Ignorovat velikost písmen"; ObjectID = "474"; */
+"474.title" = "Ignorovat velikost písmen";
+
+/* Class = "NSTextFieldCell"; title = "Obecné:"; ObjectID = "476"; */
+"476.title" = "Obecné:";
+
+/* Class = "NSButtonCell"; title = "Jen pro čtení"; ObjectID = "482"; */
+"482.title" = "Jen pro čtení";
+
+/* Class = "NSTextFieldCell"; title = "Původní jazyk:"; ObjectID = "483"; */
+"483.title" = "Původní jazyk:";
+
+/* Class = "NSButtonCell"; title = "Vynechat ovládací znaky"; ObjectID = "484"; */
+"484.title" = "Vynechat ovládací znaky";
+
+/* Class = "NSTextFieldCell"; title = "Rozšířit překlad :"; ObjectID = "491"; */
+"491.title" = "Rozšířit překlad :";
+
+/* Class = "NSMenu"; title = "Jiný pohled"; ObjectID = "494"; */
+"494.title" = "Jiný pohled";
+
+/* Class = "NSMenuItem"; title = "Vypnuto"; ObjectID = "495"; */
+"495.title" = "Vypnuto";
+
+/* Class = "NSMenuItem"; title = "Automaticky do vybraných souborů"; ObjectID = "496"; */
+"496.title" = "Automaticky do vybraných souborů";
+
+/* Class = "NSMenuItem"; title = "Automaticky do všech souborů"; ObjectID = "497"; */
+"497.title" = "Automaticky do všech souborů";
+
+/* Class = "NSTextFieldCell"; title = "Režim:"; ObjectID = "501"; */
+"501.title" = "Režim:";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "503"; */
+"503.title" = "Radio";
+
+/* Class = "NSButtonCell"; title = "Vývojář"; ObjectID = "504"; */
+"504.title" = "Vývojář";
+
+/* Class = "NSButtonCell"; title = "Překladatel"; ObjectID = "509"; */
+"509.title" = "Překladatel";
+
+/* Class = "NSButtonCell"; title = "Reset Warnings"; ObjectID = "4qb-iu-nB5"; */
+"4qb-iu-nB5.title" = "Reset Warnings";
+
+/* Class = "NSTextFieldCell"; title = "Dialogová varování:"; ObjectID = "UVZ-qQ-zdX"; */
+"UVZ-qQ-zdX.title" = "Dialogová varování:";

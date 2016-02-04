@@ -1,0 +1,66 @@
+
+/* Class = "NSWindow"; title = "Symboles"; ObjectID = "782"; */
+"782.title" = "Symboles";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "955"; */
+"955.title" = "Box";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "957"; */
+"957.title" = "Box";
+
+/* Class = "NSTextFieldCell"; title = "Fichier dont la mise en page doit être vérifiée (XIB/NIB seulement)"; ObjectID = "1777"; */
+"1777.title" = "Fichier dont la mise en page doit être vérifiée (XIB/NIB seulement)";
+
+/* Class = "NSTextFieldCell"; title = "Le contenu du fichier doit être enregistré sur le disque"; ObjectID = "1781"; */
+"1781.title" = "Le contenu du fichier doit être enregistré sur le disque";
+
+/* Class = "NSTextFieldCell"; title = "Nom du fichier en gras :"; ObjectID = "1782"; */
+"1782.title" = "Nom du fichier en gras :";
+
+/* Class = "NSTextFieldCell"; title = "Fichier comportant des incohérences"; ObjectID = "1790"; */
+"1790.title" = "Fichier comportant des incohérences";
+
+/* Class = "NSTextFieldCell"; title = "Fichier n'existant pas sur le disque"; ObjectID = "1792"; */
+"1792.title" = "Fichier n'existant pas sur le disque";
+
+/* Class = "NSTextFieldCell"; title = "Fichier dont le contenu est ou doit être rechargé depuis le disque"; ObjectID = "1794"; */
+"1794.title" = "Fichier dont le contenu est ou doit être rechargé depuis le disque";
+
+/* Class = "NSTextFieldCell"; title = "Fichier ajouté lors de la dernière mise à jour du projet"; ObjectID = "1797"; */
+"1797.title" = "Fichier ajouté lors de la dernière mise à jour du projet";
+
+/* Class = "NSTextFieldCell"; title = "Fichier mis à jour lors de la dernière mise à jour du projet"; ObjectID = "1798"; */
+"1798.title" = "Fichier mis à jour lors de la dernière mise à jour du projet";
+
+/* Class = "NSTextFieldCell"; title = "✒"; ObjectID = "1799"; */
+"1799.title" = "✒";
+
+/* Class = "NSTextFieldCell"; title = "Identifie le fichier contenant la chaîne sélectionnée (uniquement lorsque plusieurs fichiers sont sélectionnés)"; ObjectID = "1800"; */
+"1800.title" = "Identifie le fichier contenant la chaîne sélectionnée (uniquement lorsque plusieurs fichiers sont sélectionnés)";
+
+/* Class = "NSTextFieldCell"; title = "Symboles associés aux fichiers"; ObjectID = "1801"; */
+"1801.title" = "Symboles associés aux fichiers";
+
+/* Class = "NSTextFieldCell"; title = "Symboles associés aux chaînes de caractères"; ObjectID = "1802"; */
+"1802.title" = "Symboles associés aux chaînes de caractères";
+
+/* Class = "NSTextFieldCell"; title = "Traduction invariante propagée ou mise à jour à valider"; ObjectID = "1804"; */
+"1804.title" = "Traduction invariante propagée ou mise à jour à valider";
+
+/* Class = "NSTextFieldCell"; title = "Traduction invariante validée"; ObjectID = "1806"; */
+"1806.title" = "Traduction invariante validée";
+
+/* Class = "NSTextFieldCell"; title = "Traduction propagée ou mise à jour à valider"; ObjectID = "1807"; */
+"1807.title" = "Traduction propagée ou mise à jour à valider";
+
+/* Class = "NSTextFieldCell"; title = "Chaîne de référence modifiée"; ObjectID = "1811"; */
+"1811.title" = "Chaîne de référence modifiée";
+
+/* Class = "NSTextFieldCell"; title = "À traduire"; ObjectID = "1813"; */
+"1813.title" = "À traduire";
+
+/* Class = "NSTextFieldCell"; title = "Chaîne comportant des incohérences"; ObjectID = "1816"; */
+"1816.title" = "Chaîne comportant des incohérences";
+
+/* Class = "NSTextFieldCell"; title = "Fichier mis à jour lors de la dernière mise à jour du projet"; ObjectID = "hi2-yW-vJG"; */
+"hi2-yW-vJG.title" = "Fichier mis à jour lors de la dernière mise à jour du projet";

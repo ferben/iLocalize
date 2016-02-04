@@ -1,0 +1,87 @@
+
+/* Class = "NSWindow"; title = "Opdateringskonflikt"; ObjectID = "5"; */
+"5.title" = "Opdateringskonflikt";
+
+/* Class = "NSBox"; title = "Projektets arkiv"; ObjectID = "12"; */
+"12.title" = "Projektets arkiv";
+
+/* Class = "NSBox"; title = "Opdateret arkiv"; ObjectID = "47"; */
+"47.title" = "Opdateret arkiv";
+
+/* Class = "NSTextFieldCell"; title = "iLocalise kan ikke flette indholdet af disse arkiver.\nVælg det som skal bruges."; ObjectID = "90"; */
+"90.title" = "iLocalise kan ikke flette indholdet af disse arkiver.\nVælg det som skal bruges.";
+
+/* Class = "NSTextFieldCell"; title = "Sti:"; ObjectID = "91"; */
+"91.title" = "Sti:";
+
+/* Class = "NSTextFieldCell"; title = "/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path"; ObjectID = "92"; */
+"92.title" = "/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path";
+
+/* Class = "NSTextFieldCell"; title = "Oprettelsesdato:"; ObjectID = "93"; */
+"93.title" = "Oprettelsesdato:";
+
+/* Class = "NSTextFieldCell"; title = "July 7, 2005"; ObjectID = "94"; */
+"94.title" = "July 7, 2005";
+
+/* Class = "NSTextFieldCell"; title = "Ændringsdato:"; ObjectID = "95"; */
+"95.title" = "Ændringsdato:";
+
+/* Class = "NSTextFieldCell"; title = "July 7, 2005"; ObjectID = "96"; */
+"96.title" = "July 7, 2005";
+
+/* Class = "NSButtonCell"; title = "Åbn"; ObjectID = "97"; */
+"97.title" = "Åbn";
+
+/* Class = "NSTextFieldCell"; title = "Navn:"; ObjectID = "98"; */
+"98.title" = "Navn:";
+
+/* Class = "NSTextFieldCell"; title = "example.jpg"; ObjectID = "99"; */
+"99.title" = "example.jpg";
+
+/* Class = "NSButtonCell"; title = "Vis i Finder"; ObjectID = "100"; */
+"100.title" = "Vis i Finder";
+
+/* Class = "NSButtonCell"; title = "Brug dette arkiv"; ObjectID = "101"; */
+"101.title" = "Brug dette arkiv";
+
+/* Class = "NSButtonCell"; title = "Fortsæt"; ObjectID = "102"; */
+"102.title" = "Fortsæt";
+
+/* Class = "NSButtonCell"; title = "Anvend i alle"; ObjectID = "103"; */
+"103.title" = "Anvend i alle";
+
+/* Class = "NSButtonCell"; title = "Åbn"; ObjectID = "105"; */
+"105.title" = "Åbn";
+
+/* Class = "NSTextFieldCell"; title = "Sti:"; ObjectID = "106"; */
+"106.title" = "Sti:";
+
+/* Class = "NSTextFieldCell"; title = "Navn:"; ObjectID = "107"; */
+"107.title" = "Navn:";
+
+/* Class = "NSButtonCell"; title = "Vis i Finder"; ObjectID = "108"; */
+"108.title" = "Vis i Finder";
+
+/* Class = "NSTextFieldCell"; title = "/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path"; ObjectID = "109"; */
+"109.title" = "/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path/tmp/a/very/long/path";
+
+/* Class = "NSTextFieldCell"; title = "July 7, 2005"; ObjectID = "110"; */
+"110.title" = "July 7, 2005";
+
+/* Class = "NSTextFieldCell"; title = "July 7, 2005"; ObjectID = "111"; */
+"111.title" = "July 7, 2005";
+
+/* Class = "NSTextFieldCell"; title = "Ændringsdato:"; ObjectID = "112"; */
+"112.title" = "Ændringsdato:";
+
+/* Class = "NSTextFieldCell"; title = "Oprettelsesdato:"; ObjectID = "113"; */
+"113.title" = "Oprettelsesdato:";
+
+/* Class = "NSTextFieldCell"; title = "example.jpg"; ObjectID = "114"; */
+"114.title" = "example.jpg";
+
+/* Class = "NSButtonCell"; title = "Brug dette arkiv"; ObjectID = "115"; */
+"115.title" = "Brug dette arkiv";
+
+/* Class = "NSButtonCell"; title = "Apply to All Languages"; ObjectID = "We8-Ds-STm"; */
+"We8-Ds-STm.title" = "Apply to All Languages";

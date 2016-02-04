@@ -1,0 +1,27 @@
+
+/* Class = "NSWindow"; title = "Voeg taal toe"; ObjectID = "132"; */
+"132.title" = "Voeg taal toe";
+
+/* Class = "NSButtonCell"; title = "Annuleer"; ObjectID = "187"; */
+"187.title" = "Annuleer";
+
+/* Class = "NSButtonCell"; title = "Voeg toe"; ObjectID = "188"; */
+"188.title" = "Voeg toe";
+
+/* Class = "NSButtonCell"; title = "Vul vertaling met basistaal"; ObjectID = "200"; */
+"200.title" = "Vul vertaling met basistaal";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "206"; */
+"206.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 1"; ObjectID = "207"; */
+"207.title" = "Onderdeel 1";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 2"; ObjectID = "208"; */
+"208.title" = "Onderdeel 2";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 3"; ObjectID = "209"; */
+"209.title" = "Onderdeel 3";
+
+/* Class = "NSBox"; title = "Taal naam"; ObjectID = "220"; */
+"220.title" = "Taal naam";

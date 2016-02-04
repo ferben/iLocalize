@@ -1,0 +1,24 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Stav"; ObjectID = "10"; */
+"10.headerCell.title" = "Stav";
+
+/* Class = "NSTableColumn"; headerCell.title = "Soubor"; ObjectID = "16"; */
+"16.headerCell.title" = "Soubor";
+
+/* Class = "NSTableColumn"; headerCell.title = "Typ"; ObjectID = "18"; */
+"18.headerCell.title" = "Typ";
+
+/* Class = "NSButtonCell"; title = "Načíst vše znovu"; ObjectID = "48"; */
+"48.title" = "Načíst vše znovu";
+
+/* Class = "NSButtonCell"; title = "Nenačíst znovu"; ObjectID = "49"; */
+"49.title" = "Nenačíst znovu";
+
+/* Class = "NSButtonCell"; title = "Zrušit"; ObjectID = "50"; */
+"50.title" = "Zrušit";
+
+/* Class = "NSTextFieldCell"; title = "Načíst znovu externě upravené soubory"; ObjectID = "52"; */
+"52.title" = "Načíst znovu externě upravené soubory";
+
+/* Class = "NSTextFieldCell"; title = "Los Gatos"; ObjectID = "54"; */
+"54.title" = "Los Gatos";

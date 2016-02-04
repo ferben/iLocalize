@@ -1,0 +1,63 @@
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "444"; */
+"444.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 3"; ObjectID = "445"; */
+"445.title" = "Onderdeel 3";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 2"; ObjectID = "446"; */
+"446.title" = "Onderdeel 2";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 1"; ObjectID = "447"; */
+"447.title" = "Onderdeel 1";
+
+/* Class = "NSTextFieldCell"; title = "Geen bestand geselecteerd"; ObjectID = "795"; */
+"795.title" = "Geen bestand geselecteerd";
+
+/* Class = "NSTextFieldCell"; title = "Niet bewerkbaar"; ObjectID = "796"; */
+"796.title" = "Niet bewerkbaar";
+
+/* Class = "NSButtonCell"; title = "Open in externe editor"; ObjectID = "797"; */
+"797.title" = "Open in externe editor";
+
+/* Class = "NSTextFieldCell"; title = "Niet van toepassing"; ObjectID = "798"; */
+"798.title" = "Niet van toepassing";
+
+/* Class = "NSTextFieldCell"; title = "Genegeerd"; ObjectID = "804"; */
+"804.title" = "Genegeerd";
+
+/* Class = "NSButtonCell"; title = "Open in externe editor"; ObjectID = "805"; */
+"805.title" = "Open in externe editor";
+
+/* Class = "NSWindow"; title = "Project"; ObjectID = "825"; */
+"825.title" = "Project";
+
+/* Class = "NSToolbarItem"; label = "Zoek"; ObjectID = "863"; */
+"863.label" = "Zoek";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Zoek"; ObjectID = "863"; */
+"863.paletteLabel" = "Zoek";
+
+/* Class = "NSToolbarItem"; label = "Voortgang"; ObjectID = "864"; */
+"864.label" = "Voortgang";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Voortgang"; ObjectID = "864"; */
+"864.paletteLabel" = "Voortgang";
+
+/* Class = "NSToolbarItem"; label = "Taal"; ObjectID = "884"; */
+"884.label" = "Taal";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Taal"; ObjectID = "884"; */
+"884.paletteLabel" = "Taal";
+
+/* Class = "NSToolbarItem"; label = "Woordenlijsten"; ObjectID = "1152"; */
+"1152.label" = "Woordenlijsten";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Woordenlijsten"; ObjectID = "1152"; */
+"1152.paletteLabel" = "Woordenlijsten";
+
+/* Class = "NSToolbarItem"; label = "Start"; ObjectID = "1157"; */
+"1157.label" = "Start";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Start"; ObjectID = "1157"; */
+"1157.paletteLabel" = "Start";

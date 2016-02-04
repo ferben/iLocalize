@@ -1,0 +1,48 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Extensie"; ObjectID = "8"; */
+"8.headerCell.title" = "Extensie";
+
+/* Class = "NSTableColumn"; headerCell.title = "Naam of volledig pad naar programma"; ObjectID = "9"; */
+"9.headerCell.title" = "Naam of volledig pad naar programma";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "42"; */
+"42.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Onderdeel3"; ObjectID = "43"; */
+"43.title" = "Onderdeel3";
+
+/* Class = "NSMenuItem"; title = "Afbeeldingen"; ObjectID = "44"; */
+"44.title" = "Afbeeldingen";
+
+/* Class = "NSMenuItem"; title = "Onderdeel2"; ObjectID = "45"; */
+"45.title" = "Onderdeel2";
+
+/* Class = "NSTableColumn"; headerCell.title = "Extensie"; ObjectID = "48"; */
+"48.headerCell.title" = "Extensie";
+
+/* Class = "NSWindow"; title = "Panel"; ObjectID = "95"; */
+"95.title" = "Panel";
+
+/* Class = "NSTextFieldCell"; title = "Extensie:"; ObjectID = "203"; */
+"203.title" = "Extensie:";
+
+/* Class = "NSTextFieldCell"; title = "Programma:"; ObjectID = "204"; */
+"204.title" = "Programma:";
+
+/* Class = "NSButtonCell"; title = "Kies…"; ObjectID = "207"; */
+"207.title" = "Kies…";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "208"; */
+"208.title" = "OK";
+
+/* Class = "NSButtonCell"; title = "Annuleer"; ObjectID = "209"; */
+"209.title" = "Annuleer";
+
+/* Class = "NSTabViewItem"; label = "Ingebouwd"; ObjectID = "222"; */
+"222.label" = "Ingebouwd";
+
+/* Class = "NSTabViewItem"; label = "Extern"; ObjectID = "223"; */
+"223.label" = "Extern";
+
+/* Class = "NSTextFieldCell"; title = "Type:"; ObjectID = "231"; */
+"231.title" = "Type:";

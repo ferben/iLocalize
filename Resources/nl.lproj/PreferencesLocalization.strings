@@ -1,0 +1,51 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "Beschouw stuurtekens en escape-tekens als identiek"; ObjectID = "330"; */
+"330.ibShadowedToolTip" = "Beschouw stuurtekens en escape-tekens als identiek";
+
+/* Class = "NSButtonCell"; title = "Negeer hoofdletters"; ObjectID = "474"; */
+"474.title" = "Negeer hoofdletters";
+
+/* Class = "NSTextFieldCell"; title = "Vertaling:"; ObjectID = "476"; */
+"476.title" = "Vertaling:";
+
+/* Class = "NSButtonCell"; title = "Alleen-lezen"; ObjectID = "482"; */
+"482.title" = "Alleen-lezen";
+
+/* Class = "NSTextFieldCell"; title = "Basistaal:"; ObjectID = "483"; */
+"483.title" = "Basistaal:";
+
+/* Class = "NSButtonCell"; title = "Negeer stuurtekens"; ObjectID = "484"; */
+"484.title" = "Negeer stuurtekens";
+
+/* Class = "NSTextFieldCell"; title = "Gebruik dezelfde vertaling in:"; ObjectID = "491"; */
+"491.title" = "Gebruik dezelfde vertaling in:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "494"; */
+"494.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Niet actief"; ObjectID = "495"; */
+"495.title" = "Niet actief";
+
+/* Class = "NSMenuItem"; title = "Automatisch naar geselecteerde bestanden"; ObjectID = "496"; */
+"496.title" = "Automatisch naar geselecteerde bestanden";
+
+/* Class = "NSMenuItem"; title = "Automatisch naar alle bestanden"; ObjectID = "497"; */
+"497.title" = "Automatisch naar alle bestanden";
+
+/* Class = "NSTextFieldCell"; title = "Modus:"; ObjectID = "501"; */
+"501.title" = "Modus:";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "503"; */
+"503.title" = "Radio";
+
+/* Class = "NSButtonCell"; title = "Ontwikkelaar"; ObjectID = "504"; */
+"504.title" = "Ontwikkelaar";
+
+/* Class = "NSButtonCell"; title = "Vertaler"; ObjectID = "509"; */
+"509.title" = "Vertaler";
+
+/* Class = "NSButtonCell"; title = "Stel waarschuwingen opnieuw in"; ObjectID = "4qb-iu-nB5"; */
+"4qb-iu-nB5.title" = "Stel waarschuwingen opnieuw in";
+
+/* Class = "NSTextFieldCell"; title = "Herstel alle dialoogwaarschuwingen:"; ObjectID = "UVZ-qQ-zdX"; */
+"UVZ-qQ-zdX.title" = "Herstel alle dialoogwaarschuwingen:";

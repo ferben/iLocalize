@@ -1,0 +1,6 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "フォルダ階層"; ObjectID = "14"; */
+"14.headerCell.title" = "フォルダ階層";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "17"; */
+"17.title" = "Text Cell";

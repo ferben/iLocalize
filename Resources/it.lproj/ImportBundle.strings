@@ -1,0 +1,39 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "Aggiorna la lingua base e ri-basa tutte le altre lingue. Tutte le strings nella altre lingue verranno localizzate in accordo con la traduzione corrente."; ObjectID = "10"; */
+"10.ibShadowedToolTip" = "Aggiorna la lingua base e ri-basa tutte le altre lingue. Tutte le strings nella altre lingue verranno localizzate in accordo con la traduzione corrente.";
+
+/* Class = "NSTextFieldCell"; title = "Selezionate la lingua(e) che desiderate aggiornare:"; ObjectID = "151"; */
+"151.title" = "Selezionate la lingua(e) che desiderate aggiornare:";
+
+/* Class = "NSButtonCell"; title = "Aggiorna il progetto da una nuova versione del bundle:"; ObjectID = "152"; */
+"152.title" = "Aggiorna il progetto da una nuova versione del bundle:";
+
+/* Class = "NSButtonCell"; title = "Ripristina il layout di ogni NIB file locaizzato dal suo layout della lingua-base"; ObjectID = "153"; */
+"153.title" = "Ripristina il layout di ogni NIB file locaizzato dal suo layout della lingua-base";
+
+/* Class = "NSButtonCell"; title = "Aggiornate le lingue localizzate del progetto dal bundle:"; ObjectID = "154"; */
+"154.title" = "Aggiornate le lingue localizzate del progetto dal bundle:";
+
+/* Class = "NSButtonCell"; title = "Aggiorna NIB layout con layout importati"; ObjectID = "155"; */
+"155.title" = "Aggiorna NIB layout con layout importati";
+
+/* Class = "NSTextFieldCell"; title = "Verifica i NIB file localizzati per assicurare che ogni layout sia corretto."; ObjectID = "156"; */
+"156.title" = "Verifica i NIB file localizzati per assicurare che ogni layout sia corretto.";
+
+/* Class = "NSButtonCell"; title = "Crea file localizzabili non-esistenti dalla lingua base"; ObjectID = "158"; */
+"158.title" = "Crea file localizzabili non-esistenti dalla lingua base";
+
+/* Class = "NSButtonCell"; title = "Controlla"; ObjectID = "189"; */
+"189.title" = "Controlla";
+
+/* Class = "NSButtonCell"; title = "Scegli..."; ObjectID = "203"; */
+"203.title" = "Scegli...";
+
+/* Class = "NSButtonCell"; title = "Scegli..."; ObjectID = "205"; */
+"205.title" = "Scegli...";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Scegli o trascina un bundle"; ObjectID = "213"; */
+"213.ibShadowedIsNilPlaceholder" = "Scegli o trascina un bundle";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Scegli o trascina un bundle"; ObjectID = "214"; */
+"214.ibShadowedIsNilPlaceholder" = "Scegli o trascina un bundle";

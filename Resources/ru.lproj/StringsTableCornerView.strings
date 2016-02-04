@@ -1,0 +1,27 @@
+
+/* Class = "NSMenuItem"; title = "   Сортировать по значению"; ObjectID = "5"; */
+"5.title" = "   Сортировать по значению";
+
+/* Class = "NSMenuItem"; title = "   Сортировать по примечанию"; ObjectID = "6"; */
+"6.title" = "   Сортировать по примечанию";
+
+/* Class = "NSMenuItem"; title = "   Сортировать по значению"; ObjectID = "7"; */
+"7.title" = "   Сортировать по значению";
+
+/* Class = "NSMenuItem"; title = "Столбец базового языка"; ObjectID = "8"; */
+"8.title" = "Столбец базового языка";
+
+/* Class = "NSMenu"; title = "Меню"; ObjectID = "9"; */
+"9.title" = "Меню";
+
+/* Class = "NSMenuItem"; title = "Столбец перевода"; ObjectID = "11"; */
+"11.title" = "Столбец перевода";
+
+/* Class = "NSMenuItem"; title = "   Сортировать по примечанию"; ObjectID = "12"; */
+"12.title" = "   Сортировать по примечанию";
+
+/* Class = "NSMenuItem"; title = "Отображение"; ObjectID = "18"; */
+"18.title" = "Отображение";
+
+/* Class = "NSMenuItem"; title = "   Переключить видимость примечаний"; ObjectID = "19"; */
+"19.title" = "   Переключить видимость примечаний";

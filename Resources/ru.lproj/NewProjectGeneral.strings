@@ -1,0 +1,51 @@
+
+/* Class = "NSMenuItem"; title = "<setting-name>"; ObjectID = "82"; */
+"82.title" = "<setting-name>";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "83"; */
+"83.title" = "OtherViews";
+
+/* Class = "NSTextFieldCell"; title = "Имя проекта:"; ObjectID = "625"; */
+"625.title" = "Имя проекта:";
+
+/* Class = "NSTextFieldCell"; title = "Конечный файл:"; ObjectID = "626"; */
+"626.title" = "Конечный файл:";
+
+/* Class = "NSTextFieldCell"; title = "Calculator"; ObjectID = "627"; */
+"627.title" = "Calculator";
+
+/* Class = "NSButtonCell"; title = "Выбрать…"; ObjectID = "629"; */
+"629.title" = "Выбрать…";
+
+/* Class = "NSButtonCell"; title = "Выбрать…"; ObjectID = "632"; */
+"632.title" = "Выбрать…";
+
+/* Class = "NSTextFieldCell"; title = "Наборы настроек:"; ObjectID = "635"; */
+"635.title" = "Наборы настроек:";
+
+/* Class = "NSTextFieldCell"; title = "Приступая к работе, выберите пакет, который необходимо локализовать:"; ObjectID = "676"; */
+"676.title" = "Приступая к работе, выберите пакет, который необходимо локализовать:";
+
+/* Class = "NSMenuItem"; title = "Сохранить"; ObjectID = "682"; */
+"682.title" = "Сохранить";
+
+/* Class = "NSMenuItem"; title = "Сохранить как…"; ObjectID = "683"; */
+"683.title" = "Сохранить как…";
+
+/* Class = "NSMenuItem"; title = "Переименовать…"; ObjectID = "684"; */
+"684.title" = "Переименовать…";
+
+/* Class = "NSMenuItem"; title = "Удалить"; ObjectID = "685"; */
+"685.title" = "Удалить";
+
+/* Class = "NSTextFieldCell"; title = "Пакет:"; ObjectID = "802"; */
+"802.title" = "Пакет:";
+
+/* Class = "NSPathCell"; placeholderString = "Переместите пакет для локализации"; ObjectID = "808"; */
+"808.placeholderString" = "Переместите пакет для локализации";
+
+/* Class = "NSPathCell"; placeholderString = "Переместите папку, в которой будет создан проект"; ObjectID = "810"; */
+"810.placeholderString" = "Переместите папку, в которой будет создан проект";
+
+/* Class = "NSTextFieldCell"; title = "<do not localize>"; ObjectID = "828"; */
+"828.title" = "<do not localize>";

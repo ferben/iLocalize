@@ -1,0 +1,27 @@
+
+/* Class = "NSTextFieldCell"; title = "読み込む言語を選択して下さい:"; ObjectID = "639"; */
+"639.title" = "読み込む言語を選択して下さい:";
+
+/* Class = "NSTextFieldCell"; title = "ベース言語:"; ObjectID = "790"; */
+"790.title" = "ベース言語:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "793"; */
+"793.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "794"; */
+"794.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "795"; */
+"795.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "796"; */
+"796.title" = "Item 3";
+
+/* Class = "NSButton"; ibShadowedToolTip = "このオプションをチェックすると、ターゲット言語に対応するファイルがないベース言語のファイルをターゲット言語にコピーします。"; ObjectID = "807"; */
+"807.ibShadowedToolTip" = "このオプションをチェックすると、ターゲット言語に対応するファイルがないベース言語のファイルをターゲット言語にコピーします。";
+
+/* Class = "NSButtonCell"; title = "ベース言語から存在しないローカライズファイルを作成"; ObjectID = "808"; */
+"808.title" = "ベース言語から存在しないローカライズファイルを作成";
+
+/* Class = "NSButtonCell"; title = "チェック"; ObjectID = "825"; */
+"825.title" = "チェック";

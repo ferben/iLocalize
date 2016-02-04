@@ -1,0 +1,24 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Tilstand"; ObjectID = "10"; */
+"10.headerCell.title" = "Tilstand";
+
+/* Class = "NSTableColumn"; headerCell.title = "Arkiv"; ObjectID = "16"; */
+"16.headerCell.title" = "Arkiv";
+
+/* Class = "NSTableColumn"; headerCell.title = "Type"; ObjectID = "18"; */
+"18.headerCell.title" = "Type";
+
+/* Class = "NSButtonCell"; title = "Genindlæs alle"; ObjectID = "48"; */
+"48.title" = "Genindlæs alle";
+
+/* Class = "NSButtonCell"; title = "Genindlæs ikke"; ObjectID = "49"; */
+"49.title" = "Genindlæs ikke";
+
+/* Class = "NSButtonCell"; title = "Annuller"; ObjectID = "50"; */
+"50.title" = "Annuller";
+
+/* Class = "NSTextFieldCell"; title = "Genindlæs eksternt ændrede arkiver"; ObjectID = "52"; */
+"52.title" = "Genindlæs eksternt ændrede arkiver";
+
+/* Class = "NSTextFieldCell"; title = "Los Gatos"; ObjectID = "54"; */
+"54.title" = "Los Gatos";

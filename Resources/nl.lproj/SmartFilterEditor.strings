@@ -1,0 +1,51 @@
+
+/* Class = "NSWindow"; title = "Slimme filters editor"; ObjectID = "1"; */
+"1.title" = "Slimme filters editor";
+
+/* Class = "NSMenuItem"; title = "van de volgende is waar"; ObjectID = "25"; */
+"25.title" = "van de volgende is waar";
+
+/* Class = "NSMenuItem"; title = "Willekeurig"; ObjectID = "26"; */
+"26.title" = "Willekeurig";
+
+/* Class = "NSMenuItem"; title = "Alle"; ObjectID = "27"; */
+"27.title" = "Alle";
+
+/* Class = "NSTextFieldCell"; title = "Naam filter:"; ObjectID = "51"; */
+"51.title" = "Naam filter:";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "55"; */
+"55.title" = "OK";
+
+/* Class = "NSButtonCell"; title = "Annuleer"; ObjectID = "57"; */
+"57.title" = "Annuleer";
+
+/* Class = "NSMenuItem"; title = "als"; ObjectID = "128"; */
+"128.title" = "als";
+
+/* Class = "NSMenuItem"; title = "adres"; ObjectID = "129"; */
+"129.title" = "adres";
+
+/* Class = "NSMenuItem"; title = "teken"; ObjectID = "130"; */
+"130.title" = "teken";
+
+/* Class = "NSMenuItem"; title = "bevat"; ObjectID = "132"; */
+"132.title" = "bevat";
+
+/* Class = "NSMenuItem"; title = "begint met"; ObjectID = "133"; */
+"133.title" = "begint met";
+
+/* Class = "NSMenuItem"; title = "eindigt op"; ObjectID = "134"; */
+"134.title" = "eindigt op";
+
+/* Class = "NSMenuItem"; title = "is"; ObjectID = "135"; */
+"135.title" = "is";
+
+/* Class = "NSMenuItem"; title = "is niet"; ObjectID = "136"; */
+"136.title" = "is niet";
+
+/* Class = "NSButtonCell"; title = "Beschikbaar in alle projecten"; ObjectID = "142"; */
+"142.title" = "Beschikbaar in alle projecten";
+
+/* Class = "NSTextFieldCell"; title = "Druk op de ⌥ (optie) toets voor meer opties"; ObjectID = "145"; */
+"145.title" = "Druk op de ⌥ (optie) toets voor meer opties";

@@ -1,0 +1,51 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "Steuer- und Escape-Zeichen als identisch betrachten"; ObjectID = "330"; */
+"330.ibShadowedToolTip" = "Steuer- und Escape-Zeichen als identisch betrachten";
+
+/* Class = "NSButtonCell"; title = "Groß-/Kleinschreibung ignorieren"; ObjectID = "474"; */
+"474.title" = "Groß-/Kleinschreibung ignorieren";
+
+/* Class = "NSTextFieldCell"; title = "Übersetzung:"; ObjectID = "476"; */
+"476.title" = "Übersetzung:";
+
+/* Class = "NSButtonCell"; title = "Nur Lesezugriff"; ObjectID = "482"; */
+"482.title" = "Nur Lesezugriff";
+
+/* Class = "NSTextFieldCell"; title = "Ausgangssprache:"; ObjectID = "483"; */
+"483.title" = "Ausgangssprache:";
+
+/* Class = "NSButtonCell"; title = "Steuerzeichen ignorieren"; ObjectID = "484"; */
+"484.title" = "Steuerzeichen ignorieren";
+
+/* Class = "NSTextFieldCell"; title = "Übersetzung vorschlagen:"; ObjectID = "491"; */
+"491.title" = "Übersetzung vorschlagen:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "494"; */
+"494.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Deaktiviert"; ObjectID = "495"; */
+"495.title" = "Deaktiviert";
+
+/* Class = "NSMenuItem"; title = "Automatisch auf gewählte Dateien anwenden"; ObjectID = "496"; */
+"496.title" = "Automatisch auf gewählte Dateien anwenden";
+
+/* Class = "NSMenuItem"; title = "Automatisch auf alle Dateien anwenden"; ObjectID = "497"; */
+"497.title" = "Automatisch auf alle Dateien anwenden";
+
+/* Class = "NSTextFieldCell"; title = "Modus:"; ObjectID = "501"; */
+"501.title" = "Modus:";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "503"; */
+"503.title" = "Radio";
+
+/* Class = "NSButtonCell"; title = "Entwickler"; ObjectID = "504"; */
+"504.title" = "Entwickler";
+
+/* Class = "NSButtonCell"; title = "Übersetzer"; ObjectID = "509"; */
+"509.title" = "Übersetzer";
+
+/* Class = "NSButtonCell"; title = "Reset Warnings"; ObjectID = "4qb-iu-nB5"; */
+"4qb-iu-nB5.title" = "Reset Warnings";
+
+/* Class = "NSTextFieldCell"; title = "Alle Warnhinweise zurücksetzen:"; ObjectID = "UVZ-qQ-zdX"; */
+"UVZ-qQ-zdX.title" = "Alle Warnhinweise zurücksetzen:";

@@ -1,0 +1,45 @@
+
+/* Class = "NSWindow"; title = "<slovník>"; ObjectID = "5"; */
+"5.title" = "<slovník>";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "160"; */
+"160.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "161"; */
+"161.title" = "Text Cell";
+
+/* Class = "NSToolbarItem"; label = "Hledat"; ObjectID = "177"; */
+"177.label" = "Hledat";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Hledat"; ObjectID = "177"; */
+"177.paletteLabel" = "Hledat";
+
+/* Class = "NSMenu"; title = "Jiný pohled"; ObjectID = "193"; */
+"193.title" = "Jiný pohled";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "195"; */
+"195.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "196"; */
+"196.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Smazat vybrané výrazy"; ObjectID = "202"; */
+"202.title" = "Smazat vybrané výrazy";
+
+/* Class = "NSMenuItem"; title = "Odebrat duplicitní výrazy"; ObjectID = "203"; */
+"203.title" = "Odebrat duplicitní výrazy";
+
+/* Class = "NSMenuItem"; title = "Přejmenovat původní jazyk…"; ObjectID = "204"; */
+"204.title" = "Přejmenovat původní jazyk…";
+
+/* Class = "NSMenuItem"; title = "Přejmenovat jazyk překladu…"; ObjectID = "206"; */
+"206.title" = "Přejmenovat jazyk překladu…";
+
+/* Class = "NSTextFieldCell"; title = "<-----do not localize------>"; ObjectID = "221"; */
+"221.title" = "<-----do not localize------>";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Info"; ObjectID = "222"; */
+"222.paletteLabel" = "Info";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Tento slovník není na žádné, iLocalize známé, cestě. Klikněte na tlačítko a rozhodněte se, co se s tím má udělat."; ObjectID = "230"; */
+"230.ibShadowedToolTip" = "Tento slovník není na žádné, iLocalize známé, cestě. Klikněte na tlačítko a rozhodněte se, co se s tím má udělat.";

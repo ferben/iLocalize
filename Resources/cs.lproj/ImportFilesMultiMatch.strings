@@ -1,0 +1,9 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Původní jazyk"; ObjectID = "8"; */
+"8.headerCell.title" = "Původní jazyk";
+
+/* Class = "NSTableColumn"; headerCell.title = "Stejné soubory v projektu"; ObjectID = "9"; */
+"9.headerCell.title" = "Stejné soubory v projektu";
+
+/* Class = "NSTextFieldCell"; title = "Následující soubory se v projektu vyskytují vícekrát . Vyberte jeden, který nejlépe odpovídá projektu:"; ObjectID = "137"; */
+"137.title" = "Následující soubory se v projektu vyskytují vícekrát . Vyberte jeden, který nejlépe odpovídá projektu:";

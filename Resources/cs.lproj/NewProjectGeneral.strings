@@ -1,0 +1,51 @@
+
+/* Class = "NSMenuItem"; title = "<setting-name>"; ObjectID = "82"; */
+"82.title" = "<setting-name>";
+
+/* Class = "NSMenu"; title = "Jiný pohled"; ObjectID = "83"; */
+"83.title" = "Jiný pohled";
+
+/* Class = "NSTextFieldCell"; title = "Název:"; ObjectID = "625"; */
+"625.title" = "Název:";
+
+/* Class = "NSTextFieldCell"; title = "Umístění:"; ObjectID = "626"; */
+"626.title" = "Umístění:";
+
+/* Class = "NSTextFieldCell"; title = "Kalkulátor"; ObjectID = "627"; */
+"627.title" = "Kalkulátor";
+
+/* Class = "NSButtonCell"; title = "Vybrat…"; ObjectID = "629"; */
+"629.title" = "Vybrat…";
+
+/* Class = "NSButtonCell"; title = "Vybrat…"; ObjectID = "632"; */
+"632.title" = "Vybrat…";
+
+/* Class = "NSTextFieldCell"; title = "Přednastavení:"; ObjectID = "635"; */
+"635.title" = "Přednastavení:";
+
+/* Class = "NSTextFieldCell"; title = "Na začátek je třeba vybrat balíček, který chcete lokalizovat:"; ObjectID = "676"; */
+"676.title" = "Na začátek je třeba vybrat balíček, který chcete lokalizovat:";
+
+/* Class = "NSMenuItem"; title = "Uložit"; ObjectID = "682"; */
+"682.title" = "Uložit";
+
+/* Class = "NSMenuItem"; title = "Uložit jako…"; ObjectID = "683"; */
+"683.title" = "Uložit jako…";
+
+/* Class = "NSMenuItem"; title = "Přejmenovat…"; ObjectID = "684"; */
+"684.title" = "Přejmenovat…";
+
+/* Class = "NSMenuItem"; title = "Smazat"; ObjectID = "685"; */
+"685.title" = "Smazat";
+
+/* Class = "NSTextFieldCell"; title = "Balíček:"; ObjectID = "802"; */
+"802.title" = "Balíček:";
+
+/* Class = "NSPathCell"; placeholderString = "Vhoďte sem balíček k lokalizaci"; ObjectID = "808"; */
+"808.placeholderString" = "Vhoďte sem balíček k lokalizaci";
+
+/* Class = "NSPathCell"; placeholderString = "Vhoďte sem složku, ve které se vytvoří projekt"; ObjectID = "810"; */
+"810.placeholderString" = "Vhoďte sem složku, ve které se vytvoří projekt";
+
+/* Class = "NSTextFieldCell"; title = "<do not localize>"; ObjectID = "828"; */
+"828.title" = "<do not localize>";

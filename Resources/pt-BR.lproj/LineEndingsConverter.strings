@@ -1,0 +1,36 @@
+
+/* Class = "NSWindow"; title = "Converter Terminações de Linha"; ObjectID = "5"; */
+"5.title" = "Converter Terminações de Linha";
+
+/* Class = "NSMenuItem"; title = "Unix (LF)"; ObjectID = "8"; */
+"8.title" = "Unix (LF)";
+
+/* Class = "NSMenuItem"; title = "Macintosh (CR)"; ObjectID = "9"; */
+"9.title" = "Macintosh (CR)";
+
+/* Class = "NSMenu"; title = "Outras Visualizações"; ObjectID = "10"; */
+"10.title" = "Outras Visualizações";
+
+/* Class = "NSMenuItem"; title = "Windows (CR/LF)"; ObjectID = "11"; */
+"11.title" = "Windows (CR/LF)";
+
+/* Class = "NSTextFieldCell"; title = "COnverter as seguintes terminações de linha"; ObjectID = "30"; */
+"30.title" = "COnverter as seguintes terminações de linha";
+
+/* Class = "NSButtonCell"; title = "Macintosh (CR)"; ObjectID = "32"; */
+"32.title" = "Macintosh (CR)";
+
+/* Class = "NSButtonCell"; title = "Unix (LF)"; ObjectID = "33"; */
+"33.title" = "Unix (LF)";
+
+/* Class = "NSButtonCell"; title = "Windows (CR/LF)"; ObjectID = "34"; */
+"34.title" = "Windows (CR/LF)";
+
+/* Class = "NSTextFieldCell"; title = "dentro das terminações de linha"; ObjectID = "35"; */
+"35.title" = "dentro das terminações de linha";
+
+/* Class = "NSButtonCell"; title = "Cancelar"; ObjectID = "36"; */
+"36.title" = "Cancelar";
+
+/* Class = "NSButtonCell"; title = "Converter"; ObjectID = "37"; */
+"37.title" = "Converter";

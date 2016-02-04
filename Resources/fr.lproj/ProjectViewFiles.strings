@@ -1,0 +1,114 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Progression"; ObjectID = "31"; */
+"31.headerCell.title" = "Progression";
+
+/* Class = "NSTableColumn"; headerCell.title = "Type"; ObjectID = "32"; */
+"32.headerCell.title" = "Type";
+
+/* Class = "NSTableColumn"; headerCell.title = "Fichier"; ObjectID = "33"; */
+"33.headerCell.title" = "Fichier";
+
+/* Class = "NSTableColumn"; headerCell.title = "Contenu"; ObjectID = "104"; */
+"104.headerCell.title" = "Contenu";
+
+/* Class = "NSMenuItem"; title = "Enregistrer"; ObjectID = "264"; */
+"264.title" = "Enregistrer";
+
+/* Class = "NSMenuItem"; title = "Afficher dans le Finder"; ObjectID = "265"; */
+"265.title" = "Afficher dans le Finder";
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "266"; */
+"266.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "Ouvrir dans un Éditeur externe"; ObjectID = "267"; */
+"267.title" = "Ouvrir dans un Éditeur externe";
+
+/* Class = "NSMenuItem"; title = "Supprimer"; ObjectID = "278"; */
+"278.title" = "Supprimer";
+
+/* Class = "NSMenuItem"; title = "Approuver"; ObjectID = "323"; */
+"323.title" = "Approuver";
+
+/* Class = "NSMenuItem"; title = "Reconstruire à partir de l’Anglais"; ObjectID = "336"; */
+"336.title" = "Reconstruire à partir de l’Anglais";
+
+/* Class = "NSMenuItem"; title = "Recharger"; ObjectID = "378"; */
+"378.title" = "Recharger";
+
+/* Class = "NSMenuItem"; title = "Convertir les fins de ligne…"; ObjectID = "397"; */
+"397.title" = "Convertir les fins de ligne…";
+
+/* Class = "NSMenuItem"; title = "Exporter les chaînes de caractères…"; ObjectID = "434"; */
+"434.title" = "Exporter les chaînes de caractères…";
+
+/* Class = "NSMenuItem"; title = "Mettre à jour les chaînes de caractères…"; ObjectID = "436"; */
+"436.title" = "Mettre à jour les chaînes de caractères…";
+
+/* Class = "NSMenuItem"; title = "Afficher les alertes…"; ObjectID = "541"; */
+"541.title" = "Afficher les alertes…";
+
+/* Class = "NSMenuItem"; title = "Effacer le symbole des fichiers mis à jour"; ObjectID = "544"; */
+"544.title" = "Effacer le symbole des fichiers mis à jour";
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "559"; */
+"559.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "Fichier"; ObjectID = "560"; */
+"560.title" = "Fichier";
+
+/* Class = "NSMenuItem"; title = "Type"; ObjectID = "561"; */
+"561.title" = "Type";
+
+/* Class = "NSMenuItem"; title = "Contenu"; ObjectID = "563"; */
+"563.title" = "Contenu";
+
+/* Class = "NSMenuItem"; title = "Progression"; ObjectID = "564"; */
+"564.title" = "Progression";
+
+/* Class = "NSMenuItem"; title = "Encodage"; ObjectID = "580"; */
+"580.title" = "Encodage";
+
+/* Class = "NSTableColumn"; headerCell.title = "Étiquettes"; ObjectID = "583"; */
+"583.headerCell.title" = "Étiquettes";
+
+/* Class = "NSMenuItem"; title = "Étiquettes"; ObjectID = "587"; */
+"587.title" = "Étiquettes";
+
+/* Class = "NSMenuItem"; title = "Étiquettes"; ObjectID = "593"; */
+"593.title" = "Étiquettes";
+
+/* Class = "NSMenuItem"; title = "Ignorer"; ObjectID = "596"; */
+"596.title" = "Ignorer";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "809"; */
+"809.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "810"; */
+"810.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "811"; */
+"811.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "812"; */
+"812.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "815"; */
+"815.title" = "Text Cell";
+
+/* Class = "NSButtonCell"; title = "Ne traduire que si la chaîne est différente de la chaîne de référence"; ObjectID = "1145"; */
+"1145.title" = "Ne traduire que si la chaîne est différente de la chaîne de référence";
+
+/* Class = "NSTableColumn"; headerCell.title = "État"; ObjectID = "1160"; */
+"1160.headerCell.title" = "État";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "1161"; */
+"1161.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "État"; ObjectID = "1163"; */
+"1163.title" = "État";
+
+/* Class = "NSMenuItem"; title = "Ouvrir précédents et courants dans l'éditeur externe"; ObjectID = "1173"; */
+"1173.title" = "Ouvrir précédents et courants dans l'éditeur externe";
+
+/* Class = "NSMenuItem"; title = "Différentiel avec les précédents"; ObjectID = "1174"; */
+"1174.title" = "Différentiel avec les précédents";

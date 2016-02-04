@@ -1,0 +1,27 @@
+
+/* Class = "NSMenuItem"; title = "   値でソート"; ObjectID = "5"; */
+"5.title" = "   値でソート";
+
+/* Class = "NSMenuItem"; title = "   コメントでソート"; ObjectID = "6"; */
+"6.title" = "   コメントでソート";
+
+/* Class = "NSMenuItem"; title = "   値でソート"; ObjectID = "7"; */
+"7.title" = "   値でソート";
+
+/* Class = "NSMenuItem"; title = "ベースカラム"; ObjectID = "8"; */
+"8.title" = "ベースカラム";
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "9"; */
+"9.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "訳語カラム"; ObjectID = "11"; */
+"11.title" = "訳語カラム";
+
+/* Class = "NSMenuItem"; title = "   コメントでソート"; ObjectID = "12"; */
+"12.title" = "   コメントでソート";
+
+/* Class = "NSMenuItem"; title = "表示"; ObjectID = "18"; */
+"18.title" = "表示";
+
+/* Class = "NSMenuItem"; title = "   コメントを表示／非表示"; ObjectID = "19"; */
+"19.title" = "   コメントを表示／非表示";

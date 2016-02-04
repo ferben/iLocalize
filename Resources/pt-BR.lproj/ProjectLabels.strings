@@ -1,0 +1,36 @@
+
+/* Class = "NSWindow"; title = "Etiquetas"; ObjectID = "31"; */
+"31.title" = "Etiquetas";
+
+/* Class = "NSTableColumn"; headerCell.title = "Descrição"; ObjectID = "37"; */
+"37.headerCell.title" = "Descrição";
+
+/* Class = "NSTableColumn"; headerCell.title = "ID"; ObjectID = "38"; */
+"38.headerCell.title" = "ID";
+
+/* Class = "NSTableColumn"; headerCell.title = "Cor"; ObjectID = "39"; */
+"39.headerCell.title" = "Cor";
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "55"; */
+"55.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "Branca"; ObjectID = "56"; */
+"56.title" = "Branca";
+
+/* Class = "NSMenuItem"; title = "Preta"; ObjectID = "57"; */
+"57.title" = "Preta";
+
+/* Class = "NSMenuItem"; title = "Vermelho"; ObjectID = "58"; */
+"58.title" = "Vermelho";
+
+/* Class = "NSMenuItem"; title = "Verde"; ObjectID = "59"; */
+"59.title" = "Verde";
+
+/* Class = "NSMenuItem"; title = "Azul"; ObjectID = "60"; */
+"60.title" = "Azul";
+
+/* Class = "NSButtonCell"; title = "-"; ObjectID = "70"; */
+"70.title" = "-";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "72"; */
+"72.title" = "OK";

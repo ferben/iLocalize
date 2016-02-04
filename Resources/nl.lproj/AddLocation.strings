@@ -1,0 +1,24 @@
+
+/* Class = "NSWindow"; title = "Voeg bestemming toe"; ObjectID = "6"; */
+"6.title" = "Voeg bestemming toe";
+
+/* Class = "NSMenuItem"; title = "Onderdeel3"; ObjectID = "7"; */
+"7.title" = "Onderdeel3";
+
+/* Class = "NSMenuItem"; title = "Onderdeel2"; ObjectID = "8"; */
+"8.title" = "Onderdeel2";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "9"; */
+"9.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Onderdeel1"; ObjectID = "11"; */
+"11.title" = "Onderdeel1";
+
+/* Class = "NSTextFieldCell"; title = "Selecteer de doelmap voor de nieuwe bestanden/het nieuwe bestand:"; ObjectID = "21"; */
+"21.title" = "Selecteer de doelmap voor de nieuwe bestanden/het nieuwe bestand:";
+
+/* Class = "NSButtonCell"; title = "Annuleer"; ObjectID = "22"; */
+"22.title" = "Annuleer";
+
+/* Class = "NSButtonCell"; title = "Voeg toe"; ObjectID = "23"; */
+"23.title" = "Voeg toe";

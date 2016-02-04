@@ -1,0 +1,36 @@
+
+/* Class = "NSWindow"; title = "Regeleinde conversie"; ObjectID = "5"; */
+"5.title" = "Regeleinde conversie";
+
+/* Class = "NSMenuItem"; title = "Unix (LF)"; ObjectID = "8"; */
+"8.title" = "Unix (LF)";
+
+/* Class = "NSMenuItem"; title = "Macintosh (CR)"; ObjectID = "9"; */
+"9.title" = "Macintosh (CR)";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "10"; */
+"10.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Windows (CR/LF)"; ObjectID = "11"; */
+"11.title" = "Windows (CR/LF)";
+
+/* Class = "NSTextFieldCell"; title = "Converteer de volgende regeleinden:"; ObjectID = "30"; */
+"30.title" = "Converteer de volgende regeleinden:";
+
+/* Class = "NSButtonCell"; title = "Macintosh (CR)"; ObjectID = "32"; */
+"32.title" = "Macintosh (CR)";
+
+/* Class = "NSButtonCell"; title = "Unix (LF)"; ObjectID = "33"; */
+"33.title" = "Unix (LF)";
+
+/* Class = "NSButtonCell"; title = "Windows (CR/LF)"; ObjectID = "34"; */
+"34.title" = "Windows (CR/LF)";
+
+/* Class = "NSTextFieldCell"; title = "Naar regeleinde:"; ObjectID = "35"; */
+"35.title" = "Naar regeleinde:";
+
+/* Class = "NSButtonCell"; title = "Annuleer"; ObjectID = "36"; */
+"36.title" = "Annuleer";
+
+/* Class = "NSButtonCell"; title = "Converteer"; ObjectID = "37"; */
+"37.title" = "Converteer";

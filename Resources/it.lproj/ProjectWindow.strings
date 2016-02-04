@@ -1,0 +1,63 @@
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "444"; */
+"444.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "445"; */
+"445.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "446"; */
+"446.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "447"; */
+"447.title" = "Item 1";
+
+/* Class = "NSTextFieldCell"; title = "Nessun File Selezionato"; ObjectID = "795"; */
+"795.title" = "Nessun File Selezionato";
+
+/* Class = "NSTextFieldCell"; title = "Non modificabile"; ObjectID = "796"; */
+"796.title" = "Non modificabile";
+
+/* Class = "NSButtonCell"; title = "Apri in Editor Esterno"; ObjectID = "797"; */
+"797.title" = "Apri in Editor Esterno";
+
+/* Class = "NSTextFieldCell"; title = "Non applicabile"; ObjectID = "798"; */
+"798.title" = "Non applicabile";
+
+/* Class = "NSTextFieldCell"; title = "Ignorato"; ObjectID = "804"; */
+"804.title" = "Ignorato";
+
+/* Class = "NSButtonCell"; title = "Apri in Editor Esterno"; ObjectID = "805"; */
+"805.title" = "Apri in Editor Esterno";
+
+/* Class = "NSWindow"; title = "Progetto"; ObjectID = "825"; */
+"825.title" = "Progetto";
+
+/* Class = "NSToolbarItem"; label = "Cerca"; ObjectID = "863"; */
+"863.label" = "Cerca";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Cerca"; ObjectID = "863"; */
+"863.paletteLabel" = "Cerca";
+
+/* Class = "NSToolbarItem"; label = "Avanzamento"; ObjectID = "864"; */
+"864.label" = "Avanzamento";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Avanzamento"; ObjectID = "864"; */
+"864.paletteLabel" = "Avanzamento";
+
+/* Class = "NSToolbarItem"; label = "Lingua"; ObjectID = "884"; */
+"884.label" = "Lingua";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Lingua"; ObjectID = "884"; */
+"884.paletteLabel" = "Lingua";
+
+/* Class = "NSToolbarItem"; label = "Glossari"; ObjectID = "1152"; */
+"1152.label" = "Glossari";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Glossari"; ObjectID = "1152"; */
+"1152.paletteLabel" = "Glossari";
+
+/* Class = "NSToolbarItem"; label = "Avvia"; ObjectID = "1157"; */
+"1157.label" = "Avvia";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Avvia"; ObjectID = "1157"; */
+"1157.paletteLabel" = "Avvia";

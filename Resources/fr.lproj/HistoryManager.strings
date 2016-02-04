@@ -1,0 +1,30 @@
+
+/* Class = "NSWindow"; title = "États"; ObjectID = "5"; */
+"5.title" = "États";
+
+/* Class = "NSTableColumn"; headerCell.title = "État"; ObjectID = "9"; */
+"9.headerCell.title" = "État";
+
+/* Class = "NSTableColumn"; headerCell.title = "Date"; ObjectID = "10"; */
+"10.headerCell.title" = "Date";
+
+/* Class = "NSWindow"; title = "Nouvel état"; ObjectID = "14"; */
+"14.title" = "Nouvel état";
+
+/* Class = "NSDateFormatter"; ibShadowedDateFormat = "%d.%m.%y %H:%M"; ObjectID = "46"; */
+"46.ibShadowedDateFormat" = "%d.%m.%y %H:%M";
+
+/* Class = "NSButtonCell"; title = "Supprimer"; ObjectID = "48"; */
+"48.title" = "Supprimer";
+
+/* Class = "NSButtonCell"; title = "Fermer"; ObjectID = "49"; */
+"49.title" = "Fermer";
+
+/* Class = "NSTextFieldCell"; title = "Nom de l'état :"; ObjectID = "50"; */
+"50.title" = "Nom de l'état :";
+
+/* Class = "NSButtonCell"; title = "Créer"; ObjectID = "52"; */
+"52.title" = "Créer";
+
+/* Class = "NSButtonCell"; title = "Annuler"; ObjectID = "53"; */
+"53.title" = "Annuler";

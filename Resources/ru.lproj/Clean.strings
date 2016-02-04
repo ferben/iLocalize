@@ -1,0 +1,45 @@
+
+/* Class = "NSWindow"; title = "Очистка"; ObjectID = "5"; */
+"5.title" = "Очистка";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "15"; */
+"15.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Выбранным файлам"; ObjectID = "16"; */
+"16.title" = "Выбранным файлам";
+
+/* Class = "NSMenuItem"; title = "Выбранному языку"; ObjectID = "17"; */
+"17.title" = "Выбранному языку";
+
+/* Class = "NSMenuItem"; title = "Всему проекту"; ObjectID = "18"; */
+"18.title" = "Всему проекту";
+
+/* Class = "NSMenuItem"; title = "Выбранным строкам"; ObjectID = "19"; */
+"19.title" = "Выбранным строкам";
+
+/* Class = "NSButtonCell"; title = "Заменить \" на “ (два апострофа на двойную кавычку)"; ObjectID = "35"; */
+"35.title" = "Заменить \" на “ (два апострофа на двойную кавычку)";
+
+/* Class = "NSButtonCell"; title = "Заменить ... на … (три точки на многоточие)"; ObjectID = "36"; */
+"36.title" = "Заменить ... на … (три точки на многоточие)";
+
+/* Class = "NSButtonCell"; title = "Обеспечить неразрывный пробел перед пунктуацией"; ObjectID = "37"; */
+"37.title" = "Обеспечить неразрывный пробел перед пунктуацией";
+
+/* Class = "NSButtonCell"; title = "Удалить лишнее пустое пространство в конце строки"; ObjectID = "38"; */
+"38.title" = "Удалить лишнее пустое пространство в конце строки";
+
+/* Class = "NSButtonCell"; title = "Отменить"; ObjectID = "39"; */
+"39.title" = "Отменить";
+
+/* Class = "NSButtonCell"; title = "Очистить"; ObjectID = "40"; */
+"40.title" = "Очистить";
+
+/* Class = "NSTextFieldCell"; title = "Применить к:"; ObjectID = "41"; */
+"41.title" = "Применить к:";
+
+/* Class = "NSButtonCell"; title = "Пометить изменение строки как «нужно проверить»"; ObjectID = "44"; */
+"44.title" = "Пометить изменение строки как «нужно проверить»";
+
+/* Class = "NSButtonCell"; title = "Заменить ' на ’ (апостроф на одинарную кавычку)"; ObjectID = "45"; */
+"45.title" = "Заменить ' на ’ (апостроф на одинарную кавычку)";

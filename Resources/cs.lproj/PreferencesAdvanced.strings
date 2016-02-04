@@ -1,0 +1,48 @@
+
+/* Class = "NSTextField"; ibShadowedToolTip = "Cesta k ibtool nástroji (usually /usr/bin/ibtool). Tento nástroj je pouze v Leopardovi."; ObjectID = "484"; */
+"484.ibShadowedToolTip" = "Cesta k ibtool nástroji (usually /usr/bin/ibtool). Tento nástroj je pouze v Leopardovi.";
+
+/* Class = "NSButtonCell"; title = "Přesměrovat všechny zprávy konzole do systémové konzole"; ObjectID = "564"; */
+"564.title" = "Přesměrovat všechny zprávy konzole do systémové konzole";
+
+/* Class = "NSTextFieldCell"; title = "cesta k zip:"; ObjectID = "567"; */
+"567.title" = "cesta k zip:";
+
+/* Class = "NSTextFieldCell"; title = "ibtool cesta:"; ObjectID = "577"; */
+"577.title" = "ibtool cesta:";
+
+/* Class = "NSButtonCell"; title = "Vybrat…"; ObjectID = "593"; */
+"593.title" = "Vybrat…";
+
+/* Class = "NSTabViewItem"; label = "Nástroje"; ObjectID = "600"; */
+"600.label" = "Nástroje";
+
+/* Class = "NSTabViewItem"; label = "Cesty"; ObjectID = "603"; */
+"603.label" = "Cesty";
+
+/* Class = "NSTabViewItem"; label = "Nastavení"; ObjectID = "605"; */
+"605.label" = "Nastavení";
+
+/* Class = "NSTextFieldCell"; title = "Interface Builder 3:"; ObjectID = "610"; */
+"610.title" = "Interface Builder 3:";
+
+/* Class = "NSButtonCell"; title = "Vybrat…"; ObjectID = "617"; */
+"617.title" = "Vybrat…";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "635"; */
+"635.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Pluginy pro ibtool:"; ObjectID = "636"; */
+"636.title" = "Pluginy pro ibtool:";
+
+/* Class = "NSTextFieldCell"; title = "Výchozí složka projektu:"; ObjectID = "638"; */
+"638.title" = "Výchozí složka projektu:";
+
+/* Class = "NSButtonCell"; title = "Poslat všechny příkazy NIBů do konzole"; ObjectID = "655"; */
+"655.title" = "Poslat všechny příkazy NIBů do konzole";
+
+/* Class = "NSButtonCell"; title = "Porovnávat soubory NIB pomocí jejich struktury XML (pomalé ale přesné)"; ObjectID = "658"; */
+"658.title" = "Porovnávat soubory NIB pomocí jejich struktury XML (pomalé ale přesné)";
+
+/* Class = "NSTextFieldCell"; title = "cesta k diff:"; ObjectID = "663"; */
+"663.title" = "cesta k diff:";

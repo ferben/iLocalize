@@ -1,0 +1,51 @@
+
+/* Class = "NSWindow"; title = "Éditeur de filtre intelligent"; ObjectID = "1"; */
+"1.title" = "Éditeur de filtre intelligent";
+
+/* Class = "NSMenuItem"; title = "suivants sont vrais"; ObjectID = "25"; */
+"25.title" = "suivants sont vrais";
+
+/* Class = "NSMenuItem"; title = "Un des cas"; ObjectID = "26"; */
+"26.title" = "Un des cas";
+
+/* Class = "NSMenuItem"; title = "Tous les cas"; ObjectID = "27"; */
+"27.title" = "Tous les cas";
+
+/* Class = "NSTextFieldCell"; title = "Nom du filtre intelligent :"; ObjectID = "51"; */
+"51.title" = "Nom du filtre intelligent :";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "55"; */
+"55.title" = "OK";
+
+/* Class = "NSButtonCell"; title = "Annuler"; ObjectID = "57"; */
+"57.title" = "Annuler";
+
+/* Class = "NSMenuItem"; title = "comme"; ObjectID = "128"; */
+"128.title" = "comme";
+
+/* Class = "NSMenuItem"; title = "adresse"; ObjectID = "129"; */
+"129.title" = "adresse";
+
+/* Class = "NSMenuItem"; title = "signe"; ObjectID = "130"; */
+"130.title" = "signe";
+
+/* Class = "NSMenuItem"; title = "contient"; ObjectID = "132"; */
+"132.title" = "contient";
+
+/* Class = "NSMenuItem"; title = "commence par"; ObjectID = "133"; */
+"133.title" = "commence par";
+
+/* Class = "NSMenuItem"; title = "se termine par"; ObjectID = "134"; */
+"134.title" = "se termine par";
+
+/* Class = "NSMenuItem"; title = "est"; ObjectID = "135"; */
+"135.title" = "est";
+
+/* Class = "NSMenuItem"; title = "n’est pas"; ObjectID = "136"; */
+"136.title" = "n’est pas";
+
+/* Class = "NSButtonCell"; title = "Disponible dans tous les projets"; ObjectID = "142"; */
+"142.title" = "Disponible dans tous les projets";
+
+/* Class = "NSTextFieldCell"; title = "Presser la touche ⌥ (option) pour plus d'options"; ObjectID = "145"; */
+"145.title" = "Presser la touche ⌥ (option) pour plus d'options";

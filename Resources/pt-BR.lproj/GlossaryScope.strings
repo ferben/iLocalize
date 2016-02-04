@@ -1,0 +1,15 @@
+
+/* Class = "NSWindow"; title = "Janela"; ObjectID = "1"; */
+"1.title" = "Janela";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "4"; */
+"4.title" = "OK";
+
+/* Class = "NSButtonCell"; title = "Verificar"; ObjectID = "14"; */
+"14.title" = "Verificar";
+
+/* Class = "NSTextFieldCell"; title = "Escolha os glossários que serão usados na tradução:"; ObjectID = "20"; */
+"20.title" = "Escolha os glossários que serão usados na tradução:";
+
+/* Class = "NSButtonCell"; title = "Cancelar"; ObjectID = "24"; */
+"24.title" = "Cancelar";

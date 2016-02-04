@@ -1,0 +1,54 @@
+
+/* Class = "NSWindow"; title = "Nieuwe woordenlijst"; ObjectID = "5"; */
+"5.title" = "Nieuwe woordenlijst";
+
+/* Class = "NSMenuItem"; title = "Onderdeel2"; ObjectID = "9"; */
+"9.title" = "Onderdeel2";
+
+/* Class = "NSMenuItem"; title = "Onderdeel1"; ObjectID = "10"; */
+"10.title" = "Onderdeel1";
+
+/* Class = "NSMenuItem"; title = "Onderdeel3"; ObjectID = "11"; */
+"11.title" = "Onderdeel3";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "12"; */
+"12.title" = "OtherViews";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "41"; */
+"41.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Geselecteerde strings"; ObjectID = "42"; */
+"42.title" = "Geselecteerde strings";
+
+/* Class = "NSMenuItem"; title = "Alle bestanden"; ObjectID = "43"; */
+"43.title" = "Alle bestanden";
+
+/* Class = "NSMenuItem"; title = "Geselecteerde bestanden"; ObjectID = "45"; */
+"45.title" = "Geselecteerde bestanden";
+
+/* Class = "NSTextFieldCell"; title = "Naam woordenlijst:"; ObjectID = "71"; */
+"71.title" = "Naam woordenlijst:";
+
+/* Class = "NSTextFieldCell"; title = "Beschikbaar in:"; ObjectID = "72"; */
+"72.title" = "Beschikbaar in:";
+
+/* Class = "NSTextFieldCell"; title = "Inclusief:"; ObjectID = "75"; */
+"75.title" = "Inclusief:";
+
+/* Class = "NSButtonCell"; title = "Maak"; ObjectID = "77"; */
+"77.title" = "Maak";
+
+/* Class = "NSButtonCell"; title = "Annuleer"; ObjectID = "78"; */
+"78.title" = "Annuleer";
+
+/* Class = "NSTextFieldCell"; title = "Voeg strings toe van:"; ObjectID = "79"; */
+"79.title" = "Voeg strings toe van:";
+
+/* Class = "NSButtonCell"; title = "Vertaalde strings"; ObjectID = "82"; */
+"82.title" = "Vertaalde strings";
+
+/* Class = "NSButtonCell"; title = "Niet-vertaalde strings"; ObjectID = "83"; */
+"83.title" = "Niet-vertaalde strings";
+
+/* Class = "NSButtonCell"; title = "Vergrendelde strings"; ObjectID = "84"; */
+"84.title" = "Vergrendelde strings";

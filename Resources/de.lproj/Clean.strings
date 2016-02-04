@@ -1,0 +1,45 @@
+
+/* Class = "NSWindow"; title = "Aufräumen"; ObjectID = "5"; */
+"5.title" = "Aufräumen";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "15"; */
+"15.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Markierte Dateien"; ObjectID = "16"; */
+"16.title" = "Markierte Dateien";
+
+/* Class = "NSMenuItem"; title = "Markierte Sprache"; ObjectID = "17"; */
+"17.title" = "Markierte Sprache";
+
+/* Class = "NSMenuItem"; title = "Ganzes Projekt"; ObjectID = "18"; */
+"18.title" = "Ganzes Projekt";
+
+/* Class = "NSMenuItem"; title = "Markierte Zeichenfolgen"; ObjectID = "19"; */
+"19.title" = "Markierte Zeichenfolgen";
+
+/* Class = "NSButtonCell"; title = "Ersetze \" durch “ (doppelte Anführungszeichen)"; ObjectID = "35"; */
+"35.title" = "Ersetze \" durch “ (doppelte Anführungszeichen)";
+
+/* Class = "NSButtonCell"; title = "... durch … (Auslassung) ersetzen"; ObjectID = "36"; */
+"36.title" = "... durch … (Auslassung) ersetzen";
+
+/* Class = "NSButtonCell"; title = "Festen Leerschritt vor Zeichensetzung erzwingen"; ObjectID = "37"; */
+"37.title" = "Festen Leerschritt vor Zeichensetzung erzwingen";
+
+/* Class = "NSButtonCell"; title = "Überzählige(s) Leerzeichen am Ende entfernen"; ObjectID = "38"; */
+"38.title" = "Überzählige(s) Leerzeichen am Ende entfernen";
+
+/* Class = "NSButtonCell"; title = "Abbrechen"; ObjectID = "39"; */
+"39.title" = "Abbrechen";
+
+/* Class = "NSButtonCell"; title = "Aufräumen"; ObjectID = "40"; */
+"40.title" = "Aufräumen";
+
+/* Class = "NSTextFieldCell"; title = "Anwenden auf:"; ObjectID = "41"; */
+"41.title" = "Anwenden auf:";
+
+/* Class = "NSButtonCell"; title = "Geänderte Zeichenfolgen als „Zu kontrollieren“ markieren"; ObjectID = "44"; */
+"44.title" = "Geänderte Zeichenfolgen als „Zu kontrollieren“ markieren";
+
+/* Class = "NSButtonCell"; title = "Ersetze ´ durch ' (Apostroph durch einfaches Anführungszeichen)"; ObjectID = "45"; */
+"45.title" = "Ersetze ´ durch ' (Apostroph durch einfaches Anführungszeichen)";

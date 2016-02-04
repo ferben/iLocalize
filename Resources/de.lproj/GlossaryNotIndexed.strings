@@ -1,0 +1,33 @@
+
+/* Class = "NSWindow"; title = "Glossar ohne Index"; ObjectID = "5"; */
+"5.title" = "Glossar ohne Index";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "43"; */
+"43.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Lokal"; ObjectID = "44"; */
+"44.title" = "Lokal";
+
+/* Class = "NSMenuItem"; title = "Global"; ObjectID = "45"; */
+"45.title" = "Global";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "96"; */
+"96.title" = "OK";
+
+/* Class = "NSButtonCell"; title = "Abbrechen"; ObjectID = "97"; */
+"97.title" = "Abbrechen";
+
+/* Class = "NSTextFieldCell"; title = "Dieses Glossar ist nicht in einem der in iLocalize definierten Glossar-Zugriffspfade gespeichert. Damit Sie dieses Glossar beim Übersetzen eines Projekts nutzen können, sollten Sie es vorher in einen der definierten Glossar-Zugriffspfade verschieben oder dort ein Alias auf die Datei anlegen."; ObjectID = "101"; */
+"101.title" = "Dieses Glossar ist nicht in einem der in iLocalize definierten Glossar-Zugriffspfade gespeichert. Damit Sie dieses Glossar beim Übersetzen eines Projekts nutzen können, sollten Sie es vorher in einen der definierten Glossar-Zugriffspfade verschieben oder dort ein Alias auf die Datei anlegen.";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "110"; */
+"110.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Glossar verschieben"; ObjectID = "111"; */
+"111.title" = "Glossar verschieben";
+
+/* Class = "NSMenuItem"; title = "Alias des Glossars erzeugen"; ObjectID = "112"; */
+"112.title" = "Alias des Glossars erzeugen";
+
+/* Class = "NSTextFieldCell"; title = "im Glossar-Pfad"; ObjectID = "115"; */
+"115.title" = "im Glossar-Pfad";

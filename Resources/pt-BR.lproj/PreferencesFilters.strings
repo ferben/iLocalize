@@ -1,0 +1,42 @@
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "6"; */
+"6.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "Tecla"; ObjectID = "7"; */
+"7.title" = "Tecla";
+
+/* Class = "NSMenuItem"; title = "Comentário"; ObjectID = "8"; */
+"8.title" = "Comentário";
+
+/* Class = "NSMenuItem"; title = "Valor"; ObjectID = "9"; */
+"9.title" = "Valor";
+
+/* Class = "NSMenuItem"; title = "Todos"; ObjectID = "10"; */
+"10.title" = "Todos";
+
+/* Class = "NSTableColumn"; headerCell.title = "Elemento"; ObjectID = "14"; */
+"14.headerCell.title" = "Elemento";
+
+/* Class = "NSTableColumn"; headerCell.title = "Ativar"; ObjectID = "16"; */
+"16.headerCell.title" = "Ativar";
+
+/* Class = "NSTableColumn"; headerCell.title = "Expressão regular"; ObjectID = "18"; */
+"18.headerCell.title" = "Expressão regular";
+
+/* Class = "NSButtonCell"; title = "As strings não contém letra"; ObjectID = "153"; */
+"153.title" = "As strings não contém letra";
+
+/* Class = "NSButtonCell"; title = "As strings contém uma letra"; ObjectID = "154"; */
+"154.title" = "As strings contém uma letra";
+
+/* Class = "NSTextFieldCell"; title = "Ignorar:"; ObjectID = "155"; */
+"155.title" = "Ignorar:";
+
+/* Class = "NSTextFieldCell"; title = "Strings correspondentes, a pelo menos uma, das seguintes expressões regulares:"; ObjectID = "156"; */
+"156.title" = "Strings correspondentes, a pelo menos uma, das seguintes expressões regulares:";
+
+/* Class = "NSButtonCell"; title = "Strings base vazias"; ObjectID = "161"; */
+"161.title" = "Strings base vazias";
+
+/* Class = "NSTextFieldCell"; title = "Célula de Texto"; ObjectID = "162"; */
+"162.title" = "Célula de Texto";

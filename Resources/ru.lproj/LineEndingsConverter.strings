@@ -1,0 +1,36 @@
+
+/* Class = "NSWindow"; title = "Конвертер завершения строк"; ObjectID = "5"; */
+"5.title" = "Конвертер завершения строк";
+
+/* Class = "NSMenuItem"; title = "Unix (LF)"; ObjectID = "8"; */
+"8.title" = "Unix (LF)";
+
+/* Class = "NSMenuItem"; title = "Macintosh (CR)"; ObjectID = "9"; */
+"9.title" = "Macintosh (CR)";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "10"; */
+"10.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Windows (CR/LF)"; ObjectID = "11"; */
+"11.title" = "Windows (CR/LF)";
+
+/* Class = "NSTextFieldCell"; title = "Преобразовать следующие завершения строк"; ObjectID = "30"; */
+"30.title" = "Преобразовать следующие завершения строк";
+
+/* Class = "NSButtonCell"; title = "Macintosh (CR)"; ObjectID = "32"; */
+"32.title" = "Macintosh (CR)";
+
+/* Class = "NSButtonCell"; title = "Unix (LF)"; ObjectID = "33"; */
+"33.title" = "Unix (LF)";
+
+/* Class = "NSButtonCell"; title = "Windows (CR/LF)"; ObjectID = "34"; */
+"34.title" = "Windows (CR/LF)";
+
+/* Class = "NSTextFieldCell"; title = "в завершения строк"; ObjectID = "35"; */
+"35.title" = "в завершения строк";
+
+/* Class = "NSButtonCell"; title = "Отменить"; ObjectID = "36"; */
+"36.title" = "Отменить";
+
+/* Class = "NSButtonCell"; title = "Преобразовать"; ObjectID = "37"; */
+"37.title" = "Преобразовать";

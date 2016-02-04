@@ -1,0 +1,72 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "Kompilování NIB souborů má za následek jejich menší velikost, ale také se zabrání jejich lokalizaci nebo otevření v Interface Builderu."; ObjectID = "26"; */
+"26.ibShadowedToolTip" = "Kompilování NIB souborů má za následek jejich menší velikost, ale také se zabrání jejich lokalizaci nebo otevření v Interface Builderu.";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Otevře výchozího emailového klienta a do nové zprávy přiloží exportovaný soubor"; ObjectID = "77"; */
+"77.ibShadowedToolTip" = "Otevře výchozího emailového klienta a do nové zprávy přiloží exportovaný soubor";
+
+/* Class = "NSButtonCell"; title = "Kompilovat NIB soubory"; ObjectID = "170"; */
+"170.title" = "Kompilovat NIB soubory";
+
+/* Class = "NSButtonCell"; title = "Komprimovat"; ObjectID = "177"; */
+"177.title" = "Komprimovat";
+
+/* Class = "NSButtonCell"; title = "Automaticky vytvoří e-mail v Mailu"; ObjectID = "178"; */
+"178.title" = "Automaticky vytvoří e-mail v Mailu";
+
+/* Class = "NSTextFieldCell"; title = "Předmět:"; ObjectID = "219"; */
+"219.title" = "Předmět:";
+
+/* Class = "NSTextFieldCell"; title = "Zpráva:"; ObjectID = "221"; */
+"221.title" = "Zpráva:";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Exportuje pouze složky, obsahující jazyk (lproj)"; ObjectID = "253"; */
+"253.ibShadowedToolTip" = "Exportuje pouze složky, obsahující jazyk (lproj)";
+
+/* Class = "NSButtonCell"; title = "Pouze jazykové složky"; ObjectID = "254"; */
+"254.title" = "Pouze jazykové složky";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Vyexportuje projekt jako složku, kterou může Finder otevřít místo originálu, upravíte-li příponu na .app ,popřípadě na .ape !"; ObjectID = "256"; */
+"256.ibShadowedToolTip" = "Vyexportuje projekt jako složku, kterou může Finder otevřít místo originálu, upravíte-li příponu na .app ,popřípadě na .ape !";
+
+/* Class = "NSButtonCell"; title = "Složka"; ObjectID = "257"; */
+"257.title" = "Složka";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Exportuje pouze složky, obsahující jazyk (lproj)"; ObjectID = "262"; */
+"262.ibShadowedToolTip" = "Exportuje pouze složky, obsahující jazyk (lproj)";
+
+/* Class = "NSButtonCell"; title = "Zahrnout verzi"; ObjectID = "263"; */
+"263.title" = "Zahrnout verzi";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Exportuje pouze složky, obsahující jazyk (lproj)"; ObjectID = "265"; */
+"265.ibShadowedToolTip" = "Exportuje pouze složky, obsahující jazyk (lproj)";
+
+/* Class = "NSButtonCell"; title = "Zahrnout názvy exportovaných jazyků"; ObjectID = "266"; */
+"266.title" = "Zahrnout názvy exportovaných jazyků";
+
+/* Class = "NSTextFieldCell"; title = "<output-name-sample>"; ObjectID = "278"; */
+"278.title" = "<output-name-sample>";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Kompilování NIB souborů má za následek jejich menší velikost, ale také se zabrání jejich lokalizaci nebo otevření v Interface Builderu."; ObjectID = "287"; */
+"287.ibShadowedToolTip" = "Kompilování NIB souborů má za následek jejich menší velikost, ale také se zabrání jejich lokalizaci nebo otevření v Interface Builderu.";
+
+/* Class = "NSButtonCell"; title = "Převést soubory NIB na XIB"; ObjectID = "288"; */
+"288.title" = "Převést soubory NIB na XIB";
+
+/* Class = "NSBox"; title = "Výstupní formát"; ObjectID = "4LP-Rt-bQH"; */
+"4LP-Rt-bQH.title" = "Výstupní formát";
+
+/* Class = "NSBox"; title = "Postprocesing:"; ObjectID = "O8e-tz-Pid"; */
+"O8e-tz-Pid.title" = "Postprocesing:";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Enter the recipient e-mail address"; ObjectID = "d1S-np-O0Q"; */
+"d1S-np-O0Q.ibShadowedIsNilPlaceholder" = "Enter the recipient e-mail address";
+
+/* Class = "NSTextFieldCell"; title = "Subject:"; ObjectID = "dgD-W1-lcF"; */
+"dgD-W1-lcF.title" = "Subject:";
+
+/* Class = "NSBox"; title = "Výstupní název"; ObjectID = "hzV-oN-mXT"; */
+"hzV-oN-mXT.title" = "Výstupní název";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Enter the subject of the e-mail"; ObjectID = "jbL-CX-1Zi"; */
+"jbL-CX-1Zi.ibShadowedIsNilPlaceholder" = "Enter the subject of the e-mail";

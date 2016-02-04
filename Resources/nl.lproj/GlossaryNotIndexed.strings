@@ -1,0 +1,33 @@
+
+/* Class = "NSWindow"; title = "Woordenlijst niet geïndexeerd"; ObjectID = "5"; */
+"5.title" = "Woordenlijst niet geïndexeerd";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "43"; */
+"43.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Lokaal"; ObjectID = "44"; */
+"44.title" = "Lokaal";
+
+/* Class = "NSMenuItem"; title = "Algemeen"; ObjectID = "45"; */
+"45.title" = "Algemeen";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "96"; */
+"96.title" = "OK";
+
+/* Class = "NSButtonCell"; title = "Annuleer"; ObjectID = "97"; */
+"97.title" = "Annuleer";
+
+/* Class = "NSTextFieldCell"; title = "Deze woordenlijst staat niet in één van de binnen iLocalize bekende paden voor woordenlijsten. Om deze woordenlijst te gebruiken bij de vertaling van een project, moet het worden verplaatst naar een bekend pad of er moet een alias van worden gemaakt."; ObjectID = "101"; */
+"101.title" = "Deze woordenlijst staat niet in één van de binnen iLocalize bekende paden voor woordenlijsten. Om deze woordenlijst te gebruiken bij de vertaling van een project, moet het worden verplaatst naar een bekend pad of er moet een alias van worden gemaakt.";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "110"; */
+"110.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Verplaats de woordenlijst"; ObjectID = "111"; */
+"111.title" = "Verplaats de woordenlijst";
+
+/* Class = "NSMenuItem"; title = "Maak een alias van de woordenlijst"; ObjectID = "112"; */
+"112.title" = "Maak een alias van de woordenlijst";
+
+/* Class = "NSTextFieldCell"; title = "in het woordenlijstpad"; ObjectID = "115"; */
+"115.title" = "in het woordenlijstpad";

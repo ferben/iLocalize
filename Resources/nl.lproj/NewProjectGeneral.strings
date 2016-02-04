@@ -1,0 +1,51 @@
+
+/* Class = "NSMenuItem"; title = "<naam instelling>"; ObjectID = "82"; */
+"82.title" = "<naam instelling>";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "83"; */
+"83.title" = "OtherViews";
+
+/* Class = "NSTextFieldCell"; title = "Naam:"; ObjectID = "625"; */
+"625.title" = "Naam:";
+
+/* Class = "NSTextFieldCell"; title = "Bestemming:"; ObjectID = "626"; */
+"626.title" = "Bestemming:";
+
+/* Class = "NSTextFieldCell"; title = "Rekenmachine"; ObjectID = "627"; */
+"627.title" = "Rekenmachine";
+
+/* Class = "NSButtonCell"; title = "Kies…"; ObjectID = "629"; */
+"629.title" = "Kies…";
+
+/* Class = "NSButtonCell"; title = "Kies…"; ObjectID = "632"; */
+"632.title" = "Kies…";
+
+/* Class = "NSTextFieldCell"; title = "Presets:"; ObjectID = "635"; */
+"635.title" = "Presets:";
+
+/* Class = "NSTextFieldCell"; title = "Om te beginnen, selecteert u de bundel die u wilt vertalen:"; ObjectID = "676"; */
+"676.title" = "Om te beginnen, selecteert u de bundel die u wilt vertalen:";
+
+/* Class = "NSMenuItem"; title = "Bewaar"; ObjectID = "682"; */
+"682.title" = "Bewaar";
+
+/* Class = "NSMenuItem"; title = "Bewaar als…"; ObjectID = "683"; */
+"683.title" = "Bewaar als…";
+
+/* Class = "NSMenuItem"; title = "Wijzig naam…"; ObjectID = "684"; */
+"684.title" = "Wijzig naam…";
+
+/* Class = "NSMenuItem"; title = "Verwijder"; ObjectID = "685"; */
+"685.title" = "Verwijder";
+
+/* Class = "NSTextFieldCell"; title = "Bundel:"; ObjectID = "802"; */
+"802.title" = "Bundel:";
+
+/* Class = "NSPathCell"; placeholderString = "Sleep de te vertalen bundel"; ObjectID = "808"; */
+"808.placeholderString" = "Sleep de te vertalen bundel";
+
+/* Class = "NSPathCell"; placeholderString = "Sleep de map waarin het project wordt gemaakt"; ObjectID = "810"; */
+"810.placeholderString" = "Sleep de map waarin het project wordt gemaakt";
+
+/* Class = "NSTextFieldCell"; title = "<do not localize>"; ObjectID = "828"; */
+"828.title" = "<do not localize>";

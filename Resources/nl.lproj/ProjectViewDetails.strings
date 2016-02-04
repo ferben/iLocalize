@@ -1,0 +1,12 @@
+
+/* Class = "NSButtonCell"; ibExternalAccessibilityDescription = "Woordenlijst weergave"; ObjectID = "52"; */
+"52.ibExternalAccessibilityDescription" = "Woordenlijst weergave";
+
+/* Class = "NSButtonCell"; ibExternalAccessibilityDescription = "Stringinfo weergave"; ObjectID = "53"; */
+"53.ibExternalAccessibilityDescription" = "Stringinfo weergave";
+
+/* Class = "NSButtonCell"; ibExternalAccessibilityDescription = "Alternatieven weergave"; ObjectID = "55"; */
+"55.ibExternalAccessibilityDescription" = "Alternatieven weergave";
+
+/* Class = "NSButtonCell"; ibExternalAccessibilityDescription = "Bestandinfo weergave"; ObjectID = "74"; */
+"74.ibExternalAccessibilityDescription" = "Bestandinfo weergave";

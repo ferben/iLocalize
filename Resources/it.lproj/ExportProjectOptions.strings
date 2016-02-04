@@ -1,0 +1,72 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "La compattazione dei files NIB riduce le dimensioni dei files NIB ma impedisce che vengano localizzati o aperti i Interface Builder."; ObjectID = "26"; */
+"26.ibShadowedToolTip" = "La compattazione dei files NIB riduce le dimensioni dei files NIB ma impedisce che vengano localizzati o aperti i Interface Builder.";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Apri il client di posta di default e allega il file esportato a una nuova e-mail vuota"; ObjectID = "77"; */
+"77.ibShadowedToolTip" = "Apri il client di posta di default e allega il file esportato a una nuova e-mail vuota";
+
+/* Class = "NSButtonCell"; title = "Compatta NIB files"; ObjectID = "170"; */
+"170.title" = "Compatta NIB files";
+
+/* Class = "NSButtonCell"; title = "Zipped"; ObjectID = "177"; */
+"177.title" = "Zipped";
+
+/* Class = "NSButtonCell"; title = "Prepara automaticamente una e-mail in Mail"; ObjectID = "178"; */
+"178.title" = "Prepara automaticamente una e-mail in Mail";
+
+/* Class = "NSTextFieldCell"; title = "Oggetto:"; ObjectID = "219"; */
+"219.title" = "Oggetto:";
+
+/* Class = "NSTextFieldCell"; title = "Messaggio:"; ObjectID = "221"; */
+"221.title" = "Messaggio:";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Esporta solo cartelle che contengono una lingua (lproj)"; ObjectID = "253"; */
+"253.ibShadowedToolTip" = "Esporta solo cartelle che contengono una lingua (lproj)";
+
+/* Class = "NSButtonCell"; title = "Solo cartelle lingue"; ObjectID = "254"; */
+"254.title" = "Solo cartelle lingue";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Esporta il progetto come una cartella che il Finder possa aprire invece di usare l’estensione originale del bundle"; ObjectID = "256"; */
+"256.ibShadowedToolTip" = "Esporta il progetto come una cartella che il Finder possa aprire invece di usare l’estensione originale del bundle";
+
+/* Class = "NSButtonCell"; title = "Cartella"; ObjectID = "257"; */
+"257.title" = "Cartella";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Esporta solo cartelle che contengono una lingua (lproj)"; ObjectID = "262"; */
+"262.ibShadowedToolTip" = "Esporta solo cartelle che contengono una lingua (lproj)";
+
+/* Class = "NSButtonCell"; title = "Includi versione"; ObjectID = "263"; */
+"263.title" = "Includi versione";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Esporta solo cartelle che contengono una lingua (lproj)"; ObjectID = "265"; */
+"265.ibShadowedToolTip" = "Esporta solo cartelle che contengono una lingua (lproj)";
+
+/* Class = "NSButtonCell"; title = "Includi nomi delle lingue esportate"; ObjectID = "266"; */
+"266.title" = "Includi nomi delle lingue esportate";
+
+/* Class = "NSTextFieldCell"; title = "<nome-uscita-esempio>"; ObjectID = "278"; */
+"278.title" = "<nome-uscita-esempio>";
+
+/* Class = "NSButton"; ibShadowedToolTip = "La compattazione dei files NIB riduce le dimensioni dei files NIB ma impedisce che vengano localizzati o aperti i Interface Builder."; ObjectID = "287"; */
+"287.ibShadowedToolTip" = "La compattazione dei files NIB riduce le dimensioni dei files NIB ma impedisce che vengano localizzati o aperti i Interface Builder.";
+
+/* Class = "NSButtonCell"; title = "Convert nib to xib files"; ObjectID = "288"; */
+"288.title" = "Convert nib to xib files";
+
+/* Class = "NSBox"; title = "Formato Uscita"; ObjectID = "4LP-Rt-bQH"; */
+"4LP-Rt-bQH.title" = "Formato Uscita";
+
+/* Class = "NSBox"; title = "Post-produzione"; ObjectID = "O8e-tz-Pid"; */
+"O8e-tz-Pid.title" = "Post-produzione";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Enter the recipient e-mail address"; ObjectID = "d1S-np-O0Q"; */
+"d1S-np-O0Q.ibShadowedIsNilPlaceholder" = "Enter the recipient e-mail address";
+
+/* Class = "NSTextFieldCell"; title = "Subject:"; ObjectID = "dgD-W1-lcF"; */
+"dgD-W1-lcF.title" = "Subject:";
+
+/* Class = "NSBox"; title = "Nome d’uscita"; ObjectID = "hzV-oN-mXT"; */
+"hzV-oN-mXT.title" = "Nome d’uscita";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Enter the subject of the e-mail"; ObjectID = "jbL-CX-1Zi"; */
+"jbL-CX-1Zi.ibShadowedIsNilPlaceholder" = "Enter the subject of the e-mail";

@@ -1,0 +1,39 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "Update de basistaal en stel alle overige talen opnieuw in. Alle strings in de andere talen worden vertaald op basis van hun huidige vertaling."; ObjectID = "10"; */
+"10.ibShadowedToolTip" = "Update de basistaal en stel alle overige talen opnieuw in. Alle strings in de andere talen worden vertaald op basis van hun huidige vertaling.";
+
+/* Class = "NSTextFieldCell"; title = "Selecteer de taal/talen die u wilt updaten:"; ObjectID = "151"; */
+"151.title" = "Selecteer de taal/talen die u wilt updaten:";
+
+/* Class = "NSButtonCell"; title = "Update het project met een nieuwe versie van de bundel:"; ObjectID = "152"; */
+"152.title" = "Update het project met een nieuwe versie van de bundel:";
+
+/* Class = "NSButtonCell"; title = "Stel layout van elk vertaald NIB-bestand opnieuw in met de layout van de basistaal"; ObjectID = "153"; */
+"153.title" = "Stel layout van elk vertaald NIB-bestand opnieuw in met de layout van de basistaal";
+
+/* Class = "NSButtonCell"; title = "Update de vertalingen in het project met bundel:"; ObjectID = "154"; */
+"154.title" = "Update de vertalingen in het project met bundel:";
+
+/* Class = "NSButtonCell"; title = "Update NIB-layouts met geïmporteerde layouts"; ObjectID = "155"; */
+"155.title" = "Update NIB-layouts met geïmporteerde layouts";
+
+/* Class = "NSTextFieldCell"; title = "Controleer vertaalde NIB-bestanden op correcte layout."; ObjectID = "156"; */
+"156.title" = "Controleer vertaalde NIB-bestanden op correcte layout.";
+
+/* Class = "NSButtonCell"; title = "Maak ontbrekende, vertaalbare bestanden uit basistaal"; ObjectID = "158"; */
+"158.title" = "Maak ontbrekende, vertaalbare bestanden uit basistaal";
+
+/* Class = "NSButtonCell"; title = "Controleer"; ObjectID = "189"; */
+"189.title" = "Controleer";
+
+/* Class = "NSButtonCell"; title = "Kies…"; ObjectID = "203"; */
+"203.title" = "Kies…";
+
+/* Class = "NSButtonCell"; title = "Kies…"; ObjectID = "205"; */
+"205.title" = "Kies…";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Kies of sleep een bundel"; ObjectID = "213"; */
+"213.ibShadowedIsNilPlaceholder" = "Kies of sleep een bundel";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Kies of sleep een bundel"; ObjectID = "214"; */
+"214.ibShadowedIsNilPlaceholder" = "Kies of sleep een bundel";

@@ -1,0 +1,21 @@
+
+/* Class = "NSWindow"; title = "Zpráva o operaci"; ObjectID = "5"; */
+"5.title" = "Zpráva o operaci";
+
+/* Class = "NSTableColumn"; headerCell.title = "Typ"; ObjectID = "11"; */
+"11.headerCell.title" = "Typ";
+
+/* Class = "NSTableColumn"; headerCell.title = "Popis"; ObjectID = "64"; */
+"64.headerCell.title" = "Popis";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "65"; */
+"65.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Chyby a výstrahy dokončené operace:"; ObjectID = "78"; */
+"78.title" = "Chyby a výstrahy dokončené operace:";
+
+/* Class = "NSButtonCell"; title = "Budiž"; ObjectID = "79"; */
+"79.title" = "Budiž";
+
+/* Class = "NSButtonCell"; title = "Exportovat..."; ObjectID = "80"; */
+"80.title" = "Exportovat...";

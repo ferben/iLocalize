@@ -1,0 +1,42 @@
+
+/* Class = "NSMenu"; title = "Menü"; ObjectID = "6"; */
+"6.title" = "Menü";
+
+/* Class = "NSMenuItem"; title = "Schlüssel"; ObjectID = "7"; */
+"7.title" = "Schlüssel";
+
+/* Class = "NSMenuItem"; title = "Kommentar"; ObjectID = "8"; */
+"8.title" = "Kommentar";
+
+/* Class = "NSMenuItem"; title = "Wert"; ObjectID = "9"; */
+"9.title" = "Wert";
+
+/* Class = "NSMenuItem"; title = "Alle"; ObjectID = "10"; */
+"10.title" = "Alle";
+
+/* Class = "NSTableColumn"; headerCell.title = "Element"; ObjectID = "14"; */
+"14.headerCell.title" = "Element";
+
+/* Class = "NSTableColumn"; headerCell.title = "Aktiv"; ObjectID = "16"; */
+"16.headerCell.title" = "Aktiv";
+
+/* Class = "NSTableColumn"; headerCell.title = "Regulärer Ausdruck"; ObjectID = "18"; */
+"18.headerCell.title" = "Regulärer Ausdruck";
+
+/* Class = "NSButtonCell"; title = "Zeichenfolgen ohne Buchstaben"; ObjectID = "153"; */
+"153.title" = "Zeichenfolgen ohne Buchstaben";
+
+/* Class = "NSButtonCell"; title = "Zeichenfolgen mit nur einem Buchstaben"; ObjectID = "154"; */
+"154.title" = "Zeichenfolgen mit nur einem Buchstaben";
+
+/* Class = "NSTextFieldCell"; title = "Ignorieren"; ObjectID = "155"; */
+"155.title" = "Ignorieren";
+
+/* Class = "NSTextFieldCell"; title = "Zeichenfolgen, die einem der folgenden regulären Ausdrücke entsprechen:"; ObjectID = "156"; */
+"156.title" = "Zeichenfolgen, die einem der folgenden regulären Ausdrücke entsprechen:";
+
+/* Class = "NSButtonCell"; title = "Leere Zeichenfolge in Ausgangssprache"; ObjectID = "161"; */
+"161.title" = "Leere Zeichenfolge in Ausgangssprache";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "162"; */
+"162.title" = "Text Cell";

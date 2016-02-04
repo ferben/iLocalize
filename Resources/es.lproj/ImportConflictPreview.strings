@@ -1,0 +1,54 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Usar proyecto"; ObjectID = "9"; */
+"9.headerCell.title" = "Usar proyecto";
+
+/* Class = "NSTableColumn"; headerCell.title = "Usar origen"; ObjectID = "12"; */
+"12.headerCell.title" = "Usar origen";
+
+/* Class = "NSTableColumn"; headerCell.title = "Archivo"; ObjectID = "14"; */
+"14.headerCell.title" = "Archivo";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Permite seleccionar todos archivos de origen para los archivos de la lista"; ObjectID = "81"; */
+"81.ibShadowedToolTip" = "Permite seleccionar todos archivos de origen para los archivos de la lista";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Permite seleccionar todos archivos del proyecto para los archivos de la lista"; ObjectID = "82"; */
+"82.ibShadowedToolTip" = "Permite seleccionar todos archivos del proyecto para los archivos de la lista";
+
+/* Class = "NSTextFieldCell"; title = "Los archivos siguientes crean un conflicto porque no se pueden combinar.\nElija la dirección de combinación para cada uno de ellos:"; ObjectID = "90"; */
+"90.title" = "Los archivos siguientes crean un conflicto porque no se pueden combinar.\nElija la dirección de combinación para cada uno de ellos:";
+
+/* Class = "NSTextFieldCell"; title = "Dec 28, 2005, 11:03:20 AM"; ObjectID = "96"; */
+"96.title" = "Dec 28, 2005, 11:03:20 AM";
+
+/* Class = "NSTextFieldCell"; title = "Dec 28, 2005, 11:03:20 AM"; ObjectID = "97"; */
+"97.title" = "Dec 28, 2005, 11:03:20 AM";
+
+/* Class = "NSTextFieldCell"; title = "Dec 28, 2005, 11:03:20 AM"; ObjectID = "100"; */
+"100.title" = "Dec 28, 2005, 11:03:20 AM";
+
+/* Class = "NSTextFieldCell"; title = "Dec 28, 2005, 11:03:20 AM"; ObjectID = "104"; */
+"104.title" = "Dec 28, 2005, 11:03:20 AM";
+
+/* Class = "NSButtonCell"; title = "Seleccionar todos los archivos de origen"; ObjectID = "107"; */
+"107.title" = "Seleccionar todos los archivos de origen";
+
+/* Class = "NSButtonCell"; title = "Seleccionar todos los archivos del proyecto"; ObjectID = "108"; */
+"108.title" = "Seleccionar todos los archivos del proyecto";
+
+/* Class = "NSTextFieldCell"; title = "8"; ObjectID = "109"; */
+"109.title" = "8";
+
+/* Class = "NSTextFieldCell"; title = "Origen:"; ObjectID = "120"; */
+"120.title" = "Origen:";
+
+/* Class = "NSTextFieldCell"; title = "Proyecto:"; ObjectID = "122"; */
+"122.title" = "Proyecto:";
+
+/* Class = "NSTextFieldCell"; title = "Fecha de creación"; ObjectID = "124"; */
+"124.title" = "Fecha de creación";
+
+/* Class = "NSTextFieldCell"; title = "Fecha de última modificación"; ObjectID = "126"; */
+"126.title" = "Fecha de última modificación";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "129"; */
+"129.title" = "Box";

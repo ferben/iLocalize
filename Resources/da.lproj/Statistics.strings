@@ -1,0 +1,57 @@
+
+/* Class = "NSWindow"; title = "Statistik"; ObjectID = "5"; */
+"5.title" = "Statistik";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "19"; */
+"19.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "lklkl"; ObjectID = "20"; */
+"20.title" = "lklkl";
+
+/* Class = "NSMenuItem"; title = "abab"; ObjectID = "21"; */
+"21.title" = "abab";
+
+/* Class = "NSMenuItem"; title = "Alle"; ObjectID = "22"; */
+"22.title" = "Alle";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "67"; */
+"67.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "pr. strings"; ObjectID = "68"; */
+"68.title" = "pr. strings";
+
+/* Class = "NSMenuItem"; title = "pr. tegn"; ObjectID = "69"; */
+"69.title" = "pr. tegn";
+
+/* Class = "NSMenuItem"; title = "pr. ord"; ObjectID = "70"; */
+"70.title" = "pr. ord";
+
+/* Class = "NSTableColumn"; headerCell.title = "#"; ObjectID = "108"; */
+"108.headerCell.title" = "#";
+
+/* Class = "NSTableColumn"; headerCell.title = "Alle"; ObjectID = "109"; */
+"109.headerCell.title" = "Alle";
+
+/* Class = "NSTableColumn"; headerCell.title = "Skal oversættes"; ObjectID = "110"; */
+"110.headerCell.title" = "Skal oversættes";
+
+/* Class = "NSButtonCell"; title = "Kopier til udklipsholder"; ObjectID = "120"; */
+"120.title" = "Kopier til udklipsholder";
+
+/* Class = "NSButtonCell"; title = "Luk"; ObjectID = "121"; */
+"121.title" = "Luk";
+
+/* Class = "NSTextFieldCell"; title = "Sprog:"; ObjectID = "122"; */
+"122.title" = "Sprog:";
+
+/* Class = "NSTextFieldCell"; title = "Bemærk: Denne statistik gælder kun for strings og XIB/NIB-arkiver."; ObjectID = "124"; */
+"124.title" = "Bemærk: Denne statistik gælder kun for strings og XIB/NIB-arkiver.";
+
+/* Class = "NSTextFieldCell"; title = "Indsamler statistik…"; ObjectID = "125"; */
+"125.title" = "Indsamler statistik…";
+
+/* Class = "NSTextFieldCell"; title = "1"; ObjectID = "127"; */
+"127.title" = "1";
+
+/* Class = "NSTextFieldCell"; title = "Pris:"; ObjectID = "128"; */
+"128.title" = "Pris:";

@@ -1,0 +1,45 @@
+
+/* Class = "NSWindow"; title = "<用語集>"; ObjectID = "5"; */
+"5.title" = "<用語集>";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "160"; */
+"160.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "161"; */
+"161.title" = "Text Cell";
+
+/* Class = "NSToolbarItem"; label = "検索"; ObjectID = "177"; */
+"177.label" = "検索";
+
+/* Class = "NSToolbarItem"; paletteLabel = "検索"; ObjectID = "177"; */
+"177.paletteLabel" = "検索";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "193"; */
+"193.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "195"; */
+"195.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "196"; */
+"196.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "選択されたエントリの削除"; ObjectID = "202"; */
+"202.title" = "選択されたエントリの削除";
+
+/* Class = "NSMenuItem"; title = "重複したエントリの削除"; ObjectID = "203"; */
+"203.title" = "重複したエントリの削除";
+
+/* Class = "NSMenuItem"; title = "ベース言語の名前を変更…"; ObjectID = "204"; */
+"204.title" = "ベース言語の名前を変更…";
+
+/* Class = "NSMenuItem"; title = "ターゲット言語の名前を変更…"; ObjectID = "206"; */
+"206.title" = "ターゲット言語の名前を変更…";
+
+/* Class = "NSTextFieldCell"; title = "<-----do not localize------>"; ObjectID = "221"; */
+"221.title" = "<-----do not localize------>";
+
+/* Class = "NSToolbarItem"; paletteLabel = "情報"; ObjectID = "222"; */
+"222.paletteLabel" = "情報";
+
+/* Class = "NSButton"; ibShadowedToolTip = "この用語集は、iLocalize に設定されているどの用語集パスにも置かれていません。どうするか選択して下さい。"; ObjectID = "230"; */
+"230.ibShadowedToolTip" = "この用語集は、iLocalize に設定されているどの用語集パスにも置かれていません。どうするか選択して下さい。";

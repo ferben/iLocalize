@@ -1,0 +1,30 @@
+
+/* Class = "NSWindow"; title = "Моментальные снимки"; ObjectID = "5"; */
+"5.title" = "Моментальные снимки";
+
+/* Class = "NSTableColumn"; headerCell.title = "Снимок"; ObjectID = "9"; */
+"9.headerCell.title" = "Снимок";
+
+/* Class = "NSTableColumn"; headerCell.title = "Дата"; ObjectID = "10"; */
+"10.headerCell.title" = "Дата";
+
+/* Class = "NSWindow"; title = "Создание моментального снимка"; ObjectID = "14"; */
+"14.title" = "Создание моментального снимка";
+
+/* Class = "NSDateFormatter"; ibShadowedDateFormat = "%d.%m.%y %H:%M"; ObjectID = "46"; */
+"46.ibShadowedDateFormat" = "%d.%m.%y %H:%M";
+
+/* Class = "NSButtonCell"; title = "Удалить"; ObjectID = "48"; */
+"48.title" = "Удалить";
+
+/* Class = "NSButtonCell"; title = "Закрыть"; ObjectID = "49"; */
+"49.title" = "Закрыть";
+
+/* Class = "NSTextFieldCell"; title = "Имя снимка:"; ObjectID = "50"; */
+"50.title" = "Имя снимка:";
+
+/* Class = "NSButtonCell"; title = "Создать"; ObjectID = "52"; */
+"52.title" = "Создать";
+
+/* Class = "NSButtonCell"; title = "Отменить"; ObjectID = "53"; */
+"53.title" = "Отменить";

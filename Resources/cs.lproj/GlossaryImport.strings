@@ -1,0 +1,51 @@
+
+/* Class = "NSWindow"; title = "Importovat slovník"; ObjectID = "7"; */
+"7.title" = "Importovat slovník";
+
+/* Class = "NSButtonCell"; title = "Text iLocalize"; ObjectID = "42"; */
+"42.title" = "Text iLocalize";
+
+/* Class = "NSTextFieldCell"; title = "Původní jazyk:"; ObjectID = "57"; */
+"57.title" = "Původní jazyk:";
+
+/* Class = "NSTextFieldCell"; title = "Cílový jazyk:"; ObjectID = "58"; */
+"58.title" = "Cílový jazyk:";
+
+/* Class = "NSButtonCell"; title = "Zrušit"; ObjectID = "62"; */
+"62.title" = "Zrušit";
+
+/* Class = "NSButtonCell"; title = "Importovat"; ObjectID = "63"; */
+"63.title" = "Importovat";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "65"; */
+"65.title" = "Radio";
+
+/* Class = "NSMenu"; title = "Jiný pohled"; ObjectID = "68"; */
+"68.title" = "Jiný pohled";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "69"; */
+"69.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "70"; */
+"70.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "71"; */
+"71.title" = "Item 1";
+
+/* Class = "NSMenu"; title = "Jiný pohled"; ObjectID = "74"; */
+"74.title" = "Jiný pohled";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "75"; */
+"75.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "76"; */
+"76.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "77"; */
+"77.title" = "Item 1";
+
+/* Class = "NSButtonCell"; title = "Text PowerGlot"; ObjectID = "4Dw-c6-cD7"; */
+"4Dw-c6-cD7.title" = "Text PowerGlot";
+
+/* Class = "NSBox"; title = "Importovat"; ObjectID = "sjn-Ag-wmj"; */
+"sjn-Ag-wmj.title" = "Importovat";

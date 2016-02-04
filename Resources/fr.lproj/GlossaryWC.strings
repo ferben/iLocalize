@@ -1,0 +1,45 @@
+
+/* Class = "NSWindow"; title = "<glossaire>"; ObjectID = "5"; */
+"5.title" = "<glossaire>";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "160"; */
+"160.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "161"; */
+"161.title" = "Text Cell";
+
+/* Class = "NSToolbarItem"; label = "Rechercher"; ObjectID = "177"; */
+"177.label" = "Rechercher";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Rechercher"; ObjectID = "177"; */
+"177.paletteLabel" = "Rechercher";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "193"; */
+"193.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "195"; */
+"195.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "196"; */
+"196.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Supprimer les entrées sélectionnées"; ObjectID = "202"; */
+"202.title" = "Supprimer les entrées sélectionnées";
+
+/* Class = "NSMenuItem"; title = "Supprimer les entrées doublons"; ObjectID = "203"; */
+"203.title" = "Supprimer les entrées doublons";
+
+/* Class = "NSMenuItem"; title = "Renommer la langue de référence…"; ObjectID = "204"; */
+"204.title" = "Renommer la langue de référence…";
+
+/* Class = "NSMenuItem"; title = "Renommer la langue cible…"; ObjectID = "206"; */
+"206.title" = "Renommer la langue cible…";
+
+/* Class = "NSTextFieldCell"; title = "<-----do not localize------>"; ObjectID = "221"; */
+"221.title" = "<-----do not localize------>";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Infos"; ObjectID = "222"; */
+"222.paletteLabel" = "Infos";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Ce glossaire ne se trouve pas dans l'un des endroits habituels connus d'iLocalize. Cliquez pour décider ce qu'il faut en faire."; ObjectID = "230"; */
+"230.ibShadowedToolTip" = "Ce glossaire ne se trouve pas dans l'un des endroits habituels connus d'iLocalize. Cliquez pour décider ce qu'il faut en faire.";

@@ -1,0 +1,66 @@
+
+/* Class = "NSWindow"; title = "Simboli"; ObjectID = "782"; */
+"782.title" = "Simboli";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "955"; */
+"955.title" = "Box";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "957"; */
+"957.title" = "Box";
+
+/* Class = "NSTextFieldCell"; title = "Controlla layout (solo XIB/NIB)"; ObjectID = "1777"; */
+"1777.title" = "Controlla layout (solo XIB/NIB)";
+
+/* Class = "NSTextFieldCell"; title = "Contenuto del file deve essere salvato su disco"; ObjectID = "1781"; */
+"1781.title" = "Contenuto del file deve essere salvato su disco";
+
+/* Class = "NSTextFieldCell"; title = "File grassetto:"; ObjectID = "1782"; */
+"1782.title" = "File grassetto:";
+
+/* Class = "NSTextFieldCell"; title = "Il file ha qualche inconsistenza"; ObjectID = "1790"; */
+"1790.title" = "Il file ha qualche inconsistenza";
+
+/* Class = "NSTextFieldCell"; title = "Il file non esiste sul disoco"; ObjectID = "1792"; */
+"1792.title" = "Il file non esiste sul disoco";
+
+/* Class = "NSTextFieldCell"; title = "Il contenuto del file deve essere ricaricato dal disco"; ObjectID = "1794"; */
+"1794.title" = "Il contenuto del file deve essere ricaricato dal disco";
+
+/* Class = "NSTextFieldCell"; title = "File è stato aggiunto durante l’ultimo aggiornamento"; ObjectID = "1797"; */
+"1797.title" = "File è stato aggiunto durante l’ultimo aggiornamento";
+
+/* Class = "NSTextFieldCell"; title = "File è stato aggiornato durante l’ultimo aggiornamento"; ObjectID = "1798"; */
+"1798.title" = "File è stato aggiornato durante l’ultimo aggiornamento";
+
+/* Class = "NSTextFieldCell"; title = "✒"; ObjectID = "1799"; */
+"1799.title" = "✒";
+
+/* Class = "NSTextFieldCell"; title = "Identifica il file contenente le strings selezionate (quando molti files sono selezionati)"; ObjectID = "1800"; */
+"1800.title" = "Identifica il file contenente le strings selezionate (quando molti files sono selezionati)";
+
+/* Class = "NSTextFieldCell"; title = "Simboli File"; ObjectID = "1801"; */
+"1801.title" = "Simboli File";
+
+/* Class = "NSTextFieldCell"; title = "Simboli String"; ObjectID = "1802"; */
+"1802.title" = "Simboli String";
+
+/* Class = "NSTextFieldCell"; title = "Auto-invariato"; ObjectID = "1804"; */
+"1804.title" = "Auto-invariato";
+
+/* Class = "NSTextFieldCell"; title = "Invariato"; ObjectID = "1806"; */
+"1806.title" = "Invariato";
+
+/* Class = "NSTextFieldCell"; title = "Auto-tradotto"; ObjectID = "1807"; */
+"1807.title" = "Auto-tradotto";
+
+/* Class = "NSTextFieldCell"; title = "Base modificata"; ObjectID = "1811"; */
+"1811.title" = "Base modificata";
+
+/* Class = "NSTextFieldCell"; title = "Da tradurre"; ObjectID = "1813"; */
+"1813.title" = "Da tradurre";
+
+/* Class = "NSTextFieldCell"; title = "Inconsistenze"; ObjectID = "1816"; */
+"1816.title" = "Inconsistenze";
+
+/* Class = "NSTextFieldCell"; title = "File has been updated during last update operation"; ObjectID = "hi2-yW-vJG"; */
+"hi2-yW-vJG.title" = "File has been updated during last update operation";

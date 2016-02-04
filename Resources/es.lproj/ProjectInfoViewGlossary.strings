@@ -1,0 +1,18 @@
+
+/* Class = "NSTextFieldCell"; title = "Texto"; ObjectID = "60"; */
+"60.title" = "Texto";
+
+/* Class = "NSMenuItem"; title = "Usar la selección"; ObjectID = "83"; */
+"83.title" = "Usar la selección";
+
+/* Class = "NSMenuItem"; title = "Copiar la selección en el portapapeles"; ObjectID = "84"; */
+"84.title" = "Copiar la selección en el portapapeles";
+
+/* Class = "NSMenuItem"; title = "Explorar los glosarios…"; ObjectID = "85"; */
+"85.title" = "Explorar los glosarios…";
+
+/* Class = "NSMenuItem"; title = "Ámbito de traducción..."; ObjectID = "88"; */
+"88.title" = "Ámbito de traducción...";
+
+/* Class = "NSMenuItem"; title = "Revelar la selección"; ObjectID = "97"; */
+"97.title" = "Revelar la selección";

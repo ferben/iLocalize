@@ -1,0 +1,51 @@
+
+/* Class = "NSWindow"; title = "Importeer woordenlijst"; ObjectID = "7"; */
+"7.title" = "Importeer woordenlijst";
+
+/* Class = "NSButtonCell"; title = "iLocalize tekst"; ObjectID = "42"; */
+"42.title" = "iLocalize tekst";
+
+/* Class = "NSTextFieldCell"; title = "Brontaal:"; ObjectID = "57"; */
+"57.title" = "Brontaal:";
+
+/* Class = "NSTextFieldCell"; title = "Doeltaal:"; ObjectID = "58"; */
+"58.title" = "Doeltaal:";
+
+/* Class = "NSButtonCell"; title = "Annuleer"; ObjectID = "62"; */
+"62.title" = "Annuleer";
+
+/* Class = "NSButtonCell"; title = "Importeer"; ObjectID = "63"; */
+"63.title" = "Importeer";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "65"; */
+"65.title" = "Radio";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "68"; */
+"68.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 3"; ObjectID = "69"; */
+"69.title" = "Onderdeel 3";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 2"; ObjectID = "70"; */
+"70.title" = "Onderdeel 2";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 1"; ObjectID = "71"; */
+"71.title" = "Onderdeel 1";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "74"; */
+"74.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 3"; ObjectID = "75"; */
+"75.title" = "Onderdeel 3";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 2"; ObjectID = "76"; */
+"76.title" = "Onderdeel 2";
+
+/* Class = "NSMenuItem"; title = "Onderdeel 1"; ObjectID = "77"; */
+"77.title" = "Onderdeel 1";
+
+/* Class = "NSButtonCell"; title = "PowerGlot tekst"; ObjectID = "4Dw-c6-cD7"; */
+"4Dw-c6-cD7.title" = "PowerGlot tekst";
+
+/* Class = "NSBox"; title = "Importeren"; ObjectID = "sjn-Ag-wmj"; */
+"sjn-Ag-wmj.title" = "Importeren";

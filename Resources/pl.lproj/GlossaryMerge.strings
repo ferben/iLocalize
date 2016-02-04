@@ -1,0 +1,30 @@
+
+/* Class = "NSWindow"; title = "Połącz"; ObjectID = "5"; */
+"5.title" = "Połącz";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "8"; */
+"8.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "9"; */
+"9.title" = "Item2";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "10"; */
+"10.title" = "Item1";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "11"; */
+"11.title" = "Item3";
+
+/* Class = "NSTextFieldCell"; title = "W słowniku:"; ObjectID = "37"; */
+"37.title" = "W słowniku:";
+
+/* Class = "NSButtonCell"; title = "Połącz"; ObjectID = "38"; */
+"38.title" = "Połącz";
+
+/* Class = "NSTextFieldCell"; title = "Połącz poniższe słowniki:"; ObjectID = "39"; */
+"39.title" = "Połącz poniższe słowniki:";
+
+/* Class = "NSButtonCell"; title = "Anuluj"; ObjectID = "40"; */
+"40.title" = "Anuluj";
+
+/* Class = "NSButtonCell"; title = "Usuń identyczne wpisy"; ObjectID = "41"; */
+"41.title" = "Usuń identyczne wpisy";

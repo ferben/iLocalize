@@ -1,0 +1,39 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "Atualizar o idioma base e realocar todos os outros idiomas. Todas as strings nos outros idiomas serão traduzidos de acordo com a tradução atual."; ObjectID = "10"; */
+"10.ibShadowedToolTip" = "Atualizar o idioma base e realocar todos os outros idiomas. Todas as strings nos outros idiomas serão traduzidos de acordo com a tradução atual.";
+
+/* Class = "NSTextFieldCell"; title = "Selecione os idiomas que você deseja atualizar:"; ObjectID = "151"; */
+"151.title" = "Selecione os idiomas que você deseja atualizar:";
+
+/* Class = "NSButtonCell"; title = "Atualizar o projeto de uma nova versão do pacote:"; ObjectID = "152"; */
+"152.title" = "Atualizar o projeto de uma nova versão do pacote:";
+
+/* Class = "NSButtonCell"; title = "Redefinir o layout de cada arquivo NIB traduzido do layout do idioma base"; ObjectID = "153"; */
+"153.title" = "Redefinir o layout de cada arquivo NIB traduzido do layout do idioma base";
+
+/* Class = "NSButtonCell"; title = "Atualizar os idiomas traduzidos do projeto de um pacote:"; ObjectID = "154"; */
+"154.title" = "Atualizar os idiomas traduzidos do projeto de um pacote:";
+
+/* Class = "NSButtonCell"; title = "Atualizar layouts NIB com layouts importados"; ObjectID = "155"; */
+"155.title" = "Atualizar layouts NIB com layouts importados";
+
+/* Class = "NSTextFieldCell"; title = "Reveja os arquivos NIB traduzidos para garantir que cada layout esteja correto."; ObjectID = "156"; */
+"156.title" = "Reveja os arquivos NIB traduzidos para garantir que cada layout esteja correto.";
+
+/* Class = "NSButtonCell"; title = "Criar arquivos traduzidos não existentes do idioma base"; ObjectID = "158"; */
+"158.title" = "Criar arquivos traduzidos não existentes do idioma base";
+
+/* Class = "NSButtonCell"; title = "Verificar"; ObjectID = "189"; */
+"189.title" = "Verificar";
+
+/* Class = "NSButtonCell"; title = "Escolher…"; ObjectID = "203"; */
+"203.title" = "Escolher…";
+
+/* Class = "NSButtonCell"; title = "Escolher…"; ObjectID = "205"; */
+"205.title" = "Escolher…";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Escolha ou arraste um pacote"; ObjectID = "213"; */
+"213.ibShadowedIsNilPlaceholder" = "Escolha ou arraste um pacote";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Escolha ou arraste um pacote"; ObjectID = "214"; */
+"214.ibShadowedIsNilPlaceholder" = "Escolha ou arraste um pacote";

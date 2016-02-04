@@ -1,0 +1,48 @@
+
+/* Class = "NSTextField"; ibShadowedToolTip = "Ścieżka do pliku wykonywalnego ibtool (zwykle /usr/bin/ibtool). To narzędzie jest dostępne tylko w Leopardzie."; ObjectID = "484"; */
+"484.ibShadowedToolTip" = "Ścieżka do pliku wykonywalnego ibtool (zwykle /usr/bin/ibtool). To narzędzie jest dostępne tylko w Leopardzie.";
+
+/* Class = "NSButtonCell"; title = "Przekieruj wszystkie komunikaty konsoli do konsoli systemowej"; ObjectID = "564"; */
+"564.title" = "Przekieruj wszystkie komunikaty konsoli do konsoli systemowej";
+
+/* Class = "NSTextFieldCell"; title = "Zip:"; ObjectID = "567"; */
+"567.title" = "Zip:";
+
+/* Class = "NSTextFieldCell"; title = "Ścieżka do ibtool:"; ObjectID = "577"; */
+"577.title" = "Ścieżka do ibtool:";
+
+/* Class = "NSButtonCell"; title = "Wybierz…"; ObjectID = "593"; */
+"593.title" = "Wybierz…";
+
+/* Class = "NSTabViewItem"; label = "Narzędzia"; ObjectID = "600"; */
+"600.label" = "Narzędzia";
+
+/* Class = "NSTabViewItem"; label = "Ścieżki"; ObjectID = "603"; */
+"603.label" = "Ścieżki";
+
+/* Class = "NSTabViewItem"; label = "Ustawienia"; ObjectID = "605"; */
+"605.label" = "Ustawienia";
+
+/* Class = "NSTextFieldCell"; title = "Interface Builder 3:"; ObjectID = "610"; */
+"610.title" = "Interface Builder 3:";
+
+/* Class = "NSButtonCell"; title = "Wybierz…"; ObjectID = "617"; */
+"617.title" = "Wybierz…";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "635"; */
+"635.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Dodatki dla ibtool:"; ObjectID = "636"; */
+"636.title" = "Dodatki dla ibtool:";
+
+/* Class = "NSTextFieldCell"; title = "Domyślny katalog projektu:"; ObjectID = "638"; */
+"638.title" = "Domyślny katalog projektu:";
+
+/* Class = "NSButtonCell"; title = "Przekieruj wszystkie polecenia NIB do konsoli"; ObjectID = "655"; */
+"655.title" = "Przekieruj wszystkie polecenia NIB do konsoli";
+
+/* Class = "NSButtonCell"; title = "Porównaj pliki NIB za pomocą ich struktury XML (wolniej ale bardziej dokładnie)"; ObjectID = "658"; */
+"658.title" = "Porównaj pliki NIB za pomocą ich struktury XML (wolniej ale bardziej dokładnie)";
+
+/* Class = "NSTextFieldCell"; title = "Różnice:"; ObjectID = "663"; */
+"663.title" = "Różnice:";

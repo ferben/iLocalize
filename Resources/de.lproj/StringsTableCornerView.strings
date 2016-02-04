@@ -1,0 +1,27 @@
+
+/* Class = "NSMenuItem"; title = "   Nach Wert sortieren"; ObjectID = "5"; */
+"5.title" = "   Nach Wert sortieren";
+
+/* Class = "NSMenuItem"; title = "   Nach Kommentar sortieren"; ObjectID = "6"; */
+"6.title" = "   Nach Kommentar sortieren";
+
+/* Class = "NSMenuItem"; title = "   Nach Wert sortieren"; ObjectID = "7"; */
+"7.title" = "   Nach Wert sortieren";
+
+/* Class = "NSMenuItem"; title = "Spalte „Ausgangssprache“"; ObjectID = "8"; */
+"8.title" = "Spalte „Ausgangssprache“";
+
+/* Class = "NSMenu"; title = "Menü"; ObjectID = "9"; */
+"9.title" = "Menü";
+
+/* Class = "NSMenuItem"; title = "Spalte „Zielsprache“"; ObjectID = "11"; */
+"11.title" = "Spalte „Zielsprache“";
+
+/* Class = "NSMenuItem"; title = "   Nach Kommentar sortieren"; ObjectID = "12"; */
+"12.title" = "   Nach Kommentar sortieren";
+
+/* Class = "NSMenuItem"; title = "Anzeige"; ObjectID = "18"; */
+"18.title" = "Anzeige";
+
+/* Class = "NSMenuItem"; title = "   Sichtbarkeit von Kommentaren ein-/ausschalten"; ObjectID = "19"; */
+"19.title" = "   Sichtbarkeit von Kommentaren ein-/ausschalten";

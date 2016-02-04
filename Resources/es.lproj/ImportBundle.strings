@@ -1,0 +1,39 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "Actualiza el idioma base y cambia la base de todos los demás idiomas. Todos los segmentos de los demás idiomas se localizarán de acuerdo con la traducción actual."; ObjectID = "10"; */
+"10.ibShadowedToolTip" = "Actualiza el idioma base y cambia la base de todos los demás idiomas. Todos los segmentos de los demás idiomas se localizarán de acuerdo con la traducción actual.";
+
+/* Class = "NSTextFieldCell"; title = "Seleccione los idiomas que quiera actualizar:"; ObjectID = "151"; */
+"151.title" = "Seleccione los idiomas que quiera actualizar:";
+
+/* Class = "NSButtonCell"; title = "Actualizar el proyecto con una nueva versión del paquete:"; ObjectID = "152"; */
+"152.title" = "Actualizar el proyecto con una nueva versión del paquete:";
+
+/* Class = "NSButtonCell"; title = "Reajustar el diseño de cada archivo NIB localizado con el diseño del archivo del idioma base"; ObjectID = "153"; */
+"153.title" = "Reajustar el diseño de cada archivo NIB localizado con el diseño del archivo del idioma base";
+
+/* Class = "NSButtonCell"; title = "Actualizar los idiomas localizados del proyecto con el paquete"; ObjectID = "154"; */
+"154.title" = "Actualizar los idiomas localizados del proyecto con el paquete";
+
+/* Class = "NSButtonCell"; title = "Actualizar los diseños de los archivos NIB con los diseños de los archivos importados"; ObjectID = "155"; */
+"155.title" = "Actualizar los diseños de los archivos NIB con los diseños de los archivos importados";
+
+/* Class = "NSTextFieldCell"; title = "Revise los archivos NIB localizados para asegurarse de que todos los diseños son correctos."; ObjectID = "156"; */
+"156.title" = "Revise los archivos NIB localizados para asegurarse de que todos los diseños son correctos.";
+
+/* Class = "NSButtonCell"; title = "Crear los archivos localizados que falten a partir de los archivos del idioma base"; ObjectID = "158"; */
+"158.title" = "Crear los archivos localizados que falten a partir de los archivos del idioma base";
+
+/* Class = "NSButtonCell"; title = "Comprobar"; ObjectID = "189"; */
+"189.title" = "Comprobar";
+
+/* Class = "NSButtonCell"; title = "Seleccionar…"; ObjectID = "203"; */
+"203.title" = "Seleccionar…";
+
+/* Class = "NSButtonCell"; title = "Seleccionar…"; ObjectID = "205"; */
+"205.title" = "Seleccionar…";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Seleccione o arrastre un paquete"; ObjectID = "213"; */
+"213.ibShadowedIsNilPlaceholder" = "Seleccione o arrastre un paquete";
+
+/* Class = "BindingConnection"; ibShadowedIsNilPlaceholder = "Seleccione o arrastre un paquete"; ObjectID = "214"; */
+"214.ibShadowedIsNilPlaceholder" = "Seleccione o arrastre un paquete";

@@ -1,0 +1,51 @@
+
+/* Class = "NSButton"; ibShadowedToolTip = "Considera caracteres de control y de escape como idénticos"; ObjectID = "330"; */
+"330.ibShadowedToolTip" = "Considera caracteres de control y de escape como idénticos";
+
+/* Class = "NSButtonCell"; title = "No discriminar entre mayúsculas y minúsculas"; ObjectID = "474"; */
+"474.title" = "No discriminar entre mayúsculas y minúsculas";
+
+/* Class = "NSTextFieldCell"; title = "Traducción:"; ObjectID = "476"; */
+"476.title" = "Traducción:";
+
+/* Class = "NSButtonCell"; title = "Solo lectura"; ObjectID = "482"; */
+"482.title" = "Solo lectura";
+
+/* Class = "NSTextFieldCell"; title = "Idioma base:"; ObjectID = "483"; */
+"483.title" = "Idioma base:";
+
+/* Class = "NSButtonCell"; title = "Ignorar los caracteres de control"; ObjectID = "484"; */
+"484.title" = "Ignorar los caracteres de control";
+
+/* Class = "NSTextFieldCell"; title = "Propagación de la traducción:"; ObjectID = "491"; */
+"491.title" = "Propagación de la traducción:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "494"; */
+"494.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "desactivada"; ObjectID = "495"; */
+"495.title" = "desactivada";
+
+/* Class = "NSMenuItem"; title = "automática a los archivos seleccionados"; ObjectID = "496"; */
+"496.title" = "automática a los archivos seleccionados";
+
+/* Class = "NSMenuItem"; title = "automática a todos los archivos"; ObjectID = "497"; */
+"497.title" = "automática a todos los archivos";
+
+/* Class = "NSTextFieldCell"; title = "Modo:"; ObjectID = "501"; */
+"501.title" = "Modo:";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "503"; */
+"503.title" = "Radio";
+
+/* Class = "NSButtonCell"; title = "Desarrollador"; ObjectID = "504"; */
+"504.title" = "Desarrollador";
+
+/* Class = "NSButtonCell"; title = "Traductor"; ObjectID = "509"; */
+"509.title" = "Traductor";
+
+/* Class = "NSButtonCell"; title = "Reset Warnings"; ObjectID = "4qb-iu-nB5"; */
+"4qb-iu-nB5.title" = "Reset Warnings";
+
+/* Class = "NSTextFieldCell"; title = "Restaurar todas las advertencias de dialógos:"; ObjectID = "UVZ-qQ-zdX"; */
+"UVZ-qQ-zdX.title" = "Restaurar todas las advertencias de dialógos:";

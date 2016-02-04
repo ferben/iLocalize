@@ -1,0 +1,15 @@
+
+/* Class = "NSTextFieldCell"; title = "Fichier strings :"; ObjectID = "19"; */
+"19.title" = "Fichier strings :";
+
+/* Class = "NSButtonCell"; title = "Sélectionner…"; ObjectID = "23"; */
+"23.title" = "Sélectionner…";
+
+/* Class = "NSPathCell"; placeholderString = "Aucun fichier sélectionné"; ObjectID = "25"; */
+"25.placeholderString" = "Aucun fichier sélectionné";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Par défaut iLocalize utilise l'élément <source> de XLIFF pour chercher les correspondances de traduction. En cliquant ce bouton, va utiliser l'attribut resname, s'il est disponible, pour chercher les correspondances de traduction. "; ObjectID = "36"; */
+"36.ibShadowedToolTip" = "Par défaut iLocalize utilise l'élément <source> de XLIFF pour chercher les correspondances de traduction. En cliquant ce bouton, va utiliser l'attribut resname, s'il est disponible, pour chercher les correspondances de traduction. ";
+
+/* Class = "NSButtonCell"; title = "Faire correspondre la traduction en utilisant le resname au lieu de la source"; ObjectID = "37"; */
+"37.title" = "Faire correspondre la traduction en utilisant le resname au lieu de la source";

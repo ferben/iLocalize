@@ -1,0 +1,114 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Avanzamento"; ObjectID = "31"; */
+"31.headerCell.title" = "Avanzamento";
+
+/* Class = "NSTableColumn"; headerCell.title = "Tipo"; ObjectID = "32"; */
+"32.headerCell.title" = "Tipo";
+
+/* Class = "NSTableColumn"; headerCell.title = "File"; ObjectID = "33"; */
+"33.headerCell.title" = "File";
+
+/* Class = "NSTableColumn"; headerCell.title = "Contenuto"; ObjectID = "104"; */
+"104.headerCell.title" = "Contenuto";
+
+/* Class = "NSMenuItem"; title = "Salva"; ObjectID = "264"; */
+"264.title" = "Salva";
+
+/* Class = "NSMenuItem"; title = "Mostra nel Finder"; ObjectID = "265"; */
+"265.title" = "Mostra nel Finder";
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "266"; */
+"266.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "Apri in Editor Esterno"; ObjectID = "267"; */
+"267.title" = "Apri in Editor Esterno";
+
+/* Class = "NSMenuItem"; title = "Elimina"; ObjectID = "278"; */
+"278.title" = "Elimina";
+
+/* Class = "NSMenuItem"; title = "Approvato"; ObjectID = "323"; */
+"323.title" = "Approvato";
+
+/* Class = "NSMenuItem"; title = "Ricostruisci Dall'Inglese"; ObjectID = "336"; */
+"336.title" = "Ricostruisci Dall'Inglese";
+
+/* Class = "NSMenuItem"; title = "Ricarica"; ObjectID = "378"; */
+"378.title" = "Ricarica";
+
+/* Class = "NSMenuItem"; title = "Converti Fine Linea"; ObjectID = "397"; */
+"397.title" = "Converti Fine Linea";
+
+/* Class = "NSMenuItem"; title = "Esporta Strings…"; ObjectID = "434"; */
+"434.title" = "Esporta Strings…";
+
+/* Class = "NSMenuItem"; title = "Aggiorna Strings…"; ObjectID = "436"; */
+"436.title" = "Aggiorna Strings…";
+
+/* Class = "NSMenuItem"; title = "Mostra Avvisi…"; ObjectID = "541"; */
+"541.title" = "Mostra Avvisi…";
+
+/* Class = "NSMenuItem"; title = "Cancella SImboli File Aggiornato"; ObjectID = "544"; */
+"544.title" = "Cancella SImboli File Aggiornato";
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "559"; */
+"559.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "File"; ObjectID = "560"; */
+"560.title" = "File";
+
+/* Class = "NSMenuItem"; title = "Tipo"; ObjectID = "561"; */
+"561.title" = "Tipo";
+
+/* Class = "NSMenuItem"; title = "Contenuto"; ObjectID = "563"; */
+"563.title" = "Contenuto";
+
+/* Class = "NSMenuItem"; title = "Avanzamento"; ObjectID = "564"; */
+"564.title" = "Avanzamento";
+
+/* Class = "NSMenuItem"; title = "Codifica"; ObjectID = "580"; */
+"580.title" = "Codifica";
+
+/* Class = "NSTableColumn"; headerCell.title = "Etichette"; ObjectID = "583"; */
+"583.headerCell.title" = "Etichette";
+
+/* Class = "NSMenuItem"; title = "Etichette"; ObjectID = "587"; */
+"587.title" = "Etichette";
+
+/* Class = "NSMenuItem"; title = "Etichette"; ObjectID = "593"; */
+"593.title" = "Etichette";
+
+/* Class = "NSMenuItem"; title = "Ignora"; ObjectID = "596"; */
+"596.title" = "Ignora";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "809"; */
+"809.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "810"; */
+"810.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "811"; */
+"811.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "812"; */
+"812.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "815"; */
+"815.title" = "Text Cell";
+
+/* Class = "NSButtonCell"; title = "Traduci solo se la string è differente dalla string base"; ObjectID = "1145"; */
+"1145.title" = "Traduci solo se la string è differente dalla string base";
+
+/* Class = "NSTableColumn"; headerCell.title = "Status"; ObjectID = "1160"; */
+"1160.headerCell.title" = "Status";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "1161"; */
+"1161.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Status"; ObjectID = "1163"; */
+"1163.title" = "Status";
+
+/* Class = "NSMenuItem"; title = "Open Previous & Current in External Editor"; ObjectID = "1173"; */
+"1173.title" = "Open Previous & Current in External Editor";
+
+/* Class = "NSMenuItem"; title = "Diff against Previous"; ObjectID = "1174"; */
+"1174.title" = "Diff against Previous";

@@ -1,0 +1,12 @@
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "10"; */
+"10.title" = "Text Cell";
+
+/* Class = "NSButtonCell"; title = "Kopieer naar klembord"; ObjectID = "12"; */
+"12.title" = "Kopieer naar klembord";
+
+/* Class = "NSButtonCell"; title = "Toon in Finder"; ObjectID = "14"; */
+"14.title" = "Toon in Finder";
+
+/* Class = "NSTextFieldCell"; title = "De volgende problemen zijn gedetecteerd die uw aandacht vereisen:"; ObjectID = "24"; */
+"24.title" = "De volgende problemen zijn gedetecteerd die uw aandacht vereisen:";

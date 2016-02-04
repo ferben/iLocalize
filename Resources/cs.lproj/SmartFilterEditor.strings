@@ -1,0 +1,51 @@
+
+/* Class = "NSWindow"; title = "Editor inteligentního filtru"; ObjectID = "1"; */
+"1.title" = "Editor inteligentního filtru";
+
+/* Class = "NSMenuItem"; title = "z následujícího je pravda"; ObjectID = "25"; */
+"25.title" = "z následujícího je pravda";
+
+/* Class = "NSMenuItem"; title = "Cokoli"; ObjectID = "26"; */
+"26.title" = "Cokoli";
+
+/* Class = "NSMenuItem"; title = "Vše"; ObjectID = "27"; */
+"27.title" = "Vše";
+
+/* Class = "NSTextFieldCell"; title = "Název filtru:"; ObjectID = "51"; */
+"51.title" = "Název filtru:";
+
+/* Class = "NSButtonCell"; title = "Budiž"; ObjectID = "55"; */
+"55.title" = "Budiž";
+
+/* Class = "NSButtonCell"; title = "Zrušit"; ObjectID = "57"; */
+"57.title" = "Zrušit";
+
+/* Class = "NSMenuItem"; title = "jako"; ObjectID = "128"; */
+"128.title" = "jako";
+
+/* Class = "NSMenuItem"; title = "adresa"; ObjectID = "129"; */
+"129.title" = "adresa";
+
+/* Class = "NSMenuItem"; title = "odpovídá"; ObjectID = "130"; */
+"130.title" = "odpovídá";
+
+/* Class = "NSMenuItem"; title = "obsahuje"; ObjectID = "132"; */
+"132.title" = "obsahuje";
+
+/* Class = "NSMenuItem"; title = "začíná na"; ObjectID = "133"; */
+"133.title" = "začíná na";
+
+/* Class = "NSMenuItem"; title = "končí na"; ObjectID = "134"; */
+"134.title" = "končí na";
+
+/* Class = "NSMenuItem"; title = "je"; ObjectID = "135"; */
+"135.title" = "je";
+
+/* Class = "NSMenuItem"; title = "není"; ObjectID = "136"; */
+"136.title" = "není";
+
+/* Class = "NSButtonCell"; title = "Dostupné ve všech projektech"; ObjectID = "142"; */
+"142.title" = "Dostupné ve všech projektech";
+
+/* Class = "NSTextFieldCell"; title = "Stiskněte klávesu ⌥ (option) pro více možností"; ObjectID = "145"; */
+"145.title" = "Stiskněte klávesu ⌥ (option) pro více možností";

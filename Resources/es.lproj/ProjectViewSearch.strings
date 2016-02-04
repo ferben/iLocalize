@@ -1,0 +1,15 @@
+
+/* Class = "NSButtonCell"; title = "Guardar"; ObjectID = "14"; */
+"14.title" = "Guardar";
+
+/* Class = "NSTextFieldCell"; placeholderString = "Introduzca el segmento que quiera reemplazar"; ObjectID = "28"; */
+"28.placeholderString" = "Introduzca el segmento que quiera reemplazar";
+
+/* Class = "NSButtonCell"; title = "Reemplazar"; ObjectID = "30"; */
+"30.title" = "Reemplazar";
+
+/* Class = "NSButtonCell"; title = "Reemplazar todos"; ObjectID = "33"; */
+"33.title" = "Reemplazar todos";
+
+/* Class = "NSTextFieldCell"; title = "Ámbito:"; ObjectID = "98"; */
+"98.title" = "Ámbito:";

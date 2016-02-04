@@ -1,0 +1,30 @@
+
+/* Class = "NSWindow"; title = "Combinar"; ObjectID = "5"; */
+"5.title" = "Combinar";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "8"; */
+"8.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "9"; */
+"9.title" = "Item2";
+
+/* Class = "NSMenuItem"; title = "Item1"; ObjectID = "10"; */
+"10.title" = "Item1";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "11"; */
+"11.title" = "Item3";
+
+/* Class = "NSTextFieldCell"; title = "En este glosario"; ObjectID = "37"; */
+"37.title" = "En este glosario";
+
+/* Class = "NSButtonCell"; title = "Combinar"; ObjectID = "38"; */
+"38.title" = "Combinar";
+
+/* Class = "NSTextFieldCell"; title = "Combinar los glosarios siguientes:"; ObjectID = "39"; */
+"39.title" = "Combinar los glosarios siguientes:";
+
+/* Class = "NSButtonCell"; title = "Cancelar"; ObjectID = "40"; */
+"40.title" = "Cancelar";
+
+/* Class = "NSButtonCell"; title = "Eliminar las entradas duplicadas"; ObjectID = "41"; */
+"41.title" = "Eliminar las entradas duplicadas";

@@ -1,0 +1,12 @@
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "10"; */
+"10.title" = "Text Cell";
+
+/* Class = "NSButtonCell"; title = "クリップボードにコピー"; ObjectID = "12"; */
+"12.title" = "クリップボードにコピー";
+
+/* Class = "NSButtonCell"; title = "Finder に表示"; ObjectID = "14"; */
+"14.title" = "Finder に表示";
+
+/* Class = "NSTextFieldCell"; title = "以下の問題が検出されました。修正が必要です:"; ObjectID = "24"; */
+"24.title" = "以下の問題が検出されました。修正が必要です:";

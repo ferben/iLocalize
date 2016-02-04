@@ -1,0 +1,9 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "ソース"; ObjectID = "8"; */
+"8.headerCell.title" = "ソース";
+
+/* Class = "NSTableColumn"; headerCell.title = "マッチしたプロジェクトのファイル"; ObjectID = "9"; */
+"9.headerCell.title" = "マッチしたプロジェクトのファイル";
+
+/* Class = "NSTextFieldCell"; title = "以下のファイルはプロジェクト内の複数のファイルにマッチしました。正しく対応するプロジェクトのファイルをそれぞれ選択して下さい:"; ObjectID = "137"; */
+"137.title" = "以下のファイルはプロジェクト内の複数のファイルにマッチしました。正しく対応するプロジェクトのファイルをそれぞれ選択して下さい:";

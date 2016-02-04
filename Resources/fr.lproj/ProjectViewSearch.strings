@@ -1,0 +1,15 @@
+
+/* Class = "NSButtonCell"; title = "Enregistrer"; ObjectID = "14"; */
+"14.title" = "Enregistrer";
+
+/* Class = "NSTextFieldCell"; placeholderString = "Saisir la chaîne à remplacer"; ObjectID = "28"; */
+"28.placeholderString" = "Saisir la chaîne à remplacer";
+
+/* Class = "NSButtonCell"; title = "Remplacer"; ObjectID = "30"; */
+"30.title" = "Remplacer";
+
+/* Class = "NSButtonCell"; title = "Tout remplacer"; ObjectID = "33"; */
+"33.title" = "Tout remplacer";
+
+/* Class = "NSTextFieldCell"; title = "Choix :"; ObjectID = "98"; */
+"98.title" = "Choix :";

@@ -1,0 +1,48 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Расширение"; ObjectID = "8"; */
+"8.headerCell.title" = "Расширение";
+
+/* Class = "NSTableColumn"; headerCell.title = "Имя или полный путь к приложению"; ObjectID = "9"; */
+"9.headerCell.title" = "Имя или полный путь к приложению";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "42"; */
+"42.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item3"; ObjectID = "43"; */
+"43.title" = "Item3";
+
+/* Class = "NSMenuItem"; title = "Изображения"; ObjectID = "44"; */
+"44.title" = "Изображения";
+
+/* Class = "NSMenuItem"; title = "Item2"; ObjectID = "45"; */
+"45.title" = "Item2";
+
+/* Class = "NSTableColumn"; headerCell.title = "Расширение"; ObjectID = "48"; */
+"48.headerCell.title" = "Расширение";
+
+/* Class = "NSWindow"; title = "Панель"; ObjectID = "95"; */
+"95.title" = "Панель";
+
+/* Class = "NSTextFieldCell"; title = "Расширение:"; ObjectID = "203"; */
+"203.title" = "Расширение:";
+
+/* Class = "NSTextFieldCell"; title = "Программа:"; ObjectID = "204"; */
+"204.title" = "Программа:";
+
+/* Class = "NSButtonCell"; title = "Выбрать…"; ObjectID = "207"; */
+"207.title" = "Выбрать…";
+
+/* Class = "NSButtonCell"; title = "ОК"; ObjectID = "208"; */
+"208.title" = "ОК";
+
+/* Class = "NSButtonCell"; title = "Отменить"; ObjectID = "209"; */
+"209.title" = "Отменить";
+
+/* Class = "NSTabViewItem"; label = "Встроенные"; ObjectID = "222"; */
+"222.label" = "Встроенные";
+
+/* Class = "NSTabViewItem"; label = "Внешние"; ObjectID = "223"; */
+"223.label" = "Внешние";
+
+/* Class = "NSTextFieldCell"; title = "Тип:"; ObjectID = "231"; */
+"231.title" = "Тип:";

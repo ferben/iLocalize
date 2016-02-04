@@ -1,0 +1,45 @@
+
+/* Class = "NSWindow"; title = "<glossary>"; ObjectID = "5"; */
+"5.title" = "<glossary>";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "160"; */
+"160.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "161"; */
+"161.title" = "Text Cell";
+
+/* Class = "NSToolbarItem"; label = "Buscar"; ObjectID = "177"; */
+"177.label" = "Buscar";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Buscar"; ObjectID = "177"; */
+"177.paletteLabel" = "Buscar";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "193"; */
+"193.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "195"; */
+"195.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "196"; */
+"196.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Borrar las entradas seleccionadas"; ObjectID = "202"; */
+"202.title" = "Borrar las entradas seleccionadas";
+
+/* Class = "NSMenuItem"; title = "Eliminar las entradas duplicadas"; ObjectID = "203"; */
+"203.title" = "Eliminar las entradas duplicadas";
+
+/* Class = "NSMenuItem"; title = "Cambiar el nombre del idioma base…"; ObjectID = "204"; */
+"204.title" = "Cambiar el nombre del idioma base…";
+
+/* Class = "NSMenuItem"; title = "Cambiar el nombre del idioma de traducción…"; ObjectID = "206"; */
+"206.title" = "Cambiar el nombre del idioma de traducción…";
+
+/* Class = "NSTextFieldCell"; title = "<-----do not localize------>"; ObjectID = "221"; */
+"221.title" = "<-----do not localize------>";
+
+/* Class = "NSToolbarItem"; paletteLabel = "Información"; ObjectID = "222"; */
+"222.paletteLabel" = "Información";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Este glosario no está guardado en ninguna de las carpetas de glosarios reconocidas por iLocalize. Haga clic para decidir qué hacer con él."; ObjectID = "230"; */
+"230.ibShadowedToolTip" = "Este glosario no está guardado en ninguna de las carpetas de glosarios reconocidas por iLocalize. Haga clic para decidir qué hacer con él.";

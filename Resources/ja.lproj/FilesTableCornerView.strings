@@ -1,0 +1,18 @@
+
+/* Class = "NSMenuItem"; title = "   パスでソート"; ObjectID = "5"; */
+"5.title" = "   パスでソート";
+
+/* Class = "NSMenu"; title = "Menu"; ObjectID = "6"; */
+"6.title" = "Menu";
+
+/* Class = "NSMenuItem"; title = "   名前でソート"; ObjectID = "7"; */
+"7.title" = "   名前でソート";
+
+/* Class = "NSMenuItem"; title = "   文字列の数でソート"; ObjectID = "8"; */
+"8.title" = "   文字列の数でソート";
+
+/* Class = "NSMenuItem"; title = "ファイルカラム"; ObjectID = "9"; */
+"9.title" = "ファイルカラム";
+
+/* Class = "NSMenuItem"; title = "   スマートパス／フルパスをトグル"; ObjectID = "15"; */
+"15.title" = "   スマートパス／フルパスをトグル";

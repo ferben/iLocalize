@@ -1,0 +1,33 @@
+
+/* Class = "NSWindow"; title = "Глоссарий не индексировано"; ObjectID = "5"; */
+"5.title" = "Глоссарий не индексировано";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "43"; */
+"43.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Локальный"; ObjectID = "44"; */
+"44.title" = "Локальный";
+
+/* Class = "NSMenuItem"; title = "Глобальный"; ObjectID = "45"; */
+"45.title" = "Глобальный";
+
+/* Class = "NSButtonCell"; title = "ОК"; ObjectID = "96"; */
+"96.title" = "ОК";
+
+/* Class = "NSButtonCell"; title = "Отменить"; ObjectID = "97"; */
+"97.title" = "Отменить";
+
+/* Class = "NSTextFieldCell"; title = "Этот глоссарий не найден ни в одном из путей к известным глоссариям iLocalize. Для того, чтобы использовать этот глоссарий при переводе проекта, он должен быть или перемещен, либо быть псевдонимом одного из известных глоссариев."; ObjectID = "101"; */
+"101.title" = "Этот глоссарий не найден ни в одном из путей к известным глоссариям iLocalize. Для того, чтобы использовать этот глоссарий при переводе проекта, он должен быть или перемещен, либо быть псевдонимом одного из известных глоссариев.";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "110"; */
+"110.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Переместить глоссарий"; ObjectID = "111"; */
+"111.title" = "Переместить глоссарий";
+
+/* Class = "NSMenuItem"; title = "Создать псевдоним глоссария"; ObjectID = "112"; */
+"112.title" = "Создать псевдоним глоссария";
+
+/* Class = "NSTextFieldCell"; title = "в пути к глоссарию"; ObjectID = "115"; */
+"115.title" = "в пути к глоссарию";

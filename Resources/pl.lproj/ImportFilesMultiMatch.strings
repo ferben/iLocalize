@@ -1,0 +1,9 @@
+
+/* Class = "NSTableColumn"; headerCell.title = "Źródłowe"; ObjectID = "8"; */
+"8.headerCell.title" = "Źródłowe";
+
+/* Class = "NSTableColumn"; headerCell.title = "Pasujące pliki projektu"; ObjectID = "9"; */
+"9.headerCell.title" = "Pasujące pliki projektu";
+
+/* Class = "NSTextFieldCell"; title = "Poniższe pliki pasują do kilku plików wewnątrz projektu. Wybierz dla każdego właściwy plik projektu:"; ObjectID = "137"; */
+"137.title" = "Poniższe pliki pasują do kilku plików wewnątrz projektu. Wybierz dla każdego właściwy plik projektu:";
