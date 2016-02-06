@@ -9,7 +9,7 @@
 "192.title" = "Přidat";
 
 /* Class = "NSTextFieldCell"; title = "Použití vlastního jazyka se důrazně nedoporučuje"; ObjectID = "194"; */
-"194.title" = "Použití vlastního jazyka se důrazně nedoporučuje";
+"194.title" = "Použití vlastního jazyka se důrazně nedoporučuje.";
 
 /* Class = "NSBox"; title = "Jazyk"; ObjectID = "196"; */
 "196.title" = "Jazyk";

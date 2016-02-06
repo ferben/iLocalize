@@ -9,7 +9,7 @@
 "192.title" = "Hinzufügen";
 
 /* Class = "NSTextFieldCell"; title = "Wir empfehlen dringend, keine eigene Sprache zu definieren"; ObjectID = "194"; */
-"194.title" = "Wir empfehlen dringend, keine eigene Sprache zu definieren";
+"194.title" = "Wir empfehlen dringend, keine eigene Sprache zu definieren.";
 
 /* Class = "NSBox"; title = "Sprache"; ObjectID = "196"; */
 "196.title" = "Sprache";

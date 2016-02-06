@@ -9,7 +9,7 @@
 "192.title" = "Voeg toe";
 
 /* Class = "NSTextFieldCell"; title = "Gebruik van eigen talen wordt sterk afgeraden"; ObjectID = "194"; */
-"194.title" = "Gebruik van eigen talen wordt sterk afgeraden";
+"194.title" = "Gebruik van eigen talen wordt sterk afgeraden.";
 
 /* Class = "NSBox"; title = "Taal"; ObjectID = "196"; */
 "196.title" = "Taal";
