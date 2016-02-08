@@ -79,7 +79,7 @@
                     <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="23">
                         <rect key="frame" x="535" y="13" width="110" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="98" id="dLc-5a-eSA"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="98" id="dLc-5a-eSA"/>
                         </constraints>
                         <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="24">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>

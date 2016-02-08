@@ -9,7 +9,7 @@
 "47.title" = "Le fichier de la mise à jour";
 
 /* Class = "NSTextFieldCell"; title = "iLocalize n'arrive pas à fusionner le contenu de ces fichiers.\nSélectionnez celui qui doit être utilisé."; ObjectID = "90"; */
-"90.title" = "iLocalize n'arrive pas à fusionner le contenu de ces fichiers.\nSélectionnez celui qui doit être utilisé.";
+"90.title" = "iLocalize n'arrive pas à fusionner le contenu de ces fichiers. Sélectionnez celui qui doit être utilisé.";
 
 /* Class = "NSTextFieldCell"; title = "Chemin d’accès :"; ObjectID = "91"; */
 "91.title" = "Chemin d’accès :";

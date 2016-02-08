@@ -9,7 +9,7 @@
 "47.title" = "Bijgewerkt bestand";
 
 /* Class = "NSTextFieldCell"; title = "iLocalize kan de inhoud van deze bestanden niet samenvoegen.\nSelecteer welke gebruikt moet worden."; ObjectID = "90"; */
-"90.title" = "iLocalize kan de inhoud van deze bestanden niet samenvoegen.\nSelecteer welke gebruikt moet worden.";
+"90.title" = "iLocalize kan de inhoud van deze bestanden niet samenvoegen. Selecteer welke gebruikt moet worden.";
 
 /* Class = "NSTextFieldCell"; title = "Pad:"; ObjectID = "91"; */
 "91.title" = "Pad:";

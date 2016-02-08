@@ -9,7 +9,7 @@
 "47.title" = "更新されたファイル";
 
 /* Class = "NSTextFieldCell"; title = "iLocalize はこれらのファイルをマージできませんでした。\n使用するファイルを選択してください。"; ObjectID = "90"; */
-"90.title" = "iLocalize はこれらのファイルをマージできませんでした。\n使用するファイルを選択してください。";
+"90.title" = "iLocalize はこれらのファイルをマージできませんでした。使用するファイルを選択してください。";
 
 /* Class = "NSTextFieldCell"; title = "パス:"; ObjectID = "91"; */
 "91.title" = "パス:";

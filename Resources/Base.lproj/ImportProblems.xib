@@ -36,7 +36,7 @@
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4">
                         <rect key="frame" x="402" y="12" width="97" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="85" id="Eda-1R-SCh"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="Eda-1R-SCh"/>
                         </constraints>
                         <buttonCell key="cell" type="push" title="Continue" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -50,9 +50,9 @@ DQ
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6">
-                        <rect key="frame" x="306" y="12" width="96" height="32"/>
+                        <rect key="frame" x="305" y="12" width="97" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="84" id="lED-jE-Tym"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="lED-jE-Tym"/>
                         </constraints>
                         <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -73,10 +73,12 @@ Gw
                     <constraint firstItem="3" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="U7G-No-4ct"/>
                     <constraint firstAttribute="trailing" secondItem="4" secondAttribute="trailing" constant="20" symbolic="YES" id="doM-b0-DHR"/>
                     <constraint firstItem="4" firstAttribute="baseline" secondItem="6" secondAttribute="baseline" id="fqg-ws-ngm"/>
+                    <constraint firstItem="4" firstAttribute="width" secondItem="6" secondAttribute="width" id="mAR-F1-V5R"/>
                     <constraint firstItem="4" firstAttribute="leading" secondItem="6" secondAttribute="trailing" constant="12" symbolic="YES" id="s48-oc-w8e"/>
                     <constraint firstAttribute="bottom" secondItem="6" secondAttribute="bottom" constant="19" id="xAt-T1-m5t"/>
                 </constraints>
             </view>
+            <point key="canvasLocation" x="22.5" y="322.5"/>
         </window>
     </objects>
 </document>

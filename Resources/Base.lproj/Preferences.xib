@@ -25,7 +25,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="168"/>
             </connections>
-            <point key="canvasLocation" x="654.5" y="681.5"/>
+            <point key="canvasLocation" x="275.5" y="598.5"/>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="10" userLabel="Shared Defaults"/>
     </objects>

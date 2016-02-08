@@ -9,7 +9,7 @@
 "47.title" = "Aktualizovaný soubor";
 
 /* Class = "NSTextFieldCell"; title = "iLocalize se nedaří sloučit obsah těchto souborů.\nVyberte, který z nich použít."; ObjectID = "90"; */
-"90.title" = "iLocalize se nedaří sloučit obsah těchto souborů.\nVyberte, který z nich použít.";
+"90.title" = "iLocalize se nedaří sloučit obsah těchto souborů. Vyberte, který z nich použít.";
 
 /* Class = "NSTextFieldCell"; title = "Cesta:"; ObjectID = "91"; */
 "91.title" = "Cesta:";

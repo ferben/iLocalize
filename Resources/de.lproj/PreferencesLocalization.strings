@@ -45,7 +45,7 @@
 "509.title" = "Übersetzer";
 
 /* Class = "NSButtonCell"; title = "Reset Warnings"; ObjectID = "4qb-iu-nB5"; */
-"4qb-iu-nB5.title" = "Reset Warnings";
+"4qb-iu-nB5.title" = "Warnhinweise zurückseten";
 
 /* Class = "NSTextFieldCell"; title = "Alle Warnhinweise zurücksetzen:"; ObjectID = "UVZ-qQ-zdX"; */
 "UVZ-qQ-zdX.title" = "Alle Warnhinweise zurücksetzen:";

@@ -27,11 +27,11 @@
                     <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35">
                         <rect key="frame" x="20" y="51" width="580" height="190"/>
                         <clipView key="contentView" id="E0X-Ct-eZp">
-                            <rect key="frame" x="1" y="0.0" width="578" height="189"/>
+                            <rect key="frame" x="1" y="0.0" width="578" height="174"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" headerView="78" id="36">
-                                    <rect key="frame" x="0.0" y="0.0" width="578" height="166"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="579" height="151"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -103,11 +103,11 @@
                             </subviews>
                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </clipView>
-                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="0.5" horizontal="YES" id="77">
+                        <scroller key="horizontalScroller" verticalHuggingPriority="750" doubleValue="0.5" horizontal="YES" id="77">
                             <rect key="frame" x="1" y="174" width="578" height="15"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
-                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="76">
+                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="76">
                             <rect key="frame" x="-30" y="17" width="15" height="121"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
@@ -146,7 +146,7 @@
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="42">
                         <rect key="frame" x="496" y="13" width="110" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="98" id="4pE-5J-0YY"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="98" id="4pE-5J-0YY"/>
                             <constraint firstAttribute="height" constant="21" id="WIp-hr-49I"/>
                         </constraints>
                         <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="72">
@@ -176,6 +176,7 @@ DQ
                     <constraint firstAttribute="trailing" secondItem="35" secondAttribute="trailing" constant="20" symbolic="YES" id="vTu-yx-oKl"/>
                 </constraints>
             </view>
+            <point key="canvasLocation" x="25" y="483.5"/>
         </window>
         <arrayController id="46" userLabel="LabelsController">
             <declaredKeys>

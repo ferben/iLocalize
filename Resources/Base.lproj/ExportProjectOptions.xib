@@ -20,13 +20,13 @@
             <rect key="frame" x="0.0" y="0.0" width="704" height="548"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <box autoresizesSubviews="NO" title="Output Name" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="hzV-oN-mXT">
+                <box title="Output Name" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="hzV-oN-mXT">
                     <rect key="frame" x="17" y="429" width="670" height="99"/>
                     <view key="contentView" id="CRa-DC-ccZ">
                         <rect key="frame" x="1" y="1" width="668" height="83"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="277">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="277">
                                 <rect key="frame" x="16" y="56" width="636" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="&lt;output-name-sample&gt;" id="278">
                                     <font key="font" metaFont="systemBold"/>
@@ -41,7 +41,7 @@
                                     </binding>
                                 </connections>
                             </textField>
-                            <button toolTip="Export only the folders that contain a language (lproj)" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="262">
+                            <button toolTip="Export only the folders that contain a language (lproj)" translatesAutoresizingMaskIntoConstraints="NO" id="262">
                                 <rect key="frame" x="16" y="12" width="636" height="18"/>
                                 <buttonCell key="cell" type="check" title="Include version" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="263">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -51,7 +51,7 @@
                                     <binding destination="31" name="value" keyPath="selection.nameIncludesBuildNumber" id="280"/>
                                 </connections>
                             </button>
-                            <button toolTip="Export only the folders that contain a language (lproj)" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="265">
+                            <button toolTip="Export only the folders that contain a language (lproj)" translatesAutoresizingMaskIntoConstraints="NO" id="265">
                                 <rect key="frame" x="16" y="32" width="636" height="18"/>
                                 <buttonCell key="cell" type="check" title="Include names of exported languages" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="266">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -62,17 +62,28 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="277" firstAttribute="leading" secondItem="CRa-DC-ccZ" secondAttribute="leading" constant="18" id="6vi-Oq-uVD"/>
+                            <constraint firstItem="277" firstAttribute="centerX" secondItem="CRa-DC-ccZ" secondAttribute="centerX" id="BWU-TU-3GI"/>
+                            <constraint firstItem="262" firstAttribute="trailing" secondItem="265" secondAttribute="trailing" id="Esc-op-gQz"/>
+                            <constraint firstItem="265" firstAttribute="top" secondItem="277" secondAttribute="bottom" constant="8" symbolic="YES" id="JtI-WV-aqN"/>
+                            <constraint firstItem="262" firstAttribute="top" secondItem="265" secondAttribute="bottom" constant="6" symbolic="YES" id="OYJ-32-hU5"/>
+                            <constraint firstItem="277" firstAttribute="leading" secondItem="265" secondAttribute="leading" id="Vb5-bJ-ddW"/>
+                            <constraint firstItem="277" firstAttribute="top" secondItem="CRa-DC-ccZ" secondAttribute="top" constant="10" id="W3c-Ok-QnP"/>
+                            <constraint firstItem="265" firstAttribute="trailing" secondItem="277" secondAttribute="trailing" id="a6x-qW-fq9"/>
+                            <constraint firstItem="262" firstAttribute="leading" secondItem="265" secondAttribute="leading" id="cbg-Ep-MfO"/>
+                        </constraints>
                     </view>
                     <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                     <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </box>
-                <box autoresizesSubviews="NO" title="Output Format" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="4LP-Rt-bQH">
+                <box title="Output Format" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="4LP-Rt-bQH">
                     <rect key="frame" x="17" y="327" width="670" height="98"/>
                     <view key="contentView" id="qki-B2-5fl">
                         <rect key="frame" x="1" y="1" width="668" height="82"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="76">
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="76">
                                 <rect key="frame" x="16" y="12" width="636" height="18"/>
                                 <buttonCell key="cell" type="check" title="Zipped" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="177">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -82,7 +93,7 @@
                                     <binding destination="31" name="value" keyPath="selection.compress" id="235"/>
                                 </connections>
                             </button>
-                            <button toolTip="Export only the folders that contain a language (lproj)" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="253">
+                            <button toolTip="Export only the folders that contain a language (lproj)" translatesAutoresizingMaskIntoConstraints="NO" id="253">
                                 <rect key="frame" x="16" y="56" width="636" height="18"/>
                                 <buttonCell key="cell" type="check" title="Only language folders" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="254">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -92,7 +103,7 @@
                                     <binding destination="31" name="value" keyPath="selection.exportLanguageFoldersOnly" id="259"/>
                                 </connections>
                             </button>
-                            <button toolTip="Export the project as a folder that the Finder can open instead of using the original bundle extension" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="256">
+                            <button toolTip="Export the project as a folder that the Finder can open instead of using the original bundle extension" translatesAutoresizingMaskIntoConstraints="NO" id="256">
                                 <rect key="frame" x="16" y="34" width="636" height="18"/>
                                 <buttonCell key="cell" type="check" title="Folder" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="257">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -103,17 +114,28 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="256" firstAttribute="trailing" secondItem="76" secondAttribute="trailing" id="9R7-OT-nyN"/>
+                            <constraint firstAttribute="bottom" secondItem="76" secondAttribute="bottom" constant="14" id="C05-7N-mig"/>
+                            <constraint firstItem="76" firstAttribute="leading" secondItem="256" secondAttribute="leading" id="HNC-69-8HP"/>
+                            <constraint firstItem="253" firstAttribute="leading" secondItem="256" secondAttribute="leading" id="SlI-IQ-Weo"/>
+                            <constraint firstItem="76" firstAttribute="centerX" secondItem="qki-B2-5fl" secondAttribute="centerX" id="XVZ-iT-TcR"/>
+                            <constraint firstItem="253" firstAttribute="leading" secondItem="qki-B2-5fl" secondAttribute="leading" constant="18" id="h5u-af-Gct"/>
+                            <constraint firstItem="253" firstAttribute="trailing" secondItem="256" secondAttribute="trailing" id="icN-id-BNL"/>
+                            <constraint firstItem="76" firstAttribute="top" secondItem="256" secondAttribute="bottom" constant="8" id="joE-MX-dsu"/>
+                            <constraint firstItem="256" firstAttribute="top" secondItem="253" secondAttribute="bottom" constant="8" id="ogq-tu-dHE"/>
+                        </constraints>
                     </view>
                     <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                     <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </box>
-                <box autoresizesSubviews="NO" title="Post-processing" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="O8e-tz-Pid">
+                <box title="Post-processing" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="O8e-tz-Pid">
                     <rect key="frame" x="17" y="16" width="670" height="307"/>
                     <view key="contentView" id="yfq-XX-IYn">
                         <rect key="frame" x="1" y="1" width="668" height="291"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button toolTip="Compacting NIB files reduces the size of the NIB files but also prevents them to be localized or opened in Interface Builder." fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="287">
+                            <button toolTip="Compacting NIB files reduces the size of the NIB files but also prevents them to be localized or opened in Interface Builder." translatesAutoresizingMaskIntoConstraints="NO" id="287">
                                 <rect key="frame" x="16" y="243" width="636" height="18"/>
                                 <buttonCell key="cell" type="check" title="Convert NIB to XIB files" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="288">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -123,7 +145,7 @@
                                     <binding destination="31" name="value" keyPath="selection.upgradeNib" id="290"/>
                                 </connections>
                             </button>
-                            <button toolTip="Open the default mail client and attach the exported file to a new blank e-mail" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="77">
+                            <button toolTip="Open the default mail client and attach the exported file to a new blank e-mail" translatesAutoresizingMaskIntoConstraints="NO" id="77">
                                 <rect key="frame" x="16" y="221" width="636" height="18"/>
                                 <buttonCell key="cell" type="check" title="Automatically prepare an email in Mail" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="178">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -134,7 +156,7 @@
                                     <binding destination="31" name="value" keyPath="selection.email" id="236"/>
                                 </connections>
                             </button>
-                            <button toolTip="Compacting NIB files reduces the size of the NIB files but also prevents them to be localized or opened in Interface Builder." fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="26">
+                            <button toolTip="Compacting NIB files reduces the size of the NIB files but also prevents them to be localized or opened in Interface Builder." translatesAutoresizingMaskIntoConstraints="NO" id="26">
                                 <rect key="frame" x="16" y="265" width="636" height="18"/>
                                 <buttonCell key="cell" type="check" title="Compact NIB files" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="170">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -144,37 +166,22 @@
                                     <binding destination="31" name="value" keyPath="selection.compactNib" id="187"/>
                                 </connections>
                             </button>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u5Z-v4-Tsa">
-                                <rect key="frame" x="32" y="14" width="618" height="200"/>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="u5Z-v4-Tsa">
+                                <rect key="frame" x="18" y="14" width="632" height="200"/>
                                 <subviews>
-                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="218">
+                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="218">
                                         <rect key="frame" x="-2" y="180" width="100" height="17"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="To:" id="219">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="96" id="Z9N-jW-qPX"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="To:" id="219">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="214">
-                                        <rect key="frame" x="104" y="178" width="514" height="22"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="215">
-                                            <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                        <connections>
-                                            <binding destination="31" name="editable" keyPath="selection.email" id="242"/>
-                                            <binding destination="31" name="enabled" keyPath="selection.email" previousBinding="242" id="251"/>
-                                            <binding destination="31" name="value" keyPath="selection.emailToAddress" id="d1S-np-O0Q">
-                                                <dictionary key="options">
-                                                    <bool key="NSContinuouslyUpdatesValue" value="YES"/>
-                                                    <string key="NSNullPlaceholder">Enter the recipient e-mail address</string>
-                                                </dictionary>
-                                            </binding>
-                                        </connections>
-                                    </textField>
-                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3dv-Pk-JNw">
-                                        <rect key="frame" x="104" y="146" width="514" height="22"/>
+                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3dv-Pk-JNw">
+                                        <rect key="frame" x="104" y="146" width="528" height="22"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="dhD-Zv-o1e">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -191,24 +198,27 @@
                                             </binding>
                                         </connections>
                                     </textField>
-                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5xb-uo-RIx">
+                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5xb-uo-RIx">
                                         <rect key="frame" x="-2" y="148" width="100" height="17"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Subject:" id="dgD-W1-lcF">
+                                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Subject:" id="dgD-W1-lcF">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="220">
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="220">
                                         <rect key="frame" x="-2" y="0.0" width="100" height="136"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="136" id="m6h-E1-fE6"/>
+                                        </constraints>
                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Message:" id="221">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="216">
-                                        <rect key="frame" x="104" y="0.0" width="514" height="136"/>
+                                    <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="216">
+                                        <rect key="frame" x="104" y="0.0" width="528" height="136"/>
                                         <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" focusRingType="none" drawsBackground="YES" id="217">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -225,29 +235,89 @@
                                             <outlet property="delegate" destination="-2" id="261"/>
                                         </connections>
                                     </textField>
+                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="214">
+                                        <rect key="frame" x="104" y="178" width="528" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="528" id="RA0-bA-w6w"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="215">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <connections>
+                                            <binding destination="31" name="editable" keyPath="selection.email" id="242"/>
+                                            <binding destination="31" name="enabled" keyPath="selection.email" previousBinding="242" id="251"/>
+                                            <binding destination="31" name="value" keyPath="selection.emailToAddress" id="d1S-np-O0Q">
+                                                <dictionary key="options">
+                                                    <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                                    <string key="NSNullPlaceholder">Enter the recipient e-mail address</string>
+                                                </dictionary>
+                                            </binding>
+                                        </connections>
+                                    </textField>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="3dv-Pk-JNw" firstAttribute="leading" secondItem="216" secondAttribute="leading" id="1Ho-vv-1Dx"/>
+                                    <constraint firstItem="220" firstAttribute="width" secondItem="218" secondAttribute="width" id="2HJ-BA-DSc"/>
+                                    <constraint firstItem="220" firstAttribute="bottom" secondItem="216" secondAttribute="bottom" id="3rA-t3-90f"/>
+                                    <constraint firstItem="5xb-uo-RIx" firstAttribute="leading" secondItem="220" secondAttribute="leading" id="5l3-Xs-5fR"/>
+                                    <constraint firstItem="3dv-Pk-JNw" firstAttribute="leading" secondItem="214" secondAttribute="leading" id="87p-un-Bxx"/>
+                                    <constraint firstAttribute="bottom" secondItem="216" secondAttribute="bottom" id="EcZ-y8-2JK"/>
+                                    <constraint firstItem="214" firstAttribute="trailing" secondItem="3dv-Pk-JNw" secondAttribute="trailing" id="F78-bX-pvq"/>
+                                    <constraint firstItem="3dv-Pk-JNw" firstAttribute="top" secondItem="214" secondAttribute="bottom" constant="10" symbolic="YES" id="FEJ-SD-MF1"/>
+                                    <constraint firstItem="3dv-Pk-JNw" firstAttribute="leading" secondItem="5xb-uo-RIx" secondAttribute="trailing" constant="8" symbolic="YES" id="GW9-2y-b1a"/>
+                                    <constraint firstItem="220" firstAttribute="leading" secondItem="u5Z-v4-Tsa" secondAttribute="leading" id="Haf-Ei-4x9"/>
+                                    <constraint firstItem="214" firstAttribute="top" secondItem="u5Z-v4-Tsa" secondAttribute="top" id="QNB-Yo-iZF"/>
+                                    <constraint firstItem="5xb-uo-RIx" firstAttribute="leading" secondItem="218" secondAttribute="leading" id="SzE-aS-hi0"/>
+                                    <constraint firstItem="218" firstAttribute="leading" secondItem="u5Z-v4-Tsa" secondAttribute="leading" id="TI0-35-svs"/>
+                                    <constraint firstItem="218" firstAttribute="centerY" secondItem="214" secondAttribute="centerY" id="VPD-41-LIp"/>
+                                    <constraint firstItem="216" firstAttribute="top" secondItem="3dv-Pk-JNw" secondAttribute="bottom" constant="10" symbolic="YES" id="Yfh-CO-oPe"/>
+                                    <constraint firstItem="3dv-Pk-JNw" firstAttribute="centerY" secondItem="5xb-uo-RIx" secondAttribute="centerY" id="ftC-Kz-l6e"/>
+                                    <constraint firstItem="216" firstAttribute="leading" secondItem="220" secondAttribute="trailing" constant="8" symbolic="YES" id="hWH-eA-8lD"/>
+                                    <constraint firstItem="216" firstAttribute="top" secondItem="220" secondAttribute="top" id="jRt-fm-UMi"/>
+                                    <constraint firstItem="218" firstAttribute="leading" secondItem="u5Z-v4-Tsa" secondAttribute="leading" id="tA8-u5-hPG"/>
+                                    <constraint firstItem="216" firstAttribute="trailing" secondItem="3dv-Pk-JNw" secondAttribute="trailing" id="tkT-xs-SFe"/>
+                                    <constraint firstItem="5xb-uo-RIx" firstAttribute="width" secondItem="218" secondAttribute="width" id="yg1-Gg-kA1"/>
+                                    <constraint firstItem="5xb-uo-RIx" firstAttribute="leading" secondItem="u5Z-v4-Tsa" secondAttribute="leading" id="yjH-9C-vfw"/>
+                                    <constraint firstItem="214" firstAttribute="leading" secondItem="218" secondAttribute="trailing" constant="8" symbolic="YES" id="zXC-eX-oUQ"/>
+                                </constraints>
                             </customView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="26" firstAttribute="leading" secondItem="287" secondAttribute="leading" id="35F-9z-hPa"/>
+                            <constraint firstItem="287" firstAttribute="trailing" secondItem="77" secondAttribute="trailing" id="7uO-cZ-5Aj"/>
+                            <constraint firstItem="u5Z-v4-Tsa" firstAttribute="centerX" secondItem="yfq-XX-IYn" secondAttribute="centerX" id="A4E-3M-pdP"/>
+                            <constraint firstItem="26" firstAttribute="top" secondItem="yfq-XX-IYn" secondAttribute="top" constant="10" id="BWa-Yh-3fX"/>
+                            <constraint firstItem="26" firstAttribute="leading" secondItem="yfq-XX-IYn" secondAttribute="leading" constant="18" id="GtA-Ae-LXv"/>
+                            <constraint firstItem="287" firstAttribute="top" secondItem="26" secondAttribute="bottom" constant="8" id="KTm-KV-kwb"/>
+                            <constraint firstItem="77" firstAttribute="leading" secondItem="287" secondAttribute="leading" id="LDk-7l-GNQ"/>
+                            <constraint firstItem="26" firstAttribute="trailing" secondItem="287" secondAttribute="trailing" id="LsF-3K-zTt"/>
+                            <constraint firstItem="u5Z-v4-Tsa" firstAttribute="trailing" secondItem="77" secondAttribute="trailing" id="LzG-Jw-ece"/>
+                            <constraint firstItem="77" firstAttribute="top" secondItem="287" secondAttribute="bottom" constant="8" id="Ms0-bL-Tdx"/>
+                            <constraint firstItem="u5Z-v4-Tsa" firstAttribute="top" secondItem="77" secondAttribute="bottom" constant="9" id="emW-YJ-RML"/>
+                            <constraint firstItem="u5Z-v4-Tsa" firstAttribute="leading" secondItem="77" secondAttribute="leading" id="lsB-Kj-vA5"/>
+                        </constraints>
                     </view>
                     <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                     <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </box>
             </subviews>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="O8e-tz-Pid" secondAttribute="bottom" constant="20" symbolic="YES" id="1lF-Kg-LZp"/>
-                <constraint firstItem="O8e-tz-Pid" firstAttribute="top" secondItem="4LP-Rt-bQH" secondAttribute="bottom" constant="8" symbolic="YES" id="90d-yz-u8e"/>
-                <constraint firstItem="4LP-Rt-bQH" firstAttribute="top" secondItem="hzV-oN-mXT" secondAttribute="bottom" constant="8" symbolic="YES" id="G7N-pP-pGu"/>
-                <constraint firstItem="O8e-tz-Pid" firstAttribute="leading" secondItem="4LP-Rt-bQH" secondAttribute="leading" id="I8E-gP-Ruq"/>
-                <constraint firstItem="O8e-tz-Pid" firstAttribute="top" secondItem="226" secondAttribute="top" constant="225" id="Umk-VM-2Dm"/>
-                <constraint firstItem="hzV-oN-mXT" firstAttribute="leading" secondItem="226" secondAttribute="leading" constant="20" symbolic="YES" id="Yac-8o-YWK"/>
-                <constraint firstItem="4LP-Rt-bQH" firstAttribute="top" secondItem="226" secondAttribute="top" constant="123" id="Ynm-SK-5ke"/>
-                <constraint firstItem="4LP-Rt-bQH" firstAttribute="leading" secondItem="hzV-oN-mXT" secondAttribute="leading" id="cxT-Jt-t5R"/>
-                <constraint firstItem="hzV-oN-mXT" firstAttribute="top" secondItem="226" secondAttribute="top" constant="20" symbolic="YES" id="dHB-d9-2VS"/>
-                <constraint firstItem="4LP-Rt-bQH" firstAttribute="trailing" secondItem="O8e-tz-Pid" secondAttribute="trailing" id="fAY-wu-aZn"/>
-                <constraint firstItem="hzV-oN-mXT" firstAttribute="trailing" secondItem="4LP-Rt-bQH" secondAttribute="trailing" id="o8f-1W-MwP"/>
-                <constraint firstAttribute="trailing" secondItem="hzV-oN-mXT" secondAttribute="trailing" constant="20" symbolic="YES" id="wna-JM-SW4"/>
+                <constraint firstItem="hzV-oN-mXT" firstAttribute="top" secondItem="226" secondAttribute="top" constant="20" symbolic="YES" id="6Mf-6L-vrB"/>
+                <constraint firstItem="4LP-Rt-bQH" firstAttribute="top" secondItem="226" secondAttribute="top" constant="123" id="Nz4-qP-f7D"/>
+                <constraint firstItem="hzV-oN-mXT" firstAttribute="trailing" secondItem="4LP-Rt-bQH" secondAttribute="trailing" id="Qoe-RB-6vF"/>
+                <constraint firstItem="O8e-tz-Pid" firstAttribute="top" secondItem="4LP-Rt-bQH" secondAttribute="bottom" constant="8" symbolic="YES" id="RX5-ab-vrL"/>
+                <constraint firstItem="O8e-tz-Pid" firstAttribute="leading" secondItem="4LP-Rt-bQH" secondAttribute="leading" id="SK2-nj-K5P"/>
+                <constraint firstAttribute="trailing" secondItem="hzV-oN-mXT" secondAttribute="trailing" constant="20" symbolic="YES" id="Tf6-Ol-RIv"/>
+                <constraint firstItem="4LP-Rt-bQH" firstAttribute="top" secondItem="hzV-oN-mXT" secondAttribute="bottom" constant="8" symbolic="YES" id="fHP-ej-RU8"/>
+                <constraint firstItem="4LP-Rt-bQH" firstAttribute="trailing" secondItem="O8e-tz-Pid" secondAttribute="trailing" id="jZW-7X-GdL"/>
+                <constraint firstItem="hzV-oN-mXT" firstAttribute="leading" secondItem="226" secondAttribute="leading" constant="20" symbolic="YES" id="occ-nF-8VR"/>
+                <constraint firstItem="O8e-tz-Pid" firstAttribute="top" secondItem="226" secondAttribute="top" constant="225" id="qx2-0q-J1s"/>
+                <constraint firstAttribute="bottom" secondItem="O8e-tz-Pid" secondAttribute="bottom" constant="20" symbolic="YES" id="uaf-c1-WkT"/>
+                <constraint firstItem="hzV-oN-mXT" firstAttribute="leading" secondItem="4LP-Rt-bQH" secondAttribute="leading" id="wTm-YA-EAR"/>
             </constraints>
-            <point key="canvasLocation" x="472" y="668"/>
+            <point key="canvasLocation" x="37" y="711"/>
         </customView>
         <objectController objectClassName="ExportProjectSettings" id="31" userLabel="GUI">
             <declaredKeys>

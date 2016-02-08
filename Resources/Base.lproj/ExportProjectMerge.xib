@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <outlineView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" columnReordering="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="20" indentationPerLevel="14" autoresizesOutlineColumn="YES" outlineTableColumn="7" id="5">
-                                <rect key="frame" x="0.0" y="0.0" width="658" height="20"/>
+                                <rect key="frame" x="0.0" y="0.0" width="658" height="233"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="0.0"/>
                                 <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -74,6 +74,7 @@
                 <constraint firstItem="23" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" symbolic="YES" id="k2R-jU-8Vc"/>
                 <constraint firstItem="23" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="19" id="wIS-GA-wrP"/>
             </constraints>
+            <point key="canvasLocation" x="263" y="308"/>
         </customView>
     </objects>
 </document>

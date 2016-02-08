@@ -9,7 +9,7 @@
 "47.title" = "Aktualisierte Datei";
 
 /* Class = "NSTextFieldCell"; title = "Folgende Dateien können nicht zusammengeführt werden.\nWählen Sie die Datei aus, die benutzt werden soll."; ObjectID = "90"; */
-"90.title" = "Folgende Dateien können nicht zusammengeführt werden.\nWählen Sie die Datei aus, die benutzt werden soll.";
+"90.title" = "Folgende Dateien können nicht zusammengeführt werden. Wählen Sie die Datei aus, die benutzt werden soll.";
 
 /* Class = "NSTextFieldCell"; title = "Pfad:"; ObjectID = "91"; */
 "91.title" = "Pfad:";

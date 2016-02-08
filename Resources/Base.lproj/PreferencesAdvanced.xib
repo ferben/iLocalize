@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PreferencesAdvanced">
@@ -16,7 +17,7 @@
         <userDefaultsController representsSharedInstance="YES" id="10" userLabel="Shared Defaults"/>
         <customView id="403" userLabel="Advanced">
             <rect key="frame" x="0.0" y="0.0" width="626" height="334"/>
-            <autoresizingMask key="autoresizingMask"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <tabView translatesAutoresizingMaskIntoConstraints="NO" id="598">
                     <rect key="frame" x="13" y="10" width="600" height="310"/>
@@ -113,7 +114,7 @@
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="592">
                                         <rect key="frame" x="449" y="207" width="120" height="32"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="108" id="ouB-Ig-Pwb"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="108" id="ouB-Ig-Pwb"/>
                                         </constraints>
                                         <buttonCell key="cell" type="push" title="Choose…" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="593">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -177,7 +178,7 @@
                                 <rect key="frame" x="10" y="33" width="580" height="264"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="483">
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="483">
                                         <rect key="frame" x="15" y="244" width="550" height="17"/>
                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Path to ibtool:" id="577">
                                             <font key="font" metaFont="system"/>
@@ -185,7 +186,7 @@
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField toolTip="Path to the ibtool executable (usually /usr/bin/ibtool). This tool is only available in Leopard." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="484">
+                                    <textField toolTip="Path to the ibtool executable (usually /usr/bin/ibtool). This tool is only available in Leopard." verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="484">
                                         <rect key="frame" x="17" y="214" width="546" height="22"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="578">
                                             <font key="font" metaFont="system"/>
@@ -211,7 +212,7 @@
                                             </binding>
                                         </connections>
                                     </textField>
-                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="625">
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="625">
                                         <rect key="frame" x="15" y="189" width="550" height="17"/>
                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Plugins for ibtool:" id="636">
                                             <font key="font" metaFont="system"/>
@@ -219,9 +220,9 @@
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="626">
+                                    <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="626">
                                         <rect key="frame" x="17" y="47" width="546" height="134"/>
-                                        <clipView key="contentView" ambiguous="YES" id="Hyv-GQ-rOY">
+                                        <clipView key="contentView" id="Hyv-GQ-rOY">
                                             <rect key="frame" x="1" y="1" width="544" height="132"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
@@ -262,8 +263,12 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                     </scrollView>
-                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="627">
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="627">
                                         <rect key="frame" x="17" y="16" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="1lX-mo-mX3"/>
+                                            <constraint firstAttribute="width" constant="24" id="Lhk-82-cv8"/>
+                                        </constraints>
                                         <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="630">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -272,8 +277,11 @@
                                             <action selector="addIbtoolPlugin:" target="-2" id="639"/>
                                         </connections>
                                     </button>
-                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="628">
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="628">
                                         <rect key="frame" x="40" y="16" width="25" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="N9m-i5-kQK"/>
+                                        </constraints>
                                         <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSRemoveTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="629">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -284,6 +292,26 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="483" firstAttribute="leading" secondItem="601" secondAttribute="leading" constant="17" id="00f-5x-gkR"/>
+                                    <constraint firstItem="625" firstAttribute="trailing" secondItem="484" secondAttribute="trailing" id="2V4-AB-Vbi"/>
+                                    <constraint firstItem="625" firstAttribute="leading" secondItem="626" secondAttribute="leading" id="4K4-00-7kM"/>
+                                    <constraint firstItem="625" firstAttribute="top" secondItem="484" secondAttribute="bottom" constant="8" symbolic="YES" id="4RT-wN-g3J"/>
+                                    <constraint firstItem="484" firstAttribute="top" secondItem="483" secondAttribute="bottom" constant="8" symbolic="YES" id="AUw-1i-d1L"/>
+                                    <constraint firstItem="483" firstAttribute="trailing" secondItem="484" secondAttribute="trailing" id="FMk-il-Cz7"/>
+                                    <constraint firstItem="626" firstAttribute="trailing" secondItem="625" secondAttribute="trailing" id="FTn-fM-JxT"/>
+                                    <constraint firstItem="628" firstAttribute="firstBaseline" secondItem="627" secondAttribute="firstBaseline" id="J1d-7O-anh"/>
+                                    <constraint firstItem="627" firstAttribute="leading" secondItem="626" secondAttribute="leading" id="Lee-NP-AAO"/>
+                                    <constraint firstItem="483" firstAttribute="top" secondItem="601" secondAttribute="top" constant="3" id="N3x-7t-8PL"/>
+                                    <constraint firstItem="625" firstAttribute="leading" secondItem="484" secondAttribute="leading" id="Xuh-us-dsF"/>
+                                    <constraint firstItem="628" firstAttribute="leading" secondItem="601" secondAttribute="leading" constant="40" id="arN-kj-wdc"/>
+                                    <constraint firstAttribute="trailing" secondItem="483" secondAttribute="trailing" constant="17" id="fuH-h9-xHr"/>
+                                    <constraint firstItem="628" firstAttribute="baseline" secondItem="627" secondAttribute="baseline" id="g4j-WZ-EzA"/>
+                                    <constraint firstItem="626" firstAttribute="top" secondItem="625" secondAttribute="bottom" constant="8" symbolic="YES" id="j3P-7K-QV2"/>
+                                    <constraint firstAttribute="bottom" secondItem="627" secondAttribute="bottom" constant="17" id="lSF-fM-911"/>
+                                    <constraint firstItem="483" firstAttribute="leading" secondItem="484" secondAttribute="leading" id="pD8-oe-IAJ"/>
+                                    <constraint firstItem="627" firstAttribute="top" secondItem="626" secondAttribute="bottom" constant="8" symbolic="YES" id="sce-fI-Acm"/>
+                                </constraints>
                             </view>
                         </tabViewItem>
                         <tabViewItem label="Settings" identifier="Item 3" id="605">
@@ -291,7 +319,7 @@
                                 <rect key="frame" x="10" y="33" width="580" height="264"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="408">
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="408">
                                         <rect key="frame" x="15" y="226" width="550" height="18"/>
                                         <buttonCell key="cell" type="check" title="Output the message of the console to the System Console" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="564">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -301,7 +329,7 @@
                                             <binding destination="10" name="value" keyPath="values.consoleDisplayUsingNSLog" id="418"/>
                                         </connections>
                                     </button>
-                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="654">
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="654">
                                         <rect key="frame" x="15" y="206" width="550" height="18"/>
                                         <buttonCell key="cell" type="check" title="Output all NIB commands to the console" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="655">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -311,7 +339,7 @@
                                             <binding destination="10" name="value" keyPath="values.outputnibcommand" id="661"/>
                                         </connections>
                                     </button>
-                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="657">
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="657">
                                         <rect key="frame" x="15" y="186" width="550" height="18"/>
                                         <buttonCell key="cell" type="check" title="Compare NIB files using their XML structure (slower but more exact)" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="658">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -322,6 +350,17 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="408" firstAttribute="trailing" secondItem="657" secondAttribute="trailing" id="5pI-Li-msU"/>
+                                    <constraint firstItem="408" firstAttribute="trailing" secondItem="654" secondAttribute="trailing" id="HVp-Ax-pji"/>
+                                    <constraint firstItem="657" firstAttribute="top" secondItem="606" secondAttribute="top" constant="62" id="LG0-AW-Mvj"/>
+                                    <constraint firstItem="657" firstAttribute="top" secondItem="654" secondAttribute="bottom" constant="6" symbolic="YES" id="Rnt-sL-PJo"/>
+                                    <constraint firstItem="657" firstAttribute="leading" secondItem="606" secondAttribute="leading" constant="17" id="Xio-wO-jaI"/>
+                                    <constraint firstItem="408" firstAttribute="leading" secondItem="654" secondAttribute="leading" id="neC-Ez-BuC"/>
+                                    <constraint firstAttribute="trailing" secondItem="657" secondAttribute="trailing" constant="17" id="seO-mS-hW6"/>
+                                    <constraint firstItem="408" firstAttribute="leading" secondItem="657" secondAttribute="leading" id="tw8-b7-lgn"/>
+                                    <constraint firstItem="654" firstAttribute="top" secondItem="408" secondAttribute="bottom" constant="6" symbolic="YES" id="ymU-9s-f7x"/>
+                                </constraints>
                             </view>
                         </tabViewItem>
                     </tabViewItems>
@@ -333,7 +372,7 @@
                 <constraint firstItem="598" firstAttribute="top" secondItem="403" secondAttribute="top" constant="20" id="T67-2K-ebg"/>
                 <constraint firstAttribute="bottom" secondItem="598" secondAttribute="bottom" constant="20" symbolic="YES" id="pBk-L1-LC9"/>
             </constraints>
-            <point key="canvasLocation" x="417" y="340"/>
+            <point key="canvasLocation" x="27" y="277"/>
         </customView>
         <arrayController id="641" userLabel="ibtool plugins">
             <declaredKeys>

@@ -47,6 +47,7 @@
                 <constraint firstItem="108" firstAttribute="centerY" secondItem="1" secondAttribute="centerY" id="rqQ-g5-hWG"/>
                 <constraint firstAttribute="trailing" secondItem="108" secondAttribute="trailing" constant="19" id="wE6-lZ-ITV"/>
             </constraints>
+            <point key="canvasLocation" x="494.5" y="472.5"/>
         </customView>
     </objects>
 </document>

@@ -26,6 +26,7 @@
         <customView id="473" userLabel="BaseView">
             <rect key="frame" x="0.0" y="0.0" width="610" height="207"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <point key="canvasLocation" x="56" y="383.5"/>
         </customView>
         <customView id="474" userLabel="LocView">
             <rect key="frame" x="0.0" y="0.0" width="495" height="222"/>

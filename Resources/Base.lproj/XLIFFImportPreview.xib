@@ -20,11 +20,11 @@
                 <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4">
                     <rect key="frame" x="20" y="24" width="721" height="322"/>
                     <clipView key="contentView" id="KC2-pU-rHE">
-                        <rect key="frame" x="1.5" y="1" width="719" height="320"/>
+                        <rect key="frame" x="1" y="1" width="719" height="305"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" indentationPerLevel="16" autoresizesOutlineColumn="YES" outlineTableColumn="9" id="7">
-                                <rect key="frame" x="0.0" y="0.0" width="719" height="19"/>
+                                <rect key="frame" x="0.0" y="0.0" width="720" height="305"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -50,7 +50,7 @@
                         </subviews>
                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </clipView>
-                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="6">
+                    <scroller key="horizontalScroller" verticalHuggingPriority="750" doubleValue="0.5" horizontal="YES" id="6">
                         <rect key="frame" x="1" y="306" width="719" height="15"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>

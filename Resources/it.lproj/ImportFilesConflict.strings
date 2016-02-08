@@ -9,7 +9,7 @@
 "47.title" = "File Aggiornato";
 
 /* Class = "NSTextFieldCell"; title = "iLocalize non può unire il contenuto di questi files.\nSelezionate quello da utilizzare."; ObjectID = "90"; */
-"90.title" = "iLocalize non può unire il contenuto di questi files.\nSelezionate quello da utilizzare.";
+"90.title" = "iLocalize non può unire il contenuto di questi files. Selezionate quello da utilizzare.";
 
 /* Class = "NSTextFieldCell"; title = "Percorso:"; ObjectID = "91"; */
 "91.title" = "Percorso:";

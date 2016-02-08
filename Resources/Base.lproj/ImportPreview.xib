@@ -19,6 +19,9 @@
             <subviews>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="18">
                     <rect key="frame" x="18" y="463" width="691" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="687" id="ArY-9e-xi3"/>
+                    </constraints>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="The following files will be processed:" id="113">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -28,7 +31,7 @@
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="45">
                     <rect key="frame" x="709" y="453" width="120" height="32"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="108" id="JIh-pS-wVz"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="108" id="HQw-rY-gvj"/>
                     </constraints>
                     <buttonCell key="cell" type="push" title="Export…" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="114">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -45,7 +48,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <outlineView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowHeight="20" indentationPerLevel="14" autoresizesOutlineColumn="YES" outlineTableColumn="135" id="133">
-                                <rect key="frame" x="0.0" y="0.0" width="801" height="20"/>
+                                <rect key="frame" x="0.0" y="0.0" width="801" height="431"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="0.0"/>
                                 <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -93,16 +96,17 @@
             </subviews>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="45" secondAttribute="trailing" constant="20" symbolic="YES" id="61u-hH-Zzn"/>
-                <constraint firstItem="45" firstAttribute="leading" secondItem="18" secondAttribute="trailing" constant="8" symbolic="YES" id="DTa-47-9Fn"/>
-                <constraint firstItem="18" firstAttribute="leading" secondItem="127" secondAttribute="leading" constant="20" symbolic="YES" id="Lqy-Yi-7SS"/>
-                <constraint firstItem="45" firstAttribute="baseline" secondItem="18" secondAttribute="baseline" id="Vo0-90-jpQ"/>
-                <constraint firstItem="130" firstAttribute="leading" secondItem="18" secondAttribute="leading" id="bQp-Xd-VGa"/>
+                <constraint firstItem="130" firstAttribute="top" secondItem="45" secondAttribute="bottom" constant="5" id="BzN-eD-F08"/>
+                <constraint firstItem="18" firstAttribute="leading" secondItem="130" secondAttribute="leading" id="FJ1-8G-H1t"/>
+                <constraint firstItem="18" firstAttribute="baseline" secondItem="45" secondAttribute="baseline" id="KMn-Qy-5Gr"/>
+                <constraint firstItem="18" firstAttribute="top" secondItem="127" secondAttribute="top" constant="21" id="fp4-YE-gBv"/>
+                <constraint firstItem="18" firstAttribute="leading" secondItem="127" secondAttribute="leading" constant="20" id="hLG-t1-G3g"/>
                 <constraint firstItem="45" firstAttribute="trailing" secondItem="130" secondAttribute="trailing" id="ieq-QZ-YnO"/>
-                <constraint firstItem="130" firstAttribute="top" secondItem="18" secondAttribute="bottom" constant="8" symbolic="YES" id="lXJ-ch-XG6"/>
+                <constraint firstItem="45" firstAttribute="leading" secondItem="18" secondAttribute="trailing" constant="8" symbolic="YES" id="jTu-AH-mB0"/>
                 <constraint firstAttribute="bottom" secondItem="130" secondAttribute="bottom" constant="22" id="pRS-BA-M9P"/>
                 <constraint firstItem="45" firstAttribute="top" secondItem="127" secondAttribute="top" constant="20" symbolic="YES" id="xbm-je-Zop"/>
             </constraints>
-            <point key="canvasLocation" x="565.5" y="662.5"/>
+            <point key="canvasLocation" x="29.5" y="575.5"/>
         </customView>
     </objects>
 </document>

@@ -72,6 +72,9 @@
                     </textField>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7">
                         <rect key="frame" x="14" y="13" width="180" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="168" id="EHI-nc-SwJ"/>
+                        </constraints>
                         <buttonCell key="cell" type="push" title="Copy to Clipboard" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="120">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -83,7 +86,7 @@
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8">
                         <rect key="frame" x="384" y="13" width="110" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="98" id="x5L-9W-Vw6"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="98" id="x5L-9W-Vw6"/>
                         </constraints>
                         <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="121">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -192,7 +195,7 @@ Gw
                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="66">
                         <rect key="frame" x="343" y="58" width="148" height="26"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="143" id="dyT-jL-KKq"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="143" id="dyT-jL-KKq"/>
                         </constraints>
                         <popUpButtonCell key="cell" type="push" title="per word" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="70" id="126">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -214,7 +217,7 @@ Gw
                         <constraints>
                             <constraint firstAttribute="width" constant="66" id="d22-dl-az0"/>
                         </constraints>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="1" drawsBackground="YES" id="127">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" title="1" drawsBackground="YES" id="127">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -224,7 +227,7 @@ Gw
                             <outlet property="delegate" destination="-2" id="99"/>
                         </connections>
                     </textField>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="72">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="72">
                         <rect key="frame" x="18" y="64" width="247" height="17"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Rate:" id="128">
                             <font key="font" metaFont="system"/>
@@ -234,32 +237,31 @@ Gw
                     </textField>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="72" firstAttribute="leading" secondItem="7" secondAttribute="leading" id="4Ic-yj-8Ob"/>
                     <constraint firstItem="106" firstAttribute="trailing" secondItem="48" secondAttribute="trailing" id="5Wa-7F-d6x"/>
                     <constraint firstItem="66" firstAttribute="baseline" secondItem="71" secondAttribute="baseline" id="5xp-cz-QzZ"/>
-                    <constraint firstItem="38" firstAttribute="leading" secondItem="72" secondAttribute="leading" id="AOy-w4-gIO"/>
                     <constraint firstItem="106" firstAttribute="top" secondItem="45" secondAttribute="bottom" constant="8" symbolic="YES" id="AUO-a4-TGm"/>
                     <constraint firstItem="38" firstAttribute="trailing" secondItem="106" secondAttribute="trailing" id="CTR-To-ODE"/>
                     <constraint firstItem="18" firstAttribute="top" secondItem="17" secondAttribute="bottom" constant="5" id="DUa-fZ-n8r"/>
                     <constraint firstItem="8" firstAttribute="top" secondItem="66" secondAttribute="bottom" constant="20" symbolic="YES" id="Dhz-oz-XnK"/>
                     <constraint firstItem="38" firstAttribute="top" secondItem="106" secondAttribute="bottom" constant="7" id="HIY-Qz-lXG"/>
                     <constraint firstItem="48" firstAttribute="leading" secondItem="45" secondAttribute="trailing" constant="8" symbolic="YES" id="Ium-Cg-Qyq"/>
-                    <constraint firstItem="72" firstAttribute="baseline" secondItem="71" secondAttribute="baseline" id="OuT-I9-bmb"/>
+                    <constraint firstItem="71" firstAttribute="leading" secondItem="72" secondAttribute="trailing" constant="8" id="JZd-IS-q5M"/>
                     <constraint firstItem="17" firstAttribute="leading" secondItem="18" secondAttribute="leading" id="OyS-dc-k0q"/>
                     <constraint firstItem="8" firstAttribute="baseline" secondItem="7" secondAttribute="baseline" id="OzJ-2T-S9Z"/>
-                    <constraint firstItem="71" firstAttribute="leading" secondItem="72" secondAttribute="trailing" constant="8" symbolic="YES" id="Pup-BP-V72"/>
                     <constraint firstItem="17" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="20" symbolic="YES" id="QNj-vM-dmf"/>
                     <constraint firstAttribute="trailing" secondItem="48" secondAttribute="trailing" constant="20" symbolic="YES" id="U6r-xx-2PI"/>
+                    <constraint firstAttribute="bottom" secondItem="7" secondAttribute="bottom" constant="20" id="ZEg-0x-gs0"/>
                     <constraint firstItem="17" firstAttribute="top" secondItem="6" secondAttribute="top" constant="23" id="eVo-Nv-mEQ"/>
+                    <constraint firstItem="7" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="20" id="fA0-Gu-ddj"/>
                     <constraint firstItem="66" firstAttribute="trailing" secondItem="38" secondAttribute="trailing" id="fap-4R-CcA"/>
                     <constraint firstItem="71" firstAttribute="top" secondItem="38" secondAttribute="bottom" constant="8" symbolic="YES" id="fb6-u0-uvV"/>
                     <constraint firstAttribute="bottom" secondItem="7" secondAttribute="bottom" constant="20" symbolic="YES" id="fgX-Bi-38u"/>
+                    <constraint firstItem="72" firstAttribute="top" secondItem="38" secondAttribute="bottom" constant="10" id="hVu-xf-Nfj"/>
                     <constraint firstItem="38" firstAttribute="leading" secondItem="106" secondAttribute="leading" id="hz2-TE-qbf"/>
                     <constraint firstItem="106" firstAttribute="top" secondItem="48" secondAttribute="bottom" constant="8" symbolic="YES" id="iLy-P4-wn9"/>
                     <constraint firstItem="45" firstAttribute="leading" secondItem="18" secondAttribute="trailing" constant="46" id="lb0-4q-nDH"/>
                     <constraint firstItem="45" firstAttribute="centerY" secondItem="18" secondAttribute="centerY" id="p7k-Ja-KEs"/>
                     <constraint firstItem="17" firstAttribute="trailing" secondItem="18" secondAttribute="trailing" id="pIc-WM-XUC"/>
-                    <constraint firstItem="18" firstAttribute="trailing" secondItem="7" secondAttribute="trailing" id="xKv-CW-Q9S"/>
                     <constraint firstItem="106" firstAttribute="leading" secondItem="18" secondAttribute="leading" id="ynE-RE-Lfy"/>
                     <constraint firstItem="66" firstAttribute="leading" secondItem="71" secondAttribute="trailing" constant="8" symbolic="YES" id="zct-6e-y0q"/>
                     <constraint firstItem="8" firstAttribute="trailing" secondItem="66" secondAttribute="trailing" id="zdh-aU-neH"/>

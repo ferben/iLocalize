@@ -214,6 +214,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="150"/>
             </connections>
+            <point key="canvasLocation" x="-25" y="295.5"/>
         </window>
         <arrayController objectClassName="GlossaryEntry" clearsFilterPredicateOnInsertion="NO" id="21" userLabel="Strings" customClass="AZArrayController">
             <declaredKeys>

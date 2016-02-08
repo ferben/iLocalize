@@ -36,7 +36,7 @@
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="28">
                         <rect key="frame" x="551" y="13" width="110" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="98" id="dxl-JQ-Oms"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="98" id="dxl-JQ-Oms"/>
                         </constraints>
                         <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="79">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -72,7 +72,7 @@ DQ
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
                                                     </tableHeaderCell>
-                                                    <imageCell key="dataCell" controlSize="small" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="E7F4C51E-5C24-4099-A6FF-99D9FEDB9507" id="67"/>
+                                                    <imageCell key="dataCell" controlSize="small" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="1E62AC43-7CED-494F-9DA4-8871645946E4" id="67"/>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <connections>
                                                         <binding destination="29" name="value" keyPath="arrangedObjects.type" id="75"/>
@@ -156,7 +156,7 @@ DQ
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="44">
                         <rect key="frame" x="441" y="13" width="110" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="98" id="nog-qW-qke"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="98" id="nog-qW-qke"/>
                         </constraints>
                         <buttonCell key="cell" type="push" title="Export…" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="80">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -184,6 +184,7 @@ DQ
                     <constraint firstItem="8" firstAttribute="leading" secondItem="60" secondAttribute="trailing" constant="8" symbolic="YES" id="rKy-fn-Xjr"/>
                 </constraints>
             </view>
+            <point key="canvasLocation" x="332.5" y="331.5"/>
         </window>
         <arrayController preservesSelection="NO" selectsInsertedObjects="NO" id="29" userLabel="logs">
             <declaredKeys>
@@ -193,7 +194,7 @@ DQ
         </arrayController>
     </objects>
     <resources>
-        <image name="E7F4C51E-5C24-4099-A6FF-99D9FEDB9507" width="34" height="34">
+        <image name="1E62AC43-7CED-494F-9DA4-8871645946E4" width="34" height="34">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

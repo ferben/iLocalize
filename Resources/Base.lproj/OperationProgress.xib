@@ -36,7 +36,7 @@
                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5">
                             <rect key="frame" x="366" y="15" width="110" height="32"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="98" id="xqm-0u-YR0"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="98" id="xqm-0u-YR0"/>
                             </constraints>
                             <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -68,7 +68,7 @@ Gw
                 <constraint firstItem="13" firstAttribute="top" secondItem="1" secondAttribute="top" constant="-8" id="ke9-qM-Mu2"/>
                 <constraint firstAttribute="bottom" secondItem="13" secondAttribute="bottom" id="nDR-Iy-4Nx"/>
             </constraints>
-            <point key="canvasLocation" x="496.5" y="135"/>
+            <point key="canvasLocation" x="98.5" y="214"/>
         </customView>
     </objects>
 </document>

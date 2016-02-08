@@ -281,7 +281,7 @@
                 <constraint firstItem="498" firstAttribute="top" secondItem="403" secondAttribute="top" constant="20" symbolic="YES" id="pD7-b2-ESx"/>
                 <constraint firstItem="498" firstAttribute="leading" secondItem="503" secondAttribute="trailing" constant="8" symbolic="YES" id="uPB-1P-3Q0"/>
             </constraints>
-            <point key="canvasLocation" x="565.5" y="663"/>
+            <point key="canvasLocation" x="342.5" y="515"/>
         </customView>
         <menu title="Menu" id="490" userLabel="EncodingsMenu">
             <items>

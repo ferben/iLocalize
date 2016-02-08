@@ -143,7 +143,7 @@
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="54">
                         <rect key="frame" x="476" y="13" width="110" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="98" id="MTx-Yb-gPr"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="98" id="MTx-Yb-gPr"/>
                         </constraints>
                         <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="55">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -157,9 +157,9 @@ DQ
                         </connections>
                     </button>
                     <button translatesAutoresizingMaskIntoConstraints="NO" id="141">
-                        <rect key="frame" x="18" y="59" width="376" height="18"/>
+                        <rect key="frame" x="18" y="59" width="564" height="18"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="372" id="qKd-k8-93a"/>
+                            <constraint firstAttribute="width" constant="560" id="qKd-k8-93a"/>
                         </constraints>
                         <buttonCell key="cell" type="check" title="Available in all projects" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="142">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -177,7 +177,7 @@ DQ
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="56">
                         <rect key="frame" x="366" y="13" width="110" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="98" id="xwr-Kn-0zS"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="98" id="xwr-Kn-0zS"/>
                         </constraints>
                         <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="57">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -194,6 +194,7 @@ Gw
                 <constraints>
                     <constraint firstItem="50" firstAttribute="trailing" secondItem="52" secondAttribute="trailing" id="5l8-XG-Uxv"/>
                     <constraint firstItem="144" firstAttribute="top" secondItem="7" secondAttribute="bottom" constant="8" symbolic="YES" id="9Zb-jF-dyl"/>
+                    <constraint firstItem="54" firstAttribute="width" secondItem="56" secondAttribute="width" id="9bj-qU-38u"/>
                     <constraint firstItem="7" firstAttribute="top" secondItem="52" secondAttribute="bottom" constant="8" symbolic="YES" id="Cw3-uB-f6k"/>
                     <constraint firstItem="7" firstAttribute="leading" secondItem="52" secondAttribute="leading" id="MJY-ms-9CE"/>
                     <constraint firstItem="7" firstAttribute="trailing" secondItem="52" secondAttribute="trailing" id="N0w-TK-606"/>

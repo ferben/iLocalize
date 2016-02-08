@@ -40,7 +40,7 @@
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="21">
                         <rect key="frame" x="690" y="13" width="110" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="98" id="REx-fb-oXw"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="98" id="REx-fb-oXw"/>
                         </constraints>
                         <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="68">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -56,7 +56,7 @@ DQ
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="35">
                         <rect key="frame" x="580" y="13" width="110" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="98" id="cO9-mU-c5S"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="98" id="cO9-mU-c5S"/>
                         </constraints>
                         <buttonCell key="cell" type="push" title="Export…" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="69">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -125,11 +125,11 @@ DQ
                                 <rect key="frame" x="196" y="0.0" width="577" height="304"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <clipView key="contentView" id="SmH-t2-2Jz">
-                                    <rect key="frame" x="1" y="0.0" width="575" height="303"/>
+                                    <rect key="frame" x="1.5" y="-0.5" width="575" height="288"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="75" id="8">
-                                            <rect key="frame" x="0.0" y="0.0" width="575" height="280"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="576" height="280"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -172,16 +172,16 @@ DQ
                                     </subviews>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="74">
-                                    <rect key="frame" x="1" y="-30" width="551" height="15"/>
+                                <scroller key="horizontalScroller" verticalHuggingPriority="750" doubleValue="0.5" horizontal="YES" id="74">
+                                    <rect key="frame" x="1" y="288" width="575" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="73">
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="0.033333333333333333" horizontal="NO" id="73">
                                     <rect key="frame" x="-30" y="17" width="15" height="234"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="75">
-                                    <rect key="frame" x="0.0" y="0.0" width="575" height="23"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="576" height="23"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
@@ -210,6 +210,7 @@ DQ
                     <constraint firstAttribute="trailing" secondItem="21" secondAttribute="trailing" constant="19" id="Oq5-kh-xw4"/>
                     <constraint firstItem="64" firstAttribute="top" secondItem="18" secondAttribute="bottom" constant="8" symbolic="YES" id="TyX-Gs-1R1"/>
                     <constraint firstItem="20" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="22" id="c3W-JE-m9O"/>
+                    <constraint firstItem="21" firstAttribute="width" secondItem="35" secondAttribute="width" id="eaC-e9-v9n"/>
                     <constraint firstItem="35" firstAttribute="top" secondItem="21" secondAttribute="top" id="ntn-PL-Txv"/>
                     <constraint firstItem="35" firstAttribute="baseline" secondItem="21" secondAttribute="baseline" id="pX0-Jv-g5E"/>
                     <constraint firstItem="21" firstAttribute="leading" secondItem="35" secondAttribute="trailing" constant="12" symbolic="YES" id="rIr-15-df0"/>
@@ -218,6 +219,7 @@ DQ
                     <constraint firstAttribute="trailing" secondItem="18" secondAttribute="trailing" constant="20" symbolic="YES" id="zyX-Wx-8Sg"/>
                 </constraints>
             </view>
+            <point key="canvasLocation" x="341.5" y="299.5"/>
         </window>
         <arrayController preservesSelection="NO" selectsInsertedObjects="NO" avoidsEmptySelection="NO" id="24" userLabel="keys">
             <declaredKeys>

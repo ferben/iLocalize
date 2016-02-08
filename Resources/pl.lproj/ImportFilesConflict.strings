@@ -9,7 +9,7 @@
 "47.title" = "Uaktualniony plik";
 
 /* Class = "NSTextFieldCell"; title = "iLocalize nie mógł połączyć zawartości tych plików.\nWybierz plik, który zostanie użyty."; ObjectID = "90"; */
-"90.title" = "iLocalize nie mógł połączyć zawartości tych plików.\nWybierz plik, który zostanie użyty.";
+"90.title" = "iLocalize nie mógł połączyć zawartości tych plików. Wybierz plik, który zostanie użyty.";
 
 /* Class = "NSTextFieldCell"; title = "Ścieżka:"; ObjectID = "91"; */
 "91.title" = "Ścieżka:";

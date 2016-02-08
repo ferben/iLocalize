@@ -35,7 +35,7 @@
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="25">
                         <rect key="frame" x="247" y="13" width="110" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="98" id="JfI-gB-Chb"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="98" id="JfI-gB-Chb"/>
                         </constraints>
                         <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="35">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -51,7 +51,7 @@ Gw
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="26">
                         <rect key="frame" x="356" y="13" width="110" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="98" id="KzE-H1-wgo"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="98" id="KzE-H1-wgo"/>
                         </constraints>
                         <buttonCell key="cell" type="push" title="Check" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="36">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -67,7 +67,7 @@ DQ
                     <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="20" horizontalPageScroll="10" verticalLineScroll="20" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41">
                         <rect key="frame" x="20" y="52" width="440" height="227"/>
                         <clipView key="contentView" id="AgY-aX-K3H">
-                            <rect key="frame" x="1" y="1" width="438" height="225"/>
+                            <rect key="frame" x="1.5" y="1" width="438" height="225"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <outlineView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" indentationPerLevel="16" autoresizesOutlineColumn="YES" outlineTableColumn="46" id="44">
@@ -110,6 +110,7 @@ DQ
                     <constraint firstItem="25" firstAttribute="baseline" secondItem="26" secondAttribute="baseline" id="BHh-Z3-TDf"/>
                     <constraint firstItem="25" firstAttribute="top" secondItem="41" secondAttribute="bottom" constant="11" id="DCc-qa-r4U"/>
                     <constraint firstItem="8" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="19" id="NQ8-XT-rkw"/>
+                    <constraint firstItem="26" firstAttribute="width" secondItem="25" secondAttribute="width" id="Os7-bS-SoW"/>
                     <constraint firstItem="41" firstAttribute="trailing" secondItem="8" secondAttribute="trailing" id="eUD-PJ-i0N"/>
                     <constraint firstItem="41" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="20" symbolic="YES" id="ffT-zP-dRK"/>
                     <constraint firstAttribute="trailing" secondItem="8" secondAttribute="trailing" constant="20" symbolic="YES" id="hzv-9w-Fs0"/>
@@ -118,6 +119,7 @@ DQ
                     <constraint firstItem="26" firstAttribute="leading" secondItem="25" secondAttribute="trailing" constant="11" id="vgs-gC-v3M"/>
                 </constraints>
             </view>
+            <point key="canvasLocation" x="-242" y="295"/>
         </window>
         <arrayController preservesSelection="NO" selectsInsertedObjects="NO" id="27" userLabel="languages">
             <declaredKeys>

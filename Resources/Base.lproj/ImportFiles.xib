@@ -179,6 +179,7 @@
                 <constraint firstItem="7" firstAttribute="trailing" secondItem="13" secondAttribute="trailing" id="wUR-vz-3Gy"/>
                 <constraint firstItem="7" firstAttribute="leading" secondItem="11" secondAttribute="leading" id="zKf-6d-AyA"/>
             </constraints>
+            <point key="canvasLocation" x="71.5" y="361.5"/>
         </customView>
         <arrayController selectsInsertedObjects="NO" clearsFilterPredicateOnInsertion="NO" id="19" userLabel="Controller">
             <declaredKeys>

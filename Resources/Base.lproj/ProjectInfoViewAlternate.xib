@@ -26,7 +26,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="14" id="44">
-                                <rect key="frame" x="0.0" y="0.0" width="478" height="16"/>
+                                <rect key="frame" x="0.0" y="0.0" width="478" height="302"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -60,7 +60,7 @@
                         </subviews>
                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </clipView>
-                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="0.5" horizontal="YES" id="43">
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="43">
                         <rect key="frame" x="1" y="288" width="478" height="15"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
@@ -90,6 +90,7 @@
                 <constraint firstItem="62" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="7" id="ycT-uC-eVl"/>
                 <constraint firstItem="62" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="zRg-mr-hsa"/>
             </constraints>
+            <point key="canvasLocation" x="65" y="418"/>
         </customView>
         <arrayController objectClassName="IGroupElementGlossary" id="55" userLabel="Results">
             <declaredKeys>

@@ -36,7 +36,7 @@
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5">
                         <rect key="frame" x="480" y="13" width="110" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="98" id="NGa-gQ-nca"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="98" id="NGa-gQ-nca"/>
                         </constraints>
                         <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -59,7 +59,7 @@ DQ
                     <constraint firstAttribute="trailing" secondItem="5" secondAttribute="trailing" constant="20" symbolic="YES" id="rCq-fM-YrQ"/>
                 </constraints>
             </view>
-            <point key="canvasLocation" x="565" y="656.5"/>
+            <point key="canvasLocation" x="205" y="699.5"/>
         </window>
     </objects>
 </document>

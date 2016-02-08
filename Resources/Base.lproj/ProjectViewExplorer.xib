@@ -79,6 +79,7 @@
                 <constraint firstAttribute="bottom" secondItem="71" secondAttribute="bottom" constant="33" id="mm1-oi-Qv8"/>
                 <constraint firstItem="71" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" id="v4l-QX-wyg"/>
             </constraints>
+            <point key="canvasLocation" x="76" y="319"/>
         </customView>
     </objects>
 </document>

@@ -21,7 +21,7 @@
                 <scrollView focusRingType="none" borderType="none" autohidesScrollers="YES" horizontalLineScroll="20" horizontalPageScroll="10" verticalLineScroll="20" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9">
                     <rect key="frame" x="0.0" y="0.0" width="568" height="549"/>
                     <clipView key="contentView" id="WmT-N7-6i5">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="549"/>
+                        <rect key="frame" x="0.5" y="0.0" width="568" height="549"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <outlineView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="20" headerView="25" indentationPerLevel="14" autoresizesOutlineColumn="YES" outlineTableColumn="14" id="12">
@@ -75,6 +75,7 @@
                 <constraint firstItem="9" firstAttribute="centerY" secondItem="1" secondAttribute="centerY" id="cjg-0n-AHU"/>
                 <constraint firstAttribute="trailing" secondItem="9" secondAttribute="trailing" constant="-1" id="kIZ-h2-heL"/>
             </constraints>
+            <point key="canvasLocation" x="19.5" y="287"/>
         </customView>
         <treeController objectClassName="PathNode" childrenKeyPath="displayableChildren" id="18">
             <declaredKeys>

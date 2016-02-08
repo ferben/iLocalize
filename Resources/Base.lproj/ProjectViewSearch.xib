@@ -22,7 +22,7 @@
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="13">
                     <rect key="frame" x="813" y="40" width="120" height="19"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="120" id="Zdy-60-nuo"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="xpg-sv-OyF"/>
                     </constraints>
                     <buttonCell key="cell" type="roundRect" title="Save" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="14">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -34,6 +34,9 @@
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="32">
                     <rect key="frame" x="813" y="12" width="120" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="yti-T1-2YL"/>
+                    </constraints>
                     <buttonCell key="cell" type="roundRect" title="Replace All" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="33">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="cellTitle"/>
@@ -61,7 +64,7 @@
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="29">
                     <rect key="frame" x="685" y="12" width="120" height="19"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="120" id="IDA-oD-34e"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="pqH-gY-8a7"/>
                     </constraints>
                     <buttonCell key="cell" type="roundRect" title="Replace" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="30">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -73,20 +76,30 @@
                 </button>
             </subviews>
             <constraints>
-                <constraint firstItem="97" firstAttribute="top" secondItem="13" secondAttribute="top" id="0m7-bJ-cvm"/>
-                <constraint firstItem="27" firstAttribute="baseline" secondItem="29" secondAttribute="baseline" id="FYr-r6-JzJ"/>
-                <constraint firstItem="97" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="11" id="GV4-Un-WTz"/>
-                <constraint firstItem="13" firstAttribute="leading" secondItem="32" secondAttribute="leading" id="TNd-Dl-ZZv"/>
-                <constraint firstItem="27" firstAttribute="leading" secondItem="97" secondAttribute="leading" id="bul-Gd-VFV"/>
-                <constraint firstItem="97" firstAttribute="top" secondItem="1" secondAttribute="top" constant="6" id="ho9-V9-kcZ"/>
-                <constraint firstItem="13" firstAttribute="leading" secondItem="97" secondAttribute="trailing" constant="8" symbolic="YES" id="ija-cc-gEn"/>
-                <constraint firstAttribute="trailing" secondItem="13" secondAttribute="trailing" constant="10" id="jM7-Ij-8sY"/>
-                <constraint firstItem="29" firstAttribute="leading" secondItem="27" secondAttribute="trailing" constant="8" symbolic="YES" id="kjK-g5-lWM"/>
-                <constraint firstItem="32" firstAttribute="leading" secondItem="29" secondAttribute="trailing" constant="8" symbolic="YES" id="nL3-kf-hBf"/>
-                <constraint firstItem="27" firstAttribute="top" secondItem="97" secondAttribute="bottom" constant="11" id="q10-ku-duZ"/>
-                <constraint firstItem="29" firstAttribute="baseline" secondItem="32" secondAttribute="baseline" id="qvZ-CN-HKz"/>
-                <constraint firstItem="32" firstAttribute="trailing" secondItem="13" secondAttribute="trailing" id="wS5-aV-jdP"/>
+                <constraint firstAttribute="bottom" secondItem="32" secondAttribute="bottom" constant="13" id="3YK-NN-fFd"/>
+                <constraint firstItem="29" firstAttribute="top" secondItem="97" secondAttribute="bottom" constant="11" id="40w-6k-amQ"/>
+                <constraint firstItem="32" firstAttribute="leading" secondItem="29" secondAttribute="trailing" constant="8" id="7kb-Zb-kxk"/>
+                <constraint firstItem="32" firstAttribute="leading" secondItem="29" secondAttribute="trailing" constant="8" id="98b-DI-1TY"/>
+                <constraint firstItem="29" firstAttribute="top" secondItem="97" secondAttribute="bottom" constant="11" id="9fe-uB-goq"/>
+                <constraint firstItem="13" firstAttribute="leading" secondItem="97" secondAttribute="trailing" constant="8" id="Kge-8x-ljU"/>
+                <constraint firstItem="27" firstAttribute="top" secondItem="97" secondAttribute="bottom" constant="11" id="LrG-Xy-zgN"/>
+                <constraint firstItem="32" firstAttribute="top" secondItem="13" secondAttribute="bottom" constant="10" id="OQx-d4-zOb"/>
+                <constraint firstItem="29" firstAttribute="leading" secondItem="27" secondAttribute="trailing" constant="8" id="RD0-fK-7Xk"/>
+                <constraint firstItem="27" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="11" id="VkX-Uh-gin"/>
+                <constraint firstAttribute="bottom" secondItem="29" secondAttribute="bottom" constant="13" id="coa-Ja-hLR"/>
+                <constraint firstItem="13" firstAttribute="top" secondItem="1" secondAttribute="top" constant="6" id="d9x-ho-BrD"/>
+                <constraint firstAttribute="trailing" secondItem="32" secondAttribute="trailing" constant="10" id="fLK-M5-XcH"/>
+                <constraint firstAttribute="trailing" secondItem="13" secondAttribute="trailing" constant="10" id="iwm-Hh-M11"/>
+                <constraint firstAttribute="bottom" secondItem="27" secondAttribute="bottom" constant="12" id="kFR-F0-ddx"/>
+                <constraint firstItem="32" firstAttribute="top" secondItem="13" secondAttribute="bottom" constant="10" id="l5l-Gq-0gQ"/>
+                <constraint firstItem="13" firstAttribute="width" secondItem="29" secondAttribute="width" id="muo-O2-fvv"/>
+                <constraint firstItem="97" firstAttribute="top" secondItem="1" secondAttribute="top" constant="6" id="ngV-Vl-Am9"/>
+                <constraint firstItem="29" firstAttribute="leading" secondItem="27" secondAttribute="trailing" constant="8" id="ugV-in-lnf"/>
+                <constraint firstItem="32" firstAttribute="width" secondItem="29" secondAttribute="width" id="vej-NO-7TA"/>
+                <constraint firstItem="13" firstAttribute="leading" secondItem="97" secondAttribute="trailing" constant="8" id="xfl-fm-Bwj"/>
+                <constraint firstItem="97" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="11" id="zlb-SI-16k"/>
             </constraints>
+            <point key="canvasLocation" x="352.5" y="573.5"/>
         </customView>
     </objects>
 </document>

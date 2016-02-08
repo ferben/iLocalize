@@ -19,13 +19,16 @@
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="77" y="558" width="662" height="169"/>
             <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
-            <value key="minSize" type="size" width="662" height="107"/>
             <view key="contentView" id="6">
                 <rect key="frame" x="0.0" y="0.0" width="662" height="169"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="100">
-                        <rect key="frame" x="88" y="20" width="294" height="129"/>
+                        <rect key="frame" x="90" y="20" width="294" height="129"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="129" id="9ER-aF-fzQ"/>
+                            <constraint firstAttribute="width" constant="290" id="iIr-lZ-kR8"/>
+                        </constraints>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="101">
                             <font key="font" metaFont="system"/>
                             <string key="title">This glossary is located in none of the well-known glossary paths of iLocalize. In order to use this glossary when translating a project, it needs to be either moved or aliased in a well-known glossary path.</string>
@@ -42,9 +45,10 @@
                         </textFieldCell>
                     </textField>
                     <imageView translatesAutoresizingMaskIntoConstraints="NO" id="25">
-                        <rect key="frame" x="20" y="87" width="62" height="62"/>
+                        <rect key="frame" x="20" y="85" width="64" height="64"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="62" id="xs3-aE-mzj"/>
+                            <constraint firstAttribute="width" constant="64" id="GoP-56-kds"/>
+                            <constraint firstAttribute="height" constant="64" id="LnT-tu-vAc"/>
                         </constraints>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="ApplicationIcon" id="94"/>
                     </imageView>
@@ -61,23 +65,10 @@
                             </menu>
                         </popUpButtonCell>
                     </popUpButton>
-                    <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="108">
-                        <rect key="frame" x="395" y="125" width="250" height="26"/>
-                        <popUpButtonCell key="cell" type="push" title="Create an alias of the glossary" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="112" id="109">
-                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="menu"/>
-                            <menu key="menu" title="OtherViews" id="110">
-                                <items>
-                                    <menuItem title="Create an alias of the glossary" state="on" id="112"/>
-                                    <menuItem title="Move the glossary" id="111"/>
-                                </items>
-                            </menu>
-                        </popUpButtonCell>
-                    </popUpButton>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="54">
                         <rect key="frame" x="428" y="13" width="110" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="98" id="Kgf-h2-SWK"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="98" id="j15-40-i8j"/>
                         </constraints>
                         <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="97">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -93,7 +84,7 @@ Gw
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="52">
                         <rect key="frame" x="538" y="13" width="110" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="98" id="duL-5i-gfH"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="98" id="UnH-Dd-dtw"/>
                         </constraints>
                         <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="96">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -106,31 +97,45 @@ DQ
                             <action selector="ok:" target="-2" id="66"/>
                         </connections>
                     </button>
+                    <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="108">
+                        <rect key="frame" x="395" y="125" width="250" height="26"/>
+                        <popUpButtonCell key="cell" type="push" title="Create an alias of the glossary" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="112" id="109">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="menu"/>
+                            <menu key="menu" title="OtherViews" id="110">
+                                <items>
+                                    <menuItem title="Create an alias of the glossary" state="on" id="112"/>
+                                    <menuItem title="Move the glossary" id="111"/>
+                                </items>
+                            </menu>
+                        </popUpButtonCell>
+                    </popUpButton>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="100" firstAttribute="top" secondItem="108" secondAttribute="top" id="0Qq-QX-0Zk"/>
-                    <constraint firstItem="52" firstAttribute="leading" secondItem="54" secondAttribute="trailing" constant="12" symbolic="YES" id="1jn-eX-AKS"/>
-                    <constraint firstItem="100" firstAttribute="leading" secondItem="25" secondAttribute="trailing" constant="8" symbolic="YES" id="2Sd-0M-og1"/>
-                    <constraint firstItem="25" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="20" symbolic="YES" id="3CO-g3-w1c"/>
-                    <constraint firstItem="42" firstAttribute="top" secondItem="114" secondAttribute="bottom" constant="8" symbolic="YES" id="5gs-cZ-u0y"/>
-                    <constraint firstItem="42" firstAttribute="leading" secondItem="114" secondAttribute="leading" id="6m3-XM-2wh"/>
-                    <constraint firstItem="54" firstAttribute="bottom" secondItem="100" secondAttribute="bottom" id="86c-8N-cEU"/>
-                    <constraint firstItem="100" firstAttribute="centerY" secondItem="42" secondAttribute="centerY" id="8h2-Ni-WiI"/>
-                    <constraint firstItem="114" firstAttribute="leading" secondItem="108" secondAttribute="leading" id="I2O-Y4-wtD"/>
-                    <constraint firstItem="52" firstAttribute="baseline" secondItem="54" secondAttribute="baseline" id="UDv-SQ-gpH"/>
-                    <constraint firstItem="54" firstAttribute="leading" secondItem="100" secondAttribute="trailing" constant="54" id="dqE-YA-LyD"/>
-                    <constraint firstItem="114" firstAttribute="trailing" secondItem="108" secondAttribute="trailing" id="eSH-W8-wtY"/>
-                    <constraint firstAttribute="bottom" secondItem="25" secondAttribute="bottom" constant="87" id="h0z-pV-Qks"/>
-                    <constraint firstItem="114" firstAttribute="trailing" secondItem="42" secondAttribute="trailing" id="kaV-Li-Us5"/>
-                    <constraint firstItem="114" firstAttribute="top" secondItem="108" secondAttribute="bottom" constant="8" symbolic="YES" id="ls8-rR-AA6"/>
-                    <constraint firstAttribute="bottom" secondItem="100" secondAttribute="bottom" constant="20" symbolic="YES" id="mTm-sX-2cH"/>
-                    <constraint firstAttribute="trailing" secondItem="108" secondAttribute="trailing" constant="20" symbolic="YES" id="uC7-7N-siL"/>
-                    <constraint firstItem="108" firstAttribute="leading" secondItem="100" secondAttribute="trailing" constant="17" id="uU6-mC-Vba"/>
-                    <constraint firstItem="25" firstAttribute="top" secondItem="100" secondAttribute="top" id="xGZ-1f-2z2"/>
-                    <constraint firstItem="52" firstAttribute="trailing" secondItem="42" secondAttribute="trailing" id="yfw-yF-BKS"/>
+                    <constraint firstItem="114" firstAttribute="top" secondItem="108" secondAttribute="bottom" constant="8" id="1Kh-tG-Jgf"/>
+                    <constraint firstAttribute="bottom" secondItem="100" secondAttribute="bottom" constant="20" id="1S8-sS-hbc"/>
+                    <constraint firstItem="114" firstAttribute="top" secondItem="108" secondAttribute="bottom" constant="8" id="95a-SN-w42"/>
+                    <constraint firstItem="52" firstAttribute="leading" secondItem="54" secondAttribute="trailing" constant="12" id="A8A-9w-vQ6"/>
+                    <constraint firstItem="100" firstAttribute="leading" secondItem="25" secondAttribute="trailing" constant="8" symbolic="YES" id="Cbf-zA-Z7s"/>
+                    <constraint firstItem="25" firstAttribute="top" secondItem="6" secondAttribute="top" constant="20" id="Ez0-G4-PUL"/>
+                    <constraint firstItem="42" firstAttribute="leading" secondItem="108" secondAttribute="leading" id="Odr-9p-Oax"/>
+                    <constraint firstAttribute="trailing" secondItem="114" secondAttribute="trailing" constant="20" id="Ryd-YR-Zmc"/>
+                    <constraint firstItem="42" firstAttribute="top" secondItem="114" secondAttribute="bottom" constant="8" id="Ttb-xf-Cyc"/>
+                    <constraint firstItem="114" firstAttribute="leading" secondItem="108" secondAttribute="leading" id="USg-ec-scs"/>
+                    <constraint firstItem="52" firstAttribute="leading" secondItem="54" secondAttribute="trailing" constant="12" id="bpH-Xj-taU"/>
+                    <constraint firstItem="42" firstAttribute="top" secondItem="114" secondAttribute="bottom" constant="8" id="eJX-Cv-ZBB"/>
+                    <constraint firstItem="108" firstAttribute="top" secondItem="6" secondAttribute="top" constant="20" id="fDS-ei-YbC"/>
+                    <constraint firstAttribute="trailing" secondItem="52" secondAttribute="trailing" constant="20" id="fDk-LS-NKB"/>
+                    <constraint firstAttribute="bottom" secondItem="52" secondAttribute="bottom" constant="20" id="fXo-gW-eI8"/>
+                    <constraint firstAttribute="trailing" secondItem="42" secondAttribute="trailing" constant="20" id="lgf-Jf-W4I"/>
+                    <constraint firstAttribute="trailing" secondItem="108" secondAttribute="trailing" constant="20" id="m9E-mv-ld1"/>
+                    <constraint firstAttribute="bottom" secondItem="54" secondAttribute="bottom" constant="20" id="pH6-Gj-VJa"/>
+                    <constraint firstItem="108" firstAttribute="leading" secondItem="100" secondAttribute="trailing" constant="15" id="qFs-87-vin"/>
+                    <constraint firstItem="100" firstAttribute="top" secondItem="25" secondAttribute="top" id="ydh-gC-YAq"/>
+                    <constraint firstItem="25" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="20" id="zm1-fK-xe1"/>
                 </constraints>
             </view>
-            <point key="canvasLocation" x="495" y="656.5"/>
+            <point key="canvasLocation" x="115" y="605.5"/>
         </window>
     </objects>
     <resources>

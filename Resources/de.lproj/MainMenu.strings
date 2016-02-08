@@ -456,7 +456,7 @@
 "2102.title" = "Bitte spenden Sie …";
 
 /* Class = "NSMenuItem"; title = "Generate Glossaries with All Languages"; ObjectID = "VQP-eR-tjC"; */
-"VQP-eR-tjC.title" = "Generate Glossaries with All Languages";
+"VQP-eR-tjC.title" = "Glossare von allen Sprachen erzeugen";
 
 /* Class = "NSMenuItem"; title = "Generate Glossary with Current Language"; ObjectID = "cme-B7-7ha"; */
-"cme-B7-7ha.title" = "Generate Glossary with Current Language";
+"cme-B7-7ha.title" = "Glossar von aktueller Sprache erzeugen";

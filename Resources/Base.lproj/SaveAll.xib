@@ -111,7 +111,7 @@
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8">
                         <rect key="frame" x="500" y="12" width="150" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="138" id="rfQ-cb-FD2"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="138" id="rfQ-cb-FD2"/>
                         </constraints>
                         <buttonCell key="cell" type="push" title="Reload All" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="48">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -127,7 +127,7 @@ DQ
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="14">
                         <rect key="frame" x="390" y="12" width="110" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="98" id="nwq-83-SOW"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="98" id="nwq-83-SOW"/>
                         </constraints>
                         <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="50">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -143,7 +143,7 @@ Gw
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="11">
                         <rect key="frame" x="14" y="12" width="150" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="138" id="gaN-Nf-Eki"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="138" id="gaN-Nf-Eki"/>
                         </constraints>
                         <buttonCell key="cell" type="push" title="Don't Reload" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="49">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -193,6 +193,7 @@ Gw
                     <constraint firstItem="11" firstAttribute="baseline" secondItem="14" secondAttribute="baseline" id="zOj-l8-McA"/>
                 </constraints>
             </view>
+            <point key="canvasLocation" x="261" y="337"/>
         </window>
         <arrayController objectClassName="FileController" clearsFilterPredicateOnInsertion="NO" id="22" userLabel="Controller">
             <declaredKeys>

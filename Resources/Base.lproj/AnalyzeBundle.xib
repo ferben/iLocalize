@@ -26,7 +26,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <outlineView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" columnReordering="NO" autosaveColumns="NO" rowHeight="20" indentationPerLevel="14" autoresizesOutlineColumn="YES" outlineTableColumn="7" id="5">
-                                <rect key="frame" x="0.0" y="0.0" width="658" height="20"/>
+                                <rect key="frame" x="0.0" y="0.0" width="658" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="0.0"/>
                                 <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -63,11 +63,11 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
-                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="11">
-                    <rect key="frame" x="345" y="18" width="175" height="25"/>
+                <button verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="11">
+                    <rect key="frame" x="320" y="18" width="200" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="23" id="eSE-GN-uiZ"/>
-                        <constraint firstAttribute="width" constant="175" id="tcf-IH-pgR"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="tcf-IH-pgR"/>
                     </constraints>
                     <buttonCell key="cell" type="smallSquare" title="Copy To Clipboard" bezelStyle="smallSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="12">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -80,7 +80,7 @@
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="13">
                     <rect key="frame" x="528" y="18" width="152" height="25"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="152" id="m7W-ju-0hC"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="152" id="m7W-ju-0hC"/>
                     </constraints>
                     <buttonCell key="cell" type="smallSquare" title="Reveal in Finder" bezelStyle="smallSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="14">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -106,13 +106,16 @@
                 <constraint firstItem="13" firstAttribute="trailing" secondItem="2" secondAttribute="trailing" id="B2I-MO-J6D"/>
                 <constraint firstAttribute="bottom" secondItem="11" secondAttribute="bottom" constant="19" id="DJL-At-Qfr"/>
                 <constraint firstItem="11" firstAttribute="baseline" secondItem="13" secondAttribute="baseline" id="GlR-H9-RgW"/>
+                <constraint firstItem="13" firstAttribute="leading" secondItem="11" secondAttribute="trailing" constant="8" id="Hdl-zZ-45W"/>
                 <constraint firstItem="13" firstAttribute="leading" secondItem="11" secondAttribute="trailing" constant="8" symbolic="YES" id="S0w-pK-oQM"/>
                 <constraint firstItem="2" firstAttribute="top" secondItem="23" secondAttribute="bottom" constant="8" symbolic="YES" id="Vj6-lF-wA7"/>
                 <constraint firstAttribute="trailing" secondItem="2" secondAttribute="trailing" constant="20" symbolic="YES" id="Y4h-aJ-ULF"/>
                 <constraint firstItem="2" firstAttribute="centerX" secondItem="23" secondAttribute="centerX" id="ewa-Is-7VG"/>
                 <constraint firstItem="23" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="19" id="g0S-We-UhL"/>
+                <constraint firstAttribute="trailing" secondItem="13" secondAttribute="trailing" constant="20" id="ras-dx-3pY"/>
                 <constraint firstItem="23" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" symbolic="YES" id="uo8-dF-21A"/>
             </constraints>
+            <point key="canvasLocation" x="247" y="339"/>
         </customView>
     </objects>
 </document>

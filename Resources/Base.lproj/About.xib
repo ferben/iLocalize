@@ -88,23 +88,10 @@
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </box>
-                    <button focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5">
-                        <rect key="frame" x="309" y="19" width="140" height="19"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="140" id="CMw-55-up5"/>
-                        </constraints>
-                        <buttonCell key="cell" type="roundRect" title="License Agreement" bezelStyle="roundedRect" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="6">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="cellTitle"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="showLicenseAgreement:" target="-2" id="20"/>
-                        </connections>
-                    </button>
                     <button focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3">
                         <rect key="frame" x="508" y="19" width="140" height="19"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="140" id="W2b-Ya-Js7"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="W2b-Ya-Js7"/>
                         </constraints>
                         <buttonCell key="cell" type="roundRect" title="Acknowledgments" bezelStyle="roundedRect" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="4">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -114,16 +101,29 @@
                             <action selector="showAcknowledgment:" target="-2" id="19"/>
                         </connections>
                     </button>
+                    <button focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5">
+                        <rect key="frame" x="360" y="19" width="140" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="CMw-55-up5"/>
+                        </constraints>
+                        <buttonCell key="cell" type="roundRect" title="License Agreement" bezelStyle="roundedRect" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="6">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="cellTitle"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showLicenseAgreement:" target="-2" id="20"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="5" secondAttribute="bottom" constant="20" symbolic="YES" id="5Qm-kz-4em"/>
                     <constraint firstItem="5" firstAttribute="top" secondItem="9" secondAttribute="bottom" constant="15" id="81G-oY-TXt"/>
-                    <constraint firstItem="3" firstAttribute="leading" secondItem="5" secondAttribute="trailing" constant="59" id="8jC-Ed-LX5"/>
                     <constraint firstItem="5" firstAttribute="baseline" secondItem="3" secondAttribute="baseline" id="9lJ-Jl-ZUF"/>
                     <constraint firstAttribute="trailing" secondItem="3" secondAttribute="trailing" constant="20" symbolic="YES" id="TaR-zt-nrp"/>
                     <constraint firstItem="9" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="-1" id="djD-5l-5x7"/>
                     <constraint firstItem="9" firstAttribute="top" secondItem="2" secondAttribute="top" constant="-1" id="heg-YQ-vrA"/>
                     <constraint firstItem="9" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="n0e-tJ-aZg"/>
+                    <constraint firstItem="3" firstAttribute="leading" secondItem="5" secondAttribute="trailing" constant="8" symbolic="YES" id="rRh-tN-Acd"/>
                 </constraints>
             </view>
         </window>
