@@ -22,5 +22,8 @@
 #   TL  Jan:    debugging for OS X 10.11
 #   fd  Feb 04: - using Base Internationalization (Base I18n)
 #               - all localized stuff re-added
+#   fd  Feb 09: - using a new versioning method for CFBundleVersion:
+#                  Get the current number of GIT commits in the Console with
+#                    $ git rev-list HEAD | wc -l
 #
 # --------------------------------------------------------------------------------
