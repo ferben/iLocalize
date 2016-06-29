@@ -71,11 +71,15 @@
 
 - (void)prepareAssistantWindow
 {
-	if(!self.driver.isAssistant) return;
+	if (!self.driver.isAssistant)
+        return;
 	
-	if(assistantInPlace) return;
+	if (assistantInPlace)
+        return;
+    
 	assistantInPlace = YES;
 	
+/*
 	NSImage *assistantImage = [self assistantImage];
 	NSSize assistantImageSize = [assistantImage size];
 	
@@ -100,6 +104,7 @@
 	NSPoint cancelOrigin = cancelButton.frame.origin;
 	cancelOrigin.x += offsetWidth - cancelOrigin.x;
 	[cancelButton setFrameOrigin:cancelOrigin];
+*/
 }
 
 - (void)prepareWindowLayout
