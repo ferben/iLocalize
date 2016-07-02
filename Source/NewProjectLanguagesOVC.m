@@ -109,9 +109,13 @@
 {
 	// Obtention de toutes les langues disponibles
     NSMutableArray *languages = [NSMutableArray array];
-    for(NSString *file in [self.settings.source relativeSourceFiles]) {
+    
+    for (NSString *file in [self.settings.source relativeSourceFiles])
+    {
         NSString *language = [[LanguageTool languageOfFile:file] isoLanguage];
-        if(language.length > 0 && ![languages containsObject:language]) {
+        
+        if (language.length > 0 && ![languages containsObject:language])
+        {
             [languages addObject:language];
         }
     }
@@ -131,13 +135,26 @@
 	// Build the list of language items.
 	[languageItems removeAllObjects];
 	
-	for(NSString *language in languages) {
+    BOOL usingBaseI18n = FALSE;
+
+    for (NSString *language in languages)
+    {
 		NewLanguageItem *item = [NewLanguageItem itemWithLanguage:language];
-		if([language isEqualCaseInsensitiveToString:@"English"] || [language isEqualCaseInsensitiveToString:@"en"]
-		   || [languages count] == 1) {
-			[item setIsBaseLanguage:YES];
-		}		
-		
+        
+        if ([language isEqualCaseInsensitiveToString:@"Base"])
+        {
+            [item setIsBaseLanguage:YES];
+            usingBaseI18n = YES;
+        }
+        
+        else if (    [language isEqualCaseInsensitiveToString:@"en"]
+                  || [language isEqualCaseInsensitiveToString:@"English"]
+                  || [languages count] == 1)
+        {
+            if (usingBaseI18n == NO)
+                [item setIsBaseLanguage:YES];
+        }		
+        
 		[item setDisplay:[language displayLanguageName]];
 		
 		// Ajoute le descripteur de langue
@@ -145,16 +162,19 @@
 	}
 	
 	// Sort the languages by display name
-	NSSortDescriptor *languageDescriptor = [[NSSortDescriptor alloc] initWithKey:@"display"
-												 ascending:YES];
+	NSSortDescriptor *languageDescriptor = [[NSSortDescriptor alloc] initWithKey:@"display" ascending:YES];
 	[languageItems sortUsingDescriptors:@[languageDescriptor]];
 	 	
 	// Build the base language popup
 	[mBaseLanguagePopUp removeAllItems];
-	[languageItems enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    
+	[languageItems enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop)
+    {
 		NewLanguageItem *item = obj;
 		[mBaseLanguagePopUp addItemWithTitle:[item display]];
-		if([item isBaseLanguage]) {
+        
+		if ([item isBaseLanguage])
+        {
 			[mBaseLanguagePopUp selectItemWithTitle:[item display]];
 		}
 	}];	
