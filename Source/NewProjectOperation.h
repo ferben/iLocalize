@@ -22,7 +22,7 @@
  to create a project without having to create the
  project window and showing it.
  */
-- (void)prepareProjectModel:(ProjectModel*)model;
+- (void)prepareProjectModel:(ProjectModel *)model;
 - (void)createProject;
 
 @end
