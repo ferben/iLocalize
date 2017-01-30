@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="GlossaryManagerWC">
@@ -15,7 +16,6 @@
                 <outlet property="mPathMenu" destination="151" id="251"/>
                 <outlet property="mPathOutlineView" destination="114" id="218"/>
                 <outlet property="mSplitViewThumbView" destination="146" id="202"/>
-                <outlet property="search" destination="279" id="283"/>
                 <outlet property="searchField" destination="279" id="282"/>
                 <outlet property="window" destination="109" id="149"/>
             </connections>
@@ -46,7 +46,7 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <outlineView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowHeight="20" indentationPerLevel="14" autoresizesOutlineColumn="YES" outlineTableColumn="116" id="114">
-                                                    <rect key="frame" x="0.0" y="0.0" width="186" height="20"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="186" height="327"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <size key="intercellSpacing" width="3" height="0.0"/>
                                                     <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -97,7 +97,7 @@
                                             <font key="font" metaFont="menu"/>
                                             <menu key="menu" title="OtherViews" id="142">
                                                 <items>
-                                                    <menuItem state="on" image="action" hidden="YES" id="143"/>
+                                                    <menuItem state="on" image="NSActionTemplate" hidden="YES" id="143"/>
                                                     <menuItem title="Item 2" id="144"/>
                                                     <menuItem title="Item 3" id="145"/>
                                                 </items>
@@ -211,13 +211,12 @@
                                                     </connections>
                                                 </outlineView>
                                             </subviews>
-                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </clipView>
                                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="222">
                                             <rect key="frame" x="-100" y="-100" width="445" height="15"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
-                                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="221">
+                                        <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="221">
                                             <rect key="frame" x="447" y="23" width="15" height="305"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
@@ -240,7 +239,7 @@
                                             <font key="font" metaFont="menu"/>
                                             <menu key="menu" title="OtherViews" id="135">
                                                 <items>
-                                                    <menuItem state="on" image="action" hidden="YES" id="138"/>
+                                                    <menuItem state="on" image="NSActionTemplate" hidden="YES" id="138"/>
                                                     <menuItem title="Item 2" id="137"/>
                                                     <menuItem title="Item 3" id="136"/>
                                                 </items>
@@ -391,6 +390,5 @@
     </objects>
     <resources>
         <image name="NSActionTemplate" width="14" height="14"/>
-        <image name="action" width="18" height="10"/>
     </resources>
 </document>

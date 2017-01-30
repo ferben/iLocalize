@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="ProjectDetailsController">
@@ -17,11 +18,12 @@
             <rect key="frame" x="0.0" y="0.0" width="171" height="80"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <matrix verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="50">
+                <matrix verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="50">
                     <rect key="frame" x="26" y="20" width="100" height="26"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     <size key="cellSize" width="25" height="26"/>
-                    <buttonCell key="prototype" type="square" bezelStyle="shadowlessSquare" image="0C38D4AF-FEFB-405E-990C-1B3792453F82" imagePosition="only" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="51" customClass="AZGlassButtonCell">
+                    <buttonCell key="prototype" type="square" bezelStyle="shadowlessSquare" image="16E67B9B-8E56-473C-9845-F7FEA0D9214C" imagePosition="only" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="51" customClass="AZGlassButtonCell">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -66,14 +68,10 @@
                     </connections>
                 </matrix>
             </subviews>
-            <constraints>
-                <constraint firstAttribute="bottom" secondItem="50" secondAttribute="bottom" constant="20" symbolic="YES" id="0ol-q6-70r"/>
-                <constraint firstItem="50" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="26" id="2oO-9d-Vza"/>
-            </constraints>
         </customView>
     </objects>
     <resources>
-        <image name="0C38D4AF-FEFB-405E-990C-1B3792453F82" width="1" height="1">
+        <image name="16E67B9B-8E56-473C-9845-F7FEA0D9214C" width="1" height="1">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
