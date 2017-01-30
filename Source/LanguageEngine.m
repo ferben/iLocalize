@@ -26,11 +26,13 @@
 
 @implementation LanguageEngine
 
-- (void)ensureIgnoredFiles:(LanguageController*)lc
-{	
+- (void)ensureIgnoredFiles:(LanguageController *)lc
+{
 	NSEnumerator *enumerator = [[lc fileControllers] objectEnumerator];
 	FileController *fc;
-	while((fc = [enumerator nextObject])) {
+    
+	while (fc = [enumerator nextObject])
+    {
 		[fc setIgnore:[[fc baseFileController] ignore]];
 	}
 }
@@ -41,11 +43,17 @@
 	NSString *sourcePath = [[self projectModel] projectSourceFilePath];
 	NSDirectoryEnumerator *enumerator = [[NSFileManager defaultManager] enumeratorAtPath:sourcePath];
 	NSString *file;
-	while ((file = [enumerator nextObject])) {
+    
+	while (file = [enumerator nextObject])
+    {
 		file = [sourcePath stringByAppendingPathComponent:file];
-		if([[FileTool languageOfPath:file] isEquivalentToLanguage:baseLanguage] && [file isPathDirectory] && ![file isPathPackage]) {
+        
+		if ([[FileTool languageOfPath:file] isEquivalentToLanguage:baseLanguage] && [file isPathDirectory] && ![file isPathPackage])
+        {
 			NSArray *content = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:file error:nil];
-			if(content && [content count] == 0) {
+            
+			if (content && [content count] == 0)
+            {
 				// Empty folder				
 				NSString *translatedFile = [FileTool translatePath:file toLanguage:language keepLanguageFormat:YES];
 				[[self console] addLog:[NSString stringWithFormat:@"Copying empty folder \"%@\" to \"%@\"", file, translatedFile] class:[self class]];
@@ -114,7 +122,7 @@
 
 #pragma mark -
 
-- (void)renameLanguage:(NSString*)source toLanguage:(NSString*)target
+- (void)renameLanguage:(NSString *)source toLanguage:(NSString *)target
 {
 	[[self console] beginOperation:[NSString stringWithFormat:@"Rename language \"%@\" to \"%@\"", source, target] class:[self class]];
 
@@ -122,10 +130,14 @@
 	
 	NSEnumerator *enumerator = [[lc fileControllers] objectEnumerator];
 	FileController *fc;
-	while((fc = [enumerator nextObject])) {
+    
+	while (fc = [enumerator nextObject])
+    {
 		NSString *path = [fc relativeFilePath];
-		NSString *targetPath = [FileTool translatePath:path toLanguage:target];
-		if(![path isEqualToString:targetPath]) {
+        NSString *targetPath = [FileTool translatePath:path toLanguage:target];
+        
+		if (![path isEqualToString:targetPath])
+        {
 			NSString *base = [[self projectModel] projectSourceFilePath];
 			[[FileTool shared] copySourceFile:[base stringByAppendingPathComponent:path]
 							  toFile:[base stringByAppendingPathComponent:targetPath]

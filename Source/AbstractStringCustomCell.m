@@ -10,7 +10,7 @@
 
 @implementation AbstractStringCustomCell
 
-- (StringController*)stringController
+- (StringController *)stringController
 {
 	return [self representedObject];
 }

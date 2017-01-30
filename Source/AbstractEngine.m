@@ -24,19 +24,21 @@
 
 - (id)init
 {
-	if(self = [super init]) {
+	if (self = [super init])
+    {
 		mEngineProvider = NULL;
 	}
+    
 	return self;
 }
 
 
-- (void)setEngineProvider:(EngineProvider*)factory
+- (void)setEngineProvider:(EngineProvider *)factory
 {
 	mEngineProvider = factory;
 }
 
-- (EngineProvider*)engineProvider
+- (EngineProvider *)engineProvider
 {
 	return mEngineProvider;
 }
@@ -46,32 +48,32 @@
 	return [[self engineProvider] projectProvider];
 }
 
-- (ProjectController*)projectController
+- (ProjectController *)projectController
 {
 	return [[self projectProvider] projectController];
 }
 
-- (ProjectModel*)projectModel
+- (ProjectModel *)projectModel
 {
 	return [[self projectProvider] projectModel];
 }
 
-- (ProjectPrefs*)projectPrefs
+- (ProjectPrefs *)projectPrefs
 {
 	return [[self projectProvider] projectPrefs];
 }
 
-- (Console*)console
+- (Console *)console
 {
 	return [[self projectProvider] console];
 }
 
-- (OperationWC*)operation
+- (OperationWC *)operation
 {
 	return [[self projectProvider] operation];
 }
 
-- (FMEngine*)fileModuleEngineForFile:(NSString*)file
+- (FMEngine *)fileModuleEngineForFile:(NSString *)file
 {
 	return [[self projectProvider] fileModuleEngineForFile:file];
 }
@@ -80,27 +82,36 @@
 
 - (void)notifyProjectDidBecomeDirty
 {
-	if(![[NSThread currentThread] isMainThread]) {
+	if (![[NSThread currentThread] isMainThread])
+    {
 		[self performSelectorOnMainThread:@selector(notifyProjectDidBecomeDirty) withObject:nil waitUntilDone:NO];
-	} else {
+	}
+    else
+    {
 		[[self projectProvider] setDirty];			
 	}
 }
 
 - (void)notifyAllFileControllersDidChange
 {
-	if(![[NSThread currentThread] isMainThread]) {
+	if (![[NSThread currentThread] isMainThread])
+    {
 		[self performSelectorOnMainThread:@selector(notifyAllFileControllersDidChange) withObject:nil waitUntilDone:NO];
-	} else {
+	}
+    else
+    {
 		[[[[self projectProvider] projectController] languageControllers] makeObjectsPerformSelector:@selector(fileControllersDidChange)];	
 	}
 }
 
 - (void)notifyProjectSelectLanguage:(NSString*)language
 {
-	if(![[NSThread currentThread] isMainThread]) {
+	if (![[NSThread currentThread] isMainThread])
+    {
 		[self performSelectorOnMainThread:@selector(notifyProjectSelectLanguage:) withObject:language waitUntilDone:NO];
-	} else {
+	}
+    else
+    {
 		LanguageController *lc = [[self projectController] languageControllerForLanguage:language];
 		[[[[self projectProvider] projectWC] languagesController] setSelectedObjects:@[lc]];
 	}

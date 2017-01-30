@@ -226,38 +226,57 @@ typedef id(^DispatchBlock)();
 	}
 }
 
-- (void)finishExecutionWithResults:(id)results operation:(Operation*)operation operationCallback:(OperationCompletionCallbackBlock)operationCallback completion:(OperationDispatcherCompletionBlock)completion {
+- (void)finishExecutionWithResults:(id)results
+                         operation:(Operation *)operation
+                 operationCallback:(OperationCompletionCallbackBlock)operationCallback
+                        completion:(OperationDispatcherCompletionBlock)completion
+{
 	// Called in main thread
 	
 	BOOL cancelled = [[self operationWC] shouldCancel];
-	if(cancelled) {
+    
+	if (cancelled)
+    {
 		[[self console] addLog:@"Operation cancelled by user" class:[self class]];		
 	}
 	
 	Console *console = [self console];
-	if([console hasWarningsOrErrors]) {
-		if(operation) {
+    
+	if ([console hasWarningsOrErrors])
+    {
+		if (operation)
+        {
 			// Report the errors at the operation driver WC level instead of displaying an ugly modal dialog
-			for(ConsoleItem *item in [console allItemsSinceMark]) {
+			for (ConsoleItem *item in [console allItemsSinceMark])
+            {
 				NSMutableDictionary *dic = [NSMutableDictionary dictionary];
 				dic[NSLocalizedDescriptionKey] = [item description];
 				
 				NSError *error = [NSError errorWithDomain:ILErrorDomain code:100 userInfo:dic];
-				if([item isWarning]) {
+                
+				if ([item isWarning])
+                {
 					[operation notifyWarning:error];
-				} else {
+				}
+                else
+                {
 					[operation notifyError:error];
 				}
 			}
-		} else {
+		}
+        else
+        {
 			[OperationReportWC showConsoleIfWarningsOrErrorsSinceLastMark:[self console]];		
 		}		
 	}
 	
-	if(operationCallback) {
-		int state = operation.cancel?OPERATION_CANCEL:OPERATION_NEXT;
+	if (operationCallback)
+    {
+		int state = operation.cancel ? OPERATION_CANCEL : OPERATION_NEXT;
 		operationCallback(state);
-	} else if (completion) {
+	}
+    else if (completion)
+    {
         completion(results);
 	}
 }

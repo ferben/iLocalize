@@ -121,13 +121,15 @@
 
 // Re-enable concurrent operations in 4.1 when we have enough time to test it.
 //#define CONCURRENT_OP_OPTIONS ([[NSUserDefaults standardUserDefaults] boolForKey:@"nonConcurrentOp"]?0:NSEnumerationConcurrent)
-#define CONCURRENT_OP_OPTIONS 0
+#define CONCURRENT_OP_OPTIONS YES
 
-static inline BOOL IsTestRunning() {
+static inline BOOL IsTestRunning()
+{
     return (NSClassFromString(@"XCTestCase") != nil);
 }
 
-enum {
+enum
+{
     ILStringIgnoreCase = 1,
     ILStringIgnoreControlCharacters = 2
 };

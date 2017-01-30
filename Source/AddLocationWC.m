@@ -13,9 +13,11 @@
 
 - (id)init
 {
-	if(self = [super initWithWindowNibName:@"AddLocation"]) {
+	if (self = [super initWithWindowNibName:@"AddLocation"])
+    {
 	}
-	return self;
+	
+    return self;
 }
 
 - (void)willShow
@@ -24,7 +26,7 @@
 	[mPopUpLocation addItemsWithTitles:[[[self projectProvider] projectController] smartPaths]];
 }
 
-- (NSString*)location
+- (NSString *)location
 {
 	return [mPopUpLocation titleOfSelectedItem];
 }

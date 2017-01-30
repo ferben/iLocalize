@@ -10,11 +10,11 @@
 
 @interface AbstractTests : XCTestCase
 
-- (NSString*)ibtoolPath;
-- (NSString*)pathForResource:(NSString*)resource;
-- (BOOL)contentOfFile:(NSString*)first equalsFile:(NSString*)second;
+- (NSString *)ibtoolPath;
+- (NSString *)pathForResource:(NSString*)resource;
+- (BOOL)contentOfFile:(NSString *)first equalsFile:(NSString *)second;
 
-- (void)printExecutionTimeWithName:(NSString*)name block:(dispatch_block_t)block;
+- (void)printExecutionTimeWithName:(NSString *)name block:(dispatch_block_t)block;
 - (NSTimeInterval)measureExecutionTime:(dispatch_block_t)block;
 
 @end

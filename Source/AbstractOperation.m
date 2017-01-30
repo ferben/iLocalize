@@ -28,11 +28,13 @@
 
 - (id)initWithProjectProvider:(id<ProjectProvider>)provider
 {
-	if(self = [super init]) {
+	if (self = [super init])
+    {
 		mProjectProvider = provider;
 		mAbstractWCInstances = [[NSMutableDictionary alloc] init];
 		[self awake];
 	}
+    
 	return self;
 }
 
@@ -47,52 +49,52 @@
 	return mProjectProvider;
 }
 
-- (ProjectController*)projectController
+- (ProjectController *)projectController
 {
 	return [[self projectProvider] projectController];
 }
 
-- (ProjectWC*)projectWC
+- (ProjectWC *)projectWC
 {
 	return [[self projectProvider] projectWC];
 }
 
-- (ProjectFilesController*)projectFiles
+- (ProjectFilesController *)projectFiles
 {
 	return [[self projectWC] projectFiles];
 }
 
-- (ProjectExplorerController*)projectExplorer
+- (ProjectExplorerController *)projectExplorer
 {
 	return [[self projectWC] projectExplorer];
 }
 
-- (NSWindow*)projectWindow
+- (NSWindow *)projectWindow
 {
 	return [[self projectWC] window];
 }
 
-- (NSPopUpButton*)languagesPopUp
+- (NSPopUpButton *)languagesPopUp
 {
 	return [[self projectWC] languagesPopUp];
 }
 
-- (NSArrayController*)languagesController
+- (NSArrayController *)languagesController
 {
 	return [[self projectWC] languagesController];
 }
 
-- (NSArrayController*)filesController
+- (NSArrayController *)filesController
 {
 	return [[self projectWC] filesController];
 }
 
-- (LanguageController*)selectedLanguageController
+- (LanguageController *)selectedLanguageController
 {
 	return [[self projectWC] selectedLanguageController];
 }
 
-- (AbstractWC*)instanceOfAbstractWC:(Class)c
+- (AbstractWC *)instanceOfAbstractWC:(Class)c
 {
 	AbstractWC *wc = [[c alloc] init];
 	[wc setParentWindow:[self projectWindow]];
@@ -100,32 +102,35 @@
 	return wc;
 }
 
-- (AbstractWC*)instanceOfAbstractWCName:(NSString*)className
+- (AbstractWC *)instanceOfAbstractWCName:(NSString *)className
 {
 	id instance = mAbstractWCInstances[className];
-	if(instance == NULL) {
+    
+	if (instance == NULL)
+    {
 		instance = [self instanceOfAbstractWC:NSClassFromString(className)];
 		mAbstractWCInstances[className] = instance;
 	}
+    
 	return instance;
 }
 
-- (OperationWC*)operation
+- (OperationWC *)operation
 {
 	return [[self projectProvider] operation];
 }
 
-- (OperationDispatcher*)operationDispatcher
+- (OperationDispatcher *)operationDispatcher
 {
 	return [[self projectProvider] operationDispatcher];
 }
 
-- (EngineProvider*)engineProvider
+- (EngineProvider *)engineProvider
 {
 	return [[self projectProvider] engineProvider];
 }
 
-- (Console*)console
+- (Console *)console
 {
 	return [[self projectProvider] console];
 }
@@ -137,7 +142,8 @@
 
 - (void)close
 {
-	if(self.didCloseCallback) {
+	if (self.didCloseCallback)
+    {
 		self.didCloseCallback();
 	}
 }

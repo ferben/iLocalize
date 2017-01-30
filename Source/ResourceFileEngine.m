@@ -15,26 +15,30 @@
 
 @implementation ResourceFileEngine
 
-+ (ResourceFileEngine*)engine
++ (ResourceFileEngine *)engine
 {
 	return [[ResourceFileEngine alloc] init];
 }
 
 - (id)init
 {
-	if((self = [super init])) {
+	if (self = [super init])
+    {
 		mFiles = [[NSMutableArray alloc] init];
 	}
+    
 	return self;
 }
 
 
-- (void)parseFiles:(NSArray*)files
+- (void)parseFiles:(NSArray *)files
 {
 	[mFiles removeAllObjects];
 
-    for(NSString *file in files) {
-		if([file isValidResourceFile]) {
+    for (NSString *file in files)
+    {
+		if ([file isValidResourceFile])
+        {
 			[mFiles addObject:file];			
 		}
     }
@@ -45,18 +49,23 @@
     NSMutableArray *files = [NSMutableArray array];
 	NSDirectoryEnumerator *enumerator = [[NSFileManager defaultManager] enumeratorAtPath:path];
 	NSString *relativeFilePath;
-	while((relativeFilePath = [enumerator nextObject])) {
+    
+	while (relativeFilePath = [enumerator nextObject])
+    {
 		NSString *filePath = [path stringByAppendingPathComponent:relativeFilePath];
 
-		if([FileTool isPathSVNFolder:filePath]) {
+		if ([FileTool isPathSVNFolder:filePath])
+        {
 			[enumerator skipDescendents];
 		}
 		
-		if([[FileTool shared] isFileAtomic:filePath]) {
+		if ([[FileTool shared] isFileAtomic:filePath])
+        {
 			[enumerator skipDescendents];
 		}
 		
-		if([[relativeFilePath lastPathComponent] isEqualToString:@"Resources Disabled"]) {
+		if ([[relativeFilePath lastPathComponent] isEqualToString:@"Resources Disabled"])
+        {
 			[enumerator skipDescendents];			
 		}
 
@@ -71,16 +80,19 @@
 	return mFiles;
 }
 
-- (NSArray*)filesOfLanguage:(NSString*)language
+- (NSArray *)filesOfLanguage:(NSString *)language
 {
 	NSMutableArray *array = [NSMutableArray array];
 	
-	@autoreleasepool {
-
-		NSString *file;
-		for(file in mFiles) {
+	@autoreleasepool
+    {
+        NSString *file;
+        
+		for (file in mFiles)
+        {
 			NSString *fileLanguage = [LanguageTool languageOfFile:file];
-			if([fileLanguage isEquivalentToLanguage:language])
+            
+			if ([fileLanguage isEquivalentToLanguage:language])
 				[array addObject:file];
 		}
 		
@@ -88,29 +100,42 @@
 	}
 }
 
-- (void)removeFilesOfLanguages:(NSArray*)languages inPath:(NSString*)path
+- (void)removeFilesOfLanguages:(NSArray *)languages inPath:(NSString *)path
 {
-	@autoreleasepool {
+	@autoreleasepool
+    {
 		NSDirectoryEnumerator *enumerator = [[NSFileManager defaultManager] enumeratorAtPath:path];
 		NSString *relativeFilePath;
-		while(relativeFilePath = [enumerator nextObject]) {
-			@autoreleasepool {
+        
+		while (relativeFilePath = [enumerator nextObject])
+        {
+			@autoreleasepool
+            {
 				NSString *file = [path stringByAppendingPathComponent:relativeFilePath];
-				if([relativeFilePath isPathLanguageProject]) {
+                
+				if ([relativeFilePath isPathLanguageProject])
+                {
 					NSString *language = [LanguageTool languageOfFile:relativeFilePath];
 					NSEnumerator *le = [[LanguageTool equivalentLanguagesWithLanguage:language] objectEnumerator];
 					NSString *l;
-					while(l = [le nextObject]) {
-						if([languages containsObject:l]) {
+                    
+					while (l = [le nextObject])
+                    {
+						if ([languages containsObject:l])
+                        {
 							NSString *languageFolder = [path stringByAppendingPathComponent:relativeFilePath];
 							[[self console] addLog:[NSString stringWithFormat:@"Delete folder \"%@\"", languageFolder] class:[self class]];
 							[languageFolder removePathFromDisk];
 						}				
 					}
-					if([file isPathDirectory]) {
+                    
+					if ([file isPathDirectory])
+                    {
 						[enumerator skipDescendents];				
 					}
-				} else if([[FileTool shared] isFileAtomic:file]) {
+				}
+                else if ([[FileTool shared] isFileAtomic:file])
+                {
 					[enumerator skipDescendents];			
 				}
 			}

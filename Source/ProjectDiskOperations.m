@@ -31,10 +31,15 @@
 	 return [NSArchiver archivedDataWithRootObject:dic];	*/	
 }
 
-+ (NSDictionary*)readProjectUsingData:(NSData*)data
++ (NSDictionary*)readProjectUsingData:(NSData *)data
 {
 	NSDictionary *dic;
-	@try {
+    
+    if ([data length] == 0)
+        return dic;
+    
+	@try
+    {
 		// Try to open as a keyed archive (since version 3.6)
 		NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
 		
@@ -42,27 +47,36 @@
 		tempDic[PROJECT_VERSION_KEY] = [unarchiver decodeObjectForKey:PROJECT_VERSION_KEY];
 		tempDic[PROJECT_OS_VERSION] = [unarchiver decodeObjectForKey:PROJECT_OS_VERSION];
 		id nibEngineType = [unarchiver decodeObjectForKey:PROJECT_NIBENGINE_TYPE];
-		if(nibEngineType) {
+        
+		if (nibEngineType)
+        {
 			tempDic[PROJECT_NIBENGINE_TYPE] = nibEngineType;			
 		}
+        
 		tempDic[PROJECT_MODEL_KEY] = [NSUnarchiver unarchiveObjectWithData:[unarchiver decodeObjectForKey:PROJECT_MODEL_KEY]];
-		@try {
+        
+		@try
+        {
 			// Since version 4
 			tempDic[PROJECT_PREFS_KEY] = [NSKeyedUnarchiver unarchiveObjectWithData:[unarchiver decodeObjectForKey:PROJECT_PREFS_KEY]];
 		}
-		@catch (NSException * e) {
+		@catch (NSException * e)
+        {
 			// Before version 4
 			tempDic[PROJECT_PREFS_KEY] = [NSUnarchiver unarchiveObjectWithData:[unarchiver decodeObjectForKey:PROJECT_PREFS_KEY]];				
 		}
+        
 		[unarchiver finishDecoding];
         
 		dic = tempDic;
 	}
-	@catch (NSException *e) {
+	@catch (NSException *e)
+    {
 		// Invalid archive. Perhaps an old one. Try the standard unarchiver.
 		dic = [NSUnarchiver unarchiveObjectWithData:data];
-	}	
-	return dic;
+	}
+
+    return dic;
 }
 
 + (ProjectModel*)readModelFromPath:(NSString*)path

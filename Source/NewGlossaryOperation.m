@@ -110,11 +110,13 @@ typedef NS_ENUM(NSInteger, NewGlossaryOptions) {
     }
 }
 
-- (BOOL)glossaryAlreadyExists:(NSString*)language {
+- (BOOL)glossaryAlreadyExists:(NSString*)language
+{
     return [[self glossaryPathWithTargetLanguage:language] isPathExisting];
 }
 
-- (BOOL)glossaryCreateNewWithLanguage:(NSString*)language error:(NSError**)error {
+- (BOOL)glossaryCreateNewWithLanguage:(NSString*)language error:(NSError **)error
+{
     GlossaryCreator *creator = [GlossaryCreator creator];
 	[creator setProvider:self.projectProvider];
 	[creator setSource:SOURCE_LANGUAGE];

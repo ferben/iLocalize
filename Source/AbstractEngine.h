@@ -14,21 +14,22 @@
 
 @class FMEngine;
 
-@interface AbstractEngine : NSObject {
+@interface AbstractEngine : NSObject
+{
 	EngineProvider	*mEngineProvider;
 }
 
-- (void)setEngineProvider:(EngineProvider*)factory;
-- (EngineProvider*)engineProvider;
+- (void)setEngineProvider:(EngineProvider *)factory;
+- (EngineProvider *)engineProvider;
 - (id<ProjectProvider>)projectProvider;
 
-- (ProjectController*)projectController;
-- (ProjectModel*)projectModel;
-- (ProjectPrefs*)projectPrefs;
-- (Console*)console;
-- (OperationWC*)operation;
+- (ProjectController *)projectController;
+- (ProjectModel *)projectModel;
+- (ProjectPrefs *)projectPrefs;
+- (Console *)console;
+- (OperationWC *)operation;
 
-- (FMEngine*)fileModuleEngineForFile:(NSString*)file;
+- (FMEngine *)fileModuleEngineForFile:(NSString *)file;
 
 - (void)notifyProjectDidBecomeDirty;
 - (void)notifyAllFileControllersDidChange;

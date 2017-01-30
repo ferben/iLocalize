@@ -10,7 +10,10 @@
 
 @class StringController;
 
-@interface AbstractStringCustomCell : TableViewCustomCell {
+@interface AbstractStringCustomCell : TableViewCustomCell
+{
 }
-- (StringController*)stringController;
+
+- (StringController *)stringController;
+
 @end

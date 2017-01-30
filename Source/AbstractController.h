@@ -12,7 +12,8 @@
 @class Console;
 @class DirtyContext;
 
-@interface AbstractController : NSObject {
+@interface AbstractController : NSObject
+{
     BOOL    mOperationRunning;
 	
 	// temporary - cache only
@@ -65,15 +66,15 @@
 - (void)dirtyTriggered;
 
 - (id<ProjectProvider>)projectProvider;
-- (ProjectModel*)projectModel;
+- (ProjectModel *)projectModel;
 
-- (NSUndoManager*)undoManager;
+- (NSUndoManager *)undoManager;
 
-- (NSString*)absoluteProjectPathFromRelativePath:(NSString*)relativePath;
-- (NSString*)relativePathFromAbsoluteProjectPath:(NSString*)absolutePath;
-- (NSArray*)relativePathsFromAbsoluteProjectPaths:(NSArray*)absolutePaths;
+- (NSString *)absoluteProjectPathFromRelativePath:(NSString *)relativePath;
+- (NSString *)relativePathFromAbsoluteProjectPath:(NSString *)absolutePath;
+- (NSArray *)relativePathsFromAbsoluteProjectPaths:(NSArray *)absolutePaths;
 
-- (NSSet*)labelIndexes;
+- (NSSet *)labelIndexes;
 - (void)updateLabelIndexes;
 - (long)labels;
 

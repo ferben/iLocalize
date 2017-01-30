@@ -23,10 +23,11 @@
 
 @class Console;
 
-@interface AbstractOperation : NSObject {
-	id <ProjectProvider>		mProjectProvider;
-	NSMutableDictionary			*mAbstractWCInstances;
-	CallbackBlock				didCloseCallback;
+@interface AbstractOperation : NSObject
+{
+    id <ProjectProvider>   mProjectProvider;
+	NSMutableDictionary   *mAbstractWCInstances;
+	CallbackBlock          didCloseCallback;
 }
 
 @property (copy) CallbackBlock didCloseCallback;
@@ -34,24 +35,24 @@
 + (id)operationWithProjectProvider:(id<ProjectProvider>)provider;
 
 - (id<ProjectProvider>)projectProvider;
-- (ProjectController*)projectController;
-- (ProjectWC*)projectWC;
-- (ProjectFilesController*)projectFiles;
-- (ProjectExplorerController*)projectExplorer;
+- (ProjectController *)projectController;
+- (ProjectWC *)projectWC;
+- (ProjectFilesController *)projectFiles;
+- (ProjectExplorerController *)projectExplorer;
 - (NSWindow*)projectWindow;
 
-- (NSPopUpButton*)languagesPopUp;
+- (NSPopUpButton *)languagesPopUp;
 
-- (NSArrayController*)languagesController;
-- (NSArrayController*)filesController;
+- (NSArrayController *)languagesController;
+- (NSArrayController *)filesController;
 
-- (LanguageController*)selectedLanguageController;
+- (LanguageController *)selectedLanguageController;
 
-- (AbstractWC*)instanceOfAbstractWCName:(NSString*)className;
-- (OperationWC*)operation;
-- (OperationDispatcher*)operationDispatcher;
-- (EngineProvider*)engineProvider;
-- (Console*)console;
+- (AbstractWC *)instanceOfAbstractWCName:(NSString *)className;
+- (OperationWC *)operation;
+- (OperationDispatcher *)operationDispatcher;
+- (EngineProvider *)engineProvider;
+- (Console *)console;
 
 - (void)refreshListOfFiles;
 

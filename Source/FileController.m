@@ -496,14 +496,14 @@
 	return (mBaseFileModel == mFileModel);
 }
 
-- (FileController*)baseFileController
+- (FileController *)baseFileController
 {
 	return [[self parent] correspondingBaseFileControllerForFileController:self];
 }
 
-- (NSString*)baseLanguage
+- (NSString *)baseLanguage
 {
-	return [[self parent] baseLanguage];
+    return [[self parent] baseLanguage];
 }
 
 - (NSString*)language

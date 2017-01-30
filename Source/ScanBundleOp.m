@@ -17,9 +17,11 @@
 
 - (id)init
 {
-	if((self = [super init])) {
+	if (self = [super init])
+    {
 	}
-	return self;
+	
+    return self;
 }
 
 
@@ -28,7 +30,9 @@
     // Retrieve all the files in the source path
     NSMutableArray *files = [NSMutableArray array];
 	FileOperationManager *fm = [FileOperationManager manager];
-	[fm enumerateDirectory:self.path files:files errorHandler:^(NSURL *url, NSError *error) {
+    
+	[fm enumerateDirectory:self.path files:files errorHandler:^(NSURL *url, NSError *error)
+    {
 		[self notifyError:error];
 		return NO;
 	}];
@@ -37,7 +41,8 @@
 	self.node = [AZPathNode rootNodeWithPath:self.path];
     [self.node beginModifications];
     
-	for(NSString *file in files) {
+	for (NSString *file in files)
+    {
         [self.node addRelativePath:file];
 	}	
 

@@ -25,14 +25,17 @@
 
 - (void)setRenameLanguage:(BOOL)flag
 {
-	if(flag) {
+	if (flag)
+    {
 		[mOKButton setTitle:NSLocalizedString(@"Rename", nil)];		
-	} else {
+	}
+    else
+    {
 		[mOKButton setTitle:NSLocalizedString(@"Add", nil)];
 	}
 }
 
-- (NSString*)language
+- (NSString *)language
 {
 	return [mNameField stringValue];
 }
@@ -49,11 +52,14 @@
 
 - (IBAction)add:(id)sender
 {
-	if([self alreadyExists]) {
+	if ([self alreadyExists])
+    {
 		NSRunAlertPanel(NSLocalizedString(@"Cannot add this language", nil),
 						NSLocalizedString(@"This language already exists in the project.", nil),
 						NSLocalizedString(@"OK", nil), NULL, NULL);		
-	} else {
+	}
+    else
+    {
 		[self hideWithCode:1];	
 	}
 }

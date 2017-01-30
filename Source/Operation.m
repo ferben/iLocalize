@@ -18,7 +18,7 @@
 @synthesize cancel;
 @synthesize mainOperation;
 
-+ (Operation*)operation
++ (Operation *)operation
 {
     return [[self alloc] init];
 }
@@ -26,59 +26,68 @@
 - (id) init
 {
 	self = [super init];
-	if (self != nil) {
+    
+	if (self != nil)
+    {
 		errors = [[NSMutableArray alloc] init];
 		warnings = [[NSMutableArray alloc] init];
 		alerts = [[NSMutableArray alloc] init];
 	}
+    
 	return self;
 }
 
 
 #pragma mark Properties
 
-- (ProjectController*)projectController
+- (ProjectController *)projectController
 {
 	return [self.projectProvider projectController];
 }
 
-- (ProjectModel*)projectModel
+- (ProjectModel *)projectModel
 {
 	return [self.projectProvider projectModel];
 }
 
-- (EngineProvider*)engineProvider
+- (EngineProvider *)engineProvider
 {
 	return [self.projectProvider engineProvider];
 }
 
-- (Console*)console
+- (Console *)console
 {
 	return [self.projectProvider console];
 }
 
 #pragma mark Operations
 
-- (void)setSubOperation:(Operation*)subop
+- (void)setSubOperation:(Operation *)subop
 {
 	subop.projectProvider = self.projectProvider;	
 	subop.mainOperation = self;
 }
 
-- (void)setOperationName:(NSString*)name
+- (void)setOperationName:(NSString *)name
 {
-	if(self.mainOperation) {
+	if (self.mainOperation)
+    {
 		[self.mainOperation setOperationName:name];
-	} else {
+	}
+    else
+    {
 		[self.operationProgressVC setOperationName:name];
 	}
 }
 
 - (void)setOperationProgress:(float)value
 {
-	if(self.mainOperation) {
+	if (self.mainOperation)
+    {
 		[self.mainOperation setOperationProgress:value];
-	} else {
+	}
+    else
+    {
 		[self.operationProgressVC setOperationProgress:value];
 	}
 }
@@ -109,15 +118,15 @@
 
 - (void)notifyProjectDidBecomeDirty
 {
-	[((NSObject*)self.projectProvider) performSelectorOnMainThread:@selector(setDirty) withObject:nil waitUntilDone:YES];
+	[((NSObject *)self.projectProvider) performSelectorOnMainThread:@selector(setDirty) withObject:nil waitUntilDone:YES];
 }
 
-- (NSArray*)errors
+- (NSArray *)errors
 {
 	return errors;
 }
 
-- (void)notifyException:(NSException*)exception
+- (void)notifyException:(NSException *)exception
 {
 	NSMutableDictionary *dic = [NSMutableDictionary dictionary];
 	dic[NSLocalizedDescriptionKey] = [exception reason];
@@ -126,31 +135,33 @@
 	[self notifyError:error];
 }
 
-- (void)notifyError:(NSError*)error
+- (void)notifyError:(NSError *)error
 {
-	if(error) {		
+	if (error)
+    {
 		[errors addObject:error];
 	}
 }
 
-- (NSArray*)warnings
+- (NSArray *)warnings
 {
 	return warnings;
 }
 
-- (void)notifyWarning:(NSError*)error
+- (void)notifyWarning:(NSError *)error
 {
-	if(error) {		
+	if (error)
+    {
 		[warnings addObject:error];
 	}
 }
 
-- (NSArray*)alerts
+- (NSArray *)alerts
 {
     return alerts;
 }
 
-- (void)reportInformativeAlertWithTitle:(NSString*)title message:(NSString*)message
+- (void)reportInformativeAlertWithTitle:(NSString *)title message:(NSString *)message
 {
     [alerts addObject:@{@"title": title, @"message": message}];
 }

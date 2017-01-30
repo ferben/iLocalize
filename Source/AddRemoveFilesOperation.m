@@ -77,19 +77,22 @@
 
 - (void)performAddFiles
 {
-	if([[self addLocationWC] hideCode] != 1) {
+	if ([[self addLocationWC] hideCode] != 1)
+    {
 		[self close];
 		return;
 	}	
 	
-	if([mFiles count] > 1) {
+	if ([mFiles count] > 1)
+    {
 		[[self operation] setTitle:NSLocalizedString(@"Adding Files…", nil)];
 		[[self operation] setCancellable:NO];
 		[[self operation] setIndeterminate:YES];
 		[[self operation] showAsSheet];		
 	}
 	
-    [[self operationDispatcher] addFiles:mFiles language:mLanguage toSmartPath:[[self addLocationWC] location] completion:^(id results) {
+    [[self operationDispatcher] addFiles:mFiles language:mLanguage toSmartPath:[[self addLocationWC] location] completion:^(id results)
+    {
         [[[[self projectProvider] projectWC] languagesController] rearrangeObjects];
         
         [[self operation] hide];
@@ -114,12 +117,14 @@
 
 - (void)removeFileControllersSheetDidDismiss:(NSWindow *)sheet returnCode:(int)returnCode contextInfo:(void *)contextInfo
 {
-	if(returnCode != NSAlertDefaultReturn) {
+	if (returnCode != NSAlertDefaultReturn)
+    {
 		[self close];
 		return;
 	}
 	
-	if([mFileControllers count] > 1) {
+	if ([mFileControllers count] > 1)
+    {
 		[[self operation] setTitle:NSLocalizedString(@"Removing Files…", nil)];
 		[[self operation] setCancellable:NO];
 		[[self operation] setIndeterminate:YES];
@@ -128,7 +133,8 @@
 	
 	[[[self projectProvider] projectWC] deselectAll];
 	
-    [[self operationDispatcher] removeFileControllers:mFileControllers completion:^(id results) {
+    [[self operationDispatcher] removeFileControllers:mFileControllers completion:^(id results)
+    {
         [[[[self projectProvider] projectWC] languagesController] rearrangeObjects];
         
         [[self operation] hide];

@@ -19,7 +19,8 @@
 @class CleanEngine;
 @class CheckEngine;
 
-@interface EngineProvider : NSObject {
+@interface EngineProvider : NSObject
+{
 	ResourceFileEngine		*mResourceFileEngine;
 		
 	ModelEngine				*mModelEngine;

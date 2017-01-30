@@ -27,12 +27,12 @@
 }
 
 
-- (NSString*)projectFolderPath
+- (NSString *)projectFolderPath
 {
 	return [self.projectFolder stringByAppendingPathComponent:self.name];
 }
 
-- (NSString*)projectFilePath
+- (NSString *)projectFilePath
 {
 	return [[self projectFolderPath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.%@", self.name, PROJET_EXT]];
 }

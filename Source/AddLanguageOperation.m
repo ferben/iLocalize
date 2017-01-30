@@ -45,8 +45,9 @@
 	[[self operation] setIndeterminate:NO];
 	[[self operation] showAsSheet];
 	
-    [[self operationDispatcher] addLanguage:[[self addLanguageWC] language] completion:^(id results) {
-        [[[self projectProvider] projectWC] selectLanguageAtIndex:[[[[self projectProvider] projectController] languages] count]-1];
+    [[self operationDispatcher] addLanguage:[[self addLanguageWC] language] completion:^(id results)
+    {
+        [[[self projectProvider] projectWC] selectLanguageAtIndex:[[[[self projectProvider] projectController] languages] count] - 1];
         
         [[self operation] hide];
         [self close];
@@ -64,7 +65,8 @@
 
 - (void)performAddCustomLanguage
 {
-	if([[self addCustomLanguageWC] hideCode] != 1) {
+	if ([[self addCustomLanguageWC] hideCode] != 1)
+    {
 		[self close];
 		return;
 	}
@@ -74,7 +76,8 @@
 	[[self operation] setIndeterminate:NO];
 	[[self operation] showAsSheet];
 	
-    [[self operationDispatcher] addLanguage:[[self addCustomLanguageWC] language] completion:^(id results) {
+    [[self operationDispatcher] addLanguage:[[self addCustomLanguageWC] language] completion:^(id results)
+    {
         [[[[self projectProvider] projectWC] languagesController] rearrangeObjects];
         
         [[self operation] hide];
@@ -93,7 +96,8 @@
 
 - (void)performRenameLanguage
 {
-	if([[self addLanguageWC] hideCode] != 1) {
+	if ([[self addLanguageWC] hideCode] != 1)
+    {
 		[self close];
 		return;
 	}
@@ -103,7 +107,8 @@
 	[[self operation] setIndeterminate:NO];
 	[[self operation] showAsSheet];
 	
-    [[self operationDispatcher] renameLanguage:[[self selectedLanguageController] language] toLanguage:[[self addLanguageWC] language] completion:^(id results) {
+    [[self operationDispatcher] renameLanguage:[[self selectedLanguageController] language] toLanguage:[[self addLanguageWC] language] completion:^(id results)
+    {
         [[self operation] hide];
         [self close];
     }];
@@ -120,7 +125,8 @@
 
 - (void)performRenameCustomLanguage
 {
-	if([[self addCustomLanguageWC] hideCode] != 1) {
+	if ([[self addCustomLanguageWC] hideCode] != 1)
+    {
 		[self close];
 		return;
 	}
@@ -130,7 +136,8 @@
 	[[self operation] setIndeterminate:NO];
 	[[self operation] showAsSheet];
 	
-    [[self operationDispatcher] renameLanguage:[[self selectedLanguageController] language] toLanguage:[[self addCustomLanguageWC] language] completion:^(id results) {
+    [[self operationDispatcher] renameLanguage:[[self selectedLanguageController] language] toLanguage:[[self addCustomLanguageWC] language] completion:^(id results)
+    {
         [[self operation] hide];
         [self close];
     }];

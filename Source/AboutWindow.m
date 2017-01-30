@@ -35,7 +35,7 @@ static AboutWindow *aboutWindow = nil;
     // [licenseTextButton setHidden:YES];
 }
 
-- (NSBundle*)helpBundle
+- (NSBundle *)helpBundle
 {
     NSBundle *mainBundle = [NSBundle mainBundle];
     return [NSBundle bundleWithPath:[[mainBundle bundlePath] stringByAppendingPathComponent:@"Contents/Resources/iLocalize.help"]];

@@ -10,10 +10,13 @@
 
 @class ProjectWC;
 
-@interface AbstractTableCornerView : TableCornerViewCustom {
-	IBOutlet NSMenu				*mMenu;
-	ProjectWC *mMainWindowController;
+@interface AbstractTableCornerView : TableCornerViewCustom
+{
+	IBOutlet NSMenu  *mMenu;
+	ProjectWC        *mMainWindowController;
 }
-- (id)initWithFrame:(NSRect)r controller:(ProjectWC*)controller;
+
+- (id)initWithFrame:(NSRect)r controller:(ProjectWC *)controller;
 - (IBAction)menuAction:(id)sender;
+
 @end

@@ -83,71 +83,83 @@
 	return [[self parent] projectProvider];
 }
 
-- (ProjectModel*)projectModel
+- (ProjectModel *)projectModel
 {
 	return [[self projectProvider] projectModel];	
 }
 
-- (NSUndoManager*)undoManager
+- (NSUndoManager *)undoManager
 {
 	return [[self projectProvider] projectUndoManager];
 }
 
 // Used by custom cell to fetch the controller object
 
-- (NSValue*)selfValue
+- (NSValue *)selfValue
 {
 	return [NSValue valueWithNonretainedObject:self];
 }
 
 #pragma mark -
 
-- (NSString*)absoluteProjectPathFromRelativePath:(NSString*)relativePath
+- (NSString *)absoluteProjectPathFromRelativePath:(NSString *)relativePath
 {
-	if(relativePath) {
+	if (relativePath)
+    {
 		return [[self projectModel] absoluteProjectPathFromRelativePath:relativePath];		
-	} else {
+	}
+    else
+    {
 		return nil;
 	}
 }
 
-- (NSString*)relativePathFromAbsoluteProjectPath:(NSString*)absolutePath
+- (NSString *)relativePathFromAbsoluteProjectPath:(NSString *)absolutePath
 {
 	return [[self projectModel] relativePathFromAbsoluteProjectPath:absolutePath];
 }
 
-- (NSArray*)relativePathsFromAbsoluteProjectPaths:(NSArray*)absolutePaths
+- (NSArray *)relativePathsFromAbsoluteProjectPaths:(NSArray *)absolutePaths
 {
 	NSMutableArray *array = [NSMutableArray array];
 	
 	NSString *absolutePath;
-	for(absolutePath in absolutePaths) {
+    
+	for (absolutePath in absolutePaths)
+    {
 		NSString *relativePath = [self relativePathFromAbsoluteProjectPath:absolutePath];
-		if(relativePath)
+        
+		if (relativePath)
 			[array addObject:relativePath];
 	}
+    
 	return array;
 }
 
 #pragma mark -
 #pragma mark Labels
 
-- (NSSet*)labelIndexes
+- (NSSet *)labelIndexes
 {
 	return nil;
 }
 
 - (void)updateLabelIndexes
 {
-	if(mLabelString == nil) {
+	if (mLabelString == nil)
+    {
 		mLabelString = [[NSMutableString alloc] init];
 	}
 	
 	mLabelIndexes = 0;
-	for(NSNumber *index in [self labelIndexes]) {
+    
+	for (NSNumber *index in [self labelIndexes])
+    {
 		mLabelIndexes = mLabelIndexes | (1 << [index intValue]);
 		NSString *identifier = [[[[self projectProvider] projectWC] projectLabels] labelIdentifierForIndex:[index intValue]];
-		if(identifier) {
+        
+		if (identifier)
+        {
 			[mLabelString appendString:identifier];
 		}
 	}		
@@ -155,9 +167,11 @@
 
 - (long)labels
 {
-	if(mLabelIndexes == -1) {
+	if (mLabelIndexes == -1)
+    {
 		[self updateLabelIndexes];		
 	}
+    
 	return mLabelIndexes;
 }
 

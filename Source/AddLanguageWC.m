@@ -16,17 +16,19 @@
 
 - (id)init
 {
-	if(self = [super initWithWindowNibName:@"AddLanguage"]) {
+	if (self = [super initWithWindowNibName:@"AddLanguage"])
+    {
 		languageMenuProvider = [[LanguageMenuProvider alloc] init];
 		languageMenuProvider.actionTarget = self;
 		languageMenuProvider.delegate = self;
 		mCheckForExistingLanguage = YES;
 	}
+    
 	return self;
 }
 
 
-- (BOOL)alreadyExistsLanguage:(NSString*)language
+- (BOOL)alreadyExistsLanguage:(NSString *)language
 {
 	return [[[self projectProvider] projectController] isLanguageExisting:language];
 }
@@ -34,14 +36,21 @@
 - (void)updateOKButton
 {
 	BOOL enabled = NO;
-	if(mCheckForExistingLanguage) {
+    
+	if (mCheckForExistingLanguage)
+    {
 		NSString *language = [languageMenuProvider selectedLanguage];
-		if(language) {
+        
+		if (language)
+        {
 			enabled = ![self alreadyExistsLanguage:language];
-		}		
-	} else {
+		}
+	}
+    else
+    {
 		enabled = YES;
 	}
+    
 	[mOKButton setEnabled:enabled];
 }
 
@@ -49,9 +58,13 @@
 {
 	languageMenuProvider.popupButton = mLocalePopUpButton;
 	[languageMenuProvider refreshPopUp];
-	if(self.initialLanguageSelection != nil) {
+    
+	if (self.initialLanguageSelection != nil)
+    {
 		[languageMenuProvider selectLanguage:initialLanguageSelection];
-	} else {
+	}
+    else
+    {
 		[languageMenuProvider selectCurrentLanguage];
 	}
 
@@ -67,27 +80,33 @@
 - (void)setRenameLanguage:(BOOL)flag
 {
 	[mFillTranslationButton setHidden:flag];
-	if(flag) {
+    
+	if (flag)
+    {
 		[mOKButton setTitle:NSLocalizedString(@"Rename", @"Language")];		
-	} else {
+	}
+    else
+    {
 		[mOKButton setTitle:NSLocalizedString(@"Add", @"Language")];
 	}
 }
 
-- (BOOL)enableMenuItemForLanguage:(NSString*)language
+- (BOOL)enableMenuItemForLanguage:(NSString *)language
 {
-	if(!mCheckForExistingLanguage) {
+	if (!mCheckForExistingLanguage)
+    {
 		return YES;
 	}
 	
-	if(!language) {
+	if (!language)
+    {
 		return YES;
 	}
 	
 	return ![self alreadyExistsLanguage:language];
 }
 
-- (NSString*)language
+- (NSString *)language
 {
 	return [languageMenuProvider selectedLanguage];
 }
@@ -106,11 +125,14 @@
 {
 	[[NSUserDefaults standardUserDefaults] setBool:[mFillTranslationButton state] == NSOnState forKey:@"autoFillTranslationWithBaseForNewLanguage"];
 
-	if(mCheckForExistingLanguage && [self alreadyExistsLanguage:[self language]]) {
+	if (mCheckForExistingLanguage && [self alreadyExistsLanguage:[self language]])
+    {
 		NSRunAlertPanel(NSLocalizedString(@"Cannot add this language", @"Language"),
 						NSLocalizedString(@"This language already exists in the project.", @"Language"),
 						NSLocalizedString(@"OK", @"Language"), NULL, NULL);		
-	} else {		
+	}
+    else
+    {
 		[self hideWithCode:1];	
 	}
 }
