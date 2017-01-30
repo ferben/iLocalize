@@ -42,18 +42,22 @@
 
 - (void)render:(id)item level:(int)level
 {
-	if(item == nil)
+	if (item == nil)
 		item = [self console];
-	else {
-		if([item isOperation])
+	else
+    {
+		if ([item isOperation])
 			[mOperationArray addObject:item];
+        
 		[mLogItemArray addObject:item];
 		mLevelForItemDictionary[[NSValue valueWithNonretainedObject:item]] = @(level);
 	}
 
-	int i;
-	for(i=0; i<[item numberOfItemsOfType:mDisplayType]; i++) {
-		[self render:[item itemOfType:mDisplayType atIndex:i] level:level+1];
+	NSUInteger i;
+    
+	for (i = 0; i < [item numberOfItemsOfType:mDisplayType]; i++)
+    {
+		[self render:[item itemOfType:mDisplayType atIndex:i] level:level + 1];
 	}
 }
 
@@ -204,16 +208,19 @@
 - (void)tableViewSelectionDidChange:(NSNotification *)notif
 {
 	NSTableView *tv = [notif object];
-	if(tv == mOperationTableView) {
-		int row = [mLogItemArray indexOfObject:mOperationArray[[mOperationTableView selectedRow]]];
-		if(row >= 0) {
-			[mLogTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:NO];
-			[mLogTableView scrollRowToVisible:row];
-		}
-	} else {
+    
+	if (tv == mOperationTableView)
+    {
+		NSUInteger row = [mLogItemArray indexOfObject:mOperationArray[[mOperationTableView selectedRow]]];
+        
+		[mLogTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:NO];
+        [mLogTableView scrollRowToVisible:row];
+	}
+    else
+    {
 		NSString *string = NULL;
 		
-		if([mLogTableView selectedRow] >= 0)
+		if ([mLogTableView selectedRow] >= 0)
 			string = [mLogItemArray[[mLogTableView selectedRow]] fullDescription];
 		
 		[mDetailedTextView setString:string?string:@""];		
@@ -222,27 +229,33 @@
 
 #pragma mark Source
 
-- (int)outlineView:(NSOutlineView *)ov numberOfChildrenOfItem:(id)item
+- (NSUInteger)outlineView:(NSOutlineView *)ov numberOfChildrenOfItem:(id)item
 {
-	if(item == NULL) {
+	if (item == NULL)
+    {
 		return [[self console] numberOfItemsOfType:mDisplayType];
-	} else {
+	}
+    else
+    {
 		return [item numberOfItemsOfType:mDisplayType];
 	}
 }
 
-- (id)outlineView:(NSOutlineView *)ov child:(int)index ofItem:(id)item
+- (id)outlineView:(NSOutlineView *)ov child:(NSUInteger)index ofItem:(id)item
 {
-	if(item == NULL) {
+	if (item == NULL)
+    {
 		return [[self console] itemOfType:mDisplayType atIndex:index];
-	} else {
+	}
+    else
+    {
 		return [item itemOfType:mDisplayType atIndex:index];
 	}
 }
 
 - (BOOL)outlineView:(NSOutlineView *)ov isItemExpandable:(id)item
 {
-	return [item numberOfItemsOfType:mDisplayType] > 0;
+	return ([item numberOfItemsOfType:mDisplayType] > 0);
 }
 
 - (id)outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item

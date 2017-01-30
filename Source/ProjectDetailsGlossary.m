@@ -81,8 +81,9 @@
 {
 	[mGroupEngineManager setDelegate:nil];
 	[mGroupEngineManager stop];	
-	[[self view] removeFromSuperview];
-	[self setView:nil];
+    [[self view] removeFromSuperview];
+    [self removeFromParentViewController];
+    //	[self setView:nil];
 }
 
 - (NSView*)keyView

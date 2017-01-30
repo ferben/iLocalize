@@ -144,32 +144,32 @@
 	[mCurrentItemStack popObject];
 }
 
-- (int)numberOfItems
+- (NSUInteger)numberOfItems
 {
 	return [mRootItem numberOfItems];
 }
 
-- (ConsoleItem*)itemAtIndex:(int)index
+- (ConsoleItem *)itemAtIndex:(int)index
 {
 	return [mRootItem itemAtIndex:index];
 }
 
-- (int)numberOfItemsOfType:(int)type
+- (NSUInteger)numberOfItemsOfType:(NSInteger)type
 {
 	return [mRootItem numberOfItemsOfType:type];
 }
 
-- (ConsoleItem*)itemOfType:(int)type atIndex:(int)index
+- (ConsoleItem *)itemOfType:(NSInteger)type atIndex:(NSUInteger)index
 {
 	return [mRootItem itemOfType:type atIndex:index];
 }
 
-- (NSArray*)itemsOfType:(int)type range:(NSRange)r
+- (NSArray *)itemsOfType:(int)type range:(NSRange)r
 {
 	return [mRootItem itemsOfType:type range:r];
 }
 
-- (NSArray*)allItemsOfStrictType:(int)type range:(NSRange)r
+- (NSArray *)allItemsOfStrictType:(int)type range:(NSRange)r
 {
 	return [mRootItem allItemsOfStrictType:type range:r];
 }

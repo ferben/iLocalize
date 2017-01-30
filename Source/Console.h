@@ -19,15 +19,16 @@
 @class Stack;
 @class ConsoleItem;
 
-@interface Console : NSObject <NSCoding> {
-	ConsoleItem		*mRootItem;
-	Stack			*mCurrentItemStack;
+@interface Console : NSObject <NSCoding>
+{
+	ConsoleItem  *mRootItem;
+	Stack        *mCurrentItemStack;
 	
-	int				mDeleteOldDays;
-	int				mWarningsCount;
-	int				mErrorsCount;
+	int           mDeleteOldDays;
+	int           mWarningsCount;
+	int           mErrorsCount;
 	
-	int				mIndexMark;
+	int           mIndexMark;
 }
 
 - (void)removeAllItems;
@@ -36,20 +37,20 @@
 - (int)deleteOldDays;
 - (void)deleteItemOldDays;
 
-- (void)beginOperation:(NSString*)name class:(Class)class;
-- (void)addLog:(NSString*)log class:(Class)class;
-- (void)addWarning:(NSString*)warning description:(NSString*)description class:(Class)class;
-- (void)addError:(NSString*)error description:(NSString*)description class:(Class)class;
+- (void)beginOperation:(NSString *)name class:(Class)class;
+- (void)addLog:(NSString *)log class:(Class)class;
+- (void)addWarning:(NSString *)warning description:(NSString *)description class:(Class)class;
+- (void)addError:(NSString *)error description:(NSString *)description class:(Class)class;
 - (void)endOperation;
 
-- (int)numberOfItems;
-- (ConsoleItem*)itemAtIndex:(int)index;
+- (NSUInteger)numberOfItems;
+- (ConsoleItem *)itemAtIndex:(int)index;
 
-- (int)numberOfItemsOfType:(int)type;
-- (ConsoleItem*)itemOfType:(int)type atIndex:(int)index;
-- (NSArray*)itemsOfType:(int)type range:(NSRange)r;
-- (NSArray*)allItemsOfStrictType:(int)type range:(NSRange)r;
-- (void)deleteItem:(ConsoleItem*)item;
+- (NSUInteger)numberOfItemsOfType:(NSInteger)type;
+- (ConsoleItem *)itemOfType:(NSInteger)type atIndex:(NSUInteger)index;
+- (NSArray *)itemsOfType:(NSInteger)type range:(NSRange)r;
+- (NSArray *)allItemsOfStrictType:(NSInteger)type range:(NSRange)r;
+- (void)deleteItem:(ConsoleItem *)item;
 
 - (void)resetWarningsAndErrorsCount;
 - (int)numberOfWarnings;
@@ -58,9 +59,8 @@
 
 - (void)mark;
 - (int)indexMark;
-/**
- Returns an array of ConsoleItem since the last time the console was marker using [self mark].
- */
-- (NSArray*)allItemsSinceMark;
+
+// Returns an array of ConsoleItem since the last time the console was marker using [self mark].
+- (NSArray *)allItemsSinceMark;
 
 @end

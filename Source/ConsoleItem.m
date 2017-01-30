@@ -15,24 +15,31 @@ static NSDateFormatter *dateFormatter = nil;
 
 + (void)initialize
 {
-	if(self == [ConsoleItem class]) {
+	if (self == [ConsoleItem class])
+    {
 		[self setVersion:2];
 	}
 }
 
-+ (ConsoleItem*)itemWithTitle:(NSString*)title description:(NSString*)description class:(Class)class type:(long)bit
++ (ConsoleItem *)itemWithTitle:(NSString *)title
+                   description:(NSString *)description
+                         class:(Class)class
+                          type:(long)bit
 {
 	ConsoleItem *item = [[ConsoleItem alloc] init];
+    
 	[item setTitle:title];
 	[item setDescription:description];
 	[item setTypeBit:bit];
 	[item setClassName:NSStringFromClass(class)];
-	return item;
+	
+    return item;
 }
 
 - (id)init
 {
-	if(self = [super init]) {
+	if (self = [super init])
+    {
 		mDate = [NSDate date];
 		mTitle = NULL;
 		mDescription = NULL;
@@ -41,33 +48,40 @@ static NSDateFormatter *dateFormatter = nil;
 		
 		mItems = [[NSMutableArray alloc] init];		
 	}
-	return self;
+	
+    return self;
 }
 
 
-- (id)initWithCoder:(NSCoder*)coder
+- (id)initWithCoder:(NSCoder *)coder
 {
 	// Use the name of the class "hard-coded" instead of [self class] (to avoid subclass problem)
-	int version = [coder versionForClassName:@"ConsoleItem"];
+	NSInteger version = [coder versionForClassName:@"ConsoleItem"];
 	
-	if(self = [super init]) {
+	if (self = [super init])
+    {
 		mDate = [coder decodeObject];
-		if(version > 1)
+        
+		if (version > 1)
 			mTitle = [coder decodeObject];
 		else
 			mTitle = NULL;
+        
 		mDescription = [coder decodeObject];
 		mType = [[coder decodeObject] unsignedCharValue];
-		if(version > 0)
+		
+        if (version > 0)
 			mClassName = [coder decodeObject];
 		else
 			mClassName = NULL;
-		mItems = [coder decodeObject];
+		
+        mItems = [coder decodeObject];
 	}
+    
 	return self;
 }
 
-- (void)encodeWithCoder:(NSCoder*)coder
+- (void)encodeWithCoder:(NSCoder *)coder
 {
 	[coder encodeObject:mDate];
 	[coder encodeObject:mTitle];
@@ -77,43 +91,50 @@ static NSDateFormatter *dateFormatter = nil;
 	[coder encodeObject:mItems];
 }
 
-- (void)setTitle:(NSString*)title
+- (void)setTitle:(NSString *)title
 {
 	mTitle = title;
 }
 
-- (NSString*)title
+- (NSString *)title
 {
 	return mTitle;
 }
 
-- (void)setDescription:(NSString*)description
+- (void)setDescription:(NSString *)description
 {
 	mDescription = description;
 }
 
-- (NSString*)description
+- (NSString *)description
 {
 	return mDescription;
 }
 
-- (NSDate*)date
+- (NSDate *)date
 {
 	return mDate;
 }
 
-- (NSString*)dateDescription
+- (NSString *)dateDescription
 {
-	if(dateFormatter == NULL)
-		dateFormatter = [[NSDateFormatter alloc] initWithDateFormat:@"%m/%d/%Y %H:%M:%S" allowNaturalLanguage:NO];
+	if (dateFormatter == NULL)
+    {
+        dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"%m/%d/%Y %H:%M:%S"];
+    }
+    
 	return [dateFormatter stringForObjectValue:mDate];
 }
 
-- (NSString*)fullDescription
+- (NSString *)fullDescription
 {
-	if(mTitle && ![mTitle isEqualToString:mDescription]) {
+	if (mTitle && ![mTitle isEqualToString:mDescription])
+    {
 		return [NSString stringWithFormat:@"[%@] %@ : %@", [self dateDescription] , mTitle, mDescription];		
-	} else {
+	}
+    else
+    {
 		return [NSString stringWithFormat:@"[%@] %@", [self dateDescription] , mDescription];
 	}
 }
@@ -129,12 +150,12 @@ static NSDateFormatter *dateFormatter = nil;
 	return mType;
 }
 
-- (void)setClassName:(NSString*)className
+- (void)setClassName:(NSString *)className
 {
 	mClassName = className;
 }
 
-- (NSString*)className
+- (NSString *)className
 {
 	return mClassName;
 }
@@ -154,7 +175,7 @@ static NSDateFormatter *dateFormatter = nil;
 	return mType & (1 << CONSOLE_ERROR) || mType & (1 << CONSOLE_FATAL);
 }
 
-- (void)addItem:(ConsoleItem*)item
+- (void)addItem:(ConsoleItem *)item
 {
 	[mItems addObject:item]; 
 }
@@ -164,132 +185,160 @@ static NSDateFormatter *dateFormatter = nil;
 	[mItems removeAllObjects];
 }
 
-- (NSArray*)itemsOfType:(long)type items:(NSArray*)items
+- (NSArray *)itemsOfType:(long)type items:(NSArray *)items
 {
-	if(type == CONSOLE_ALL)
+	if (type == CONSOLE_ALL)
 		return items;
 	
-	BOOL showLog = type & (1 << CONSOLE_LOG);
+	BOOL showLog     = type & (1 << CONSOLE_LOG);
 	BOOL showWarning = type & (1 << CONSOLE_WARNING);
-	BOOL showError = type & (1 << CONSOLE_ERROR);
+	BOOL showError   = type & (1 << CONSOLE_ERROR);
 		
 	NSMutableArray *array = [NSMutableArray array];
 	ConsoleItem *item;
-	for(item in items) {
+    
+	for (item in items)
+    {
 		int itemType = [item type];
 		
 		BOOL add = NO;
-		if(showLog && (itemType & (1 << CONSOLE_LOG)))
+
+        if (showLog && (itemType & (1 << CONSOLE_LOG)))
 			add = YES;
 
-		if(showWarning && (itemType & (1 << CONSOLE_WARNING)))
+		if (showWarning && (itemType & (1 << CONSOLE_WARNING)))
 			add = YES;
 		
-		if(showError && ((itemType & (1 << CONSOLE_ERROR)) || (itemType & (1 << CONSOLE_FATAL))))
+		if (showError && (    (itemType & (1 << CONSOLE_ERROR))
+                           || (itemType & (1 << CONSOLE_FATAL))
+                         )
+           )
+        {
 			add = YES;
-
-		if((itemType & (1 << CONSOLE_OPERATION)) || add)
+        }
+        
+		if ((itemType & (1 << CONSOLE_OPERATION)) || add)
 			[array addObject:item];
 	}
+    
 	return array;
 }
 
-- (NSArray*)itemsOfType:(long)type
+- (NSArray *)itemsOfType:(long)type
 {
 	return [self itemsOfType:type items:mItems];
 }
 
-- (int)numberOfItems
+- (NSUInteger)numberOfItems
 {
 	return [mItems count];
 }
 
-- (ConsoleItem*)itemAtIndex:(int)index
+- (ConsoleItem *)itemAtIndex:(NSUInteger)index
 {
 	return mItems[index];
 }
 
-- (int)numberOfItemsOfType:(int)type
+- (NSUInteger)numberOfItemsOfType:(NSInteger)type
 {
 	return [[self itemsOfType:type] count];
 }
 
-- (ConsoleItem*)itemOfType:(int)type atIndex:(int)index
+- (ConsoleItem *)itemOfType:(NSInteger)type atIndex:(NSUInteger)index
 {
 	return [self itemsOfType:type][index];
 }
 
-- (NSArray*)itemsOfType:(int)type range:(NSRange)r
+- (NSArray *)itemsOfType:(int)type range:(NSRange)r
 {
 	return [self itemsOfType:type items:[mItems subarrayWithRange:r]];
 }
 
 - (BOOL)isItemOfStrictType:(int)type
 {
-	BOOL showLog = type & (1 << CONSOLE_LOG);
-	BOOL showWarning = type & (1 << CONSOLE_WARNING);
-	BOOL showError = type & (1 << CONSOLE_ERROR);
+	BOOL showLog       = type & (1 << CONSOLE_LOG);
+	BOOL showWarning   = type & (1 << CONSOLE_WARNING);
+	BOOL showError     = type & (1 << CONSOLE_ERROR);
 	BOOL showOperation = type & (1 << CONSOLE_OPERATION);
-	BOOL showAll = type == CONSOLE_ALL;
+	BOOL showAll       = type == CONSOLE_ALL;
 
 	int itemType = [self type];
 	
 	BOOL match = NO;
-	if(showLog && (itemType & (1 << CONSOLE_LOG)))
+    
+	if (showLog && (itemType & (1 << CONSOLE_LOG)))
 		match = YES;
 	
-	if(showWarning && (itemType & (1 << CONSOLE_WARNING)))
+	if (showWarning && (itemType & (1 << CONSOLE_WARNING)))
 		match = YES;
 	
-	if(showError && ((itemType & (1 << CONSOLE_ERROR)) || (itemType & (1 << CONSOLE_FATAL))))
+	if (showError && (    (itemType & (1 << CONSOLE_ERROR))
+                       || (itemType & (1 << CONSOLE_FATAL))
+                     )
+       )
+    {
 		match = YES;
-	
-	if(showOperation && (itemType & (1 << CONSOLE_OPERATION)))
+    }
+    
+	if (showOperation && (itemType & (1 << CONSOLE_OPERATION)))
 		match = YES;
 	
 	return showAll || match;
 }
 
-- (NSArray*)allItemsOfStrictType:(int)type
+- (NSArray *)allItemsOfStrictType:(int)type
 {
 	NSMutableArray *array = [NSMutableArray array];
 	ConsoleItem *item;
-	for(item in mItems) {
-		if([item isItemOfStrictType:type]) {
+    
+	for (item in mItems)
+    {
+		if ([item isItemOfStrictType:type])
+        {
 			[array addObject:item];
 		}
+        
 		[array addObjectsFromArray:[item allItemsOfStrictType:type]];
 	}
+    
 	return array;
 }
 
-- (NSArray*)allItemsOfStrictType:(int)type range:(NSRange)r
+- (NSArray *)allItemsOfStrictType:(int)type range:(NSRange)r
 {
 	NSMutableArray *array = [NSMutableArray array];
 	NSEnumerator *enumerator = [[mItems subarrayWithRange:r] objectEnumerator];
 	ConsoleItem *item;
-	while(item = [enumerator nextObject]) {
-		if([item isItemOfStrictType:type]) {
+    
+	while (item = [enumerator nextObject])
+    {
+		if ([item isItemOfStrictType:type])
+        {
 			[array addObject:item];
 		}
-		[array addObjectsFromArray:[item allItemsOfStrictType:type]];
+		
+        [array addObjectsFromArray:[item allItemsOfStrictType:type]];
 	}
+    
 	return array;
 }
 
-- (void)deleteItem:(ConsoleItem*)item
+- (void)deleteItem:(ConsoleItem *)item
 {
 	[mItems removeObject:item];
 }
 
-- (NSString*)textRepresentation
+- (NSString *)textRepresentation
 {
 	NSMutableString *string = [NSMutableString string];
-	if(![mDescription isEqualToString:CONSOLE_ROOT])
+    
+	if (![mDescription isEqualToString:CONSOLE_ROOT])
 		[string appendFormat:@"[%@] %@", [self className], [self fullDescription]];
 	
 	ConsoleItem *item;
-	for(item in mItems) {
+    
+	for (item in mItems)
+    {
 		[string appendFormat:@"\n%@", [item textRepresentation]];
 	}
 	

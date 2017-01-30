@@ -13,7 +13,7 @@
 
 @interface ConsoleWC : NSWindowController {
 	id <ProjectProvider>		mProjectProvider;
-	unsigned char				mDisplayType;
+	NSInteger                   mDisplayType;
 	
 	IBOutlet NSPopUpButton		*mShowTypeButton;
 	IBOutlet NSTextField		*mDeleteOldDays;
