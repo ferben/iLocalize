@@ -199,11 +199,11 @@
 	<key>CFBundleSignature</key>
 	<string>ILO4</string>
 	<key>CFBundleVersion</key>
-	<string>94</string>
+	<string>*WILL BE SET BY BUILD PHASE*</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.developer-tools</string>
 	<key>LSMinimumSystemVersion</key>
-	<string>10.8</string>
+	<string>10.11</string>
 	<key>NSAppleScriptEnabled</key>
 	<string>YES</string>
 	<key>NSHumanReadableCopyright</key>

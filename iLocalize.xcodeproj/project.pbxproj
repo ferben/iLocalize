@@ -4313,6 +4313,7 @@
 			buildPhases = (
 				A751E35E13045B19007635F2 /* GenScript */,
 				A70DFFD5183876D70020E7A8 /* Bump version */,
+				12442B681E3FA966003CE206 /* Version Tracking */,
 				A751E15913045B19007635F2 /* Resources */,
 				A751E20E13045B19007635F2 /* Sources */,
 				A751E35513045B19007635F2 /* Frameworks */,
@@ -4575,6 +4576,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		12442B681E3FA966003CE206 /* Version Tracking */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Version Tracking";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "git=`sh /etc/profile; which git`\n# branch_name=`$git symbolic-ref HEAD | sed -e 's,.*/\\\\(.*\\\\),\\\\1,'`\nbranch_name=`$git rev-parse --abbrev-ref HEAD`\ngit_count=`$git rev-list $branch_name |wc -l | sed 's/^ *//;s/ *$//'`\n\nbase_count=1\n\nsum_count=$(($base_count+$git_count))\n\nbuild_number=\"$sum_count\"\nif [ $CONFIGURATION != \"Release\" ]; then\nbuild_number+=\"-$branch_name\"\nfi\n\nplist=\"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\ndsym_plist=\"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist\"\n\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $build_number\" \"$plist\"\nif [ -f \"$DSYM_INFO_PLIST\" ] ; then\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $build_number\" \"$dsym_plist\"\nfi";
+		};
 		A70DFFD5183876D70020E7A8 /* Bump version */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 8;
