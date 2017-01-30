@@ -11,7 +11,7 @@
 
 @implementation NSData (Extensions)
 
-- (NSURL*)newURLFromAliasData
+- (NSURL *)newURLFromAliasData
 {
 	Handle ah = NewHandle([self length]);
 	HLock(ah);
@@ -20,14 +20,19 @@
 		
 	FSRef target;
 	Boolean wasChanged;
-	OSErr err = FSResolveAlias(NULL, (AliasHandle)ah, &target, &wasChanged);			
-	if(err == noErr) {
+	OSErr err = FSResolveAlias(NULL, (AliasHandle)ah, &target, &wasChanged);
+
+	if (err == noErr)
+    {
 		CFURLRef aliasURL = CFURLCreateFromFSRef(NULL, &target);
 		return (NSURL*)CFBridgingRelease(aliasURL);
-	} else {
+	}
+    else
+    {
 		NSLog(@"Failed to resolve the alias record with error %d", err);
 	}	
-	return nil;
+	
+    return nil;
 }
 
 @end

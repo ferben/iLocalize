@@ -12,7 +12,8 @@
 @class GlossaryScope;
 @class GlossaryScopeWC;
 
-@interface ProjectDetailsGlossary : ProjectDetails<IGroupEngineManagerDelegate,NSTableViewDelegate> {
+@interface ProjectDetailsGlossary : ProjectDetails <IGroupEngineManagerDelegate, NSTableViewDelegate>
+{
 	IBOutlet NSTableView *mTableView;
 	IBOutlet NSArrayController *mResultsController;
 	IBOutlet NSMenu *actionMenu;
@@ -23,11 +24,14 @@
 	NSArray *sortDescriptors;
 	NSArray *elements;
 }
+
 @property (strong) GlossaryScopeWC *scopeWC;
 @property (strong) NSArray *elements;
+
 - (IBAction)use:(id)sender;
 - (IBAction)reveal:(id)sender;
 - (IBAction)copy:(id)sender;
 - (IBAction)scope:(id)sender;
 - (IBAction)search:(id)sender;
+
 @end
