@@ -185,7 +185,9 @@
 {
 	[[alert window] orderOut:self];
 	ValidateContinueCallback callback = (__bridge_transfer ValidateContinueCallback)(contextInfo);
-	if(returnCode == NSAlertAlternateReturn || returnCode == NSAlertDefaultReturn) {
+    
+	if (returnCode == NSAlertAlternateReturn || returnCode == NSAlertDefaultReturn)
+    {
         self.settings.mergeFiles = returnCode == NSAlertDefaultReturn;
 		callback(YES);
 	}

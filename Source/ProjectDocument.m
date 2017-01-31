@@ -505,17 +505,24 @@
 
 - (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError *__autoreleasing *)outError
 {
-	if([data length]) {
-		NSDictionary *dic = [ProjectDiskOperations readProjectUsingData:data];
+    if ([data length])
+    {
+        NSDictionary *dic = [ProjectDiskOperations readProjectUsingData:data];
 
-		if(dic == nil) {
-			NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"This project cannot be opened because the archive is invalid", nil) 
-											 defaultButton:NSLocalizedString(@"OK", nil)
-										   alternateButton:nil
-											   otherButton:nil
-								 informativeTextWithFormat:NSLocalizedString(@"Update to the latest version of iLocalize to open it.", nil)];
+		if (dic == nil)
+        {
+            // compose alert
+            NSAlert *alert = [NSAlert new];
+            
+            [alert setAlertStyle:NSWarningAlertStyle];
+            [alert setMessageText:NSLocalizedStringFromTable(@"ProjectDocumentInvalidTitle",@"Alerts",nil)];
+            [alert setInformativeText:NSLocalizedStringFromTable(@"ProjectDocumentInvalidDescr",@"Alerts",nil)];
+            [alert addButtonWithTitle:NSLocalizedStringFromTable(@"ProjectDocumentInvalidOK",@"Alerts",nil)];   // 1st button
+            
+            // show alert
 			[alert runModal];
-			return NO;				
+
+            return NO;
 		}
 		
 		BOOL upgrade = NO;
@@ -523,75 +530,108 @@
 
 		// 1 = nibtool
 		// 2 = ibtool
-		int nibEngineType = 2;
-		if(dic[PROJECT_NIBENGINE_TYPE]) {
+		NSUInteger nibEngineType = 2;
+        
+		if (dic[PROJECT_NIBENGINE_TYPE])
+        {
 			// NibEngine type is specified, use it.
 			nibEngineType = [dic[PROJECT_NIBENGINE_TYPE] longValue];
 		}
 		
 		// Leopard and above
-		if(nibEngineType != 2) {
+		if (nibEngineType != 2)
+        {
 			// Cannot open Tiger project on Leopard OS if nibtool is not installed
-			NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"This project cannot be opened because it has been created on Tiger", nil) 
-											 defaultButton:NSLocalizedString(@"OK", nil)
-										   alternateButton:nil
-											   otherButton:nil
-								 informativeTextWithFormat:NSLocalizedString(@"This version of iLocalize supports only projects created on Leopard or above with ibtool", nil)];
-			[alert runModal];
-			return NO;									
+
+            // compose alert
+            NSAlert *alert = [NSAlert new];
+            
+            [alert setAlertStyle:NSWarningAlertStyle];
+            [alert setMessageText:NSLocalizedStringFromTable(@"ProjectDocumentTigerTitle",@"Alerts",nil)];
+            [alert setInformativeText:NSLocalizedStringFromTable(@"ProjectDocumentTigerDescr",@"Alerts",nil)];
+            [alert addButtonWithTitle:NSLocalizedStringFromTable(@"ProjectDocumentInvalidOK",@"Alerts",nil)];   // 1st button
+            
+            // show alert
+            [alert runModal];
+
+            return NO;
 		}			
 		
 		int documentVersion = [dic[PROJECT_VERSION_KEY] intValue];
-		if(documentVersion > CURRENT_DOCUMENT_VERSION) {
-			NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"This project is too recent and cannot be opened by this version of iLocalize", nil) 
-											 defaultButton:NSLocalizedString(@"OK", nil)
-										   alternateButton:nil
-											   otherButton:nil
-								 informativeTextWithFormat:NSLocalizedString(@"Update to the latest version of iLocalize to open it.", nil)];
-			[alert runModal];
+
+        if (documentVersion > CURRENT_DOCUMENT_VERSION)
+        {
+            // compose alert
+            NSAlert *alert = [NSAlert new];
+            
+            [alert setAlertStyle:NSWarningAlertStyle];
+            [alert setMessageText:NSLocalizedStringFromTable(@"ProjectDocumentRecentTitle",@"Alerts",nil)];
+            [alert setInformativeText:NSLocalizedStringFromTable(@"ProjectDocumentRecentDescr",@"Alerts",nil)];
+            [alert addButtonWithTitle:NSLocalizedStringFromTable(@"ProjectDocumentInvalidOK",@"Alerts",nil)];   // 1st button
+            
+            // show alert
+            [alert runModal];
+            
 			return NO;
-		} else if(documentVersion < CURRENT_DOCUMENT_VERSION) {
-			NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"The project needs to be upgraded", nil) 
-											 defaultButton:NSLocalizedString(@"Open and Upgrade", nil)
-										   alternateButton:NSLocalizedString(@"Don't Open", nil)
-											   otherButton:nil
-								 informativeTextWithFormat:NSLocalizedString(@"The project “%@” was saved with an older version of iLocalize. To open it, iLocalize will have to upgrade it, leaving a copy of the older project. Do you want to open and upgrade this project?", nil), [[[self fileURL] path] lastPathComponent]];
-			if([alert runModal] == NSAlertDefaultReturn)
+		}
+        else if(documentVersion < CURRENT_DOCUMENT_VERSION)
+        {
+            // compose alert
+            NSAlert *alert = [NSAlert new];
+            
+            [alert setAlertStyle:NSWarningAlertStyle];
+            [alert setMessageText:NSLocalizedStringFromTable(@"ProjectDocumentUpgradeTitle",@"Alerts",nil)];
+            [alert setInformativeText:[NSString stringWithFormat:NSLocalizedStringFromTable(@"ProjectDocumentUpgradeDescr",@"Alerts",nil), [[[self fileURL] path] lastPathComponent]]];
+            [alert addButtonWithTitle:NSLocalizedStringFromTable(@"ProjectDocumentInvalidOK",@"Alerts",nil)];   // 1st button
+            
+            // show and evaluate alert
+            if ([alert runModal] == NSAlertFirstButtonReturn)
 				upgrade = YES;
 			else
 				return NO;			
 		}
 
-		if([[self consoleFile] isPathExisting]) {
+		if ([[self consoleFile] isPathExisting])
+        {
 			id console = [NSUnarchiver unarchiveObjectWithFile:[self consoleFile]];
-			if(console) {
+			
+            if (console)
+            {
 				mConsole = console;
 			}
 		}
 		
-		if(dic[PROJECT_MODEL_KEY]) {
+		if (dic[PROJECT_MODEL_KEY])
+        {
 			mProjectModel = dic[PROJECT_MODEL_KEY];
 			[mProjectModel setProjectPath:[[[self fileURL] path] parentPath]];
 			[self repairProjectModel:mProjectModel];
-			@try {
+			
+            @try
+            {
 				[mProjectController rebuildFromModel];			
 			}
-			@catch (NSException * e) {				
-				if(outError) {
+			@catch (NSException * e)
+            {
+				if (outError)
+                {
 					EXCEPTION(e);
 					NSDictionary *errorInfo = @{NSLocalizedDescriptionKey: NSLocalizedString(@"Unable to open the project", nil)};
 					*outError = [NSError errorWithDomain:NSCocoaErrorDomain code:NSFileReadCorruptFileError userInfo:errorInfo];
 				}
-				return NO;
+				
+                return NO;
 			}
 		}
 		
-		if(dic[PROJECT_PREFS_KEY]) {
+		if (dic[PROJECT_PREFS_KEY])
+        {
 			mProjectPrefs = dic[PROJECT_PREFS_KEY];	
 			[mProjectPrefs setProjectProvider:self];
 		}
 				
-		if(upgrade) {
+		if (upgrade)
+        {
             // Backup the old file. The new project will be saved anyway at some point later
             // or when the user closes it.
 			NSString *filename = [[self fileURL] path];
@@ -608,8 +648,10 @@
 
 #pragma mark -
 
-- (void)updateDirty {
-    if (self.documentBecameDirty) {
+- (void)updateDirty
+{
+    if (self.documentBecameDirty)
+    {
         self.documentBecameDirty = NO;
         [self setDirty];
     }
@@ -619,20 +661,29 @@
 {
 	// Note: we have to delay the update change count if the window is not visible. Otherwise, the dirty "mark" is not correctly
 	// displayed and will not be updated later (even if another set dirty call is made)
-	if([[self projectWC] isWindowLoaded]) {
+	if ([[self projectWC] isWindowLoaded])
+    {
 		// Since version 4.0, the flag dirty is set only when files need to be saved on the disk.
-		if(self.operationRunning) {
+		if (self.operationRunning)
+        {
 			// Delay this action until the current operation finishes because it might cause a crash if one of the file controller
 			// gets deleted while enumerating it to find if it needs to be saved to the disk.
             self.documentBecameDirty = YES;
-		} else {
-			if([[[self projectController] needsToBeSavedFileControllers] count] > 0) {
+		}
+        else
+        {
+			if ([[[self projectController] needsToBeSavedFileControllers] count] > 0)
+            {
 				[self updateChangeCount:NSChangeDone];					
-			} else {
+			}
+            else
+            {
 				[self updateChangeCount:NSChangeCleared];								
 			}			
 		}
-	} else {
+	}
+    else
+    {
         // The window controller will call `updateDirty` when the window is loaded
         self.documentBecameDirty = YES;
 	}
@@ -640,7 +691,8 @@
 
 - (void)projectControllerDidBecomeDirty:(NSNotification*)notif
 {
-	if([notif object] == mProjectController) {
+	if ([notif object] == mProjectController)
+    {
 		[self performSelectorOnMainThread:@selector(setDirty)
 							   withObject:NULL
 							waitUntilDone:NO];		
@@ -683,7 +735,8 @@
 	// Display now the project window (see comment in Application)
 
 	// Make sure the window controllers are created (when creating a new project, they are not).
-	if([self projectWC] == nil) {
+	if ([self projectWC] == nil)
+    {
 		[self makeWindowControllers];		
 	}
 	
@@ -707,7 +760,8 @@
 
 - (void)close
 {
-    for (FMEditor *editor in [mFMEditors allValues]) {
+    for (FMEditor *editor in [mFMEditors allValues])
+    {
         [editor close];
     }
     
@@ -718,28 +772,37 @@
 
 - (IBAction)showConsoleWindow:(id)sender
 {
-	if(mConsoleWindowController == NULL) {
+	if (mConsoleWindowController == NULL)
+    {
 		mConsoleWindowController = [[ConsoleWC alloc] initWithProjectProvider:self];		
 	}
+    
 	[mConsoleWindowController show];
 }
 
 - (BOOL)validateMenuItem:(NSMenuItem*)anItem
 {
 	SEL action = [anItem action];
-	if(action == @selector(saveDocumentAs:)) {
+	
+    if (action == @selector(saveDocumentAs:))
+    {
 		return NO;
 	}
-	if(action == @selector(saveDocumentTo:)) {
+	
+    if (action == @selector(saveDocumentTo:))
+    {
 		return NO;
 	}
-	if(action == @selector(revertDocumentToSaved:)) {
+	
+    if (action == @selector(revertDocumentToSaved:))
+    {
 		return NO;
 	}
-	return YES;
+	
+    return YES;
 }
 
-- (NSString*)description
+- (NSString *)description
 {
 	return [NSString stringWithFormat:@"%@ - %@", [super description], [self fileURL]];
 }

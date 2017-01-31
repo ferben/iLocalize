@@ -10,6 +10,7 @@
 		122F06D61A1A718A0045768F /* MainWindowToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122F06D51A1A718A0045768F /* MainWindowToolbar.xib */; };
 		122F06D81A1A733D0045768F /* ProjectInfoViewFile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122F06D71A1A733D0045768F /* ProjectInfoViewFile.xib */; };
 		122F06DA1A1A73C90045768F /* ProjectInfoViewString.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122F06D91A1A73C90045768F /* ProjectInfoViewString.xib */; };
+		12442B6C1E3FAD29003CE206 /* Alerts.strings in Resources */ = {isa = PBXBuildFile; fileRef = 12442B6A1E3FAD28003CE206 /* Alerts.strings */; };
 		125671BF1A1A67FA002117B0 /* exlocemail_Eudora.script in Resources */ = {isa = PBXBuildFile; fileRef = 125671BD1A1A67FA002117B0 /* exlocemail_Eudora.script */; };
 		125671C01A1A67FA002117B0 /* exlocemail_Mail.script in Resources */ = {isa = PBXBuildFile; fileRef = 125671BE1A1A67FA002117B0 /* exlocemail_Mail.script */; };
 		125671C81A1A6802002117B0 /* HTML.xml in Resources */ = {isa = PBXBuildFile; fileRef = 125671C21A1A6802002117B0 /* HTML.xml */; };
@@ -691,6 +692,7 @@
 		122F06D51A1A718A0045768F /* MainWindowToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowToolbar.xib; sourceTree = "<group>"; };
 		122F06D71A1A733D0045768F /* ProjectInfoViewFile.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectInfoViewFile.xib; sourceTree = "<group>"; };
 		122F06D91A1A73C90045768F /* ProjectInfoViewString.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectInfoViewString.xib; sourceTree = "<group>"; };
+		12442B6B1E3FAD29003CE206 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Alerts.strings; sourceTree = "<group>"; };
 		125671BD1A1A67FA002117B0 /* exlocemail_Eudora.script */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = exlocemail_Eudora.script; sourceTree = "<group>"; };
 		125671BE1A1A67FA002117B0 /* exlocemail_Mail.script */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = exlocemail_Mail.script; sourceTree = "<group>"; };
 		125671C21A1A6802002117B0 /* HTML.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = HTML.xml; sourceTree = "<group>"; };
@@ -2611,6 +2613,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				12442B6A1E3FAD28003CE206 /* Alerts.strings */,
 				12E7D8F51A204E2D0081037B /* ilocalize.sdef */,
 				125677551A1A6EF3002117B0 /* FMEditorHTML.xib */,
 				125677571A1A6FAE002117B0 /* FMEditorImage.xib */,
@@ -4451,6 +4454,7 @@
 				1256737F1A1A681E002117B0 /* GlossaryImport.xib in Resources */,
 				A751E16D13045B19007635F2 /* label_black.png in Resources */,
 				A751E16E13045B19007635F2 /* label_blue.png in Resources */,
+				12442B6C1E3FAD29003CE206 /* Alerts.strings in Resources */,
 				A751E16F13045B19007635F2 /* label_green.png in Resources */,
 				A751E17013045B19007635F2 /* label_orange.png in Resources */,
 				125673911A1A681E002117B0 /* LineEndingsConverter.xib in Resources */,
@@ -5164,6 +5168,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		12442B6A1E3FAD28003CE206 /* Alerts.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				12442B6B1E3FAD29003CE206 /* Base */,
+			);
+			name = Alerts.strings;
+			sourceTree = "<group>";
+		};
 		125672C81A1A681E002117B0 /* About.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

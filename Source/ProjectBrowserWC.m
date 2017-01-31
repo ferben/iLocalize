@@ -400,20 +400,19 @@ static ProjectBrowserWC *shared = nil;
 
 - (IBAction)delete:(id)sender
 {
-	NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Delete selected project?", nil) 
-									 defaultButton:NSLocalizedString(@"Move To Trash", nil)
-								   alternateButton:NSLocalizedString(@"Cancel", nil)
-									   otherButton:nil
-						 informativeTextWithFormat:NSLocalizedString(@"The project will be moved to the trash.", nil)];
-	[alert beginSheetModalForWindow:[self window] 
-                      modalDelegate:self
-                     didEndSelector:@selector(deleteAlertDidEnd:returnCode:contextInfo:) 
-                        contextInfo:nil];
-}
+    // compose alert
+    NSAlert *alert = [NSAlert new];
+    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert setMessageText:NSLocalizedStringFromTable(@"ProjectBrowserDeleteTitle",@"Alerts",nil)];
+    [alert setInformativeText:NSLocalizedStringFromTable(@"ProjectBrowserDeleteDescr",@"Alerts",nil)];
+    [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextCancel",@"Alerts",nil)];      // 1st button
+    [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextMoveToTrash",@"Alerts",nil)]; // 2nd button
+    
+    // show alert
+    NSInteger alertReturnCode = [alert runModal];
 
-- (void)deleteAlertDidEnd:(NSAlert *)alert returnCode:(int)returnCode contextInfo:(void *)contextInfo
-{
-	if(returnCode == NSAlertDefaultReturn) {
+    if (alertReturnCode == NSAlertSecondButtonReturn)    // Move to Trash
+    {
         NSString *projectPath = [[self selectedProjectItem].path stringByDeletingLastPathComponent];
         [projectPath movePathToTrash];
 	}		
@@ -463,19 +462,31 @@ static ProjectBrowserWC *shared = nil;
 	SEL action = [menuItem action];
 	BOOL enabled = YES;
     NSString *sortKey = [self.sortDescriptor key];
-	if(action == @selector(sortByDate:)) {
-        if([sortKey isEqual:@"date"]) {
+    
+	if (action == @selector(sortByDate:))
+    {
+        if ([sortKey isEqual:@"date"])
+        {
             [menuItem setState:NSOnState];
-        } else {
+        }
+        else
+        {
             [menuItem setState:NSOffState];            
         }
-	} else if(action == @selector(sortByName:)) {
-        if([sortKey isEqual:@"name"]) {
+	}
+    else if(action == @selector(sortByName:))
+    {
+        if ([sortKey isEqual:@"name"])
+        {
             [menuItem setState:NSOnState];
-        } else {
+        }
+        else
+        {
             [menuItem setState:NSOffState];            
         }
-	} else {
+	}
+    else
+    {
 		enabled = [self selectedProjectItem] != nil;
 	}
 
@@ -484,22 +495,22 @@ static ProjectBrowserWC *shared = nil;
 
 #pragma mark Image Browser
 
-- (NSUInteger) numberOfItemsInImageBrowser:(IKImageBrowserView *) aBrowser
+- (NSUInteger) numberOfItemsInImageBrowser:(IKImageBrowserView *)aBrowser
 {
 	return [displayedProjects count];
 }
 
-- (id) imageBrowser:(IKImageBrowserView *) aBrowser itemAtIndex:(NSUInteger)index
+- (id) imageBrowser:(IKImageBrowserView *)aBrowser itemAtIndex:(NSUInteger)index
 {
 	return displayedProjects[index];
 }
 
-- (void) imageBrowser:(IKImageBrowserView *) aBrowser cellWasDoubleClickedAtIndex:(NSUInteger) index
+- (void) imageBrowser:(IKImageBrowserView *)aBrowser cellWasDoubleClickedAtIndex:(NSUInteger) index
 {
 	[self openSelectedProject];
 }
 
-- (void) imageBrowser:(IKImageBrowserView *) aBrowser cellWasRightClickedAtIndex:(NSUInteger) index withEvent:(NSEvent *) event
+- (void) imageBrowser:(IKImageBrowserView *)aBrowser cellWasRightClickedAtIndex:(NSUInteger) index withEvent:(NSEvent *)event
 {
 	[NSMenu popUpContextMenu:actionMenu withEvent:event forView:aBrowser];
 }
@@ -515,15 +526,22 @@ static ProjectBrowserWC *shared = nil;
 {
     ProjectItem *item = displayedProjects[rowIndex];
     NSString *identifier = [aTableColumn identifier];
-    if([identifier isEqualToString:@"name"]) {
+    
+    if ([identifier isEqualToString:@"name"])
+    {
         return [item name];
     }
-    if([identifier isEqualToString:@"location"]) {
+    
+    if ([identifier isEqualToString:@"location"])
+    {
         return [[[item path] stringByAbbreviatingWithTildeInPath] stringByDeletingLastPathComponent];
     }
-    if([identifier isEqualToString:@"modified"]) {
+    
+    if ([identifier isEqualToString:@"modified"])
+    {
         return [item imageSubtitle];
     }
+    
     return nil;
 }
 

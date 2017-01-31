@@ -15,21 +15,29 @@
 @synthesize callback;
 
 
-- (NSString*)promptForBundle
+- (NSString *)promptForBundle
 {
 	NSOpenPanel *panel = [NSOpenPanel openPanel];
+    
 	[panel setCanChooseFiles:YES];
 	[panel setCanChooseDirectories:YES];
 	[panel setPrompt:NSLocalizedString(@"Select", nil)];
 	[panel setDelegate:self];
 	[panel setAllowsMultipleSelection:NO];
-    if([defaultPath isPathExisting]) {
+    
+    if ([defaultPath isPathExisting])
+    {
         [panel setDirectoryURL:[NSURL fileURLWithPath:defaultPath]];
     }
-	NSInteger result = [panel runModal];
-	if(result == NSOKButton) {
+	
+    NSInteger result = [panel runModal];
+	
+    if (result == NSModalResponseOK)
+    {
 		return [[panel URL] path];
-	} else {
+	}
+    else
+    {
 		return nil;
 	}
 }
@@ -39,18 +47,26 @@
 	self.callback = _callback;
 	
 	NSOpenPanel *panel = [NSOpenPanel openPanel];
-	[panel setCanChooseFiles:YES];
+	
+    [panel setCanChooseFiles:YES];
 	[panel setCanChooseDirectories:YES];
 	[panel setPrompt:NSLocalizedString(@"Select", nil)];
 	[panel setDelegate:self];
 	[panel setAllowsMultipleSelection:NO];
-    if([defaultPath isPathExisting]) {
+    
+    if ([defaultPath isPathExisting])
+    {
         [panel setDirectoryURL:[NSURL fileURLWithPath:defaultPath]];
     }
-    [panel beginSheetModalForWindow:window completionHandler:^(NSInteger result) {
-        if(result == NSOKButton) {
+    
+    [panel beginSheetModalForWindow:window completionHandler:^(NSInteger result)
+    {
+        if (result == NSModalResponseOK)
+        {
             self.callback([[panel URL] path]);
-        } else {
+        }
+        else
+        {
             self.callback(nil);
         }	
     }];

@@ -125,15 +125,19 @@
 
 - (IBAction)clearAll:(id)sender
 {
-	NSBeginAlertSheet(NSLocalizedString(@"Clear All Entries?", nil), NSLocalizedString(@"Clear", NULL),
-					  NSLocalizedString(@"Cancel", NULL), NULL, [self window], self, nil,
-					  @selector(removeAllSheetDidDismiss:returnCode:contextInfo:),
-					  nil, NSLocalizedString(@"Are you sure you want to remove all entries in the Console? This action cannot be undone.", nil));
-}
-
-- (void)removeAllSheetDidDismiss:(NSWindow *)sheet returnCode:(int)returnCode contextInfo:(void *)contextInfo
-{
-	if(returnCode == NSAlertDefaultReturn) {
+    // compose alert
+    NSAlert *alert = [NSAlert new];
+    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert setMessageText:NSLocalizedStringFromTable(@"ConsoleClearAllEntriesTitle",@"Alerts",nil)];
+    [alert setInformativeText:NSLocalizedStringFromTable(@"ConsoleClearAllEntriesDescr",@"Alerts",nil)];
+    [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextCancel",@"Alerts",nil)];      // 1st button
+    [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextClear",@"Alerts",nil)]; // 2nd button
+    
+    // show alert
+    NSInteger alertReturnCode = [alert runModal];
+    
+    if (alertReturnCode == NSAlertSecondButtonReturn)    // Clear
+    {
 		[mProjectProvider setDirty];
 		[[self console] removeAllItems];
 		[self refresh];		
@@ -158,7 +162,7 @@
 
 @implementation ConsoleWC (TableView)
 
-- (int)numberOfRowsInTableView:(NSTableView *)tv
+- (NSUInteger)numberOfRowsInTableView:(NSTableView *)tv
 {
 	if(tv == mOperationTableView)
 		return [mOperationArray count];

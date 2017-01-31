@@ -68,12 +68,20 @@
 
 - (IBAction)deleteSnapshot:(id)sender
 {
-    NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Delete the selected snapshot?", nil)
-                                     defaultButton:NSLocalizedString(@"Delete", nil)
-                                   alternateButton:NSLocalizedString(@"Cancel", nil)
-                                       otherButton:nil
-                         informativeTextWithFormat:NSLocalizedString(@"This action cannot be undone.", nil)];	
-    if([alert runModal] == NSAlertDefaultReturn) {
+    
+    // compose alert
+    NSAlert *alert = [NSAlert new];
+    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert setMessageText:NSLocalizedStringFromTable(@"HistoryManagerDeleteTitle",@"Alerts",nil)];
+    [alert setInformativeText:NSLocalizedStringFromTable(@"HistoryManagerDeleteDescr",@"Alerts",nil)];
+    [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextCancel",@"Alerts",nil)];      // 1st button
+    [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextDelete",@"Alerts",nil)];      // 2nd button
+    
+    // show alert
+    NSInteger alertReturnCode = [alert runModal];
+    
+    if (alertReturnCode == NSAlertSecondButtonReturn)
+    {
         NSDictionary *dic = [[mSnapshotsController selectedObjects] firstObject];
         [mHistoryManager deleteSnapshot:[dic[@"uid"] unsignedIntValue]];
         [self refreshSnapshots];

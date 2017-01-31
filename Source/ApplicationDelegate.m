@@ -222,12 +222,15 @@ static NSDictionary *customHelpMenuDic = nil;
     
 	if (!ibToolOK)
     {
-		NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Required Tool Missing", nil)
-										 defaultButton:NSLocalizedString(@"OK", nil)
-									   alternateButton:nil
-										   otherButton:nil
-							 informativeTextWithFormat:NSLocalizedString(@"iLocalize did not find the command-line tool “ibtool” which is required to perform localization. Make sure that Xcode 3 or above is installed on your machine. The path to “ibtool” can be manually specified in Preferences > Advanced > Tools.", nil)];	
-		[alert runModal];
+        // compose alert
+        NSAlert *alert = [NSAlert new];
+        [alert setAlertStyle:NSWarningAlertStyle];
+        [alert setMessageText:NSLocalizedStringFromTable(@"ApplicationDelegateNIBToolTitle",@"Alerts",nil)];
+        [alert setInformativeText:NSLocalizedStringFromTable(@"ApplicationDelegateNIBToolDescr",@"Alerts",nil)];
+        [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextOK",@"Alerts",nil)];
+        
+        // show alert
+        [alert runModal];
 	}	
 }
 
@@ -342,7 +345,7 @@ static NSDictionary *customHelpMenuDic = nil;
 		NSLog(@"%d", 0/0);
 */	
 	// Count the number of time it started (used by the RegistrationAndUpdate class)	
-	int startCount = [[NSUserDefaults standardUserDefaults] integerForKey:@"startCount"];
+	NSInteger startCount = [[NSUserDefaults standardUserDefaults] integerForKey:@"startCount"];
 	[[NSUserDefaults standardUserDefaults] setInteger:startCount + 1 forKey:@"startCount"];
 	
 	// Create the document controller here: it will then be used as the shared document controller

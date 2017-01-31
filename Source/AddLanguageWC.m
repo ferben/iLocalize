@@ -127,9 +127,15 @@
 
 	if (mCheckForExistingLanguage && [self alreadyExistsLanguage:[self language]])
     {
-		NSRunAlertPanel(NSLocalizedString(@"Cannot add this language", @"Language"),
-						NSLocalizedString(@"This language already exists in the project.", @"Language"),
-						NSLocalizedString(@"OK", @"Language"), NULL, NULL);		
+        // compose alert
+        NSAlert *alert = [NSAlert new];
+        [alert setAlertStyle:NSWarningAlertStyle];
+        [alert setMessageText:NSLocalizedStringFromTable(@"AddCustomLanguageCannotAddTitle",@"Alerts",nil)];
+        [alert setInformativeText:NSLocalizedStringFromTable(@"AddCustomLanguageCannotAddDescr",@"Alerts",nil)];
+        [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextOK",@"Alerts",nil)];
+        
+        // show alert
+        [alert runModal];
 	}
     else
     {

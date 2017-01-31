@@ -1118,20 +1118,17 @@
 
 - (void)askUserToCheckProject
 {
-	NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"It is recommended to check the project against inconsistencies", nil) 
-									 defaultButton:NSLocalizedString(@"Check", nil)
-								   alternateButton:NSLocalizedString(@"Don't check", nil)
-									   otherButton:nil
-						 informativeTextWithFormat:NSLocalizedString(@"Do you want to check the project? The project can be checked at any time by using the command under the menu Project.", nil)];
-	[alert beginSheetModalForWindow:[self window] 
-                      modalDelegate:self
-                     didEndSelector:@selector(askUserCheckProjectAlertDidEnd:returnCode:contextInfo:) 
-                        contextInfo:nil];
-}
-
-- (void)askUserCheckProjectAlertDidEnd:(NSAlert *)alert returnCode:(int)returnCode contextInfo:(void *)contextInfo
-{
-	if(returnCode == NSAlertDefaultReturn) {
+    // compose alert
+    NSAlert *alert = [NSAlert new];
+    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert setMessageText:NSLocalizedStringFromTable(@"ProjectCheckTitle",@"Alerts",nil)];
+    [alert setInformativeText:NSLocalizedStringFromTable(@"ProjectCheckDescr",@"Alerts",nil)];
+    [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextCheck",@"Alerts",nil)];      // 1st button
+    [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextDontCheck",@"Alerts",nil)];  // 2nd button
+    
+    // show and evaluate alert
+    if ([alert runModal] == NSAlertFirstButtonReturn)
+    {
 		[[CheckProjectOperation operationWithProjectProvider:[self projectDocument]] performSelector:@selector(checkAllProject) withObject:nil afterDelay:0];
 	}		
 }

@@ -21,37 +21,55 @@
 
 - (BOOL)assertLaunch
 {
-	if(![[[self projectProvider] sourceApplicationPath] isPathExisting]) {
-		NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Cannot launch the application", nil)
-										 defaultButton:NSLocalizedString(@"OK", nil)
-									   alternateButton:nil
-										   otherButton:nil
-							 informativeTextWithFormat:NSLocalizedString(@"The application is not found. Make sure to build the application before launching it.", nil)];	
+	if (![[[self projectProvider] sourceApplicationPath] isPathExisting])
+    {
+        // compose alert
+        NSAlert *alert = [NSAlert new];
+        
+        [alert setAlertStyle:NSWarningAlertStyle];
+        [alert setMessageText:NSLocalizedStringFromTable(@"LaunchOperationCannotTitle",@"Alerts",nil)];
+        [alert setInformativeText:NSLocalizedStringFromTable(@"LaunchOperationCannotDescr",@"Alerts",nil)];
+        [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextOK",@"Alerts",nil)];  // 1st button
+        
+        // show alert
 		[alert runModal];
+        
 		return NO;
-	} else {
+	}
+    else
+    {
 		return YES;		
 	}
 }
 
 - (void)launch
 {
-	if(![self assertLaunch]) return;
+	if (![self assertLaunch])
+        return;
 	
 	NSString *path = [[[self projectProvider] projectModel] projectSourceFilePath];
-	if([path isPathApplication]) {
+    
+	if ([path isPathApplication])
+    {
 		[AppTool launchApplication:[[self projectProvider] sourceApplicationPath] 
 						  language:[[self selectedLanguageController] language]
 					  bringToFront:YES];
-	} else {
-		NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Cannot launch non-application bundle", nil)
-										 defaultButton:NSLocalizedString(@"OK", nil)
-									   alternateButton:nil
-										   otherButton:nil
-							 informativeTextWithFormat:NSLocalizedString(@"Only .app or .ape bundles can be launched from within iLocalize.", nil)];	
-		[alert runModal];
 	}
-	[self close];
+    else
+    {
+        // compose alert
+        NSAlert *alert = [NSAlert new];
+        
+        [alert setAlertStyle:NSWarningAlertStyle];
+        [alert setMessageText:NSLocalizedStringFromTable(@"LaunchOperationBundleTitle",@"Alerts",nil)];
+        [alert setInformativeText:NSLocalizedStringFromTable(@"LaunchOperationBundleDescr",@"Alerts",nil)];
+        [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextOK",@"Alerts",nil)];  // 1st button
+        
+        // show alert
+        [alert runModal];
+	}
+
+    [self close];
 }
 
 @end

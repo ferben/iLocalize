@@ -202,22 +202,32 @@
 
 - (IBAction)create:(id)sender
 {
-	if([[self glossaryPath] isPathExisting]) {
-		NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"The specified glossary already exists", nil)
-										 defaultButton:NSLocalizedString(@"Cancel", nil)
-									   alternateButton:NSLocalizedString(@"Overwrite", nil)
-										   otherButton:nil
-							 informativeTextWithFormat:NSLocalizedString(@"Do you want to overwrite it? This action cannot be undone.", nil)];	
-		if([alert runModal] == NSAlertDefaultReturn) {
+	if ([[self glossaryPath] isPathExisting])
+    {
+        // compose alert
+        NSAlert *alert = [NSAlert new];
+        [alert setAlertStyle:NSWarningAlertStyle];
+        [alert setMessageText:NSLocalizedStringFromTable(@"GlossaryNewOverwriteTitle",@"Alerts",nil)];
+        [alert setInformativeText:NSLocalizedStringFromTable(@"GlossaryNewOverwriteDescr",@"Alerts",nil)];
+        [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextCancel",@"Alerts",nil)];      // 1st button
+        [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextOverwrite",@"Alerts",nil)];   // 2nd button
+        
+        // show and evaluate alert
+        if ([alert runModal] == NSAlertFirstButtonReturn)
+        {
 			return;
 		}		
 	}
 
 	NSError *error = nil;
-	if([self createGlossary:&error]) {		
+    
+	if ([self createGlossary:&error])
+    {
 		[NSApp endSheet:[self window]];
 		[[self window] orderOut:self];
-	} else {
+	}
+    else
+    {
 		NSAlert *alert = [NSAlert alertWithError:error];
 		[alert runModal];
 	}

@@ -41,21 +41,24 @@
 #import "XMLExporter.h"
 
 @interface GlossaryWC ()
+
 @property (nonatomic, strong) GlossaryNotIndexedWC *indexedWC;
+
 @end
 
 @implementation GlossaryWC
 
 @synthesize glossary;
 
-+ (GlossaryWC*)controller
++ (GlossaryWC *)controller
 {
 	return [[self alloc] init];
 }
 
 - (id)init
 {
-	if((self = [super initWithWindowNibName:@"GlossaryWC"])) {
+	if ((self = [super initWithWindowNibName:@"GlossaryWC"]))
+    {
 		[self window];
 		
 		mCustomFieldEditor = [[CustomFieldEditor alloc] init];
@@ -67,8 +70,8 @@
 		[mEntriesController setDelegate:self];
 		
 		[mEntryTableView registerForDraggedTypes:@[PBOARD_DATA_LANGUAGE_STRINGS, 
-												PBOARD_DATA_FILES_STRINGS,
-												PBOARD_DATA_STRINGS]];
+                                                   PBOARD_DATA_FILES_STRINGS,
+                                                   PBOARD_DATA_STRINGS]];
 
         [[NSNotificationCenter defaultCenter] addObserver:self
 												 selector:@selector(glossaryDidChange:)
@@ -78,6 +81,7 @@
 		[self performSelector:@selector(checkIfGlossaryIsIndexed) withObject:nil afterDelay:0];
 		[self updateInfo];		
 	}
+    
 	return self;
 }
 
@@ -86,9 +90,6 @@
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
 
 	[[PasteboardProvider shared] removeOwner:self];
-
-	
-	
 }
 
 - (void)awakeFromNib
@@ -97,26 +98,28 @@
 	[[mEntryTableView tableColumnWithIdentifier:@"Target"] setDataCell:[TableViewCustomCell textCell]];	
 }
 
-- (NSString*)sourceLanguage
+- (NSString *)sourceLanguage
 {
 	return [[mGlossaryController content] sourceLanguage];
 }
 
-- (NSString*)targetLanguage
+- (NSString *)targetLanguage
 {
 	return [[mGlossaryController content] targetLanguage];
 }
 
 - (void)windowDidBecomeMain:(NSNotification *)notification
 {
-	if([self window] == [notification object]) {
+	if ([self window] == [notification object])
+    {
 		[RecentDocuments documentOpened:[self document]];			
 	}
 }
 
 - (void)windowWillClose:(NSNotification *)notif
 {
-	if([notif object] == [self window]) {
+	if ([notif object] == [self window])
+    {
         [mEntryTableView abortEditing];
 		[RecentDocuments documentClosed:[self document]];
 	}
@@ -144,7 +147,7 @@
         return;
     }
     	
-	if([[GlossaryManager sharedInstance] isGlossaryFileIndexed:filename])
+	if ([[GlossaryManager sharedInstance] isGlossaryFileIndexed:filename])
     {
 		[mTopRightWindowView removeFromSuperview];
 	}
@@ -154,11 +157,11 @@
 		NSView *themeFrame = [[self.window contentView] superview];
 		NSRect c = [themeFrame frame];  // c for "container"
 		NSRect aV = [mTopRightWindowView frame];      // aV for "accessory view"
-		NSRect newFrame = NSMakeRect(
-									 c.size.width - aV.size.width,   // x position
-									 c.size.height - aV.size.height, // y position
-									 aV.size.width,  // width
-									 aV.size.height);        // height
+		
+        NSRect newFrame = NSMakeRect(c.size.width  - aV.size.width,     // x position
+                                     c.size.height - aV.size.height,    // y position
+									 aV.size.width,                     // width
+									 aV.size.height);                   // height
 		[mTopRightWindowView setFrame:newFrame];
 		[themeFrame addSubview:mTopRightWindowView];						
 	}
@@ -173,32 +176,37 @@
 	[self updateInfo];	
 }
 
-- (void)applyChanges {
+- (void)applyChanges
+{
     [self.glossary removeAllEntries];
     [self.glossary addEntries:mEntriesController.content];
 }
 
-- (void)selectEntryWithBase:(NSString*)base translation:(NSString*)translation
+- (void)selectEntryWithBase:(NSString *)base translation:(NSString *)translation
 {
-	for(GlossaryEntry *entry in [mEntriesController arrangedObjects]) {
-		if([entry.source isEqualToString:base] && [entry.translation isEqualToString:translation]) {
+	for (GlossaryEntry *entry in [mEntriesController arrangedObjects])
+    {
+		if ([entry.source isEqualToString:base] && [entry.translation isEqualToString:translation])
+        {
 			[mEntriesController setSelectedObjects:@[entry]];
-			int row = [mEntriesController selectionIndex];
-			if(row >= 0) {
-				[mEntryTableView scrollRowToVisible:row];				
-			}
-			break;
+			NSUInteger row = [mEntriesController selectionIndex];
+		
+            [mEntryTableView scrollRowToVisible:row];
+            break;
 		}
 	}
 }
 
 - (void)updateInfo
 {
-	int total = [[mEntriesController content] count];
-	int arranged = [[mEntriesController arrangedObjects] count];
+	NSUInteger total = [[mEntriesController content] count];
+	NSUInteger arranged = [[mEntriesController arrangedObjects] count];
 	NSString *title;
-	if(total == arranged) {
-		switch (total) {
+    
+	if (total == arranged)
+    {
+		switch (total)
+        {
 			case 0:
 				title = NSLocalizedString(@"No entry", @"Glossary Entries Information");
 				break;
@@ -209,8 +217,11 @@
 				title = [NSString stringWithFormat:NSLocalizedString(@"%d entries", @"Glossary Entries Information"), total];
 				break;
 		}
-	} else {
-		switch (total) {
+	}
+    else
+    {
+		switch (total)
+        {
 			case 0:
 				title = NSLocalizedString(@"No entry", @"Glossary Entries Information");
 				break;
@@ -229,12 +240,16 @@
 - (IBAction)indexGlossary:(id)sender
 {
     __weak GlossaryWC *weakSelf = self;
-	self.indexedWC = [[GlossaryNotIndexedWC alloc] init];
-	self.indexedWC.didCloseCallback = ^() {
+	
+    self.indexedWC = [[GlossaryNotIndexedWC alloc] init];
+    
+	self.indexedWC.didCloseCallback = ^()
+    {
 		[[weakSelf document] setFileURL:[NSURL fileURLWithPath:[weakSelf.indexedWC targetPath]]];
 		[weakSelf checkIfGlossaryIsIndexed];
 	};
-	[self.indexedWC setGlossaryPath:[[self document] fileURL].path];
+	
+    [self.indexedWC setGlossaryPath:[[self document] fileURL].path];
 	[self.indexedWC showWithParent:[self window]];
 }
 
@@ -250,7 +265,7 @@
 	[[self document] updateChangeCount:NSChangeDone];
 	[self updateInfo];
 
-	[mEntryTableView editColumn:0 row:[[mEntriesController content] count]-1 withEvent:nil select:YES];	
+	[mEntryTableView editColumn:0 row:[[mEntriesController content] count] - 1 withEvent:nil select:YES];
 	[mEntryTableView makeSelectedRowVisible];
 }
 
@@ -270,14 +285,15 @@
 	[self updateInfo];
 }
 
-- (GlossaryEntry*)arrayControllerFilterObject:(GlossaryEntry*)entry
+- (GlossaryEntry *)arrayControllerFilterObject:(GlossaryEntry *)entry
 {
-	if([mFilterValue length] == 0)
+	if ([mFilterValue length] == 0)
 		return entry;
 	
-	if([entry.source rangeOfString:mFilterValue options:NSCaseInsensitiveSearch].location != NSNotFound)
+	if ([entry.source rangeOfString:mFilterValue options:NSCaseInsensitiveSearch].location != NSNotFound)
 		return entry;
-	if([entry.translation rangeOfString:mFilterValue options:NSCaseInsensitiveSearch].location != NSNotFound)
+	
+    if ([entry.translation rangeOfString:mFilterValue options:NSCaseInsensitiveSearch].location != NSNotFound)
 		return entry;
 	
 	return nil;
@@ -291,27 +307,33 @@
 
 #pragma mark -
 
-- (void)updateEntry:(GlossaryEntry*)entry
+- (void)updateEntry:(GlossaryEntry *)entry
 {
-	for(GlossaryEntry *e in [mEntriesController content]) {
-        if([e.source isEqualToString:entry.source]) {
+	for (GlossaryEntry *e in [mEntriesController content])
+    {
+        if ([e.source isEqualToString:entry.source])
+        {
 			e.translation = entry.translation;
         }
     }
 }
 
-- (void)glossaryDidChange:(NSNotification*)notif
+- (void)glossaryDidChange:(NSNotification *)notif
 {
 	GlossaryNotification *gn = [notif object];
-    if(gn.action == GLOSSARY_DELETED) {
+    
+    if (gn.action == GLOSSARY_DELETED)
+    {
         // Close this window if the glossary was deleted
-        if([gn.deletedFiles containsObject:self.glossary.file]) {
+        if ([gn.deletedFiles containsObject:self.glossary.file])
+        {
             [self close];
             return;
         }
     }
     
-	if(gn.source == self.glossary) {
+	if (gn.source == self.glossary)
+    {
 		// Ignore if notification was emitted for this glossary instance (it means
 		// this document was saved so we already have the latest representation).
         [self reload];
@@ -323,12 +345,17 @@
 
 	// Revert the document if it changed
 	NSString *file = [[self document] fileURL].path;
-	if([gn.modifiedFiles containsObject:file])
+	
+    if ([gn.modifiedFiles containsObject:file])
     {
 		NSError *err = nil;
-		if([self.document revertToContentsOfURL:[NSURL fileURLWithPath:file] ofType:[self.document fileType] error:&err]) {
+	
+        if ([self.document revertToContentsOfURL:[NSURL fileURLWithPath:file] ofType:[self.document fileType] error:&err])
+        {
 			[self reload];
-		} else {
+		}
+        else
+        {
 			NSAlert *alert = [NSAlert alertWithError:err];
 			[alert beginSheetModalForWindow:self.window modalDelegate:self didEndSelector:nil contextInfo:nil];
 		}
@@ -337,17 +364,23 @@
 
 - (void)renameLanguageWithSelector:(SEL)sel
 {
-	if(mAddLanguageWC == nil) {
+	if (mAddLanguageWC == nil)
+    {
 		mAddLanguageWC = [[AddLanguageWC alloc] init];		
 	}
-	[mAddLanguageWC setParentWindow:[self window]];
+	
+    [mAddLanguageWC setParentWindow:[self window]];
 	[mAddLanguageWC setProjectProvider:nil];
 	[mAddLanguageWC setCheckForExistingLanguage:NO];
 	[mAddLanguageWC setDidCloseSelector:sel target:self];
 	[mAddLanguageWC setRenameLanguage:YES];
-	if(sel == @selector(performRenameSourceLanguage)) {
+	
+    if (sel == @selector(performRenameSourceLanguage))
+    {
 		[mAddLanguageWC setInitialLanguageSelection:[[self sourceLanguage] displayLanguageName]];		
-	} else {
+	}
+    else
+    {
 		[mAddLanguageWC setInitialLanguageSelection:[[self targetLanguage] displayLanguageName]];
 	}
 
@@ -356,7 +389,8 @@
 
 - (void)performRenameSourceLanguage
 {
-	if([mAddLanguageWC hideCode] != 1) return;
+	if ([mAddLanguageWC hideCode] != 1)
+        return;
 	
 	[[mGlossaryController content] setSourceLanguage:[mAddLanguageWC language]];	
 	[self updateInfo];
@@ -365,7 +399,8 @@
 
 - (void)performRenameTargetLanguage
 {
-	if([mAddLanguageWC hideCode] != 1) return;
+	if ([mAddLanguageWC hideCode] != 1)
+        return;
 		
 	[[mGlossaryController content] setTargetLanguage:[mAddLanguageWC language]];	
 	[self updateInfo];
@@ -389,18 +424,20 @@ int entrySort(id e1, id e2, void *context)
 
 - (IBAction)removeDuplicateEntries:(id)sender
 {
-    NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Remove duplicate entries?", nil) 
-									 defaultButton:NSLocalizedString(@"Remove", nil)
-								   alternateButton:NSLocalizedString(@"Cancel", nil)
-									   otherButton:nil
-						 informativeTextWithFormat:NSLocalizedString(@"This action cannot be undone.", nil)];
-	[alert beginSheetModalForWindow:[self window] modalDelegate:self didEndSelector:@selector(removeDuplicateEntriesAlertDidEnd:returnCode:contextInfo:) contextInfo:nil];
-}
-
-- (void)removeDuplicateEntriesAlertDidEnd:(NSAlert *)alert returnCode:(int)returnCode contextInfo:(void *)contextInfo
-{
-	if(returnCode == NSAlertDefaultReturn) {
-		if([self.glossary removeDuplicateEntries]) {
+    // compose alert
+    NSAlert *alert = [NSAlert new];
+    
+    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert setMessageText:NSLocalizedStringFromTable(@"GlossaryRemoveTitle",@"Alerts",nil)];
+    [alert setInformativeText:NSLocalizedStringFromTable(@"GlossaryRemoveDescr",@"Alerts",nil)];
+    [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextRemove",@"Alerts",nil)];  // 1st button
+    [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextCancel",@"Alerts",nil)];  // 2nd button
+    
+    // show and evaluate alert
+    if ([alert runModal] == NSAlertFirstButtonReturn)
+    {
+		if ([self.glossary removeDuplicateEntries])
+        {
 			[mEntriesController rearrangeObjects];
 			[[self document] updateChangeCount:NSChangeDone];
 			[self updateInfo];			
@@ -436,39 +473,45 @@ int entrySort(id e1, id e2, void *context)
 
 - (void)pasteboard:(NSPasteboard *)sender provideDataForType:(NSString *)type
 {
-	if(![[sender types] containsObject:PBOARD_DATA_ROW_INDEXES]) {
+	if (![[sender types] containsObject:PBOARD_DATA_ROW_INDEXES])
+    {
 		NSLog(@"No rows found in pasteboard!");
 		return;
 	}
 	
 	NSIndexSet *rowIndexes = [NSUnarchiver unarchiveObjectWithData:[sender dataForType:PBOARD_DATA_ROW_INDEXES]];
 	
-	if([type isEqualToString:PBOARD_DATA_STRINGS]) {
+	if ([type isEqualToString:PBOARD_DATA_STRINGS])
+    {
 		NSArray *scs = [[mEntriesController arrangedObjects] objectsAtIndexes:rowIndexes];
 		NSMutableArray *array = [NSMutableArray array];
-		for(GlossaryEntry *entry in scs) {
+	
+        for (GlossaryEntry *entry in scs)
+        {
 			NSMutableDictionary *dic = [NSMutableDictionary dictionary];
 			dic[PBOARD_SOURCE_KEY] = entry.source;
 			dic[PBOARD_TARGET_KEY] = entry.translation;
 			[array addObject:dic];
 		}
-		[sender setData:[NSArchiver archivedDataWithRootObject:array] forType:type];
+		
+        [sender setData:[NSArchiver archivedDataWithRootObject:array] forType:type];
 	}
 }
 
 - (NSDragOperation)tableView:(NSTableView *)tableView validateDrop:(id <NSDraggingInfo>)info proposedRow:(int)row proposedDropOperation:(NSTableViewDropOperation)operation
 {
-	if(operation == NSTableViewDropOn)
-		[tableView setDropRow:MIN(row+1, [[mEntriesController arrangedObjects] count]-1) dropOperation:NSTableViewDropAbove];
+	if (operation == NSTableViewDropOn)
+		[tableView setDropRow:MIN(row+1, [[mEntriesController arrangedObjects] count] - 1) dropOperation:NSTableViewDropAbove];
 
 	NSPasteboard *pboard = [info draggingPasteboard];
-	if([[pboard types] containsObject:PBOARD_DATA_LANGUAGE_STRINGS])
+    
+	if ([[pboard types] containsObject:PBOARD_DATA_LANGUAGE_STRINGS])
 		return NSDragOperationCopy;
 
-	if([[pboard types] containsObject:PBOARD_DATA_FILES_STRINGS])		
+	if ([[pboard types] containsObject:PBOARD_DATA_FILES_STRINGS])
 		return NSDragOperationCopy;
 
-	if([[pboard types] containsObject:PBOARD_DATA_STRINGS])		
+	if ([[pboard types] containsObject:PBOARD_DATA_STRINGS])
 		return NSDragOperationCopy;
 	
 	return NSDragOperationNone;
@@ -479,11 +522,17 @@ int entrySort(id e1, id e2, void *context)
 	NSArray *scs = nil;
 	
 	NSPasteboard *pboard = [info draggingPasteboard];
-	if([[pboard types] containsObject:PBOARD_DATA_LANGUAGE_STRINGS]) {
+
+    if ([[pboard types] containsObject:PBOARD_DATA_LANGUAGE_STRINGS])
+    {
 		scs = [NSUnarchiver unarchiveObjectWithData:[pboard dataForType:PBOARD_DATA_LANGUAGE_STRINGS]];		
-	} else if([[pboard types] containsObject:PBOARD_DATA_FILES_STRINGS])	{
+	}
+    else if([[pboard types] containsObject:PBOARD_DATA_FILES_STRINGS])
+    {
 		scs = [NSUnarchiver unarchiveObjectWithData:[pboard dataForType:PBOARD_DATA_FILES_STRINGS]];
-	} else if([[pboard types] containsObject:PBOARD_DATA_STRINGS]) {
+	}
+    else if([[pboard types] containsObject:PBOARD_DATA_STRINGS])
+    {
 		scs = [NSUnarchiver unarchiveObjectWithData:[pboard dataForType:PBOARD_DATA_STRINGS]];
 	}
 	
@@ -491,19 +540,25 @@ int entrySort(id e1, id e2, void *context)
 	
 	NSEnumerator *enumerator = [scs reverseObjectEnumerator];
 	NSDictionary *dic;
-	while((dic= [enumerator nextObject])) {
+	
+    while ((dic = [enumerator nextObject]))
+    {
 		GlossaryEntry *entry = [[GlossaryEntry alloc] init];
 		entry.source = dic[PBOARD_SOURCE_KEY];
 		entry.translation = dic[PBOARD_TARGET_KEY];
-		if(![[mEntriesController content] containsObject:entry]){
+
+        if (![[mEntriesController content] containsObject:entry])
+        {
 			dirty = YES;
 			[mEntriesController insertObject:entry atArrangedObjectIndex:row];
-			if([mFilterValue length])
+            
+            if ([mFilterValue length])
 				[mEntriesController rearrangeObjects];
 		}
 	}
 	
-	if(dirty) {
+	if (dirty)
+    {
 		[self updateInfo];
 		[[self document] updateChangeCount:NSChangeDone];
 	}
@@ -511,81 +566,101 @@ int entrySort(id e1, id e2, void *context)
 	return scs != nil;
 }
 
-- (BOOL)shouldStopOnEntry:(GlossaryEntry*)entry
+- (BOOL)shouldStopOnEntry:(GlossaryEntry *)entry
 {
 	return [entry.translation length] == 0;
 }
 
-- (int)indexOfNextNonTranslatedEntry
+- (NSUInteger)indexOfNextNonTranslatedEntry
 {
 	NSArray *content = [mEntriesController arrangedObjects];
 	
 	BOOL backwards = ([[[NSApplication sharedApplication] currentEvent] modifierFlags] & NSShiftKeyMask) > 0;	
-	int startIndex = [content indexOfObject:[[mEntriesController selectedObjects] firstObject]];
-	int maxIndex = [content count];
-	int index = startIndex;
-	while(YES) {		
-		if(backwards) {
+	
+    NSUInteger startIndex = [content indexOfObject:[[mEntriesController selectedObjects] firstObject]];
+	NSUInteger maxIndex = [content count];
+	NSUInteger index = startIndex;
+    
+	while (YES)
+    {
+		if (backwards)
+        {
 			index--;
-		} else {
+		}
+        else
+        {
 			index++;			
 		}
 				
-		if(index>=maxIndex)
+		if (index >= maxIndex)
 			index = 0;
-		if(index<0)
-			index = maxIndex-1;
+        
+        if (index == 0)
+			index = maxIndex - 1;
 		
-		if(index == startIndex) {
+		if (index == startIndex)
+        {
 			// Back at the start position -> no more strings to translate
-			if(![self shouldStopOnEntry:content[index]]) {
-				if(backwards) {
-					if(index > 0)
-						return index-1;
+			if (![self shouldStopOnEntry:content[index]])
+            {
+				if (backwards)
+                {
+					if (index > 0)
+						return index - 1;
 					else
-						return maxIndex-1;
-				} else {
-					if(index+1<maxIndex)
-						return index+1;
+						return maxIndex - 1;
+				}
+                else
+                {
+					if (index + 1 < maxIndex)
+						return index + 1;
 					else
-						return 0;					
+						return 0;
 				}
 			}
+            
 			break;			
 		}
 		
-		if([self shouldStopOnEntry:content[index]]) {
+		if ([self shouldStopOnEntry:content[index]])
+        {
 			break;
 		}
-	}	
+	}
+    
 	return index;
 }
 
-- (void)tableViewDidHitEnterKey:(NSTableView*)tv
+- (void)tableViewDidHitEnterKey:(NSTableView *)tv
 {
 	// Select the next string to translate or the next line if no strings remain to translate.
-	int index = [self indexOfNextNonTranslatedEntry];
+	NSUInteger index = [self indexOfNextNonTranslatedEntry];
 	
-	int row = index;
-	if(row >= 0) {
-		[mEntryTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:NO];
-		[mEntryTableView editColumn:1 row:row withEvent:nil select:YES];		
-	}
+	NSUInteger row = index;
+	
+    [mEntryTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:NO];
+    [mEntryTableView editColumn:1 row:row withEvent:nil select:YES];
 }
 
-- (void)tableViewTextDidBeginEditing:(NSTableView*)tv columnIdentifier:(NSString*)identifier rowIndex:(NSInteger)rowIndex textView:(TextViewCustom*)textView
+- (void)tableViewTextDidBeginEditing:(NSTableView *)tv columnIdentifier:(NSString *)identifier rowIndex:(NSInteger)rowIndex textView:(TextViewCustom *)textView
 {
 	NSString *language = nil;
 	NSString *keypath = nil;
-	if([identifier isEqualToString:@"Source"]) {
+    
+	if ([identifier isEqualToString:@"Source"])
+    {
 		language = [self sourceLanguage];
 		keypath = @"selection.source";
 	}
-	if([identifier isEqualToString:@"Target"]) {
+	
+    if ([identifier isEqualToString:@"Target"])
+    {
 		language = [self targetLanguage];
 		keypath = @"selection.translation";
 	}	
-	if(language) {
+	
+    if (language)
+    {
 		[LanguageTool setSpellCheckerLanguage:language];		
 	}
     
@@ -599,21 +674,25 @@ int entrySort(id e1, id e2, void *context)
 	[textView selectAll:self];
 }
 
-- (void)tableViewTextDidEndEditing:(NSTableView*)tv textView:(TextViewCustom*)textView
+- (void)tableViewTextDidEndEditing:(NSTableView *)tv textView:(TextViewCustom *)textView
 {
 	[textView unbind:@"value"];
 }
 
-- (void)tableViewTextDidEndEditing:(NSTableView*)tv
+- (void)tableViewTextDidEndEditing:(NSTableView *)tv
 {
 	[[self document] updateChangeCount:NSChangeDone];
 
 	[mEntryTableView selectedRowsHeightChanged];
 	
 	NSEvent *event = [NSApp currentEvent];
-	if([event type] == NSKeyDown) {
+    
+	if ([event type] == NSKeyDown)
+    {
 		NSString *chars = [event charactersIgnoringModifiers];
-		if([chars length] > 0 && [chars characterAtIndex:0] == NSEnterCharacter) {
+	
+        if ([chars length] > 0 && [chars characterAtIndex:0] == NSEnterCharacter)
+        {
 			[self tableViewDidHitEnterKey:tv];
 		}		
 	}
@@ -622,16 +701,23 @@ int entrySort(id e1, id e2, void *context)
 - (void)customTableView:(NSTableView *)aTableView willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
 	GlossaryEntry *entry = [mEntriesController arrangedObjects][row];
-	if([[tableColumn identifier] isEqualToString:@"Source"]) {
+    
+	if ([[tableColumn identifier] isEqualToString:@"Source"])
+    {
 		[cell setValue:entry.source];		
 	}
-	if([[tableColumn identifier] isEqualToString:@"Target"]) {
+	
+    if ([[tableColumn identifier] isEqualToString:@"Target"])
+    {
 		[cell setValue:entry.translation];		
 	}
 	
-	if([cell isHighlighted]) {
+	if ([cell isHighlighted])
+    {
 		[cell setForegroundColor:[NSColor whiteColor]];
-	} else {
+	}
+    else
+    {
 		[cell setForegroundColor:[NSColor blackColor]];		
 	}		
 	
@@ -642,18 +728,26 @@ int entrySort(id e1, id e2, void *context)
 {
     SEL action = [anItem action];
 	
-	if(action == @selector(showInvisibleCharacters:)) {
-		if(mShowInvisibleCharacters) {
+	if (action == @selector(showInvisibleCharacters:))
+    {
+		if (mShowInvisibleCharacters)
+        {
 			[anItem setTitle:NSLocalizedString(@"Hide Invisible Characters", nil)];
-		} else {
+		}
+        else
+        {
 			[anItem setTitle:NSLocalizedString(@"Show Invisible Characters", nil)];
 		}
-		return YES;
+		
+        return YES;
 	}
-	if(action == @selector(saveFile:)) {
+    
+	if (action == @selector(saveFile:))
+    {
 		return [[self document] isDocumentEdited];
 	}
-	return YES;
+	
+    return YES;
 }
 
 @end

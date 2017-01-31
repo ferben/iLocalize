@@ -22,9 +22,9 @@
 }
 
 
-- (AddLocationWC*)addLocationWC
+- (AddLocationWC *)addLocationWC
 {
-	return (AddLocationWC*)[self instanceOfAbstractWCName:@"AddLocationWC"];
+	return (AddLocationWC *)[self instanceOfAbstractWCName:@"AddLocationWC"];
 }
 
 #pragma mark -
@@ -32,16 +32,20 @@
 - (void)addFiles_
 {
 	NSOpenPanel *panel = [NSOpenPanel openPanel];
+    
 	[panel setCanChooseFiles:YES];
 	[panel setAllowsMultipleSelection:YES];
     [panel beginSheetModalForWindow:[self projectWindow]
-                  completionHandler:^(NSInteger result) {
-                      if(result == NSFileHandlingPanelCancelButton) {
-                          [self close];
-                          return;
-                      }
-                      [self performSelector:@selector(performAddFiles:) withObject:[panel URLs] afterDelay:0];
-                  }];
+                  completionHandler:^(NSInteger result)
+    {
+        if (result == NSFileHandlingPanelCancelButton)
+        {
+            [self close];
+            return;
+        }
+       
+        [self performSelector:@selector(performAddFiles:) withObject:[panel URLs] afterDelay:0];
+    }];
 }
 
 - (void)addFiles
@@ -60,19 +64,24 @@
 {
     mFiles = nil;
     NSMutableArray *convertedFiles = [NSMutableArray arrayWithCapacity:files.count];
-    for (NSObject *f in files) {
-        if ([f isKindOfClass:[NSURL class]]) {
+
+    for (NSObject *f in files)
+    {
+        if ([f isKindOfClass:[NSURL class]])
+        {
             NSURL *url = (NSURL*)f;
             [convertedFiles addObject:[url path]];
-        } else {
+        }
+        else
+        {
             [convertedFiles addObject:f];
         }
     }
+    
 	mFiles = convertedFiles;
 	
 	[[self addLocationWC] setDidCloseSelector:@selector(performAddFiles) target:self];
 	[[self addLocationWC] showAsSheet];
-
 }
 
 - (void)performAddFiles
@@ -105,19 +114,17 @@
 - (void)removeFileControllers:(NSArray*)fileControllers
 {
 	mFileControllers = fileControllers;
-	
-	NSBeginAlertSheet(NSLocalizedString(@"Delete selected files?", nil),
-					  NSLocalizedString(@"Delete", nil), NSLocalizedString(@"Cancel", nil),
-					  nil, [self projectWindow], self,
-					  nil, @selector(removeFileControllersSheetDidDismiss:returnCode:contextInfo:),
-					  (void*)CFBridgingRetain(self),
-					  NSLocalizedString(@"Do you really want to delete the selected files? This action cannot be undone.", nil));
-	
-}
 
-- (void)removeFileControllersSheetDidDismiss:(NSWindow *)sheet returnCode:(int)returnCode contextInfo:(void *)contextInfo
-{
-	if (returnCode != NSAlertDefaultReturn)
+    // compose alert
+    NSAlert *alert = [NSAlert new];
+    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert setMessageText:NSLocalizedStringFromTable(@"AddRemoveFileOperationsTitle",@"Alerts",nil)];
+    [alert setInformativeText:NSLocalizedStringFromTable(@"AddRemoveFileOperationsDescr",@"Alerts",nil)];
+    [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextCancel",@"Alerts",nil)];  // 1st button
+    [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextDelete",@"Alerts",nil)];  // 2nd button
+    
+    // show and evaluate alert
+    if ([alert runModal] == NSAlertFirstButtonReturn)
     {
 		[self close];
 		return;

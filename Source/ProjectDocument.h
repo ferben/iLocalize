@@ -43,7 +43,7 @@
     NSMutableArray                  *mConflictingFilesDecision;
 
 	// Version of the OS where the document has been created
-	int								mOSVersion;
+	NSUInteger                      mOSVersion;
 			
 	BOOL							mUndoManagerEnabled;
 	

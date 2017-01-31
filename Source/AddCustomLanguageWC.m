@@ -13,9 +13,11 @@
 
 - (id)init
 {
-	if(self = [super initWithWindowNibName:@"AddCustomLanguage"]) {
+	if (self = [super initWithWindowNibName:@"AddCustomLanguage"])
+    {
 	}
-	return self;
+	
+    return self;
 }
 
 - (void)willShow
@@ -54,9 +56,15 @@
 {
 	if ([self alreadyExists])
     {
-		NSRunAlertPanel(NSLocalizedString(@"Cannot add this language", nil),
-						NSLocalizedString(@"This language already exists in the project.", nil),
-						NSLocalizedString(@"OK", nil), NULL, NULL);		
+        // compose alert
+        NSAlert *alert = [NSAlert new];
+        [alert setAlertStyle:NSWarningAlertStyle];
+        [alert setMessageText:NSLocalizedStringFromTable(@"AddCustomLanguageCannotAddTitle",@"Alerts",nil)];
+        [alert setInformativeText:NSLocalizedStringFromTable(@"AddCustomLanguageCannotAddDescr",@"Alerts",nil)];
+        [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertOKButtonText",@"Alerts",nil)];
+        
+        // show alert
+        [alert runModal];
 	}
     else
     {

@@ -17,19 +17,24 @@
 #import "FileTool.h"
 #import "Preferences.h"
 
-typedef NS_ENUM(NSInteger, NewGlossaryOptions) {
+typedef NS_ENUM(NSInteger, NewGlossaryOptions)
+{
     NewGlossaryOptionsDontView = 0,
     NewGlossaryOptionsAlwaysView,
 };
 
 @implementation NewGlossaryOperation
 
-- (void)execute {
+- (void)execute
+{
     [self setOperationName:NSLocalizedString(@"Collecting Strings…", nil)];
 
     NSError *error = nil;
-    for (NSString *language in self.languages) {
-        if (![self glossaryCreateNewWithLanguage:language error:&error]) {
+    
+    for (NSString *language in self.languages)
+    {
+        if (![self glossaryCreateNewWithLanguage:language error:&error])
+        {
             NSString *title = NSLocalizedString(@"Error Creating Glossary", nil);
             NSString *message = NSLocalizedString(@"Error creating glossary for language `%@`: %@", nil);
             [self reportInformativeAlertWithTitle:title
@@ -39,54 +44,78 @@ typedef NS_ENUM(NSInteger, NewGlossaryOptions) {
     }
 }
 
-- (void)didExecute {
-    if ([[NSUserDefaults standardUserDefaults] objectForKey:kAlwaysViewGlossaryPrefs]) {
+- (void)didExecute
+{
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:kAlwaysViewGlossaryPrefs])
+    {
         NewGlossaryOptions option = [[NSUserDefaults standardUserDefaults] integerForKey:kAlwaysViewGlossaryPrefs];
-        if (NewGlossaryOptionsAlwaysView == option) {
+        
+        if (NewGlossaryOptionsAlwaysView == option)
+        {
             [self openGeneratedGlossaries];
         }
+        
         return;
     }
     
     NSString *title;
     NSString *message;
-    if (self.languages.count == 1) {
-        title = NSLocalizedString(@"The glossary has been generated", nil);
-        message = NSLocalizedString(@"Do you want to open it?", nil);
-    } else {
-        title = NSLocalizedString(@"The glossaries have been generated", nil);
-        message = NSLocalizedString(@"Do you want to open them?", nil);
+    
+    if (self.languages.count == 1)
+    {
+        title = NSLocalizedStringFromTable(@"NewGlossaryOperationGlossaryGeneratedTitle",@"Alerts", nil);
+        message = NSLocalizedStringFromTable(@"NewGlossaryOperationGlossaryGeneratedDescr",@"Alerts", nil);
+    }
+    else
+    {
+        title = NSLocalizedStringFromTable(@"NewGlossaryOperationGlossariesGeneratedTitle",@"Alerts", nil);
+        message = NSLocalizedStringFromTable(@"NewGlossaryOperationGlossariesGeneratedDescr",@"Alerts", nil);
     }
 
-    NSAlert *alert = [NSAlert alertWithMessageText:title
-                                     defaultButton:NSLocalizedString(@"Open", nil)
-                                   alternateButton:NSLocalizedString(@"Do Nothing", nil)
-                                       otherButton:nil
-                         informativeTextWithFormat:message, nil];
+    // compose alert
+    NSAlert *alert = [NSAlert new];
+    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert setMessageText:title];
+    [alert setInformativeText:message];
+    [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextOpen",@"Alerts",nil)];      // 1st button
+    [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextDoNothing",@"Alerts",nil)]; // 2nd button
     [alert setShowsSuppressionButton:YES];
-    [alert beginSheetModalForWindow:[[self.projectProvider projectWC] window] completionHandler:^(NSModalResponse returnCode) {
-        BOOL suppressWarning = [alert suppressionButton].state == NSOnState;
-        if (returnCode == NSAlertDefaultReturn) {
-            // View
-            if (suppressWarning) {
-                [[NSUserDefaults standardUserDefaults] setInteger:NewGlossaryOptionsAlwaysView forKey:kAlwaysViewGlossaryPrefs];
-            }
-            [self openGeneratedGlossaries];
-        } else {
-            // Don't view
-            if (suppressWarning) {
-                [[NSUserDefaults standardUserDefaults] setInteger:NewGlossaryOptionsDontView forKey:kAlwaysViewGlossaryPrefs];
-            }
+    
+    // show alert
+    NSInteger alertReturnCode = [alert runModal];
+
+    BOOL suppressWarning = [alert suppressionButton].state == NSOnState;
+
+    if (alertReturnCode == NSAlertFirstButtonReturn)
+    {
+        // View
+        if (suppressWarning)
+        {
+            [[NSUserDefaults standardUserDefaults] setInteger:NewGlossaryOptionsAlwaysView forKey:kAlwaysViewGlossaryPrefs];
         }
-    }];
+        
+        [self openGeneratedGlossaries];
+    }
+    else
+    {
+        // Don't view
+        if (suppressWarning)
+        {
+            [[NSUserDefaults standardUserDefaults] setInteger:NewGlossaryOptionsDontView forKey:kAlwaysViewGlossaryPrefs];
+        }
+    }
 }
 
-- (BOOL)needsToOverwrite {
-    for (NSString *language in self.languages) {
-        if ([self glossaryAlreadyExists:language]) {
+- (BOOL)needsToOverwrite
+{
+    for (NSString *language in self.languages)
+    {
+        if ([self glossaryAlreadyExists:language])
+        {
             return YES;
         }
     }
+    
     return NO;
 }
 
@@ -128,10 +157,11 @@ typedef NS_ENUM(NSInteger, NewGlossaryOptions) {
 	[creator setRemoveDuplicateEntries:YES];
 	
 	Glossary *g = [creator create];
+    
 	g.targetFile = g.file = [self glossaryPathWithTargetLanguage:language];
 	g.format = TMX;
     
-	if([g.file isPathExisting])
+	if ([g.file isPathExisting])
 		[g.file movePathToTrash];
 	else
 		[[FileTool shared] preparePath:g.file atomic:YES skipLastComponent:YES];
@@ -139,18 +169,23 @@ typedef NS_ENUM(NSInteger, NewGlossaryOptions) {
 	return [g writeToFile:error];
 }
 
-- (NSString*)glossaryNameForTargetLanguage:(NSString*)targetLanguage
+- (NSString *)glossaryNameForTargetLanguage:(NSString *)targetLanguage
 {
 	NSString *appName = [self.projectProvider applicationExecutableName];
 	NSString *sourceLanguage = [[self.projectProvider projectController] baseLanguage];
 	
 	NSMutableString *name = [NSMutableString string];
+    
 	[name appendString:appName];
-	if([sourceLanguage length] > 0) {
+    
+	if ([sourceLanguage length] > 0)
+    {
 		[name appendString:@" "];
 		[name appendString:sourceLanguage];
 	}
-	if([targetLanguage length] > 0) {
+    
+	if ([targetLanguage length] > 0)
+    {
 		[name appendString:@"-"];
 		[name appendString:targetLanguage];
 	}
@@ -158,12 +193,13 @@ typedef NS_ENUM(NSInteger, NewGlossaryOptions) {
     return name;
 }
 
-- (NSString*)glossaryPathWithTargetLanguage:(NSString*)targetLanguage
+- (NSString *)glossaryPathWithTargetLanguage:(NSString *)targetLanguage
 {
 	return [[[self localPath] stringByAppendingPathComponent:[self glossaryNameForTargetLanguage:targetLanguage]] stringByAppendingPathExtension:@"tmx"];
 }
 
-- (NSString*)localPath {
+- (NSString *)localPath
+{
     return [[[GlossaryManager sharedInstance] globalFoldersAndLocalFoldersForProject:self.projectProvider][0] path];
 }
 

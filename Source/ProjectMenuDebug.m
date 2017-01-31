@@ -63,7 +63,8 @@
 
 - (void)encodingMismatchAlertDidEnd:(NSAlert *)alert returnCode:(int)returnCode contextInfo:(void *)contextInfo
 {
-	if(returnCode == NSAlertDefaultReturn) {
+	if (returnCode == NSAlertFirstButtonReturn)
+    {
 		FileController *fc = (__bridge FileController *)(contextInfo);
 		[fc setEncoding:[self encodingOfFileController:fc]];
 		[[SaveAllOperation operationWithProjectProvider:[self projectDocument]] reloadAll:@[fc]];

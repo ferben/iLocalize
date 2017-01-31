@@ -20,10 +20,12 @@
 
 - (id)init
 {
-	if(self = [super initWithWindowNibName:@"ProjectLabels"]) {
+	if (self = [super initWithWindowNibName:@"ProjectLabels"])
+    {
 		[self window];
 	}
-	return self;
+	
+    return self;
 }
 
 - (void)willShow
@@ -35,32 +37,41 @@
 	[mLabelsController setContent:[[project projectLabels] labels]];
 }
 
-- (NSArray*)stringControllersUsingLabelIndex:(int)index
+- (NSArray *)stringControllersUsingLabelIndex:(NSUInteger)index
 {
 	NSMutableArray *array = [NSMutableArray array];
 	NSNumber *indexObj = @(index);
 	NSEnumerator *lcEnumerator = [[[[self projectProvider] projectController] languageControllers] objectEnumerator];
 	LanguageController *lc;
-	while(lc = [lcEnumerator nextObject]) {
+    
+	while (lc = [lcEnumerator nextObject])
+    {
 		NSEnumerator *fcEnumerator = [[lc fileControllers] objectEnumerator];
 		FileController *fc;
-		while(fc = [fcEnumerator nextObject]) {
+	
+        while (fc = [fcEnumerator nextObject])
+        {
 			NSEnumerator *scEnumerator = [[fc stringControllers] objectEnumerator];
 			StringController *sc;
-			while(sc = [scEnumerator nextObject]) {
-				if([[sc labelIndexes] containsObject:indexObj])
+		
+            while (sc = [scEnumerator nextObject])
+            {
+				if ([[sc labelIndexes] containsObject:indexObj])
 					[array addObject:sc];
 			}				
 		}
 	}
+    
 	return array;
 }
 
-- (void)removeLabelIndex:(int)index fromStringControllers:(NSArray*)scs
+- (void)removeLabelIndex:(NSUInteger)index fromStringControllers:(NSArray *)scs
 {
 	NSNumber *indexObj = @(index);
 	StringController *sc;
-	for(sc in scs) {
+	
+    for (sc in scs)
+    {
 		NSMutableSet *indexes = [[NSMutableSet alloc] initWithSet:[sc labelIndexes]];
 		[indexes removeObject:indexObj];
 		[sc setLabelIndexes:indexes];
@@ -72,22 +83,28 @@
 	int count = 0;
 	NSEnumerator *enumerator = [[mLabelsController content] objectEnumerator];
 	NSDictionary *dic;
-	while(dic = [enumerator nextObject]) {
-		if([dic[@"ID"] isEqualCaseInsensitiveToString:ID])
+	
+    while (dic = [enumerator nextObject])
+    {
+		if ([dic[@"ID"] isEqualCaseInsensitiveToString:ID])
 			count++;
 	}
+    
 	return count > 1;
 }
 
 
 - (void)invalidIDWithMessage:(NSString*)message
 {
-	NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Invalid label ID", nil)
-									 defaultButton:NSLocalizedString(@"OK", nil)
-								   alternateButton:nil
-									   otherButton:nil
-						 informativeTextWithFormat:@"%@", message];
-	[alert runModal];	
+    // compose alert
+    NSAlert *alert = [NSAlert new];
+    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert setMessageText:NSLocalizedStringFromTable(@"ProjectLabelsInvalidTitle",@"Alerts",nil)];
+    [alert setInformativeText:@""];
+    [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextOK",@"Alerts",nil)];      // 1st button
+    
+    // show alert
+	[alert runModal];
 }
 
 - (void)displayEmptyID
@@ -95,7 +112,7 @@
 	[self invalidIDWithMessage:NSLocalizedString(@"Label ID cannot be empty.", nil)];
 }
 
-- (void)displayAlreadyExistsID:(NSString*)ID
+- (void)displayAlreadyExistsID:(NSString *)ID
 {
 	[self invalidIDWithMessage:[NSString stringWithFormat:NSLocalizedString(@"Label ID “%@” already exists.", nil), ID]];	
 }
@@ -105,59 +122,82 @@
 	NSMutableSet *ids = [NSMutableSet set];
 	NSEnumerator *enumerator = [[mLabelsController content] objectEnumerator];
 	NSDictionary *dic;
-	while(dic = [enumerator nextObject]) {
+    
+	while (dic = [enumerator nextObject])
+    {
 		id ID = dic[@"ID"];
-		if([ID length] == 0) {
+	
+        if ([ID length] == 0)
+        {
 			[self displayEmptyID];
 			return NO;
 		}
-		if([ids containsObject:ID]) {
+		
+        if ([ids containsObject:ID])
+        {
 			[self displayAlreadyExistsID:ID];
 			return NO;
 		}
-		[ids addObject:ID];
+		
+        [ids addObject:ID];
 	}
-	return YES;
+	
+    return YES;
 }
 
 - (BOOL)control:(NSControl *)control textShouldEndEditing:(NSText *)fieldEditor
 {
 	NSTableView *tv = (NSTableView*)control;
-	if([tv editedColumn] == 0) {
+	
+    if ([tv editedColumn] == 0)
+    {
 		NSString *s = [fieldEditor string];
-		if([s length] == 0) {
+	
+        if ([s length] == 0)
+        {
 			[self displayEmptyID];
 			return NO;
 		}
-		if([self labelExistsWithID:s]) {
+		
+        if ([self labelExistsWithID:s])
+        {
 			[self displayAlreadyExistsID:s];
 			return NO;			
 		}
 	}
+    
 	return YES;	
 }
 
 - (IBAction)remove:(id)sender
 {
-	int index = [mLabelsController selectionIndex];
+	NSUInteger index = [mLabelsController selectionIndex];
 	NSArray *scs = [self stringControllersUsingLabelIndex:index];
-	if([scs count] > 0) {
-		NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"The selected label is used in the project", nil)
-										 defaultButton:NSLocalizedString(@"Remove", nil)
-									   alternateButton:NSLocalizedString(@"Cancel", nil)
-										   otherButton:nil
-							 informativeTextWithFormat:NSLocalizedString(@"By choosing to remove it, iLocalize will remove all its references in the project", nil)];	
-		if([alert runModal] == NSAlertDefaultReturn) {
+	
+    if ([scs count] > 0)
+    {
+        // compose alert
+        NSAlert *alert = [NSAlert new];
+        [alert setAlertStyle:NSWarningAlertStyle];
+        [alert setMessageText:NSLocalizedStringFromTable(@"ProjectLabelsRemoveTitle",@"Alerts",nil)];
+        [alert setInformativeText:NSLocalizedStringFromTable(@"ProjectLabelsRemoveDescr",@"Alerts",nil)];
+        [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextRemove",@"Alerts",nil)];      // 1st button
+        [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextCancel",@"Alerts",nil)];      // 2nd button
+        
+        // show and evaluate alert
+        if ([alert runModal] == NSAlertFirstButtonReturn)
+        {
 			[self removeLabelIndex:index fromStringControllers:scs];
 			[mLabelsController removeObjectAtArrangedObjectIndex:index];
 		}		
-	} else
+	}
+    else
 		[mLabelsController removeObjectAtArrangedObjectIndex:index];
 }
 
 - (IBAction)ok:(id)sender
 {
-	if(![self checkLabels])
+	if (![self checkLabels])
 		return;
 	
 	[[NSNotificationCenter defaultCenter] postNotificationName:ILProjectLabelsDidChange

@@ -18,7 +18,7 @@
 }
 
 
-- (void)replaceLocalizedFileControllersFromCorrespondingBase:(NSArray*)controllers
+- (void)replaceLocalizedFileControllersFromCorrespondingBase:(NSArray *)controllers
 {
 	mFileControllers = [controllers copy];
 	
@@ -30,14 +30,15 @@
 	[alert setAlertStyle:NSWarningAlertStyle];
 	[alert setShowsSuppressionButton:YES];
 	[[alert suppressionButton] setTitle:NSLocalizedString(@"Keep localized nib layouts", @"Replace Localized File Alert")];
-	[alert beginSheetModalForWindow:[self projectWindow] modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:(void*)CFBridgingRetain(self)];
+	[alert beginSheetModalForWindow:[self projectWindow] modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:(void *)CFBridgingRetain(self)];
 }
 
 - (void) alertDidEnd:(NSAlert *)alert returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo
 {
 	BOOL keepLayout = [[alert suppressionButton] state] == NSOnState;
 	
-	if(returnCode == NSAlertSecondButtonReturn) {
+	if (returnCode == NSAlertAlternateReturn)
+    {
 		return;
 	}	
 	
@@ -46,7 +47,8 @@
 
 - (void)performReplace:(NSNumber*)keepLayout
 {
-	if([mFileControllers count] > 1) {
+	if ([mFileControllers count] > 1)
+    {
 		[[self operation] setTitle:NSLocalizedString(@"Rebuilding localized files…", nil)];
 		[[self operation] setCancellable:NO];
 		[[self operation] setIndeterminate:NO];
@@ -55,13 +57,14 @@
 	
     [[self operationDispatcher] replaceLocalizedFileControllersWithCorrespondingBase:mFileControllers
                                                                           keepLayout:keepLayout
-                                                                          completion:^(id results) {
-                                                                              [[self operation] hide];
-                                                                              [self close];
-                                                                              
-                                                                              if([[PreferencesGeneral shared] autoUpdateSmartFilters])
-                                                                                  [self refreshListOfFiles];
-                                                                          }];
+                                                                          completion:^(id results)
+    {
+        [[self operation] hide];
+        [self close];
+        
+        if ([[PreferencesGeneral shared] autoUpdateSmartFilters])
+            [self refreshListOfFiles];
+    }];
 }
 
 @end

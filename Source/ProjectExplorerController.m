@@ -27,24 +27,24 @@
 
 static NSString *FILTER_DRAG_TYPE = @"ch.arizona-software.filter";
 
-+ (ProjectExplorerController*)newInstance:(ProjectWC*)projectWC
++ (ProjectExplorerController *)newInstance:(ProjectWC *)projectWC
 {
 	ProjectExplorerController *explorer = [[ProjectExplorerController alloc] initWithNibName:@"ProjectViewExplorer" bundle:nil];
 	explorer.projectWC = projectWC;
 	return explorer;
 }
 
-- (NSArray*)groupItems
+- (NSArray *)groupItems
 {
 	return [[self.projectWC explorer] rootItem].children;
 }
 
-- (ExplorerItem*)filtersGroupItem
+- (ExplorerItem *)filtersGroupItem
 {
 	return [self groupItems][0];	
 }
 
-- (ExplorerItem*)searchGroupItem
+- (ExplorerItem *)searchGroupItem
 {
 	return [self groupItems][1];		
 }
@@ -74,11 +74,15 @@ static NSString *FILTER_DRAG_TYPE = @"ch.arizona-software.filter";
 {
 	ExplorerItem *filterGroupItem = [self filtersGroupItem];
 	NSMutableArray *files = [NSMutableArray array];
-	for(ExplorerItem *item in filterGroupItem.children) {
-		if([item filter].file) {
+    
+	for (ExplorerItem *item in filterGroupItem.children)
+    {
+		if ([item filter].file)
+        {
 			[files addObject:[item filter].file];			
 		}
 	}
+    
 	[self.projectWC projectPreferences].filterFiles = files;
 }
 
@@ -86,18 +90,26 @@ static NSString *FILTER_DRAG_TYPE = @"ch.arizona-software.filter";
 {
 	ExplorerItem *filterGroupItem = [self filtersGroupItem];
 	NSArray *files = [[self.projectWC projectPreferences] filterFiles];
-	if(!files) {
+	
+    if (!files)
+    {
 		// There is no ordering defined yet in the project. Let's try to make one by using the names of the filters.		
 		NSMutableArray *defaultFiles = [NSMutableArray array];
-		for(NSString *defaultName in [ExplorerFilterManager defaultFilterNames]) {
-			for(ExplorerItem *item in filterGroupItem.children) {
-				if([item.filter.name isEqual:defaultName]) {
+	
+        for (NSString *defaultName in [ExplorerFilterManager defaultFilterNames])
+        {
+			for (ExplorerItem *item in filterGroupItem.children)
+            {
+				if ([item.filter.name isEqual:defaultName])
+                {
 					[defaultFiles addObject:item.filter.file];
 				}
 			}			
 		}
+        
 		files = defaultFiles;
 	}
+    
 	[filterGroupItem reorderByFilterFiles:files];
 }
 
@@ -114,25 +126,33 @@ static NSString *FILTER_DRAG_TYPE = @"ch.arizona-software.filter";
 	[mSideBarController rearrangeObjects];
 }
 
-- (NSArray*)selectedExplorerItems
+- (NSArray *)selectedExplorerItems
 {
 	NSMutableArray *items = [NSMutableArray array];
-	for(ExplorerItem *item in [mSideBarController selectedObjects]) {
-		if(!item.group) {
+    
+	for (ExplorerItem *item in [mSideBarController selectedObjects])
+    {
+		if (!item.group)
+        {
 			[items addObject:item];	
 		}
 	}
+    
 	return items;
 }
 
-- (NSArray*)selectedFilters
+- (NSArray *)selectedFilters
 {
     NSMutableArray *selected = [NSMutableArray array];
-	for(ExplorerItem *item in [mSideBarController selectedObjects]) {
-		if(!item.group) {
+    
+	for (ExplorerItem *item in [mSideBarController selectedObjects])
+    {
+		if (!item.group)
+        {
             [selected addObject:[item filter]];
 		}
 	}
+    
 	return selected;
 }
 
@@ -144,25 +164,39 @@ static NSString *FILTER_DRAG_TYPE = @"ch.arizona-software.filter";
 - (void)applySelectedFilters
 {	
     NSArray *filters = [self selectedFilters];
-    if(filters.count == 1) {
+    
+    if (filters.count == 1)
+    {
         ExplorerFilter *filter = [filters firstObject];		
-        if(filter.stringContentMatching) {
+        
+        if (filter.stringContentMatching)
+        {
             [self.projectWC showSearchView:filter];
-        } else {
+        }
+        else
+        {
             [self.projectWC hideSearchView];
         }        
-    } else {
+    }
+    else
+    {
         [self.projectWC hideSearchView];
     }
     
     // Combine the selected filters into a single predicate
     NSMutableArray *smartFilters = [NSMutableArray array];
     NSMutableArray *searchFilters = [NSMutableArray array];
-    for(ExplorerFilter *filter in filters) {
-        if(filter.predicate) {
-            if(filter.stringContentMatching) {
+    
+    for (ExplorerFilter *filter in filters)
+    {
+        if (filter.predicate)
+        {
+            if (filter.stringContentMatching)
+            {
                 [searchFilters addObject:filter.predicate];
-            } else {
+            }
+            else
+            {
                 [smartFilters addObject:filter.predicate];                
             }
         }
@@ -170,27 +204,38 @@ static NSString *FILTER_DRAG_TYPE = @"ch.arizona-software.filter";
     
     // Note: the filters are ORed together and ANDed with the search filters
     NSPredicate *smartFiltersPredicate = nil;
-    if(smartFilters.count > 0) {
+    
+    if (smartFilters.count > 0)
+    {
         smartFiltersPredicate = [NSCompoundPredicate orPredicateWithSubpredicates:smartFilters];        
     }
 
     NSPredicate *searchFiltersPredicate = nil;
-    if(searchFilters.count > 0) {
+    
+    if (searchFilters.count > 0)
+    {
         searchFiltersPredicate = [NSCompoundPredicate andPredicateWithSubpredicates:searchFilters];        
     }
 
     NSPredicate *finalPredicate = nil;
-    if(smartFiltersPredicate == nil && searchFiltersPredicate) {
+    
+    if (smartFiltersPredicate == nil && searchFiltersPredicate)
+    {
         finalPredicate = searchFiltersPredicate;
-    } else if(smartFiltersPredicate && searchFiltersPredicate == nil) {
+    }
+    else if (smartFiltersPredicate && searchFiltersPredicate == nil)
+    {
         finalPredicate = smartFiltersPredicate;        
-    } else if(smartFiltersPredicate && searchFiltersPredicate){
+    }
+    else if (smartFiltersPredicate && searchFiltersPredicate)
+    {
         finalPredicate = [NSCompoundPredicate andPredicateWithSubpredicates:@[smartFiltersPredicate, searchFiltersPredicate]];
     }
-	[self.projectWC setExplorerPredicate:finalPredicate];
+	
+    [self.projectWC setExplorerPredicate:finalPredicate];
 }
 
-- (void)editFilter:(ExplorerFilter*)filter
+- (void)editFilter:(ExplorerFilter *)filter
 {
 	self.filterEditor = [[ExplorerFilterEditor alloc] init];
 	[self.filterEditor setParentWindow:[self.projectWC window]];
@@ -201,36 +246,44 @@ static NSString *FILTER_DRAG_TYPE = @"ch.arizona-software.filter";
 	[self.filterEditor showAsSheet];
 }
 
-- (void)editItem:(ExplorerItem*)item
+- (void)editItem:(ExplorerItem *)item
 {
-	if([item editable]) {		
+	if ([item editable])
+    {
 		[self editFilter:[item filter]];
 	}	
 }
 
-- (void)explorerReopenFindDialog:(ExplorerItem*)item
+- (void)explorerReopenFindDialog:(ExplorerItem *)item
 {
-	if(item) {
-//		ExplorerFindFilter *ff = (ExplorerFindFilter*)[item filter];
-//		[[FindOperation operationWithProjectProvider:[self.projectWC projectDocument]] findWithAttributes:[ff attributes]];		
+	if (item)
+    {
+        // ExplorerFindFilter *ff = (ExplorerFindFilter*)[item filter];
+        // [[FindOperation operationWithProjectProvider:[self.projectWC projectDocument]] findWithAttributes:[ff attributes]];
 	}
 }
 
 - (void)explorerEditSelectedItem
 {
 	ExplorerItem *item = [[self selectedExplorerItems] firstObject];
-	if(item) {
+    
+	if (item)
+    {
 		[self editItem:item];
-/*		if([[item filter] isSmartFilter]) {
+        
+/*		if ([[item filter] isSmartFilter]) 
+        {
 			[self explorerEditSmartFilter:item];
-		} else {
+		} 
+        else 
+        {
 			[self explorerReopenFindDialog:item];
 		}		
- */
+*/
 	}
 }
 
-- (void)createNewFilterBasedOnFilter:(ExplorerFilter*)filter
+- (void)createNewFilterBasedOnFilter:(ExplorerFilter *)filter
 {
 	ExplorerFilter *nf = [ExplorerFilter filter];
 	nf.name = filter.name;
@@ -248,27 +301,37 @@ static NSString *FILTER_DRAG_TYPE = @"ch.arizona-software.filter";
 
 #pragma mark -
 
-- (void)selectExplorerFilter:(ExplorerFilter*)filter
+- (void)selectExplorerFilter:(ExplorerFilter *)filter
 {
 	ExplorerItem *item;
-	if(filter == nil) {
+    
+	if (filter == nil)
+    {
 		item = [[self.projectWC explorer] allItem];
-	} else {
+	}
+    else
+    {
 		item = [[self.projectWC explorer] itemForFilter:filter];
-		// If the filter is temporary, make sure to assign it again to the item
+
+        // If the filter is temporary, make sure to assign it again to the item
 		// because its predicate might have changed.
-		if(filter.temporary) {
+		if (filter.temporary)
+        {
 			item.filter = filter;
 		}
-	}	
+	}
+    
 	NSAssert1(item != nil, @"ExplorerItem not found for filter %@", filter);	
 		
 	NSIndexPath *indexPath = [[self.projectWC explorer].rootItem indexPathOfItem:item];
 	NSAssert1(indexPath != nil, @"indexPath not found for item %@", item);
 		
-	if([[mSideBarController selectionIndexPath] isEqual:indexPath]) {
+	if ([[mSideBarController selectionIndexPath] isEqual:indexPath])
+    {
 		[self applySelectedFilters];		
-	} else {
+	}
+    else
+    {
 		[mSideBarController setSelectionIndexPath:indexPath];
 	}
 }
@@ -276,19 +339,19 @@ static NSString *FILTER_DRAG_TYPE = @"ch.arizona-software.filter";
 #pragma mark -
 #pragma mark ExplorerDelegate
 
-- (void)explorerItemDidAdd:(ExplorerItem*)item
+- (void)explorerItemDidAdd:(ExplorerItem *)item
 {
 	[self rearrange];
 }
 
-- (void)explorerItemDidChange:(ExplorerItem*)item
+- (void)explorerItemDidChange:(ExplorerItem *)item
 {
 	NSArray *indexPaths = [mSideBarController selectionIndexPaths];
 	[self rearrange];
 	[mSideBarController setSelectionIndexPaths:indexPaths];
 }
 
-- (void)explorerItemDidRemove:(ExplorerItem*)item
+- (void)explorerItemDidRemove:(ExplorerItem *)item
 {
 	[mSideBarOutlineView selectRowIndexes:[NSIndexSet indexSetWithIndex:1] byExtendingSelection:NO];
 	[self rearrange];
@@ -316,27 +379,36 @@ static NSString *FILTER_DRAG_TYPE = @"ch.arizona-software.filter";
 	return ![[item representedObject] group];		
 }
 
-- (void)outlineView:(NSOutlineView *)olv willDisplayCell:(NSCell*)cell forTableColumn:(NSTableColumn *)tableColumn item:(id)item
+- (void)outlineView:(NSOutlineView *)olv willDisplayCell:(NSCell *)cell forTableColumn:(NSTableColumn *)tableColumn item:(id)item
 {
 	[cell setImage:[[item representedObject] image]];
 }
 
 - (void)outlineViewDeleteSelectedRows:(NSOutlineView *)olv
 {
-	NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Delete the selected filters?", nil)
-                                     defaultButton:NSLocalizedString(@"Delete", nil)
-                                   alternateButton:NSLocalizedString(@"Cancel", nil)
-                                       otherButton:nil
-                         informativeTextWithFormat:NSLocalizedString(@"This action cannot be undone.", nil)];
+    // compose alert
+    NSAlert *alert = [NSAlert new];
+    
+    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert setMessageText:NSLocalizedStringFromTable(@"ProjectExplorerControllerDeleteFiltersTitle",@"Alerts",nil)];
+    [alert setInformativeText:NSLocalizedStringFromTable(@"ProjectExplorerControllerDeleteFiltersDescr",@"Alerts",nil)];
+    [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextDelete",@"Alerts",nil)];   // 1st button
+    [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextCancel",@"Alerts",nil)];   // 2nd button
+    
+    // show alert
     [alert beginSheetModalForWindow:[self.projectWC window] modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
 }
      
 - (void)alertDidEnd:(NSAlert *)alert returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo
 {
     [[alert window] orderOut:self];
-    if(returnCode == NSAlertDefaultReturn) {
-		for(ExplorerItem *item in [self selectedExplorerItems]) {
-			if([item deletable]) {
+
+    if (returnCode == NSAlertFirstButtonReturn)
+    {
+		for (ExplorerItem *item in [self selectedExplorerItems])
+        {
+			if ([item deletable])
+            {
 				[[self.projectWC explorer] deleteItem:item];
 			}
 		}		
@@ -353,37 +425,48 @@ static NSString *FILTER_DRAG_TYPE = @"ch.arizona-software.filter";
 - (NSDragOperation)outlineView:(NSOutlineView *)ov validateDrop:(id <NSDraggingInfo>)info proposedItem:(id)item proposedChildIndex:(NSInteger)childIndex 
 {	
 	NSPasteboard *pboard = [info draggingPasteboard];
-	if([[pboard types] containsObject:FILTER_DRAG_TYPE]) {
+	
+    if ([[pboard types] containsObject:FILTER_DRAG_TYPE])
+    {
 		// Don't drag over a nil item
-		if(item == nil) {			
+		if (item == nil)
+        {
 			return NSDragOperationNone;
 		}
 		
 		// Don't drag on the Search Group Title
-		if([item representedObject] == [self searchGroupItem]) {
+		if ([item representedObject] == [self searchGroupItem])
+        {
 			return NSDragOperationNone;			
 		}
 
 		// Get the proposed item row index
 		int proposedItemRow = [mSideBarOutlineView rowForItem:item];
-		// Don't drag over any items that are part of the SEARCH group
-		if(proposedItemRow > [self filtersGroupItem].children.count) {
+		
+        // Don't drag over any items that are part of the SEARCH group
+		if (proposedItemRow > [self filtersGroupItem].children.count)
+        {
 			return NSDragOperationNone;						
 		}
 
 		// Don't drag on the FILTERS group
-		if(proposedItemRow == 0) {
+		if (proposedItemRow == 0)
+        {
 			return NSDragOperationNone;
 		}
 		
 		// If the drag is located on an item, redirect to drop after this item.
-		if(childIndex == -1) {
+		if (childIndex == -1)
+        {
 			id redirectedItem = [mSideBarOutlineView itemAtRow:0];
 			int redirectedIndex = proposedItemRow;
 			[ov setDropItem:redirectedItem dropChildIndex:redirectedIndex];			
 		}
-		return NSDragOperationMove;
-	} else {
+		
+        return NSDragOperationMove;
+	}
+    else
+    {
 		return NSDragOperationNone;
 	}
 }
@@ -391,13 +474,18 @@ static NSString *FILTER_DRAG_TYPE = @"ch.arizona-software.filter";
 - (BOOL)outlineView:(NSOutlineView *)outlineView acceptDrop:(id <NSDraggingInfo>)info item:(id)item childIndex:(int)index
 {
 	NSPasteboard *pboard = [info draggingPasteboard];
-	if([[pboard types] containsObject:FILTER_DRAG_TYPE]) {
+    
+	if ([[pboard types] containsObject:FILTER_DRAG_TYPE])
+    {
 		NSArray *files = [NSKeyedUnarchiver unarchiveObjectWithData:[pboard dataForType:FILTER_DRAG_TYPE]];
 		[[self filtersGroupItem] moveFiltersIdentifiedByFiles:files toChildIndex:index];
 		[self saveFiltersOrdering];
 		[outlineView setNeedsDisplay:YES];
-		return YES;
-	} else {
+	
+        return YES;
+	}
+    else
+    {
 		return NO;
 	}
 }
@@ -405,18 +493,25 @@ static NSString *FILTER_DRAG_TYPE = @"ch.arizona-software.filter";
 - (BOOL)outlineView:(NSOutlineView *)outlineView writeItems:(NSArray *)items toPasteboard:(NSPasteboard *)pboard
 {
 	NSMutableArray *files = [NSMutableArray array];
-	for(id node in items) {
+	
+    for (id node in items)
+    {
 		ExplorerItem *item = [node representedObject];
 		NSString *file = [item filter].file;
 		if(file == NULL) continue;
 		[files addObject:file];
 	}
-	if(files.count > 0) {
+	
+    if (files.count > 0)
+    {
 		NSData *data = [NSKeyedArchiver archivedDataWithRootObject:files];
 		[pboard declareTypes:@[FILTER_DRAG_TYPE] owner:self];
 		[pboard setData:data forType:FILTER_DRAG_TYPE];	
-		return YES;		
-	} else {
+	
+        return YES;
+	}
+    else
+    {
 		return NO;
 	}
 
