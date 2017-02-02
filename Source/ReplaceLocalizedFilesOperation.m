@@ -22,30 +22,32 @@
 {
 	mFileControllers = [controllers copy];
 	
-	NSAlert *alert = [[NSAlert alloc] init];
-	[alert addButtonWithTitle:NSLocalizedString(@"Rebuild", @"Replace Localized File Alert")];
-	[alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"Replace Localized File Alert")];
-	[alert setMessageText:NSLocalizedString(@"Rebuild selected localized files?", @"Replace Localized File Alert")];
-	[alert setInformativeText:NSLocalizedString(@"Do you really want to rebuild the selected localized files with their corresponding base files? This action cannot be undone.", @"Replace Localized File Alert")];
-	[alert setAlertStyle:NSWarningAlertStyle];
-	[alert setShowsSuppressionButton:YES];
-	[[alert suppressionButton] setTitle:NSLocalizedString(@"Keep localized nib layouts", @"Replace Localized File Alert")];
-	[alert beginSheetModalForWindow:[self projectWindow] modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:(void *)CFBridgingRetain(self)];
-}
+    // compose alert
+    NSAlert *alert = [NSAlert new];
+    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert setMessageText:NSLocalizedStringFromTable(@"ReplaceLocalizedFilesTitle",@"Alerts",nil)];
+    [alert setInformativeText:[NSString stringWithFormat:@"%@ %@", NSLocalizedStringFromTable(@"ReplaceLocalizedFilesDescr",@"Alerts",nil), NSLocalizedStringFromTable(@"AlertNoUndoDescr",@"Alerts",nil)]];
+    [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextRebuild",@"Alerts",nil)];     // 1st button
+    [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextCancel",@"Alerts",nil)];      // 2nd button
 
-- (void) alertDidEnd:(NSAlert *)alert returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo
-{
-	BOOL keepLayout = [[alert suppressionButton] state] == NSOnState;
-	
-	if (returnCode == NSAlertAlternateReturn)
+    [alert setShowsSuppressionButton:YES];
+    [[alert suppressionButton] setTitle:NSLocalizedStringFromTable(@"AlertKeepNIBLayout",@"Alerts",nil)];
+
+    // show alert
+    [alert beginSheetModalForWindow:[self projectWindow] completionHandler:^(NSModalResponse alertReturnCode)
     {
-		return;
-	}	
-	
-	[self performSelector:@selector(performReplace:) withObject:@(keepLayout) afterDelay:0];
+        BOOL keepLayout = [[alert suppressionButton] state] == NSOnState;
+        
+        [[alert window] orderOut:self];
+        
+        if (alertReturnCode == NSAlertSecondButtonReturn)
+            return;
+
+        [self performSelector:@selector(performReplace:) withObject:@(keepLayout) afterDelay:0];
+    }];
 }
 
-- (void)performReplace:(NSNumber*)keepLayout
+- (void)performReplace:(BOOL)keepLayout
 {
 	if ([mFileControllers count] > 1)
     {

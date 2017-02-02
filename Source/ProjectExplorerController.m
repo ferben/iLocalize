@@ -391,28 +391,26 @@ static NSString *FILTER_DRAG_TYPE = @"ch.arizona-software.filter";
     
     [alert setAlertStyle:NSWarningAlertStyle];
     [alert setMessageText:NSLocalizedStringFromTable(@"ProjectExplorerControllerDeleteFiltersTitle",@"Alerts",nil)];
-    [alert setInformativeText:NSLocalizedStringFromTable(@"ProjectExplorerControllerDeleteFiltersDescr",@"Alerts",nil)];
+    [alert setInformativeText:NSLocalizedStringFromTable(@"AlertNoUndoDescr",@"Alerts",nil)];
     [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextDelete",@"Alerts",nil)];   // 1st button
     [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextCancel",@"Alerts",nil)];   // 2nd button
     
     // show alert
-    [alert beginSheetModalForWindow:[self.projectWC window] modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
-}
-     
-- (void)alertDidEnd:(NSAlert *)alert returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo
-{
-    [[alert window] orderOut:self];
-
-    if (returnCode == NSAlertFirstButtonReturn)
+    [alert beginSheetModalForWindow:[self.projectWC window] completionHandler:^(NSModalResponse alertReturnCode)
     {
-		for (ExplorerItem *item in [self selectedExplorerItems])
+        [[alert window] orderOut:self];
+         
+        if (alertReturnCode == NSAlertFirstButtonReturn)
         {
-			if ([item deletable])
+            for (ExplorerItem *item in [self selectedExplorerItems])
             {
-				[[self.projectWC explorer] deleteItem:item];
-			}
-		}		
-    }
+                if ([item deletable])
+                {
+                    [[self.projectWC explorer] deleteItem:item];
+                }
+            }
+        }
+    }];
 }
 
 - (BOOL)outlineView:(NSOutlineView *)outlineView shouldShowOutlineCellForItem:(id)ite

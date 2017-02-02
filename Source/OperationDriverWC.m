@@ -20,9 +20,11 @@
 
 - (id)init
 {
-	if((self = [super initWithWindowNibName:@"OperationDriver"])) {
+	if ((self = [super initWithWindowNibName:@"OperationDriver"]))
+    {
 		assistantInPlace = NO;
 	}
+    
 	return self;
 }
 
@@ -32,7 +34,8 @@
 	boxOriginY = box.frame.origin.y;
 	controlsHeight = boxOriginY;
 	originalMinSize = [self.window minSize];
-	[self setCanGoBack:NO];
+	
+    [self setCanGoBack:NO];
 }
 
 - (void)cancelOperation
@@ -43,7 +46,8 @@
 
 - (void)windowWillClose:(NSNotification *)notif
 {
-	if([notif object] == [self window]) {
+	if ([notif object] == [self window])
+    {
 		[self cancelOperation];
 	}
 }
@@ -59,7 +63,7 @@
 	[goBackButton setEnabled:flag];
 }
 
-- (NSImage*)assistantImage
+- (NSImage *)assistantImage
 {
 	return [NSImage imageNamed:@"GlobeAssistant"];
 }
@@ -110,7 +114,8 @@
 - (void)prepareWindowLayout
 {
 	// Only prepare if the control states have changed.
-	if(!self.showControls && [self isControlsHidden]) {
+	if (!self.showControls && [self isControlsHidden])
+    {
 		return;
 	}
 	
@@ -123,43 +128,62 @@
 	// Compute the size of the box
 	NSRect boxFrame = box.frame;	
 	CGFloat boxDeltaHeight;
-	if(self.showControls) {
+	
+    if (self.showControls)
+    {
 		boxDeltaHeight = boxFrame.origin.y - boxOriginY;
 		boxFrame.origin.y = boxOriginY;
-	} else {
+	}
+    else
+    {
 		int offset = 5;
 		boxDeltaHeight = boxFrame.origin.y - (-offset);
 		boxFrame.origin.y = -offset;
 	}
-	boxFrame.size.height += boxDeltaHeight;
+	
+    boxFrame.size.height += boxDeltaHeight;
 	[box setFrame:boxFrame];
 	
 	// First let's define the minimum height of the window content
 	CGFloat minWindowContentHeight = 80; 
-	if(self.driver.isAssistant) {
-		if(self.showControls) {
+	
+    if (self.driver.isAssistant)
+    {
+		if (self.showControls)
+        {
 			minWindowContentHeight = MAX(minWindowContentHeight, [self assistantImage].size.height + controlsHeight + 20);			
-		} else {
+		}
+        else
+        {
 			minWindowContentHeight = MAX(minWindowContentHeight, [self assistantImage].size.height + 20);
 		}
 	}
 
 	// Compute the width of the window content
 	CGFloat windowContentWidth;
-	if([self isProgressView]) {
+	
+    if ([self isProgressView])
+    {
 		windowContentWidth = windowContentFrame.size.width;
-	} else {
+	}
+    else
+    {
 		windowContentWidth = box.frame.origin.x + viewSize.width;		
 	}
 		
 	// Compute the height of the window content
 	CGFloat windowContentHeight;
-	if (self.showControls) {
+	
+    if (self.showControls)
+    {
 		windowContentHeight = viewSize.height + controlsHeight;
-	} else {
+	}
+    else
+    {
 		windowContentHeight = viewSize.height;
 	}
-	windowContentHeight = MAX(windowContentHeight, minWindowContentHeight);
+	
+    windowContentHeight = MAX(windowContentHeight, minWindowContentHeight);
 		
 	windowContentFrame.size.width = windowContentWidth;
 	windowContentFrame.size.height = windowContentHeight;
@@ -184,7 +208,7 @@
 	[[self window] setFrame:windowFrame display:YES animate:YES];
 }
 
-- (void)show:(OperationViewController*)_vc callback:(OperationCompletionCallbackBlock)_callback
+- (void)show:(OperationViewController *)_vc callback:(OperationCompletionCallbackBlock)_callback
 {
 	// Remove the content view because it looks weird when the window resizes
 	// Note: do it now because removing the view will deallocate stuff in the previous self.vc
@@ -207,24 +231,34 @@
 	[box setContentView:self.vc.view];
 
 	// Show the window
-	if(![self isVisible]) {
-        if(self.vc.bypass) {
+	if (![self isVisible])
+    {
+        if (self.vc.bypass)
+        {
             [self operationNext:self];
-        } else {
-            if(self.parentWindow != nil) {
+        }
+        else
+        {
+            if (self.parentWindow != nil)
+            {
                 [self showAsSheet];
-            } else {
+            }
+            else
+            {
                 [self showAndCenter:![self isVisible]];
             }		            
         }
 	}
 }
 
-- (void)viewControllerStateChanged:(OperationViewController*)_vc
+- (void)viewControllerStateChanged:(OperationViewController *)_vc
 {
-	if(canGoBack) {
+	if (canGoBack)
+    {
 		[goBackButton setEnabled:[_vc canGoBack]];		
-	} else {
+	}
+    else
+    {
 		[goBackButton setEnabled:NO];
 	}
 
@@ -232,12 +266,15 @@
 	[nextButton setEnabled:[_vc canContinue]];
 }
 
-- (NSWindow*)visibleWindow
+- (NSWindow *)visibleWindow
 {
     NSWindow *w = [self window];
-    if(![w isVisible]) {
+    
+    if (![w isVisible])
+    {
         w = [self parentWindow];
     }
+    
     return w;
 }
 
@@ -255,8 +292,10 @@
 
 - (IBAction)operationNext:(id)sender
 {
-	[self.vc validateContinue:^(BOOL ok) {
-		if(ok) {
+	[self.vc validateContinue:^(BOOL ok)
+    {
+		if (ok)
+        {
 			[self.vc willContinue];
             self.callback(OPERATION_NEXT);						            
 		}

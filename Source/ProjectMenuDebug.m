@@ -34,56 +34,60 @@
 - (IBAction)detectEncoding:(id)sender
 {
 	FileController *fc = [[self.projectWC selectedFileControllers] firstObject];
-	if(fc) {
+	
+    if (fc)
+    {
 		FMEngine *e = [[self projectDocument] fileModuleEngineForFile:[fc filename]];
-		StringEncoding* encoding = [e encodingOfFile:[fc filename] language:[[self.projectWC selectedLanguageController] language]];
-		if([fc encoding] != encoding) {
-			NSString *info = [NSString stringWithFormat:NSLocalizedString(@"iLocalize has detected that the encoding of the selected file (%1$@) mismatches the encoding of the actual file (%2$@). Do you want to reload the file using the new detected encoding '%2$@'?", nil), 
-							  [[fc encoding] encodingName],
-							  encoding.encodingName];
-			NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Mismatch encoding", nil)
-											 defaultButton:NSLocalizedString(@"Reload", nil)
-										   alternateButton:NSLocalizedString(@"Cancel", nil)
-											   otherButton:nil
-								 informativeTextWithFormat:@"%@", info];
-			
-			[alert beginSheetModalForWindow:[self window] 
-							  modalDelegate:self
-							 didEndSelector:@selector(encodingMismatchAlertDidEnd:returnCode:contextInfo:) 
-								contextInfo:(void*)CFBridgingRetain(fc)];
-		}
-	}
+		StringEncoding *encoding = [e encodingOfFile:[fc filename] language:[[self.projectWC selectedLanguageController] language]];
+        
+		if ([fc encoding] != encoding)
+        {
+            // compose alert
+            NSAlert *alert = [NSAlert new];
+            [alert setAlertStyle:NSWarningAlertStyle];
+            [alert setMessageText:NSLocalizedStringFromTable(@"DebugMismatchEncodingTitle",@"Alerts",nil)];
+            [alert setInformativeText:[NSString stringWithFormat:NSLocalizedStringFromTable(@"DebugMismatchEncodingDescr", @"Alerts", nil), [[fc encoding] encodingName], encoding.encodingName]];
+            [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextReload",@"Alerts",nil)];      // 1st button
+            [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextCancel",@"Alerts",nil)];      // 2nd button
+            
+            // show alert
+            [alert beginSheetModalForWindow:[self window] completionHandler:^(NSModalResponse alertReturnCode)
+            {
+                [[alert window] orderOut:self];
+                
+                if (alertReturnCode == NSAlertFirstButtonReturn)
+                {
+                    // old stuff from -beginSheetModalForWindow:modalDelegate:didEndSelector:contextInfo:
+                    // FileController *fc = (__bridge FileController *)(contextInfo);
+                    [fc setEncoding:[self encodingOfFileController:fc]];
+                    [[SaveAllOperation operationWithProjectProvider:[self projectDocument]] reloadAll:@[fc]];
+                }
+            }];
+        }
+    }
 }
 
-- (StringEncoding*)encodingOfFileController:(FileController*)fc
+- (StringEncoding *)encodingOfFileController:(FileController *)fc
 {
 	BOOL hasEncoding;
-	return [StringEncodingTool encodingOfFile:[fc absoluteFilePath] defaultEncoding:[fc encoding] hasEncodingInformation:&hasEncoding];
+
+    return [StringEncodingTool encodingOfFile:[fc absoluteFilePath] defaultEncoding:[fc encoding] hasEncodingInformation:&hasEncoding];
 }
 
-- (void)encodingMismatchAlertDidEnd:(NSAlert *)alert returnCode:(int)returnCode contextInfo:(void *)contextInfo
-{
-	if (returnCode == NSAlertFirstButtonReturn)
-    {
-		FileController *fc = (__bridge FileController *)(contextInfo);
-		[fc setEncoding:[self encodingOfFileController:fc]];
-		[[SaveAllOperation operationWithProjectProvider:[self projectDocument]] reloadAll:@[fc]];
-	}		
-}
-
-- (OperationWC*)operation
+- (OperationWC *)operation
 {
 	return [[self projectDocument] operation];
 }
 
-- (NibEngineResult*)convertNib:(NSString*)nib toXib:(NSString*)xib
+- (NibEngineResult *)convertNib:(NSString *)nib toXib:(NSString *)xib
 {	
 	NibEngine *engine = [NibEngine engineWithConsole:[[self projectDocument] console]]; 
 	NibEngineResult *result = [engine convertNibFile:nib toXibFile:xib];
-	return result;
+	
+    return result;
 }
 
-- (NibEngineResult*)convertNibsToXibsFromPath:(NSString*)source toPath:(NSString*)target
+- (NibEngineResult *)convertNibsToXibsFromPath:(NSString *)source toPath:(NSString *)target
 {
 	[[self operation] setTitle:NSLocalizedString(@"Converting…", nil)];
 	[[self operation] setCancellable:YES];
@@ -91,21 +95,29 @@
 	[[self operation] show];	
 	
 	NSArray *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:source error:nil];
-	[[self operation] setMaxSteps:[files count]];
 	
-	for(NSString *sourceFile in files) {
-		if([[self operation] shouldCancel]) break;
-		if([[sourceFile pathExtension] isEqualToString:@"nib"]) {
+    [[self operation] setMaxSteps:[files count]];
+	
+	for (NSString *sourceFile in files)
+    {
+		if ([[self operation] shouldCancel])
+            break;
+		
+        if ([[sourceFile pathExtension] isEqualToString:@"nib"])
+        {
 			NibEngineResult *r = [self convertNib:[source stringByAppendingPathComponent:sourceFile] 
 											toXib:[target stringByAppendingPathComponent:[[sourceFile stringByDeletingPathExtension] stringByAppendingString:@".xib"]]];
-			if(!r.success) {
+			if (!r.success)
+            {
 				[[self operation] hide];
 				return r;
 			}
-			[[self operation] increment];
+			
+            [[self operation] increment];
 		}
-	}	
-	[[self operation] hide];
+	}
+
+    [[self operation] hide];
 	return nil;
 }
 
@@ -138,11 +150,15 @@
 //	}
 }
 
-- (IBAction)tmxPerformanceTest:(id)sender {
-    for (NSUInteger index=0; index<20; index++) {
+- (IBAction)tmxPerformanceTest:(id)sender
+{
+    for (NSUInteger index = 0; index < 20; index++)
+    {
         TMXImporter *importer = [[TMXImporter alloc] init];
         importer.useFastXMLParser = YES;
-        if (![importer importDocument:[NSURL fileURLWithPath:@"/Users/bovet/Development/ArizonaSoftware/software/iLocalize/support/Glossaries/Skype_Italian_07_06_09-test.tmx"] error:nil]) {
+    
+        if (![importer importDocument:[NSURL fileURLWithPath:@"/Users/bovet/Development/ArizonaSoftware/software/iLocalize/support/Glossaries/Skype_Italian_07_06_09-test.tmx"] error:nil])
+        {
             NSLog(@"Error!");
             break;
         }

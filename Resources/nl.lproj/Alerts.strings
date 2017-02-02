@@ -1,0 +1,150 @@
+/* 
+  Alerts.strings
+  iLocalize
+
+  Created by Ulf Dunkel on 30.01.17.
+  Copyright © 2017 BSD License. All rights reserved.
+*/
+
+// DefaultTexts
+"AlertNoUndoDescr" = "Dit kan niet ongedaan gemaakt worden.";
+"AlertOverwriteItDescr" = "Wilt u het overschrijven?";
+"AlertKeepNIBLayout" = "Behoud layout vertaalde NIBs"";
+
+
+// AlertButtonTexts
+"AlertButtonTextOK" = "OK";
+"AlertButtonTextCancel" = "Annuleer";
+"AlertButtonTextCheck" = "Controleer";
+"AlertButtonTextClear" = "Wis";
+"AlertButtonTextDelete" = "Verwijder";
+"AlertButtonTextDoNothing" = "Doe niets";
+"AlertButtonTextDontCheck" = "Controleer niet";
+"AlertButtonTextDontOpen" = "Open niet";
+"AlertButtonTextMerge" = "Voeg samen…";
+"AlertButtonTextMoveToTrash" = "Verplaats naar prullenmand";
+"AlertButtonTextOpen" = "Open";
+"AlertButtonTextOpenAndUpgrade" = "Open en upgrade";
+"AlertButtonTextOverwrite" = "Overschrijf";
+"AlertButtonTextRebuild" = "Bouw opnieuw op";
+"AlertButtonTextReload" = "Ververs";
+"AlertButtonTextRemove" = "Verwijder";
+"AlertButtonTextRename" = "Wijzig naam";
+"AlertButtonTextSave" = "Bewaar";
+"AlertButtonTextSaveAs" = "Bewaar als…";
+
+
+
+// AddCustomLanguage
+"AddCustomLanguageCannotAddTitle" = "Kan deze taal niet toevoegen";
+"AddCustomLanguageCannotAddDescr" = "Deze taal bestaat al in dit project.";
+
+// AddRemoveFileOperations
+"AddRemoveFileOperationsTitle" = "Geselecteerde bestanden verwijderen?";
+"AddRemoveFileOperationsDescr" = "Weet u zeker dat u de geselecteerde bestanden wilt verwijderen? Dit kan niet ongedaan gemaakt worden.";
+
+// ApplicationDelegate
+"ApplicationDelegateNIBToolTitle" = "Vereist hulpprogramma ontbreekt";
+"ApplicationDelegateNIBToolDescr" = "iLocalize kon het commandoregel programma “ibtool” niet vinden, welke vereist is om te vertalen. Zorg dat Xcode 3 of hoger is geïnstalleerd op uw machine. U kunt het pad naar “ibtool” handmatig opgeven in Voorkeuren > Geavanceerd > Hulpprogramma’s.";
+
+// CheckProjectOperation
+"CheckProjectOperationTitle" = "Het project is gecontroleerd";
+
+// Console
+"ConsoleClearAllEntriesTitle" = "Alle regels verwijderen?";
+"ConsoleClearAllEntriesDescr" = "Weet u zeker dat u alle regels in de Console wilt verwijderen? Dit kan niet ongedaan gemaakt worden.";
+
+// DebugMismatchEncoding
+"DebugMismatchEncodingTitle" = "Codering komt niet overeen";
+"DebugMismatchEncodingDescr" = "iLocalize heeft gedetecteerd dat de codering van het geselecteerde bestand (%1$@) niet overeenkomt met de codering van het werkelijke bestand (%2$@). Wilt u het bestand opnieuw laden met de gedetecteerde codering %2$@?";
+
+// ExportProject
+"ExportProjectFileExistsTitle" = "Het geëxporteerde bestand “%@” bestaat al";
+"ExportProjectFileExistsDescr" = "Wilt u samenvoegen met de bestemming of de bestemming overschrijven?";
+
+// ExportProjectOperation
+"ExportProjectOperationAppleScriptErrorTitle" = "AppleScript gaf “%@” terug";
+"ExportProjectOperationAppleScriptErrorDescr" = "Er is een fout opgetreden bij het aanmaken van een nieuwe e-mail.";
+"ExportProjectOperationZIPErrorTitle" = "ZIP gaf een fout terug";
+"ExportProjectOperationZIPErrorDescr" = "Er is een fout opgetreden bij het comprimeren van de geëxporteerde vertaling.";
+
+// Glossary
+"GlossaryRemoveTitle" = "Verwijder alle dubbele vertalingen?";
+
+// GlossaryManager
+"GlossaryManagerMoveTitle" = "Geselecteerde onderdelen naar prullenmand verplaatsen?";
+
+// GlossaryNew
+"GlossaryNewOverwriteTitle" = "De opgegeven woordenlijst bestaat al";
+
+// GlossaryNotIndexed
+"GlossaryNotIndexedAliasTitle" = "Kan geen alias maken";
+"GlossaryNotIndexedAliasDescr" = "Kan geen alias maken omdat er een fout optrad.";
+"GlossaryNotIndexedMoveTitle" = "Kan woordenlijst niet verplaatsen";
+"GlossaryNotIndexedMoveDescr" = "Er is een fout opgetreden bij het verplaatsen van de woordenlijst: %@";
+
+// History Manager
+"HistoryManagerDeleteTitle" = "De geselecteerde momentopname verwijderen?";
+
+// LaunchOperation
+"LaunchOperationBundleTitle" = "Kan niet-programma bundel niet starten";
+"LaunchOperationBundleDescr" = "Alleen .app of .ape bundels kunnen vanuit iLocalize gestart worden.";
+"LaunchOperationCannotTitle" = "Kan het programma niet starten";
+"LaunchOperationCannotDescr" = "Het programma is niet gevonden. Zorg dat u het programma genereert voordat u het start.";
+
+// NewGlossaryOperation
+"NewGlossaryOperationGlossaryGeneratedTitle" = "De woordenlijst is aangemaakt";
+"NewGlossaryOperationGlossaryGeneratedDescr" = "Wilt u het openen?";
+"NewGlossaryOperationGlossariesGeneratedTitle" = "De woordenlijsten zijn aangemaakt";
+"NewGlossaryOperationGlossariesGeneratedDescr" = "Wilt u ze openen?";
+
+// NewGlossaryOperationDriver
+"NewGlossaryOperationDriverGlossaryTitle" = "De woordenlijst bestaat al op schijf";
+"NewGlossaryOperationDriverGlossariesTitle" = "Een of meer woordenlijsten bestaan al op schijf";
+"NewGlossaryOperationDriverGlossariesDescr" = "Wilt u ze overschrijven?";
+
+// PresetsManager
+"PresetsManagerRename" = "Wijzig naam preset";
+"PresetsManagerSaveNew" = "Bewaar nieuwe preset";
+"PresetsManagerEnterName" = "Voer de naam voor de preset in:";
+
+// Project
+"ProjectCheckTitle" = "Het is aan te bevelen het project te controleren op inconsistenties";
+"ProjectCheckDescr" = "Wilt u het project controleren? Het project kan op elk moment gecontroleerd worden via het commando onder het menu Project.";
+
+// ProjectBrowser
+"ProjectBrowserDeleteTitle" = "Geselecteerd project verwijderen?";
+"ProjectBrowserDeleteDescr" = "Het project zal naar de prullenmand verplaatst worden.";
+
+// ProjectDocument
+"ProjectDocumentInvalidTitle" = "Dit project kan niet worden geopend omdat het archief ongeldig is";
+"ProjectDocumentRecentTitle" = "Dit project is te nieuw en kan niet met deze versie van iLocalize geopend worden";
+"ProjectDocumentRecentDescr" = "Gebruik de laatste versie van iLocalize om deze te openen.";
+"ProjectDocumentTigerTitle" = "Dit project kan niet worden geopend omdat het is gemaakt onder Tiger";
+"ProjectDocumentTigerDescr" = "Deze versie van iLocalize ondersteunt alleen projecten die zijn gemaakt onder Leopard of hoger met ibtool.";
+"ProjectDocumentUpgradeTitle" = "Het project moet worden bijgewerkt";
+"ProjectDocumentUpgradeDescr" = "Het project “%@” is bewaard met een oudere versie van iLocalize. Om deze te openen moet iLocalize het bestand upgraden, waarbij een kopie van het oudere project blijft bestaan. Wilt u het project openen en upgraden?";
+
+// ProjectExplorerController
+"ProjectExplorerControllerDeleteFiltersTitle" = "De geselecteerde filters verwijderen?";
+
+// ProjectLabels
+"ProjectLabelsInvalidTitle" = "Ongeldig label id";
+"ProjectLabelsRemoveTitle" = "Het geselecteerde label wordt gebruikt in het project";
+"ProjectLabelsRemoveDescr" = "Als u kiest voor verwijdering, zal iLocalize al zijn verwijzingen in het project verwijderen.";
+
+// ProjectMenuEdit
+"ProjectMenuEditChangeTitle" = "De tekstcodering wijzigen van de geselecteerde bestanden?";
+"ProjectMenuEditChangeDescr" = "Wilt u ieder bestand opnieuw inlezen als “%1$@”, of wilt u de inhoud van ieder bestand vanuit geheugen bewaren als “%2$@”?";
+
+// RebuildBaseFiles
+"RebuildBaseFilesTitle" = "Geselecteerde basisbestanden opnieuw opbouwen?";
+"RebuildBaseFilesDescr" = "Weet u zeker dat u de geselecteerde basisbestanden opnieuw wilt opbouwen? Dit zal ook alle corresponderende vertaalde bestanden bijwerken.";
+
+// RemoveLanguage
+"RemoveLanguageTitle" = "Wilt u “%@” echt verwijderen?";
+"RemoveLanguageDescr" = "Weet u zeker dat u deze taal wilt verwijderen?";
+
+// ReplaceLocalizedFiles
+"ReplaceLocalizedFilesTitle" = "Geselecteerde, vertaalde bestanden opnieuw opbouwen?";
+"ReplaceLocalizedFilesDescr" = "Weet u zeker dat u de geselecteerde, vertaalde bestanden opnieuw wilt opbouwen?";

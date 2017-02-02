@@ -28,12 +28,14 @@
 
 - (id)init
 {
-	if((self = [super initWithNibName:@"ExportProject"])) {
+	if ((self = [super initWithNibName:@"ExportProject"]))
+    {
 		pathNodeSelectionView = [[AZPathNodeSelectionView alloc] init];
 		languagesSelectionView = [[AZListSelectionView alloc] init];
 		presetsManager = [[PresetsManager alloc] init];
 		presetsManager.delegate = self;
 	}
+    
 	return self;
 }
 
@@ -41,9 +43,11 @@
 - (void)updateTargetFolder
 {
     // If the path is not defined or does not exist, use the current directory
-	if(!self.settings.destFolder || ![self.settings.destFolder isPathExisting]) {
+	if (!self.settings.destFolder || ![self.settings.destFolder isPathExisting])
+    {
 		self.settings.destFolder = NSHomeDirectory();
 	}
+    
 	[targetPathControl setURL:[NSURL fileURLWithPath:self.settings.destFolder]];
     [self stateChanged];
 }
@@ -55,10 +59,13 @@
 	pathNodeSelectionView.rootPath = self.rootPath;
 	[pathNodeSelectionView refresh];	
 
-	if(self.settings.paths == nil) {
+	if (self.settings.paths == nil)
+    {
 		// if paths is nil, it means everything needs to be exported
 		[pathNodeSelectionView selectAll];
-	} else {
+	}
+    else
+    {
 		[pathNodeSelectionView selectRelativePaths:self.settings.paths];
 	}
 }
@@ -66,24 +73,30 @@
 - (void)updateLanguages
 {
 	NSMutableArray *languages = [NSMutableArray array];
-	for(LanguageController *languageController in [[[self projectProvider] projectController] languageControllers]) {
+	
+    for (LanguageController *languageController in [[[self projectProvider] projectController] languageControllers])
+    {
 		NSMutableDictionary *dic = [NSMutableDictionary dictionary];
 		dic[LANGUAGE_NAME] = [languageController language];
 		dic[LANGUAGE_DISPLAY] = [languageController displayLanguage];
 		dic[[AZListSelectionView selectedKey]] = @([self.settings.languages containsObject:[languageController language]]);			
 		
-		if(![languageController isBaseLanguage]) {
+		if (![languageController isBaseLanguage])
+        {
 			NSString *s = [languageController percentCompletedString];
 			dic[LANGUAGE_PROGRESS] = [s length] == 0 ? NSLocalizedString(@"Done", nil) : s;			
 		}
 		
 		NSImage *image = [languageController allWarningsImage];
-		if(image) {
+		
+        if (image)
+        {
 			dic[LANGUAGE_WARNING] = image;						
 		}
 		
 		[languages addObject:dic];
 	}
+    
 	languagesSelectionView.outlineView = languagesOutlineView;
 	languagesSelectionView.elements = languages;
 	[languagesSelectionView reloadData];
@@ -100,7 +113,9 @@
 {		
 	presetsManager.parentWindow = [self window];
 	presetsManager.popUpButton = presetPopUpButton;
-    if (!self.bypass) {
+    
+    if (!self.bypass)
+    {
         // Only build the preset menu when not bypassing
         // the view controller (which means it is executing
         // an Export As Preset and building the preset
@@ -112,26 +127,31 @@
 	[self applySettings];
 }
 
-/**
- Returns an array of selected path by the user.
- */
-- (NSArray*)selectedPaths
+// Returns an array of selected path by the user.
+- (NSArray *)selectedPaths
 {
-    if([pathNodeSelectionView isAllSelected]) {
+    if ([pathNodeSelectionView isAllSelected])
+    {
 		return nil; // everything
-	} else {
+	}
+    else
+    {
         return [pathNodeSelectionView selectedRelativePaths];
 	}
 }
 
-- (NSArray*)selectedLanguages
+- (NSArray *)selectedLanguages
 {
 	NSMutableArray *array = [NSMutableArray array];
-	for(NSDictionary *dic in [languagesSelectionView selectedElements]) {
-		if([dic[[AZListSelectionView selectedKey]] boolValue]) {
+    
+	for (NSDictionary *dic in [languagesSelectionView selectedElements])
+    {
+		if ([dic[[AZListSelectionView selectedKey]] boolValue])
+        {
 			[array addObject:dic[LANGUAGE_NAME]];					
 		}
 	}
+    
 	return array;
 }
 
@@ -142,7 +162,7 @@
 	self.settings.destFolder = [[targetPathControl URL] path];
 }
 
-- (NSString*)nextButtonTitle
+- (NSString *)nextButtonTitle
 {
 	return NSLocalizedString(@"Export", nil);
 }
@@ -166,31 +186,39 @@
 {
 	[self saveSettings];
 
-	if([self.settings.compressedTargetBundle isPathExisting]) {
-		NSAlert *alert = [NSAlert alertWithMessageText:[NSString stringWithFormat:NSLocalizedString(@"The exported file “%@” already exists", nil), [self.settings.compressedTargetBundle lastPathComponent]]
-										 defaultButton:NSLocalizedString(@"Merge…", nil)
-									   alternateButton:NSLocalizedString(@"Overwrite", nil)
-										   otherButton:NSLocalizedString(@"Cancel", nil)
-							 informativeTextWithFormat:NSLocalizedString(@"Do you want to merge or overwrite the destination?", nil)];	
-		[alert beginSheetModalForWindow:[self visibleWindow]
-                          modalDelegate:self
-                         didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:)
-                            contextInfo:(__bridge_retained void*)[callback copy]];
-	} else {
+	if ([self.settings.compressedTargetBundle isPathExisting])
+    {
+        // compose alert
+        NSAlert *alert = [NSAlert new];
+        [alert setAlertStyle:NSWarningAlertStyle];
+        [alert setMessageText:[NSString stringWithFormat:NSLocalizedStringFromTable(@"ExportProjectFileExistsTitle",@"Alerts",nil), [self.settings.compressedTargetBundle lastPathComponent]]];
+        [alert setInformativeText:NSLocalizedStringFromTable(@"ExportProjectFileExistsDescr",@"Alerts",nil)];
+        [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextMerge",@"Alerts",nil)];           // 1st button
+        [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextOverwrite",@"Alerts",nil)];       // 2nd button
+        [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextCancel",@"Alerts",nil)];          // 3rd button
+        
+        // show alert
+        [alert beginSheetModalForWindow:[self visibleWindow] completionHandler:^(NSModalResponse alertReturnCode)
+        {
+            [[alert window] orderOut:self];
+
+            // old stuff from -beginSheetModalForWindow:modalDelegate:didEndSelector:contextInfo:
+            // contextInfo:(__bridge_retained void*)[callback copy]];
+            // ValidateContinueCallback callback = (__bridge_transfer ValidateContinueCallback)(contextInfo);
+
+            switch (alertReturnCode)
+            {
+                case NSAlertFirstButtonReturn:
+                case NSAlertSecondButtonReturn:
+                    self.settings.mergeFiles = (alertReturnCode == NSAlertFirstButtonReturn);
+                    callback(YES);
+            }
+        }];
+	}
+    else
+    {
 		callback(YES);	
 	}	
-}
-
-- (void)alertDidEnd:(NSAlert *)alert returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo
-{
-	[[alert window] orderOut:self];
-	ValidateContinueCallback callback = (__bridge_transfer ValidateContinueCallback)(contextInfo);
-    
-	if (returnCode == NSAlertAlternateReturn || returnCode == NSAlertDefaultReturn)
-    {
-        self.settings.mergeFiles = returnCode == NSAlertDefaultReturn;
-		callback(YES);
-	}
 }
 
 #pragma mark Actions
@@ -202,19 +230,23 @@
 	ExportProjectOptionsOVC *ovc = [ExportProjectOptionsOVC createInstance];
 	ovc.projectProvider = self.projectProvider;
 	ovc.settings = self.settings;
+    
 	[self runModalOperationViewController:ovc];
 }
 
 - (IBAction)chooseTargetDirectory:(id)sender
 {
 	NSOpenPanel *panel = [NSOpenPanel openPanel];
+    
 	[panel setCanChooseDirectories:YES];
 	[panel setCanChooseFiles:NO];
 	[panel setCanCreateDirectories:YES];
     [panel setDirectoryURL:[NSURL fileURLWithPath:self.settings.destFolder]];
 	[panel setTitle:NSLocalizedString(@"Choose Destination Folder", nil)];
 	[panel setPrompt:NSLocalizedString(@"Choose", nil)];
-	if([panel runModal] == NSFileHandlingPanelOKButton) {
+
+    if ([panel runModal] == NSFileHandlingPanelOKButton)
+    {
 		self.settings.destFolder = [[panel URL] path];		
 		[self updateTargetFolder];
 	}
@@ -222,27 +254,30 @@
 
 #pragma mark Presets Delegate
 
-- (NSArray*)presets
+- (NSArray *)presets
 {
 	return [[self.projectProvider projectPrefs] exportSettingsPresets];
 }
 
-- (void)setPresets:(NSArray*)presets
+- (void)setPresets:(NSArray *)presets
 {
 	[[self.projectProvider projectPrefs] setExportSettingsPresets:presets];
 }
 
-- (NSString*)presetName:(id)preset
+- (NSString *)presetName:(id)preset
 {
 	return preset[EXPORT_PRESET_NAME];	
 }
 
-- (id)createPresetWithName:(NSString*)name
+- (id)createPresetWithName:(NSString *)name
 {
 	[self saveSettings];
-	NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-	dic[EXPORT_PRESET_NAME] = name;
+	
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+	
+    dic[EXPORT_PRESET_NAME] = name;
 	dic[EXPORT_PRESET_SETTINGS] = [self.settings data];
+    
 	return dic;	
 }
 

@@ -7,27 +7,30 @@
 //
 
 @protocol PresetsManagerDelegate
-- (NSArray*)presets;
+
+- (NSArray *)presets;
 - (void)setPresets:(NSArray*)presets;
-- (NSString*)presetName:(id)preset;
-- (id)createPresetWithName:(NSString*)name;
+- (NSString *)presetName:(id)preset;
+- (id)createPresetWithName:(NSString *)name;
 - (void)applyPreset:(id)preset;
+
 @end
 
-@interface PresetsManager : NSObject<NSTextFieldDelegate> {
+@interface PresetsManager : NSObject<NSTextFieldDelegate>
+{
 	NSTextField *nameField;
 	NSTextField *infoAlertLabel;
 	NSButton *okButton;
 	NSString *originalName;
 	BOOL alertIsRenaming;
-	int currentPresetTag;
+	NSInteger currentPresetTag;
 }
+
 @property (assign) NSWindow *parentWindow;
 @property (weak) id<PresetsManagerDelegate> delegate;
 @property (weak) NSPopUpButton *popUpButton;
 
 - (void)buildPreset;
-
 - (IBAction)presetPopUp:(id)sender;
 
 @end

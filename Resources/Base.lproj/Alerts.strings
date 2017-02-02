@@ -3,9 +3,16 @@
   iLocalize
 
   Created by Ulf Dunkel on 30.01.17.
-  Copyright © 2017 Arizona Software. All rights reserved.
+  Copyright © 2017 BSD License. All rights reserved.
 */
 
+// DefaultTexts
+"AlertNoUndoDescr" = "This action cannot be undone.";
+"AlertOverwriteItDescr" = "Do you want to overwrite it?";
+"AlertKeepNIBLayout" = "Keep localized NIB layouts";
+
+
+// AlertButtonTexts
 "AlertButtonTextOK" = "OK";
 "AlertButtonTextCancel" = "Cancel";
 "AlertButtonTextCheck" = "Check";
@@ -14,23 +21,29 @@
 "AlertButtonTextDoNothing" = "Do Nothing";
 "AlertButtonTextDontCheck" = "Don't Check";
 "AlertButtonTextDontOpen" = "Don't Open";
+"AlertButtonTextMerge" = "Merge…";
 "AlertButtonTextMoveToTrash" = "Move to Trash";
 "AlertButtonTextOpen" = "Open";
 "AlertButtonTextOpenAndUpgrade" = "Open and Upgrade";
 "AlertButtonTextOverwrite" = "Overwrite";
+"AlertButtonTextRebuild" = "Rebuild";
+"AlertButtonTextReload" = "Reload";
 "AlertButtonTextRemove" = "Remove";
+"AlertButtonTextRename" = "Rename";
+"AlertButtonTextSave" = "Save";
+"AlertButtonTextSaveAs" = "Save As…";
 
 
 
 // AddCustomLanguage
 "AddCustomLanguageCannotAddTitle" = "Cannot Add This Language";
-"AddCustomLanguageCannotAddDescr" = "This language already exists in the current project.";
+"AddCustomLanguageCannotAddDescr" = "This language already exists in the project.";
 
 // AddRemoveFileOperations
 "AddRemoveFileOperationsTitle" = "Delete Selected Files?";
 "AddRemoveFileOperationsDescr" = "Do you really want to delete the selected files? This action cannot be undone.";
 
-// Application Delegate
+// ApplicationDelegate
 "ApplicationDelegateNIBToolTitle" = "Required Tool Missing";
 "ApplicationDelegateNIBToolDescr" = "iLocalize did not find the command-line tool “ibtool” which is required to perform localization. Make sure that Xcode 3 or above is installed on your machine. The path to “ibtool” can be manually specified in Preferences > Advanced > Tools.";
 
@@ -41,23 +54,28 @@
 "ConsoleClearAllEntriesTitle" = "Clear All Entries?";
 "ConsoleClearAllEntriesDescr" = "Are you sure you want to remove all entries in the Console? This action cannot be undone.";
 
+// DebugMismatchEncoding
+"DebugMismatchEncodingTitle" = "Mismatch Encoding";
+"DebugMismatchEncodingDescr" = "iLocalize has detected that the encoding of the selected file (%1$@) mismatches the encoding of the actual file (%2$@). Do you want to reload the file using the new detected encoding '%2$@'?";
+
+// ExportProject
+"ExportProjectFileExistsTitle" = "The exported file “%@” already exists";
+"ExportProjectFileExistsDescr" = "Do you want to merge or overwrite the destination?";
+
 // ExportProjectOperation
 "ExportProjectOperationAppleScriptErrorTitle" = "AppleScript Returned “%@”";
-"ExportProjectOperationAppleScriptErrorDescr" = "An error occurred while creating a new e-mail.";
+"ExportProjectOperationAppleScriptErrorDescr" = "An error occurred while creating a new email.";
 "ExportProjectOperationZIPErrorTitle" = "ZIP Returned an Error";
 "ExportProjectOperationZIPErrorDescr" = "An error occurred when compressing the exported localization.";
 
 // Glossary
 "GlossaryRemoveTitle" = "Remove Duplicate Entries?";
-"GlossaryRemoveDescr" = "This action cannot be undone.";
 
 // GlossaryManager
 "GlossaryManagerMoveTitle" = "Move the Selected Items To the Trash?";
-"GlossaryManagerMoveDescr" = "This action cannot be undone.";
 
 // GlossaryNew
 "GlossaryNewOverwriteTitle" = "The Specified Glossary Already Exists";
-"GlossaryNewOverwriteDescr" = "Do you want to overwrite it? This action cannot be undone.";
 
 // GlossaryNotIndexed
 "GlossaryNotIndexedAliasTitle" = "Cannot Create the Alias";
@@ -67,7 +85,6 @@
 
 // History Manager
 "HistoryManagerDeleteTitle" = "Delete the Selected Snapshot?";
-"HistoryManagerDeleteDescr" = "This action cannot be undone.";
 
 // LaunchOperation
 "LaunchOperationBundleTitle" = "Cannot Launch Non-Application Bundle";
@@ -83,9 +100,13 @@
 
 // NewGlossaryOperationDriver
 "NewGlossaryOperationDriverGlossaryTitle" = "The Glossary Already Exists On the Disk";
-"NewGlossaryOperationDriverGlossaryDescr" = "Do you want to overwrite it?";
 "NewGlossaryOperationDriverGlossariesTitle" = "One or More Glossaries Already Exist On the Disk";
 "NewGlossaryOperationDriverGlossariesDescr" = "Do you want to overwrite them?";
+
+// PresetsManager
+"PresetsManagerRename" = "Rename Preset";
+"PresetsManagerSaveNew" = "Save New Preset";
+"PresetsManagerEnterName" = "Enter the name of the preset:";
 
 // Project
 "ProjectCheckTitle" = "It Is Recommended to Check the Project Against Inconsistencies";
@@ -93,11 +114,10 @@
 
 // ProjectBrowser
 "ProjectBrowserDeleteTitle" = "Delete Selected Project?";
-"ProjectBrowserDeleteDescr" =" The project will be moved to the trash.";
+"ProjectBrowserDeleteDescr" = "The project will be moved to the trash.";
 
 // ProjectDocument
 "ProjectDocumentInvalidTitle" = "This Project Cannot Be Opened Because the Archive Is Invalid";
-"ProjectDocumentInvalidDescr" = "Update to the latest version of iLocalize to open it.";
 "ProjectDocumentRecentTitle" = "This Project Is Too Recent and Cannot Be Opened By this Version of iLocalize";
 "ProjectDocumentRecentDescr" = "Update to the latest version of iLocalize to open it.";
 "ProjectDocumentTigerTitle" = "This Project Cannot Be Opened Because It Has Been Created On Tiger";
@@ -107,9 +127,24 @@
 
 // ProjectExplorerController
 "ProjectExplorerControllerDeleteFiltersTitle" = "Delete the Selected Filters?";
-"ProjectExplorerControllerDeleteFiltersDescr" = "This action cannot be undone.";
 
 // ProjectLabels
 "ProjectLabelsInvalidTitle" = "Invalid label ID";
 "ProjectLabelsRemoveTitle" = "The Selected Label Is Used In the Project";
 "ProjectLabelsRemoveDescr" = "By choosing to remove it, iLocalize will remove all its references in the project.";
+
+// ProjectMenuEdit
+"ProjectMenuEditChangeTitle" = "Change the encoding of the selected files?";
+"ProjectMenuEditChangeDescr" = "Do you want to reload each file as '%@' or save the current in-memory content of each file as a '%@' file?";
+
+// RebuildBaseFiles
+"RebuildBaseFilesTitle" = "Rebuild selected base files?";
+"RebuildBaseFilesDescr" = "Do you really want to rebuild the selected base files? This will also update all localized files.";
+
+// RemoveLanguage
+"RemoveLanguageTitle" = "Delete “%@”?";
+"RemoveLanguageDescr" = "Do you really want to delete this language?";
+
+// ReplaceLocalizedFiles
+"ReplaceLocalizedFilesTitle" = "Rebuild Selected Localized Files?";
+"ReplaceLocalizedFilesDescr" = "Do you really want to rebuild the selected localized files with their corresponding base files?";

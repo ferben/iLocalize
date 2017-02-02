@@ -1,0 +1,150 @@
+/* 
+  Alerts.strings
+  iLocalize
+
+  Created by Ulf Dunkel on 30.01.17.
+  Copyright © 2017 BSD License. All rights reserved.
+*/
+
+// DefaultTexts
+"AlertNoUndoDescr" = "Denne handling kan ikke fortrydes.";
+"AlertOverwriteItDescr" = "Vil du overskrive det?";
+"AlertKeepNIBLayout" = "Bevar lokaliserede NIB-layouts";
+
+
+// AlertButtonTexts
+"AlertButtonTextOK" = "OK";
+"AlertButtonTextCancel" = "Annuller";
+"AlertButtonTextCheck" = "Kontroller";
+"AlertButtonTextClear" = "Slet";
+"AlertButtonTextDelete" = "Slet";
+"AlertButtonTextDoNothing" = "Do Nothing";
+"AlertButtonTextDontCheck" = "Kontroller ikke";
+"AlertButtonTextDontOpen" = "Åbn ikke";
+"AlertButtonTextMerge" = "Flet…";
+"AlertButtonTextMoveToTrash" = "Flyt til Papirkurv";
+"AlertButtonTextOpen" = "Åbn";
+"AlertButtonTextOpenAndUpgrade" = "Åbn og opgrader";
+"AlertButtonTextOverwrite" = "Overskriv";
+"AlertButtonTextRebuild" = "Genopbyg";
+"AlertButtonTextReload" = "Genindlæs";
+"AlertButtonTextRemove" = "Fjern";
+"AlertButtonTextRename" = "Omdøb";
+"AlertButtonTextSave" = "Arkiver";
+"AlertButtonTextSaveAs" = "Arkiver som…";
+
+
+
+// AddCustomLanguage
+"AddCustomLanguageCannotAddTitle" = "Kan ikke tilføje dette sprog";
+"AddCustomLanguageCannotAddDescr" = "Dette sprog findes allerede i projektet.";
+
+// AddRemoveFileOperations
+"AddRemoveFileOperationsTitle" = "Slet valgte arkiver?";
+"AddRemoveFileOperationsDescr" = "Vil du virkelig slette de valgte arkiver ? Denne handling kan ikke fortrydes.";
+
+// ApplicationDelegate
+"ApplicationDelegateNIBToolTitle" = "Krævet værktøj mangler";
+"ApplicationDelegateNIBToolDescr" = "iLocalize fandt ikke kommando-linjeværktøjet “ibtool” som kræver til lokalisering. Sørg for at Xcode 3 eller nyere er installeret på din maskine. Stien til “ibtool” kan angives manuelt i Indstillinger > Avanceret > Værktøj.";
+
+// CheckProjectOperation
+"CheckProjectOperationTitle" = "Projektet er blevet kontrolleret";
+
+// Console
+"ConsoleClearAllEntriesTitle" = "Fjern alle emner?";
+"ConsoleClearAllEntriesDescr" = "Er du sikker på, du vil fjerne alle emner i Konsollen? Denne handling kan ikke fortrydes.";
+
+// DebugMismatchEncoding
+"DebugMismatchEncodingTitle" = "Mismatch kodning";
+"DebugMismatchEncodingDescr" = "iLocalize har opdaget, at kodningen af det valgte arkiv (%1$@) ikke matcher kodningen af det faktiske arkiv (%2$@). Vil du genindlæse arkivet med den nyligt opdagede kodning ’%2$@’?";
+
+// ExportProject
+"ExportProjectFileExistsTitle" = "Det eksporterede arkiv „%@“ findes allerede";
+"ExportProjectFileExistsDescr" = "Vil du flette eller overskrive destinationen?";
+
+// ExportProjectOperation
+"ExportProjectOperationAppleScriptErrorTitle" = "AppleScript returnerede „%@“";
+"ExportProjectOperationAppleScriptErrorDescr" = "Der opstod en fejl under oprettelsen af den nye e-mail.";
+"ExportProjectOperationZIPErrorTitle" = "ZIP returnerede en fejl";
+"ExportProjectOperationZIPErrorDescr" = "Der opstod en fejl under komprimeringen af den eksporterede lokalisering.";
+
+// Glossary
+"GlossaryRemoveTitle" = "Skal dubletter fjernes?";
+
+// GlossaryManager
+"GlossaryManagerMoveTitle" = "Skal de valgte emner flyttes til Papirkurven?";
+
+// GlossaryNew
+"GlossaryNewOverwriteTitle" = "Den angivne ordbog findes allerede";
+
+// GlossaryNotIndexed
+"GlossaryNotIndexedAliasTitle" = "Kan ikke oprette henvisning";
+"GlossaryNotIndexedAliasDescr" = "Kan ikke oprette henvisning, fordi der opstod en fejl.";
+"GlossaryNotIndexedMoveTitle" = "Kan ikke flytte ordbogen";
+"GlossaryNotIndexedMoveDescr" = "Der opstod en fejl ved forsøg på at flytte ordbogen: %@";
+
+// History Manager
+"HistoryManagerDeleteTitle" = "Slet det valgte snapshot?";
+
+// LaunchOperation
+"LaunchOperationBundleTitle" = "Kan ikke starte ikke-program pakke";
+"LaunchOperationBundleDescr" = "Kun .app eller .ape -bundles kan startes fra iLocalize.";
+"LaunchOperationCannotTitle" = "Kan ikke starte programmet";
+"LaunchOperationCannotDescr" = "Programmet blev ikke fundet. Sørg for at generere programmet, før du starter det.";
+
+// NewGlossaryOperation
+"NewGlossaryOperationGlossaryGeneratedTitle" = "The Glossary Has Been Generated";
+"NewGlossaryOperationGlossaryGeneratedDescr" = "Do you want to open it?";
+"NewGlossaryOperationGlossariesGeneratedTitle" = "The Glossaries Have Been Generated";
+"NewGlossaryOperationGlossariesGeneratedDescr" = "Do you want to open them?";
+
+// NewGlossaryOperationDriver
+"NewGlossaryOperationDriverGlossaryTitle" = "The Glossary Already Exists On the Disk";
+"NewGlossaryOperationDriverGlossariesTitle" = "One or More Glossaries Already Exist On the Disk";
+"NewGlossaryOperationDriverGlossariesDescr" = "Do you want to overwrite them?";
+
+// PresetsManager
+"PresetsManagerRename" = "Omdøb forud-indstilling";
+"PresetsManagerSaveNew" = "Arkiver ny forud-indstillingen";
+"PresetsManagerEnterName" = "Angiv et navn til forud-indstillingen:";
+
+// Project
+"ProjectCheckTitle" = "Det anbefales at kontrollere projektet for uoverensstemmelser";
+"ProjectCheckDescr" = "Vil du checke projektet nu? Projektet kan til enhver tid checkes ved at bruge kommandoen i menuen Projekt.";
+
+// ProjectBrowser
+"ProjectBrowserDeleteTitle" = "Slet det valgte projekt?";
+"ProjectBrowserDeleteDescr" = "Projektet flyttes til Papirkurven.";
+
+// ProjectDocument
+"ProjectDocumentInvalidTitle" = "Dette projekt kan ikk eåbens, fordi arkivet er ugyldigt";
+"ProjectDocumentRecentTitle" = "Dette projekt er for nyt og kan ikke åbnes af denne version af iLocalize";
+"ProjectDocumentRecentDescr" = "Opdater til den seneste version af iLocalize for at åbne det.";
+"ProjectDocumentTigerTitle" = "Dette projekt kan ikke åbnes, fordi det er oprettet på Tiger";
+"ProjectDocumentTigerDescr" = "Denne version af iLocalize understøtter kun projekter oprettet på Loepard eller nyere med ibtool.";
+"ProjectDocumentUpgradeTitle" = "Projektet skal opgraderes";
+"ProjectDocumentUpgradeDescr" = "Projektet „%@“ er arkiveret med en ældre version af iLocalize. For at åbne det, er iLocalize nødt til at opgradere det, men bevarer en kopi af det gamle arkiv. Vil du åbne og opgradere dette projekt?";
+
+// ProjectExplorerController
+"ProjectExplorerControllerDeleteFiltersTitle" = "Slet de valgte filtrer?";
+
+// ProjectLabels
+"ProjectLabelsInvalidTitle" = "Ugyldigt mærke-ID";
+"ProjectLabelsRemoveTitle" = "Det valgte mærke bruges i projektet";
+"ProjectLabelsRemoveDescr" = "Vælger du at fjerne det, vil iLocalize fjerne alle dets referencer i projektet.";
+
+// ProjectMenuEdit
+"ProjectMenuEditChangeTitle" = "Skal kodingen af de valgte arkiver ændres?";
+"ProjectMenuEditChangeDescr" = "Vil du genindlæse hvert arkiv som ’%1$@’ eller eller arkivere indhioldet af hvert arkiv i hukommelsen som et ’%2$@’ arkiv?";
+
+// RebuildBaseFiles
+"RebuildBaseFilesTitle" = "Genopbyg valgte base-arkiver?";
+"RebuildBaseFilesDescr" = "Vil du virkelig genopbygge de valgte base-arkiver? Dette vil også opdatere alle lokaliserede arkiver.";
+
+// RemoveLanguage
+"RemoveLanguageTitle" = "Slet „%@“?";
+"RemoveLanguageDescr" = "Vil du virkelig slette dette sprog?";
+
+// ReplaceLocalizedFiles
+"ReplaceLocalizedFilesTitle" = "Skal de valgte lokaliserede arkiver genopbygges?";
+"ReplaceLocalizedFilesDescr" = "Vil du virkelig genopbygge de valgte lokaliserede arkiver med deres korresponderende basis-arkiver?"

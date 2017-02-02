@@ -693,6 +693,17 @@
 		122F06D71A1A733D0045768F /* ProjectInfoViewFile.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectInfoViewFile.xib; sourceTree = "<group>"; };
 		122F06D91A1A73C90045768F /* ProjectInfoViewString.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectInfoViewString.xib; sourceTree = "<group>"; };
 		12442B6B1E3FAD29003CE206 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Alerts.strings; sourceTree = "<group>"; };
+		12442B881E402306003CE206 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Alerts.strings; sourceTree = "<group>"; };
+		12442B891E40239E003CE206 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Alerts.strings; sourceTree = "<group>"; };
+		12442B8A1E40239F003CE206 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Alerts.strings; sourceTree = "<group>"; };
+		12442B8B1E4023A9003CE206 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Alerts.strings; sourceTree = "<group>"; };
+		12442B8C1E4023AB003CE206 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Alerts.strings; sourceTree = "<group>"; };
+		12442B8D1E4023AD003CE206 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Alerts.strings; sourceTree = "<group>"; };
+		12442B8E1E4023B0003CE206 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Alerts.strings; sourceTree = "<group>"; };
+		12442B8F1E4023B2003CE206 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Alerts.strings; sourceTree = "<group>"; };
+		12442B901E4023B8003CE206 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Alerts.strings; sourceTree = "<group>"; };
+		12442B911E4023BA003CE206 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Alerts.strings"; sourceTree = "<group>"; };
+		12442B921E4023BD003CE206 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Alerts.strings; sourceTree = "<group>"; };
 		125671BD1A1A67FA002117B0 /* exlocemail_Eudora.script */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = exlocemail_Eudora.script; sourceTree = "<group>"; };
 		125671BE1A1A67FA002117B0 /* exlocemail_Mail.script */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = exlocemail_Mail.script; sourceTree = "<group>"; };
 		125671C21A1A6802002117B0 /* HTML.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = HTML.xml; sourceTree = "<group>"; };
@@ -4356,13 +4367,14 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = "Arizona Software";
+				ORGANIZATIONNAME = "BSD License";
 				TargetAttributes = {
 					A73424BF1837FADA00FBEB96 = {
 						TestTargetID = A751E15813045B19007635F2;
 					};
 					A751E15813045B19007635F2 = {
 						DevelopmentTeam = 32PKJMKZ6U;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -4386,6 +4398,9 @@
 				pl,
 				ru,
 				Base,
+				de,
+				fr,
+				ja,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* iLocalize */;
 			projectDirPath = "";
@@ -5172,6 +5187,17 @@
 			isa = PBXVariantGroup;
 			children = (
 				12442B6B1E3FAD29003CE206 /* Base */,
+				12442B881E402306003CE206 /* de */,
+				12442B891E40239E003CE206 /* cs */,
+				12442B8A1E40239F003CE206 /* da */,
+				12442B8B1E4023A9003CE206 /* es */,
+				12442B8C1E4023AB003CE206 /* fr */,
+				12442B8D1E4023AD003CE206 /* it */,
+				12442B8E1E4023B0003CE206 /* ja */,
+				12442B8F1E4023B2003CE206 /* nl */,
+				12442B901E4023B8003CE206 /* pl */,
+				12442B911E4023BA003CE206 /* pt-BR */,
+				12442B921E4023BD003CE206 /* ru */,
 			);
 			name = Alerts.strings;
 			sourceTree = "<group>";
@@ -6690,6 +6716,8 @@
 		A751E36013045B19007635F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = 32PKJMKZ6U;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = iLocalize_Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -6705,6 +6733,8 @@
 		A751E36113045B19007635F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = 32PKJMKZ6U;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = iLocalize_Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;

@@ -25,5 +25,9 @@
 #   fd  Feb 09: - using a new versioning method for CFBundleVersion:
 #                  Get the current number of GIT commits in the Console with
 #                    $ git rev-list HEAD | wc -l
+# 2017:
+#   fd  Feb 02: - deployment target set to OS X 10.11
+#               - Project now gets the current GIT commit # by Build Phase script
+#               - all deprecated alert methods adjusted
 #
 # --------------------------------------------------------------------------------

@@ -1,0 +1,150 @@
+/* 
+  Alerts.strings
+  iLocalize
+
+  Created by Ulf Dunkel on 30.01.17.
+  Copyright © 2017 BSD License. All rights reserved.
+*/
+
+// DefaultTexts
+"AlertNoUndoDescr" = "Tuto akci nelze odvolat.";
+"AlertOverwriteItDescr" = "Přejete si ho nahradit?";
+"AlertKeepNIBLayout" = "Zachovat původní rozvržení NIBu v tom lokalizovaném";
+
+
+// AlertButtonTexts
+"AlertButtonTextOK" = "OK";
+"AlertButtonTextCancel" = "Zrušit";
+"AlertButtonTextCheck" = "Ověřit";
+"AlertButtonTextClear" = "Vyčistit";
+"AlertButtonTextDelete" = "Smazat";
+"AlertButtonTextDoNothing" = "Do Nothing";
+"AlertButtonTextDontCheck" = "Neověřovat";
+"AlertButtonTextDontOpen" = "Neotevírat";
+"AlertButtonTextMerge" = "Sloučit…";
+"AlertButtonTextMoveToTrash" = "Přesunout do Koše";
+"AlertButtonTextOpen" = "Otevřít";
+"AlertButtonTextOpenAndUpgrade" = "Otevřít a aktualizovat";
+"AlertButtonTextOverwrite" = "Přepsat";
+"AlertButtonTextRebuild" = "Sestavit znovu";
+"AlertButtonTextReload" = "Načíst znovu";
+"AlertButtonTextRemove" = "Odebrat";
+"AlertButtonTextRename" = "Přejmenovat";
+"AlertButtonTextSave" = "Uložit";
+"AlertButtonTextSaveAs" = "Uložit jako…";
+
+
+
+// AddCustomLanguage
+"AddCustomLanguageCannotAddTitle" = "Nový jazyk nelze přidat";
+"AddCustomLanguageCannotAddDescr" = "Tento jazyk již v projektu existuje.";
+
+// AddRemoveFileOperations
+"AddRemoveFileOperationsTitle" = "Smazat vybrané soubory?";
+"AddRemoveFileOperationsDescr" = "Opravdu chcete smazat vybrané soubory? Tuto operaci nelze odvolat.";
+
+// ApplicationDelegate
+"ApplicationDelegateNIBToolTitle" = "Požadovaný nástroj se ztratil";
+"ApplicationDelegateNIBToolDescr" = "iLocalize nenašel nástroj \"ibtool\", který je nutný pro chod lokalizace. Ujistěte se, že v počítači máte nainstalovány Xcode 3 nebo vyšší . Cestu k \"ibtool\" můžete ručně nastavit v Předvolbách >Rozšířené > Nástroje.";
+
+// CheckProjectOperation
+"CheckProjectOperationTitle" = "Projekt ověřen";
+
+// Console
+"ConsoleClearAllEntriesTitle" = "Vyčistit všechny řetězce?";
+"ConsoleClearAllEntriesDescr" = "Opravdu chcete nahradit všechna zadání v Konzole? Tuto operaci nelze odvolat.";
+
+// DebugMismatchEncoding
+"DebugMismatchEncodingTitle" = "Neznámé kódování";
+"DebugMismatchEncodingDescr" = "iLocalize zjistil, že kódování vybraného souboru (%1$@) nesouhlasí skódováním aktuálního souboru (%2$@). Chcete znovu načíst soubor s použitím nově zjištěného kódování '%2$@'?";
+
+// ExportProject
+"ExportProjectFileExistsTitle" = "Exportovaný soubor “%@” jež existuje";
+"ExportProjectFileExistsDescr" = "Přejete si sloučit nebo přepsat cíl?";
+
+// ExportProjectOperation
+"ExportProjectOperationAppleScriptErrorTitle" = "AppleScript vrátil “%@”";
+"ExportProjectOperationAppleScriptErrorDescr" = "Během vytváření nového emailu se vyskytla chyba.";
+"ExportProjectOperationZIPErrorTitle" = "ZIP vrátil chybu";
+"ExportProjectOperationZIPErrorDescr" = "Během balení exportované lokalizace se vyskytla chyba.";
+
+// Glossary
+"GlossaryRemoveTitle" = "Odebrat duplicitní záznamy?";
+
+// GlossaryManager
+"GlossaryManagerMoveTitle" = "Přesunout vybrané položky do koše?";
+
+// GlossaryNew
+"GlossaryNewOverwriteTitle" = "Specifikovaný slovník již existuje";
+
+// GlossaryNotIndexed
+"GlossaryNotIndexedAliasTitle" = "Zástupce nelze vytvořit";
+"GlossaryNotIndexedAliasDescr" = "Nelze vytvořit zástupce, vyskytla se chyba.";
+"GlossaryNotIndexedMoveTitle" = "Slovník nelze přesunout";
+"GlossaryNotIndexedMoveDescr" = "Nastal problém při přesunu slovníku: %@";
+
+// History Manager
+"HistoryManagerDeleteTitle" = "Smazat vybraný otisk?";
+
+// LaunchOperation
+"LaunchOperationBundleTitle" = "Neprogramový balík nelze spustit";
+"LaunchOperationBundleDescr" = "Přes iLocalize lze spustit pouze balíky .app nebo .ape.";
+"LaunchOperationCannotTitle" = "Aplikaci nelze spustit";
+"LaunchOperationCannotDescr" = "Aplikace nenalezena. Ověřte, zda byla aplikace sestavena, než jí spustíte.";
+
+// NewGlossaryOperation
+"NewGlossaryOperationGlossaryGeneratedTitle" = "The Glossary Has Been Generated";
+"NewGlossaryOperationGlossaryGeneratedDescr" = "Do you want to open it?";
+"NewGlossaryOperationGlossariesGeneratedTitle" = "The Glossaries Have Been Generated";
+"NewGlossaryOperationGlossariesGeneratedDescr" = "Do you want to open them?";
+
+// NewGlossaryOperationDriver
+"NewGlossaryOperationDriverGlossaryTitle" = "The Glossary Already Exists On the Disk";
+"NewGlossaryOperationDriverGlossariesTitle" = "One or More Glossaries Already Exist On the Disk";
+"NewGlossaryOperationDriverGlossariesDescr" = "Do you want to overwrite them?";
+
+// PresetsManager
+"PresetsManagerRename" = "Přejmenovat přednastavení";
+"PresetsManagerSaveNew" = "Uložit nové přednastavení";
+"PresetsManagerEnterName" = "Vložte název pro přednastavení:";
+
+// Project
+"ProjectCheckTitle" = "Doporučujeme ještě ověřit nesrovnalosti projektu";
+"ProjectCheckDescr" = "Chcete projekt ověřit? Tento příkaz můžete provést též později z nabídky Projekt.";
+
+// ProjectBrowser
+"ProjectBrowserDeleteTitle" = "Smazat vybraný projekt?";
+"ProjectBrowserDeleteDescr" = "Projekt přesunut do koše.";
+
+// ProjectDocument
+"ProjectDocumentInvalidTitle" = "Tento projekt nelze otevřít, protože má neplatný archív";
+"ProjectDocumentRecentTitle" = "Tento projekt je velmi nový, nelze jej otevřít touto verzí iLocalize";
+"ProjectDocumentRecentDescr" = "K jeho oteření si aktualizujte na poslední verzi iLocalize.";
+"ProjectDocumentTigerTitle" = "Tento projekt nelze použít, protože byl vytvořen v Tigerovi";
+"ProjectDocumentTigerDescr" = "Tato verze iLocalize podporuje pouze projekty, vytvořené v Leopardovi a novější, pomocí ibtool.";
+"ProjectDocumentUpgradeTitle" = "Projekt je potřeba aktualizovat";
+"ProjectDocumentUpgradeDescr" = "Projekt “%@” byl uložen starší verzí iLocalize. K jeho otevření je třeba,aby ho iLocalize upravil; zazálohujte si starší verzi. Chcete otevřít a upravit tento projekt?";
+
+// ProjectExplorerController
+"ProjectExplorerControllerDeleteFiltersTitle" = "Smazat vybraný filtr?";
+
+// ProjectLabels
+"ProjectLabelsInvalidTitle" = "Neplatné ID vysačky";
+"ProjectLabelsRemoveTitle" = "Vybraný popisek je v projektu používán";
+"ProjectLabelsRemoveDescr" = "Pokud visačku odstraníte, pak iLocalize v projektu odstraní i všechny její odkazy.";
+
+// ProjectMenuEdit
+"ProjectMenuEditChangeTitle" = "Změnit u vybraných souborů kódování?";
+"ProjectMenuEditChangeDescr" = "Přejete si načíst každý soubor jako '%1$@' nebo uložit aktuální verzi každého souboru z obsah paměti-jako soubor '%2$@'?";
+
+// RebuildBaseFiles
+"RebuildBaseFilesTitle" = "Obnovit vybrané soubory původního jazyka?";
+"RebuildBaseFilesDescr" = "Opravdu chcete znovu obnovit vybrané soubory původního jazyka? Tímto se také aktualizují všechny lokalizované soubory.";
+
+// RemoveLanguage
+"RemoveLanguageTitle" = "Smazat “%@”?";
+"RemoveLanguageDescr" = "Opravdu chcete tento jazyk smazat?";
+
+// ReplaceLocalizedFiles
+"ReplaceLocalizedFilesTitle" = "Obnovit vybrané lokalizované soubory?";
+"ReplaceLocalizedFilesDescr" = "Opravdu chcete znovu obnovit vybrané přeložené soubory podle jejich protějšků z původního jazyka?";

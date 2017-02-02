@@ -208,7 +208,7 @@
         NSAlert *alert = [NSAlert new];
         [alert setAlertStyle:NSWarningAlertStyle];
         [alert setMessageText:NSLocalizedStringFromTable(@"GlossaryNewOverwriteTitle",@"Alerts",nil)];
-        [alert setInformativeText:NSLocalizedStringFromTable(@"GlossaryNewOverwriteDescr",@"Alerts",nil)];
+        [alert setInformativeText:[NSString stringWithFormat:@"%@ %@", NSLocalizedStringFromTable(@"AlertOverwriteItDescr",@"Alerts",nil), NSLocalizedStringFromTable(@"AlertNoUndoDescr",@"Alerts",nil)]];
         [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextCancel",@"Alerts",nil)];      // 1st button
         [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextOverwrite",@"Alerts",nil)];   // 2nd button
         

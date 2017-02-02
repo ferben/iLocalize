@@ -529,7 +529,7 @@ NSInteger glossaryPathSort(id doc1, id doc2, void *context)
     NSAlert *alert = [NSAlert new];
     [alert setAlertStyle:NSWarningAlertStyle];
     [alert setMessageText:NSLocalizedStringFromTable(@"GlossaryManagerMoveTitle",@"Alerts",nil)];
-    [alert setInformativeText:NSLocalizedStringFromTable(@"GlossaryManagerMoveDescr",@"Alerts",nil)];
+    [alert setInformativeText:NSLocalizedStringFromTable(@"AlertNoUndoDescr",@"Alerts",nil)];
     [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextMoveToTrash",@"Alerts",nil)];     // 1st button
     [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextCancel",@"Alerts",nil)];          // 2nd button
     

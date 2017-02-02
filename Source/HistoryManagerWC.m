@@ -73,7 +73,7 @@
     NSAlert *alert = [NSAlert new];
     [alert setAlertStyle:NSWarningAlertStyle];
     [alert setMessageText:NSLocalizedStringFromTable(@"HistoryManagerDeleteTitle",@"Alerts",nil)];
-    [alert setInformativeText:NSLocalizedStringFromTable(@"HistoryManagerDeleteDescr",@"Alerts",nil)];
+    [alert setInformativeText:NSLocalizedStringFromTable(@"AlertNoUndoDescr",@"Alerts",nil)];
     [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextCancel",@"Alerts",nil)];      // 1st button
     [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextDelete",@"Alerts",nil)];      // 2nd button
     

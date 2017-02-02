@@ -126,24 +126,13 @@
 
 /* All Selection Node
    Explorer list node */
-
-
 "All" = "Все";
 
 /* No comment provided by engineer. */
 "Alternate Translations" = "Варианты переводов";
 
 /* No comment provided by engineer. */
-"An error has occurred when trying to move the glossary: %@" = "Произошла ошибка при попытке переместить глоссарий: %@";
-
-/* No comment provided by engineer. */
 "An error has occurred while executing the drag and drop operation" = "Произошла ошибка при выполнении операции перетаскивания";
-
-/* No comment provided by engineer. */
-"An error occurred when compressing the exported localization" = "Произошла ошибка при сжатии экспортируемой локализации";
-
-/* No comment provided by engineer. */
-"An error occurred while creating a new e-mail" = "Ошибка при создании нового сообщения электронной почты";
 
 /* No comment provided by engineer. */
 "Analyzing Bundle for Changes…" = "Анализ пакета для выполнения изменений…";
@@ -157,17 +146,11 @@
 /* AppleGlot Display Name Format */
 "AppleGlot" = "AppleGlot";
 
-/* No comment provided by engineer. */
-"AppleScript returned “%@”" = "AppleScript возвратил «%@»";
-
 /* Label */
 "Approved" = "Утвержден";
 
 /* Rebase Operation */
 "Archiving Current Bundle…" = "Архивирование текущего пакета…";
-
-/* No comment provided by engineer. */
-"Are you sure you want to remove all entries in the Console? This action cannot be undone." = "Вы действительно хотите удалить все записи в консоли? Это действие не может быть отменено.";
 
 /* String status auto-invariant */
 "Auto-invariant" = "Авто-инвариант";
@@ -191,27 +174,6 @@
 "Built-in" = "Встроенный";
 
 /* No comment provided by engineer. */
-"By choosing to remove it, iLocalize will remove all its references in the project" = "Принимая решение удалить его, iLocalize удалит все свои ссылки в проекте";
-
-/* Preset Alert Cancel Button
-   Rebuild Base File Alert
-   Replace Localized File Alert */
-
-
-
-
-"Cancel" = "Отменить";
-
-/* Language */
-"Cannot add this language" = "Не удается добавить этот язык";
-
-/* No comment provided by engineer. */
-"Cannot create the alias" = "Не удается создать псевдоним";
-
-/* No comment provided by engineer. */
-"Cannot create the alias because an error has occurred." = "Не удается создать псевдоним, потому что произошла ошибка.";
-
-/* No comment provided by engineer. */
 "Cannot Delete “%@”" = "Не удается удалить «%@»";
 
 /* Strings Importer */
@@ -224,25 +186,10 @@
 "Cannot find the suitable importer for file: %@" = "Cannot find the suitable importer for file: %@";
 
 /* No comment provided by engineer. */
-"Cannot launch non-application bundle" = "Не удается запустить не пакет приложения";
-
-/* No comment provided by engineer. */
-"Cannot launch the application" = "Не удается запустить приложение";
-
-/* No comment provided by engineer. */
-"Cannot move the glossary" = "Не удается переместить глоссарий";
-
-/* No comment provided by engineer. */
 "Cannot Rename “%@”" = "Не удается переименовать «%@»";
 
 /* No comment provided by engineer. */
-"Change the encoding of the selected files?" = "Изменить кодировку выбранных файлов?";
-
-/* No comment provided by engineer. */
 "characters" = "знаков";
-
-/* No comment provided by engineer. */
-"Check" = "Проверить";
 
 /* No comment provided by engineer. */
 "Checking…" = "Проверка…";
@@ -266,12 +213,6 @@
 "Cleaning…" = "Очистка…";
 
 /* No comment provided by engineer. */
-"Clear" = "Очистить";
-
-/* No comment provided by engineer. */
-"Clear All Entries?" = "Очистить все записи?";
-
-/* No comment provided by engineer. */
 "Clear Menu" = "Очистить меню";
 
 /* No comment provided by engineer. */
@@ -279,8 +220,6 @@
 
 /* String Information
    Toggle between comment and value button */
-
-
 "Comment" = "Примечание";
 
 /* Search Contextual Menu */
@@ -310,71 +249,8 @@
 /* Diff Operation Delete */
 "delete" = "удалить";
 
-/* Preset Delete */
-"Delete" = "Удалить";
-
-/* No comment provided by engineer. */
-"Delete selected files?" = "Удалить выбранные файлы?";
-
-/* No comment provided by engineer. */
-"Delete selected project?" = "Удалить выбранный проект?";
-
-/* No comment provided by engineer. */
-"Delete the selected filters?" = "Удалить выбранные фильтры?";
-
-/* No comment provided by engineer. */
-"Delete the selected snapshot?" = "Удалить выбранный снимок?";
-
 /* No comment provided by engineer. */
 "Delete “%@”" = "Удалить «%@»";
-
-/* No comment provided by engineer. */
-"Delete “%@”?" = "Удалить «%@»?";
-
-/* No comment provided by engineer. */
-"Do Nothing" = "Do Nothing";
-
-/* No comment provided by engineer. */
-"Do you really want to delete the selected files? This action cannot be undone." = "Вы действительно хотите удалить выбранные файлы? Это действие не может быть отменено.";
-
-/* No comment provided by engineer. */
-"Do you really want to delete this language? This action cannot be undone." = "Вы действительно хотите удалить этот язык? Это действие не может быть отменено.";
-
-/* Rebuild Base File Alert */
-"Do you really want to rebuild the selected base files? This will also update all localized files. This action cannot be undone." = "Вы действительно хотите перестроить выбранные базовые файлы? Это также позволит обновить все локализованные файлы. Это действие не может быть отменено.";
-
-/* Replace Localized File Alert */
-"Do you really want to rebuild the selected localized files with their corresponding base files? This action cannot be undone." = "Вы действительно хотите перестроить выбранные локализованные файлы с их соответствующих базовых файлов? Это действие не может быть отменено.";
-
-/* No comment provided by engineer. */
-"Do you want to check the project? The project can be checked at any time by using the command under the menu Project." = "Вы хотите, чтобы проверить проект? Проект можно проверить в любое время с помощью команды в меню Проект.";
-
-/* No comment provided by engineer. */
-"Do you want to merge or overwrite the destination?" = "Вы хотите объединить или перезаписи папку назначения?";
-
-/* No comment provided by engineer. */
-"Do you want to open it?" = "Do you want to open it?";
-
-/* No comment provided by engineer. */
-"Do you want to open them?" = "Do you want to open them?";
-
-/* No comment provided by engineer. */
-"Do you want to overwrite it?" = "Do you want to overwrite it?";
-
-/* No comment provided by engineer. */
-"Do you want to overwrite it? This action cannot be undone." = "Хотите перезаписать его? Это действие не может быть отменено.";
-
-/* No comment provided by engineer. */
-"Do you want to overwrite them?" = "Do you want to overwrite them?";
-
-/* No comment provided by engineer. */
-"Do you want to reload each file as '%@' or save the current in-memory content of each file as a '%@' file?" = "Хотите перезагрузить каждый файл как «%1$@» или сохранить текущее содержимое в памяти каждого файла, как «%2$@» файл?";
-
-/* No comment provided by engineer. */
-"Don't check" = "Не проверять";
-
-/* No comment provided by engineer. */
-"Don't Open" = "Не открывать";
 
 /* No comment provided by engineer. */
 "Don't Reload" = "Не перезагружать";
@@ -399,9 +275,6 @@
 
 /* Search Contextual Menu */
 "ends with" = "заканчивается на";
-
-/* Preset Alert Message */
-"Enter the name of the preset:" = "Введите имя набора настроек:";
 
 /* No comment provided by engineer. */
 "Error Creating Glossary" = "Error Creating Glossary";
@@ -510,14 +383,10 @@
 
 /* Project Information
    Status Bar */
-
-
 "hour" = "час.";
 
 /* Project Information
    Status Bar */
-
-
 "hours" = "час.";
 
 /* Search Contextual Menu */
@@ -525,9 +394,6 @@
 
 /* ILG Display Name Format */
 "ILG (iLocalize 3)" = "ILG (iLocalize 3)";
-
-/* No comment provided by engineer. */
-"iLocalize did not find the command-line tool “ibtool” which is required to perform localization. Make sure that Xcode 3 or above is installed on your machine. The path to “ibtool” can be manually specified in Preferences > Advanced > Tools." = "iLocalize не нашел инструмент командной строки «ibtool», который необходим для выполнения локализации. Убедитесь, что Xcode 3 или выше установлена на вашей компьютере. Путь к «ibtool» можно указать вручную в Настройки > Дополнительно > Инструменты.";
 
 /* No comment provided by engineer. */
 "iLocalize has detected that the encoding of the selected file (%1$@) mismatches the encoding of the actual file (%2$@). Do you want to reload the file using the new detected encoding '%2$@'?" = "iLocalize обнаружила, что кодирование выбранного файла (%1$@) не соответствует кодирования реального файла (%2$@). Хотите перезагрузить файл, используя новые обнаруженные кодировки '%2$@'?";
@@ -544,9 +410,6 @@
 /* XLIFF Export */
 "Invalid character 0x%x detected in string \"%@\" for file \"%@\"" = "Недопустимый знак 0x%1$x обнаружен в строке «%2$@» для файла «%3$@»";
 
-/* No comment provided by engineer. */
-"Invalid label ID" = "Неверная метка ID";
-
 /* String status invariant */
 "Invariant" = "Инвариант";
 
@@ -556,19 +419,8 @@
 /* Search Contextual Menu */
 "is not" = "не совпадает с";
 
-/* No comment provided by engineer. */
-"It is recommended to check the project against inconsistencies" = "Рекомендуется проверить на несоответствия";
-
-/* Rebuild Base File Alert
-   Replace Localized File Alert */
-
-
-"Keep localized nib layouts" = "Сохранить локализованные разметки NIB макета";
-
 /* Search Context Button
    String Information */
-
-
 "Key" = "Раздел";
 
 /* No comment provided by engineer. */
@@ -601,23 +453,13 @@
 /* Search Contextual Menu */
 "matches" = "совпадения";
 
-/* No comment provided by engineer. */
-"Merge…" = "Объединить…";
-
 /* Project Information
    Status Bar */
-
-
 "minute" = "мин.";
 
 /* Project Information
    Status Bar */
-
-
 "minutes" = "мин.";
-
-/* No comment provided by engineer. */
-"Mismatch encoding" = "Несоответствие кодировки";
 
 /* TXML Importer */
 "Missing <skeleton> element before <translatable> element. This element is required and contains the relative path of the file." = "Отсутствует <skeleton> элемент перед <translatable> элементом. Этот элемент является обязательным и содержит относительный путь к файлу.";
@@ -630,15 +472,6 @@
 
 /* Project Browser Column */
 "Modified Date" = "Дата изменения";
-
-/* No comment provided by engineer. */
-"Move the selected items to the trash?" = "Переместить выбранные элементы в Корзину?";
-
-/* No comment provided by engineer. */
-"Move To Trash" = "Переместить в Корзину";
-
-/* No comment provided by engineer. */
-"Move to Trash" = "Переместить в Корзину";
 
 /* Project Browser Column */
 "Name" = "Имя";
@@ -685,12 +518,6 @@
 /* No comment provided by engineer. */
 "Nothing to export" = "Ничего нет для экспорта";
 
-/* Language
-   Preset Alert OK Button */
-
-
-"OK" = "ОК";
-
 /* Glossary Entries Information */
 "One entry" = "Одна запись";
 
@@ -715,20 +542,8 @@
 /* No comment provided by engineer. */
 "One nib file is not located in language folder" = "Одно NIB файл расположен не в папке языка";
 
-/* No comment provided by engineer. */
-"One or more glossaries already exist on the disk" = "One or more glossaries already exist on the disk";
-
 /* Language Progress */
 "One string to translate" = "Одна строка для перевода";
-
-/* No comment provided by engineer. */
-"Only .app or .ape bundles can be launched from within iLocalize." = "Только .app или .ape пакеты могут быть запущены в iLocalize.";
-
-/* No comment provided by engineer. */
-"Open" = "Open";
-
-/* No comment provided by engineer. */
-"Open and Upgrade" = "Открыть и обновить";
 
 /* Project Information */
 "Open For" = "Открыт в течении";
@@ -741,9 +556,6 @@
 
 /* Status Bar */
 "Open for less than a minute" = "Открыт меньше одной минуты";
-
-/* No comment provided by engineer. */
-"Overwrite" = "Перезаписать";
 
 /* File Information */
 "Path" = "Путь";
@@ -769,23 +581,11 @@
 /* No comment provided by engineer. */
 "Propagate To Selected Files" = "Распространить на выбранные файлы";
 
-/* Rebuild Base File Alert
-   Replace Localized File Alert */
-
-
-"Rebuild" = "Перестроить";
-
-/* Rebuild Base File Alert */
-"Rebuild selected base files?" = "Перестроить выбранные базовые файлы?";
-
 /* No comment provided by engineer. */
 "Rebuild Selected Files" = "Перестроить выбранные файлы";
 
 /* No comment provided by engineer. */
 "Rebuild Selected Files from “%@”" = "Перестроить выбранные файлы используя «%@»";
-
-/* Replace Localized File Alert */
-"Rebuild selected localized files?" = "Перестроить выбранные локализованные файлы?";
 
 /* No comment provided by engineer. */
 "Rebuilding files…" = "Перестройка файлов…";
@@ -803,9 +603,6 @@
 "Recents" = "Недавние";
 
 /* No comment provided by engineer. */
-"Reload" = "Перезагрузить";
-
-/* No comment provided by engineer. */
 "Reload All" = "Перезагрузить все";
 
 /* No comment provided by engineer. */
@@ -818,25 +615,10 @@
 "Reload Selected" = "Перезагрузить выбранные";
 
 /* No comment provided by engineer. */
-"Remove" = "Удалить";
-
-/* No comment provided by engineer. */
-"Remove duplicate entries?" = "Удалить повторяющиеся записи?";
-
-/* No comment provided by engineer. */
 "Removing Files…" = "Удаление файлов…";
-
-/* Language
-   Preset Alert Rename Button */
-
-
-"Rename" = "Переименовать";
 
 /* No comment provided by engineer. */
 "Rename Language…" = "Переименование языка…";
-
-/* Preset Alert Message */
-"Rename Preset" = "Переименовать набор настроек";
 
 /* No comment provided by engineer. */
 "Rename “%@”…" = "Переименовать «%@»…";
@@ -845,22 +627,10 @@
 "Rename…" = "Переименовать…";
 
 /* No comment provided by engineer. */
-"Required Tool Missing" = "Отсутствует требуемый инструмент";
-
-/* Preset Save */
-"Save" = "Сохранить";
-
-/* No comment provided by engineer. */
 "Save All" = "Сохранить все";
-
-/* Preset Save As */
-"Save As…" = "Сохранить как…";
 
 /* No comment provided by engineer. */
 "Save Modified Files" = "Сохранить измененные файлы";
-
-/* Preset Alert Message */
-"Save New Preset" = "Сохранить новый набор настроек";
 
 /* No comment provided by engineer. */
 "Save Selected" = "Сохранить выбранные";
@@ -934,29 +704,10 @@
 /* File Information
    Project Information
    Strings Display Name Format */
-
-
-
-
 "Strings" = "Строки";
 
 /* Text Display Name Format */
 "Text" = "Text";
-
-/* No comment provided by engineer. */
-"The application is not found. Make sure to build the application before launching it." = "Приложение не найдено. Убедитесь, что создали приложение прежде, чем запустить его.";
-
-/* No comment provided by engineer. */
-"The exported file “%@” already exists" = "Экспортируемый файл «%@» уже существует";
-
-/* No comment provided by engineer. */
-"The glossaries have been generated" = "The glossaries have been generated";
-
-/* No comment provided by engineer. */
-"The glossary already exists on the disk" = "The glossary already exists on the disk";
-
-/* No comment provided by engineer. */
-"The glossary has been generated" = "The glossary has been generated";
 
 /* Errors Info Label */
 "The operation reported the following errors:" = "Операция сообщила о следующих ошибках:";
@@ -974,52 +725,16 @@
 "The project folder “%@” already exists. Do you want to move it to the trash and create a new one?" = "Папка проекта «%@» уже существует. Хотите переместить ее в Корзину и создать новую?";
 
 /* No comment provided by engineer. */
-"The project has been checked" = "Проект был проверен";
-
-/* No comment provided by engineer. */
-"The project needs to be upgraded" = "Проект необходимо обновить";
-
-/* No comment provided by engineer. */
-"The project will be moved to the trash." = "Проект будет перемещен в Корзину.";
-
-/* No comment provided by engineer. */
-"The project “%@” was saved with an older version of iLocalize. To open it, iLocalize will have to upgrade it, leaving a copy of the older project. Do you want to open and upgrade this project?" = "Проект «%@» был сохранен с более старой версией iLocalize. Чтобы открыть его, iLocalize придется обновить ее, оставив копии старых проектов. Хотите открыть и обновить этот проект?";
-
-/* No comment provided by engineer. */
-"The selected label is used in the project" = "Выбранная метка используется в проекте";
-
-/* No comment provided by engineer. */
 "The source application “%@” doesn't contains any language. At least one language must exist." = "Исходное приложение «%@» не содержит ни одного языкового файла. Должен существовать хотя бы один язык.";
 
 /* No comment provided by engineer. */
 "The source application “%@” doesn't exist. Select a source application to correct the problem." = "Исходное приложение «%@» не существует. Выберите исходное приложение для устранения проблемы.";
 
 /* No comment provided by engineer. */
-"The specified glossary already exists" = "Указанный глоссарий уже существует";
-
-/* No comment provided by engineer. */
 "The XLIFF file “%@” already exists" = "XLIFF файл «%@» уже существует";
 
 /* XLIFF Import */
 "There are no strings to translate." = "Нет никаких строк для перевода.";
-
-/* No comment provided by engineer. */
-"This action cannot be undone." = "Это действие не может быть отменено.";
-
-/* Language */
-"This language already exists in the project." = "Этот язык уже существует в проекте.";
-
-/* No comment provided by engineer. */
-"This project cannot be opened because it has been created on Tiger" = "Не удается открыть этот проект, потому что она была создан он был создан в Tiger";
-
-/* No comment provided by engineer. */
-"This project cannot be opened because the archive is invalid" = "Не удается открыть этот проект, потому что архив недопустим или поврежден";
-
-/* No comment provided by engineer. */
-"This project is too recent and cannot be opened by this version of iLocalize" = "Данный проект является слишком новым и не может быть открыт в этой версии iLocalize";
-
-/* No comment provided by engineer. */
-"This version of iLocalize supports only projects created on Leopard or above with ibtool" = "Эта версия iLocalize поддерживает только проекты, созданные в Leopard или выше с ibtool";
 
 /* TMX Display Name Format */
 "TMX" = "TMX";
@@ -1085,9 +800,6 @@
 "Update file “%@”" = "Обновить файл «%@»";
 
 /* No comment provided by engineer. */
-"Update to the latest version of iLocalize to open it." = "Обновите iLocalize до последней версии чтобы открыть его.";
-
-/* No comment provided by engineer. */
 "Update “%@” and rebase all other languages. All strings in the other languages will be localized according to the current translation." = "Обновить «%@» и перебазировать все прочие языки. Все строки в другие языки будут локализованы согласно текущему переводу.";
 
 /* No comment provided by engineer. */
@@ -1110,6 +822,3 @@
 
 /* XLIFF Display Name Format */
 "XLIFF" = "XLIFF";
-
-/* No comment provided by engineer. */
-"zip returned an error" = "ZIP вернул ошибку";

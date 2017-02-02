@@ -357,7 +357,8 @@
         else
         {
 			NSAlert *alert = [NSAlert alertWithError:err];
-			[alert beginSheetModalForWindow:self.window modalDelegate:self didEndSelector:nil contextInfo:nil];
+            
+            [alert beginSheetModalForWindow:[self window] completionHandler:NULL];
 		}
 	}
 }
@@ -429,7 +430,7 @@ int entrySort(id e1, id e2, void *context)
     
     [alert setAlertStyle:NSWarningAlertStyle];
     [alert setMessageText:NSLocalizedStringFromTable(@"GlossaryRemoveTitle",@"Alerts",nil)];
-    [alert setInformativeText:NSLocalizedStringFromTable(@"GlossaryRemoveDescr",@"Alerts",nil)];
+    [alert setInformativeText:NSLocalizedStringFromTable(@"AlertNoUndoDescr",@"Alerts",nil)];
     [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextRemove",@"Alerts",nil)];  // 1st button
     [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextCancel",@"Alerts",nil)];  // 2nd button
     

@@ -97,7 +97,7 @@ enum
         if (operation.languages.count == 1)
         {
             title = NSLocalizedStringFromTable(@"NewGlossaryOperationDriverGlossaryTitle", @"Alerts", nil);
-            message = NSLocalizedStringFromTable(@"NewGlossaryOperationDriverGlossariesDescr", @"Alerts", nil);
+            message = [NSString stringWithFormat:@"%@ %@", NSLocalizedStringFromTable(@"AlertOverwriteItDescr",@"Alerts",nil), NSLocalizedStringFromTable(@"AlertNoUndoDescr",@"Alerts",nil)];
         }
         else
         {
@@ -107,7 +107,6 @@ enum
 
         // compose alert
         NSAlert *alert = [NSAlert new];
-        
         [alert setAlertStyle:NSWarningAlertStyle];
         [alert setMessageText:title];
         [alert setInformativeText:message];

@@ -1,0 +1,150 @@
+/* 
+  Alerts.strings
+  iLocalize
+
+  Created by Ulf Dunkel on 30.01.17.
+  Copyright © 2017 BSD License. All rights reserved.
+*/
+
+// DefaultTexts
+"AlertNoUndoDescr" = "Cette action ne peut pas être annulée.";
+"AlertOverwriteItDescr" = "Voulez-vous l’écraser ?";
+"AlertKeepNIBLayout" = "Conserver la mise en page des NIB localisés";
+
+
+// AlertButtonTexts
+"AlertButtonTextOK" = "OK";
+"AlertButtonTextCancel" = "Annuler";
+"AlertButtonTextCheck" = "Vérifier";
+"AlertButtonTextClear" = "Effacer";
+"AlertButtonTextDelete" = "Supprimer";
+"AlertButtonTextDoNothing" = "Ne rien faire";
+"AlertButtonTextDontCheck" = "Ne pas vérifier";
+"AlertButtonTextDontOpen" = "Ne pas ouvrir";
+"AlertButtonTextMerge" = "Fusionner…";
+"AlertButtonTextMoveToTrash" = "Déplacer dans la Corbeille";
+"AlertButtonTextOpen" = "Ouvrir";
+"AlertButtonTextOpenAndUpgrade" = "Ouvrir et Mettre à jour";
+"AlertButtonTextOverwrite" = "Écraser";
+"AlertButtonTextRebuild" = "Reconstruire";
+"AlertButtonTextReload" = "Recharger";
+"AlertButtonTextRemove" = "Supprimer";
+"AlertButtonTextRename" = "Renommer";
+"AlertButtonTextSave" = "Enregistrer";
+"AlertButtonTextSaveAs" = "Enregistrer sous…";
+
+
+
+// AddCustomLanguage
+"AddCustomLanguageCannotAddTitle" = "Impossible d’ajouter cette langue";
+"AddCustomLanguageCannotAddDescr" = "Cette langue existe déjà dans le projet.";
+
+// AddRemoveFileOperations
+"AddRemoveFileOperationsTitle" = "Supprimer les fichiers sélectionnés ?";
+"AddRemoveFileOperationsDescr" = "Souhaitez-vous vraiment supprimer les fichiers sélectionnés ? Cette action ne peut pas être annulée.";
+
+// ApplicationDelegate
+"ApplicationDelegateNIBToolTitle" = "Outil requis absent";
+"ApplicationDelegateNIBToolDescr" = "iLocalize n'a pas trouvé l'outil ligne de commande « ibtool » qui est nécessaire pour réaliser la localisation. Assurez-vous que Xcode 3 ou une version ultérieure est installé sur votre machine. Le chemin d'accès à « ibtool » peut être spécifié manuellement dans les Préférences > Avancées > Outils.";
+
+// CheckProjectOperation
+"CheckProjectOperationTitle" = "Le projet a été vérifié";
+
+// Console
+"ConsoleClearAllEntriesTitle" = "Effacer toutes les entrées ?";
+"ConsoleClearAllEntriesDescr" = "Êtes-vous sûr de vouloir supprimer toutes les entrées dans la Console ? Cette action ne peut pas être annulée.";
+
+// DebugMismatchEncoding
+"DebugMismatchEncodingTitle" = "Erreur d'encodage";
+"DebugMismatchEncodingDescr" = "iLocalize a détecté que l'encodage du fichier sélectionné (%1$@) ne correspond pas à l'encodage du fichier actuel (%2$@).\nSouhaitez-vous recharger le fichier en utilisant le nouvel encodage '%2$@' détecté ?";
+
+// ExportProject
+"ExportProjectFileExistsTitle" = "Le fichier exporté « %@ » existe déjà !";
+"ExportProjectFileExistsDescr" = "Souhaitez-vous fusionner ou écraser la cible ?";
+
+// ExportProjectOperation
+"ExportProjectOperationAppleScriptErrorTitle" = "AppleScript a retourné « %@ »";
+"ExportProjectOperationAppleScriptErrorDescr" = "Une erreur est survenue lors de la création du nouveau message électronique.";
+"ExportProjectOperationZIPErrorTitle" = "ZIP a retourné une erreur";
+"ExportProjectOperationZIPErrorDescr" = "Une erreur est survenue lors de la compression de la localisation exportée.";
+
+// Glossary
+"GlossaryRemoveTitle" = "Supprimer les entrées doublons ?";
+
+// GlossaryManager
+"GlossaryManagerMoveTitle" = "Déplacer les éléments sélectionnés à la Corbeille ?";
+
+// GlossaryNew
+"GlossaryNewOverwriteTitle" = "Le glossaire spécifié existe déjà";
+
+// GlossaryNotIndexed
+"GlossaryNotIndexedAliasTitle" = "Impossible de créer l’alias";
+"GlossaryNotIndexedAliasDescr" = "Impossible de créer l’alias car une erreur est survenue.";
+"GlossaryNotIndexedMoveTitle" = "Impossible de déplacer le glossaire";
+"GlossaryNotIndexedMoveDescr" = "Une erreur est survenue lors de la tentative de déplacement du glossaire : %@";
+
+// History Manager
+"HistoryManagerDeleteTitle" = "Supprimer l’état sélectionné ?";
+
+// LaunchOperation
+"LaunchOperationBundleTitle" = "Impossible de lancer une application non packagée";
+"LaunchOperationBundleDescr" = "Seuls les bundles .app ou .ape peuvent être lancés depuis iLocalize.";
+"LaunchOperationCannotTitle" = "Impossible de lancer l'application";
+"LaunchOperationCannotDescr" = "L'application n'a pas été trouvée. Assurez-vous de générer l'application avant de la lancer.";
+
+// NewGlossaryOperation
+"NewGlossaryOperationGlossaryGeneratedTitle" = "Le glossaire a été généré";
+"NewGlossaryOperationGlossaryGeneratedDescr" = "Voulez-vous l’ouvrir ?";
+"NewGlossaryOperationGlossariesGeneratedTitle" = "Les glossaires ont été générés";
+"NewGlossaryOperationGlossariesGeneratedDescr" = "Voulez-vous les ouvrir ?";
+
+// NewGlossaryOperationDriver
+"NewGlossaryOperationDriverGlossaryTitle" = "Le glossaire existe déjà sur le disque";
+"NewGlossaryOperationDriverGlossariesTitle" = "Un ou plusieurs glossaires existent déjà sur le disque";
+"NewGlossaryOperationDriverGlossariesDescr" = "Voulez-vous les écraser ?";
+
+// PresetsManager
+"PresetsManagerRename" = "Renommer le préréglage";
+"PresetsManagerSaveNew" = "Enregistrer le nouveau préréglage";
+"PresetsManagerEnterName" = "Saisir le nom de la présélection :";
+
+// Project
+"ProjectCheckTitle" = "Il est recommandé de vérifier le projet pour éviter les incohérences";
+"ProjectCheckDescr" = "Souhaitez-vous vérifier le projet maintenant ? Le projet peut être vérifié à tout moment en utilisant la commande \"Vérifier la cohérence\" dans le menu Projet.";
+
+// ProjectBrowser
+"ProjectBrowserDeleteTitle" = "Supprimer le projet sélectionné ?";
+"ProjectBrowserDeleteDescr" = "Le projet va être déplacé à la Corbeille.";
+
+// ProjectDocument
+"ProjectDocumentInvalidTitle" = "Ce projet ne peut pas être ouvert car l'archive est invalide";
+"ProjectDocumentRecentTitle" = "Ce projet est trop récent. Il ne peut pas être ouvert avec cette version de iLocalize";
+"ProjectDocumentRecentDescr" = "Met à jour avec la dernière version d'iLocalize afin de pouvoir l'ouvrir.";
+"ProjectDocumentTigerTitle" = "Ce projet ne peut pas être ouvert car il a été créé avec Tiger";
+"ProjectDocumentTigerDescr" = "Cette version d'iLocalize ne prend en charge que les projets créés avec ibtool sous Leopard ou les versions ultérieures.";
+"ProjectDocumentUpgradeTitle" = "Le projet a besoin d'être mis à jour";
+"ProjectDocumentUpgradeDescr" = "Le projet « %@ » a été enregistré avec une version plus ancienne de iLocalize. Pour l'ouvrir, iLocalize va devoir le mettre à jour, en conservant une copie de l'ancien projet. Souhaitez-vous ouvrir et mettre à jour ce projet ?";
+
+// ProjectExplorerController
+"ProjectExplorerControllerDeleteFiltersTitle" = "Supprimer les filtres sélectionnés ?";
+
+// ProjectLabels
+"ProjectLabelsInvalidTitle" = "L'ID de l'étiquette est invalide";
+"ProjectLabelsRemoveTitle" = "L’étiquette sélectionnée est utilisée dans le projet";
+"ProjectLabelsRemoveDescr" = "En choisissant de le supprimer, iLocalize va supprimer toutes ses références dans le projet.";
+
+// ProjectMenuEdit
+"ProjectMenuEditChangeTitle" = "Modifier l'encodage des fichiers sélectionnés ?";
+"ProjectMenuEditChangeDescr" = "Souhaitez-vous recharger chaque fichier comme '%1$@' ou enregistrer le contenu en mémoire de chacun des fichiers en tant que fichier '%2$@' ?";
+
+// RebuildBaseFiles
+"RebuildBaseFilesTitle" = "Reconstruire les fichiers sélectionnés de la langue de référence ?";
+"RebuildBaseFilesDescr" = "Souhaitez-vous vraiment reconstruire les fichiers sélectionnés de la langue de référence ? Cette action entraînera également la mise à jour de tous les fichiers localisés.";
+
+// RemoveLanguage
+"RemoveLanguageTitle" = "Supprimer “%@” ?";
+"RemoveLanguageDescr" = "Souhaitez-vous vraiment supprimer cette langue ?";
+
+// ReplaceLocalizedFiles
+"ReplaceLocalizedFilesTitle" = "Reconstruire les fichiers localisés sélectionnés ?";
+"ReplaceLocalizedFilesDescr" = "Souhaitez-vous vraiment reconstruire les fichiers localisés sélectionnés avec les fichiers de référence correspondants ?";

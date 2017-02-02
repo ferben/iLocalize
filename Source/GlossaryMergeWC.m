@@ -18,26 +18,33 @@
 
 - (id)init
 {
-    if((self = [super initWithWindowNibName:@"GlossaryMerge"])) {
+    if ((self = [super initWithWindowNibName:@"GlossaryMerge"]))
+    {
         [self window];
     }
+    
     return self;
 }
 
-- (void)setGlossaries:(NSArray*)glossaries
+- (void)setGlossaries:(NSArray *)glossaries
 {
     [mMergeController removeObjects:[mMergeController content]];
     
     NSMutableArray *mergeTargetGlossaries = [NSMutableArray array];    
-    for(Glossary *g in glossaries) {
+
+    for (Glossary *g in glossaries)
+    {
 		NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-		dic[@"glossary"] = g;
+	
+        dic[@"glossary"] = g;
 		dic[@"selected"] = @YES;
 		dic[@"name"] = [g relativeFile];
-		[mMergeController addObject:dic];
+		
+        [mMergeController addObject:dic];
 		
 		// Can only merge to a glossary that can be written to the disk!
-		if(![g readOnly]) {
+		if (![g readOnly])
+        {
 			[mergeTargetGlossaries addObject:g];	
 		}
     }
@@ -45,13 +52,15 @@
     NSMenu *menu = [[NSMenu alloc] initWithTitle:@""];
     [menu addItemWithTitle:NSLocalizedString(@"< New >", @"Glossary New Menu Item") action:nil keyEquivalent:@""];
 	
-	if (mergeTargetGlossaries.count > 0) {
+	if (mergeTargetGlossaries.count > 0)
+    {
 		[menu addItem:[NSMenuItem separatorItem]];
 	}
     
 	NSMenuItem *item;
 		
-	for(Glossary *g in mergeTargetGlossaries) {
+	for (Glossary *g in mergeTargetGlossaries)
+    {
 		item = [[NSMenuItem alloc] initWithTitle:g.file action:nil keyEquivalent:@""];
         [item setRepresentedObject:g];
 		[menu addItem:item];
@@ -64,10 +73,14 @@
 {
 	Glossary *mergedGlossary = [[Glossary alloc] init];
 
-    for(NSDictionary *dic in [mMergeController content]) {
-        if([dic[@"selected"] boolValue]) {
+    for (NSDictionary *dic in [mMergeController content])
+    {
+        if ([dic[@"selected"] boolValue])
+        {
             Glossary *g = dic[@"glossary"];
-			if(g.sourceLanguage && g.targetLanguage && [g entryCount] > 0) {
+            
+			if (g.sourceLanguage && g.targetLanguage && [g entryCount] > 0)
+            {
 				mergedGlossary.sourceLanguage = g.sourceLanguage;
 				mergedGlossary.targetLanguage = g.targetLanguage;
 				[mergedGlossary addEntries:g.entries];
@@ -76,11 +89,12 @@
     }
     
 	// Optionally remove duplicate entries
-	if([mRemoveDuplicateEntriesButton state] == NSOnState) {
+    if ([mRemoveDuplicateEntriesButton state] == NSOnState)
+    {
 		[mergedGlossary removeDuplicateEntries];
 	}
 	
-    int index = [mMergeDestPopUp indexOfSelectedItem];
+    NSInteger index = [mMergeDestPopUp indexOfSelectedItem];
 
     if (index == 0)
     {
@@ -107,7 +121,7 @@
 		if (![g writeToFile:&error])
         {
 			NSAlert *alert = [NSAlert alertWithError:error];
-			[alert beginSheetModalForWindow:[self window] modalDelegate:self didEndSelector:nil contextInfo:nil];
+            [alert beginSheetModalForWindow:[self window] completionHandler:NULL];
 		}
     }
 }

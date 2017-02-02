@@ -19,8 +19,10 @@
 #import "ProjectWC.h"
 
 @interface OperationDriver (PrivateMethods)
+
 - (void)executeOp:(id)op;
 - (void)operationDidExecute:(id)op action:(NSUInteger)action;
+
 @end
 
 @implementation OperationDriver
@@ -28,7 +30,7 @@
 @synthesize currentOperation;
 @synthesize arguments;
 
-+ (OperationDriver*)driverWithProjectProvider:(id<ProjectProvider>)provider
++ (OperationDriver *)driverWithProjectProvider:(id<ProjectProvider>)provider
 {
 	OperationDriver *driver = [[self alloc] init];
 	driver.provider = provider;
@@ -38,17 +40,20 @@
 - (id) init
 {
 	self = [super init];
-	if (self != nil) {
+    
+	if (self != nil)
+    {
 		opWC = [[OperationDriverWC alloc] init];
 		opWC.driver = self;
 		dispatcher = [[OperationDispatcher alloc] init];
 		[[opWC window] setTitle:[self windowTitle]];		
 	}
+    
 	return self;
 }
 
 
-- (NSString*)windowTitle
+- (NSString *)windowTitle
 {
 	return @"";
 }
@@ -83,7 +88,9 @@
 {
 	int oldState = currentState;
 	currentState = [self previousState:currentState];
-	switch (currentState) {
+    
+	switch (currentState)
+    {
 		case STATE_INITIAL:
 			[opWC setCanGoBack:NO];
 			break;
@@ -100,6 +107,7 @@
 			[self executeOp:[self operationForState:currentState]];
 			break;
 	}
+    
 	[opWC setCanGoBack:[self previousState:currentState] != STATE_END];
 }
 
@@ -107,7 +115,9 @@
 {
 	int oldState = currentState;
 	currentState = [self nextState:currentState];
-	switch (currentState) {
+    
+	switch (currentState)
+    {
 		case STATE_INITIAL:
 			break;
 			
@@ -124,12 +134,12 @@
 			[self executeOp:[self operationForState:currentState]];
 			break;
 	}
-	// Can go back only if there is a previous state and that the current operation
-	// is not a progress operation.
+    
+	// Can go back only if there is a previous state and that the current operation is not a progress operation.
 	[opWC setCanGoBack:[self previousState:currentState] != STATE_END && [self.currentOperation isKindOfClass:[OperationViewController class]]];
 }
 
-- (OperationViewController*)errorOVC:(id)op
+- (OperationViewController *)errorOVC:(id)op
 {
 	OperationErrorViewController *vc = [OperationErrorViewController createInstance];
 	[vc setLastOperation:[self nextState:currentState] == STATE_END];
@@ -139,34 +149,42 @@
 	return vc;
 }
 
-- (void)displayAlerts:(NSArray*)alerts
+- (void)displayAlerts:(NSArray *)alerts
 {
      // retain the operation driver because it might be released during the time the alert is displayed
     NSDictionary *dic = [alerts firstObject];
-    NSAlert *alert = [NSAlert alertWithMessageText:dic[@"title"]
-                                     defaultButton:NSLocalizedString(@"OK", nil)
-                                   alternateButton:nil
-                                       otherButton:nil
-                         informativeTextWithFormat:@"%@", dic[@"message"]];
-    [alert beginSheetModalForWindow:[opWC visibleWindow]
-                      modalDelegate:self
-                     didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:)
-                        contextInfo:(void*)CFBridgingRetain(self)];
-}
 
-- (void)alertDidEnd:(NSAlert *)alert returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo
-{
-    [self operationNext];
+    // compose alert
+    NSAlert *alert = [NSAlert new];
+    
+    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert setMessageText:dic[@"title"]];
+    [alert setInformativeText:dic[@"message"]];
+    [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextOK",@"Alerts",nil)];   // 1st button
+    
+    // show alert
+    [alert beginSheetModalForWindow:[opWC visibleWindow] completionHandler:^(NSModalResponse alertReturnCode)
+    {
+        [[alert window] orderOut:self];
+         
+        [self operationNext];
+    }];
 }
 
 - (void)operationDidExecute:(id)op action:(NSUInteger)action
 {
-    if([[op alerts] count] > 0) {
+    if ([[op alerts] count] > 0)
+    {
         [self displayAlerts:[op alerts]];
-    } else if([[op errors] count] > 0 || [[op warnings] count] > 0) {
+    }
+    else if ([[op errors] count] > 0 || [[op warnings] count] > 0)
+    {
 		[self executeOp:[self errorOVC:op]];
-	} else {
-		switch (action) {
+	}
+    else
+    {
+		switch (action)
+        {
 			case OPERATION_CANCEL:		
 				[self operationCancel];
 				break;
@@ -209,12 +227,16 @@
  it progresses. This is because some old operations might be invoked from the new Operation
  so until we get rid of all the old operations, we need this hack.
  */
-- (void)setInstallOldOperationWCHack:(BOOL)install operation:(Operation*)op
+- (void)setInstallOldOperationWCHack:(BOOL)install operation:(Operation *)op
 {
 	OperationWC *oldOpWC = [self.provider operation];
-	if(install) {
+    
+	if (install)
+    {
 		oldOpWC.operation = op;
-	} else {
+	}
+    else
+    {
 		oldOpWC.operation = nil;
 	}
 }
@@ -245,22 +267,29 @@ typedef void(^Block)();
 	// Need to retain the operation
 	self.currentOperation = op;
 
-	if(op == nil) {
+	if (op == nil)
+    {
 		[self operationDidExecute:op action:OPERATION_NEXT];
 		return;
 	}
 
-	if([op isKindOfClass:[OperationViewController class]]) {
-		((OperationViewController*)op).driverWC = opWC;
-		((OperationViewController*)op).projectProvider = self.provider;
+	if ([op isKindOfClass:[OperationViewController class]])
+    {
+		((OperationViewController *)op).driverWC = opWC;
+		((OperationViewController *)op).projectProvider = self.provider;
+        
 		opWC.showControls = YES;
 		opWC.parentWindow = [[self.provider projectWC] window];
-		[opWC show:op callback:^(NSUInteger action) {
+        
+		[opWC show:op callback:^(NSUInteger action)
+        {
 			[self operationDidExecute:op action:action];
 		}];
-	} else if([op isKindOfClass:[Operation class]]) {
-		((Operation*)op).driver = self;
-		((Operation*)op).projectProvider = self.provider;
+	}
+    else if ([op isKindOfClass:[Operation class]])
+    {
+		((Operation *)op).driver = self;
+		((Operation *)op).projectProvider = self.provider;
 		
 		// Create a timer that will display the operation view controller only if the operation lasts more than 0.5 seconds.
 		OperationProgressViewController *ovc = [OperationProgressViewController createWithOperation:op];
@@ -269,38 +298,50 @@ typedef void(^Block)();
 		NSTimer *t = [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(showOperationProgressViewControllerFired:) userInfo:ovc repeats:NO];
 		NSDate *startDate = [NSDate date];
 		
-		if(self.provider) {
+		if (self.provider)
+        {
 			// Install the hack now if the project provider is available. Otherwise, it will be installed
 			// later on in notifyNewProjectProvider.
 			[self setInstallOldOperationWCHack:YES operation:op];			
 		}
 		
-		if([op needsDisconnectInterface]) {
+		if ([op needsDisconnectInterface])
+        {
 			[self disconnectInterface];			
 		}
-		// Invoke willExecute on the main thread.
+		
+        // Invoke willExecute on the main thread.
 		[op performSelectorOnMainThread:@selector(willExecute) withObject:nil waitUntilDone:YES];
 		
 		// Dispatch the operation for execution
 		dispatcher.projectProvider = self.provider;
-		[dispatcher dispatch:op callback:^(NSUInteger action) {
+        
+		[dispatcher dispatch:op callback:^(NSUInteger action)
+        {
 			// This block contains the code that will complete the operation.
-			Block block = ^ void() {
+			Block block = ^ void()
+            {
 				[self setInstallOldOperationWCHack:NO operation:op];
-				if([op needsDisconnectInterface]) {
+			
+                if ([op needsDisconnectInterface])
+                {
 					[self reconnectInterface];			
 				}				
-				// Invoke didExecute on the main thread.
+				
+                // Invoke didExecute on the main thread.
 				[op performSelectorOnMainThread:@selector(didExecute) withObject:nil waitUntilDone:YES];
 				[self operationDidExecute:op action:action];
 			};
 			
-			if([t isValid]) {
+			if ([t isValid])
+            {
 				// If the timer hasn't fired yet, invalidate it so the progress view controller doesn't show up.
 				[t invalidate];
 				// Execute the completion block.
 				block();
-			} else {
+			}
+            else
+            {
 				// However, if it is already invalidated, then the progress view controller is displayed.
 				// Make sure that the view is displayed for at least 2 seconds before continuing in order
 				// to avoid the rapid transition from one view controller to another if the operation executes
@@ -315,12 +356,14 @@ typedef void(^Block)();
 			}
 
 		}];
-	} else {
+	}
+    else
+    {
 		NSLog(@"Unknown operation %@", op);
 	}
 }
 
-- (void)showOperationProgressViewControllerFired:(NSTimer*)timer
+- (void)showOperationProgressViewControllerFired:(NSTimer *)timer
 {
 	// Create the operation view controller that will display the progress of the operation
 	OperationProgressViewController *ovc = [timer userInfo];

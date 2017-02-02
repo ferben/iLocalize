@@ -126,23 +126,13 @@
 
 /* All Selection Node
    Explorer list node */
-
 "All" = "All";
 
 /* No comment provided by engineer. */
 "Alternate Translations" = "Alternate Translations";
 
 /* No comment provided by engineer. */
-"An error has occurred when trying to move the glossary: %@" = "An error has occurred when trying to move the glossary: %@";
-
-/* No comment provided by engineer. */
 "An error has occurred while executing the drag and drop operation" = "An error has occurred while executing the drag and drop operation";
-
-/* No comment provided by engineer. */
-"An error occurred when compressing the exported localization" = "An error occurred when compressing the exported localization";
-
-/* No comment provided by engineer. */
-"An error occurred while creating a new e-mail" = "An error occurred while creating a new e-mail";
 
 /* No comment provided by engineer. */
 "Analyzing Bundle for Changes…" = "Analyzing Bundle for Changes…";
@@ -156,17 +146,11 @@
 /* AppleGlot Display Name Format */
 "AppleGlot" = "AppleGlot";
 
-/* No comment provided by engineer. */
-"AppleScript returned “%@”" = "AppleScript returned “%@”";
-
 /* Label */
 "Approved" = "Approved";
 
 /* Rebase Operation */
 "Archiving Current Bundle…" = "Archiving Current Bundle…";
-
-/* No comment provided by engineer. */
-"Are you sure you want to remove all entries in the Console? This action cannot be undone." = "Are you sure you want to remove all entries in the Console? This action cannot be undone.";
 
 /* String status auto-invariant */
 "Auto-invariant" = "Auto-invariant";
@@ -190,25 +174,6 @@
 "Built-in" = "Built-in";
 
 /* No comment provided by engineer. */
-"By choosing to remove it, iLocalize will remove all its references in the project" = "By choosing to remove it, iLocalize will remove all its references in the project";
-
-/* Preset Alert Cancel Button
-   Rebuild Base File Alert
-   Replace Localized File Alert */
-
-
-"Cancel" = "Cancel";
-
-/* Language */
-"Cannot add this language" = "Cannot add this language";
-
-/* No comment provided by engineer. */
-"Cannot create the alias" = "Cannot create the alias";
-
-/* No comment provided by engineer. */
-"Cannot create the alias because an error has occurred." = "Cannot create the alias because an error has occurred.";
-
-/* No comment provided by engineer. */
 "Cannot Delete “%@”" = "Cannot Delete “%@”";
 
 /* Strings Importer */
@@ -221,25 +186,10 @@
 "Cannot find the suitable importer for file: %@" = "Cannot find the suitable importer for file: %@";
 
 /* No comment provided by engineer. */
-"Cannot launch non-application bundle" = "Cannot launch non-application bundle";
-
-/* No comment provided by engineer. */
-"Cannot launch the application" = "Cannot launch the application";
-
-/* No comment provided by engineer. */
-"Cannot move the glossary" = "Cannot move the glossary";
-
-/* No comment provided by engineer. */
 "Cannot Rename “%@”" = "Cannot Rename “%@”";
 
 /* No comment provided by engineer. */
-"Change the encoding of the selected files?" = "Change the encoding of the selected files?";
-
-/* No comment provided by engineer. */
 "characters" = "characters";
-
-/* No comment provided by engineer. */
-"Check" = "Check";
 
 /* No comment provided by engineer. */
 "Checking…" = "Checking…";
@@ -263,12 +213,6 @@
 "Cleaning…" = "Cleaning…";
 
 /* No comment provided by engineer. */
-"Clear" = "Clear";
-
-/* No comment provided by engineer. */
-"Clear All Entries?" = "Clear All Entries?";
-
-/* No comment provided by engineer. */
 "Clear Menu" = "Clear Menu";
 
 /* No comment provided by engineer. */
@@ -276,7 +220,6 @@
 
 /* String Information
    Toggle between comment and value button */
-
 "Comment" = "Comment";
 
 /* Search Contextual Menu */
@@ -306,71 +249,8 @@
 /* Diff Operation Delete */
 "delete" = "delete";
 
-/* Preset Delete */
-"Delete" = "Delete";
-
-/* No comment provided by engineer. */
-"Delete selected files?" = "Delete selected files?";
-
-/* No comment provided by engineer. */
-"Delete selected project?" = "Delete selected project?";
-
-/* No comment provided by engineer. */
-"Delete the selected filters?" = "Delete the selected filters?";
-
-/* No comment provided by engineer. */
-"Delete the selected snapshot?" = "Delete the selected snapshot?";
-
 /* No comment provided by engineer. */
 "Delete “%@”" = "Delete “%@”";
-
-/* No comment provided by engineer. */
-"Delete “%@”?" = "Delete “%@”?";
-
-/* No comment provided by engineer. */
-"Do Nothing" = "Do Nothing";
-
-/* No comment provided by engineer. */
-"Do you really want to delete the selected files? This action cannot be undone." = "Do you really want to delete the selected files? This action cannot be undone.";
-
-/* No comment provided by engineer. */
-"Do you really want to delete this language? This action cannot be undone." = "Do you really want to delete this language? This action cannot be undone.";
-
-/* Rebuild Base File Alert */
-"Do you really want to rebuild the selected base files? This will also update all localized files. This action cannot be undone." = "Do you really want to rebuild the selected base files? This will also update all localized files. This action cannot be undone.";
-
-/* Replace Localized File Alert */
-"Do you really want to rebuild the selected localized files with their corresponding base files? This action cannot be undone." = "Do you really want to rebuild the selected localized files with their corresponding base files? This action cannot be undone.";
-
-/* No comment provided by engineer. */
-"Do you want to check the project? The project can be checked at any time by using the command under the menu Project." = "Do you want to check the project? The project can be checked at any time by using the command under the menu Project.";
-
-/* No comment provided by engineer. */
-"Do you want to merge or overwrite the destination?" = "Do you want to merge or overwrite the destination?";
-
-/* No comment provided by engineer. */
-"Do you want to open it?" = "Do you want to open it?";
-
-/* No comment provided by engineer. */
-"Do you want to open them?" = "Do you want to open them?";
-
-/* No comment provided by engineer. */
-"Do you want to overwrite it?" = "Do you want to overwrite it?";
-
-/* No comment provided by engineer. */
-"Do you want to overwrite it? This action cannot be undone." = "Do you want to overwrite it? This action cannot be undone.";
-
-/* No comment provided by engineer. */
-"Do you want to overwrite them?" = "Do you want to overwrite them?";
-
-/* No comment provided by engineer. */
-"Do you want to reload each file as '%@' or save the current in-memory content of each file as a '%@' file?" = "Do you want to reload each file as '%1$@' or save the current in-memory content of each file as a '%2$@' file?";
-
-/* No comment provided by engineer. */
-"Don't check" = "Don't check";
-
-/* No comment provided by engineer. */
-"Don't Open" = "Don't Open";
 
 /* No comment provided by engineer. */
 "Don't Reload" = "Don't Reload";
@@ -395,9 +275,6 @@
 
 /* Search Contextual Menu */
 "ends with" = "ends with";
-
-/* Preset Alert Message */
-"Enter the name of the preset:" = "Enter the name of the preset:";
 
 /* No comment provided by engineer. */
 "Error Creating Glossary" = "Error Creating Glossary";
@@ -506,12 +383,10 @@
 
 /* Project Information
    Status Bar */
-
 "hour" = "hour";
 
 /* Project Information
    Status Bar */
-
 "hours" = "hours";
 
 /* Search Contextual Menu */
@@ -519,12 +394,6 @@
 
 /* ILG Display Name Format */
 "ILG (iLocalize 3)" = "ILG (iLocalize 3)";
-
-/* No comment provided by engineer. */
-"iLocalize did not find the command-line tool “ibtool” which is required to perform localization. Make sure that Xcode 3 or above is installed on your machine. The path to “ibtool” can be manually specified in Preferences > Advanced > Tools." = "iLocalize did not find the command-line tool “ibtool” which is required to perform localization. Make sure that Xcode 3 or above is installed on your machine. The path to “ibtool” can be manually specified in Preferences > Advanced > Tools.";
-
-/* No comment provided by engineer. */
-"iLocalize has detected that the encoding of the selected file (%1$@) mismatches the encoding of the actual file (%2$@). Do you want to reload the file using the new detected encoding '%2$@'?" = "iLocalize has detected that the encoding of the selected file (%1$@) mismatches the encoding of the actual file (%2$@). Do you want to reload the file using the new detected encoding '%2$@'?";
 
 /* No comment provided by engineer. */
 "Import" = "Import";
@@ -538,9 +407,6 @@
 /* XLIFF Export */
 "Invalid character 0x%x detected in string \"%@\" for file \"%@\"" = "Invalid character 0x%1$x detected in string \"%2$@\" for file \"%3$@\"";
 
-/* No comment provided by engineer. */
-"Invalid label ID" = "Invalid label ID";
-
 /* String status invariant */
 "Invariant" = "Invariant";
 
@@ -550,17 +416,8 @@
 /* Search Contextual Menu */
 "is not" = "is not";
 
-/* No comment provided by engineer. */
-"It is recommended to check the project against inconsistencies" = "It is recommended to check the project against inconsistencies";
-
-/* Rebuild Base File Alert
-   Replace Localized File Alert */
-
-"Keep localized nib layouts" = "Keep localized NIB layouts";
-
 /* Search Context Button
    String Information */
-
 "Key" = "Key";
 
 /* No comment provided by engineer. */
@@ -593,21 +450,13 @@
 /* Search Contextual Menu */
 "matches" = "matches";
 
-/* No comment provided by engineer. */
-"Merge…" = "Merge…";
-
 /* Project Information
    Status Bar */
-
 "minute" = "minute";
 
 /* Project Information
    Status Bar */
-
 "minutes" = "minutes";
-
-/* No comment provided by engineer. */
-"Mismatch encoding" = "Mismatch encoding";
 
 /* TXML Importer */
 "Missing <skeleton> element before <translatable> element. This element is required and contains the relative path of the file." = "Missing <skeleton> element before <translatable> element. This element is required and contains the relative path of the file.";
@@ -620,15 +469,6 @@
 
 /* Project Browser Column */
 "Modified Date" = "Modified Date";
-
-/* No comment provided by engineer. */
-"Move the selected items to the trash?" = "Move the selected items to the trash?";
-
-/* No comment provided by engineer. */
-"Move To Trash" = "Move To Trash";
-
-/* No comment provided by engineer. */
-"Move to Trash" = "Move to Trash";
 
 /* Project Browser Column */
 "Name" = "Name";
@@ -675,11 +515,6 @@
 /* No comment provided by engineer. */
 "Nothing to export" = "Nothing to export";
 
-/* Language
-   Preset Alert OK Button */
-
-"OK" = "OK";
-
 /* Glossary Entries Information */
 "One entry" = "One entry";
 
@@ -704,20 +539,8 @@
 /* No comment provided by engineer. */
 "One nib file is not located in language folder" = "One NIB file is not located in language folder";
 
-/* No comment provided by engineer. */
-"One or more glossaries already exist on the disk" = "One or more glossaries already exist on the disk";
-
 /* Language Progress */
 "One string to translate" = "One string to translate";
-
-/* No comment provided by engineer. */
-"Only .app or .ape bundles can be launched from within iLocalize." = "Only .app or .ape bundles can be launched from within iLocalize.";
-
-/* No comment provided by engineer. */
-"Open" = "Open";
-
-/* No comment provided by engineer. */
-"Open and Upgrade" = "Open and Upgrade";
 
 /* Project Information */
 "Open For" = "Open For";
@@ -730,9 +553,6 @@
 
 /* Status Bar */
 "Open for less than a minute" = "Open for less than a minute";
-
-/* No comment provided by engineer. */
-"Overwrite" = "Overwrite";
 
 /* File Information */
 "Path" = "Path";
@@ -758,22 +578,11 @@
 /* No comment provided by engineer. */
 "Propagate To Selected Files" = "Propagate To Selected Files";
 
-/* Rebuild Base File Alert
-   Replace Localized File Alert */
-
-"Rebuild" = "Rebuild";
-
-/* Rebuild Base File Alert */
-"Rebuild selected base files?" = "Rebuild selected base files?";
-
 /* No comment provided by engineer. */
 "Rebuild Selected Files" = "Rebuild Selected Files";
 
 /* No comment provided by engineer. */
 "Rebuild Selected Files from “%@”" = "Rebuild Selected Files from “%@”";
-
-/* Replace Localized File Alert */
-"Rebuild selected localized files?" = "Rebuild selected localized files?";
 
 /* No comment provided by engineer. */
 "Rebuilding files…" = "Rebuilding files…";
@@ -791,9 +600,6 @@
 "Recents" = "Recents";
 
 /* No comment provided by engineer. */
-"Reload" = "Reload";
-
-/* No comment provided by engineer. */
 "Reload All" = "Reload All";
 
 /* No comment provided by engineer. */
@@ -806,24 +612,10 @@
 "Reload Selected" = "Reload Selected";
 
 /* No comment provided by engineer. */
-"Remove" = "Remove";
-
-/* No comment provided by engineer. */
-"Remove duplicate entries?" = "Remove duplicate entries?";
-
-/* No comment provided by engineer. */
 "Removing Files…" = "Removing Files…";
-
-/* Language
-   Preset Alert Rename Button */
-
-"Rename" = "Rename";
 
 /* No comment provided by engineer. */
 "Rename Language…" = "Rename Language…";
-
-/* Preset Alert Message */
-"Rename Preset" = "Rename Preset";
 
 /* No comment provided by engineer. */
 "Rename “%@”…" = "Rename “%@”…";
@@ -832,22 +624,10 @@
 "Rename…" = "Rename…";
 
 /* No comment provided by engineer. */
-"Required Tool Missing" = "Required Tool Missing";
-
-/* Preset Save */
-"Save" = "Save";
-
-/* No comment provided by engineer. */
 "Save All" = "Save All";
-
-/* Preset Save As */
-"Save As…" = "Save As…";
 
 /* No comment provided by engineer. */
 "Save Modified Files" = "Save Modified Files";
-
-/* Preset Alert Message */
-"Save New Preset" = "Save New Preset";
 
 /* No comment provided by engineer. */
 "Save Selected" = "Save Selected";
@@ -921,27 +701,10 @@
 /* File Information
    Project Information
    Strings Display Name Format */
-
-
 "Strings" = "Strings";
 
 /* Text Display Name Format */
 "Text" = "Text";
-
-/* No comment provided by engineer. */
-"The application is not found. Make sure to build the application before launching it." = "The application is not found. Make sure to build the application before launching it.";
-
-/* No comment provided by engineer. */
-"The exported file “%@” already exists" = "The exported file “%@” already exists";
-
-/* No comment provided by engineer. */
-"The glossaries have been generated" = "The glossaries have been generated";
-
-/* No comment provided by engineer. */
-"The glossary already exists on the disk" = "The glossary already exists on the disk";
-
-/* No comment provided by engineer. */
-"The glossary has been generated" = "The glossary has been generated";
 
 /* Errors Info Label */
 "The operation reported the following errors:" = "The operation reported the following errors:";
@@ -959,52 +722,16 @@
 "The project folder “%@” already exists. Do you want to move it to the trash and create a new one?" = "The project folder “%@” already exists. Do you want to move it to the trash and create a new one?";
 
 /* No comment provided by engineer. */
-"The project has been checked" = "The project has been checked";
-
-/* No comment provided by engineer. */
-"The project needs to be upgraded" = "The project needs to be upgraded";
-
-/* No comment provided by engineer. */
-"The project will be moved to the trash." = "The project will be moved to the trash.";
-
-/* No comment provided by engineer. */
-"The project “%@” was saved with an older version of iLocalize. To open it, iLocalize will have to upgrade it, leaving a copy of the older project. Do you want to open and upgrade this project?" = "The project “%@” was saved with an older version of iLocalize. To open it, iLocalize will have to upgrade it, leaving a copy of the older project. Do you want to open and upgrade this project?";
-
-/* No comment provided by engineer. */
-"The selected label is used in the project" = "The selected label is used in the project";
-
-/* No comment provided by engineer. */
 "The source application “%@” doesn't contains any language. At least one language must exist." = "The source application “%@” doesn't contains any language. At least one language must exist.";
 
 /* No comment provided by engineer. */
 "The source application “%@” doesn't exist. Select a source application to correct the problem." = "The source application “%@” doesn't exist. Select a source application to correct the problem.";
 
 /* No comment provided by engineer. */
-"The specified glossary already exists" = "The specified glossary already exists";
-
-/* No comment provided by engineer. */
 "The XLIFF file “%@” already exists" = "The XLIFF file “%@” already exists";
 
 /* XLIFF Import */
 "There are no strings to translate." = "There are no strings to translate.";
-
-/* No comment provided by engineer. */
-"This action cannot be undone." = "This action cannot be undone.";
-
-/* Language */
-"This language already exists in the project." = "This language already exists in the project.";
-
-/* No comment provided by engineer. */
-"This project cannot be opened because it has been created on Tiger" = "This project cannot be opened because it has been created on Tiger";
-
-/* No comment provided by engineer. */
-"This project cannot be opened because the archive is invalid" = "This project cannot be opened because the archive is invalid";
-
-/* No comment provided by engineer. */
-"This project is too recent and cannot be opened by this version of iLocalize" = "This project is too recent and cannot be opened by this version of iLocalize";
-
-/* No comment provided by engineer. */
-"This version of iLocalize supports only projects created on Leopard or above with ibtool" = "This version of iLocalize supports only projects created on Leopard or above with ibtool";
 
 /* TMX Display Name Format */
 "TMX" = "TMX";
@@ -1070,9 +797,6 @@
 "Update file “%@”" = "Update file “%@”";
 
 /* No comment provided by engineer. */
-"Update to the latest version of iLocalize to open it." = "Update to the latest version of iLocalize to open it.";
-
-/* No comment provided by engineer. */
 "Update “%@” and rebase all other languages. All strings in the other languages will be localized according to the current translation." = "Update “%@” and rebase all other languages. All strings in the other languages will be localized according to the current translation.";
 
 /* No comment provided by engineer. */
@@ -1095,6 +819,3 @@
 
 /* XLIFF Display Name Format */
 "XLIFF" = "XLIFF";
-
-/* No comment provided by engineer. */
-"zip returned an error" = "zip returned an error";

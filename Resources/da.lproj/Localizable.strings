@@ -134,16 +134,7 @@
 "Alternate Translations" = "Alternativer oversættelser";
 
 /* No comment provided by engineer. */
-"An error has occurred when trying to move the glossary: %@" = "Der opstod en fejl ved forsøg på at flytte ordbogen: %@";
-
-/* No comment provided by engineer. */
 "An error has occurred while executing the drag and drop operation" = "Der opstod en fejl under træk&anbring-handling";
-
-/* No comment provided by engineer. */
-"An error occurred when compressing the exported localization" = "Der opstod en fejl under komprimeringen af den eksporterede lokalisering";
-
-/* No comment provided by engineer. */
-"An error occurred while creating a new e-mail" = "Der opstod en fejl under oprettelsen af den nye e-mail";
 
 /* No comment provided by engineer. */
 "Analyzing Bundle for Changes…" = "Analyserer bundle for ændringer…";
@@ -157,17 +148,11 @@
 /* AppleGlot Display Name Format */
 "AppleGlot" = "AppleGlot";
 
-/* No comment provided by engineer. */
-"AppleScript returned “%@”" = "AppleScript returnerede „%@“";
-
 /* Label */
 "Approved" = "Godkendt";
 
 /* Rebase Operation */
 "Archiving Current Bundle…" = "Arkiverer aktuelt bundle…";
-
-/* No comment provided by engineer. */
-"Are you sure you want to remove all entries in the Console? This action cannot be undone." = "Er du sikker på, du vil fjerne alle emner i Konsollen ? Denne handling kan ikke fortrydes.";
 
 /* String status auto-invariant */
 "Auto-invariant" = "Auto-invariant";
@@ -191,27 +176,6 @@
 "Built-in" = "Indbygget";
 
 /* No comment provided by engineer. */
-"By choosing to remove it, iLocalize will remove all its references in the project" = "Vælger du at fjerne det, vil iLocalize fjerne alle dets referencer i projektet";
-
-/* Preset Alert Cancel Button
-   Rebuild Base File Alert
-   Replace Localized File Alert */
-
-
-
-
-"Cancel" = "Annuller";
-
-/* Language */
-"Cannot add this language" = "Kan ikke tilføje dette sprog";
-
-/* No comment provided by engineer. */
-"Cannot create the alias" = "Kan ikke oprette henvisning";
-
-/* No comment provided by engineer. */
-"Cannot create the alias because an error has occurred." = "Kan ikke oprette henvisning, fordi der opstod en fejl.";
-
-/* No comment provided by engineer. */
 "Cannot Delete “%@”" = "Kan ikke slette „%@“";
 
 /* Strings Importer */
@@ -224,25 +188,10 @@
 "Cannot find the suitable importer for file: %@" = "Cannot find the suitable importer for file: %@";
 
 /* No comment provided by engineer. */
-"Cannot launch non-application bundle" = "Kan ikke starte ikke-program pakke";
-
-/* No comment provided by engineer. */
-"Cannot launch the application" = "Kan ikke starte programmet";
-
-/* No comment provided by engineer. */
-"Cannot move the glossary" = "Kan ikke flytte ordbogen";
-
-/* No comment provided by engineer. */
 "Cannot Rename “%@”" = "Kan ikke omdøbe „%@“";
 
 /* No comment provided by engineer. */
-"Change the encoding of the selected files?" = "Skal kodingen af de valgte arkiver ændres?";
-
-/* No comment provided by engineer. */
 "characters" = "tegn";
-
-/* No comment provided by engineer. */
-"Check" = "Kontroller";
 
 /* No comment provided by engineer. */
 "Checking…" = "Søger…";
@@ -266,20 +215,10 @@
 "Cleaning…" = "Rydder op…";
 
 /* No comment provided by engineer. */
-"Clear" = "Slet";
-
-/* No comment provided by engineer. */
-"Clear All Entries?" = "Fjern alle emner ?";
-
-/* No comment provided by engineer. */
 "Clear Menu" = "Slet menu";
 
 /* No comment provided by engineer. */
 "Collecting Strings…" = "Collecting Strings…";
-
-/* String Information
-   Toggle between comment and value button */
-
 
 "Comment" = "Kommentar";
 
@@ -310,71 +249,8 @@
 /* Diff Operation Delete */
 "delete" = "slet";
 
-/* Preset Delete */
-"Delete" = "Slet";
-
-/* No comment provided by engineer. */
-"Delete selected files?" = "Slet valgte arkiver ?";
-
-/* No comment provided by engineer. */
-"Delete selected project?" = "Slet det valgte projekt?";
-
-/* No comment provided by engineer. */
-"Delete the selected filters?" = "Slet de valgte arkiver?";
-
-/* No comment provided by engineer. */
-"Delete the selected snapshot?" = "Slet det valgte snapshot?";
-
 /* No comment provided by engineer. */
 "Delete “%@”" = "Slet „%@“";
-
-/* No comment provided by engineer. */
-"Delete “%@”?" = "Slet „%@“?";
-
-/* No comment provided by engineer. */
-"Do Nothing" = "Do Nothing";
-
-/* No comment provided by engineer. */
-"Do you really want to delete the selected files? This action cannot be undone." = "Vil du virkelig slette de valgte arkiver ? Denne handling kan ikke fortrydes.";
-
-/* No comment provided by engineer. */
-"Do you really want to delete this language? This action cannot be undone." = "Vil du virkelig slette dette sprog ? Handlingen kan ikke fortrydes.";
-
-/* Rebuild Base File Alert */
-"Do you really want to rebuild the selected base files? This will also update all localized files. This action cannot be undone." = "Vil du virkelig genopbygge de valgte base-arkiver? Dette vil også opdatere alle lokaliserede arkiver. Denne handling kan ikke fortrydes.";
-
-/* Replace Localized File Alert */
-"Do you really want to rebuild the selected localized files with their corresponding base files? This action cannot be undone." = "Vil du virkelig genopbygge de valgte lokaliserede arkiver med deres korresponderende basis-arkiver? Denne handling kan ikke fortrydes.";
-
-/* No comment provided by engineer. */
-"Do you want to check the project? The project can be checked at any time by using the command under the menu Project." = "Vil du checke projektet nu? Projektet kan til enhver tid checkes ved at bruge kommandoen i menuen Projekt.";
-
-/* No comment provided by engineer. */
-"Do you want to merge or overwrite the destination?" = "Vil du flette eller overskrive destinationen?";
-
-/* No comment provided by engineer. */
-"Do you want to open it?" = "Do you want to open it?";
-
-/* No comment provided by engineer. */
-"Do you want to open them?" = "Do you want to open them?";
-
-/* No comment provided by engineer. */
-"Do you want to overwrite it?" = "Do you want to overwrite it?";
-
-/* No comment provided by engineer. */
-"Do you want to overwrite it? This action cannot be undone." = "Vil du overskrive det? Handlingen kan ikke fortrydes.";
-
-/* No comment provided by engineer. */
-"Do you want to overwrite them?" = "Do you want to overwrite them?";
-
-/* No comment provided by engineer. */
-"Do you want to reload each file as '%@' or save the current in-memory content of each file as a '%@' file?" = "Vil du genindlæse hvert arkiv som ’%1$@’ eller eller arkivere indhioldet af hvert arkiv i hukommelsen som et ’%2$@’ arkiv?";
-
-/* No comment provided by engineer. */
-"Don't check" = "Check ikke";
-
-/* No comment provided by engineer. */
-"Don't Open" = "Åbn ikke";
 
 /* No comment provided by engineer. */
 "Don't Reload" = "Genindlæs ikke";
@@ -399,9 +275,6 @@
 
 /* Search Contextual Menu */
 "ends with" = "ender med";
-
-/* Preset Alert Message */
-"Enter the name of the preset:" = "Angiv et navn til forud-indstillingen:";
 
 /* No comment provided by engineer. */
 "Error Creating Glossary" = "Error Creating Glossary";
@@ -508,15 +381,7 @@
 /* No comment provided by engineer. */
 "Hide Text Zone" = "Skjul tekstzone";
 
-/* Project Information
-   Status Bar */
-
-
 "hour" = "time";
-
-/* Project Information
-   Status Bar */
-
 
 "hours" = "timer";
 
@@ -525,9 +390,6 @@
 
 /* ILG Display Name Format */
 "ILG (iLocalize 3)" = "ILG (iLocalize 3)";
-
-/* No comment provided by engineer. */
-"iLocalize did not find the command-line tool “ibtool” which is required to perform localization. Make sure that Xcode 3 or above is installed on your machine. The path to “ibtool” can be manually specified in Preferences > Advanced > Tools." = "iLocalize fandt ikke kommando-linjeværktøjet “ibtool” som kræver til lokalisering. Sørg for at Xcode 3 eller nyere er installeret på din maskine. Stien til “ibtool” kan angives manuelt i Indstillinger > Avanceret > Værktøj.";
 
 /* No comment provided by engineer. */
 "iLocalize has detected that the encoding of the selected file (%1$@) mismatches the encoding of the actual file (%2$@). Do you want to reload the file using the new detected encoding '%2$@'?" = "iLocalize har opdaget, at kodningen af det valgte arkiv (%1$@) ikke matcher kodningen af det faktiske arkiv (%2$@). Vil du genindlæse arkivet med den nyligt opdagede kodning ’%2$@’?";
@@ -544,9 +406,6 @@
 /* XLIFF Export */
 "Invalid character 0x%x detected in string \"%@\" for file \"%@\"" = "Ugyldigt tegn 0x%1$x opdaget i string „%2$@“ for arkivet „%3$@“";
 
-/* No comment provided by engineer. */
-"Invalid label ID" = "Ugyldigt mærke-ID";
-
 /* String status invariant */
 "Invariant" = "Invariant";
 
@@ -555,19 +414,6 @@
 
 /* Search Contextual Menu */
 "is not" = "er ikke";
-
-/* No comment provided by engineer. */
-"It is recommended to check the project against inconsistencies" = "Det anbefales at kontrollere projektet for uoverensstemmelser";
-
-/* Rebuild Base File Alert
-   Replace Localized File Alert */
-
-
-"Keep localized nib layouts" = "Bevar lokaliserede NIB-layouts";
-
-/* Search Context Button
-   String Information */
-
 
 "Key" = "Key";
 
@@ -601,23 +447,9 @@
 /* Search Contextual Menu */
 "matches" = "matcher";
 
-/* No comment provided by engineer. */
-"Merge…" = "Flet…";
-
-/* Project Information
-   Status Bar */
-
-
 "minute" = "minut";
 
-/* Project Information
-   Status Bar */
-
-
 "minutes" = "minut";
-
-/* No comment provided by engineer. */
-"Mismatch encoding" = "Mismatch kodning";
 
 /* TXML Importer */
 "Missing <skeleton> element before <translatable> element. This element is required and contains the relative path of the file." = "Manglende <skeleton> element før <translatable> element. Dette element er nødvendigt og indeholder den relative sti til arkivet.";
@@ -630,15 +462,6 @@
 
 /* Project Browser Column */
 "Modified Date" = "Ændringsdato";
-
-/* No comment provided by engineer. */
-"Move the selected items to the trash?" = "Skal de valgte emner flyttes til Papirkurven ?";
-
-/* No comment provided by engineer. */
-"Move To Trash" = "Flyt til Papirkurv";
-
-/* No comment provided by engineer. */
-"Move to Trash" = "Flyt til Papirkurv";
 
 /* Project Browser Column */
 "Name" = "Navn";
@@ -685,12 +508,6 @@
 /* No comment provided by engineer. */
 "Nothing to export" = "Intet at eksportere";
 
-/* Language
-   Preset Alert OK Button */
-
-
-"OK" = "OK";
-
 /* Glossary Entries Information */
 "One entry" = "Et emne";
 
@@ -715,20 +532,8 @@
 /* No comment provided by engineer. */
 "One nib file is not located in language folder" = "Et NIB-arkiv befinder sig ikke i sprogmappe";
 
-/* No comment provided by engineer. */
-"One or more glossaries already exist on the disk" = "One or more glossaries already exist on the disk";
-
 /* Language Progress */
 "One string to translate" = "En string at oversætte";
-
-/* No comment provided by engineer. */
-"Only .app or .ape bundles can be launched from within iLocalize." = "Kun .app eller .ape -bundles kan startes fra iLocalize";
-
-/* No comment provided by engineer. */
-"Open" = "Open";
-
-/* No comment provided by engineer. */
-"Open and Upgrade" = "Åbn og opgrader";
 
 /* Project Information */
 "Open For" = "Åbent i";
@@ -741,9 +546,6 @@
 
 /* Status Bar */
 "Open for less than a minute" = "Åbent mindre end et minut";
-
-/* No comment provided by engineer. */
-"Overwrite" = "Overskriv";
 
 /* File Information */
 "Path" = "Sti";
@@ -769,23 +571,11 @@
 /* No comment provided by engineer. */
 "Propagate To Selected Files" = "Overfør til valgte arkiver";
 
-/* Rebuild Base File Alert
-   Replace Localized File Alert */
-
-
-"Rebuild" = "Genopbyg";
-
-/* Rebuild Base File Alert */
-"Rebuild selected base files?" = "Genopbyg valgte base-arkiver?";
-
 /* No comment provided by engineer. */
 "Rebuild Selected Files" = "Gendan valgte arkiver";
 
 /* No comment provided by engineer. */
 "Rebuild Selected Files from “%@”" = "Genopbyg valgte arkiver fra „%@“";
-
-/* Replace Localized File Alert */
-"Rebuild selected localized files?" = "Skal de valgte lokaliserede arkiver genopbygges?";
 
 /* No comment provided by engineer. */
 "Rebuilding files…" = "Genopbygger arkiver…";
@@ -803,9 +593,6 @@
 "Recents" = "Seneste";
 
 /* No comment provided by engineer. */
-"Reload" = "Genindlæs";
-
-/* No comment provided by engineer. */
 "Reload All" = "Genindlæs alle";
 
 /* No comment provided by engineer. */
@@ -818,25 +605,10 @@
 "Reload Selected" = "Genindlæs de valgte";
 
 /* No comment provided by engineer. */
-"Remove" = "Fjern";
-
-/* No comment provided by engineer. */
-"Remove duplicate entries?" = "Skal dubletter fjernes?";
-
-/* No comment provided by engineer. */
 "Removing Files…" = "Fjerner arkiver…";
-
-/* Language
-   Preset Alert Rename Button */
-
-
-"Rename" = "Omdøb";
 
 /* No comment provided by engineer. */
 "Rename Language…" = "Omdøb sprog…";
-
-/* Preset Alert Message */
-"Rename Preset" = "Omdøb forud-indstilling";
 
 /* No comment provided by engineer. */
 "Rename “%@”…" = "Omdøb „%@“…";
@@ -845,22 +617,10 @@
 "Rename…" = "Omdøb…";
 
 /* No comment provided by engineer. */
-"Required Tool Missing" = "Krævet værktøj mangler";
-
-/* Preset Save */
-"Save" = "Arkiver";
-
-/* No comment provided by engineer. */
 "Save All" = "Arkiver alle";
-
-/* Preset Save As */
-"Save As…" = "Arkiver som…";
 
 /* No comment provided by engineer. */
 "Save Modified Files" = "Arkiver ændrede arkiver";
-
-/* Preset Alert Message */
-"Save New Preset" = "Arkiver ny forud-indstillingen";
 
 /* No comment provided by engineer. */
 "Save Selected" = "Arkiver de valgte";
@@ -931,32 +691,10 @@
 /* No comment provided by engineer. */
 "String Information" = "String-information";
 
-/* File Information
-   Project Information
-   Strings Display Name Format */
-
-
-
-
 "Strings" = "Strings";
 
 /* Text Display Name Format */
 "Text" = "Tekst";
-
-/* No comment provided by engineer. */
-"The application is not found. Make sure to build the application before launching it." = "Programmet blev ikke fundet. Sørg for at generere programmet, før du starter det.";
-
-/* No comment provided by engineer. */
-"The exported file “%@” already exists" = "Det eksporterede arkiv „%@“ findes allerede";
-
-/* No comment provided by engineer. */
-"The glossaries have been generated" = "The glossaries have been generated";
-
-/* No comment provided by engineer. */
-"The glossary already exists on the disk" = "The glossary already exists on the disk";
-
-/* No comment provided by engineer. */
-"The glossary has been generated" = "The glossary has been generated";
 
 /* Errors Info Label */
 "The operation reported the following errors:" = "Operationen rapporterede de følgende fejl:";
@@ -974,52 +712,16 @@
 "The project folder “%@” already exists. Do you want to move it to the trash and create a new one?" = "Projektmappen „%@“ findes allerede. Vil du flytte den til Papirlkurven og oprette en ny?";
 
 /* No comment provided by engineer. */
-"The project has been checked" = "Projektet er blevet kontrolleret";
-
-/* No comment provided by engineer. */
-"The project needs to be upgraded" = "Projektet skal opgraderes";
-
-/* No comment provided by engineer. */
-"The project will be moved to the trash." = "Projektet flyttes til Papirkurven.";
-
-/* No comment provided by engineer. */
-"The project “%@” was saved with an older version of iLocalize. To open it, iLocalize will have to upgrade it, leaving a copy of the older project. Do you want to open and upgrade this project?" = "Projektet „%@“ er arkiveret med en ældre version af iLocalize. For at åbne det, er iLocalize nødt til at opgradere det, men bevarer en kopi af det gamle arkiv. Vil du åbne og opgradere dette projekt?";
-
-/* No comment provided by engineer. */
-"The selected label is used in the project" = "Det valgte mærke bruges i projektet";
-
-/* No comment provided by engineer. */
 "The source application “%@” doesn't contains any language. At least one language must exist." = "Kilde-programmet „%@“ indeholder ingen sprog. Der skal findes mindst et sprog.";
 
 /* No comment provided by engineer. */
 "The source application “%@” doesn't exist. Select a source application to correct the problem." = "Kilde-programmet „%@“ eksisterer ikke. Vælg et kilde-program for at rette problemet.";
 
 /* No comment provided by engineer. */
-"The specified glossary already exists" = "Den angivne ordbog findes allerede";
-
-/* No comment provided by engineer. */
 "The XLIFF file “%@” already exists" = "XLIFF-arkivet „%@“ findes allerede";
 
 /* XLIFF Import */
 "There are no strings to translate." = "Der er ingen strings at oversætte.";
-
-/* No comment provided by engineer. */
-"This action cannot be undone." = "Denne handling kan ikke fortrydes.";
-
-/* Language */
-"This language already exists in the project." = "Dette sprog findes allerede i projektet.";
-
-/* No comment provided by engineer. */
-"This project cannot be opened because it has been created on Tiger" = "Dette projekt kan ikke åbnes, fordi det er oprettet på Tiger";
-
-/* No comment provided by engineer. */
-"This project cannot be opened because the archive is invalid" = "Dette projekt kan ikk eåbens, fordi arkivet er ugyldigt";
-
-/* No comment provided by engineer. */
-"This project is too recent and cannot be opened by this version of iLocalize" = "Dette projekt er for nyt og kan ikke åbnes af denne version af iLocalize";
-
-/* No comment provided by engineer. */
-"This version of iLocalize supports only projects created on Leopard or above with ibtool" = "Denne version af iLocalize understøtter kun projekter oprettet på Loepard eller nyere med ibtool";
 
 /* TMX Display Name Format */
 "TMX" = "TMX";
@@ -1085,9 +787,6 @@
 "Update file “%@”" = "Opdater arkivet „%@“";
 
 /* No comment provided by engineer. */
-"Update to the latest version of iLocalize to open it." = "Opdater til den seneste version af iLocalize for at åbne det.";
-
-/* No comment provided by engineer. */
 "Update “%@” and rebase all other languages. All strings in the other languages will be localized according to the current translation." = "Opdater „%@“ og rebaser alle andre sprog. Alle strings i de andre sprog vil blive lokaliseret svarende til den aktuelle oversættelse.";
 
 /* No comment provided by engineer. */
@@ -1110,6 +809,3 @@
 
 /* XLIFF Display Name Format */
 "XLIFF" = "XLIFF";
-
-/* No comment provided by engineer. */
-"zip returned an error" = "zip returnerede en fejl";

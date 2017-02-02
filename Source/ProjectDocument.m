@@ -516,7 +516,7 @@
             
             [alert setAlertStyle:NSWarningAlertStyle];
             [alert setMessageText:NSLocalizedStringFromTable(@"ProjectDocumentInvalidTitle",@"Alerts",nil)];
-            [alert setInformativeText:NSLocalizedStringFromTable(@"ProjectDocumentInvalidDescr",@"Alerts",nil)];
+            [alert setInformativeText:NSLocalizedStringFromTable(@"ProjectDocumentRecentDescr",@"Alerts",nil)];
             [alert addButtonWithTitle:NSLocalizedStringFromTable(@"ProjectDocumentInvalidOK",@"Alerts",nil)];   // 1st button
             
             // show alert

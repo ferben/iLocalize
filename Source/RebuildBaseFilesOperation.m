@@ -20,35 +20,40 @@
 }
 
 
-- (void)rebuildBaseFileControllers:(NSArray*)controllers
+- (void)rebuildBaseFileControllers:(NSArray *)controllers
 {
 	mFileControllers = controllers;
 	
-	NSAlert *alert = [[NSAlert alloc] init];
-	[alert addButtonWithTitle:NSLocalizedString(@"Rebuild", @"Rebuild Base File Alert")];
-	[alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"Rebuild Base File Alert")];
-	[alert setMessageText:NSLocalizedString(@"Rebuild selected base files?", @"Rebuild Base File Alert")];
-	[alert setInformativeText:NSLocalizedString(@"Do you really want to rebuild the selected base files? This will also update all localized files. This action cannot be undone.", @"Rebuild Base File Alert")];
-	[alert setAlertStyle:NSWarningAlertStyle];
-	[alert setShowsSuppressionButton:YES];
-	[[alert suppressionButton] setTitle:NSLocalizedString(@"Keep localized nib layouts", @"Rebuild Base File Alert")];
-	[alert beginSheetModalForWindow:[self projectWindow] modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:(void*)CFBridgingRetain(self)];
+    // compose alert
+    NSAlert *alert = [NSAlert new];
+    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert setMessageText:NSLocalizedStringFromTable(@"RebuildBaseFilesTitle",@"Alerts",nil)];
+    [alert setInformativeText:[NSString stringWithFormat:@"%@ %@", NSLocalizedStringFromTable(@"RebuildBaseFilesDescr",@"Alerts",nil), NSLocalizedStringFromTable(@"AlertNoUndoDescr",@"Alerts",nil)]];
+    [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextRebuild",@"Alerts",nil)];     // 1st button
+    [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextCancel",@"Alerts",nil)];      // 2nd button
+    
+    [alert setShowsSuppressionButton:YES];
+    [[alert suppressionButton] setTitle:NSLocalizedStringFromTable(@"AlertKeepNIBLayout",@"Alerts",nil)];
+    
+    // show alert
+    [alert beginSheetModalForWindow:[self projectWindow] completionHandler:^(NSModalResponse alertReturnCode)
+     {
+         BOOL keepLayout = [[alert suppressionButton] state] == NSOnState;
+         
+         [[alert window] orderOut:self];
+         
+         if (alertReturnCode == NSAlertSecondButtonReturn)
+             return;
+         
+         [self performSelector:@selector(performRebuild:) withObject:@(keepLayout) afterDelay:0];
+     }];
 }
 
-- (void)alertDidEnd:(NSAlert *)alert returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo
-{
-	BOOL keepLayout = [[alert suppressionButton] state] == NSOnState;
-	
-	if(returnCode == NSAlertSecondButtonReturn) {
-		return;
-	}
 
-	[self performSelector:@selector(performRebuild:) withObject:@(keepLayout) afterDelay:0];
-}
-
-- (void)performRebuild:(NSNumber*)keepLayout
+- (void)performRebuild:(NSNumber *)keepLayout
 {
-	if([mFileControllers count] > 1) {
+	if ([mFileControllers count] > 1)
+    {
 		[[self operation] setTitle:NSLocalizedString(@"Rebuilding files…", nil)];
 		[[self operation] setCancellable:NO];
 		[[self operation] setIndeterminate:NO];

@@ -61,7 +61,7 @@
         [alert setAlertStyle:NSWarningAlertStyle];
         [alert setMessageText:NSLocalizedStringFromTable(@"AddCustomLanguageCannotAddTitle",@"Alerts",nil)];
         [alert setInformativeText:NSLocalizedStringFromTable(@"AddCustomLanguageCannotAddDescr",@"Alerts",nil)];
-        [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertOKButtonText",@"Alerts",nil)];
+        [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextOK",@"Alerts",nil)];
         
         // show alert
         [alert runModal];
