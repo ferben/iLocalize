@@ -1,0 +1,1 @@
+- "Project > Labels" doesn't seem to support ADD and REMOVE already.

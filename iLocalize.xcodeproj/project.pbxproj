@@ -717,6 +717,7 @@
 		125677571A1A6FAE002117B0 /* FMEditorImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMEditorImage.xib; sourceTree = "<group>"; };
 		125677591A1A7036002117B0 /* FMEditorRTF.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMEditorRTF.xib; sourceTree = "<group>"; };
 		1256775B1A1A70B9002117B0 /* FMEditorTXT.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMEditorTXT.xib; sourceTree = "<group>"; };
+		127259B41E43C94E00318718 /* ToDo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ToDo.txt; sourceTree = "<group>"; };
 		12DECFB41C63452B00B84094 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		12DECFB61C63452B00B84094 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		12DECFB71C63452B00B84094 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LocalizableEditors.strings; sourceTree = "<group>"; };
@@ -2608,6 +2609,7 @@
 		29B97314FDCFA39411CA2CEA /* iLocalize */ = {
 			isa = PBXGroup;
 			children = (
+				127259B41E43C94E00318718 /* ToDo.txt */,
 				12F05F6B1A14FBD500BFB4B4 /* History.txt */,
 				12F05F631A14F97600BFB4B4 /* InfoAppStore.plist */,
 				A7CD2F950C8B26BD00BD04F5 /* Doc */,
