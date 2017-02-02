@@ -22,7 +22,7 @@ static NSThread *mainThread = nil;
 	return [NSThread currentThread] == mainThread;
 }
 
-+ (NSPoint)posInCellAtMouseLocation:(NSPoint)pos row:(int*)row column:(int*)column tableView:(NSTableView*)tv
++ (NSPoint)posInCellAtMouseLocation:(NSPoint)pos row:(NSInteger *)row column:(NSInteger *)column tableView:(NSTableView *)tv
 {
 	NSPoint posInTableView = [tv convertPoint:pos fromView:nil];
 	*row = [tv rowAtPoint:posInTableView];

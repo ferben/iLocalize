@@ -194,12 +194,16 @@
 	}	
 }
 
-- (IGroupElementGlossary*)selectedGlossaryElement
+- (IGroupElementGlossary *)selectedGlossaryElement
 {
-	int row = [mTableView selectedRow];
-	if(row >= 0) {
+	NSInteger row = [mTableView selectedRow];
+    
+	if (row >= 0)
+    {
 		return [mResultsController content][row]; 
-	} else {
+	}
+    else
+    {
 		return nil;
 	}		
 }

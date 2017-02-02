@@ -17,7 +17,7 @@
 #import "AZSplitView.h"
 
 @interface ProjectDetailsController (PrivateMethods)
-- (ProjectDetails*)projectDetailsAtIndex:(int)index;
+- (ProjectDetails *)projectDetailsAtIndex:(NSInteger)index;
 - (void)executeNextToggleRequest;
 - (void)toggleRequestFinished;
 @end
@@ -91,11 +91,14 @@
     return keyViews;
 }
 
-- (ProjectDetails*)projectDetailsAtIndex:(int)index
+- (ProjectDetails*)projectDetailsAtIndex:(NSInteger)index
 {
 	ProjectDetails *details = mProjectDetails[@(index)];
-	if(!details) {
-		switch(index) {
+
+    if (!details)
+    {
+		switch (index)
+        {
 			case 0:
 				details = [[ProjectDetailsGlossary alloc] initWithNibName:@"ProjectInfoViewGlossary" bundle:nil];
 				details.title = NSLocalizedString(@"Glossaries Translations", nil);				
@@ -117,12 +120,15 @@
 				details.title = NSLocalizedString(@"Project Information", nil);				
 				break;
 		}
-		if(details) {
+		
+        if (details)
+        {
 			details.projectWC = self.projectWC;
 			mProjectDetails[@(index)] = details;
 		}
 	}
-	return details;
+
+    return details;
 }
 
 #pragma mark -
@@ -171,11 +177,13 @@
 	return detailsIndex == index;
 }
 
-- (BOOL)canExecuteCommand:(SEL)command {
+- (BOOL)canExecuteCommand:(SEL)command
+{
     return [[self projectDetailsAtIndex:detailsIndex] canExecuteCommand:command];
 }
 
-- (void)executeCommand:(SEL)command {
+- (void)executeCommand:(SEL)command
+{
     [[self projectDetailsAtIndex:detailsIndex] executeCommand:command];
 }
 

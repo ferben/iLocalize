@@ -8,20 +8,20 @@
 
 #import "PreferencesObject.h"
 
-@interface PreferencesGeneral : PreferencesObject {
-
+@interface PreferencesGeneral : PreferencesObject
+{
 }
 
 + (id)shared;
 
-- (void)setInspectors:(NSArray*)array;
-- (NSArray*)inspectors;
+- (void)setInspectors:(NSArray *)array;
+- (NSArray *)inspectors;
 
 - (BOOL)automaticallySaveModifiedFiles;
 - (BOOL)automaticallyReloadFiles;
 
 - (BOOL)automaticallySaveProject;
-- (int)automaticallySaveProjectDelay;
+- (NSInteger)automaticallySaveProjectDelay;
 
 - (BOOL)autoUpdateSmartFilters;
 

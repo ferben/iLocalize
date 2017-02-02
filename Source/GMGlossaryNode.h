@@ -8,7 +8,8 @@
 
 @class Glossary;
 
-@interface GMGlossaryNode : NSObject {
+@interface GMGlossaryNode : NSObject
+{
 	Glossary *_glossary;
 	NSString *_path;
 	NSMutableArray *children;	
@@ -19,17 +20,17 @@
 @property (strong) Glossary *glossary;
 @property (strong) NSString *searchString;
 
-+ (GMGlossaryNode*)nodeWithPath:(NSString*)title;
-+ (GMGlossaryNode*)nodeWithGlossary:(Glossary*)glossary;
++ (GMGlossaryNode *)nodeWithPath:(NSString *)title;
++ (GMGlossaryNode *)nodeWithGlossary:(Glossary *)glossary;
 
-- (void)insert:(Glossary*)glossary;
-- (void)applySearchString:(NSString*)string;
+- (void)insert:(Glossary *)glossary;
+- (void)applySearchString:(NSString *)string;
 
-- (NSArray*)children;
-- (NSString*)name;
-- (NSString*)file;
-- (NSString*)sourceLanguage;
-- (NSString*)targetLanguage;
-- (int)items;
+- (NSArray *)children;
+- (NSString *)name;
+- (NSString *)file;
+- (NSString *)sourceLanguage;
+- (NSString *)targetLanguage;
+- (NSInteger)items;
 
 @end

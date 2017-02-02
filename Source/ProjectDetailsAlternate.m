@@ -117,27 +117,36 @@
     return nil;
 }
 
-- (void)doubleClickOnTableView:(NSTableView*)tv
+- (void)doubleClickOnTableView:(NSTableView *)tv
 {
-	int row = [tv selectedRow];
-	if(row >= 0) {
+	NSInteger row = [tv selectedRow];
+    
+	if (row >= 0)
+    {
 		IGroupElementAlternate *element = [mResultsController content][row]; 
 		GlossaryTranslator *translator = [GlossaryTranslator translator];
 		[translator setLanguageController:[[self projectProvider] selectedLanguageController]];
 		
 		NSArray *selectedStrings = [[self projectProvider] selectedStringControllers];
-		if([selectedStrings count] == 1) {
+        
+		if ([selectedStrings count] == 1)
+        {
 			[translator translateStringControllers:selectedStrings withString:element.target base:nil];
 			
 			FMEditor *editor = [[self projectProvider] currentFileModuleEditor];
-			if([editor respondsToSelector:@selector(performAutoPropagation)]) {
+		
+            if ([editor respondsToSelector:@selector(performAutoPropagation)])
+            {
 				[editor performSelector:@selector(performAutoPropagation)];			
 			}
 			
-			if([[NSUserDefaults standardUserDefaults] boolForKey:@"glossaryTranslateSelectNextString"]) {
+			if ([[NSUserDefaults standardUserDefaults] boolForKey:@"glossaryTranslateSelectNextString"])
+            {
 				[editor selectNextItem];
 			}
-		} else {
+		}
+        else
+        {
 			[translator translateStringControllers:selectedStrings withString:element.target base:element.source];
 		}			
 	}

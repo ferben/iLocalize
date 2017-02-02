@@ -146,15 +146,18 @@ static NSMutableDictionary *labelAttributes = nil;
 {
 	int state = [sender state] == NSOnState?NSOffState:NSOnState;
 	[sender setState:state];
-	NSNumber *index = [NSNumber numberWithInt:[sender tag]];
+	NSNumber *index = [NSNumber numberWithInteger:[sender tag]];
 	
-	for(id<ProjectLabelPersistent> c in controllers) {
+	for (id<ProjectLabelPersistent> c in controllers)
+    {
 		NSMutableSet *set = [[NSMutableSet alloc] initWithSet:[c labelIndexes]];
-		if(state == NSOnState)
+	
+        if (state == NSOnState)
 			[set addObject:index];
 		else
 			[set removeObject:index];
-		[c setLabelIndexes:set];		
+
+        [c setLabelIndexes:set];
 	}
 }
 

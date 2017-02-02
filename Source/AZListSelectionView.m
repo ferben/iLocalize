@@ -91,17 +91,27 @@
 
 - (id)outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item
 {
-	int colIndex = [[outlineView tableColumns] indexOfObject:tableColumn];
-	if(colIndex == 0) {
-		if([item isKindOfClass:[AZListSelectionView class]]) {
-			return [NSNumber numberWithInt:[self rootState]];
-		} else {
-			return [NSNumber numberWithInt:[self stateOfElement:item]];
+	NSInteger colIndex = [[outlineView tableColumns] indexOfObject:tableColumn];
+    
+	if (colIndex == 0)
+    {
+		if ([item isKindOfClass:[AZListSelectionView class]])
+        {
+			return [NSNumber numberWithInteger:[self rootState]];
+		}
+        else
+        {
+			return [NSNumber numberWithInteger:[self stateOfElement:item]];
 		}			
-	} else {
-		if([item isKindOfClass:[AZListSelectionView class]]) {
+	}
+    else
+    {
+		if ([item isKindOfClass:[AZListSelectionView class]])
+        {
 			return nil;
-		} else {
+		}
+        else
+        {
 			return item[[tableColumn identifier]];
 		}
 	}

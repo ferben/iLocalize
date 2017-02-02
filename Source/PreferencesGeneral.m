@@ -78,7 +78,7 @@ static id _shared = nil;
 	return [[NSUserDefaults standardUserDefaults] boolForKey:@"autoSaveProject"];
 }
 
-- (int)automaticallySaveProjectDelay
+- (NSInteger)automaticallySaveProjectDelay
 {
 	return [[NSUserDefaults standardUserDefaults] integerForKey:@"autoSaveProjectDelay"];
 }

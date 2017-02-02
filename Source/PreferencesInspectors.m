@@ -57,12 +57,12 @@ static id _shared = nil;
 	return [[NSUserDefaults standardUserDefaults] boolForKey:@"alternateTranslationLimitEnable"];
 }
 
-- (int)alternateTranslationLimit
+- (NSInteger)alternateTranslationLimit
 {
 	return [[NSUserDefaults standardUserDefaults] integerForKey:@"alternateTranslationLimit"];
 }
 
-- (int)alternateTranslationThreshold
+- (NSInteger)alternateTranslationThreshold
 {
 	return [[NSUserDefaults standardUserDefaults] integerForKey:@"alternateTranslationThreshold"];
 }
@@ -74,12 +74,12 @@ static id _shared = nil;
 	return [[NSUserDefaults standardUserDefaults] boolForKey:@"glossaryMatchLimitEnable"];
 }
 
-- (int)glossaryMatchLimit
+- (NSInteger)glossaryMatchLimit
 {
 	return [[NSUserDefaults standardUserDefaults] integerForKey:@"glossaryMatchLimit"];
 }
 
-- (int)glossaryMatchThreshold
+- (NSInteger)glossaryMatchThreshold
 {
 	return [[NSUserDefaults standardUserDefaults] integerForKey:@"glossaryMatchThreshold"];
 }

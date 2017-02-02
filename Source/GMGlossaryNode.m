@@ -139,11 +139,14 @@
 	return [self.glossary.targetLanguage displayLanguageName];
 }
 
-- (int)items
+- (NSInteger)items
 {
-	if(_glossary) {
+	if (_glossary)
+    {
 		return [self.glossary entryCount];		
-	} else {
+	}
+    else
+    {
 		return [self.children count];
 	}
 }

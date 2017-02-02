@@ -28,17 +28,26 @@
 - (void)updatePathNodeStates
 {
 	rootNode = [self.scope rootNode];
-	for(TreeNode *pathNode in [rootNode nodes]) {
-		int state = NSMixedState;
-		for(TreeNode *glossaryNode in [pathNode nodes]) {
+    
+	for (TreeNode *pathNode in [rootNode nodes])
+    {
+		NSInteger state = NSMixedState;
+        
+		for (TreeNode *glossaryNode in [pathNode nodes])
+        {
 			GlossaryScopeItem *gsi = [glossaryNode payload];
-			if(state == NSMixedState) {
+            
+			if (state == NSMixedState)
+            {
 				state = [gsi state];
-			} else if(state != [gsi state]) {
+			}
+            else if (state != [gsi state])
+            {
 				state = NSMixedState;
 				break;
 			}
-		}					
+		}
+        
 		GlossaryScopeItem *pathScopeItem = [pathNode payload];
 		pathScopeItem.state = state;
 	}
@@ -63,11 +72,14 @@
 
 #pragma mark Source
 
-- (int)outlineView:(NSOutlineView *)ov numberOfChildrenOfItem:(id)item
+- (NSInteger)outlineView:(NSOutlineView *)ov numberOfChildrenOfItem:(id)item
 {
-	if(item == NULL) {
+	if (item == NULL)
+    {
 		return [rootNode nodes].count;
-	} else {
+	}
+    else
+    {
 		return [item nodes].count;
 	}
 }
@@ -89,10 +101,14 @@
 - (id)outlineView:(NSOutlineView *)ov objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item
 {
 	GlossaryScopeItem *gsi = [item payload];
-	if([[item nodes] count] == 0 && [ov levelForItem:item] == 0) {
+	
+    if ([[item nodes] count] == 0 && [ov levelForItem:item] == 0)
+    {
 		return @(NSOffState);
-	} else {
-		return [NSNumber numberWithInt:gsi.state];
+	}
+    else
+    {
+		return [NSNumber numberWithInteger:gsi.state];
 	}
 }
 

@@ -60,24 +60,32 @@ static BOOL logDebug = NO;
 
 #pragma mark -
 
-+ (NSString*)errorDescription:(NSError*)error
++ (NSString *)errorDescription:(NSError *)error
 {
 	NSString *domain = [error domain];
-	int code = [error code];
+	NSInteger code = [error code];
 	
 	NSMutableString *reason = [NSMutableString string];
-	if ([domain isEqualToString:NSCocoaErrorDomain] && code >= NSValidationErrorMinimum && code <= NSValidationErrorMaximum) {
+    
+	if ([domain isEqualToString:NSCocoaErrorDomain] && code >= NSValidationErrorMinimum && code <= NSValidationErrorMaximum)
+    {
 		// Core data validation error
-		if(error.code == NSValidationMultipleErrorsError) {
+		if (error.code == NSValidationMultipleErrorsError)
+        {
 			[reason appendFormat:@"Multiple validation errors: %@", [error userInfo][@"NSDetailedErrors"]];
-		} else {
+		}
+        else
+        {
 			[reason appendFormat:@"Validation error: %@", [error description]];
 		}
-    } else {
+    }
+    else
+    {
 		// Other type of error
 		[reason appendFormat:@"Error: %@", [error description]];
 	}
-	return reason;
+	
+    return reason;
 }
 
 #define EXCEPTION_REASON @"ReasonException"

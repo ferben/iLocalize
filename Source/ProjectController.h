@@ -16,11 +16,12 @@
 @class ExplorerItem;
 @class DirtyContext;
 
-@interface ProjectController : AbstractController {
+@interface ProjectController : AbstractController
+{
 	NSMutableArray		*mLanguageControllers;
 
 	// Temporary state (not saved)
-	int					mCurrentLanguageIndex;
+	NSInteger           mCurrentLanguageIndex;
 	BOOL				mDirtyEnable;
 	DirtyContext		*dirtyContext;
 	NSInteger			dirtyCount;
@@ -32,31 +33,31 @@
 - (void)setDirtyEnable:(BOOL)flag;
 - (void)notifyDirty;
 
-- (void)addLanguageController:(LanguageController*)languageController;
-- (void)removeLanguageController:(LanguageController*)languageController;
+- (void)addLanguageController:(LanguageController *)languageController;
+- (void)removeLanguageController:(LanguageController *)languageController;
 
-- (void)setCurrentLanguageIndex:(int)index;
-- (int)currentLanguageIndex;
+- (void)setCurrentLanguageIndex:(NSInteger)index;
+- (NSInteger)currentLanguageIndex;
 
 - (void)languagesDidChange;
-- (void)baseStringModelDidChange:(StringModel*)model fileController:(FileController*)fc;
+- (void)baseStringModelDidChange:(StringModel *)model fileController:(FileController *)fc;
 
-- (BOOL)isLanguageExisting:(NSString*)language;
-- (NSString*)baseLanguage;
-- (NSMutableArray*)languages;
-- (NSArray*)displayLanguages;
+- (BOOL)isLanguageExisting:(NSString *)language;
+- (NSString *)baseLanguage;
+- (NSMutableArray *)languages;
+- (NSArray *)displayLanguages;
 
-- (LanguageController*)baseLanguageController;
-- (NSMutableArray*)languageControllers;
-- (LanguageController*)languageControllerForLanguage:(NSString*)language;
+- (LanguageController *)baseLanguageController;
+- (NSMutableArray *)languageControllers;
+- (LanguageController *)languageControllerForLanguage:(NSString *)language;
 
-- (FileController*)correspondingBaseFileControllerForFileController:(FileController*)fileController;
+- (FileController *)correspondingBaseFileControllerForFileController:(FileController *)fileController;
 
-- (NSString*)relativePathForSmartPath:(NSString*)smartPath language:(NSString*)language;
-- (NSString*)relativeBaseLanguagePathForSmartPath:(NSString*)smartPath;
-- (NSArray*)smartPaths;
+- (NSString *)relativePathForSmartPath:(NSString *)smartPath language:(NSString *)language;
+- (NSString *)relativeBaseLanguagePathForSmartPath:(NSString *)smartPath;
+- (NSArray *)smartPaths;
 
-- (NSArray*)needsToBeSavedFileControllers;
-- (NSArray*)needsToBeReloadedFileControllers;
+- (NSArray *)needsToBeSavedFileControllers;
+- (NSArray *)needsToBeReloadedFileControllers;
 
 @end

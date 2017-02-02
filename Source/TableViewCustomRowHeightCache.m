@@ -27,12 +27,12 @@
 }
 
 
-- (NSNumber*)cachedHeightForRow:(int)row
+- (NSNumber *)cachedHeightForRow:(NSInteger)row
 {
 	return rowHeightCache[@(row)];			
 }
 
-- (void)setCachedHeight:(float)height forRow:(int)row
+- (void)setCachedHeight:(float)height forRow:(NSInteger)row
 {
 	rowHeightCache[@(row)] = @(height);	
 }
@@ -42,12 +42,12 @@
 	[rowHeightCache removeAllObjects];
 }
 
-- (void)clearRowHeightCacheAtRow:(int)row
+- (void)clearRowHeightCacheAtRow:(NSInteger)row
 {
 	[rowHeightCache removeObjectForKey:@(row)];
 }
 
-- (float)computeCachedRowHeight:(int)row
+- (float)computeCachedRowHeight:(NSInteger)row
 {
 	float height = [self.tableView computeHeightForRow:row];
 	[self setCachedHeight:height forRow:row];

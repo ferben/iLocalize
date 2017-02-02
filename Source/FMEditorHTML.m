@@ -78,14 +78,18 @@
 
 - (void)tabView:(NSTabView *)tabView willSelectTabViewItem:(NSTabViewItem *)tabViewItem
 {
-	int index = [tabView indexOfTabViewItem:tabViewItem];
+	NSInteger index = [tabView indexOfTabViewItem:tabViewItem];
 		
-	if(index == 1) {
-		if(mReloadBasePreview) {
+	if (index == 1)
+    {
+		if (mReloadBasePreview)
+        {
 			[self loadBasePreview];
 			mReloadBasePreview = NO;			
 		}
-		if(mReloadLocalizedPreview) {
+		
+        if (mReloadLocalizedPreview)
+        {
 			[self loadLocalizedPreview];
 			mReloadLocalizedPreview = NO;
 		}

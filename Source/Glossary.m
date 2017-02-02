@@ -390,7 +390,7 @@
 	dic[@"format"] = [NSNumber numberWithInt:self.format];
 	[dic setObjectOrNil:self.sourceLanguage forKey:@"sourceLanguage"];
 	[dic setObjectOrNil:self.targetLanguage forKey:@"targetLanguage"];
-	dic[@"entryCount"] = [NSNumber numberWithInt:self.entryCount];
+	dic[@"entryCount"] = [NSNumber numberWithInteger:self.entryCount];
 	return dic;
 }
 

@@ -27,7 +27,7 @@
 @property (weak) TableViewCustom *tableView;
 @property (weak) id<NSTableViewDelegate,AZTableViewDelegate> childDelegate;
 
-- (void)customTableView:(NSTableView *)aTableView willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn row:(int)row;
+- (void)customTableView:(NSTableView *)aTableView willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row;
 - (BOOL)textView:(NSTextView *)tv shouldChangeTextInRange:(NSRange)affectedCharRange replacementString:(NSString *)replacementString;
 
 - (void)tableViewTextDidBeginEditing:(NSTableView*)tv columnIdentifier:(NSString*)identifier rowIndex:(NSInteger)rowIndex textView:(TextViewCustom*)textView;

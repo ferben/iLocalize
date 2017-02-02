@@ -20,7 +20,7 @@
 @synthesize tableView;
 @synthesize childDelegate;
 
-- (void)customTableView:(NSTableView *)aTableView willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn row:(int)row
+- (void)customTableView:(NSTableView *)aTableView willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
 	if([childDelegate respondsToSelector:@selector(customTableView:willDisplayCell:forTableColumn:row:)]) {
 		[childDelegate customTableView:tableView willDisplayCell:cell forTableColumn:tableColumn row:row];		
@@ -44,9 +44,13 @@
 - (CGFloat)tableView:(NSTableView *)aTableView heightOfRow:(NSInteger)row
 {
 	NSNumber *cachedHeight = [[tableView rowHeightCache] cachedHeightForRow:row];
-	if(cachedHeight) {
+	
+    if (cachedHeight)
+    {
 		return [cachedHeight floatValue];
-	} else {
+	}
+    else
+    {
 		return [[tableView rowHeightCache] computeCachedRowHeight:row];
 	}
 }

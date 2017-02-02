@@ -81,7 +81,7 @@ static id _shared = nil;
 }
 
 
-- (int)maximumNumberOfHistoryFiles
+- (NSInteger)maximumNumberOfHistoryFiles
 {
 	return [[NSUserDefaults standardUserDefaults] integerForKey:@"maxHistoryFolderFiles"];
 }

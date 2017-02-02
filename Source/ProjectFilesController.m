@@ -204,27 +204,38 @@
 - (NSString*)handleToolTipRequestedAtPosition:(NSPoint)pos
 {
 	NSRect tv = [mFilesTableView convertRect:[mFilesTableView visibleRect] toView:nil];
-	if(NSPointInRect(pos, tv)) {
-		int row;
-		int column;
-		NSPoint posInCell = [Utils posInCellAtMouseLocation:pos row:&row column:&column tableView:mFilesTableView];
-		if(!NSEqualPoints(posInCell, NSMakePoint(-1, -1))) {
+    
+	if (NSPointInRect(pos, tv))
+    {
+		NSInteger row;
+		NSInteger column;
+
+        NSPoint posInCell = [Utils posInCellAtMouseLocation:pos row:&row column:&column tableView:mFilesTableView];
+	
+        if (!NSEqualPoints(posInCell, NSMakePoint(-1, -1)))
+        {
 			NSString *identifier = [(NSTableColumn*)[mFilesTableView tableColumns][column] identifier];
 			FileController *fc = [[self filesArrayController] arrangedObjects][row];
 			
-			if([identifier isEqualToString:@"Type"]) {
-				if([fc supportsEncoding]) {
+			if ([identifier isEqualToString:@"Type"])
+            {
+				if ([fc supportsEncoding])
+                {
 					return [fc encodingName];
 				}
 			}
-			if([identifier isEqualToString:@"Status"]) {
-				if([fc displayStatus]) {
+
+            if ([identifier isEqualToString:@"Status"])
+            {
+				if ([fc displayStatus])
+                {
 					return [fc statusDescriptionAtPosition:posInCell];
 				}
 			}
 		}
 	}	
-	return nil;
+
+    return nil;
 }
 
 - (void)setFilesListWithGlobalFlag:(BOOL)global
@@ -297,9 +308,10 @@
 
 #pragma mark -
 
-- (NSString*)identifierColumnForTag:(int)tag
+- (NSString *)identifierColumnForTag:(NSInteger)tag
 {
-	switch(tag) {
+	switch (tag)
+    {
 		case 0: return FILE_COLUMN_TYPE_IDENTIFIER;
 		case 1: return FILE_COLUMN_FILE_IDENTIFIER;
 		case 2: return FILE_COLUMN_CONTENT_IDENTIFIER;
@@ -307,8 +319,10 @@
 		case 4: return FILE_COLUMN_PROGRESS_IDENTIFIER;
 		case 5: return FILE_COLUMN_LABEL_IDENTIFIER;
 	}
-	NSLog(@"No identifier for file column with tag %d", tag);
-	return nil;
+    
+	NSLog(@"No identifier for file column with tag %ld", tag);
+
+    return nil;
 }
 
 - (int)tagForFilesColumnIdentifier:(NSString*)identifier
@@ -326,32 +340,43 @@
 
 - (void)syncFilesTableColumns
 {
-	for(NSTableColumn *column in [mFilesTableView tableColumns]) {
+	for (NSTableColumn *column in [mFilesTableView tableColumns])
+    {
 		[mFilesColumnTableViewContextualMenu setMenuItemState:[column isHidden]?NSOffState:NSOnState
 													  withTag:[self tagForFilesColumnIdentifier:[column identifier]]];		
 	}
 }
 
-- (void)setFilesColumnInfo:(NSArray*)info
+- (void)setFilesColumnInfo:(NSArray *)info
 {
 	int index = 0;
-	for(NSDictionary *dic in info) {
+	
+    for (NSDictionary *dic in info)
+    {
 		NSString *identifier = dic[@"id"];
 		NSTableColumn *column = [mFilesTableView tableColumnWithIdentifier:identifier];
-		if(column == nil) {
+
+        if (column == nil)
+        {
 			NSLog(@"No column found with identifier %@", identifier);
 			continue;
 		}
-		[column setWidth:[dic[@"width"] intValue]];
+		
+        [column setWidth:[dic[@"width"] intValue]];
 		[column setHidden:[dic[@"hidden"] boolValue]];
-		// move the colum if necessary
-		int colIndex = [mFilesTableView columnWithIdentifier:identifier];
-		if(colIndex != index && colIndex < [mFilesTableView numberOfColumns] && index < [mFilesTableView numberOfColumns]) {
+		
+        // move the colum if necessary
+		NSInteger colIndex = [mFilesTableView columnWithIdentifier:identifier];
+        
+		if (colIndex != index && colIndex < [mFilesTableView numberOfColumns] && index < [mFilesTableView numberOfColumns])
+        {
 			[mFilesTableView moveColumn:colIndex toColumn:index];
 		}
-		index++;
+		
+        index++;
 	}
-	[mFilesTableView sizeToFit];
+
+    [mFilesTableView sizeToFit];
 }
 
 - (NSArray*)filesColumnInfo
@@ -544,15 +569,22 @@
 
 - (void)doubleClickOnFilesTableView:(id)sender
 {
-	int row = [sender clickedRow];
-	if(row < 0) return;
+	NSInteger row = [sender clickedRow];
+	
+    if (row < 0)
+        return;
 	
 	NSTableColumn *column = [sender tableColumns][[sender clickedColumn]];
-	if([[column identifier] isEqualToString:FILE_COLUMN_STATUS_IDENTIFIER]) {
+	
+    if ([[column identifier] isEqualToString:FILE_COLUMN_STATUS_IDENTIFIER])
+    {
 		FileController *fc = [mFilesController arrangedObjects][row];
-		if([fc statusWarning])
+	
+        if ([fc statusWarning])
 			[self showWarning:fc];
-	} else {
+	}
+    else
+    {
 		[[NSApplication sharedApplication] sendAction:@selector(openFilesInExternalEditor:) to:nil from:self];		
 	}
 }
@@ -626,14 +658,17 @@
 	}
 }
 
-- (NSMenu*)customTableViewContextualMenu:(id)tv row:(int)row column:(int)column
+- (NSMenu *)customTableViewContextualMenu:(id)tv row:(NSInteger)row column:(NSInteger)column
 {
-	if(row == -1)
+	if (row == -1)
 		return nil;
 	
-	if(column != -1 && [[(NSTableColumn*)[tv tableColumns][column] identifier] isEqualToString:FILE_COLUMN_LABEL_IDENTIFIER]) {
+	if (column != -1 && [[(NSTableColumn *)[tv tableColumns][column] identifier] isEqualToString:FILE_COLUMN_LABEL_IDENTIFIER])
+    {
 		return [[self.projectWC projectLabels] fileLabelsMenu];
-	} else {
+	}
+    else
+    {
 		return mFilesTableViewContextualMenu;			
 	}			
 }

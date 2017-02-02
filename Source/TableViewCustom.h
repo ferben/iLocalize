@@ -10,7 +10,8 @@
 @class TableViewCustomRowHeightCache;
 #import "TextViewCustom.h"
 
-@interface TableViewCustom : NSTableView<TextViewCustomDelegate> {
+@interface TableViewCustom : NSTableView<TextViewCustomDelegate>
+{
 	TableViewCustomDefaultDelegate *mDefaultDelegate;
 	TableViewCustomRowHeightCache *rowHeightCache;
 	BOOL	mMouseDownTrigger;
@@ -18,7 +19,7 @@
 	BOOL inRefreshRowHeight;
 	
 	// Text view for cell editing
-	int editingRow, editingColumn;
+	NSInteger editingRow, editingColumn;
 	TextViewCustom *textView;	
 }
 
@@ -27,9 +28,9 @@
 - (void)setMouseDownTrigger:(BOOL)flag;
 - (BOOL)mouseDownTrigger;
 
-- (void)setSortDescriptorKey:(NSString*)key columnIdentifier:(NSString*)identifier;
+- (void)setSortDescriptorKey:(NSString *)key columnIdentifier:(NSString *)identifier;
 
-- (float)computeHeightForRow:(int)row;
+- (float)computeHeightForRow:(NSInteger)row;
 
 - (void)rowsHeightChanged;
 - (void)rowsHeightChangedForRow:(NSInteger)row;

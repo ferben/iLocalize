@@ -93,7 +93,7 @@
 - (IBAction)toggleLock:(id)sender;
 - (IBAction)toggleComment:(id)sender;
 
-- (NSString*)propagationTitle:(int)mode;
+- (NSString*)propagationTitle:(NSInteger)mode;
 - (void)updatePropagationMode;
 - (IBAction)togglePropagation:(id)sender;
 

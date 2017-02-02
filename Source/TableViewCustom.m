@@ -15,7 +15,7 @@
 #import "PreferencesWC.h"
 
 @interface PlaceholderInterface
-- (NSMenu*)customTableViewContextualMenu:(TableViewCustom*)tv row:(int)row column:(int)column;
+- (NSMenu *)customTableViewContextualMenu:(TableViewCustom*)tv row:(NSInteger)row column:(NSInteger)column;
 @end
 
 @implementation TableViewCustom
@@ -24,7 +24,8 @@
 
 - (id)initWithCoder:(NSCoder *)coder 
 { 
-	if((self = [super initWithCoder:coder])) {
+	if ((self = [super initWithCoder:coder]))
+    {
 		mDefaultDelegate = [[TableViewCustomDefaultDelegate alloc] init];
 		mDefaultDelegate.tableView = self;
 		[super setDelegate:mDefaultDelegate];
@@ -33,7 +34,8 @@
 		inRefreshRowHeight = NO;
         editingRow = editingColumn = -1;
 	} 
-	return self; 
+	
+    return self;
 } 
 
 - (void)dealloc
@@ -115,10 +117,11 @@
 
 #pragma mark -
 
-- (NSMenu*)menuAtRow:(int)row column:(int)column
+- (NSMenu *)menuAtRow:(NSInteger)row column:(NSInteger)column
 {
 	id childDelegate = mDefaultDelegate.childDelegate;
-	if([childDelegate respondsToSelector:@selector(customTableViewContextualMenu:)])
+    
+	if ([childDelegate respondsToSelector:@selector(customTableViewContextualMenu:)])
 		return [childDelegate performSelector:@selector(customTableViewContextualMenu:) withObject:self];
 	else if([childDelegate respondsToSelector:@selector(customTableViewContextualMenu:row:column:)])
 		return [childDelegate customTableViewContextualMenu:self row:row column:column];
@@ -129,35 +132,47 @@
 - (NSMenu *)menuForEvent:(NSEvent *)theEvent
 {
 	NSPoint mouseLoc = [self convertPoint:[theEvent locationInWindow] fromView:nil];
-	int row = [self rowAtPoint:mouseLoc];
-	int column = [self columnAtPoint:mouseLoc];
+	NSInteger row = [self rowAtPoint:mouseLoc];
+	NSInteger column = [self columnAtPoint:mouseLoc];
 	
 	NSMenu *menu = [self menuAtRow:row column:column];
-	if(menu) {
-		if(row>=0) {
+	
+    if (menu)
+    {
+		if (row >= 0)
+        {
 			[self selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:[self allowsMultipleSelection]];			
 		}
-		[[self window] makeFirstResponder:self];
+		
+        [[self window] makeFirstResponder:self];
 		return menu;		
-	} else
+	}
+    else
 		return nil;			
 }
 
 #pragma mark -
 
-- (float)computeHeightForRow:(int)row
+- (float)computeHeightForRow:(NSInteger)row
 {	
 	CGFloat height = [self rowHeight];
+    
 	// iterate over all the columns to determine the maximum height this row should have
-	for(NSTableColumn *column in [self tableColumns]) {
-		if([column isHidden]) continue;
+	for (NSTableColumn *column in [self tableColumns])
+    {
+		if ([column isHidden])
+            continue;
+        
 		id cell = [column dataCellForRow:row];
-		if([cell isKindOfClass:[TableViewCustomCell class]]) {
+	
+        if ([cell isKindOfClass:[TableViewCustomCell class]])
+        {
 			// ask the child delegate to prepare the cell for display
 			[mDefaultDelegate customTableView:self willDisplayCell:cell forTableColumn:column row:row];
 			height = MAX(height, [cell heightForWidth:[column width] defaultHeight:17]);		
 		}
-	}			
+	}
+    
 	return height;
 }
 
@@ -169,9 +184,12 @@
 
 - (void)rowsHeightChangedForRow:(NSInteger)row
 {
-	if(row < 0 || row >= [self numberOfRows]) {
+	if (row < 0 || row >= [self numberOfRows])
+    {
 		[self rowsHeightChanged];
-	} else {
+	}
+    else
+    {
 		[rowHeightCache clearRowHeightCacheAtRow:row];
 		[self noteHeightOfRowsWithIndexesChanged:[NSIndexSet indexSetWithIndex:row]];			
 	}
@@ -186,15 +204,17 @@
 {
 	// avoid doing a refresh within another refresh (e.g. didEndLiveResize call this method which will
 	// trigger setFrameSize when invoking noteHeightOfRowsWithIndexesChanged).
-	if(inRefreshRowHeight) return;	
-	inRefreshRowHeight = YES;
+	if (inRefreshRowHeight)
+        return;
+	
+    inRefreshRowHeight = YES;
 	
 	NSRect visibleRect = [self visibleRect];
 	NSPoint upperPoint = visibleRect.origin;
-	NSPoint bottomPoint = NSMakePoint(visibleRect.origin.x, visibleRect.origin.y+visibleRect.size.height);
+	NSPoint bottomPoint = NSMakePoint(visibleRect.origin.x, visibleRect.origin.y + visibleRect.size.height);
 	
-	int bottomRow = [self rowAtPoint:bottomPoint];
-	int upperRow = [self rowAtPoint:upperPoint];
+	NSInteger bottomRow = [self rowAtPoint:bottomPoint];
+	NSInteger upperRow = [self rowAtPoint:upperPoint];
 	
 	[self rowsHeightChanged];	
 		
@@ -241,20 +261,28 @@
 
 - (void)makeSelectedRowVisible
 {
-	int selectedRow = [self selectedRow];
-	if(selectedRow < 0) return;
+	NSInteger selectedRow = [self selectedRow];
+	
+    if (selectedRow < 0)
+        return;
 	
 	NSScrollView *sv = (NSScrollView*)[self superview];
 	NSRange r = [self rowsInRect:[sv visibleRect]];
 	NSInteger scrollRow = selectedRow;
-	if(r.length > 0 && (selectedRow <= r.location+1 || selectedRow >= r.location+r.length-1)) {
-		if(selectedRow <= r.location) {
+	
+    if (r.length > 0 && (selectedRow <= r.location+1 || selectedRow >= r.location+r.length-1))
+    {
+		if (selectedRow <= r.location)
+        {
 			scrollRow = MAX(selectedRow - r.length / 2, 0);
-		} else {
+		}
+        else
+        {
 			scrollRow = MIN(selectedRow + r.length / 2, [self numberOfRows]-1);
 		}
 	}
-	[self scrollRowToVisible:scrollRow];
+
+    [self scrollRowToVisible:scrollRow];
 }
 	   
 /*- (BOOL)control:(NSControl *)control textView:(NSTextView *)fieldEditor doCommandBySelector:(SEL)commandSelector {
@@ -276,23 +304,32 @@
 {
 	[mDefaultDelegate tableViewTextDidEndEditing:self];
 	
-	if(![Utils isOSTigerAndBelow]) {
+	if (![Utils isOSTigerAndBelow])
+    {
 		// Fix for Leopard to get the same editing behavior than in Tiger
-		if ([[notif userInfo][@"NSTextMovement"] intValue] == NSReturnTextMovement) {
-			int row = [self editedRow] + 1;
-			int col = [self editedColumn];
-			NSMutableDictionary *ui = [NSMutableDictionary dictionaryWithDictionary:[notif userInfo]];
+		if ([[notif userInfo][@"NSTextMovement"] intValue] == NSReturnTextMovement)
+        {
+			NSInteger row = [self editedRow] + 1;
+			NSInteger col = [self editedColumn];
+		
+            NSMutableDictionary *ui = [NSMutableDictionary dictionaryWithDictionary:[notif userInfo]];
 			ui[@"NSTextMovement"] = @(NSDownTextMovement);
 			notif = [NSNotification notificationWithName:[notif name] object:[notif object] userInfo:ui];
 			[super textDidEndEditing:notif];
-			if (row < [self numberOfRows]) {
+			
+            if (row < [self numberOfRows])
+            {
 				[self selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:NO];
 				[self editColumn:col row:row withEvent:nil select:YES];
 			}
-		} else {
+		}
+        else
+        {
 			[super textDidEndEditing:notif];
 		}			
-	} else {
+	}
+    else
+    {
 		[super textDidEndEditing:notif];		
 	}
 }
@@ -304,7 +341,9 @@
 	editingRow = rowIndex;
 	editingColumn = columnIndex;
 	NSRect frame = [self frameOfCellAtColumn:columnIndex row:rowIndex];
-	if(textView == nil) {
+	
+    if (textView == nil)
+    {
 		textView = [[TextViewCustom alloc] initWithFrame:frame];
 		textView.drawBorder = YES;
 		[textView setAutoresizingMask:NSViewNotSizable];
@@ -315,14 +354,18 @@
 		[[self superview] addSubview:textView positioned:NSPositionBefore relativeTo:self];
 		[textView setAllowsUndo:YES];
 		[[self window] makeFirstResponder:textView];
-	} else {
+	}
+    else
+    {
 		textView.frame = frame;
 	}
 
-	if(select) {
+	if (select)
+    {
 		[textView selectAll:self];
 	}
-	NSString *columnIdentifier = [[self tableColumns][[self columnAtPoint:frame.origin]] identifier];
+	
+    NSString *columnIdentifier = [[self tableColumns][[self columnAtPoint:frame.origin]] identifier];
 	[mDefaultDelegate tableViewTextDidBeginEditing:self columnIdentifier:columnIdentifier rowIndex:rowIndex textView:textView];
 }
 

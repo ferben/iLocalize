@@ -163,16 +163,14 @@ static NSDictionary *customHelpMenuDic = nil;
 - (void)removeOpenRecentMenuItem
 {
 	// fileMenu is an outlet you create to the File menu in your application
-    int openDocumentMenuItemIndex = [mFileMenu indexOfItemWithTarget:nil
-														   andAction:@selector(openDocument:)];
+    NSInteger openDocumentMenuItemIndex = [mFileMenu indexOfItemWithTarget:nil andAction:@selector(openDocument:)];
 	
     if (    (openDocumentMenuItemIndex >= 0)
          && ([[mFileMenu itemAtIndex:openDocumentMenuItemIndex + 1] hasSubmenu])
        )
     {
 		// We'll presume it's the Open Recent menu item, because this is
-		// the heuristic that NSDocumentController uses to add it to the
-		// File menu
+		// the heuristic that NSDocumentController uses to add it to the File menu
 		[mFileMenu removeItemAtIndex:openDocumentMenuItemIndex + 1];
     }	
 }

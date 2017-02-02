@@ -34,7 +34,7 @@ typedef void(^PresetAlertCallbackBlock)(NSString *name);
 }
 
 
-- (void)buildPresetAndSelect:(int)select
+- (void)buildPresetAndSelect:(NSInteger)select
 {
 	NSMenu *menu = [self.popUpButton menu];
 	[menu removeAllItems];

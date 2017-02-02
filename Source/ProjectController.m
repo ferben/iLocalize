@@ -50,7 +50,7 @@
 
 #pragma mark -
 
-- (void)addLanguageController:(LanguageController*)languageController
+- (void)addLanguageController:(LanguageController *)languageController
 {
 	[languageController setParent:self];
 	[languageController rebuildFromModel];
@@ -84,12 +84,12 @@
 
 #pragma mark -
 
-- (void)setCurrentLanguageIndex:(int)index
+- (void)setCurrentLanguageIndex:(NSInteger)index
 {
 	mCurrentLanguageIndex = index;
 }
 
-- (int)currentLanguageIndex
+- (NSInteger)currentLanguageIndex
 {
 	return mCurrentLanguageIndex;
 }

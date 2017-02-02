@@ -33,18 +33,21 @@
 
 + (void)initialize
 {
-	if(self == [ProjectPrefs class]) {
+	if (self == [ProjectPrefs class])
+    {
 		[self setVersion:1];		
 	}
 }
 
 - (id)init
 {
-	if(self = [super init]) {
+	if (self = [super init])
+    {
 		self.labels = [ProjectLabels defaultLabels];
 		[self addObserver:self forKeyPath:@"prefChanged" options:NSKeyValueObservingOptionNew context:nil];
 	}
-	return self;
+	
+    return self;
 }
 
 - (void)dealloc
@@ -53,13 +56,16 @@
 	self.projectProvider = nil;
 }
 
-- (id)initWithCoder:(NSCoder*)coder
+- (id)initWithCoder:(NSCoder *)coder
 {
-	if(self = [super init]) {
+	if (self = [super init])
+    {
 		[self addObserver:self forKeyPath:@"prefChanged" options:NSKeyValueObservingOptionNew context:nil];
 
-		int version = [coder versionForClassName:NSStringFromClass([ProjectPrefs class])];
-		if(version >= 1) {
+		NSInteger version = [coder versionForClassName:NSStringFromClass([ProjectPrefs class])];
+        
+		if (version >= 1)
+        {
 			self.selectedLanguage = [coder decodeObjectForKey:@"selectedLanguage"];
 			self.selectedFile = [coder decodeObjectForKey:@"selectedFile"];
 			self.labels = [coder decodeObjectForKey:@"labels"];
@@ -78,19 +84,23 @@
 			self.showLocalFiles = [coder decodeBoolForKey:@"showLocalFiles"];
 			self.showStatusBar = [coder decodeBoolForKey:@"showStatusBar"];
 			self.showStructureView = [coder decodeBoolForKey:@"showStructureView"];
-		} else {
+		}
+        else
+        {
 			// forget about version 0
 			[coder decodeObject];
 		}
 		
-		if(self.labels == nil) {
+		if (self.labels == nil)
+        {
 			self.labels = [ProjectLabels defaultLabels];
 		}
 	}
+    
 	return self;
 }
 
-- (void)encodeWithCoder:(NSCoder*)coder
+- (void)encodeWithCoder:(NSCoder *)coder
 {
 	[coder encodeObject:self.selectedLanguage forKey:@"selectedLanguage"];
 	[coder encodeObject:self.selectedFile forKey:@"selectedFile"];
@@ -112,17 +122,34 @@
 	[coder encodeBool:self.showStructureView forKey:@"showStructureView"];
 }
 
-+ (NSSet*)keyPathsForValuesAffectingPrefChanged
++ (NSSet *)keyPathsForValuesAffectingPrefChanged
 {
-	return [NSSet setWithObjects:@"selectedLanguage", @"selectedFile", @"labels", @"windowPosition",
-			@"interfacePrefs", @"filesColumnInfo", @"updateBundlePrefs", @"exportSettings", @"exportSettingsPresets",
-			@"exportXLIFFSettings", @"importXLIFFSettings", @"showTextZone", 
-			@"showKeyColumn", @"showInvisibleCharacters", @"showLocalFiles", @"showStatusBar", @"showStructureView", @"filterFiles", nil ];
+	return [NSSet setWithObjects:
+            @"selectedLanguage",
+            @"selectedFile",
+            @"labels",
+            @"windowPosition",
+			@"interfacePrefs",
+            @"filesColumnInfo",
+            @"updateBundlePrefs",
+            @"exportSettings",
+            @"exportSettingsPresets",
+			@"exportXLIFFSettings",
+            @"importXLIFFSettings",
+            @"showTextZone",
+			@"showKeyColumn",
+            @"showInvisibleCharacters",
+            @"showLocalFiles",
+            @"showStatusBar",
+            @"showStructureView",
+            @"filterFiles",
+            nil];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-	if([keyPath isEqualToString:@"prefChanged"]) {
+	if([keyPath isEqualToString:@"prefChanged"])
+    {
 		[self.projectProvider setDirty];			
 	}
 }

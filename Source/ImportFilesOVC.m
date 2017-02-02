@@ -76,10 +76,15 @@
 	self.settings.updateBaseLanguage = ([mImportBaseRadio state] == NSOnState);
 	self.settings.resetLayout = ([mImportCheckLayoutCheckbox state] == NSOnState);
 	self.settings.updateNibLayouts = ([mImportImportLayoutsCheckbox state] == NSOnState);
-	int index = [mLanguagesTableView selectedRow];
-	if(index >= 0) {
+	
+    NSInteger index = [mLanguagesTableView selectedRow];
+	
+    if (index >= 0)
+    {
 		self.settings.localizedLanguage = [mController content][index][@"language"];		
-	} else {
+	}
+    else
+    {
 		self.settings.localizedLanguage = nil;
 	}
 }

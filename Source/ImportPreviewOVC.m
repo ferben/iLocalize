@@ -126,14 +126,21 @@
 	BOOL statusColumn = [[tableColumn identifier] isEqualToString:@"Status"];
 		
     AZPathNode *pn = item;
-    if(statusColumn) {
-        if([pn.payload isKindOfClass:[NSNumber class]]) {
+    
+    if (statusColumn)
+    {
+        if ([pn.payload isKindOfClass:[NSNumber class]])
+        {
             return nil;
-        } else {
+        }
+        else
+        {
             return [pn.payload image];
         }
-    } else {
-        return [NSNumber numberWithInt:pn.state];			
+    }
+    else
+    {
+        return [NSNumber numberWithInteger:pn.state];
     }
 }
 

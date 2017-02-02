@@ -889,10 +889,12 @@ static int toolHeight = 23;
 	[self ensureBindingTextView];
 }
 
-- (NSString*)propagationTitle:(int)mode
+- (NSString *)propagationTitle:(NSInteger)mode
 {
 	NSString *title = nil;
-	switch (mode) {
+    
+	switch (mode)
+    {
 		case AUTO_PROPAGATE_TRANSLATION_NONE:
 			title = NSLocalizedString(@"No Propagation", nil);
 			break;
@@ -903,7 +905,8 @@ static int toolHeight = 23;
 			title = NSLocalizedString(@"Propagate To All Files", nil);
 			break;
 	}
-	return title;
+	
+    return title;
 }
 
 - (void)updatePropagationMode
@@ -1201,14 +1204,19 @@ static int toolHeight = 23;
 
 - (void)doubleClickOnLocalizedTableView:(id)sender
 {
-    if([mLocalizedStringsTableView clickedColumn] < 0) return;
-    if([mLocalizedStringsTableView clickedRow] < 0) return;
+    if ([mLocalizedStringsTableView clickedColumn] < 0)
+        return;
+    
+    if ([mLocalizedStringsTableView clickedRow] < 0)
+        return;
     
 	NSTableColumn *column = [mLocalizedStringsTableView tableColumns][[mLocalizedStringsTableView clickedColumn]];
     NSString *identifier = [column identifier];
 	StringController *controller = [mStringsController arrangedObjects][[mLocalizedStringsTableView clickedRow]];
-	if([identifier isEqualToString:COLUMN_STATUS]) {
-		if([controller statusToCheck])
+	
+    if ([identifier isEqualToString:COLUMN_STATUS])
+    {
+		if ([controller statusToCheck])
 			[controller approve];
 		else if([controller statusToTranslate])
 			[controller copyBaseToTranslation];
@@ -1216,18 +1224,27 @@ static int toolHeight = 23;
 			[controller unmarkAsTranslated];
 		else
 			[controller setTranslation:@""];
-		[self performAutoPropagation:nil];
-	} else if(![identifier isEqualToString:COLUMN_LABEL]) {
+		
+        [self performAutoPropagation:nil];
+	}
+    else if(![identifier isEqualToString:COLUMN_LABEL])
+    {
         BOOL editable = NO;
-        if([identifier isEqualToString:COLUMN_BASE] && [controller baseEditable]) {
+    
+        if ([identifier isEqualToString:COLUMN_BASE] && [controller baseEditable])
+        {
             editable = YES;
         }
-        if([identifier isEqualToString:COLUMN_TRANSLATION] && [controller editable]) {
+        
+        if ([identifier isEqualToString:COLUMN_TRANSLATION] && [controller editable])
+        {
             editable = YES;
         }
-        if(editable) {
-            int col = [mLocalizedStringsTableView columnWithIdentifier:[column identifier]];
-            int row = [mLocalizedStringsTableView selectedRow];
+        
+        if (editable)
+        {
+            NSInteger col = [mLocalizedStringsTableView columnWithIdentifier:[column identifier]];
+            NSInteger row = [mLocalizedStringsTableView selectedRow];
             [mLocalizedStringsTableView editColumn:col row:row withEvent:nil select:YES];		            
         }
 	}

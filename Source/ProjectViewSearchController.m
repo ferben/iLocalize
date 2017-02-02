@@ -140,49 +140,73 @@
 - (IBAction)contextChanged:(id)sender
 {
     // Maintain now a scope only between File and the others.
-	int tag = [sender tag];
-	switch (tag) {
+	NSInteger tag = [sender tag];
+    
+	switch (tag)
+    {
 		case 0: // File
 			context.scope = SCOPE_FILES;
 			break;
 
 		case 1: // Key
-            if(context.scope == SCOPE_FILES) {
+            if (context.scope == SCOPE_FILES)
+            {
                 context.scope = SCOPE_KEY;                
-            } else {
+            }
+            else
+            {
                 [self addOrRemoveIfAlreadyExist:SCOPE_KEY];
             }
-			break;
+			
+            break;
 			
 		case 2: // Base string
-            if(context.scope == SCOPE_FILES) {
+            if (context.scope == SCOPE_FILES)
+            {
                 context.scope = SCOPE_KEY;                
-            } else {
+            }
+            else
+            {
                 [self addOrRemoveIfAlreadyExist:SCOPE_STRINGS_BASE];
             }
-			break;
-		case 3: // Translation string
-            if(context.scope == SCOPE_FILES) {
+			
+            break;
+		
+        case 3: // Translation string
+            if (context.scope == SCOPE_FILES)
+            {
                 context.scope = SCOPE_KEY;                
-            } else {
+            }
+            else
+            {
                 [self addOrRemoveIfAlreadyExist:SCOPE_STRINGS_TRANSLATION];
             }
-			break;
+			
+            break;
 
 		case 4: // Base comment
-            if(context.scope == SCOPE_FILES) {
+            if (context.scope == SCOPE_FILES)
+            {
                 context.scope = SCOPE_KEY;                
-            } else {
+            }
+            else
+            {
                 [self addOrRemoveIfAlreadyExist:SCOPE_COMMENTS_BASE];
             }
-			break;
-		case 5: // Translation comment
-            if(context.scope == SCOPE_FILES) {
+			
+            break;
+		
+        case 5: // Translation comment
+            if (context.scope == SCOPE_FILES)
+            {
                 context.scope = SCOPE_KEY;                
-            } else {
+            }
+            else
+            {
                 [self addOrRemoveIfAlreadyExist:SCOPE_COMMENTS_TRANSLATION];
             }
-			break;			
+			
+            break;
 	}
 			
 	[self updateInterface];

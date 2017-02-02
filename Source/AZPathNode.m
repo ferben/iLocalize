@@ -23,7 +23,7 @@
 @synthesize state;
 @synthesize payload;
 
-+ (AZPathNode*)rootNodeWithPath:(NSString*)path
++ (AZPathNode *)rootNodeWithPath:(NSString*)path
 {
 	AZPathNode *node = [[AZPathNode alloc] init];
     node.rootPath = path;
@@ -34,7 +34,9 @@
 - (id) init
 {
 	self = [super init];
-	if (self != nil) {
+	
+    if (self != nil)
+    {
 		_children = [[NSMutableArray alloc] init];
         filteredChildren = nil;
         displayableChildren = nil;
@@ -46,7 +48,8 @@
         languagePlaceholderNodes = nil;
         childrenSortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES selector:@selector(caseInsensitiveCompare:)];
 	}
-	return self;
+	
+    return self;
 }
 
 
@@ -54,27 +57,36 @@
 {
     self.state = inState;
 
-    if([self children].count > 0) {
+    if ([self children].count > 0)
+    {
 		// This node has children. Propagate the state to all the children.
-		[self visitChildren:^BOOL(AZPathNode *child) {
+		[self visitChildren:^BOOL(AZPathNode *child)
+        {
 			child.state = state;
             return YES;
 		}];
 	}
 	
 	// Update the state of the parent of the node
-	[self visitParent:^(AZPathNode *pnode) {
+	[self visitParent:^(AZPathNode *pnode)
+    {
 		// Set the state of the parent depending on the states of its direct children.
 		
-		int parentState = NSMixedState;
-		for(AZPathNode *child in [pnode children]) {
-			if(parentState == NSMixedState) {
+		NSInteger parentState = NSMixedState;
+        
+		for (AZPathNode *child in [pnode children])
+        {
+			if (parentState == NSMixedState)
+            {
 				parentState = child.state;
-			} else if(parentState != child.state) {
+			}
+            else if (parentState != child.state)
+            {
 				parentState = NSMixedState;
 				break;
 			}			
 		}
+        
 		pnode.state = parentState;
 	}];	
 }

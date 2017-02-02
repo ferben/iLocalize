@@ -49,7 +49,8 @@
 @class AZSplitView;
 @class AZSplitViewThumbView;
 
-@interface ProjectWC : NSWindowController <ProjectWindowProtocol, NSSplitViewDelegate, NSMenuDelegate> {
+@interface ProjectWC : NSWindowController <ProjectWindowProtocol, NSSplitViewDelegate, NSMenuDelegate>
+{
 	IBOutlet NSObjectController		*mProjectController;
 	IBOutlet NSArrayController		*mLanguagesController;
 	
@@ -180,19 +181,19 @@
 
 - (void)deselectAll;
 
-- (void)setExplorerPredicate:(NSPredicate*)predicate;
-- (void)setPathPredicate:(NSPredicate*)predicate;
+- (void)setExplorerPredicate:(NSPredicate *)predicate;
+- (void)setPathPredicate:(NSPredicate *)predicate;
 
-- (NSPredicate*)currentFilterPredicate;
-- (NSArray*)filteredFileControllers;
+- (NSPredicate *)currentFilterPredicate;
+- (NSArray *)filteredFileControllers;
 
-- (ProjectMenuEdit*)projectMenuEdit;
+- (ProjectMenuEdit *)projectMenuEdit;
 
-- (ProjectFilesController*)projectFiles;
-- (ProjectLabels*)projectLabels;
-- (ProjectExplorerController*)projectExplorer;
+- (ProjectFilesController *)projectFiles;
+- (ProjectLabels *)projectLabels;
+- (ProjectExplorerController *)projectExplorer;
 
-- (void)selectLanguageAtIndex:(int)index;
+- (void)selectLanguageAtIndex:(NSInteger)index;
 - (void)selectNextString;
 
 - (void)registerToPreferences;
@@ -200,30 +201,30 @@
 
 #pragma mark -
 
-- (NSPopUpButton*)languagesPopUp;
+- (NSPopUpButton *)languagesPopUp;
 
-- (NSArrayController*)languagesController;
-- (NSArrayController*)filesController;
+- (NSArrayController *)languagesController;
+- (NSArrayController *)filesController;
 
-- (ProjectDocument*)projectDocument;
-- (ProjectPrefs*)projectPreferences;
-- (ProjectController*)projectController;
-- (ProjectDetailsController*)projectDetailsController;
-- (EngineProvider*)engineProvider;
-- (OperationDispatcher*)operationDispatcher;
-- (OperationWC*)operation;
-- (Explorer*)explorer;
+- (ProjectDocument *)projectDocument;
+- (ProjectPrefs *)projectPreferences;
+- (ProjectController *)projectController;
+- (ProjectDetailsController *)projectDetailsController;
+- (EngineProvider *)engineProvider;
+- (OperationDispatcher *)operationDispatcher;
+- (OperationWC *)operation;
+- (Explorer *)explorer;
 
-- (LanguageController*)selectedLanguageController;
-- (NSArray*)selectedFileControllers;
-- (NSArray*)selectedStringControllers;
-- (void)selectStringController:(StringController*)sc;
+- (LanguageController *)selectedLanguageController;
+- (NSArray *)selectedFileControllers;
+- (NSArray *)selectedStringControllers;
+- (void)selectStringController:(StringController *)sc;
 
 - (BOOL)isBaseLanguage;
 
-- (HistoryManager*)historyManager;
-- (FMEditor*)currentFileEditor;
+- (HistoryManager *)historyManager;
+- (FMEditor *)currentFileEditor;
 
-- (void)tableViewModifierFlagsChanged:(NSEvent*)event;
+- (void)tableViewModifierFlagsChanged:(NSEvent *)event;
 
 @end

@@ -1075,7 +1075,7 @@
 
 #pragma mark -
 
-- (void)selectLanguageAtIndex:(int)index
+- (void)selectLanguageAtIndex:(NSInteger)index
 {
 	[mProjectFilesController rememberSelectedFiles];
 	[mCurrentFMEditor pushState];

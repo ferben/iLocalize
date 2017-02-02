@@ -6,12 +6,14 @@
 //  Copyright 2006 Arizona Software. All rights reserved.
 //
 
-@interface Utils : NSObject {
-
+@interface Utils : NSObject
+{
 }
+
 + (BOOL)isMainThread;
-+ (NSPoint)posInCellAtMouseLocation:(NSPoint)pos row:(int*)row column:(int*)column tableView:(NSTableView*)tv;
++ (NSPoint)posInCellAtMouseLocation:(NSPoint)pos row:(NSInteger *)row column:(NSInteger *)column tableView:(NSTableView *)tv;
 + (SInt32)getOSVersion;
 + (BOOL)isOSVersionTigerAndBelow:(SInt32)version;
 + (BOOL)isOSTigerAndBelow;
+
 @end

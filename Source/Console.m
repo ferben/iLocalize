@@ -35,27 +35,32 @@
 }
 
 
-- (id)initWithCoder:(NSCoder*)coder
+- (id)initWithCoder:(NSCoder *)coder
 {
-	if((self = [super init])) {
-		int version = [coder versionForClassName:[self className]];
+	if ((self = [super init]))
+    {
+		NSInteger version = [coder versionForClassName:[self className]];
 
 		mRootItem = [coder decodeObject];
 		mCurrentItemStack = [coder decodeObject];
-		if(version == 1)
+        
+		if (version == 1)
 			mDeleteOldDays = [[coder decodeObject] intValue];
 		
-		if(mRootItem == NULL) {
+		if (mRootItem == NULL)
+        {
 			mRootItem = [[ConsoleItem alloc] init];
 			[mRootItem setDescription:CONSOLE_ROOT];
 		}
-		if(mCurrentItemStack)
+		
+        if (mCurrentItemStack)
 			// Clear stack in case an exception has occurred and the corresponding
 			// endOperation method didn't get called (leaving open forever the beginOperation)
 			[mCurrentItemStack clear];
 		else
 			mCurrentItemStack = [[Stack alloc] init];
 	}
+    
 	return self;
 }
 

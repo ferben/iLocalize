@@ -92,9 +92,11 @@
 {
 	id object = [notification userInfo][@"NSObject"];
 	AZPathNode *node = [object representedObject];
-	if(node.children.count == 1) {
-		int row = [outlineView rowForItem:object];
-		[outlineView expandItem:[outlineView itemAtRow:row+1]];
+	
+    if (node.children.count == 1)
+    {
+		NSInteger row = [outlineView rowForItem:object];
+		[outlineView expandItem:[outlineView itemAtRow:row + 1]];
 	}
 }
 

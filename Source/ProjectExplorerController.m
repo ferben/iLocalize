@@ -439,7 +439,7 @@ static NSString *FILTER_DRAG_TYPE = @"ch.arizona-software.filter";
 		}
 
 		// Get the proposed item row index
-		int proposedItemRow = [mSideBarOutlineView rowForItem:item];
+		NSInteger proposedItemRow = [mSideBarOutlineView rowForItem:item];
 		
         // Don't drag over any items that are part of the SEARCH group
 		if (proposedItemRow > [self filtersGroupItem].children.count)
@@ -457,7 +457,7 @@ static NSString *FILTER_DRAG_TYPE = @"ch.arizona-software.filter";
 		if (childIndex == -1)
         {
 			id redirectedItem = [mSideBarOutlineView itemAtRow:0];
-			int redirectedIndex = proposedItemRow;
+			NSInteger redirectedIndex = proposedItemRow;
 			[ov setDropItem:redirectedItem dropChildIndex:redirectedIndex];			
 		}
 		

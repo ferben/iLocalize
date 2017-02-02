@@ -52,7 +52,7 @@ static id _shared = nil;
 	return [[NSUserDefaults standardUserDefaults] boolForKey:@"enableAutoSnapshot"];
 }
 
-- (int)maximumNumberOfSnapshots
+- (NSInteger)maximumNumberOfSnapshots
 {
 	return [[NSUserDefaults standardUserDefaults] integerForKey:@"maxSnapshots"];
 }

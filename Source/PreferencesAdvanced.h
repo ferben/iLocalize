@@ -8,19 +8,20 @@
 
 #import "PreferencesObject.h"
 
-@interface PreferencesAdvanced : PreferencesObject {
+@interface PreferencesAdvanced : PreferencesObject
+{
 	IBOutlet NSArrayController *mIbtoolPlugins;
-	IBOutlet NSMatrix	*mUpdatesModeMatrix;
+	IBOutlet NSMatrix          *mUpdatesModeMatrix;
 }
 
 + (id)shared;
 
 - (BOOL)autoSnapshotEnabled;
-- (int)maximumNumberOfSnapshots;
+- (NSInteger)maximumNumberOfSnapshots;
 
 - (IBAction)selectProjectDefaultFolder:(id)sender;
 
-- (NSString*)interfaceBuilder3Path;
+- (NSString *)interfaceBuilder3Path;
 
 - (IBAction)browseIB3Path:(id)sender;
 

@@ -179,13 +179,18 @@ static SEIManager *instance = nil;
 - (SEI_FORMAT)selectedFormat:(NSPopUpButton*)popup
 {
 	SEIFormat *f;
-	int selectedIndex = [popup indexOfSelectedItem];
-	if(selectedIndex >= 0 && selectedIndex < [popup numberOfItems]) {
+	NSInteger selectedIndex = [popup indexOfSelectedItem];
+    
+	if (selectedIndex >= 0 && selectedIndex < [popup numberOfItems])
+    {
 		f = [self writableFormats][selectedIndex];
-	} else {
+	}
+    else
+    {
 		f = [[self writableFormats] firstObject];
 	}
-	return f.format;
+	
+    return f.format;
 }
 
 - (NSString*)writableExtensionForFormat:(SEI_FORMAT)format

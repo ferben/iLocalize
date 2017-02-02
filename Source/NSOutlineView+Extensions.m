@@ -16,23 +16,28 @@
 	return [self itemAtRow:[self selectedRow]];	
 }
 
-- (NSArray*)selectedItems
+- (NSArray *)selectedItems
 {
 	NSMutableArray *array = [NSMutableArray array];
 	NSIndexSet *indexSet = [self selectedRowIndexes];
 	NSUInteger index = [indexSet firstIndex];
-	while(index != NSNotFound) {
+    
+	while (index != NSNotFound)
+    {
 		[array addObject:[self itemAtRow:index]];
 		index = [indexSet indexGreaterThanIndex:index];
 	}
-	return array;
+	
+    return array;
 }
 
 - (id)rootItemOfItem:(id)item
 {
-	int row = [self rowForItem:item];
-	while([self levelForRow:row]>0)
-		row--;	
+	NSInteger row = [self rowForItem:item];
+    
+	while ([self levelForRow:row] > 0)
+		row--;
+    
 	return [self itemAtRow:row];
 }
 

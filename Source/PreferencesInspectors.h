@@ -16,11 +16,11 @@
 + (id)shared;
 
 - (BOOL)alternateTranslationLimitEnable;
-- (int)alternateTranslationLimit;
-- (int)alternateTranslationThreshold;
+- (NSInteger)alternateTranslationLimit;
+- (NSInteger)alternateTranslationThreshold;
 
 - (BOOL)glossaryMatchLimitEnable;
-- (int)glossaryMatchLimit;
-- (int)glossaryMatchThreshold;
+- (NSInteger)glossaryMatchLimit;
+- (NSInteger)glossaryMatchThreshold;
 
 @end

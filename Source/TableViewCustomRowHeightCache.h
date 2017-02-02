@@ -8,19 +8,20 @@
 
 @class TableViewCustom;
 
-@interface TableViewCustomRowHeightCache : NSObject {
+@interface TableViewCustomRowHeightCache : NSObject
+{
 	NSMutableDictionary *rowHeightCache;
 }
 @property (weak) TableViewCustom *tableView;
 
-+ (TableViewCustomRowHeightCache*)cacheForTableView:(TableViewCustom*)tableView;
++ (TableViewCustomRowHeightCache *)cacheForTableView:(TableViewCustom *)tableView;
 
-- (NSNumber*)cachedHeightForRow:(int)row;
-- (void)setCachedHeight:(float)height forRow:(int)row;
+- (NSNumber *)cachedHeightForRow:(NSInteger)row;
+- (void)setCachedHeight:(float)height forRow:(NSInteger)row;
 
 - (void)clearRowHeightCache;
-- (void)clearRowHeightCacheAtRow:(int)row;
+- (void)clearRowHeightCacheAtRow:(NSInteger)row;
 
-- (float)computeCachedRowHeight:(int)row;
+- (float)computeCachedRowHeight:(NSInteger)row;
 
 @end
