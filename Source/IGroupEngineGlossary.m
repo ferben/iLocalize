@@ -26,9 +26,10 @@
 }
 
 
-- (int)glossaryMatchThreshold
+- (NSInteger)glossaryMatchThreshold
 {
-	switch([[PreferencesInspectors shared] glossaryMatchThreshold]) {
+	switch ([[PreferencesInspectors shared] glossaryMatchThreshold])
+    {
 		case 0: return 1;
 		case 1: return 5;
 		case 2: return 10;

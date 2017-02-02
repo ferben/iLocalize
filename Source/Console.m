@@ -169,12 +169,12 @@
 	return [mRootItem itemOfType:type atIndex:index];
 }
 
-- (NSArray *)itemsOfType:(int)type range:(NSRange)r
+- (NSArray *)itemsOfType:(NSInteger)type range:(NSRange)r
 {
 	return [mRootItem itemsOfType:type range:r];
 }
 
-- (NSArray *)allItemsOfStrictType:(int)type range:(NSRange)r
+- (NSArray *)allItemsOfStrictType:(NSInteger)type range:(NSRange)r
 {
 	return [mRootItem allItemsOfStrictType:type range:r];
 }

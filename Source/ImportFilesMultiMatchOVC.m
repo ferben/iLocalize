@@ -55,7 +55,7 @@
 	[tableView reloadData];
 }
 
-- (int)numberOfRowsInTableView:(NSTableView *)aTableView
+- (NSUInteger)numberOfRowsInTableView:(NSTableView *)aTableView
 {
 	return [multiMatchItems count];
 }
@@ -79,7 +79,7 @@
 	[aCell setImage:[[NSWorkspace sharedWorkspace] iconForFile:path]];
 }
 
-- (id)popUpContentForRow:(int)row
+- (id)popUpContentForRow:(NSInteger)row
 {
 	// Called by PopupTableColumn (this object is it's delegate)
 	return [multiMatchItems[row] matchingFiles];

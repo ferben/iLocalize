@@ -1179,12 +1179,18 @@ static int toolHeight = 23;
 - (NSString*)windowToolTipRequestedAtPosition:(NSPoint)pos
 {
 	NSRect tv = [mLocalizedStringsTableView convertRect:[mLocalizedStringsTableView visibleRect] toView:nil];
-	if(NSPointInRect(pos, tv)) {
-		int row;
-		int column;
-		NSPoint posInCell = [Utils posInCellAtMouseLocation:pos row:&row column:&column tableView:mLocalizedStringsTableView];
-		if(!NSEqualPoints(posInCell, NSMakePoint(-1, -1)) &&
-		   [[(NSTableColumn*)[mLocalizedStringsTableView tableColumns][column] identifier] isEqualToString:@"Status"]) {
+    
+	if (NSPointInRect(pos, tv))
+    {
+		NSInteger row;
+		NSInteger column;
+
+        NSPoint posInCell = [Utils posInCellAtMouseLocation:pos row:&row column:&column tableView:mLocalizedStringsTableView];
+        
+		if (    ! NSEqualPoints(posInCell, NSMakePoint(-1, -1))
+             && [[(NSTableColumn*)[mLocalizedStringsTableView tableColumns][column] identifier] isEqualToString:@"Status"]
+           )
+        {
 			StringController *sc = [[self stringsController] arrangedObjects][row];
 			return [sc statusDescriptionAtPosition:posInCell];
 		}

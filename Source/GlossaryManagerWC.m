@@ -698,7 +698,7 @@ NSInteger glossaryPathSort(id doc1, id doc2, void *context)
 	}
 }
 
-- (NSMenu *)menuForTableView:(NSTableView *)tv column:(int)column row:(int)row
+- (NSMenu *)menuForTableView:(NSTableView *)tv column:(NSInteger)column row:(NSInteger)row
 {
 	if (tv == mPathOutlineView)
     {

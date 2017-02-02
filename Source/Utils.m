@@ -16,10 +16,12 @@ static NSThread *mainThread = nil;
 
 + (BOOL)isMainThread
 {
-	if(mainThread == nil) {
+	if (mainThread == nil)
+    {
 		mainThread = [NSThread currentThread];
 	}
-	return [NSThread currentThread] == mainThread;
+	
+    return [NSThread currentThread] == mainThread;
 }
 
 + (NSPoint)posInCellAtMouseLocation:(NSPoint)pos row:(NSInteger *)row column:(NSInteger *)column tableView:(NSTableView *)tv
@@ -28,13 +30,18 @@ static NSThread *mainThread = nil;
 	*row = [tv rowAtPoint:posInTableView];
 	*column = [tv columnAtPoint:posInTableView];
 	NSPoint posInCell;
-	if(*row >= 0 && *column >= 0) {
+    
+	if (*row >= 0 && *column >= 0)
+    {
 		NSRect cellFrame = [tv frameOfCellAtColumn:*column row:*row];
-		posInCell = NSMakePoint(posInTableView.x-cellFrame.origin.x, posInTableView.y-cellFrame.origin.y);
-	} else {
+		posInCell = NSMakePoint(posInTableView.x - cellFrame.origin.x, posInTableView.y - cellFrame.origin.y);
+	}
+    else
+    {
 		posInCell = NSMakePoint(-1, -1);
 	}
-	return posInCell;
+	
+    return posInCell;
 }
 
 + (SInt32)getOSVersion

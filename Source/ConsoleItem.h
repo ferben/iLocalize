@@ -42,7 +42,7 @@
 - (void)removeAllItems;
 
 - (NSUInteger)numberOfItems;
-- (ConsoleItem *)itemAtIndex:(int)index;
+- (ConsoleItem *)itemAtIndex:(NSUInteger)index;
 
 - (NSUInteger)numberOfItemsOfType:(NSInteger)type;
 - (ConsoleItem *)itemOfType:(NSInteger)type atIndex:(NSUInteger)index;
