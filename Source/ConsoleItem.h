@@ -46,8 +46,8 @@
 
 - (NSUInteger)numberOfItemsOfType:(NSInteger)type;
 - (ConsoleItem *)itemOfType:(NSInteger)type atIndex:(NSUInteger)index;
-- (NSArray *)itemsOfType:(int)type range:(NSRange)r;
-- (NSArray *)allItemsOfStrictType:(int)type range:(NSRange)r;
+- (NSArray *)itemsOfType:(NSInteger)type range:(NSRange)r;
+- (NSArray *)allItemsOfStrictType:(NSInteger)type range:(NSRange)r;
 - (void)deleteItem:(ConsoleItem *)item;
 
 - (NSString *)textRepresentation;

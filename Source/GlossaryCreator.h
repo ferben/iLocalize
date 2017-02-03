@@ -15,30 +15,31 @@
 @class LanguageController;
 @class Glossary;
 
-@interface GlossaryCreator : NSObject {
-	Glossary			*glossary;	
-	int					mSource;
-	LanguageController	*mSourceLanguage;
-	LanguageController	*mTargetLanguage;
-	BOOL				mIncludeTranslated;
-	BOOL				mIncludeNonTranslated;
-	BOOL				mExcludeLocked;
-	BOOL				mRemoveDuplicateEntries;
+@interface GlossaryCreator : NSObject
+{
+	Glossary              *glossary;
+	NSInteger              mSource;
+	LanguageController    *mSourceLanguage;
+	LanguageController    *mTargetLanguage;
+	BOOL                   mIncludeTranslated;
+	BOOL                   mIncludeNonTranslated;
+	BOOL                   mExcludeLocked;
+	BOOL                   mRemoveDuplicateEntries;
 	
-	id <ProjectProvider>		mProvider;
+	id <ProjectProvider>   mProvider;
 }
 
-+ (GlossaryCreator*)creator;
++ (GlossaryCreator *)creator;
 
 - (void)setProvider:(id<ProjectProvider>)provider;
-- (void)setSource:(int)source;
-- (void)setSourceLanguage:(NSString*)language;
-- (void)setTargetLanguage:(NSString*)language;
+- (void)setSource:(NSInteger)source;
+- (void)setSourceLanguage:(NSString *)language;
+- (void)setTargetLanguage:(NSString *)language;
 - (void)setIncludeTranslatedStrings:(BOOL)flag;
 - (void)setIncludeNonTranslatedStrings:(BOOL)flag;
 - (void)setExcludeLockedStrings:(BOOL)flag;
 - (void)setRemoveDuplicateEntries:(BOOL)flag;
 
-- (Glossary*)create;
+- (Glossary *)create;
 
 @end

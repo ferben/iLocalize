@@ -185,7 +185,7 @@ static NSDateFormatter *dateFormatter = nil;
 	[mItems removeAllObjects];
 }
 
-- (NSArray *)itemsOfType:(long)type items:(NSArray *)items
+- (NSArray *)itemsOfType:(NSInteger)type items:(NSArray *)items
 {
 	if (type == CONSOLE_ALL)
 		return items;
@@ -249,12 +249,12 @@ static NSDateFormatter *dateFormatter = nil;
 	return [self itemsOfType:type][index];
 }
 
-- (NSArray *)itemsOfType:(int)type range:(NSRange)r
+- (NSArray *)itemsOfType:(NSInteger)type range:(NSRange)r
 {
 	return [self itemsOfType:type items:[mItems subarrayWithRange:r]];
 }
 
-- (BOOL)isItemOfStrictType:(int)type
+- (BOOL)isItemOfStrictType:(NSInteger)type
 {
 	BOOL showLog       = type & (1 << CONSOLE_LOG);
 	BOOL showWarning   = type & (1 << CONSOLE_WARNING);
@@ -286,7 +286,7 @@ static NSDateFormatter *dateFormatter = nil;
 	return showAll || match;
 }
 
-- (NSArray *)allItemsOfStrictType:(int)type
+- (NSArray *)allItemsOfStrictType:(NSInteger)type
 {
 	NSMutableArray *array = [NSMutableArray array];
 	ConsoleItem *item;
@@ -304,7 +304,7 @@ static NSDateFormatter *dateFormatter = nil;
 	return array;
 }
 
-- (NSArray *)allItemsOfStrictType:(int)type range:(NSRange)r
+- (NSArray *)allItemsOfStrictType:(NSInteger)type range:(NSRange)r
 {
 	NSMutableArray *array = [NSMutableArray array];
 	NSEnumerator *enumerator = [[mItems subarrayWithRange:r] objectEnumerator];

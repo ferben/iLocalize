@@ -110,11 +110,17 @@
 	/* Delete only the top-item only */
 	NSCalendarDate *limit = [NSCalendarDate calendarDate];
 	limit = [limit dateByAddingYears:0 months:0 days:-[self deleteOldDays]
-							   hours:-[limit hourOfDay] minutes:-[limit minuteOfHour] seconds:-[limit secondOfMinute]];
-			int i;
-	for(i=[self numberOfItemsOfType:CONSOLE_ALL]-1; i>=0; i--) {
+							   hours:-[limit hourOfDay]
+                             minutes:-[limit minuteOfHour]
+                             seconds:-[limit secondOfMinute]];
+    NSUInteger i;
+    
+	for (i = [self numberOfItemsOfType:CONSOLE_ALL] - 1; i > 0; i--)
+    {
 		id item = [self itemOfType:CONSOLE_ALL atIndex:i];
-		if([limit compare:[item date]] == NSOrderedDescending) {
+        
+		if ([limit compare:[item date]] == NSOrderedDescending)
+        {
 			[self deleteItem:item];
 		}
 	}

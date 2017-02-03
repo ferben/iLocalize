@@ -18,17 +18,19 @@
 
 @implementation GlossaryCreator
 
-+ (GlossaryCreator*)creator
++ (GlossaryCreator *)creator
 {
 	return [[self alloc] init];
 }
 
 - (id)init
 {
-	if(self = [super init]) {
+	if (self = [super init])
+    {
 		glossary = [[Glossary alloc] init];
 	}
-	return self;
+	
+    return self;
 }
 
 
@@ -37,12 +39,12 @@
 	mProvider = provider;
 }
 
-- (void)setSource:(int)source
+- (void)setSource:(NSInteger)source
 {
 	mSource = source;
 }
 
-- (void)setSourceLanguage:(NSString*)language
+- (void)setSourceLanguage:(NSString *)language
 {
 	mSourceLanguage = [[mProvider projectController] languageControllerForLanguage:language];
 }

@@ -71,13 +71,13 @@
 	return [[NSUserDefaults standardUserDefaults] objectForKey:NAME_KEY];
 }
 
-- (NSString*)path
+- (NSString *)path
 {
-	int index = [[NSUserDefaults standardUserDefaults] integerForKey:PATH_INDEX_KEY];	
+	NSInteger index = [[NSUserDefaults standardUserDefaults] integerForKey:PATH_INDEX_KEY];
 	return [[[GlossaryManager sharedInstance] globalFoldersAndLocalFoldersForProject:self.projectProvider][index] path];
 }
 
-- (int)sourceIndex
+- (NSInteger)sourceIndex
 {
 	return [[NSUserDefaults standardUserDefaults] integerForKey:SOURCE_INDEX_KEY];
 }
@@ -154,7 +154,7 @@
 	return [[[self path] stringByAppendingPathComponent:[self name]] stringByAppendingPathExtension:@"tmx"];		
 }
 
-- (BOOL)createGlossary:(NSError**)error
+- (BOOL)createGlossary:(NSError **)error
 {
 	GlossaryCreator *creator = [GlossaryCreator creator];
 	[creator setProvider:self.projectProvider];

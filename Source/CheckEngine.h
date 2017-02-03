@@ -18,11 +18,12 @@
 @class FileController;
 @class StringController;
 
-@interface CheckEngine : AbstractEngine {
-
+@interface CheckEngine : AbstractEngine
+{
 }
-- (void)checkFileController:(FileController*)fc;
-- (int)checkLanguages:(NSArray*)languages;
-- (BOOL)checkFormattingCharactersOfBaseString:(NSString*)base localizedString:(NSString*)localized;
-- (void)markStringController:(StringController*)sc;
+
+- (void)checkFileController:(FileController *)fc;
+- (NSUInteger)checkLanguages:(NSArray *)languages;
+- (BOOL)checkFormattingCharactersOfBaseString:(NSString *)base localizedString:(NSString *)localized;
+- (void)markStringController:(StringController *)sc;
 @end

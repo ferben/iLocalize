@@ -38,33 +38,47 @@
 	}
 }
 
-- (void)matchString:(IGroupEngineState*)state inGlossary:(Glossary*)glossary threshold:(int)threshold
+- (void)matchString:(IGroupEngineState *)state inGlossary:(Glossary *)glossary threshold:(NSInteger)threshold
 {	
 	NSString *s = state.selectedString;
-	[[glossary entries] enumerateObjectsWithOptions:0 usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+	[[glossary entries] enumerateObjectsWithOptions:0 usingBlock:^(id obj, NSUInteger idx, BOOL *stop)
+    {
 		GlossaryEntry *entry = obj;
-		if(state.outdated) {
+        
+		if (state.outdated)
+        {
 			*stop = YES;
 			return;
 		}
 		
 		NSString *a = entry.source;
-		if([a length] == 0)	return;
+		
+        if ([a length] == 0)
+            return;
 		
 		NSString *b = s;
 		float score = 0;
 		
-		if(![a isEqualToString:b ignoreCase:NO]) {
-			if(threshold == 1) {
+		if (![a isEqualToString:b ignoreCase:NO])
+        {
+			if (threshold == 1)
+            {
 				return;				
-			} else {
-				if([a isEqualCaseInsensitiveToString:b]) {
+			}
+            else
+            {
+				if ([a isEqualCaseInsensitiveToString:b])
+                {
 					// Difference in case
 					score = 0.1;
-				} else if(b != nil && [[a lowercaseString] hasPrefix:[b lowercaseString]]) {
+				}
+                else if (b != nil && [[a lowercaseString] hasPrefix:[b lowercaseString]])
+                {
 					// String begins the word
 					score = 1;
-				} else {
+				}
+                else
+                {
 					score = [a compareWithWord:b];												
 				}
 			}
@@ -72,12 +86,13 @@
 		
 //		NSLog(@"%@ ? %@ > %.2f (threshold = %d)", a, b, score, threshold);
 
-		if(score >= threshold) {
+		if (score >= threshold)
+        {
 			return;
 		}
 		
 		score /= threshold;
-		score = 1-score;
+		score = 1 - score;
 				
         // Always lower the score of empty translation
         if (entry.translation.length == 0) {
@@ -96,31 +111,40 @@
 
 #pragma mark Subclass implementation
 
-- (void)_runForState:(IGroupEngineState*)state
+- (void)_runForState:(IGroupEngineState *)state
 {
-	if(scope.projectProvider == nil) {
+	if (scope.projectProvider == nil)
+    {
 		scope.projectProvider = state.projectProvider;	
 	}
 
 	// Reset the glossary list if the language(s) changed
-	if(state.languageChanged) {
+	if (state.languageChanged)
+    {
 		[scope refresh];
 	}
 
-	if([state.selectedString length] == 0) return;
+	if ([state.selectedString length] == 0)
+        return;
 	
 	// Run only if the selected string changed (and the language changed)
-	if(state.languageChanged || state.selectedStringChanged) {
-		int threshold = [self glossaryMatchThreshold];
+	if (state.languageChanged || state.selectedStringChanged)
+    {
+		NSInteger threshold = [self glossaryMatchThreshold];
+        
         // Note: don't run in concurrent mode because the NSXMLDocument is not thread safe
         // and this can lead to issue reading a glossary
-		[[scope selectedGlossaries] enumerateObjectsWithOptions:0 usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+		[[scope selectedGlossaries] enumerateObjectsWithOptions:0 usingBlock:^(id obj, NSUInteger idx, BOOL *stop)
+        {
 			Glossary *glossary = obj;
-			if(state.outdated) {
+            
+			if (state.outdated)
+            {
 				*stop = YES;
 				return;
 			}
-			[self matchString:state inGlossary:glossary threshold:threshold];							
+			
+            [self matchString:state inGlossary:glossary threshold:threshold];
 		}];
 	}
 }

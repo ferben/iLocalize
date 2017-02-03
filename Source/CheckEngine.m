@@ -528,25 +528,31 @@
 	return array;
 }
 
-- (int)checkLanguages:(NSArray*)languages
+- (NSUInteger)checkLanguages:(NSArray *)languages
 {
 	NSArray *fcs = [self fileControllersToCheck:languages];    
 	[[self operation] setMaxSteps:[fcs count]];
 	
 	__block int32_t count = 0;
     
-    [fcs enumerateObjectsWithOptions:CONCURRENT_OP_OPTIONS usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    [fcs enumerateObjectsWithOptions:CONCURRENT_OP_OPTIONS usingBlock:^(id obj, NSUInteger idx, BOOL *stop)
+    {
         FileController *fc = obj;
         
-        if([[self operation] shouldCancel]) {
+        if ([[self operation] shouldCancel])
+        {
             *stop = YES;
             return;
         }
+        
         [[self operation] increment];
         
-        @autoreleasepool {
+        @autoreleasepool
+        {
             [self checkFileController:fc];
-            if([fc statusWarning]) {
+        
+            if ([fc statusWarning])
+            {
                 OSAtomicIncrement32(&count);
             }
         

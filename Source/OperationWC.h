@@ -11,7 +11,8 @@
 @class Stack;
 @class Operation;
 
-@interface OperationWC : AbstractWC {
+@interface OperationWC : AbstractWC
+{
 	IBOutlet NSTextField			*mTitleField;
 	IBOutlet NSTextField			*mInfoField;
 	IBOutlet NSProgressIndicator	*mProgressIndicator;
@@ -28,7 +29,7 @@
 // gets refreshed.
 @property (weak) Operation *operation;
 
-- (void)setTitle:(NSString*)title;
+- (void)setTitle:(NSString *)title;
 - (void)setProgress:(float)progress;
 
 - (void)setIndeterminate:(BOOL)flag;
@@ -40,7 +41,7 @@
 - (void)setCancellable:(BOOL)flag;
 - (BOOL)shouldCancel;
 
-- (void)setMaxSteps:(int)steps;
+- (void)setMaxSteps:(NSUInteger)steps;
 - (void)increment;
 
 - (IBAction)cancel:(id)cancel;
