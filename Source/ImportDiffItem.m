@@ -16,9 +16,10 @@
 @synthesize file;
 @synthesize source;
 
-- (NSString*)operationNameForOpcode:(unsigned)op
+- (NSString *)operationNameForOpcode:(NSUInteger)op
 {
-    switch(op) {
+    switch (op)
+    {
         case OPERATION_ADD:
 			return NSLocalizedString(@"add", @"Diff Operation Add");
         case OPERATION_DELETE:
@@ -28,12 +29,14 @@
         case OPERATION_IDENTICAL:
             return @"";
     }
+    
     return @"";
 }
 
-- (NSImage*)operationImageForOpcode:(unsigned)op
+- (NSImage *)operationImageForOpcode:(NSUInteger)op
 {
-    switch(op) {
+    switch (op)
+    {
         case OPERATION_ADD:
 			return [NSImage imageNamed:@"_file_added"];
         case OPERATION_DELETE:
@@ -43,12 +46,14 @@
         case OPERATION_IDENTICAL:
             return nil;
     }
-	return nil;
+	
+    return nil;
 }
 
-- (NSColor*)operationColorForOpcode:(unsigned)op
+- (NSColor *)operationColorForOpcode:(NSUInteger)op
 {
-    switch(op) {
+    switch (op)
+    {
         case OPERATION_ADD:
             return [NSColor greenColor];
         case OPERATION_DELETE:
@@ -58,25 +63,26 @@
         case OPERATION_IDENTICAL:
             return [NSColor blackColor];
     }
+    
     return [NSColor blackColor];
 }
 
-- (NSString*)operationName
+- (NSString *)operationName
 {
 	return [self operationNameForOpcode:self.operation];
 }
 
-- (NSImage*)image
+- (NSImage *)image
 {
 	return [self operationImageForOpcode:self.operation];
 }
 
-- (NSColor*)color
+- (NSColor *)color
 {
 	return [self operationColorForOpcode:self.operation];
 }
 
-- (NSString*)description
+- (NSString *)description
 {
 	NSMutableString *s = [NSMutableString string];
 	[s appendFormat:@"Op=%ld", self.operation];
@@ -85,9 +91,11 @@
 	return s;
 }
 
-//- (NSString*)source
-//{
-//	return [[SmartPathParser smartPath:self.file] stringByAppendingPathComponent:[self.file lastPathComponent]];
-//}
+/*
+ - (NSString *)source
+{
+	return [[SmartPathParser smartPath:self.file] stringByAppendingPathComponent:[self.file lastPathComponent]];
+}
+*/
 
 @end

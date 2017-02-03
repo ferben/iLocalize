@@ -8,18 +8,19 @@
 
 @class StringModel;
 
-@interface StringsContentModel : NSObject {
+@interface StringsContentModel : NSObject
+{
 	NSMutableArray *mStrings;
 	NSMutableDictionary *mCache;
 }
-+ (StringsContentModel*)model;
-- (void)setStringModels:(NSArray*)models;
-- (void)addStringModel:(StringModel*)sm;
++ (StringsContentModel *)model;
+- (void)setStringModels:(NSArray *)models;
+- (void)addStringModel:(StringModel *)sm;
 - (void)removeAllStrings;
-- (NSEnumerator*)stringsEnumerator;
-- (unsigned)numberOfStrings;
-- (StringModel*)stringModelAtIndex:(int)index;
-- (StringModel*)stringModelForKey:(NSString*)key;
+- (NSEnumerator *)stringsEnumerator;
+- (NSUInteger)numberOfStrings;
+- (StringModel *)stringModelAtIndex:(NSUInteger)index;
+- (StringModel *)stringModelForKey:(NSString *)key;
 - (void)sortByKeys;
-- (NSMutableArray*)strings;
+- (NSMutableArray *)strings;
 @end

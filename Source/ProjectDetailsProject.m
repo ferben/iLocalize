@@ -22,17 +22,17 @@
 											   object:nil];		
 }
 
-- (void)stringSelectionDidChange:(NSNotification*)notif
+- (void)stringSelectionDidChange:(NSNotification *)notif
 {
 	[self update];
 }
 
-- (NSTextStorage*)textStorage
+- (NSTextStorage *)textStorage
 {
 	return [mTextView textStorage];
 }
 
-- (NSString*)openForText
+- (NSString *)openForText
 {
 	int minutes = [self.projectWC elapsedMinutesSinceProjectWasOpened];
     int displayHours = minutes / 60;
@@ -44,7 +44,9 @@
     NSString *phour = NSLocalizedString(@"hours", @"Project Information");
 	
     NSString *info;
-    if(displayHours > 0) {
+    
+    if (displayHours > 0)
+    {
         // Opened since 1 hour and 1 minute
         // Opened since 1 hour and 2 minutes
         // Opened since 2 hours and 1 minute
@@ -53,12 +55,17 @@
         info = [NSString stringWithFormat:NSLocalizedString(@"%d %@ and %d %@", @"Project Information"), 
 				displayHours, displayHours > 1 ? phour:shour,
 				displayMinutes, displayMinutes > 1 ? pminute:sminute];        
-    } else {
+    }
+    else
+    {
         // Opened since 1 minute
         // Opened since 12 minutes
-		if(displayMinutes == 0) {
+		if (displayMinutes == 0)
+        {
 			info = NSLocalizedString(@"Less than a minute", @"Project Information");
-		} else {
+		}
+        else
+        {
 			info = [NSString stringWithFormat:NSLocalizedString(@"%d %@", @"Project Information"), 
 					displayMinutes, displayMinutes > 1 ? pminute:sminute];			
 		}
@@ -69,18 +76,20 @@
 - (void)addProjectInformation
 {
 	LanguageController *lc = [self.projectWC selectedLanguageController];
-    int total = [lc totalNumberOfStrings];
-    int toTranslate = [lc totalNumberOfNonTranslatedStrings];
-	int toCheck = [lc totalNumberOfToCheckStrings];
+    NSUInteger total = [lc totalNumberOfStrings];
+    NSUInteger toTranslate = [lc totalNumberOfNonTranslatedStrings];
+	NSUInteger toCheck = [lc totalNumberOfToCheckStrings];
 	
 	
-	[self addDetail:NSLocalizedString(@"Strings", @"Project Information") value:[NSString stringWithFormat:@"%d", total]];
+	[self addDetail:NSLocalizedString(@"Strings", @"Project Information") value:[NSString stringWithFormat:@"%ld", total]];
 	
-    if(![lc isBaseLanguage]) {
-		[self addDetail:NSLocalizedString(@"To Translate", @"Project Information") value:[NSString stringWithFormat:@"%d", toTranslate]];
-		[self addDetail:NSLocalizedString(@"To Check", @"Project Information") value:[NSString stringWithFormat:@"%d", toCheck]];		
+    if (![lc isBaseLanguage])
+    {
+		[self addDetail:NSLocalizedString(@"To Translate", @"Project Information") value:[NSString stringWithFormat:@"%ld", toTranslate]];
+		[self addDetail:NSLocalizedString(@"To Check", @"Project Information") value:[NSString stringWithFormat:@"%ld", toCheck]];
     }
-	[self addDetail:NSLocalizedString(@"Open For", @"Project Information") value:[self openForText]];	
+	
+    [self addDetail:NSLocalizedString(@"Open For", @"Project Information") value:[self openForText]];
 }
 
 - (void)update

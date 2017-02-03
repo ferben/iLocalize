@@ -109,11 +109,14 @@
 
 #pragma mark Source
 
-- (int)outlineView:(NSOutlineView *)ov numberOfChildrenOfItem:(id)item
+- (NSUInteger)outlineView:(NSOutlineView *)ov numberOfChildrenOfItem:(id)item
 {
-	if(item == NULL) {
+	if (item == NULL)
+    {
         return [[rootNode children] count];
-	} else {
+	}
+    else
+    {
         return [[item children] count];
 	}
 }

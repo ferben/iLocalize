@@ -14,70 +14,76 @@
 #import "ProjectDocument.h"
 #import "StringController.h"
 
-#define WHITE_COLOR	0
-#define BLACK_COLOR	1
-#define GREEN_COLOR	2
-#define RED_COLOR	3
-#define BLUE_COLOR	4
-#define ORANGE_COLOR	5
-#define PURPLE_COLOR	6
-#define YELLOW_COLOR	7
+#define WHITE_COLOR   0
+#define BLACK_COLOR   1
+#define GREEN_COLOR   2
+#define RED_COLOR     3
+#define BLUE_COLOR    4
+#define ORANGE_COLOR  5
+#define PURPLE_COLOR  6
+#define YELLOW_COLOR  7
 
-#define MAX_COLOR 8
+#define MAX_COLOR     8
 
-static NSString* KEY_ID = @"ID";
-static NSString* KEY_DESCRIPTION = @"Description";
-static NSString* KEY_COLOR = @"Color";
+static NSString *KEY_ID = @"ID";
+static NSString *KEY_DESCRIPTION = @"Description";
+static NSString *KEY_COLOR = @"Color";
 
-static NSString* COLOR_IMAGE_NAMES[] = { @"label_white", @"label_black", @"label_green", @"label_red", @"label_blue", @"label_orange", @"label_purple", @"label_yellow" };
+static NSString *COLOR_IMAGE_NAMES[] = { @"label_white", @"label_black", @"label_green", @"label_red", @"label_blue", @"label_orange", @"label_purple", @"label_yellow" };
 
 @implementation ProjectLabels
 
-+ (NSMutableDictionary*)createLabelWithID:(NSString*)identifier description:(NSString*)description color:(int)color
++ (NSMutableDictionary *)createLabelWithID:(NSString *)identifier description:(NSString *)description color:(int)color
 {
 	return [NSMutableDictionary dictionaryWithObjects:@[identifier, description, @(color)]
 											  forKeys:@[KEY_ID, KEY_DESCRIPTION, KEY_COLOR]];	
 }
 
-+ (NSMutableArray*)defaultLabels
++ (NSMutableArray *)defaultLabels
 {
 	NSMutableArray *labels = [NSMutableArray array];
+    
 	[labels addObject:[ProjectLabels createLabelWithID:@"T" description:NSLocalizedString(@"In Translation", @"Label") color:BLACK_COLOR]];
 	[labels addObject:[ProjectLabels createLabelWithID:@"R" description:NSLocalizedString(@"For Review", @"Label") color:RED_COLOR]];
 	[labels addObject:[ProjectLabels createLabelWithID:@"A" description:NSLocalizedString(@"Approved", @"Label") color:GREEN_COLOR]];
-	return labels;
+	
+    return labels;
 }
 
-+ (NSString*)labelImageColorNameForColorIndex:(int)color
++ (NSString *)labelImageColorNameForColorIndex:(int)color
 {
 	return COLOR_IMAGE_NAMES[color];
 }
 
-+ (NSColor*)labelTextColorForLabelImageColor:(int)color
++ (NSColor *)labelTextColorForLabelImageColor:(int)color
 {
-	switch(color) {
-		case WHITE_COLOR: return [NSColor blackColor];
-		case BLACK_COLOR: return [NSColor whiteColor];
-		case GREEN_COLOR: return [NSColor whiteColor];
-		case RED_COLOR: return [NSColor whiteColor];
-		case BLUE_COLOR: return [NSColor whiteColor];
+	switch (color)
+    {
+		case WHITE_COLOR:  return [NSColor blackColor];
+		case BLACK_COLOR:  return [NSColor whiteColor];
+		case GREEN_COLOR:  return [NSColor whiteColor];
+		case RED_COLOR:    return [NSColor whiteColor];
+		case BLUE_COLOR:   return [NSColor whiteColor];
 		case ORANGE_COLOR: return [NSColor blackColor];
 		case PURPLE_COLOR: return [NSColor blackColor];
 		case YELLOW_COLOR: return [NSColor blackColor];
 	}
+    
 	return [NSColor blackColor];
 }
 
 static NSMutableDictionary *labelAttributes = nil;
 
-+ (NSImage*)createLabelImageForColor:(int)color identifier:(NSString*)identifier
++ (NSImage *)createLabelImageForColor:(int)color identifier:(NSString *)identifier
 {
 	// Prepare the identifier text to be displayed
-	if(labelAttributes == nil) {
+	if (labelAttributes == nil)
+    {
 		labelAttributes = [[NSMutableDictionary alloc] init];
 		labelAttributes[NSFontAttributeName] = [NSFont fontWithName:@"Lucida Grande" size:10];		
 	}	
-	labelAttributes[NSForegroundColorAttributeName] = [ProjectLabels labelTextColorForLabelImageColor:color];		
+	
+    labelAttributes[NSForegroundColorAttributeName] = [ProjectLabels labelTextColorForLabelImageColor:color];
 	
 	NSSize size = [identifier sizeWithAttributes:labelAttributes];	
 	
@@ -95,57 +101,66 @@ static NSMutableDictionary *labelAttributes = nil;
 	[image drawInRect:NSMakeRect(p.x, p.y, imageWidth, imageSize.height) operation:NSCompositeCopy fraction:1];
 	
 	// Draw the label
-	p.x += imageWidth*0.5 - size.width*0.5 + 1;
+	p.x += imageWidth * 0.5 - size.width * 0.5 + 1;
 	[identifier drawAtPoint:p withAttributes:labelAttributes];	
 	
 	[labelImage unlockFocus];
 	return labelImage;
 }
 
-+ (NSMenuItem*)createMenuItemForColor:(int)color
++ (NSMenuItem *)createMenuItemForColor:(int)color
 {
 	NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:@"" action:nil keyEquivalent:@""];
 	[item setImage:[NSImage imageNamed:[ProjectLabels labelImageColorNameForColorIndex:color]]];
+    
 	return item;
 }
 
-+ (NSMenuItem*)createMenuItemForColor:(int)color identifier:(NSString*)identifier description:(NSString*)description
++ (NSMenuItem *)createMenuItemForColor:(int)color identifier:(NSString *)identifier description:(NSString *)description
 {
 	NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:description action:@selector(labelContextMenuAction:) keyEquivalent:@""];
+    
 	[item setTarget:self];
 	[item setState:NSOffState];
 	[item setImage:[ProjectLabels createLabelImageForColor:color identifier:identifier]];
+    
 	return item;
 }
 
-+ (void)updateLabelsMenuForCurrentSelection:(NSMenu*)menu controllers:(NSArray*)controllers
++ (void)updateLabelsMenuForCurrentSelection:(NSMenu *)menu controllers:(NSArray *)controllers
 {
 	NSMutableSet *labelsSet = [[NSMutableSet alloc] init];
 	
 	NSMutableDictionary *countDic = [NSMutableDictionary dictionary];
-	unsigned total = [controllers count];
+	NSUInteger total = [controllers count];
 	
-	for(StringController *sc in controllers) {
-		for(NSNumber *index in [sc labelIndexes]) {
+	for (StringController *sc in controllers)
+    {
+		for (NSNumber *index in [sc labelIndexes])
+        {
 			[labelsSet addObject:index];			
 			NSNumber *count = countDic[index];
-			if(count == nil)
+            
+			if (count == nil)
 				count = @0;
+            
 			countDic[index] = @([count intValue]+1);			
 		}
 	}
 	
-	for(NSNumber *index in labelsSet) {
+	for (NSNumber *index in labelsSet)
+    {
 		BOOL partial = [countDic[index] intValue] < total;
 		[[menu itemAtIndex:[index intValue]] setState:partial?NSMixedState:NSOnState];		
 	}
 	
 }
 
-+ (void)labelContextMenuAction:(id)sender controllers:(NSArray*)controllers
++ (void)labelContextMenuAction:(id)sender controllers:(NSArray *)controllers
 {
 	int state = [sender state] == NSOnState?NSOffState:NSOnState;
 	[sender setState:state];
+    
 	NSNumber *index = [NSNumber numberWithInteger:[sender tag]];
 	
 	for (id<ProjectLabelPersistent> c in controllers)
@@ -163,19 +178,22 @@ static NSMutableDictionary *labelAttributes = nil;
 
 #pragma mark -
 
-- (void)buildLabelColorsMenu:(NSMenu*)menu
+- (void)buildLabelColorsMenu:(NSMenu *)menu
 {
 	[menu removeAllItems];
 	
-	for(int c=0; c<MAX_COLOR; c++) {
+	for (int c = 0; c < MAX_COLOR; c++)
+    {
 		[menu addItem:[ProjectLabels createMenuItemForColor:c]];
 	}
 }
 
-- (void)buildLabelsMenu:(NSMenu*)menu target:(id)target action:(SEL)action
+- (void)buildLabelsMenu:(NSMenu *)menu target:(id)target action:(SEL)action
 {
 	unsigned index = 0;
-	for(NSDictionary *label in [self labels]) {
+    
+	for (NSDictionary *label in [self labels])
+    {
 		NSMenuItem *item = [ProjectLabels createMenuItemForColor:[label[KEY_COLOR] intValue]
 													  identifier:label[KEY_ID] 
 													 description:label[KEY_DESCRIPTION]];
@@ -186,46 +204,55 @@ static NSMutableDictionary *labelAttributes = nil;
 	}
 }
 
-- (NSImage*)createLabelImageForLabelIndex:(int)index
+- (NSImage *)createLabelImageForLabelIndex:(int)index
 {
 	NSDictionary *label = [self labels][index];
+    
 	return [ProjectLabels createLabelImageForColor:[label[KEY_COLOR] intValue]
-									identifier:label[KEY_ID]];
+                                        identifier:label[KEY_ID]];
 }
 
-- (int)labelIndexForIdentifier:(NSString*)identifier
+- (int)labelIndexForIdentifier:(NSString *)identifier
 {
 	unsigned index = 0;
-	for(NSDictionary *label in [self labels]) {
-		if([label[KEY_ID] isEqualToString:identifier])
+    
+	for (NSDictionary *label in [self labels])
+    {
+		if ([label[KEY_ID] isEqualToString:identifier])
 			return index;
 		
 		index++;		
 	}
+    
 	return -1;
 }
 
-- (NSString*)labelIdentifierForIndex:(int)index
+- (NSString *)labelIdentifierForIndex:(int)index
 {
 	NSMutableArray *labels = [self labels];
-	if(index < [labels count]) {
+    
+	if (index < [labels count])
+    {
 		return labels[index][KEY_ID];		
-	} else {
+	}
+    else
+    {
 		return nil;
 	}
 }
 
-- (NSArray*)labels
+- (NSArray *)labels
 {
 	return [[self.projectWC projectPreferences] labels];
 }
 
-- (NSMenu*)fileLabelsMenu
+- (NSMenu *)fileLabelsMenu
 {
 	NSMenu *menu = [[NSMenu alloc] initWithTitle:@"Labels"];
 	[self buildLabelsMenu:menu target:self action:@selector(labelContextMenuAction:)];
 	[ProjectLabels updateLabelsMenuForCurrentSelection:menu controllers:[self.projectWC selectedFileControllers]];
-	return menu;
+	
+    return menu;
 }
 
 - (IBAction)labelContextMenuAction:(id)sender

@@ -260,7 +260,7 @@ static id _shared = nil;
 
 #pragma mark -
 
-- (int)numberOfItemsInComboBoxCell:(id)aComboBox
+- (NSUInteger)numberOfItemsInComboBoxCell:(id)aComboBox
 {
 	return [[LanguageTool defaultLanguageIdentifiers] count];
 }

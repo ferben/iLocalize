@@ -6,7 +6,8 @@
 //  Copyright 2005 Arizona Software. All rights reserved.
 //
 
-@interface TreeNode : NSObject {
+@interface TreeNode : NSObject
+{
 	NSString		*mTitle;
 	BOOL			mIsLeaf;
 	BOOL			mIsRoot;
@@ -17,26 +18,26 @@
 
 @property (strong) id payload;
 
-+ (TreeNode*)rootNode;
-+ (TreeNode*)leafNode;
-+ (TreeNode*)node;
-+ (TreeNode*)nodeWithTitle:(NSString*)title;
++ (TreeNode *)rootNode;
++ (TreeNode *)leafNode;
++ (TreeNode *)node;
++ (TreeNode *)nodeWithTitle:(NSString *)title;
 
-- (void)setTitle:(NSString*)title;
-- (NSString*)title;
+- (void)setTitle:(NSString *)title;
+- (NSString *)title;
 
-- (int)numberOfNodes;
-- (void)addNode:(TreeNode*)node;
-- (void)addNodes:(NSArray*)nodes;
-- (void)deleteNode:(TreeNode*)node;
+- (NSUInteger)numberOfNodes;
+- (void)addNode:(TreeNode *)node;
+- (void)addNodes:(NSArray *)nodes;
+- (void)deleteNode:(TreeNode *)node;
 - (void)deleteAllNodes;
-- (TreeNode*)nodeAtIndex:(int)index;
-- (NSMutableArray*)nodes;
+- (TreeNode *)nodeAtIndex:(int)index;
+- (NSMutableArray *)nodes;
 
-- (TreeNode*)rootNode;
+- (TreeNode *)rootNode;
 
-- (void)setParentNode:(TreeNode*)parentNode;
-- (TreeNode*)parentNode;
+- (void)setParentNode:(TreeNode *)parentNode;
+- (TreeNode *)parentNode;
 
 - (void)setIsLeaf:(BOOL)leaf;
 - (BOOL)isLeaf;

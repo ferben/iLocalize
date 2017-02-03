@@ -735,64 +735,64 @@
 	return -1;
 }
 
-- (int)numberOfStrings
+- (NSUInteger)numberOfStrings
 {
-    return -1;
+    return 0;
 }
 
-- (int)numberOfTranslatedStrings
+- (NSUInteger)numberOfTranslatedStrings
 {
-	return -1;
+	return 0;
 }
 
-- (int)numberOfNonTranslatedStrings
+- (NSUInteger)numberOfNonTranslatedStrings
 {
-	return -1;
+	return 0;
 }
 
-- (int)numberOfToCheckStrings
+- (NSUInteger)numberOfToCheckStrings
 {
-	return -1;
+	return 0;
 }
 
-- (int)numberOfInvariantStrings
+- (NSUInteger)numberOfInvariantStrings
 {
-	return -1;
+	return 0;
 }
 
-- (int)numberOfBaseModifiedStrings
+- (NSUInteger)numberOfBaseModifiedStrings
 {
-	return -1;
+	return 0;
 }
 
-- (int)numberOfLockedStrings
+- (NSUInteger)numberOfLockedStrings
 {
-	return -1;
+	return 0;
 }
 
-- (int)numberOfAutoTranslatedStrings
+- (NSUInteger)numberOfAutoTranslatedStrings
 {
-	return -1;
+	return 0;
 }
 
-- (int)numberOfAutoInvariantStrings
+- (NSUInteger)numberOfAutoInvariantStrings
 {
-	return -1;
+	return 0;
 }
 
 #pragma mark -
 
-- (int)totalContentCount
+- (NSUInteger)totalContentCount
 {
-	return -1;
+	return 0;
 }
 
-- (int)filteredContentCount
+- (NSUInteger)filteredContentCount
 {
-	return -1;
+	return 0;
 }
 
-- (NSString*)contentInfo
+- (NSString *)contentInfo
 {
 	return @"";
 }

@@ -8,21 +8,22 @@
 
 #import "FMController.h"
 
-@interface FMControllerStrings : FMController {
+@interface FMControllerStrings : FMController
+{
 	NSMutableArray	*mStringControllers;
 	
 	NSMutableArray	*mCachedVisibleStringControllers;	// cache only
 	NSMutableDictionary *mCachedStringControllers; // cache only
 	
 	// Statistics (not saved)
-    int             mNumberOfStrings;
-    int             mNumberOfTranslatedStrings;
-	int				mNumberOfNonTranslatedStrings;
-	int				mNumberOfToCheckStrings;	
-	int				mNumberOfInvariantStrings;	
-	int				mNumberOfBaseModifiedStrings;
-    int             mNumberOfLockedStrings;
-	int				mNumberOfAutoTranslatedStrings;
+    NSUInteger   mNumberOfStrings;
+    NSUInteger   mNumberOfTranslatedStrings;
+	NSUInteger   mNumberOfNonTranslatedStrings;
+	NSUInteger   mNumberOfToCheckStrings;	
+	NSUInteger   mNumberOfInvariantStrings;	
+	NSUInteger   mNumberOfBaseModifiedStrings;
+    NSUInteger   mNumberOfLockedStrings;
+	NSUInteger   mNumberOfAutoTranslatedStrings;
 	int				mNumberOfAutoInvariantStrings;
 }
 @end

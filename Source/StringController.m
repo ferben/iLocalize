@@ -20,7 +20,7 @@
 #import "Explorer.h"
 
 @interface StringController (PrivateMethods)
-- (void)setAutomaticTranslation_:(NSString*)translation;
+- (void)setAutomaticTranslation_:(NSString *)translation;
 - (void)removeObserver;
 @end
 
@@ -59,37 +59,37 @@
 //					triggerChangeNotificationsForDependentKey:@"translation"];
 }
 
-+ (NSSet*)keyPathsForValuesAffectingSelfValue
++ (NSSet *)keyPathsForValuesAffectingSelfValue
 {
 	return [NSSet setWithObjects:@"base", @"translation", @"baseComment", @"translationComment", @"lock", @"status", @"labelIndexes", nil];
 }
 
-+ (NSSet*)keyPathsForValuesAffectingBaseInfo
++ (NSSet *)keyPathsForValuesAffectingBaseInfo
 {
 	return [NSSet setWithObjects:@"base", nil];
 }
 
-+ (NSSet*)keyPathsForValuesAffectingTranslationInfo
++ (NSSet *)keyPathsForValuesAffectingTranslationInfo
 {
 	return [NSSet setWithObjects:@"translation", nil];
 }
 
-+ (NSSet*)keyPathsForValuesAffectingBaseCommentInfo
++ (NSSet *)keyPathsForValuesAffectingBaseCommentInfo
 {
 	return [NSSet setWithObjects:@"baseComment", nil];
 }
 
-+ (NSSet*)keyPathsForValuesAffectingTranslationCommentInfo
++ (NSSet *)keyPathsForValuesAffectingTranslationCommentInfo
 {
 	return [NSSet setWithObjects:@"translationComment", nil];
 }
 
-+ (NSSet*)keyPathsForValuesAffectingEditable
++ (NSSet *)keyPathsForValuesAffectingEditable
 {
 	return [NSSet setWithObjects:@"lock", nil];
 }
 
-+ (NSSet*)keyPathsForValuesAffectingBaseEditable
++ (NSSet *)keyPathsForValuesAffectingBaseEditable
 {
 	return [NSSet setWithObjects:@"lock", nil];
 }
@@ -99,11 +99,12 @@
 // passed in the TableViewCustom willDisplay method (using the custom delegate) but when a comment is modified in the interface,
 // the only way to update the custom cell is to bind to the base/translation in order to the cell to be automatically refreshed
 // by the binding mechanism.
-+ (NSSet*)keyPathsForValuesAffectingBase
++ (NSSet *)keyPathsForValuesAffectingBase
 {
 	return [NSSet setWithObjects:@"baseComment", nil];
 }
-+ (NSSet*)keyPathsForValuesAffectingTranslation
+
++ (NSSet *)keyPathsForValuesAffectingTranslation
 {
 	return [NSSet setWithObjects:@"translationComment", nil];
 }
@@ -112,12 +113,14 @@
 
 - (id)init
 {
-	if((self = [super init])) {
+	if ((self = [super init]))
+    {
 		mStatusDescription = nil;
 		mLabelIndexes = -1;
 		baseStringController = nil;
 	}
-	return self;
+	
+    return self;
 }
 
 
@@ -125,7 +128,7 @@
 
 - (void)copyBaseToTranslation
 {
-	if(![[self translation] isEqualToString:[self base]])
+	if (![[self translation] isEqualToString:[self base]])
 		[self setTranslation:[self base]];
 	
 	[self approve];
@@ -193,11 +196,12 @@
 
 - (void)setStatus:(unsigned char)status
 {
-	if([self lock])
+	if ([self lock])
 		return;
 
-	if([self.stringModel status] != status) {
-//		[(StringController*)[[self undoManager] prepareWithInvocationTarget:self] setStatus:[self status]];
+	if ([self.stringModel status] != status)
+    {
+        // [(StringController *)[[self undoManager] prepareWithInvocationTarget:self] setStatus:[self status]];
 
 		[self.stringModel setStatus:status];
 	}
@@ -208,7 +212,7 @@
 	return [self.stringModel status];
 }
 
-- (void)addStatusDescription:(NSString*)description forImage:(NSImage*)image
+- (void)addStatusDescription:(NSString *)description forImage:(NSImage *)image
 {
 	NSMutableDictionary *dic = [NSMutableDictionary dictionary];
 	dic[@"width"] = [NSNumber numberWithInt:[image size].width];
@@ -216,22 +220,26 @@
 	[mStatusDescription addObject:dic];
 }
 
-- (NSString*)statusDescriptionAtPosition:(NSPoint)p
+- (NSString *)statusDescriptionAtPosition:(NSPoint)p
 {
-	if(!NSPointInRect(p, mStatusImageRect))
+	if (!NSPointInRect(p, mStatusImageRect))
 		return nil;
 	
 	NSDictionary *info;
 	int width = 0;
-	for(info in mStatusDescription) {
+    
+	for (info in mStatusDescription)
+    {
 		width += [info[@"width"] intValue];
-		if(p.x - mStatusImageRect.origin.x <= width)
+	
+        if (p.x - mStatusImageRect.origin.x <= width)
 			return info[@"description"];
 	}
+    
 	return nil;
 }
 
-- (NSString*)statusDescription
+- (NSString *)statusDescription
 {
 	NSMutableString *text = [NSMutableString string];
     for(NSDictionary *info in mStatusDescription) {
@@ -731,32 +739,36 @@
 
 #pragma mark -
 
-- (NSString*)infoForLanguage:(NSString*)language length:(int)length
+- (NSString *)infoForLanguage:(NSString *)language length:(NSUInteger)length
 {
 	NSString *displayLanguage = [language displayLanguageName];
-	if(length <= 1) {
+    
+	if (length <= 1)
+    {
 		return [NSString stringWithFormat:NSLocalizedString(@"%@ (%d character)", nil), displayLanguage, length];
-	} else {
+	}
+    else
+    {
 		return [NSString stringWithFormat:NSLocalizedString(@"%@ (%d characters)", nil), displayLanguage, length];		
 	}
 }
 
-- (NSString*)baseInfo
+- (NSString *)baseInfo
 {
 	return [self infoForLanguage:[[self parent] baseLanguage] length:[[self base] length]];
 }
 
-- (NSString*)baseCommentInfo
+- (NSString *)baseCommentInfo
 {
 	return [self infoForLanguage:[[self parent] baseLanguage] length:[[self baseComment] length]];
 }
 
-- (NSString*)translationInfo
+- (NSString *)translationInfo
 {
 	return [self infoForLanguage:[[self parent] language] length:[[self translation] length]];
 }
 
-- (NSString*)translationCommentInfo
+- (NSString *)translationCommentInfo
 {
 	return [self infoForLanguage:[[self parent] language] length:[[self translationComment] length]];
 }
@@ -765,7 +777,8 @@
 
 - (void)setLock:(BOOL)lock
 {
-	if([self.stringModel lock] != lock) {
+	if ([self.stringModel lock] != lock)
+    {
 		[self beginDirty];
 		[self markDirty];
 		[self.stringModel setLock:lock];
@@ -780,9 +793,12 @@
 
 - (BOOL)editable
 {
-    if([self isBaseString]) {
+    if ([self isBaseString])
+    {
         return [self baseEditable];
-    } else {
+    }
+    else
+    {
         return ![self lock];        
     }
 }
@@ -799,12 +815,12 @@
 
 #pragma mark -
 
-- (NSString*)pKey
+- (NSString *)pKey
 {
 	return [self key];
 }
 
-- (StringController*)pBase
+- (StringController *)pBase
 {
 	return [self baseStringController];
 }
@@ -814,7 +830,7 @@
 	return [self parent];
 }
 
-- (NSArray*)pString
+- (NSArray *)pString
 {
 	return @[self];
 }
@@ -822,43 +838,47 @@
 - (id)pStatus
 {
 	NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-	dic[@"toTranslate"] = @([self statusToTranslate]);
+	
+    dic[@"toTranslate"] = @([self statusToTranslate]);
 	dic[@"translated"] = [NSNumber numberWithBool:![self statusToTranslate]];
 	dic[@"toCheck"] = @([self statusToCheck]);
 	dic[@"invariant"] = @([self statusInvariant]);
 	dic[@"baseModified"] = @([self statusBaseModified]);
 	dic[@"warning"] = @([self statusWarning]);
 	dic[@"locked"] = @([self lock]);
+    
 	return dic;
 }
 
-- (NSString*)pTranslation
+- (NSString *)pTranslation
 {
 	return [self translation];
 }
 
-- (NSString*)pComment
+- (NSString *)pComment
 {
 	return [self translationComment];
 }
 
-- (NSString*)pLabel
+- (NSString *)pLabel
 {
-	if(mLabelString == nil) {
+	if (mLabelString == nil)
+    {
 		[self updateLabelIndexes];
 	}
-	return mLabelString;
+	
+    return mLabelString;
 }
 
 #pragma mark -
 
-- (void)debugSetStatus:(NSNumber*)status
+- (void)debugSetStatus:(NSNumber *)status
 {
 	int bit = [status intValue];
 	STATUS_BIT_SET(bit);
 }
 
-- (void)debugClearStatus:(NSNumber*)status
+- (void)debugClearStatus:(NSNumber *)status
 {
 	int bit = [status intValue];
 	STATUS_BIT_CLEAR(bit);

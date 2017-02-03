@@ -131,7 +131,7 @@ static NSString*	ATTRIBUTE_AUXILIARY	= @"ATTRIBUTE_AUXILIARY";
 		return NO;
 }
 
-- (void)setEOLType:(int)type
+- (void)setEOLType:(NSUInteger)type
 {
 	mAttributes[ATTRIBUTE_EOL] = @(type);
 }
@@ -141,7 +141,7 @@ static NSString*	ATTRIBUTE_AUXILIARY	= @"ATTRIBUTE_AUXILIARY";
 	return [mAttributes[ATTRIBUTE_EOL] intValue];
 }
 
-- (void)setFormat:(int)format
+- (void)setFormat:(NSUInteger)format
 {
 	mAttributes[ATTRIBUTE_FORMAT] = @(format);	
 }

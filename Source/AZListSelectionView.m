@@ -13,12 +13,12 @@
 
 @synthesize elements;
 
-+ (NSString*)selectedKey
++ (NSString *)selectedKey
 {
 	return @"_selected";
 }
 
-+ (NSString*)imageKey
++ (NSString *)imageKey
 {
 	return @"_image";
 }
@@ -44,47 +44,67 @@
 - (NSInteger)rootState
 {
 	NSInteger state = NSOffState;
-	if(elements.count > 0) {
+    
+	if (elements.count > 0)
+    {
 		state = [self stateOfElement:elements[0]];
-		for(int index=1; index<elements.count; index++) {
-			if(state != [self stateOfElement:elements[index]]) {
+        
+		for (NSUInteger index = 1; index < elements.count; index++)
+        {
+			if (state != [self stateOfElement:elements[index]])
+            {
 				state = NSMixedState;
 				break;
 			}
 		}		
 	}
-	return state;
+
+    return state;
 }
 
-- (NSArray*)selectedElements
+- (NSArray *)selectedElements
 {
 	NSMutableArray *array = [NSMutableArray array];
-	for(id<AZListSelectionViewItem> dic in elements) {
-		if([[dic objectForKey:[AZListSelectionView selectedKey]] boolValue]) {
+    
+	for (id<AZListSelectionViewItem> dic in elements)
+    {
+		if ([[dic objectForKey:[AZListSelectionView selectedKey]] boolValue])
+        {
 			[array addObject:dic];
 		}
 	}
-	return array;
+
+    return array;
 }
 
 - (NSInteger)outlineView:(NSOutlineView *)outlineView numberOfChildrenOfItem:(id)item
 {
-	if(item == nil) {
+	if (item == nil)
+    {
 		return 1;
-	} else if ([item isKindOfClass:[AZListSelectionView class]]) {
+	}
+    else if ([item isKindOfClass:[AZListSelectionView class]])
+    {
 		return elements.count;
-	} else {
+	}
+    else
+    {
 		return 0;
 	}
 }
 
 - (id)outlineView:(NSOutlineView *)outlineView child:(NSInteger)index ofItem:(id)item
 {
-	if(item == nil) {
+	if (item == nil)
+    {
 		return self;
-	} else if([item isKindOfClass:[AZListSelectionView class]]) {
+	}
+    else if ([item isKindOfClass:[AZListSelectionView class]])
+    {
 		return elements[index];
-	} else {
+	}
+    else
+    {
 		return nil;
 	}
 }
@@ -121,14 +141,20 @@
 {
 	NSInteger state = [object intValue];
 	BOOL selected = state == NSOnState || state == NSMixedState;
-	if([item isKindOfClass:[AZListSelectionView class]]) {
-		for(id<AZListSelectionViewItem> element in elements) {
+
+    
+    if ([item isKindOfClass:[AZListSelectionView class]]) {
+		for (id<AZListSelectionViewItem> element in elements)
+        {
 			[self setElement:element selection:selected];			
 		}
-	} else {
+	}
+    else
+    {
 		[self setElement:item selection:selected];
 	}	
-	[self.delegate elementsSelectionChanged:[self selectedElements].count == 0];
+	
+    [self.delegate elementsSelectionChanged:[self selectedElements].count == 0];
 	[self reloadData];
 }
 
@@ -139,14 +165,21 @@
 
 - (void)outlineView:(NSOutlineView *)outlineView willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn item:(id)item
 {
-	int colIndex = [[outlineView tableColumns] indexOfObject:tableColumn];
-	if(colIndex == 0) {
-		if([item isKindOfClass:[AZListSelectionView class]]) {
+	NSUInteger colIndex = [[outlineView tableColumns] indexOfObject:tableColumn];
+    
+	if (colIndex == 0)
+    {
+		if ([item isKindOfClass:[AZListSelectionView class]])
+        {
 			[cell setTitle:NSLocalizedString(@"All", @"All Selection Node")];
-		} else {
+		}
+        else
+        {
 			[cell setTitle:item[[tableColumn identifier]]];
 			id image = item[[AZListSelectionView imageKey]];
-			if([image isKindOfClass:[NSImage class]]) {
+            
+			if ([image isKindOfClass:[NSImage class]])
+            {
 				[cell setImage:image];				
 			}
 		}		

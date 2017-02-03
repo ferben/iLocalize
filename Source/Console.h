@@ -28,7 +28,7 @@
 	int           mWarningsCount;
 	int           mErrorsCount;
 	
-	int           mIndexMark;
+	NSUInteger    mIndexMark;
 }
 
 - (void)removeAllItems;
@@ -58,7 +58,7 @@
 - (BOOL)hasWarningsOrErrors;
 
 - (void)mark;
-- (int)indexMark;
+- (NSUInteger)indexMark;
 
 // Returns an array of ConsoleItem since the last time the console was marker using [self mark].
 - (NSArray *)allItemsSinceMark;

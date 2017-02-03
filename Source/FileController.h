@@ -18,35 +18,36 @@
 
 @class FMModule;
 
-@interface FileController : AbstractController <ProjectLabelPersistent, FileControllerProtocol> {
+@interface FileController : AbstractController <ProjectLabelPersistent, FileControllerProtocol>
+{
 	FileModel		*mBaseFileModel;
 	FileModel		*mFileModel;	
 	
 	// Variables (used for performance)
-	FMModule		*mFileModule;	// associated file module (if any exists for this type of file)
+	FMModule		*mFileModule;           // associated file module (if any exists for this type of file)
 	NSString		*mSmartPath;
 	
 	// Temporary (display only)
-	NSMutableArray	*mStatusDescription;	// description of each status icon used by the tooltips
-	NSRect			mStatusImageRect;		// last rect used to display the status icons (currently only in project window)
-	BOOL			mMarkUsed;	// used to indicate the file controller owning the selected string controller(s)
-	NSMutableSet	*mStringsLabelIndexes; // set of all labels used by the strings owned by this file controller
+	NSMutableArray	*mStatusDescription;    // description of each status icon used by the tooltips
+	NSRect			mStatusImageRect;       // last rect used to display the status icons (currently only in project window)
+	BOOL			mMarkUsed;              // used to indicate the file controller owning the selected string controller(s)
+	NSMutableSet	*mStringsLabelIndexes;  // set of all labels used by the strings owned by this file controller
 }
 
 - (void)clearCache; // for subclass only
 
-- (void)setBaseFileModel:(FileModel*)model;
-- (FileModel*)baseFileModel;
+- (void)setBaseFileModel:(FileModel *)model;
+- (FileModel *)baseFileModel;
 
-- (void)setFileModel:(FileModel*)model;
-- (FileModel*)fileModel;
+- (void)setFileModel:(FileModel *)model;
+- (FileModel *)fileModel;
 
 - (void)markUsed;
 - (void)unmarkUsed;
 - (BOOL)isUsed;
 
-- (void)setAuxiliaryData:(id)data forKey:(NSString*)key;
-- (id)auxiliaryDataForKey:(NSString*)key;
+- (void)setAuxiliaryData:(id)data forKey:(NSString *)key;
+- (id)auxiliaryDataForKey:(NSString *)key;
 
 - (void)setStatusSynchDone;
 - (BOOL)statusSynchDone;
@@ -77,9 +78,9 @@
 - (void)setStatus:(int)status;
 - (int)status;
 - (void)setStatusImageRect:(NSRect)r;
-- (NSImage*)statusImage;
-- (NSString*)statusDescriptionAtPosition:(NSPoint)p;
-- (NSString*)statusDescription;
+- (NSImage *)statusImage;
+- (NSString *)statusDescriptionAtPosition:(NSPoint)p;
+- (NSString *)statusDescription;
 
 - (void)approve;
 - (void)clearUpdatedStatus;
@@ -94,28 +95,28 @@
 - (BOOL)displayProgress;
 
 - (BOOL)isBaseFileController;
-- (FileController*)baseFileController;
+- (FileController *)baseFileController;
 
-- (NSString*)baseLanguage;
-- (NSString*)language;
+- (NSString *)baseLanguage;
+- (NSString *)language;
 
-- (void)setModificationDate:(NSDate*)date;
+- (void)setModificationDate:(NSDate *)date;
 
-- (NSString*)filename;
-- (NSString*)sortableFilename;
-- (NSString*)smartPathName;
-- (NSString*)smartPath;
+- (NSString *)filename;
+- (NSString *)sortableFilename;
+- (NSString *)smartPathName;
+- (NSString *)smartPath;
 
-- (void)setRelativeFilePath:(NSString*)path;
-- (NSString*)relativeFilePath;
+- (void)setRelativeFilePath:(NSString *)path;
+- (NSString *)relativeFilePath;
 
-- (NSString*)relativeBaseFilePath;
-- (NSString*)absoluteFilePath;
+- (NSString *)relativeBaseFilePath;
+- (NSString *)absoluteFilePath;
 
-- (NSString*)absoluteBaseFilePath;
+- (NSString *)absoluteBaseFilePath;
 
 //- (int)type;
-- (NSImage*)typeImage;
+- (NSImage *)typeImage;
 
 - (void)setIgnore:(BOOL)flag;
 - (BOOL)ignore;
@@ -126,12 +127,12 @@
 - (void)setHasEncoding:(BOOL)flag;
 - (BOOL)hasEncoding;
 
-- (void)setEncoding:(StringEncoding*)encoding;
-- (StringEncoding*)encoding;
-- (NSString*)encodingName;
+- (void)setEncoding:(StringEncoding *)encoding;
+- (StringEncoding *)encoding;
+- (NSString *)encodingName;
 - (BOOL)supportsEncoding;
 
-- (NSSet*)stringsLabelIndexes;
+- (NSSet *)stringsLabelIndexes;
 - (void)stringLabelsDidChange;
 
 - (float)percentCompleted;
@@ -139,44 +140,44 @@
 - (float)percentAutoTranslated;
 - (float)percentToTranslate;
 
-- (int)numberOfStrings;
-- (int)numberOfTranslatedStrings;
-- (int)numberOfNonTranslatedStrings;
-- (int)numberOfToCheckStrings;
-- (int)numberOfInvariantStrings;
-- (int)numberOfBaseModifiedStrings;
-- (int)numberOfLockedStrings;
-- (int)numberOfAutoTranslatedStrings;
-- (int)numberOfAutoInvariantStrings;
+- (NSUInteger)numberOfStrings;
+- (NSUInteger)numberOfTranslatedStrings;
+- (NSUInteger)numberOfNonTranslatedStrings;
+- (NSUInteger)numberOfToCheckStrings;
+- (NSUInteger)numberOfInvariantStrings;
+- (NSUInteger)numberOfBaseModifiedStrings;
+- (NSUInteger)numberOfLockedStrings;
+- (NSUInteger)numberOfAutoTranslatedStrings;
+- (NSUInteger)numberOfAutoInvariantStrings;
 
-- (int)totalContentCount;
-- (int)filteredContentCount;
-- (NSString*)contentInfo;
+- (NSUInteger)totalContentCount;
+- (NSUInteger)filteredContentCount;
+- (NSString *)contentInfo;
 
 - (void)setBaseModelContent:(id)content;
 - (id)baseModelContent;
-- (StringsContentModel*)baseModelStringsContent;
+- (StringsContentModel *)baseModelStringsContent;
 - (BOOL)hasBaseModelContent;
 
 - (void)setModelContent:(id)content;
 - (id)modelContent;
-- (StringsContentModel*)modelStringsContent;
+- (StringsContentModel *)modelStringsContent;
 - (BOOL)hasModelContent;
 
 - (void)stringControllersDidChange;
 - (void)filteredStringControllersDidChange;
-- (void)baseStringModelDidChange:(StringModel*)model;
+- (void)baseStringModelDidChange:(StringModel *)model;
 
 - (id)stringControllers;
-- (id)stringControllerForKey:(NSString*)key;
-- (id)baseStringController:(StringController*)sc;
-- (id)stringControllerMatchingBaseStringController:(StringController*)bsc;
+- (id)stringControllerForKey:(NSString *)key;
+- (id)baseStringController:(StringController *)sc;
+- (id)stringControllerMatchingBaseStringController:(StringController *)bsc;
 
 - (id)visibleStringControllers;
 - (id)filteredStringControllers;
 
-- (NSString*)pFileLabel;
+- (NSString *)pFileLabel;
 - (id)pString;
-- (NSString*)pFileName;
+- (NSString *)pFileName;
 
 @end

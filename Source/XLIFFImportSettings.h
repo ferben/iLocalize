@@ -6,7 +6,8 @@
 //  Copyright 2011 Arizona Software. All rights reserved.
 //
 
-@interface XLIFFImportSettings : NSObject {
+@interface XLIFFImportSettings : NSObject
+{
 	// XLIFF file to import
 	NSString *file;
 	
@@ -25,7 +26,7 @@
 @property (strong) NSArray *fileElements;
 @property (nonatomic) BOOL useResnameInsteadOfSource;
 
-- (void)setData:(NSDictionary*)data;
-- (NSDictionary*)data;
+- (void)setData:(NSDictionary *)data;
+- (NSDictionary *)data;
 
 @end

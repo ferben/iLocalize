@@ -78,7 +78,7 @@
 		}
 		
 		NSString *attributeContent;		
-		unsigned startLocation = [mScanner scanLocation];
+		NSUInteger startLocation = [mScanner scanLocation];
         
         // check end of attribute string
         if (![mScanner scanUpToCharactersFromSet:mQuotesSet intoString:&attributeContent])
@@ -90,12 +90,12 @@
 			return NO;
 		}
 		
-        unsigned endLocation = [mScanner scanLocation];
+        NSUInteger endLocation = [mScanner scanLocation];
 		[mScanner scanCharactersFromSet:mQuotesSet intoString:nil];
 		
 		NSMutableDictionary *info = [NSMutableDictionary dictionary];
-		info[INFO_START_LOCATION] = [NSNumber numberWithInt:startLocation];
-		info[INFO_END_LOCATION] = [NSNumber numberWithInt:endLocation];
+        info[INFO_START_LOCATION] = [NSNumber numberWithInteger:startLocation];
+		info[INFO_END_LOCATION] = [NSNumber numberWithInteger:endLocation];
 		[mDelegate parser:self element:element attributeName:attributeName content:attributeContent info:info];
 	}
     

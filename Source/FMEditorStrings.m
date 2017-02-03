@@ -71,7 +71,8 @@
 
 - (id)init
 {
-	if((self = [super init])) {
+	if ((self = [super init]))
+    {
 		mIgnoreCase = NO;
 		
 		mSelectedStringsRowIndexes = NULL;
@@ -116,7 +117,8 @@
 		[[NSUserDefaults standardUserDefaults] addObserver:self forKeyPath:@"autoPropagateTranslationMode" options:0 context:nil];
 		[[NSUserDefaults standardUserDefaults] addObserver:self forKeyPath:@"baseLanguageReadOnly" options:0 context:nil];
 	}
-	return self;
+	
+    return self;
 }
 
 - (void)dealloc
@@ -132,20 +134,20 @@
 	[[PasteboardProvider shared] removeOwner:self];
 }
 
-- (NSString*)nibname
+- (NSString *)nibname
 {
 	return @"FMEditorStrings";
 }
 
-- (NSView*)view
+- (NSView *)view
 {
-	if([[mStringsController content] count] == 0)
+	if ([[mStringsController content] count] == 0)
 		return mEmptyView;
 	else
 		return [super view];
 }
 
-- (NSArray*)keyViews
+- (NSArray *)keyViews
 {
     return @[mBaseStringsTableView, mLocalizedStringsTableView];
 }
@@ -165,13 +167,17 @@
 	return YES;
 }
 
-- (void)projectControllerDidBecomeDirty:(NSNotification*)notif
+- (void)projectControllerDidBecomeDirty:(NSNotification *)notif
 {
 	DirtyContext *context = [notif userInfo][@"context"];
-	if(context.fc && [mFileControllers containsObject:context.fc]) {
+    
+	if (context.fc && [mFileControllers containsObject:context.fc])
+    {
 		// Only refresh if the dirty concerns the current filter controller
-		int index = -1;
-		if(context.sc) {
+		NSUInteger index = 0;
+
+        if (context.sc)
+        {
 			index = [[mStringsController arrangedObjects] indexOfObject:context.sc];
 		}
 		
@@ -180,37 +186,46 @@
 	}
 }
 
-- (void)stringsFilterDidChange:(NSNotification*)notif
+- (void)stringsFilterDidChange:(NSNotification *)notif
 {
 	[self refreshStringControllers];
 }
 
-- (void)quoteSubstitutionDidChange:(NSNotification*)notif
+- (void)quoteSubstitutionDidChange:(NSNotification *)notif
 {
     [self cacheQuoteSubstitution];
 }
 
-- (void)editorFontDidChange:(NSNotification*)notif
+- (void)editorFontDidChange:(NSNotification *)notif
 {
 
 }
 
-- (void)tableContentSizeDidChange:(NSNotification*)notif
+- (void)tableContentSizeDidChange:(NSNotification *)notif
 {
 	[self setNeedsDisplayToAllTableView];	
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-	if([keyPath isEqualToString:@"showKeyColumn"]) {
+	if ([keyPath isEqualToString:@"showKeyColumn"])
+    {
 		[self toggleKeyColumn];
-	} else if([keyPath isEqualToString:@"showTextZone"]) {
+	}
+    else if([keyPath isEqualToString:@"showTextZone"])
+    {
 		[self toggleTextZone];
-	} else if([keyPath isEqualToString:@"autoPropagateTranslationMode"]) {
+	}
+    else if([keyPath isEqualToString:@"autoPropagateTranslationMode"])
+    {
 		[self updatePropagationMode];
-	} else if([keyPath isEqualToString:@"baseLanguageReadOnly"]) {
+	}
+    else if([keyPath isEqualToString:@"baseLanguageReadOnly"])
+    {
 		[self ensureBindingTextView];
-	} else if([keyPath isEqualToString:@"showInvisibleCharacters"]) {
+	}
+    else if([keyPath isEqualToString:@"showInvisibleCharacters"])
+    {
 		[self updateTextZone];
 	}    
 }
@@ -236,9 +251,13 @@
 	[localizedTextView setFont:[NSFont fontWithName:@"Lucida Grande" size:13]];
 	
 	NSString *keypath;
-	if([baseCommentButton state] == NSOnState) {
+	
+    if ([baseCommentButton state] == NSOnState)
+    {
 		keypath = @"selection.baseComment";
-	} else {
+	}
+    else
+    {
 		keypath = @"selection.base";
 	}
 	
@@ -247,9 +266,12 @@
 		   withKeyPath:keypath
 			   options:@{NSContinuouslyUpdatesValueBindingOption: @YES}];
 	
-	if([localizedCommentButton state] == NSOnState) {
+	if ([localizedCommentButton state] == NSOnState)
+    {
 		keypath = @"selection.baseComment";
-	} else {
+	}
+    else
+    {
 		keypath = @"selection.base";
 	}
 	
@@ -258,9 +280,12 @@
 		   withKeyPath:keypath
 			   options:@{NSContinuouslyUpdatesValueBindingOption: @YES}];
 	
-	if([localizedCommentButton state] == NSOnState) {
+	if ([localizedCommentButton state] == NSOnState)
+    {
 		keypath = @"selection.translationComment";
-	} else {
+	}
+    else
+    {
 		keypath = @"selection.translation";
 	}
 	
@@ -269,9 +294,12 @@
 				withKeyPath:keypath
 					options:@{NSContinuouslyUpdatesValueBindingOption: @YES}];
 		
-	if([baseCommentButton state] == NSOnState) {
+	if ([baseCommentButton state] == NSOnState)
+    {
 		keypath = @"selection.baseCommentInfo";
-	} else {
+	}
+    else
+    {
 		keypath = @"selection.baseInfo";
 	}
 	
@@ -280,9 +308,12 @@
 			withKeyPath:keypath
 				options:NULL];
 	
-	if([localizedCommentButton state] == NSOnState) {
+	if ([localizedCommentButton state] == NSOnState)
+    {
 		keypath = @"selection.baseCommentInfo";
-	} else {
+	}
+    else
+    {
 		keypath = @"selection.baseInfo";
 	}
 	
@@ -291,9 +322,12 @@
 			withKeyPath:keypath
 				options:NULL];
 	
-	if([localizedCommentButton state] == NSOnState) {
+	if ([localizedCommentButton state] == NSOnState)
+    {
 		keypath = @"selection.translationCommentInfo";
-	} else {
+	}
+    else
+    {
 		keypath = @"selection.translationInfo";
 	}
 	
@@ -334,7 +368,9 @@
 	
 	NSEnumerator *enumerator = [[mStringsController selectedObjects] objectEnumerator];
 	StringController *sc;
-	while((sc = [enumerator nextObject])) {
+	
+    while ((sc = [enumerator nextObject]))
+    {
 		FileController *fc = [sc parent];
 		[fc markUsed];
 	}
@@ -343,11 +379,14 @@
 - (void)refreshStringControllers
 {
 	NSMutableArray *array = [NSMutableArray array];
-	for(FileController *fc in mFileControllers) {
+	
+    for (FileController *fc in mFileControllers)
+    {
 		[fc clearCache];
 		[array addObjectsFromArray:[fc filteredStringControllers]];		
 	}
-	[mStringsController setContent:array];
+	
+    [mStringsController setContent:array];
 //	[mStringsController setFilterPredicate:[[[self projectProvider] projectWC] currentFilterPredicate]];
 
 	[mBaseStringsTableView rowsHeightChanged];
@@ -361,7 +400,7 @@
 														object:[mStringsController selectedObjects]];
 }
 
-- (void)setFileControllers:(NSArray*)fcs
+- (void)setFileControllers:(NSArray *)fcs
 {
 	[super setFileControllers:fcs];
     [self cacheQuoteSubstitution];
@@ -373,42 +412,50 @@
 	[localizedTextView setLanguage:[self localizedLanguage]];
 }
 
-- (void)exportFile:(NSString*)sourcePath toStringsFile:(NSString*)targetPath
+- (void)exportFile:(NSString *)sourcePath toStringsFile:(NSString *)targetPath
 {
-	if([sourcePath isPathStrings]) {
+	if ([sourcePath isPathStrings])
+    {
 		// copy the file (no conversion needed)
 		[[FileTool shared] copySourceFile:sourcePath toFile:targetPath console:[self console]];
-	} else {
+	}
+    else
+    {
 		// convert nib to strings
 		NibEngine *nibEngine = [NibEngine engineWithConsole:[self console]];
 		id models = [nibEngine parseStringModelsOfNibFile:sourcePath];
 		
 		StringsEngine *engine = [StringsEngine engineWithConsole:[self console]];
 		NSString *encodedStrings = [engine encodeStringModels:models baseStringModels:nil
-													skipEmpty:NO format:STRINGS_FORMAT_APPLE_STRINGS
+                                                    skipEmpty:NO format:STRINGS_FORMAT_APPLE_STRINGS
 													 encoding:ENCODING_UNICODE];
 		[encodedStrings writeToFile:targetPath atomically:YES encoding:NSUnicodeStringEncoding error:nil];
 	}
 }
 
-- (void)translateUsingStringsFile:(NSString*)file
+- (void)translateUsingStringsFile:(NSString *)file
 {
 	BOOL translateIfDifferentFromBase = [[NSUserDefaults standardUserDefaults] boolForKey:@"externalTranslateOnlyIfDifferentFromBase"];
 	
 	StringsEngine *engine = [StringsEngine engineWithConsole:[self console]];
 	StringsContentModel *stringModels = [engine parseStringModelsOfStringsFile:file];
-	if([stringModels numberOfStrings]) {
+    
+	if ([stringModels numberOfStrings])
+    {
 		NSEnumerator *enumerator = [[mStringsController content] objectEnumerator];
 		StringController *sc;
-		while((sc = [enumerator nextObject])) {
+	
+        while ((sc = [enumerator nextObject]))
+        {
 			NSString *translation = [[stringModels stringModelForKey:[sc key]] value];
-			if(!translation)
+		
+            if (!translation)
 				continue;
 			
-			if([[sc translation] isEqualToString:translation])
+			if ([[sc translation] isEqualToString:translation])
 				continue;
 			
-			if(!translateIfDifferentFromBase || (translateIfDifferentFromBase && ![[sc base] isEqualToString:translation])) {
+			if (!translateIfDifferentFromBase || (translateIfDifferentFromBase && ![[sc base] isEqualToString:translation])) {
 				[sc setAutomaticTranslation:translation];
 			}
 		}		
@@ -429,12 +476,14 @@
 	id visibleRectValue = [[self stackState] popObject];	
 	id indexes = [[self stackState] popObject];
 	
-	if(indexes) {
+	if (indexes)
+    {
 		[tv selectRowIndexes:indexes byExtendingSelection:NO];
 		[tv scrollRowToVisible:[tv selectedRow]];
 	}
 	
-	if(visibleRectValue) {
+	if (visibleRectValue)
+    {
 		NSRect r = [visibleRectValue rectValue];		
 		[tv scrollPoint:r.origin];
 	}	
@@ -465,14 +514,14 @@
 
 #pragma mark -
 
-- (NSButton*)newToolButtonWithTitle:(NSString*)title action:(SEL)action
+- (NSButton *)newToolButtonWithTitle:(NSString *)title action:(SEL)action
 {
 	NSFont *font = [NSFont controlContentFontOfSize:[NSFont systemFontSizeForControlSize:NSMiniControlSize]];
 	NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
 	attributes[NSFontAttributeName] = font;		
 
 	NSSize size = [title sizeWithAttributes:attributes];
-	NSButton *button = [[NSButton alloc] initWithFrame:NSMakeRect(0, 0, (int)size.width+10, 23)];
+	NSButton *button = [[NSButton alloc] initWithFrame:NSMakeRect(0, 0, (int)size.width + 10, 23)];
 	[button setTitle:title];
 	[button setTarget:self];
 	[button setAction:action];
@@ -485,7 +534,7 @@
 	return button;
 }
 
-- (NSScrollView*)newScrolledTextView:(NSRect)frame
+- (NSScrollView *)newScrolledTextView:(NSRect)frame
 {
 	NSScrollView *sv = [[NSScrollView alloc] initWithFrame:frame];
 	[sv setBorderType:NSNoBorder];
@@ -512,7 +561,7 @@
 	return sv;
 }
 
-- (NSTextField*)newLabelField:(NSRect)frame
+- (NSTextField *)newLabelField:(NSRect)frame
 {
 	NSFont *font = [NSFont controlContentFontOfSize:[NSFont systemFontSizeForControlSize:NSMiniControlSize]];
 	
@@ -538,12 +587,12 @@ static int toolHeight = 23;
 {	
 	NSRect editorViewFrame = NSMakeRect(0, 0, 100, 100);
 	baseEditorView = [[AZClearView alloc] initWithFrame:editorViewFrame];
-	baseEditorView.yLine = toolHeight-3;
+	baseEditorView.yLine = toolHeight - 3;
 	[baseEditorView setAutoresizingMask:NSViewHeightSizable|NSViewWidthSizable];
 	
 	// Lock button
 	baseLockButton = [self newToolButtonWithTitle:@"" action:@selector(toggleLock:)];
-	[baseLockButton setFrameOrigin:NSMakePoint(-1, editorViewFrame.size.height-toolHeight+2)];
+	[baseLockButton setFrameOrigin:NSMakePoint(-1, editorViewFrame.size.height - toolHeight + 2)];
 	[baseLockButton setFrameSize:NSMakeSize(27, toolHeight)];
 	[baseLockButton setImage:[NSImage imageNamed:NSImageNameLockLockedTemplate]];
 	[[baseLockButton cell] accessibilitySetOverrideValue:NSLocalizedString(@"Toggle string lock", @"Lock Button Accessibility Title") forAttribute:NSAccessibilityTitleAttribute];
@@ -585,7 +634,7 @@ static int toolHeight = 23;
 	
 	// Lock button
 	localizedLockButton = [self newToolButtonWithTitle:@"" action:@selector(toggleLock:)];
-	[localizedLockButton setFrameOrigin:NSMakePoint(-1, editorViewFrame.size.height-toolHeight+2)];
+	[localizedLockButton setFrameOrigin:NSMakePoint(-1, editorViewFrame.size.height - toolHeight + 2)];
 	[localizedLockButton setFrameSize:NSMakeSize(27, toolHeight)];
 	[localizedLockButton setImage:[NSImage imageNamed:NSImageNameLockLockedTemplate]];
 	[[localizedLockButton cell] accessibilitySetOverrideValue:NSLocalizedString(@"Toggle string lock", @"Lock Button Accessibility Title") forAttribute:NSAccessibilityTitleAttribute];
@@ -595,18 +644,24 @@ static int toolHeight = 23;
 	// Comment button
 	localizedCommentButton = [self newToolButtonWithTitle:NSLocalizedString(@"Comment", @"Toggle between comment and value button")
 												 action:@selector(toggleComment:)];
-	[localizedCommentButton setFrameOrigin:NSMakePoint(localizedLockButton.frame.size.width-2, editorViewFrame.size.height-toolHeight+2)];
+	[localizedCommentButton setFrameOrigin:NSMakePoint(localizedLockButton.frame.size.width - 2, editorViewFrame.size.height - toolHeight + 2)];
 	[localizedEditorView addSubview:localizedCommentButton];
 	
 	// Propagation button
 	propagationModeButton = nil;
-	for(int i=0; i<3; i++) {
+    
+	for (int i = 0; i < 3; i++)
+    {
 		NSButton *biggestButton = [self newToolButtonWithTitle:[self propagationTitle:i] action:@selector(togglePropagation:)];
-		if(biggestButton.frame.size.width > propagationModeButton.frame.size.width) {
+        
+		if (biggestButton.frame.size.width > propagationModeButton.frame.size.width)
+        {
 			propagationModeButton = biggestButton;
 			[propagationModeButton setButtonType:NSMomentaryPushInButton];
 			[propagationModeButton setFrameOrigin:NSMakePoint(localizedCommentButton.frame.origin.x+localizedCommentButton.frame.size.width-2, editorViewFrame.size.height-toolHeight+2)];
-		} else {
+		}
+        else
+        {
 		}
 
 	}
@@ -665,10 +720,12 @@ static int toolHeight = 23;
 	[localizedTextView setDelegate:self];
     
 	// Sort the key column using numerical comparison
-	NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"key" ascending:YES comparator:(NSComparator)^(id obj1, id obj2) {
+	NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"key" ascending:YES comparator:(NSComparator)^(id obj1, id obj2)
+    {
 		return [obj1 compare:obj2 options:NSNumericSearch];
 	}];
-	[[mBaseStringsTableView tableColumnWithIdentifier:COLUMN_KEY] setSortDescriptorPrototype:descriptor];							
+	
+    [[mBaseStringsTableView tableColumnWithIdentifier:COLUMN_KEY] setSortDescriptorPrototype:descriptor];
 	[[mLocalizedStringsTableView tableColumnWithIdentifier:COLUMN_KEY] setSortDescriptorPrototype:descriptor];							
 	
 	[mBaseStringsTableView setDelegate:self];	
@@ -698,7 +755,8 @@ static int toolHeight = 23;
 	[self updatePropagationMode];
 }
 
-- (void)close {
+- (void)close
+{
     [[self projectPrefs] removeObserver:self forKeyPath:@"showInvisibleCharacters"];
 	[[self projectPrefs] removeObserver:self forKeyPath:@"showKeyColumn"];
 	[[self projectPrefs] removeObserver:self forKeyPath:@"showTextZone"];
@@ -756,9 +814,10 @@ static int toolHeight = 23;
 	[[mLocalizedStringsTableView tableColumnWithIdentifier:@"Key"] setHidden:![self projectPrefs].showKeyColumn]; 
 }
 
-- (void)assembleInView:(NSView*)view table:(NSView*)tableView text:(NSView*)textView
+- (void)assembleInView:(NSView *)view table:(NSView *)tableView text:(NSView *)textView
 {
-	if([[self projectProvider] projectPrefs].showTextZone) {
+	if ([[self projectProvider] projectPrefs].showTextZone)
+    {
 		NSSplitView *sv = [[NSSplitView alloc] initWithFrame:view.frame];
 		[sv setDividerStyle:NSSplitViewDividerStyleThin];
 		[sv setAutoresizingMask:NSViewHeightSizable|NSViewWidthSizable|NSViewMinXMargin|NSViewMaxXMargin|NSViewMinYMargin|NSViewMaxYMargin];
@@ -768,7 +827,9 @@ static int toolHeight = 23;
 		int height = view.frame.size.height / 3;
 		[textView setFrame:NSMakeRect(0, 0, view.frame.size.width, height)];
 		[tableView setFrame:NSMakeRect(0, height+[sv dividerThickness], view.frame.size.width, view.frame.size.height - height - [sv dividerThickness])];
-	} else {
+	}
+    else
+    {
 		[tableView setFrame:view.frame];
 		[tableView setAutoresizingMask:NSViewHeightSizable|NSViewWidthSizable|NSViewMinXMargin|NSViewMaxXMargin|NSViewMinYMargin|NSViewMaxYMargin];
 		[view addSubview:tableView];
@@ -781,17 +842,17 @@ static int toolHeight = 23;
 	[self assembleInView:mLocalizedView table:mLocalizedTableView text:localizedEditorView];
 }
 
-- (NSArrayController*)stringsController
+- (NSArrayController *)stringsController
 {
 	return mStringsController;
 }
 
-- (NSArray*)selectedStringControllers
+- (NSArray *)selectedStringControllers
 {
 	return [mStringsController selectedObjects];
 }
 
-- (StringController*)selectedStringController
+- (StringController *)selectedStringController
 {
 	return [[self selectedStringControllers] firstObject];
 }
@@ -808,8 +869,10 @@ static int toolHeight = 23;
 
 - (void)selectNextItem
 {
-	unsigned index = [mStringsController selectionIndex]+1;
-	if(index <= [[mStringsController content] count]) {
+	NSUInteger index = [mStringsController selectionIndex] + 1;
+    
+	if (index <= [[mStringsController content] count])
+    {
 		[mStringsController setSelectionIndex:index];
 	}
 }
@@ -824,26 +887,42 @@ static int toolHeight = 23;
 - (void)showControlCharacters_:(BOOL)visible
 {
 	NSResponder *responder = [[self window] firstResponder];
-	if([responder isKindOfClass:[NSTextView class]]) {
+    
+	if ([responder isKindOfClass:[NSTextView class]])
+    {
 		NSTextView *tv = (NSTextView*)responder;
 		NSString *string = NULL;
-		if(visible) {
+        
+		if (visible)
+        {
 			string = [ControlCharactersParser showControlCharacters:[tv string]];
-		} else {
+		}
+        else
+        {
 			string = [ControlCharactersParser hideControlCharacters:[tv string]];
 		}
-		[tv setString:string];
 		
-		if(tv == baseTextView || tv == localizedBaseTextView) {
-			if([baseCommentButton state] == NSOnState) {
+        [tv setString:string];
+		
+		if (tv == baseTextView || tv == localizedBaseTextView)
+        {
+			if ([baseCommentButton state] == NSOnState)
+            {
 				[[self selectedStringController] setBaseComment:string];				
-			} else {
+			}
+            else
+            {
 				[[self selectedStringController] setBase:string];
 			}
-		} else {
-			if([localizedCommentButton state] == NSOnState) {
+		}
+        else
+        {
+			if ([localizedCommentButton state] == NSOnState)
+            {
 				[[self selectedStringController] setTranslationComment:string];				
-			} else {
+			}
+            else
+            {
 				[[self selectedStringController] setTranslation:string];
 			}			
 		}
@@ -860,15 +939,22 @@ static int toolHeight = 23;
 	[self showControlCharacters_:NO];
 }
 
-- (void)updateLockStates {
+- (void)updateLockStates
+{
     StringController *sc = [[self selectedStringControllers] firstObject];
     __block NSInteger state = sc.lock?NSOnState:NSOffState;
     
-    [[self selectedStringControllers] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    [[self selectedStringControllers] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop)
+    {
         StringController *sc = obj;
-        if (sc.lock && state != NSOnState) {
+    
+        if (sc.lock && state != NSOnState)
+        {
             state = NSMixedState;
-        } if (!sc.lock && state != NSOffState) {
+        }
+        
+        if (!sc.lock && state != NSOffState)
+        {
             state = NSMixedState;
         }
 	}];
@@ -879,7 +965,8 @@ static int toolHeight = 23;
 
 - (void)toggleLock:(id)sender
 {
-	[[self selectedStringControllers] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+	[[self selectedStringControllers] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop)
+    {
 		[obj setLock:[sender state] == NSOnState];
 	}];
 }
@@ -924,24 +1011,33 @@ static int toolHeight = 23;
 #define SCOPE_SELECTED_FILES	0
 #define SCOPE_ALL_FILES			1
 
-- (void)enumerateStringControllersInScope:(int)scope block:(void(^)(StringController *sc))block {
+- (void)enumerateStringControllersInScope:(int)scope block:(void(^)(StringController *sc))block
+{
 	mIgnoreCase = [[PreferencesLocalization shared] ignoreCase];
 		
-	switch(scope) {
-		case SCOPE_SELECTED_FILES: {
-            for (StringController *sc in mStringsController.content) {
+	switch(scope)
+    {
+		case SCOPE_SELECTED_FILES:
+        {
+            for (StringController *sc in mStringsController.content)
+            {
                 block(sc);
             }
-			break;
+			
+            break;
         }
             
-		case SCOPE_ALL_FILES: {
-            for (FileController *fc in [self allFilesOfSelectedLanguage]) {
-                for (StringController *sc in [fc visibleStringControllers]) {
+		case SCOPE_ALL_FILES:
+        {
+            for (FileController *fc in [self allFilesOfSelectedLanguage])
+            {
+                for (StringController *sc in [fc visibleStringControllers])
+                {
                     block(sc);
                 }
             }
-			break;
+			
+            break;
 		}
 	}
 }
@@ -951,26 +1047,28 @@ static int toolHeight = 23;
 	self.originalStringController = [[self selectedStringControllers] firstObject];
 }
 
-- (void)approveIdenticalStringsOfStringController:(StringController*)osc toStringController:(StringController*)sc
+- (void)approveIdenticalStringsOfStringController:(StringController *)osc toStringController:(StringController *)sc
 {
-	if([[osc base] isEqualToString:[sc base]] && [[osc translation] isEqualToString:[sc translation]])
+	if ([[osc base] isEqualToString:[sc base]] && [[osc translation] isEqualToString:[sc translation]])
 		[sc approve];
 }
 
-- (void)approveAutoTranslatedStringsOfStringController:(StringController*)osc toStringController:(StringController*)sc
+- (void)approveAutoTranslatedStringsOfStringController:(StringController *)osc toStringController:(StringController *)sc
 {
 	// Note: osc is ignored
 	
-	if([sc statusToCheck] && ![sc statusToTranslate] && ![sc statusInvariant]) {
+	if ([sc statusToCheck] && ![sc statusToTranslate] && ![sc statusInvariant])
+    {
 		[sc approve];
 	}
 }
 
-- (void)approveAutoInvariantStringsOfStringController:(StringController*)osc toStringController:(StringController*)sc
+- (void)approveAutoInvariantStringsOfStringController:(StringController *)osc toStringController:(StringController *)sc
 {
 	// Note: osc is ignored
 	
-	if([sc statusToCheck] && ![sc statusToTranslate] && [sc statusInvariant]) {
+	if ([sc statusToCheck] && ![sc statusToTranslate] && [sc statusInvariant])
+    {
 		[sc approve];
 	}
 }
@@ -978,11 +1076,16 @@ static int toolHeight = 23;
 - (void)propagateTranslationToAllFiles:(BOOL)allFiles block:(PropagationEngineWillChangeStringController)block
 {
 	NSMutableArray *scs = [NSMutableArray array];
-	if(allFiles) {
-		for(FileController *fc in [self allFilesOfSelectedLanguage]) {
+    
+	if (allFiles)
+    {
+		for (FileController *fc in [self allFilesOfSelectedLanguage])
+        {
 			[scs addObjectsFromArray:[fc visibleStringControllers]];
 		}
-	} else {
+	}
+    else
+    {
 		[scs addObjectsFromArray:[mStringsController content]];
 	}
 	
@@ -1004,7 +1107,8 @@ static int toolHeight = 23;
 
 - (void)performAutoPropagation:(PropagationEngineWillChangeStringController)block
 {
-	if([[PreferencesLocalization shared] autoPropagateTranslationNone]) {
+	if ([[PreferencesLocalization shared] autoPropagateTranslationNone])
+    {
 		return;
     }
 
@@ -1034,7 +1138,8 @@ static int toolHeight = 23;
 - (IBAction)approveIdenticalStringsInSelectedFiles:(id)sender
 {
 	[self prepareApprove];
-    [self enumerateStringControllersInScope:SCOPE_SELECTED_FILES block:^(StringController *sc) {
+    [self enumerateStringControllersInScope:SCOPE_SELECTED_FILES block:^(StringController *sc)
+    {
         [self approveIdenticalStringsOfStringController:self.originalStringController toStringController:sc];
     }];
 }
@@ -1042,35 +1147,40 @@ static int toolHeight = 23;
 - (IBAction)approveIdenticalStringsInAllFiles:(id)sender
 {
 	[self prepareApprove];
-    [self enumerateStringControllersInScope:SCOPE_ALL_FILES block:^(StringController *sc) {
+    [self enumerateStringControllersInScope:SCOPE_ALL_FILES block:^(StringController *sc)
+    {
         [self approveIdenticalStringsOfStringController:self.originalStringController toStringController:sc];
     }];
 }
 
 - (IBAction)approveAutoTranslatedStringsInSelectedFiles:(id)sender
 {
-    [self enumerateStringControllersInScope:SCOPE_SELECTED_FILES block:^(StringController *sc) {
+    [self enumerateStringControllersInScope:SCOPE_SELECTED_FILES block:^(StringController *sc)
+    {
         [self approveAutoTranslatedStringsOfStringController:self.originalStringController toStringController:sc];
     }];
 }
 
 - (IBAction)approveAutoTranslatedStringsInAllFiles:(id)sender
 {
-    [self enumerateStringControllersInScope:SCOPE_ALL_FILES block:^(StringController *sc) {
+    [self enumerateStringControllersInScope:SCOPE_ALL_FILES block:^(StringController *sc)
+    {
         [self approveAutoTranslatedStringsOfStringController:self.originalStringController toStringController:sc];
     }];
 }
 
 - (IBAction)approveAutoInvariantStringsInSelectedFiles:(id)sender
 {
-    [self enumerateStringControllersInScope:SCOPE_SELECTED_FILES block:^(StringController *sc) {
+    [self enumerateStringControllersInScope:SCOPE_SELECTED_FILES block:^(StringController *sc)
+    {
         [self approveAutoInvariantStringsOfStringController:self.originalStringController toStringController:sc];
     }];
 }
 
 - (IBAction)approveAutoInvariantStringsInAllFiles:(id)sender
 {
-    [self enumerateStringControllersInScope:SCOPE_ALL_FILES block:^(StringController *sc) {
+    [self enumerateStringControllersInScope:SCOPE_ALL_FILES block:^(StringController *sc)
+    {
         [self approveAutoInvariantStringsOfStringController:self.originalStringController toStringController:sc];
     }];
 }
@@ -1099,31 +1209,39 @@ static int toolHeight = 23;
 
 - (IBAction)copyBaseStringsToTranslation:(id)sender
 {
-    [[self selectedStringControllers] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    [[self selectedStringControllers] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop)
+    {
         StringController *sc = obj;
         [[[self undoManager] prepareWithInvocationTarget:self] undoCopyBaseStringsToTranslationWithTranslation:sc.translation stringController:sc];
         [sc copyBaseToTranslation];
     }];
     
-	if([[self selectedStringControllers] count] == 1) {
+	if ([[self selectedStringControllers] count] == 1)
+    {
         NSMutableArray *undoArray = [NSMutableArray array];
-		[self performAutoPropagation:^(id<StringControllerProtocol> string) {
+        
+		[self performAutoPropagation:^(id<StringControllerProtocol> string)
+        {
             NSMutableDictionary *dic = [NSMutableDictionary dictionary];
             dic[@"translation"] = string.translation;
             dic[@"status"] = @(string.status);
             dic[@"scp"] = string;
             [undoArray addObject:dic];
         }];
-        if (undoArray.count > 0) {
+        
+        if (undoArray.count > 0)
+        {
             [[[self undoManager] prepareWithInvocationTarget:self] undoAutoPropagationArray:undoArray];
         }
 	}
 }
 
-- (void)undoAutoPropagationArray:(NSArray*)array {
+- (void)undoAutoPropagationArray:(NSArray *)array
+{
     NSMutableArray *redoArray = [NSMutableArray array];
 
-    [array enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    [array enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop)
+    {
         NSDictionary *dic = obj;
         StringController *scp = dic[@"scp"];
         NSString *translation = dic[@"translation"];
@@ -1144,7 +1262,8 @@ static int toolHeight = 23;
     [[[self undoManager] prepareWithInvocationTarget:self] undoAutoPropagationArray:redoArray];
 }
 
-- (void)undoCopyBaseStringsToTranslationWithTranslation:(NSString*)translation stringController:(StringController*)sc {
+- (void)undoCopyBaseStringsToTranslationWithTranslation:(NSString *)translation stringController:(StringController *)sc
+{
     [[[self undoManager] prepareWithInvocationTarget:self] undoCopyBaseStringsToTranslationWithTranslation:sc.translation stringController:sc];
     sc.translation = translation;
 }
@@ -1262,8 +1381,9 @@ static int toolHeight = 23;
 	// Note: there is two notifications sent at each selection change, one for each table (base and localized).
 	// This is because the NSArrayController is binded to both table -> the selection is changing also in both table.
 	// That's why we do a simple test in order to prevent two notifications to be sent out of this method.
-	if(([self isBaseLanguage] && tv == mBaseStringsTableView) || 
-	   (![self isBaseLanguage] && tv == mLocalizedStringsTableView))
+	if (    ( [self isBaseLanguage] && tv == mBaseStringsTableView)
+         || (![self isBaseLanguage] && tv == mLocalizedStringsTableView)
+       )
 	{
 		[baseTextView setNeedsDisplay:YES];
 		[localizedBaseTextView setNeedsDisplay:YES];
@@ -1279,11 +1399,13 @@ static int toolHeight = 23;
 
 - (BOOL)tableView:(NSTableView *)tableView writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard *)pboard
 {
-	if(tableView == mLocalizedStringsTableView) {
+	if (tableView == mLocalizedStringsTableView)
+    {
 		[[PasteboardProvider shared] declareTypes:@[PBOARD_DATA_STRINGS, PBOARD_DATA_ROW_INDEXES]
 											owner:self
 									   pasteboard:pboard];
-		[pboard setData:[NSArchiver archivedDataWithRootObject:rowIndexes] forType:PBOARD_DATA_ROW_INDEXES];
+	
+        [pboard setData:[NSArchiver archivedDataWithRootObject:rowIndexes] forType:PBOARD_DATA_ROW_INDEXES];
 		return YES;
 	}
 	
@@ -1292,47 +1414,59 @@ static int toolHeight = 23;
 
 - (void)pasteboard:(NSPasteboard *)sender provideDataForType:(NSString *)type
 {
-	if(![[sender types] containsObject:PBOARD_DATA_ROW_INDEXES]) {
+	if (![[sender types] containsObject:PBOARD_DATA_ROW_INDEXES])
+    {
 		NSLog(@"No rows found in pasteboard!");
 		return;
 	}
 	
 	NSIndexSet *rowIndexes = [NSUnarchiver unarchiveObjectWithData:[sender dataForType:PBOARD_DATA_ROW_INDEXES]];
 	
-	if([type isEqualToString:PBOARD_DATA_STRINGS]) {
+	if ([type isEqualToString:PBOARD_DATA_STRINGS])
+    {
 		NSArray *scs = [[mStringsController arrangedObjects] objectsAtIndexes:rowIndexes];
 		NSMutableArray *array = [NSMutableArray array];
 		StringController *sc;
-		for(sc in scs) {
+        
+		for (sc in scs)
+        {
 			NSMutableDictionary *dic = [NSMutableDictionary dictionary];
 			dic[PBOARD_SOURCE_KEY] = [sc base];
 			dic[PBOARD_TARGET_KEY] = [sc translation];
 			[array addObject:dic];
 		}
-		[sender setData:[NSArchiver archivedDataWithRootObject:array] forType:type];
+		
+        [sender setData:[NSArchiver archivedDataWithRootObject:array] forType:type];
 	}
 }
 
-- (void)tableViewTextDidBeginEditing:(NSTableView*)tv columnIdentifier:(NSString*)identifier rowIndex:(NSInteger)rowIndex textView:(TextViewCustom*)textView
+- (void)tableViewTextDidBeginEditing:(NSTableView *)tv columnIdentifier:(NSString *)identifier rowIndex:(NSInteger)rowIndex textView:(TextViewCustom *)textView
 {
     mEditedColumnIsBase = [identifier isEqualToString:COLUMN_BASE];
 	
 	NSString *language = nil;
 	NSString *keypath = nil;
-	if([identifier isEqualToString:COLUMN_KEY]) {
+    
+	if ([identifier isEqualToString:COLUMN_KEY])
+    {
 		language = [self baseLanguage];
 		keypath = @"selection.key";
 	}
-	if([identifier isEqualToString:COLUMN_BASE]) {
+	
+    if ([identifier isEqualToString:COLUMN_BASE])
+    {
 		language = [self baseLanguage];
 		keypath = @"selection.base";
 	}
-	if([identifier isEqualToString:COLUMN_TRANSLATION]) {
+	
+    if ([identifier isEqualToString:COLUMN_TRANSLATION])
+    {
 		language = [self localizedLanguage];
 		keypath = @"selection.translation";
 	}	
 	
-	if(language) {
+	if (language)
+    {
 		[LanguageTool setSpellCheckerLanguage:language];		
 	}
 			
@@ -1346,32 +1480,36 @@ static int toolHeight = 23;
 	[textView selectAll:self];
 }
 
-- (void)tableViewTextDidEndEditing:(NSTableView*)tv textView:(TextViewCustom*)textView
+- (void)tableViewTextDidEndEditing:(NSTableView *)tv textView:(TextViewCustom *)textView
 {
 	[textView unbind:@"value"];    
 	[self autoActionAfterEditing];
 }
 
-- (void)tableViewTextDidEndEditing:(NSTableView*)tv
+- (void)tableViewTextDidEndEditing:(NSTableView *)tv
 {
 	[self autoActionAfterEditing];
 }
 
-- (NSString*)quoteSubstitutionOfString:(NSString*)string range:(NSRange)affectedCharRange replacementString:(NSString*)replacementString base:(BOOL)base
+- (NSString *)quoteSubstitutionOfString:(NSString *)string range:(NSRange)affectedCharRange replacementString:(NSString *)replacementString base:(BOOL)base
 {
-    if(!mQuoteSubstitution)
+    if (!mQuoteSubstitution)
         return nil;
     
     NSString *od;
     NSString *cd;
     NSString *os;
     NSString *cs;
-    if(base) {
+    
+    if (base)
+    {
         od = mOpenDoubleBaseLanguage;
         cd = mCloseDoubleBaseLanguage;
         os = mOpenSingleBaseLanguage;
         cs = mCloseSingleBaseLanguage;
-    } else {
+    }
+    else
+    {
         od = mOpenDoubleLocalizedLanguage;
         cd = mCloseDoubleLocalizedLanguage;
         os = mOpenSingleLocalizedLanguage;
@@ -1379,27 +1517,32 @@ static int toolHeight = 23;
     }
     
     BOOL opening = YES;
-    if(affectedCharRange.location > 0) {
-        unichar c = [string characterAtIndex:affectedCharRange.location-1];
-        if(c != ' ' && c != '\t' && c != '\n' && c != NOBREAK_SPACE)
+    
+    if (affectedCharRange.location > 0)
+    {
+        unichar c = [string characterAtIndex:affectedCharRange.location - 1];
+        
+        if (c != ' ' && c != '\t' && c != '\n' && c != NOBREAK_SPACE)
             opening = NO;
     }
     
     NSString *s = nil;
     
-    if([replacementString isEqualToString:@"\""]) {
+    if ([replacementString isEqualToString:@"\""])
+    {
         s = opening?od:cd;
     }
     
-    if([replacementString isEqualToString:@"'"]) {
+    if ([replacementString isEqualToString:@"'"])
+    {
         s = opening?os:cs;
     }
     
-    // Make sure it's a copy of the original substitution to avoid a release on the original one
+    // Make sure it is a copy of the original substitution to avoid a release on the original one.
     return [s copy];
 }
 
-- (NSString*)quoteSubstitutionOfString:(NSString*)string range:(NSRange)affectedCharRange replacementString:(NSString*)replacementString
+- (NSString *)quoteSubstitutionOfString:(NSString *)string range:(NSRange)affectedCharRange replacementString:(NSString *)replacementString
 {
     return [self quoteSubstitutionOfString:string range:affectedCharRange replacementString:replacementString base:mEditedColumnIsBase];
 }
@@ -1407,10 +1550,13 @@ static int toolHeight = 23;
 - (BOOL)textView:(NSTextView *)tv shouldChangeTextInRange:(NSRange)affectedCharRange replacementString:(NSString *)replacementString
 {
     NSString *s = [self quoteSubstitutionOfString:[tv string] range:affectedCharRange replacementString:replacementString base:tv == baseTextView || tv == localizedBaseTextView];
-    if(s) {
+    
+    if (s)
+    {
         [tv insertText:s];
         return NO;            
-    } else
+    }
+    else
         return YES;
 }
 
@@ -1419,7 +1565,7 @@ static int toolHeight = 23;
 	return YES;
 }
 
-- (NSColor*)customTableViewAlternateBackgroundColor
+- (NSColor *)customTableViewAlternateBackgroundColor
 {
 //	return [[PreferencesGeneral shared] tableViewAlternateBackgroundColor];
 	return nil;
@@ -1431,7 +1577,7 @@ static int toolHeight = 23;
 	[[self projectProvider] setDirty];
 }
 
-- (NSMenu*)labelsMenu
+- (NSMenu *)labelsMenu
 {
 	NSMenu *menu = [[NSMenu alloc] initWithTitle:@"Labels"];
 	[[[[self projectProvider] projectWC] projectLabels] buildLabelsMenu:menu target:self action:@selector(labelContextMenuAction:)];
@@ -1439,66 +1585,93 @@ static int toolHeight = 23;
 	return menu;	
 }
 
-- (void)menuNeedsUpdate:(NSMenu*)menu
+- (void)menuNeedsUpdate:(NSMenu *)menu
 {
 	[mLabelsMenuItem setSubmenu:[self labelsMenu]];		
 }
 
-- (NSMenu*)customTableViewContextualMenu:(TableViewCustom*)tv row:(int)row column:(int)column
+- (NSMenu *)customTableViewContextualMenu:(TableViewCustom *)tv row:(int)row column:(int)column
 {
-	if(tv == mBaseStringsTableView || tv == mLocalizedStringsTableView) {
-		if(row == -1)
+	if (tv == mBaseStringsTableView || tv == mLocalizedStringsTableView)
+    {
+		if (row == -1)
 			return nil;
 		
-		if(column != -1 && [[((NSTableColumn*)[tv tableColumns][column]) identifier] isEqualToString:COLUMN_LABEL]) {
+		if (column != -1 && [[((NSTableColumn*)[tv tableColumns][column]) identifier] isEqualToString:COLUMN_LABEL])
+        {
 			return [self labelsMenu];
-		} else
+		}
+        else
 			return mTableViewContextualMenu;
-	} else
+	}
+    else
 		return nil;
 }
 
 - (void)customTableView:(NSTableView *)aTableView willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
 	StringController *sc = [mStringsController arrangedObjects][row];
-	if([[tableColumn identifier] isEqualToString:COLUMN_BASE]) {
+    
+	if ([[tableColumn identifier] isEqualToString:COLUMN_BASE])
+    {
 		[cell setValue:[sc base]];		
-	} else if([[tableColumn identifier] isEqualToString:COLUMN_TRANSLATION]) {
+	}
+    else if([[tableColumn identifier] isEqualToString:COLUMN_TRANSLATION])
+    {
 		[cell setValue:[sc translation]];		
-	} else if([[tableColumn identifier] isEqualToString:COLUMN_KEY]) {
+	}
+    else if([[tableColumn identifier] isEqualToString:COLUMN_KEY])
+    {
 		[cell setValue:[sc key]];		
 	}
-	[cell setShowInvisibleCharacters:[[[sc projectProvider] projectPrefs] showInvisibleCharacters]];
+	
+    [cell setShowInvisibleCharacters:[[[sc projectProvider] projectPrefs] showInvisibleCharacters]];
 	[cell setRepresentedObject:sc];
-	if([sc lock]) {
-		if([cell isHighlighted]) {
-			if([[aTableView window] firstResponder] == aTableView) {
+	
+    if ([sc lock])
+    {
+		if ([cell isHighlighted])
+        {
+			if ([[aTableView window] firstResponder] == aTableView)
+            {
 				[cell setForegroundColor:[NSColor lightGrayColor]];	
-			} else {
+			}
+            else
+            {
 				[cell setForegroundColor:[NSColor grayColor]];
 			}
-		} else {
+		}
+        else
+        {
 			[cell setForegroundColor:[NSColor grayColor]];	
 		}
-	} else if([cell isHighlighted]) {
+	}
+    else if ([cell isHighlighted])
+    {
 		[cell setForegroundColor:[NSColor whiteColor]];
-	} else {
+	}
+    else
+    {
 		[cell setForegroundColor:[NSColor blackColor]];		
 	}	
 	
 	// Now set any content matching available for this string controller.
 	[cell setContentMatching:nil];
 	
-	if(aTableView != mBaseStringsTableView && aTableView != mLocalizedStringsTableView) {
+	if (aTableView != mBaseStringsTableView && aTableView != mLocalizedStringsTableView)
+    {
 		return;
 	}
 	
 	BOOL base = [[tableColumn identifier] isEqualToString:COLUMN_BASE];
-	if(!base && ![[tableColumn identifier] isEqualToString:COLUMN_TRANSLATION]) {
+    
+	if (!base && ![[tableColumn identifier] isEqualToString:COLUMN_TRANSLATION])
+    {
 		return;
 	}
 	
-	if(![cell isKindOfClass:[TableViewCustomCell class]]) {
+	if (![cell isKindOfClass:[TableViewCustomCell class]])
+    {
 		return;
 	}
 	
@@ -1506,14 +1679,14 @@ static int toolHeight = 23;
 	[cell setContentMatchingItem:base?SCOPE_STRINGS_BASE:SCOPE_STRINGS_TRANSLATION];
 }
 
-- (void)tableViewModifierFlagsChanged:(NSEvent*)event
+- (void)tableViewModifierFlagsChanged:(NSEvent *)event
 {
 	[[[self projectProvider] projectWC] tableViewModifierFlagsChanged:event];
 }
 
 #pragma mark -
 
-- (NSMenu*)customTextViewAsksForContextualMenu:(TextViewCustom*)tv
+- (NSMenu *)customTextViewAsksForContextualMenu:(TextViewCustom *)tv
 {
 	return mTextViewContextualMenu;
 }
@@ -1521,76 +1694,99 @@ static int toolHeight = 23;
 - (void)textDidEndEditing:(NSNotification *)notif
 {
 	NSTextView *tv = [notif object];
-	if(tv == localizedTextView) {
+    
+	if (tv == localizedTextView)
+    {
 		[self autoActionAfterEditing];
 	}
 }
 
-- (BOOL)shouldStopOnStringController:(StringController*)sc
+- (BOOL)shouldStopOnStringController:(StringController *)sc
 {
 	return [sc statusToTranslate] || [sc statusToCheck];
 }
 
-- (int)indexOfNextNonTranslatedString
+- (NSUInteger)indexOfNextNonTranslatedString
 {
 	NSArray *content = [mStringsController arrangedObjects];
 	
-	BOOL backwards = ([[[NSApplication sharedApplication] currentEvent] modifierFlags] & NSShiftKeyMask) > 0;	
-	int startIndex = [content indexOfObject:[self selectedStringController]];
-	int maxIndex = [content count];
-	int index = startIndex;
-	while(YES) {
-		if(backwards) {
+	BOOL backwards = ([[[NSApplication sharedApplication] currentEvent] modifierFlags] & NSShiftKeyMask) > 0;
+    
+	NSUInteger startIndex = [content indexOfObject:[self selectedStringController]];
+	NSUInteger maxIndex = [content count];
+	NSUInteger index = startIndex;
+    
+	while (YES)
+    {
+		if (backwards)
+        {
 			index--;
-		} else {
+		}
+        else
+        {
 			index++;			
 		}
 		
-		if(index>=maxIndex)
+		if (index >= maxIndex)
 			index = 0;
-		if(index<0)
-			index = maxIndex-1;
 		
-		if(index == startIndex) {
+        if (index == 0)
+        {
+            // fd:20170203: we're using NSUInteger now and count on base 1.
+            // index = maxIndex - 1;
+            index = maxIndex;
+        }
+        
+		if (index == startIndex)
+        {
 			// Back at the start position -> no more strings to translate
-			if(![self shouldStopOnStringController:content[index]]) {
-				if(backwards) {
-					if(index > 0)
-						return index-1;
+			if (![self shouldStopOnStringController:content[index]])
+            {
+				if (backwards)
+                {
+					if (index > 0)
+						return index;
 					else
-						return maxIndex-1;
-				} else {
-					if(index+1<maxIndex)
-						return index+1;
+						return maxIndex;
+				}
+                else
+                {
+					if (index + 1 < maxIndex)
+						return index + 1;
 					else
-						return 0;					
+						return 0;
 				}
 			}
+            
 			break;			
 		}
 		
-		if([self shouldStopOnStringController:content[index]]) {
+		if ([self shouldStopOnStringController:content[index]])
+        {
 			break;
 		}
-	}	
-	return index;
+	}
+
+    return index;
 }
 
-- (void)tableViewDidHitEnterKey:(NSTableView*)tv
+- (void)tableViewDidHitEnterKey:(NSTableView *)tv
 {
 	[self autoActionAfterEditing];
 
 	// Select the next string to translate or the next line if no strings remain to translate.
-	int index = [self indexOfNextNonTranslatedString];
-	int row = index;
-	if(row >= 0) {
+	NSUInteger index = [self indexOfNextNonTranslatedString];
+	NSUInteger row = index;
+    
+	if (row > 0)
+    {
 		[tv selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:NO];
 		[tv editColumn:[tv columnWithIdentifier:@"Translation"] row:row withEvent:nil select:YES];	
-		[(TableViewCustom*)tv makeSelectedRowVisible];
+		[(TableViewCustom *)tv makeSelectedRowVisible];
 	}		
 }
 
-- (void)textViewDidHitEnterKey:(TextViewCustom*)view
+- (void)textViewDidHitEnterKey:(TextViewCustom *)view
 {
 	// Before changing the current string, perform the auto-action after editing (mostly
 	// to approve the status)
@@ -1608,7 +1804,8 @@ static int toolHeight = 23;
 
 - (IBAction)performDebugAction:(id)sender
 {
-	switch([sender tag]) {
+	switch([sender tag])
+    {
 		case 10:
 			[[self selectedStringControllers] makeObjectsPerformSelector:@selector(debugSetStatus:) 
 															  withObject:@STRING_STATUS_BASE_MODIFIED];

@@ -13,7 +13,8 @@
 @class FileModel;
 @class StringModel;
 
-@interface LanguageController : AbstractController {
+@interface LanguageController : AbstractController
+{
 	LanguageModel		*mBaseLanguageModel;
 	LanguageModel		*mLanguageModel;
 	
@@ -23,64 +24,64 @@
 	NSMutableDictionary	*mPath2FC;
 	
 	// Statistics (not saved)
-	unsigned			mNumberOfFilteredFileControllers;
-	unsigned			mNumberOfFoundFileControllers;
-    unsigned            mTotalNumberOfStrings;
-    unsigned            mNumberOfTranslatedStrings;
-    unsigned            mNumberOfUntranslatedStrings;
-	unsigned			mNumberOfToCheckStrings;
-	float				mPercentCompleted;
-	BOOL				mFilterShowLocalFiles;
+	NSUInteger           mNumberOfFilteredFileControllers;
+	NSUInteger           mNumberOfFoundFileControllers;
+    NSUInteger           mTotalNumberOfStrings;
+    NSUInteger           mNumberOfTranslatedStrings;
+    NSUInteger           mNumberOfUntranslatedStrings;
+	NSUInteger           mNumberOfToCheckStrings;
+	float                mPercentCompleted;
+	BOOL                 mFilterShowLocalFiles;
 }
 
-- (void)setBaseLanguageModel:(LanguageModel*)model;
+- (void)setBaseLanguageModel:(LanguageModel *)model;
 - (LanguageModel*)baseLanguageModel;
 
-- (void)setLanguageModel:(LanguageModel*)model;
-- (LanguageModel*)languageModel;
+- (void)setLanguageModel:(LanguageModel *)model;
+- (LanguageModel *)languageModel;
 
-- (void)addToCache:(FileController*)fc;
-- (void)removeFromCache:(FileController*)fc;
+- (void)addToCache:(FileController *)fc;
+- (void)removeFromCache:(FileController *)fc;
 
 - (void)setFilterShowLocalFiles:(BOOL)flag;
 
-- (void)addFileController:(FileController*)fileController;
-- (void)deleteFileController:(FileController*)fileController removeFromDisk:(BOOL)removeFromDisk;
+- (void)addFileController:(FileController *)fileController;
+- (void)deleteFileController:(FileController *)fileController removeFromDisk:(BOOL)removeFromDisk;
 
 - (void)fileControllersDidChange;
 - (void)filteredFileControllersDidChange;
-- (void)baseStringModelDidChange:(StringModel*)model fileController:(FileController*)fc;
+- (void)baseStringModelDidChange:(StringModel *)model fileController:(FileController *)fc;
 
 - (BOOL)isBaseLanguage;
-- (NSString*)baseLanguage;
-- (NSString*)displayBaseLanguage;
+- (NSString *)baseLanguage;
+- (NSString *)displayBaseLanguage;
 
-- (NSString*)language;
-- (NSString*)displayLanguage;
+- (NSString *)language;
+- (NSString *)displayLanguage;
 
-- (int)totalNumberOfStrings;
-- (int)totalNumberOfTranslatedStrings;
-- (int)totalNumberOfNonTranslatedStrings;
-- (int)totalNumberOfToCheckStrings;
+- (NSUInteger)totalNumberOfStrings;
+- (NSUInteger)totalNumberOfTranslatedStrings;
+- (NSUInteger)totalNumberOfNonTranslatedStrings;
+- (NSUInteger)totalNumberOfToCheckStrings;
 
 - (float)percentCompleted;
-- (NSString*)percentCompletedString;
+- (NSString *)percentCompletedString;
 
-- (int)numberOfFileControllers;
-- (NSArray*)fileControllers;
-- (NSArray*)filteredFileControllers;
-- (NSImage*)allWarningsImage;
+- (NSUInteger)numberOfFileControllers;
+- (NSArray *)fileControllers;
+- (NSArray *)filteredFileControllers;
+- (NSImage *)allWarningsImage;
 
-- (FileController*)fileControllerWithFileModel:(FileModel*)fileModel;
-- (FileController*)fileControllerWithRelativePath:(NSString*)relativePath translate:(BOOL)translate;
-- (FileController*)findFileControllerWithRelativePath:(NSString*)relativePath;
+- (FileController *)fileControllerWithFileModel:(FileModel *)fileModel;
+- (FileController *)fileControllerWithRelativePath:(NSString *)relativePath translate:(BOOL)translate;
+- (FileController *)findFileControllerWithRelativePath:(NSString *)relativePath;
 
-- (NSMutableArray*)fileControllersMatchingName:(NSString*)name;
+- (NSMutableArray *)fileControllersMatchingName:(NSString *)name;
 
-- (FileController*)correspondingBaseFileControllerForFileController:(FileController*)fileController;
-- (FileController*)fileControllerMatchingBaseFileController:(FileController*)baseFileController;
+- (FileController *)correspondingBaseFileControllerForFileController:(FileController *)fileController;
+- (FileController *)fileControllerMatchingBaseFileController:(FileController *)baseFileController;
 
-- (NSArray*)fileControllersToSynchToDisk;
-- (NSArray*)fileControllersToSynchFromDisk;
+- (NSArray *)fileControllersToSynchToDisk;
+- (NSArray *)fileControllersToSynchFromDisk;
 
 @end

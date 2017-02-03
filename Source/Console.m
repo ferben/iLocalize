@@ -18,20 +18,23 @@
 
 + (void)initialize
 {
-	if(self == [Console class]) {
+	if (self == [Console class])
+    {
 		[self setVersion:1];
 	}
 }
 
 - (id)init
 {
-	if((self = [super init])) {
+	if ((self = [super init]))
+    {
 		mRootItem = [[ConsoleItem alloc] init];
 		[mRootItem setDescription:CONSOLE_ROOT];
 		mCurrentItemStack = [[Stack alloc] init];
 		mDeleteOldDays = 7;
 	}
-	return self;
+	
+    return self;
 }
 
 
@@ -54,17 +57,19 @@
 		}
 		
         if (mCurrentItemStack)
+        {
 			// Clear stack in case an exception has occurred and the corresponding
 			// endOperation method didn't get called (leaving open forever the beginOperation)
 			[mCurrentItemStack clear];
-		else
+        }
+        else
 			mCurrentItemStack = [[Stack alloc] init];
 	}
     
 	return self;
 }
 
-- (void)encodeWithCoder:(NSCoder*)coder
+- (void)encodeWithCoder:(NSCoder *)coder
 {
 	[self deleteItemOldDays];
 	
@@ -73,14 +78,16 @@
 	[coder encodeObject:@(mDeleteOldDays)];
 }
 
-- (void)addItem:(ConsoleItem*)item
+- (void)addItem:(ConsoleItem *)item
 {
-	@synchronized(self) {
-		if([[Preferences shared] consoleDisplayUsingNSLog])
+	@synchronized(self)
+    {
+		if ([[Preferences shared] consoleDisplayUsingNSLog])
 			NSLog(@"[Console] %@", item);
 		
 		ConsoleItem *currentItem = [mCurrentItemStack currentObject];
-		if(currentItem)
+		
+        if (currentItem)
 			[currentItem addItem:item];
 		else
 			[mRootItem addItem:item];		
@@ -89,7 +96,8 @@
 
 - (void)removeAllItems
 {
-    @synchronized(self) {
+    @synchronized(self)
+    {
         [mRootItem removeAllItems];
         [mCurrentItemStack clear];        
     }
@@ -133,18 +141,18 @@
 	[mCurrentItemStack pushObject:operationItem];
 }
 
-- (void)addLog:(NSString*)log class:(Class)class
+- (void)addLog:(NSString *)log class:(Class)class
 {
 	[self addItem:[ConsoleItem itemWithTitle:log description:log class:class type:CONSOLE_LOG]];
 }
 
-- (void)addWarning:(NSString*)warning description:(NSString*)description class:(Class)class
+- (void)addWarning:(NSString *)warning description:(NSString *)description class:(Class)class
 {
 	mWarningsCount++;
 	[self addItem:[ConsoleItem itemWithTitle:warning description:description class:class type:CONSOLE_WARNING]];
 }
 
-- (void)addError:(NSString*)error description:(NSString*)description class:(Class)class
+- (void)addError:(NSString *)error description:(NSString *)description class:(Class)class
 {
 	mErrorsCount++;
 	[self addItem:[ConsoleItem itemWithTitle:error description:description class:class type:CONSOLE_ERROR]];
@@ -185,7 +193,7 @@
 	return [mRootItem allItemsOfStrictType:type range:r];
 }
 
-- (void)deleteItem:(ConsoleItem*)item
+- (void)deleteItem:(ConsoleItem *)item
 {
 	[mRootItem deleteItem:item];
 }
@@ -208,7 +216,7 @@
 
 - (BOOL)hasWarningsOrErrors
 {
-	return mWarningsCount>0 || mErrorsCount>0;
+	return mWarningsCount > 0 || mErrorsCount > 0;
 }
 
 - (void)mark
@@ -217,16 +225,17 @@
 	[self resetWarningsAndErrorsCount];
 }
 
-- (int)indexMark
+- (NSUInteger)indexMark
 {
 	return mIndexMark;
 }
 
-- (NSArray*)allItemsSinceMark
+- (NSArray *)allItemsSinceMark
 {
-	int fromIndex = [self indexMark];
-	int toIndex = [self numberOfItems];
-	return [self allItemsOfStrictType:(1 << CONSOLE_ERROR | 1 << CONSOLE_WARNING) range:NSMakeRange(fromIndex, toIndex-fromIndex)];
+	NSUInteger fromIndex = [self indexMark];
+	NSUInteger toIndex = [self numberOfItems];
+    
+	return [self allItemsOfStrictType:(1 << CONSOLE_ERROR | 1 << CONSOLE_WARNING) range:NSMakeRange(fromIndex, toIndex - fromIndex)];
 }
 
 - (NSString*)description

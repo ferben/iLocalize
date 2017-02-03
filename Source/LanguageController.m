@@ -50,22 +50,22 @@
 //					triggerChangeNotificationsForDependentKey:@"fileInfo"];
 }
 
-+ (NSSet*)keyPathsForValuesAffectingFilteredFileControllers
++ (NSSet *)keyPathsForValuesAffectingFilteredFileControllers
 {
 	return [NSSet setWithObjects:@"fileControllers", nil];
 }
 
-+ (NSSet*)keyPathsForValuesAffectingNumberOfFiles
++ (NSSet *)keyPathsForValuesAffectingNumberOfFiles
 {
 	return [NSSet setWithObjects:@"fileControllers", @"localFileControllers", nil];
 }
 
-+ (NSSet*)keyPathsForValuesAffectingSelfValue
++ (NSSet *)keyPathsForValuesAffectingSelfValue
 {
 	return [NSSet setWithObjects:@"fileControllers", @"localFileControllers", nil];
 }
 
-+ (NSSet*)keyPathsForValuesAffectingFileInfo
++ (NSSet *)keyPathsForValuesAffectingFileInfo
 {
 	return [NSSet setWithObjects:@"fileControllers", @"localFileControllers", @"localFileControllers", @"filteredLocalFileControllers", nil];
 }
@@ -74,7 +74,8 @@
 
 - (id)init
 {
-	if(self = [super init]) {
+	if (self = [super init])
+    {
 		mBaseLanguageModel = NULL;
 		mLanguageModel = NULL;
 		mFileControllers = [[NSMutableArray alloc] init];
@@ -83,7 +84,8 @@
 		mNumberOfFoundFileControllers = 0;
 		mFilterShowLocalFiles = NO;
 	}
-	return self;
+	
+    return self;
 }
 
 
@@ -96,25 +98,30 @@
 
 #pragma mark -
 
-- (void)addToCache:(FileController*)fc
+- (void)addToCache:(FileController *)fc
 {
 	mPath2FC[[fc relativeFilePath]] = fc;
 }
 
-- (void)removeFromCache:(FileController*)fc
+- (void)removeFromCache:(FileController *)fc
 {
 	[mPath2FC removeObjectForKey:[fc relativeFilePath]];
 }
 
-- (FileController*)lookupInCache:(NSString*)relativePath
+- (FileController *)lookupInCache:(NSString *)relativePath
 {
 	FileController *fc = mPath2FC[relativePath];
-	if(fc == nil) {
+	
+    if (fc == nil)
+    {
 		fc = [self findFileControllerWithRelativePath:relativePath];
-		if(fc) {
+		
+        if (fc)
+        {
 			[self addToCache:fc];
 		}
-	}	
+	}
+    
 	return fc;
 }
 
@@ -126,55 +133,70 @@
 	[self filteredFileControllersDidChange];
 }
 
-- (void)addFileController:(FileController*)fileController
+- (void)addFileController:(FileController *)fileController
 {	
 	[fileController setParent:self];
 	[fileController rebuildFromModel];
-	@synchronized(mFileControllers) {
+    
+	@synchronized(mFileControllers)
+    {
 		[mFileControllers addObject:fileController];		
 	}
-	[self addToCache:fileController];	
+	
+    [self addToCache:fileController];
 }
 
-- (void)deleteFileController:(FileController*)fileController removeFromDisk:(BOOL)removeFromDisk
+- (void)deleteFileController:(FileController *)fileController removeFromDisk:(BOOL)removeFromDisk
 {
-	if(removeFromDisk) {
+	if (removeFromDisk)
+    {
 		[[fileController absoluteFilePath] removePathFromDisk];		
 	}
-	[mLanguageModel deleteFileModel:[fileController fileModel]];
-	@synchronized(mFileControllers) {
+	
+    [mLanguageModel deleteFileModel:[fileController fileModel]];
+	
+    @synchronized(mFileControllers)
+    {
 		[mFileControllers removeObject:fileController];					
 	}
 }
 
 - (void)rebuildFileControllers
 {
-	@synchronized(mFileControllers) {
+	@synchronized(mFileControllers)
+    {
 		[mFileControllers removeAllObjects];		
 	}
 
 	// Add all the regular files
-	for(FileModel *baseFileModel in [mBaseLanguageModel fileModels]) {
+	for (FileModel *baseFileModel in [mBaseLanguageModel fileModels])
+    {
 		// Skip the files local to the base language
-		if([baseFileModel isLocal]) continue;
+		if ([baseFileModel isLocal])
+            continue;
 		
 		// Ignore file without corresponding file model which is the case if they are
 		// old local file placeholder.
-		if(![mLanguageModel fileModelForBaseFileModel:baseFileModel]) continue;
+		if (![mLanguageModel fileModelForBaseFileModel:baseFileModel])
+            continue;
 		
 		FileController *fileController = [[FMManager shared] defaultControllerForFile:[baseFileModel filename]];		
 		[fileController setBaseFileModel:baseFileModel];
 		[fileController setFileModel:[mLanguageModel fileModelForBaseFileModel:baseFileModel]];
-		[self addFileController:fileController];			
+		
+        [self addFileController:fileController];
 	}			
 	
 	// Add all the local files
-	for(FileModel *fileModel in [mLanguageModel fileModels]) {
-		if([fileModel isLocal]) {
+	for (FileModel *fileModel in [mLanguageModel fileModels])
+    {
+		if ([fileModel isLocal])
+        {
 			FileController *fileController = [[FMManager shared] defaultControllerForFile:[fileModel filename]];		
 			[fileController setBaseFileModel:nil];
 			[fileController setFileModel:fileModel];
-			[self addFileController:fileController];						
+
+            [self addFileController:fileController];
 		}
 	}
 }
@@ -187,22 +209,22 @@
 
 #pragma mark -
 
-- (void)setBaseLanguageModel:(LanguageModel*)model
+- (void)setBaseLanguageModel:(LanguageModel *)model
 {
 	mBaseLanguageModel = model;
 }
 
-- (LanguageModel*)baseLanguageModel
+- (LanguageModel *)baseLanguageModel
 {
 	return mBaseLanguageModel;
 }
 
-- (void)setLanguageModel:(LanguageModel*)model
+- (void)setLanguageModel:(LanguageModel *)model
 {
 	mLanguageModel = model;
 }
 
-- (LanguageModel*)languageModel
+- (LanguageModel *)languageModel
 {
 	return mLanguageModel;
 }
@@ -243,7 +265,7 @@
 	[self didChangeValueForKey:@"filteredLocalFileControllers"];
 }
 
-- (void)baseStringModelDidChange:(StringModel*)model fileController:(FileController*)fc
+- (void)baseStringModelDidChange:(StringModel *)model fileController:(FileController *)fc
 {
 	FileController *fileController = [self fileControllerWithRelativePath:[fc relativeFilePath] translate:YES];
 	[fileController baseStringModelDidChange:model];
@@ -256,22 +278,22 @@
 	return (mBaseLanguageModel == mLanguageModel);
 }
 
-- (NSString*)baseLanguage
+- (NSString *)baseLanguage
 {
 	return [mBaseLanguageModel language];
 }
 
-- (NSString*)displayBaseLanguage
+- (NSString *)displayBaseLanguage
 {
 	return [[self baseLanguage] displayLanguageName];
 }
 
-- (NSString*)language
+- (NSString *)language
 {
 	return [mLanguageModel language];
 }
 
-- (NSString*)displayLanguage
+- (NSString *)displayLanguage
 {
 	return [[self language] displayLanguageName];
 }
@@ -280,10 +302,12 @@
 
 - (void)markDirty
 {
-    if(!mOperationRunning) {
+    if (!mOperationRunning)
+    {
     	[self computeStatistics];		
 	}	
-	[super markDirty];
+	
+    [super markDirty];
 }
 
 - (void)computeStatistics
@@ -293,9 +317,11 @@
     mNumberOfUntranslatedStrings = 0;
 	mNumberOfToCheckStrings = 0;
         
-	for(FileController *fc in [self fileControllers]) {
+	for (FileController *fc in [self fileControllers])
+    {
 		float f = [fc percentCompleted];
-		if(f == -1)
+	
+        if (f == -1)
 			continue;
 		
         mTotalNumberOfStrings += [fc numberOfStrings];
@@ -304,10 +330,13 @@
 		mNumberOfToCheckStrings += [fc numberOfToCheckStrings];
 	}
 	    	
-	if(mTotalNumberOfStrings <= 0) {
+	if (mTotalNumberOfStrings == 0)
+    {
 		mPercentCompleted = 100;
-	} else {
-		mPercentCompleted = 100.0*mNumberOfTranslatedStrings/mTotalNumberOfStrings;		    		
+	}
+    else
+    {
+		mPercentCompleted = 100.0 * mNumberOfTranslatedStrings / mTotalNumberOfStrings;
 	}
 
 	[self statisticsDidChange];
@@ -318,219 +347,276 @@
 	return [self isBaseLanguage]?100:mPercentCompleted;
 }
 
-- (NSString*)percentCompletedString
+- (NSString *)percentCompletedString
 {
 	float value = [self percentCompleted];
-	if(value < 100) {
+    
+	if (value < 100)
+    {
 		return [NSString stringWithFormat:@"%3.0f%%", value>=99.5?99:value];
-	} else {
+	}
+    else
+    {
 		return @"";
 	}		
 }
 
-- (int)totalNumberOfStrings
+- (NSUInteger)totalNumberOfStrings
 {
     return mTotalNumberOfStrings;
 }
 
-- (int)totalNumberOfTranslatedStrings
+- (NSUInteger)totalNumberOfTranslatedStrings
 {
     return mNumberOfTranslatedStrings;
 }
 
-- (int)totalNumberOfNonTranslatedStrings
+- (NSUInteger)totalNumberOfNonTranslatedStrings
 {
     return mNumberOfUntranslatedStrings;
 }
 
-- (int)totalNumberOfToCheckStrings
+- (NSUInteger)totalNumberOfToCheckStrings
 {
 	return mNumberOfToCheckStrings;
 }
 
 #pragma mark -
 
-- (NSString*)fileInfo
+- (NSString *)fileInfo
 {	
 	NSString *fileString = NSLocalizedString(@"File", NULL);
 	NSString *filesString = NSLocalizedString(@"Files", NULL);
-	unsigned total = [[self fileControllers] count];
-	if(total == mNumberOfFoundFileControllers)
-		return [NSString stringWithFormat:@"%d %@", total, total>1?filesString:fileString];
+	NSUInteger total = [[self fileControllers] count];
+    
+	if (total == mNumberOfFoundFileControllers)
+		return [NSString stringWithFormat:@"%ld %@", total, (total > 1) ? filesString : fileString];
 	else
-		return [NSString stringWithFormat:NSLocalizedString(@"%d of %d %@", @"File Content Info"), mNumberOfFoundFileControllers, total, total>1?filesString:fileString];
+		return [NSString stringWithFormat:NSLocalizedString(@"%ld of %ld %@", @"File Content Info"), mNumberOfFoundFileControllers, total, (total > 1) ? filesString : fileString];
 }
 
-- (int)numberOfFileControllers
+- (NSUInteger)numberOfFileControllers
 {
 	return [[self fileControllers] count];
 }
 
-- (NSArray*)fileControllers
+- (NSArray *)fileControllers
 {
 	NSArray *safe = nil;
-	@synchronized(mFileControllers) {
+	
+    @synchronized(mFileControllers)
+    {
 		safe = [NSArray arrayWithArray:mFileControllers];
 	}
-	return safe;
+	
+    return safe;
 }
 
-- (NSSet*)allWarningNumbers
+- (NSSet *)allWarningNumbers
 {
 	NSMutableSet *warnings = [NSMutableSet set];
-	for(FileController *fc in [self fileControllers]) {
-		for(StringController *sc in [fc stringControllers]) {
-			if([sc statusWarning]) {
+    
+	for (FileController *fc in [self fileControllers])
+    {
+		for (StringController *sc in [fc stringControllers])
+        {
+			if ([sc statusWarning])
+            {
 				[warnings addObject:@STRING_STATUS_WARNING];
 			}
-			if([sc statusBaseModified]) {
-				[warnings addObject:@(100+STRING_STATUS_BASE_MODIFIED)];
+			
+            if ([sc statusBaseModified])
+            {
+				[warnings addObject:@(100 + STRING_STATUS_BASE_MODIFIED)];
 			}
-			if([sc statusToCheck]) {
-				[warnings addObject:@(100+STRING_STATUS_TOCHECK)];
+            
+			if ([sc statusToCheck])
+            {
+				[warnings addObject:@(100 + STRING_STATUS_TOCHECK)];
 			}
 		}
 		
-		if([fc statusNotFound]) {
+		if ([fc statusNotFound])
+        {
 			[warnings addObject:@FILE_STATUS_NOT_FOUND];
 		}
-		if([fc statusCheckLayout]) {
+		
+        if ([fc statusCheckLayout])
+        {
 			[warnings addObject:@FILE_STATUS_CHECK_LAYOUT];
 		}
-		if([fc statusWarning]) {
+		
+        if ([fc statusWarning])
+        {
 			[warnings addObject:@FILE_STATUS_WARNING];
 		}
 	}
-	return warnings;
+
+    return warnings;
 }
 
-- (NSImage*)allWarningsImage
+- (NSImage *)allWarningsImage
 {
-	if([self isBaseLanguage]) return nil;
+	if ([self isBaseLanguage])
+        return nil;
 	
 	NSMutableArray* warnings = [NSMutableArray array];
 	NSEnumerator *e = [[self allWarningNumbers] objectEnumerator];
 	NSNumber *n;
-	while(n = [e nextObject]) {
-		switch([n intValue]) {
-			case 100+STRING_STATUS_BASE_MODIFIED:
+    
+	while (n = [e nextObject])
+    {
+		switch ([n intValue])
+        {
+			case 100 + STRING_STATUS_BASE_MODIFIED:
 				[warnings addObject:[NSImage imageNamed:@"string_base_modified"]];
 				break;
-			case 100+STRING_STATUS_TOCHECK:
+                
+			case 100 + STRING_STATUS_TOCHECK:
 				[warnings addObject:[NSImage imageNamed:@"string_auto_translated"]];
 				break;
 
 			case FILE_STATUS_NOT_FOUND:
 				[warnings addObject:[NSImage imageNamed:@"_warning_red"]];
 				break;
+                
 			case FILE_STATUS_CHECK_LAYOUT:
 				[warnings addObject:[NSImage imageNamed:@"_file_check_layout"]];
 				break;
+                
 			// string warning is the same as file warning
-			//case STRING_STATUS_WARNING:
+			// case STRING_STATUS_WARNING:
 			case FILE_STATUS_WARNING:
 				[warnings addObject:[NSImage imageNamed:@"_warning"]];
 				break;
 		}
 	}
-	if([warnings count] == 0) {
+
+    if ([warnings count] == 0)
+    {
 		return nil;
-	} else {
+	}
+    else
+    {
 		return [warnings imageUnion];		
 	}
 }
 
 #pragma mark -
 
-- (NSArray*)filteredFileControllers
+- (NSArray *)filteredFileControllers
 {
 	NSArray *array = [self fileControllers];
 	NSPredicate * p = [NSPredicate predicateWithFormat:@"local == %d", mFilterShowLocalFiles?1:0];
 	array = [array filteredArrayUsingPredicate:p];
 	mNumberOfFilteredFileControllers = [array count];
 	mNumberOfFoundFileControllers = [array count];
+    
 	return array;
 }
 
-- (FileController*)fileControllerWithFileModel:(FileModel*)fileModel
+- (FileController *)fileControllerWithFileModel:(FileModel *)fileModel
 {
 	BOOL optimized = YES;
-	if(optimized) {
+    
+	if (optimized)
+    {
 		return [self lookupInCache:[fileModel relativeFilePath]];
-	} else {
-		for(FileController *fileController in [self fileControllers]) {
-			if([fileController fileModel] == fileModel)
+	}
+    else
+    {
+		for (FileController *fileController in [self fileControllers])
+        {
+			if ([fileController fileModel] == fileModel)
 				return fileController;
-		}	
+		}
+        
 		return nil;			
 	}
 }
 
-- (FileController*)fileControllerWithRelativePath:(NSString*)relativePath translate:(BOOL)translate
+- (FileController *)fileControllerWithRelativePath:(NSString *)relativePath translate:(BOOL)translate
 {
 	NSString *localizedRelativePath = relativePath;
-	if(translate) {
+    
+	if (translate)
+    {
 		localizedRelativePath = [FileTool translatePath:relativePath toLanguage:[self language]];		
 	}
 
 	BOOL optimized = YES;
-	if(optimized) {
+	
+    if (optimized)
+    {
 		return [self lookupInCache:localizedRelativePath];
-	} else {
+	}
+    else
+    {
 		return [self findFileControllerWithRelativePath:localizedRelativePath];
 	}
 }
 
-- (FileController*)findFileControllerWithRelativePath:(NSString*)relativePath
+- (FileController *)findFileControllerWithRelativePath:(NSString *)relativePath
 {
-	for(FileController *fileController in [self fileControllers]) {
-        if([[fileController relativeFilePath] isEquivalentToPath:relativePath])
+	for (FileController *fileController in [self fileControllers])
+    {
+        if ([[fileController relativeFilePath] isEquivalentToPath:relativePath])
 			return fileController;        
 	}
+    
 	return nil;			
 }
 
-- (NSMutableArray*)fileControllersMatchingName:(NSString*)name
+- (NSMutableArray *)fileControllersMatchingName:(NSString *)name
 {
 	NSMutableArray *matches = [NSMutableArray array];
-	for(FileController *fileController in [self fileControllers]) {
-		if([[[fileController relativeFilePath] lastPathComponent] isEqualCaseInsensitiveToString:name])
+    
+	for (FileController *fileController in [self fileControllers])
+    {
+		if ([[[fileController relativeFilePath] lastPathComponent] isEqualCaseInsensitiveToString:name])
 			[matches addObject:fileController];
-	}	
+	}
+    
 	return matches;
 }
 
 #pragma mark -
 
-- (FileController*)correspondingBaseFileControllerForFileController:(FileController*)fileController
+- (FileController *)correspondingBaseFileControllerForFileController:(FileController *)fileController
 {
 	return [[self parent] correspondingBaseFileControllerForFileController:fileController];
 }
 
-- (FileController*)fileControllerMatchingBaseFileController:(FileController*)baseFileController
+- (FileController *)fileControllerMatchingBaseFileController:(FileController *)baseFileController
 {
 	return [self fileControllerWithRelativePath:[baseFileController relativeFilePath] translate:YES];
 }
 
 #pragma mark -
 
-- (NSArray*)fileControllersToSynchToDisk
+- (NSArray *)fileControllersToSynchToDisk
 {
 	NSMutableArray *array = [NSMutableArray array];
-	for(FileController *fileController in [self fileControllers]) {
-		if([fileController statusSynchToDisk])
+	
+    for (FileController *fileController in [self fileControllers])
+    {
+		if ([fileController statusSynchToDisk])
 			[array addObject:fileController];
 	}		
-	return array;
+	
+    return array;
 }
 
-- (NSArray*)fileControllersToSynchFromDisk
+- (NSArray *)fileControllersToSynchFromDisk
 {
 	NSMutableArray *array = [NSMutableArray array];
-	for(FileController *fileController in [self fileControllers]) {
-		if([fileController statusSynchFromDisk])
+	
+    for (FileController *fileController in [self fileControllers])
+    {
+		if ([fileController statusSynchFromDisk])
 			[array addObject:fileController];
-	}		
+	}
+    
 	return array;
 }
 

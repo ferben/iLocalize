@@ -8,19 +8,21 @@
 
 @class Console;
 @class TableViewCustom;
-@interface OperationReportWC : NSWindowController<NSTableViewDelegate> {
-	IBOutlet NSArrayController	*mLogsController;
-	IBOutlet TableViewCustom *mTableView;
-	IBOutlet NSTextView	*mDetailedTextView;
-	Console	*mConsole;
-	int	mFromIndex;
-	int mToIndex;
+
+@interface OperationReportWC : NSWindowController<NSTableViewDelegate>
+{
+	IBOutlet NSArrayController  *mLogsController;
+	IBOutlet TableViewCustom    *mTableView;
+	IBOutlet NSTextView         *mDetailedTextView;
+	Console                     *mConsole;
+	NSUInteger                   mFromIndex;
+	NSUInteger                   mToIndex;
 }
 
-+ (void)showConsoleIfWarningsOrErrorsSinceLastMark:(Console*)console;
-+ (void)showConsoleIfWarningsOrErrorsSinceLastMarkWithDelay:(Console*)console;
++ (void)showConsoleIfWarningsOrErrorsSinceLastMark:(Console *)console;
++ (void)showConsoleIfWarningsOrErrorsSinceLastMarkWithDelay:(Console *)console;
 
-- (void)setConsole:(Console*)console fromIndex:(int)index;
+- (void)setConsole:(Console *)console fromIndex:(NSUInteger)index;
 - (void)display;
 
 - (IBAction)export:(id)sender;

@@ -29,22 +29,24 @@
 
 - (id)init
 {
-    if((self = [super init])) {
+    if ((self = [super init]))
+    {
         mFilesToAdd = [[NSMutableArray alloc] init];
         mFilesToUpdate = [[NSMutableArray alloc] init];
         mFilesToDelete = [[NSMutableArray alloc] init];
         mFilesIdentical = [[NSMutableArray alloc] init];
     }
+    
     return self;
 }
 
 
-- (NSString*)baseLanguage
+- (NSString *)baseLanguage
 {
 	return [[self projectController] baseLanguage];
 }
 
-- (NSArray*)getAllSourceRelativeFiles
+- (NSArray *)getAllSourceRelativeFiles
 {
     // Build the list of all files (relative path) in the base language of the source
     
@@ -55,42 +57,47 @@
     
     NSEnumerator *enumerator = [[rfe filesOfLanguage:[[self projectController] baseLanguage]] objectEnumerator];
     NSString *absoluteSourceFile;
-    while((absoluteSourceFile = [enumerator nextObject])) {
+    
+    while ((absoluteSourceFile = [enumerator nextObject]))
+    {
         [files addObject:[absoluteSourceFile stringByRemovingPrefix:sourcePath.sourcePath]];
     }
     
     return files;    
 }
 
-- (BOOL)shouldUpdateProjectFile:(NSString*)relativeProjectFile sourceFile:(NSString*)relativeSourceFile
+- (BOOL)shouldUpdateProjectFile:(NSString *)relativeProjectFile sourceFile:(NSString *)relativeSourceFile
 {
 	NSString *projectAbsoluteFile = [[self projectController] absoluteProjectPathFromRelativePath:relativeProjectFile];
     NSString *sourceAbsoluteFile = [sourcePath.sourcePath stringByAppendingPathComponent:relativeSourceFile];
 	
 	// Check first by using a binary comparison if the files are identical.
-	if([projectAbsoluteFile isPathContentEqualsToPath:sourceAbsoluteFile]) {
+	if ([projectAbsoluteFile isPathContentEqualsToPath:sourceAbsoluteFile])
+    {
 		return NO;
-	} else {
+	}
+    else
+    {
         return YES;
     }
 }
 
-- (NSArray*)filesToAdd
+- (NSArray *)filesToAdd
 {
     return mFilesToAdd;
 }
 
-- (NSArray*)filesToUpdate
+- (NSArray *)filesToUpdate
 {
     return mFilesToUpdate;
 }
 
-- (NSArray*)filesToDelete
+- (NSArray *)filesToDelete
 {
     return mFilesToDelete;    
 }
 
-- (NSArray*)filesIdentical
+- (NSArray *)filesIdentical
 {
     return mFilesIdentical;
 }
@@ -114,42 +121,59 @@
     [mFilesToAdd addObjectsFromArray:allSourceRelativeFiles];
     
 	NSArray *fcs = [[[self projectController] baseLanguageController] fileControllers];
-	int total = [fcs count];
+	NSUInteger total = [fcs count];
 	__block int32_t executed = 0;
 	[self setOperationProgress:0];
 
-	[fcs enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+	[fcs enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id obj, NSUInteger idx, BOOL *stop)
+    {
 		FileController *projectBaseFileController = obj;
-		// Skip local file
-		if([projectBaseFileController isLocal]) return;
+
+        // Skip local file
+		if ([projectBaseFileController isLocal])
+            return;
 		
         NSString *projectRelativeBaseFile = [projectBaseFileController relativeFilePath];	
 		
 		NSString *sp;
-		for(sp in [FileTool equivalentLanguagePaths:projectRelativeBaseFile]) {
-			if([allSourceRelativeFiles containsObject:sp]) break;			
+        
+		for (sp in [FileTool equivalentLanguagePaths:projectRelativeBaseFile])
+        {
+			if ([allSourceRelativeFiles containsObject:sp])
+                break;
 		}
 		
-		if(sp) {
+		if (sp)
+        {
 			// File exists in the source... now see if the file needs to be updated
-			if([self shouldUpdateProjectFile:projectRelativeBaseFile sourceFile:sp]) {
+			if ([self shouldUpdateProjectFile:projectRelativeBaseFile sourceFile:sp])
+            {
 				// File should be updated
-				@synchronized(self) {
+				@synchronized(self)
+                {
 					[mFilesToUpdate addObject:sp];
 				}
-			} else {
+			}
+            else
+            {
 				// File is identical
-				@synchronized(self) {
+				@synchronized(self)
+                {
 					[mFilesIdentical addObject:projectRelativeBaseFile];
 				}
 			}
+            
 			// The file exists in the project, so it doesn't count as a "new" file
-			@synchronized(self) {
+			@synchronized(self)
+            {
 				[mFilesToAdd removeObject:sp];
 			}
-		} else {
+		}
+        else
+        {
 			// File doesn't exist in the source, it has to be deleted
-			@synchronized(self) {
+			@synchronized(self)
+            {
 				[mFilesToDelete addObject:projectRelativeBaseFile];
 			}
 		}			

@@ -11,7 +11,8 @@
 #define OPERATION_UPDATE    3
 #define OPERATION_IDENTICAL 4
 
-@interface ImportDiffItem : NSObject {
+@interface ImportDiffItem : NSObject
+{
 	BOOL enabled;
 	NSUInteger operation;
 	
@@ -27,8 +28,8 @@
 @property (strong) NSString *file;
 @property (strong) NSString *source;
 
-- (NSString*)operationName;
-- (NSImage*)image;
-- (NSColor*)color;
+- (NSString *)operationName;
+- (NSImage *)image;
+- (NSColor *)color;
 
 @end

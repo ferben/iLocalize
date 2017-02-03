@@ -8,21 +8,22 @@
 
 @class FileController;
 
-@interface FileMatchItem : NSObject {
+@interface FileMatchItem : NSObject
+{
 	NSString			*mFile;
 	NSArray				*mMatchingFileControllers;
-	int					mMatchingIndex;
+	NSUInteger			mMatchingIndex;
 	
 	// For display only (used by pop-up menu)
 	NSMutableArray		*mRelativePaths;
 }
 
-+ (id)itemWithFile:(NSString*)file matchingFileControllers:(NSArray*)controllers;
++ (id)itemWithFile:(NSString *)file matchingFileControllers:(NSArray *)controllers;
 
-- (int)numberOfMatchingFiles;
-- (NSString*)file;
-- (FileController*)matchingFileController;
-- (NSArray*)matchingFiles;
+- (NSUInteger)numberOfMatchingFiles;
+- (NSString *)file;
+- (FileController *)matchingFileController;
+- (NSArray *)matchingFiles;
 - (void)setMatchingValue:(id)value;
 - (id)matchingValue;
 @end

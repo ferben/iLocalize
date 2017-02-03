@@ -92,17 +92,18 @@
 	}
 }
 
-- (void)setProgressMax:(int)max
+- (void)setProgressMax:(NSUInteger)max
 {
 	progressMax = max;
 	progress = 0;
-	[self setOperationProgress:(float)progress/progressMax];
+    
+	[self setOperationProgress:(float)progress / progressMax];
 }
 
 - (void)progressIncrement
 {
 	progress++;
-	[self setOperationProgress:(float)progress/progressMax];
+	[self setOperationProgress:(float)progress / progressMax];
 }
 
 - (BOOL)needsDisconnectInterface

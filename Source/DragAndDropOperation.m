@@ -59,40 +59,49 @@
 	mFilterResourcePathsCache = nil;
 }
 
-- (NSArray*)filterApplicationPaths:(NSArray*)filenames
+- (NSArray *)filterApplicationPaths:(NSArray *)filenames
 {
-	if(mFilterApplicationPathsCache == nil) {
+	if (mFilterApplicationPathsCache == nil)
+    {
 		mFilterApplicationPathsCache = [[filenames pathsIncludingOnlyBundles] mutableCopy];
 	}
-	return mFilterApplicationPathsCache;
+	
+    return mFilterApplicationPathsCache;
 }
 
-- (NSArray*)filterResourcePaths:(NSArray*)filenames
+- (NSArray *)filterResourcePaths:(NSArray *)filenames
 {
-	if(mFilterResourcePathsCache == nil) {
+	if (mFilterResourcePathsCache == nil)
+    {
 		mFilterResourcePathsCache = [[NSMutableArray alloc] init];
 		NSString *path;
-		for(path in filenames) {
-			if([path isPathInvisible])
+        
+		for (path in filenames)
+        {
+			if ([path isPathInvisible])
 				continue;
 			
-			if(![path isPathNib] && ([path isPathAlias] || [path isPathBundle]))
+			if (![path isPathNib] && ([path isPathAlias] || [path isPathBundle]))
 				continue;
 			
-			if([path isPathDirectory] && ![path isPathNib] && ![path isPathRTFD]) {
+			if ([path isPathDirectory] && ![path isPathNib] && ![path isPathRTFD])
+            {
 				NSDirectoryEnumerator *enumerator = [[NSFileManager defaultManager] enumeratorAtPath:path];
 				NSString *file;
-				while(file = [enumerator nextObject]) {
-					if([file isPathInvisible])
+                
+				while (file = [enumerator nextObject])
+                {
+					if ([file isPathInvisible])
 						continue;
 
-					if([file isPathNibBundle])
+					if ([file isPathNibBundle])
 						[enumerator skipDescendents];
-					else if([file isPathAlias] || [file isPathBundle])
+					else if ([file isPathAlias] || [file isPathBundle])
 						continue;                
 					
 					[mFilterResourcePathsCache addObject:[path stringByAppendingPathComponent:file]];
 				}
+                
 				// Don't add the directory itself
 				continue;
 			}
@@ -100,7 +109,8 @@
 			[mFilterResourcePathsCache addObject:path];			
 		}
 	}
-	return mFilterResourcePathsCache;
+
+    return mFilterResourcePathsCache;
 }
 
 - (void)setOperation:(int)op withParameter:(id)parameter
@@ -108,21 +118,27 @@
 	mOperation = op;
 	mParameters[FIRST_PARAM] = parameter;
 	
-	switch(mOperation) {
+	switch (mOperation)
+    {
 		case OPERATION_IMPORT_APPLICATION:
 			[mWindowLayerWC setTitle:NSLocalizedString(@"Update application", nil)];
 			[mWindowLayerWC setInfo:[NSString stringWithFormat:@"\"%@\"", [parameter lastPathComponent]]];
 			break;
-		case OPERATION_IMPORT_FILES: {
-			int count = [parameter count];
-			if(count>1)
+            
+		case OPERATION_IMPORT_FILES:
+        {
+			NSUInteger count = [parameter count];
+			
+            if (count > 1)
 				[mWindowLayerWC setTitle:[NSString stringWithFormat:NSLocalizedString(@"Update %d files", nil), count]];
 			else
 				[mWindowLayerWC setTitle:[NSString stringWithFormat:NSLocalizedString(@"Update file “%@”", nil), [[parameter firstObject] lastPathComponent]]];
+            
 			[mWindowLayerWC setInfo:@""];
 			break;			
 		}
 	}
+    
 	[self showWindowLayer];
 }
 
@@ -132,39 +148,44 @@
 	return op;
 }
 
-- (void)modifierFlagsChanged:(NSEvent*)event
+- (void)modifierFlagsChanged:(NSEvent *)event
 {
 	unsigned int flags = [event modifierFlags];	
 	mOptionKeyMask = (flags & NSAlternateKeyMask) == NSAlternateKeyMask;
 		
-	if(mOperation != OPERATION_NONE)
+	if (mOperation != OPERATION_NONE)
 		[self setOperation:[self operation:mOperation] withParameter:mParameters[FIRST_PARAM]];
 }
 
-- (void)updateWindowLayerInformationBasedOnFilenames:(NSArray*)filenames
+- (void)updateWindowLayerInformationBasedOnFilenames:(NSArray *)filenames
 {	
-	if([[self filterApplicationPaths:filenames] count] == 1)
+	if ([[self filterApplicationPaths:filenames] count] == 1)
 		[self setOperation:[self operation:OPERATION_IMPORT_APPLICATION] withParameter:[[self filterApplicationPaths:filenames] firstObject]];
-	else {
+	else
+    {
 		NSArray *files = [self filterResourcePaths:filenames];
-		if([files count])
+	
+        if ([files count])
 			[self setOperation:[self operation:OPERATION_IMPORT_FILES] withParameter:files];
 	}
 }
 
-- (NSDragOperation)dragOperationBasedOnFilenames:(NSArray*)filenames
+- (NSDragOperation)dragOperationBasedOnFilenames:(NSArray *)filenames
 {
-	if([[self filterApplicationPaths:filenames] count] == 1)
+	if ([[self filterApplicationPaths:filenames] count] == 1)
 		return NSDragOperationCopy;
-	else {
+	else
+    {
 		NSArray *files = [self filterResourcePaths:filenames];
-		if([files count] >= 1)
+        
+		if ([files count] >= 1)
 			return NSDragOperationCopy;
 	}
-	return NSDragOperationNone;
+
+    return NSDragOperationNone;
 }
 
-- (NSDragOperation)dragOperationEnteredForPasteboard:(NSPasteboard*)pboard
+- (NSDragOperation)dragOperationEnteredForPasteboard:(NSPasteboard *)pboard
 {
 	[self clearFilterCaches];
 	
@@ -173,7 +194,7 @@
 	return [self dragOperationBasedOnFilenames:filenames];	
 }
 
-- (NSDragOperation)dragOperationUpdatedForPasteboard:(NSPasteboard*)pboard
+- (NSDragOperation)dragOperationUpdatedForPasteboard:(NSPasteboard *)pboard
 {
     NSArray *filenames = [pboard propertyListForType:NSFilenamesPboardType];	
 	[self updateWindowLayerInformationBasedOnFilenames:filenames];
@@ -195,8 +216,11 @@
 	NSArray *filenames = [pboard propertyListForType:NSFilenamesPboardType];
 	
 	BOOL result = NO;
-	if([[self filterApplicationPaths:filenames] count] == 1) {
-		switch(mOperation) {
+	
+    if ([[self filterApplicationPaths:filenames] count] == 1)
+    {
+		switch (mOperation)
+        {
 			case OPERATION_IMPORT_APPLICATION:
 				[self bringAppToFront];
 				NSDictionary *args = @{@"importBundlePath": [[self filterApplicationPaths:filenames] firstObject]};
@@ -204,8 +228,11 @@
 				result = YES;
 				break;
 		}
-	} else {
-		if([[self filterResourcePaths:filenames] count]) {
+	}
+    else
+    {
+		if ([[self filterResourcePaths:filenames] count])
+        {
 			[self bringAppToFront];
 			NSDictionary *args = @{@"importFilesPaths": [self filterResourcePaths:filenames]};
 			[[ImportFilesOperationDriver driverWithProjectProvider:[self projectProvider]] executeWithArguments:args];

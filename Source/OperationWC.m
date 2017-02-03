@@ -14,22 +14,24 @@
 
 - (id)init
 {
-	if(self = [super initWithWindowNibName:@"Operation"]) {
+	if (self = [super initWithWindowNibName:@"Operation"])
+    {
 		[self window];
 		mShouldCancel = NO;
 		mIndeterminateStack = [[Stack alloc] init];
 	}
-	return self;
+	
+    return self;
 }
 
 
-- (void)setTitle:(NSString*)title
+- (void)setTitle:(NSString *)title
 {
 	[mTitleField setStringValue:title];
 	[mTitleField display];
 }
 
-- (void)setInfo:(NSString*)info
+- (void)setInfo:(NSString *)info
 {
 	// If called from another thread, perform the update on the main thread:
 	// we are sure it will be correctly updated!
@@ -64,7 +66,9 @@
 - (void)popIndeterminate
 {
 	NSNumber *flag = [mIndeterminateStack popObject];
-	if(flag) {
+    
+	if (flag)
+    {
 		[self setIndeterminate:[flag boolValue]];
 	}
 }
@@ -72,9 +76,13 @@
 - (void)setCancellable:(BOOL)flag
 {
 	NSRect frame = [[self window] frame];
-	if(flag) {
+    
+	if (flag)
+    {
 		frame.size.height = 128+20;
-	} else {
+	}
+    else
+    {
 		frame.size.height = 86+20;
 	}
 	
@@ -84,16 +92,18 @@
 
 - (BOOL)shouldCancel
 {
-	if(self.operation.cancel) {
+	if (self.operation.cancel)
+    {
 		return YES;
 	}
-	if(![mCancelButton isHidden])
+	
+    if (![mCancelButton isHidden])
 		return mShouldCancel;
 	else
 		return NO;
 }
 
-- (void)setMaxSteps:(int)steps
+- (void)setMaxSteps:(NSUInteger)steps
 {
 	[mProgressIndicator setDoubleValue:0];
 	[mProgressIndicator setMinValue:0];

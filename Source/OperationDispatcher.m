@@ -35,52 +35,58 @@ typedef id(^DispatchBlock)();
 
 - (id)init
 {
-	if(self = [super init]) {
-
-	}
+	if (self = [super init])
+    {
+    }
+    
 	return self;
 }
 
-- (EngineProvider*)engineProvider
+- (EngineProvider *)engineProvider
 {
 	return [[self projectProvider] engineProvider];
 }
 
-- (Console*)console
+- (Console *)console
 {
 	return [[self projectProvider] console];
 }
 
-- (OperationWC*)operationWC
+- (OperationWC *)operationWC
 {
 	return [[self projectProvider] operation];
 }
 
-- (void)dispatch:(Operation*)op callback:(OperationCompletionCallbackBlock)callback
+- (void)dispatch:(Operation *)op callback:(OperationCompletionCallbackBlock)callback
 {
     [self dispatchOperation:op callback:callback];
 }
 
 #pragma mark -
 
-- (void)addLanguage:(NSString*)language completion:(OperationDispatcherCompletionBlock)completion {
-    [self dispatchBlock:^id{
+- (void)addLanguage:(NSString *)language completion:(OperationDispatcherCompletionBlock)completion
+{
+    [self dispatchBlock:^id
+    {
         [[[self engineProvider] languageEngine] addLanguage:language];
         return nil;
     } completion:completion];
 }
 
-- (void)renameLanguage:(NSString*)source toLanguage:(NSString*)target completion:(OperationDispatcherCompletionBlock)completion {
-    [self dispatchBlock:^id{
+- (void)renameLanguage:(NSString *)source toLanguage:(NSString *)target completion:(OperationDispatcherCompletionBlock)completion
+{
+    [self dispatchBlock:^id
+    {
         [[[self engineProvider] languageEngine] renameLanguage:source
                                                     toLanguage:target];
         return nil;
     } completion:completion];
 }
 
-- (void)removeLanguage:(NSString*)language completion:(OperationDispatcherCompletionBlock)completion
+- (void)removeLanguage:(NSString *)language completion:(OperationDispatcherCompletionBlock)completion
 {
-    [self dispatchImmediatelyBlock:^id{
+    [self dispatchImmediatelyBlock:^id
+    {
         [[[self engineProvider] languageEngine] removeLanguage:language];
         return nil;
     } completion:completion];
@@ -88,9 +94,10 @@ typedef id(^DispatchBlock)();
 
 #pragma mark -
 
-- (void)addFiles:(NSArray*)files language:(NSString*)language toSmartPath:(NSString*)smartPath completion:(OperationDispatcherCompletionBlock)completion
+- (void)addFiles:(NSArray *)files language:(NSString *)language toSmartPath:(NSString *)smartPath completion:(OperationDispatcherCompletionBlock)completion
 {
-    [self dispatchImmediatelyBlock:^id{
+    [self dispatchImmediatelyBlock:^id
+    {
         [[[self engineProvider] fileEngine] addFiles:files
                                             language:language
                                          toSmartPath:smartPath];
@@ -98,9 +105,10 @@ typedef id(^DispatchBlock)();
     } completion:completion];
 }
 
-- (void)removeFileControllers:(NSArray*)fileControllers completion:(OperationDispatcherCompletionBlock)completion
+- (void)removeFileControllers:(NSArray *)fileControllers completion:(OperationDispatcherCompletionBlock)completion
 {
-    [self dispatchImmediatelyBlock:^id{
+    [self dispatchImmediatelyBlock:^id
+    {
         [[[self engineProvider] fileEngine] deleteFileControllers:fileControllers];
         return nil;
     } completion:completion];
@@ -108,9 +116,10 @@ typedef id(^DispatchBlock)();
 
 #pragma mark -
 
-- (void)synchronizeFileControllers:(NSArray*)fileControllers completion:(OperationDispatcherCompletionBlock)completion
+- (void)synchronizeFileControllers:(NSArray *)fileControllers completion:(OperationDispatcherCompletionBlock)completion
 {
-    [self dispatchBlock:^id{
+    [self dispatchBlock:^id
+    {
         [[[self engineProvider] synchronizeEngine] synchronizeFileControllers:fileControllers];
         return nil;
     } completion:completion];
@@ -118,9 +127,10 @@ typedef id(^DispatchBlock)();
 
 #pragma mark -
 
-- (void)replaceLocalizedFileControllersWithCorrespondingBase:(NSArray*)fileControllers keepLayout:(BOOL)layout completion:(OperationDispatcherCompletionBlock)completion
+- (void)replaceLocalizedFileControllersWithCorrespondingBase:(NSArray *)fileControllers keepLayout:(BOOL)layout completion:(OperationDispatcherCompletionBlock)completion
 {
-    [self dispatchImmediatelyBlock:^id{
+    [self dispatchImmediatelyBlock:^id
+    {
         [[[self engineProvider] replaceEngine] replaceLocalizedFileControllersWithCorrespondingBase:fileControllers
                                                                                          keepLayout:layout];
         return nil;
@@ -129,9 +139,10 @@ typedef id(^DispatchBlock)();
 
 #pragma mark -
 
-- (void)cleanWithAttributes:(NSDictionary*)attributes completion:(OperationDispatcherCompletionBlock)completion
+- (void)cleanWithAttributes:(NSDictionary *)attributes completion:(OperationDispatcherCompletionBlock)completion
 {
-    [self dispatchBlock:^id{
+    [self dispatchBlock:^id
+    {
         [[[self engineProvider] cleanEngine] cleanWithAttributes:attributes];
         return nil;
     } completion:completion];
@@ -139,39 +150,52 @@ typedef id(^DispatchBlock)();
 
 #pragma mark -
 
-- (void)checkProjectLanguages:(NSArray*)languages completion:(OperationDispatcherCompletionBlock)completion
+- (void)checkProjectLanguages:(NSArray *)languages completion:(OperationDispatcherCompletionBlock)completion
 {
-    [self dispatchBlock:^{
-        int warnings = [[[self engineProvider] checkEngine] checkLanguages:languages];
+    [self dispatchBlock:^
+    {
+        NSUInteger warnings = [[[self engineProvider] checkEngine] checkLanguages:languages];
+        
         return @(warnings);
     } completion:completion];
 }
 
 #pragma mark -
 
-- (void)dispatchOperation:(Operation*)op callback:(OperationCompletionCallbackBlock)callback {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-        @autoreleasepool {
+- (void)dispatchOperation:(Operation *)op callback:(OperationCompletionCallbackBlock)callback
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^
+    {
+        @autoreleasepool
+        {
             [self executeOperation:op operationCallback:callback block:nil completion:nil];
         }
     });
 }
 
-- (void)dispatchBlock:(DispatchBlock)block completion:(OperationDispatcherCompletionBlock)completion {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-        @autoreleasepool {
+- (void)dispatchBlock:(DispatchBlock)block completion:(OperationDispatcherCompletionBlock)completion
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^
+    {
+        @autoreleasepool
+        {
             [self executeOperation:nil operationCallback:nil block:block completion:completion];
         }
     });
 }
 
-- (void)dispatchImmediatelyBlock:(DispatchBlock)block completion:(OperationDispatcherCompletionBlock)completion {
+- (void)dispatchImmediatelyBlock:(DispatchBlock)block completion:(OperationDispatcherCompletionBlock)completion
+{
     [self executeOperation:nil operationCallback:nil block:block completion:completion];
 }
 
-- (void)executeOperation:(Operation*)operation operationCallback:(OperationCompletionCallbackBlock)operationCallback
-                   block:(DispatchBlock)block completion:(OperationDispatcherCompletionBlock)completion {
-	if(operation) {
+- (void)executeOperation:(Operation *)operation
+       operationCallback:(OperationCompletionCallbackBlock)operationCallback
+                   block:(DispatchBlock)block
+              completion:(OperationDispatcherCompletionBlock)completion
+{
+	if (operation)
+    {
 		[[NSThread currentThread] setName:[NSString stringWithFormat:@"%@", operation]];
 	}
 		
@@ -181,14 +205,22 @@ typedef id(^DispatchBlock)();
 
 	// Note: lock the background task during an operation to avoid any problem
 	BOOL backgroundThreadLocked = NO;
-	if(![[BackgroundUpdater shared] tryLockFor:5]) {
+    
+	if (![[BackgroundUpdater shared] tryLockFor:5])
+    {
 		NSLog(@"Background updater thread still running after 5 seconds. Wait 20s more.");
-		if(![[BackgroundUpdater shared] tryLockFor:20]) {
+        
+		if (![[BackgroundUpdater shared] tryLockFor:20])
+        {
 			NSLog(@"Failed to acquire BackgroundUpdater lock for 20 seconds. Continue to process thread.");
-		} else {
+		}
+        else
+        {
 			backgroundThreadLocked = YES;
 		}
-	} else {
+	}
+    else
+    {
 		backgroundThreadLocked = YES;
 	}
 
@@ -197,29 +229,42 @@ typedef id(^DispatchBlock)();
 	[[self console] mark];
 	
     id results = nil;
-	@try {
-		if(operation) {
+	
+    @try
+    {
+		if (operation)
+        {
 			[operation execute];
-		} else if (block) {
+		}
+        else if (block)
+        {
             results = block();
 		}
 	}
-	@catch(id exception) {
+    @catch (id exception)
+    {
 		[exception printStackTrace];
-		if(operation) {
+        
+		if (operation)
+        {
 			[operation notifyException:exception];
-		} else {
+		}
+        else
+        {
 			[[self console] addError:[exception reason]
 						 description:[NSString stringWithFormat:@"Exception in operation thread: %@", exception]
 							   class:[self class]];					
 		}
 	}
-	@finally {
-		if(backgroundThreadLocked) {
+	@finally
+    {
+		if (backgroundThreadLocked)
+        {
 			[[BackgroundUpdater shared] unlock];		
 		}
 		
-        dispatch_async(dispatch_get_main_queue(), ^{
+        dispatch_async(dispatch_get_main_queue(), ^
+        {
             [self.projectProvider endOperation];
             [self finishExecutionWithResults:results operation:operation operationCallback:operationCallback completion:completion];
         });

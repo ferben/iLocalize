@@ -61,7 +61,7 @@
 	return mTitle;
 }
 
-- (int)numberOfNodes
+- (NSUInteger)numberOfNodes
 {
 	return [mNodes count];
 }

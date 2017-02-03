@@ -19,7 +19,8 @@
  This is the base class that every operation must extend. It provides
  basic features such as progress notification and cancellation.
  */
-@interface Operation : NSObject {
+@interface Operation : NSObject
+{
 	BOOL cancel;
 	
 	// Array of errors that happened with this operation
@@ -28,8 +29,8 @@
     NSMutableArray *alerts;
 		
 	// Keeping track of the progress
-	int progressMax;
-	int progress;
+	NSUInteger progressMax;
+    NSUInteger progress;
 }
 
 @property (weak) OperationDriver *driver;
@@ -53,34 +54,34 @@
 /**
  Returns the project controller.
  */
-- (ProjectController*)projectController;
+- (ProjectController *)projectController;
 
 /**
  Returns the project model.
  */
-- (ProjectModel*)projectModel;
+- (ProjectModel *)projectModel;
 
 /**
  Returns the engine provider.
  */
-- (EngineProvider*)engineProvider;
+- (EngineProvider *)engineProvider;
 
 /**
  Returns the console.
  */
-- (Console*)console;
+- (Console *)console;
 
 /**
  Sets the specified operation as a sub-operation. A sub operation will report
  all its activity to its main operation. This is used when one operation
  is using another operation to perform its operation.
  */
-- (void)setSubOperation:(Operation*)subop;
+- (void)setSubOperation:(Operation *)subop;
 
 /**
  Sets the name of the operation.
  */
-- (void)setOperationName:(NSString*)name;
+- (void)setOperationName:(NSString *)name;
 
 /**
  Sets the progress of the operation, between 0 and 1.
@@ -90,7 +91,7 @@
 /**
  Sets the maximum value of the progress.
  */
-- (void)setProgressMax:(int)max;
+- (void)setProgressMax:(NSUInteger)max;
 
 /**
  Increments the progress value. Usually one will use setProgressMax with progressIncrement
@@ -120,37 +121,37 @@
 /**
  Returns the list of errors.
  */
-- (NSArray*)errors;
+- (NSArray *)errors;
 
 /**
  Notifies that an exception occurred.
  */
-- (void)notifyException:(NSException*)exception;
+- (void)notifyException:(NSException *)exception;
 
 /**
  Notifies that an error occurred.
  */
-- (void)notifyError:(NSError*)error;
+- (void)notifyError:(NSError *)error;
 
 /**
  Returns the list of warnings.
  */
-- (NSArray*)warnings;
+- (NSArray *)warnings;
 
 /**
  Notifies that a warning occurred. The operation will continue.
  */
-- (void)notifyWarning:(NSError*)error;
+- (void)notifyWarning:(NSError *)error;
 
 /**
  Returns the list of alerts.
  */
-- (NSArray*)alerts;
+- (NSArray *)alerts;
 
 /**
  Reports an information that is going to be displayed in an alert.
  */
-- (void)reportInformativeAlertWithTitle:(NSString*)title message:(NSString*)message;
+- (void)reportInformativeAlertWithTitle:(NSString *)title message:(NSString *)message;
 
 #pragma mark Subclass
 

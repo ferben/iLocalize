@@ -92,7 +92,8 @@
 
 - (id)init
 {
-	if((self = [super initWithWindowNibName:@"ProjectWindow"])) {
+	if ((self = [super initWithWindowNibName:@"ProjectWindow"]))
+    {
 		mProjectMenuFile = [ProjectMenuFile newInstance:self];
 		mProjectMenuEdit = [ProjectMenuEdit newInstance:self];
 		mProjectMenuView = [ProjectMenuView newInstance:self];
@@ -135,7 +136,8 @@
 													 name:ILDisplayedStringsDidChange
 												   object:nil];	      		
 	}
-	return self;
+	
+    return self;
 }
 
 - (void)dealloc
@@ -155,47 +157,63 @@
 
 #pragma mark Key View Loop Management
 
-- (void)insertKeyView:(NSView*)view atIndex:(NSUInteger)index
+- (void)insertKeyView:(NSView *)view atIndex:(NSUInteger)index
 {
     NSView *previousView = nil;
-    if(index < keyViewsLoop.count) {
+    
+    if (index < keyViewsLoop.count)
+    {
         previousView = keyViewsLoop[index];        
     }
+    
     [previousView setNextKeyView:view];
     
     NSView *nextView;
-    if(index+1 < keyViewsLoop.count) {
-        nextView = keyViewsLoop[index+1];
-    } else {
+    
+    if(index + 1 < keyViewsLoop.count)
+    {
+        nextView = keyViewsLoop[index + 1];
+    }
+    else
+    {
         nextView = [keyViewsLoop firstObject];
     }
+    
     [view setNextKeyView:nextView];
     
-    if(index < keyViewsLoop.count) {
+    if (index < keyViewsLoop.count)
+    {
         [keyViewsLoop insertObject:view atIndex:index+1];    
-    } else {
+    }
+    else
+    {
         [keyViewsLoop addObject:view];
     }
 }
 
-- (void)insertKeyViews:(NSArray*)views after:(NSView*)afterView
+- (void)insertKeyViews:(NSArray *)views after:(NSView *)afterView
 {
-    if(views.count == 0) return;
+    if (views.count == 0)
+        return;
     
-    NSUInteger index = keyViewsLoop.count == 0 ? 0 : keyViewsLoop.count-1;    
-    for(int i=0; i<keyViewsLoop.count; i++) {
-        if(keyViewsLoop[i] == afterView) {            
+    NSUInteger index = (keyViewsLoop.count == 0) ? 0 : keyViewsLoop.count - 1;
+    
+    for (NSUInteger i = 0; i < keyViewsLoop.count; i++)
+    {
+        if (keyViewsLoop[i] == afterView)
+        {
             index = i;
             break;
         }
     }        
 
-    for(NSView *v in views) {
+    for(NSView *v in views)
+    {
         [self insertKeyView:v atIndex:index++];
     }
 }
 
-- (void)addKeyView:(NSView*)view
+- (void)addKeyView:(NSView *)view
 {
     [self insertKeyViews:@[view] after:nil];
 }
@@ -203,14 +221,19 @@
 - (void)printKeyViewsLoop
 {
         NSLog(@"> %@", keyViewsLoop);
-        for(NSView *v in keyViewsLoop) {
+    
+        for (NSView *v in keyViewsLoop)
+        {
             NSLog(@"%@ <- %@ -> %@", [v previousValidKeyView], v, [v nextValidKeyView]);
         }
         
         NSLog(@"----------- Forward");
+    
         NSView *o = (NSView*)[[self window] initialFirstResponder];
         NSView *v = o;
-        do {
+    
+        do
+        {
             NSLog(@"%@", v);
             v = [v nextValidKeyView];
         } while(o != v);
@@ -219,7 +242,9 @@
             NSLog(@"----------- Backward");
             NSView *o = (NSView*)[[self window] initialFirstResponder];
             NSView *v = o;
-            do {
+            
+            do
+            {
                 NSLog(@"%@", v);
                 v = [v previousValidKeyView];
             } while(o != v);
@@ -230,7 +255,8 @@
 
 - (void)windowWillClose:(NSNotification *)notif
 {
-	if([notif object] == [self window]) {
+	if ([notif object] == [self window])
+    {
         [mProjectController setContent:nil];
 		[RecentDocuments documentClosed:[self document]];
 		[self unregisterFromPreferences];
@@ -277,7 +303,8 @@
 	
 	// Main split view
 	NSRect windowFrame = [[[self window] contentView] frame];
-	mMainSplitView = [[NSSplitView alloc] initWithFrame:windowFrame];
+	
+    mMainSplitView = [[NSSplitView alloc] initWithFrame:windowFrame];
 	[mMainSplitView accessibilitySetOverrideValue:@"Main Split View" forAttribute:NSAccessibilityValueDescriptionAttribute];
 	[mMainSplitView accessibilitySetOverrideValue:@"Main Split View" forAttribute:NSAccessibilityValueAttribute];
 
@@ -480,7 +507,8 @@
 {	
 	// This method is called when the document is closed after the project creation process
 	// is canceled. We should return without doing anything - otherwise exceptions are raised.
-	if([[self operation] shouldCancel]) {
+	if ([[self operation] shouldCancel])
+    {
 		return;				
 	}
 	
@@ -506,9 +534,13 @@
 
 	// Set the frame of the window (make sure it is visible on the screen)
     NSRect frame = [[self projectPreferences] windowPosition];
-    if(!NSEqualRects(frame, NSZeroRect) && [self frameIsVisibleOnScreens:frame]) {
+    
+    if (!NSEqualRects(frame, NSZeroRect) && [self frameIsVisibleOnScreens:frame])
+    {
         [[self window] setFrame:frame display:NO];		
-	} else {
+	}
+    else
+    {
 		// A window without position should be positioned automatically to have a nice size ;-)
 		NSRect screenFrame = [[NSScreen mainScreen] visibleFrame];
 		float height = screenFrame.size.height * 0.8;
@@ -517,7 +549,9 @@
 	}
 	
 	NSDictionary *uiPrefs = [[self projectPreferences] interfacePrefs];
-	if(uiPrefs) {
+	
+    if (uiPrefs)
+    {
 		[mMainSplitView restorePositions:uiPrefs[@"mainSplitView"]];
 		[mRightSideContainerSplitView restorePositions:uiPrefs[@"rightSideSplitView"]];
 		[mStructureFilesSplitView restorePositions:uiPrefs[@"structureFilesSplitView"]];
@@ -541,11 +575,13 @@
 	[self selectSavedLanguage];
 	[self updateLocalFilesVisibility];
 	
-	if(![self isStructureViewVisible]) {
+	if (![self isStructureViewVisible])
+    {
 		[self ensureStructureView];		
 	}
 	
-	if([self isStatusBarVisible]) {
+	if ([self isStatusBarVisible])
+    {
 		[self ensureStatusBar];		
 	}
 	
@@ -568,15 +604,20 @@
 		[mCustomFieldEditor setShowInvisibleCharacters:[self projectPreferences].showInvisibleCharacters];		
         return mCustomFieldEditor;
     }
+    
     return nil;
 }
 
 - (NSString *)windowTitleForDocumentDisplayName:(NSString *)displayName
 {
 	NSString *appVersion = [[self projectDocument] projectAppVersionString];
-	if([appVersion length] > 0) {
+	
+    if ([appVersion length] > 0)
+    {
 		return [displayName stringByAppendingString:[NSString stringWithFormat:@" - %@ (%@)", [[self projectDocument] applicationExecutableName], appVersion]];		
-	} else {
+	}
+    else
+    {
 		return [displayName stringByAppendingString:[NSString stringWithFormat:@" - %@", [[self projectDocument] applicationExecutableName]]];			
 	}
 }
@@ -594,17 +635,20 @@
 
 - (BOOL)frameIsVisibleOnScreens:(NSRect)frame
 {
-    for(NSScreen *s in [NSScreen screens]) {
-        if(NSIntersectsRect([s frame], frame))
+    for (NSScreen *s in [NSScreen screens])
+    {
+        if (NSIntersectsRect([s frame], frame))
             return YES;        
     }
+    
     return NO;
 }
 
 - (BOOL)shouldCascadeWindows
 {
     NSRect frame = [[self projectPreferences] windowPosition];
-    if(NSEqualRects(frame, NSZeroRect))
+
+    if (NSEqualRects(frame, NSZeroRect))
         return YES;
     
     return ![self frameIsVisibleOnScreens:frame];
@@ -612,22 +656,29 @@
 
 - (NSRect)splitView:(NSSplitView *)splitView additionalEffectiveRectOfDividerAtIndex:(NSInteger)dividerIndex
 {
-	if(splitView == mMainSplitView) {
+	if (splitView == mMainSplitView)
+    {
 		NSRect r = [mMainSplitViewThumbView bounds];
+        
 		r.origin.x = r.origin.x+r.size.width-15;
 		r.size.width = 15;
+        
 		return [mMainSplitViewThumbView convertRect:r toView:splitView]; 		
-	} else {
+	}
+    else
+    {
 		return NSZeroRect;		
 	}
 }
 
 - (BOOL)splitView:(NSSplitView*)splitView shouldHideDividerAtIndex:(NSInteger)index
 {
-	if(splitView == mSidebarSplitView) {
+	if (splitView == mSidebarSplitView)
+    {
 		return YES;
 	}
-	return NO;
+	
+    return NO;
 }
 
 - (BOOL)splitView:(NSSplitView *)splitView canCollapseSubview:(NSView *)subview
@@ -637,33 +688,42 @@
 
 - (CGFloat)splitView:(NSSplitView *)splitView constrainMinCoordinate:(CGFloat)proposedMin ofSubviewAt:(NSInteger)offset
 {
-	if(splitView == mMainSplitView) {
+	if (splitView == mMainSplitView)
+    {
 		return MAX(proposedMin, 180);
 	}
-	if(splitView == mStructureFilesSplitView) {
+	if (splitView == mStructureFilesSplitView)
+    {
 		return MAX(proposedMin, 180);
 	}
-	if(splitView == mRightSideContainerSplitView) {
+	
+    if (splitView == mRightSideContainerSplitView)
+    {
 		return MAX(proposedMin, 100);
 	}
-	return proposedMin;
+	
+    return proposedMin;
 }
 
 - (CGFloat)splitView:(NSSplitView *)splitView constrainMaxCoordinate:(CGFloat)proposedMax ofSubviewAt:(NSInteger)offset
 {
-	if(splitView == mMainSplitView) {
-		return proposedMax-300;
+	if (splitView == mMainSplitView)
+    {
+		return proposedMax - 300;
 	}
-	if(splitView == mStructureFilesSplitView) {
-		return proposedMax-300;
+	
+    if (splitView == mStructureFilesSplitView)
+    {
+		return proposedMax - 300;
 	}
-	if(splitView == mRightSideContainerSplitView) {
-		return proposedMax-100;
+	if (splitView == mRightSideContainerSplitView)
+    {
+		return proposedMax - 100;
 	}	
 	return proposedMax;	
 }
 
-- (void)addToAsNextResponder:(NSResponder*)responder
+- (void)addToAsNextResponder:(NSResponder *)responder
 {
 	NSResponder *ownNextResponder = [self nextResponder];
 	[super setNextResponder:responder];
@@ -682,11 +742,14 @@
 
 - (void)ensureStructureView
 {
-	if([self isStructureViewVisible]) {
+	if ([self isStructureViewVisible])
+    {
 		[mProjectFilesController.view removeFromSuperview];
 		[mStructureFilesSplitView addSubview:[mProjectStructureController view]];
 		[mStructureFilesSplitView addSubview:mProjectFilesController.view];
-	} else {
+	}
+    else
+    {
 		[[mProjectStructureController view] removeFromSuperview];
 	}
 }
@@ -710,7 +773,9 @@
 {
 	NSView *v = [mProjectStatusBarController view];
 	NSSize size = v.frame.size;
-	if([self isStatusBarVisible]) {
+	
+    if ([self isStatusBarVisible])
+    {
 		// Move the right-side split view up and shrink its height
 		NSRect rightSideFrame = mRightSideContainerSplitView.frame;
 		rightSideFrame.origin.y += size.height;
@@ -719,13 +784,16 @@
 		
 		// Make sure the status bar is wide enough
 		int xOffset = 1; // offset to avoid left-side gray bar of 1 pixel
-		size.width = mRightSideContainerSplitView.frame.size.width+2*xOffset;
+	
+        size.width = mRightSideContainerSplitView.frame.size.width + 2 * xOffset;
 		[v setFrameOrigin:NSMakePoint(-xOffset, 0)];
 		[v setFrameSize:size];
 		
 		// Add the view
 		[mRightSideContainerView addSubview:v];		
-	} else {
+	}
+    else
+    {
 		[v removeFromSuperview];
 		
 		// Restore the right-side view
@@ -748,7 +816,9 @@
 {
 	NSView *view = [mProjectViewSearchController view];
 	CGFloat viewHeight = [mProjectViewSearchController viewHeight];
-	if(!mSearchViewVisible) {
+	
+    if (!mSearchViewVisible)
+    {
 		mSearchViewVisible = YES;
 				
 		// reduce the height of the split view
@@ -767,7 +837,7 @@
 	}
 }
 
-- (void)showSearchView:(ExplorerFilter*)filter
+- (void)showSearchView:(ExplorerFilter *)filter
 {
 	[mSearchField setStringValue:filter.name];
 	[mProjectViewSearchController setContext:filter.stringContentMatchingContext];
@@ -778,7 +848,9 @@
 - (void)hideSearchView
 {
 	NSView *view = [mProjectViewSearchController view];
-	if(mSearchViewVisible) {
+    
+	if (mSearchViewVisible)
+    {
 		mSearchViewVisible = NO;
 		CGFloat searchViewHeight = [view frame].size.height;
 		
@@ -792,27 +864,29 @@
 	}
 }
 
-- (SearchContext*)searchContext
+- (SearchContext *)searchContext
 {
 	return [mProjectViewSearchController context];
 }
 
-- (NSString*)searchString
+- (NSString *)searchString
 {
 	return [mSearchField stringValue];
 }
 
-- (NSString*)replaceString
+- (NSString *)replaceString
 {
 	return [mProjectViewSearchController replaceString];
 }
 
 - (void)selectSearchField
 {
-    if(![[mToolbar visibleItems] containsObject:mSearchToolbarItem]) {
+    if (![[mToolbar visibleItems] containsObject:mSearchToolbarItem])
+    {
         [mToolbar insertItemWithItemIdentifier:[mSearchToolbarItem itemIdentifier] atIndex:[[mToolbar visibleItems] count]];
     }
-	[[self window] makeFirstResponder:mSearchField];
+	
+    [[self window] makeFirstResponder:mSearchField];
 }
 
 /**
@@ -822,17 +896,22 @@
 - (void)doSearch
 {
 	NSString *searchString = [self searchString];
-	if([searchString length] > 0) {
+	
+    if ([searchString length] > 0)
+    {
 		ExplorerFilter *filter = [ExplorerFilter filterWithContext:[self searchContext] string:searchString];		
 		[[[self engineProvider] findEngine] findString:searchString context:[self searchContext]];
 						
 		[[self explorer] createSmartFilter:filter];
 		[[self projectExplorer] selectExplorerFilter:filter];
-	} else {
+	}
+    else
+    {
 		[[self projectExplorer] selectExplorerFilter:nil];
         [[[self engineProvider] findEngine] resetContentMatching];
 	}	
-	[self updateProjectToolbar];
+	
+    [self updateProjectToolbar];
 }
 
 /**
@@ -865,19 +944,24 @@
 - (void)searchMenuScopeChanged:(id)sender
 {
 	SearchContext *c = [self searchContext];
-	if([sender tag] == SEARCH_IGNORE_CASE) {
+	
+    if ([sender tag] == SEARCH_IGNORE_CASE)
+    {
 		c.ignoreCase = !c.ignoreCase;
-	} else {
+	}
+    else
+    {
 		c.options = [sender tag];		
 	}
-	[self doSearch];
+	
+    [self doSearch];
 }
 
 #pragma mark -
 
 - (int)elapsedMinutesSinceProjectWasOpened
 {
-	return (int)([[NSDate date] timeIntervalSinceDate:mElapsedDate]/60.0);
+	return (int)([[NSDate date] timeIntervalSinceDate:mElapsedDate] / 60.0);
 }
 
 - (void)updateProjectDetails
@@ -896,20 +980,30 @@
 {
 	LanguageController *lc = [self selectedLanguageController];
 	NSString *text;
-	if([lc percentCompleted] == 100) {
+	
+    if ([lc percentCompleted] == 100)
+    {
 		text = NSLocalizedString(@"Done", @"Language Progress Done");
-	} else {		
-		int count = [lc totalNumberOfNonTranslatedStrings];
-		if(count == 1) {
+	}
+    else
+    {
+		NSUInteger count = [lc totalNumberOfNonTranslatedStrings];
+        
+		if (count == 1)
+        {
 			text = NSLocalizedString(@"One string to translate", @"Language Progress");			
-		} else {
+		}
+        else
+        {
 			text = [NSString stringWithFormat:NSLocalizedString(@"%d strings to translate", @"Language Progress"), count];		
 		}
 	}
+    
 	[mLanguageToolbarItem setLabel:text];
 	
-	int totalFiles = [[lc fileControllers] count];
-	int filteredFiles = [[self filteredFileControllers] count];
+	NSUInteger totalFiles = [[lc fileControllers] count];
+	NSUInteger filteredFiles = [[self filteredFileControllers] count];
+    
 	// Total Files	Filtered		Text
 	// 0			0				No file
 	// 1			1				1 out of 1 file
@@ -917,32 +1011,48 @@
 	// 2			2				2 out of 2 files
 	// 1			0				0 out of 1 file
 	// 2			0				0 out of 2 files
-	text = NSLocalizedString(@"No file", @"Visible Files Info");
-	if(totalFiles > 0) {
-		if(totalFiles == filteredFiles) {
-			NSString *localizedString;
-			if(totalFiles > 1) {
+	
+    text = NSLocalizedString(@"No file", @"Visible Files Info");
+	
+    if (totalFiles > 0)
+    {
+        NSString *localizedString;
+        
+		if (totalFiles == filteredFiles)
+        {
+			if (totalFiles > 1)
+            {
 				localizedString = NSLocalizedString(@"%d files", @"Visible Files Info");
-			} else {
+			}
+            else
+            {
 				localizedString = NSLocalizedString(@"%d file", @"Visible Files Info");			
 			}
-			text = [NSString stringWithFormat:localizedString, totalFiles];					
-		} else {
-			NSString *localizedString;
-			if(totalFiles > 1) {
+			
+            text = [NSString stringWithFormat:localizedString, totalFiles];
+		}
+        else
+        {
+			if (totalFiles > 1)
+            {
 				localizedString = NSLocalizedString(@"%d out of %d files", @"Visible Files Info");
-			} else {
+			}
+            else
+            {
 				localizedString = NSLocalizedString(@"%d out of %d file", @"Visible Files Info");			
 			}
-			text = [NSString stringWithFormat:localizedString, filteredFiles, totalFiles];					
+			
+            text = [NSString stringWithFormat:localizedString, filteredFiles, totalFiles];
 		}
 	}
+    
 	[mSearchToolbarItem setLabel:text];
 }
 
 - (void)fireElapsedTime:(NSTimer*)timer
 {
-	if([[PreferencesGeneral shared] automaticallySaveProject] && ([self elapsedMinutesSinceProjectWasOpened] % [[PreferencesGeneral shared] automaticallySaveProjectDelay]) == 0) {
+	if ([[PreferencesGeneral shared] automaticallySaveProject] && ([self elapsedMinutesSinceProjectWasOpened] % [[PreferencesGeneral shared] automaticallySaveProjectDelay]) == 0)
+    {
 		[self save];
 	}
 	
@@ -952,13 +1062,17 @@
 - (void)selectSavedLanguage
 {
 	NSString *name = [[self projectPreferences] selectedLanguage];
-	unsigned index = 0;
-	for(LanguageController *lc in [mLanguagesController content]) {
-		if([[lc language] isEqualCaseInsensitiveToString:name]) {
+	NSUInteger index = 0;
+    
+	for (LanguageController *lc in [mLanguagesController content])
+    {
+		if ([[lc language] isEqualCaseInsensitiveToString:name])
+        {
 			index = [[mLanguagesController content] indexOfObject:lc];
 			break;
 		}        
     }
+    
 	[mLanguagesController setSelectionIndex:index];
 	[[self projectController] setCurrentLanguageIndex:index];
 }
@@ -982,7 +1096,8 @@
 
 - (void)save
 {
-	if([[self document] isDocumentEdited]) {
+	if ([[self document] isDocumentEdited])
+    {
 		[[self document] saveDocument:self];			
 	}
 }
@@ -1020,7 +1135,8 @@
 - (void)updateLocalFilesVisibility
 {
 	// update the language controller filtering
-	for(LanguageController *lc in [[self projectController] languageControllers]) {
+	for (LanguageController *lc in [[self projectController] languageControllers])
+    {
 		[lc setFilterShowLocalFiles:[[self projectPreferences] showLocalFiles]];
 	}	
 }
@@ -1031,44 +1147,54 @@
 - (void)applyFilterPredicate
 {
 	NSPredicate *p = nil;
-	if(mExplorerPredicate && mPathPredicate) {
+	
+    if (mExplorerPredicate && mPathPredicate)
+    {
         p = [NSCompoundPredicate andPredicateWithSubpredicates:@[mExplorerPredicate, mPathPredicate]];
-	} else if(mExplorerPredicate) {
+	}
+    else if (mExplorerPredicate)
+    {
 		p = mExplorerPredicate;
-	} else if(mPathPredicate) {
+	}
+    else if (mPathPredicate)
+    {
 		p = mPathPredicate;
 	}
 	
 	NSArrayController *c = [self filesController];
     NSIndexSet *emptySelection = [NSIndexSet indexSet];
+    
 	[c setSelectionIndexes:emptySelection]; // make sure to trigger the selection...
 	[c setFilterPredicate:p];
-	if([[c content] count] > 0) {
+    
+	if ([[c content] count] > 0)
+    {
 		[c setSelectionIndex:0]; // ... when we select the first object
 	}	
-	[self updateProjectToolbar];
+	
+    [self updateProjectToolbar];
 }
 
-- (void)setExplorerPredicate:(NSPredicate*)predicate
+- (void)setExplorerPredicate:(NSPredicate *)predicate
 {
 	mExplorerPredicate = predicate;
 
 	[self applyFilterPredicate];
 }
 
-- (void)setPathPredicate:(NSPredicate*)predicate
+- (void)setPathPredicate:(NSPredicate *)predicate
 {
 	mPathPredicate = predicate;	
 	
 	[self applyFilterPredicate];
 }
 
-- (NSPredicate*)currentFilterPredicate
+- (NSPredicate *)currentFilterPredicate
 {
 	return [[self filesController] filterPredicate];
 }
 
-- (NSArray*)filteredFileControllers
+- (NSArray *)filteredFileControllers
 {
 	return [[self filesController] arrangedObjects];
 }
@@ -1150,12 +1276,15 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:ILFileSelectionDidChange
 														object:[mProjectFilesController selectedFileControllers]];		
 
-	int count = [[mProjectFilesController selectedFileControllers] count];
-	if(count == 0) {
+	NSUInteger count = [[mProjectFilesController selectedFileControllers] count];
+    
+	if (count == 0)
+    {
 		[mCurrentFMEditor makeInvisible];
 		mCurrentFMEditor = NULL;
 		[mFileEditorContainerView setContentView:mFileEditorNoView];	
-		return;
+	
+        return;
 	}
 
 	BOOL notEditable = NO;
@@ -1167,31 +1296,40 @@
 	FMEditor *editor = nil;	// editor
 	FMEngine *engine = nil; // the associated engine
 	
-	for(FileController *fc in [mProjectFilesController selectedFileControllers]) {
+	for (FileController *fc in [mProjectFilesController selectedFileControllers])
+    {
 		// Local files are currently not editable
-		if([fc isLocal]) {
+		if ([fc isLocal])
+        {
 			notEditable = YES;
 		}
 		
 		FMEditor *e = [[self projectDocument] fileModuleEditorForFile:[fc filename]];
-		if(e == nil) {
+		
+        if (e == nil)
+        {
 			notApplicable = YES;
 			break;
 		}
 		
-		if(editor == nil) {
+		if (editor == nil)
+        {
 			ignore = [fc ignore];	
-		} else {
-			if(![fc ignore] && ignore) {
+		}
+        else
+        {
+			if (![fc ignore] && ignore)
+            {
                 ignore = NO;
 				break;
 			}
 		}
 		
-		if(editor == nil)
+		if (editor == nil)
 			editor = e;
 		
-		if(editor != e) {
+		if (editor != e)
+        {
 			notApplicable = YES;
 			break;
 		}
@@ -1199,22 +1337,30 @@
 		engine = [[self projectDocument] fileModuleEngineForFile:[fc filename]];		
 	}
 		
-	if(!notApplicable && notEditable) {
+	if (!notApplicable && notEditable)
+    {
 		[mCurrentFMEditor makeInvisible];
 		mCurrentFMEditor = NULL;
 		[mFileEditorContainerView setContentView:count==1?mFileEditorNotEditableView:mFileEditorNotApplicableView];		
-	} else if(notApplicable || editor == NULL) {
+	}
+    else if (notApplicable || editor == NULL)
+    {
 		[mCurrentFMEditor makeInvisible];
 		mCurrentFMEditor = NULL;
 		[mFileEditorContainerView setContentView:mFileEditorNotApplicableView];
-	} else if(ignore) {
+	}
+    else if (ignore)
+    {
 		[mCurrentFMEditor makeInvisible];
 		mCurrentFMEditor = NULL;
 		[mFileEditorContainerView setContentView:mFileEditorIgnoreView];		
-	} else {
+	}
+    else
+    {
 		BOOL willShow = (count>1 && [editor allowsMultipleSelection]) || (count == 1);
 		
-		if(willShow) {
+		if (willShow)
+        {
 			mCurrentFMEditor = editor;
 					
 			[editor setEngine:engine];
@@ -1222,7 +1368,9 @@
 			[editor setFileControllers:[mProjectFilesController selectedFileControllers]];
 
 			[editor makeVisibleInBox:mFileEditorContainerView];
-		} else {
+		}
+        else
+        {
 			[mCurrentFMEditor makeInvisible];
 			mCurrentFMEditor = NULL;
 
@@ -1236,16 +1384,17 @@
 	[self updateProjectDetails];
 }
 
-- (void)languageStatsDidChange:(NSNotification*)notif
+- (void)languageStatsDidChange:(NSNotification *)notif
 {
 	[self updateLanguageMenuKeyEquivalents];
 	[self updateProjectDetails];
 	[self updateProjectToolbar];
 }
 
-- (void)displayedStringsDidChange:(NSNotification*)notif
+- (void)displayedStringsDidChange:(NSNotification *)notif
 {
-	if([notif object] == nil || mCurrentFMEditor == [notif object]) {
+	if ([notif object] == nil || mCurrentFMEditor == [notif object])
+    {
 		[mProjectFilesController setNeedsDisplayToAllTableViews];
 	}
 }
@@ -1256,36 +1405,53 @@
 	[self reloadAll];
 
 	int languageIndex = 0;
+    
 	LanguageController *lc = nil;
-	if(self.reconnectLanguage) {
+	
+    if (self.reconnectLanguage)
+    {
 		int index = 0;
-		for(lc in [[self projectController] languageControllers]) {
-			if([[lc language] isEqualToString:self.reconnectLanguage]) {
+        
+        for (lc in [[self projectController] languageControllers])
+        {
+			if ([[lc language] isEqualToString:self.reconnectLanguage])
+            {
 				languageIndex = index;
 				break;
 			}
-			index++;
+			
+            index++;
 		}
 	}
+    
 	[self selectLanguageAtIndex:languageIndex];
 	
-	if(lc == nil) {
+	if (lc == nil)
+    {
 		lc = [[self projectController] baseLanguageController];
 	}
 	
 	FileController *selectFc = nil;
-	if(self.reconnectFile) {
-		for(FileController *fc in [lc fileControllers]) {
-			if([[fc relativeFilePath] isEqualToString:self.reconnectFile]) {
+	
+    if (self.reconnectFile)
+    {
+		for (FileController *fc in [lc fileControllers])
+        {
+			if ([[fc relativeFilePath] isEqualToString:self.reconnectFile])
+            {
 				selectFc = fc;
 				break;
 			}
 		}
 	}
-	if(selectFc) {
+    
+	if (selectFc)
+    {
 		// Select a bit later otherwise it doesn't select
 		[mProjectFilesController performSelector:@selector(selectFileController:) withObject:selectFc afterDelay:0];
-	} else {
+	}
+    else
+    {
 		[mProjectFilesController selectFirstFile];
 	}	
 }
@@ -1308,14 +1474,19 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-	if([keyPath isEqualToString:@"showInvisibleCharacters"]) {
+	if ([keyPath isEqualToString:@"showInvisibleCharacters"])
+    {
 		[mCustomFieldEditor setShowInvisibleCharacters:[self projectPreferences].showInvisibleCharacters];
 		[mProjectFilesController setNeedsDisplayToAllTableViews];
 		[[[self currentFileEditor] view] setNeedsDisplay:YES];
-	} else if([keyPath isEqualToString:@"arrangedObjects.displayLanguage"]) {
+	}
+    else if ([keyPath isEqualToString:@"arrangedObjects.displayLanguage"])
+    {
 		// update the key equivalents each time the display language changes
 		[self updateLanguageMenuKeyEquivalents];
-	} else if([keyPath isEqualToString:@"showLocalFiles"]) {
+	}
+     else if([keyPath isEqualToString:@"showLocalFiles"])
+     {
 		[self updateLocalFilesVisibility];
 	}
 }
@@ -1334,38 +1505,41 @@
 
 #pragma mark -
 
-- (NSString*)toolTipAtPosition:(NSPoint)pos
+- (NSString *)toolTipAtPosition:(NSPoint)pos
 {
 	NSString *tt = [mProjectFilesController handleToolTipRequestedAtPosition:pos];
-	if(!tt) {
+    
+	if (!tt)
+    {
 		tt = [mCurrentFMEditor windowToolTipRequestedAtPosition:pos];
 	}
-	return tt;
+	
+    return tt;
 }
 
-- (BOOL)isOwnerSelf:(NSPasteboard*)pboard
+- (BOOL)isOwnerSelf:(NSPasteboard *)pboard
 {
 	NSNumber *ownerPointer = [pboard propertyListForType:PBOARD_OWNER_POINTER];
 	return [ownerPointer longValue] == (long)self;
 }
 
-- (NSDragOperation)windowDragOperationEnteredForPasteboard:(NSPasteboard*)pboard
+- (NSDragOperation)windowDragOperationEnteredForPasteboard:(NSPasteboard *)pboard
 {
-	if([self isOwnerSelf:pboard])
+	if ([self isOwnerSelf:pboard])
 		return NSDragOperationNone;
 	else
 		return [mDragAndDropOperation dragOperationEnteredForPasteboard:pboard];
 }
 
-- (NSDragOperation)windowDragOperationUpdatedForPasteboard:(NSPasteboard*)pboard
+- (NSDragOperation)windowDragOperationUpdatedForPasteboard:(NSPasteboard *)pboard
 {
-	if([self isOwnerSelf:pboard])
+	if ([self isOwnerSelf:pboard])
 		return NSDragOperationNone;
 	else
 		return [mDragAndDropOperation dragOperationUpdatedForPasteboard:pboard];
 }
 
-- (BOOL)windowDragOperationPerformWithPasteboard:(NSPasteboard*)pboard
+- (BOOL)windowDragOperationPerformWithPasteboard:(NSPasteboard *)pboard
 {
 	return [mDragAndDropOperation dragOperationPerformWithPasteboard:pboard];
 }
@@ -1378,110 +1552,110 @@
 #pragma mark -
 #pragma mark Attributes
 
-- (ProjectMenuEdit*)projectMenuEdit
+- (ProjectMenuEdit *)projectMenuEdit
 {
 	return mProjectMenuEdit;
 }
 
-- (ProjectFilesController*)projectFiles
+- (ProjectFilesController *)projectFiles
 {
 	return mProjectFilesController;
 }
 
-- (ProjectExplorerController*)projectExplorer
+- (ProjectExplorerController *)projectExplorer
 {
 	return mProjectExplorerController;
 }
 
-- (ProjectDetailsController*)projectDetailsController
+- (ProjectDetailsController *)projectDetailsController
 {
 	return mProjectDetailsController;
 }
 
-- (ProjectLabels*)projectLabels
+- (ProjectLabels *)projectLabels
 {
 	return mProjectLabels;
 }
 
-- (NSPopUpButton*)languagesPopUp
+- (NSPopUpButton *)languagesPopUp
 {
 	return mLanguagePopUp;
 }
 
-- (ProjectDocument*)projectDocument
+- (ProjectDocument *)projectDocument
 {
 	return [self document];
 }
 
-- (ProjectPrefs*)projectPreferences
+- (ProjectPrefs *)projectPreferences
 {
 	return [[self projectDocument] projectPrefs];
 }
 
-- (EngineProvider*)engineProvider
+- (EngineProvider *)engineProvider
 {
 	return [[self projectDocument] engineProvider];
 }
 
-- (OperationDispatcher*)operationDispatcher
+- (OperationDispatcher *)operationDispatcher
 {
 	return [[self projectDocument] operationDispatcher];
 }
 
-- (OperationWC*)operation
+- (OperationWC *)operation
 {
 	return [[self projectDocument] operation];
 }
 
-- (Explorer*)explorer
+- (Explorer *)explorer
 {
 	return [[self projectDocument] explorer];
 }
 
-- (HistoryManager*)historyManager
+- (HistoryManager *)historyManager
 {
     return mHistoryManager;
 }
 
-- (FMEditor*)currentFileEditor
+- (FMEditor *)currentFileEditor
 {
 	return mCurrentFMEditor;
 }
 
-- (ProjectController*)projectController
+- (ProjectController *)projectController
 {
 	return [[self projectDocument] projectController];
 }
 
-- (NSArrayController*)languagesController
+- (NSArrayController *)languagesController
 {
 	return mLanguagesController;
 }
 
-- (NSArrayController*)filesController
+- (NSArrayController *)filesController
 {
 	return [mProjectFilesController filesArrayController];
 }
 
-- (LanguageController*)selectedLanguageController
+- (LanguageController *)selectedLanguageController
 {
 	return [[mLanguagesController selectedObjects] firstObject];
 }
 
-- (NSArray*)selectedFileControllers
+- (NSArray *)selectedFileControllers
 {
 	return [mProjectFilesController selectedFileControllers];
 }
 
-- (NSArray*)selectedStringControllers
+- (NSArray *)selectedStringControllers
 {
-	if([mCurrentFMEditor isKindOfClass:[FMEditorStrings class]])
+	if ([mCurrentFMEditor isKindOfClass:[FMEditorStrings class]])
 		return [mCurrentFMEditor selectedContentItems];
 	else
 		return NULL;
 }
 
-- (void)selectStringController:(StringController*)sc
+- (void)selectStringController:(StringController *)sc
 {
 	[mCurrentFMEditor selectContentItem:sc];
 }
@@ -1496,23 +1670,31 @@
 // Offset for the language item to avoid a collision with the search item (see validateMenuItem method above)
 #define LANGUAGE_ITEM_TAG_OFFSET 1000
 
-- (void)tableViewModifierFlagsChanged:(NSEvent*)event
+- (void)tableViewModifierFlagsChanged:(NSEvent *)event
 {
 	[mDragAndDropOperation modifierFlagsChanged:event];
 }
 
-- (BOOL)validateMenuItem:(NSMenuItem*)anItem
+- (BOOL)validateMenuItem:(NSMenuItem *)anItem
 {
-	if([anItem tag] < LANGUAGE_ITEM_TAG_OFFSET) {
+	if ([anItem tag] < LANGUAGE_ITEM_TAG_OFFSET)
+    {
 		SearchContext *c = [self searchContext];
-		if([anItem tag] == SEARCH_IGNORE_CASE) {
+        
+		if ([anItem tag] == SEARCH_IGNORE_CASE)
+        {
 			[anItem setState:c.ignoreCase?NSOnState:NSOffState];
-		} else if([anItem tag] == c.options) {
+		}
+        else if ([anItem tag] == c.options)
+        {
 			[anItem setState:NSOnState];
-		} else {
+		}
+        else
+        {
 			[anItem setState:NSOffState];
 		}		
 	}
+    
 	return YES;
 }
 
@@ -1522,31 +1704,39 @@
 }
 
 // Invoked by Application
-- (void)openPreviousVersionMenuNeedsUpdate:(NSMenu*)menu
+- (void)openPreviousVersionMenuNeedsUpdate:(NSMenu *)menu
 {
 	[mProjectFilesController openPreviousVersionMenuNeedsUpdate:menu];
 }
 
 // Invoked by Application
-- (void)viewLanguageMenuNeedsUpdate:(NSMenu*)menu
+- (void)viewLanguageMenuNeedsUpdate:(NSMenu *)menu
 {
 	[menu removeAllItems];
 	
-	unsigned count = LANGUAGE_ITEM_TAG_OFFSET;
-	for(LanguageController *lc in [[self languagesController] content]) {
-		NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:[lc displayLanguage] action:@selector(selectLanguage:) keyEquivalent:[NSString stringWithFormat:@"%d", count-(LANGUAGE_ITEM_TAG_OFFSET-1)]];
+	NSUInteger count = LANGUAGE_ITEM_TAG_OFFSET;
+    
+	for (LanguageController *lc in [[self languagesController] content])
+    {
+		NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:[lc displayLanguage]
+                                                      action:@selector(selectLanguage:)
+                                               keyEquivalent:[NSString stringWithFormat:@"%ld", count - (LANGUAGE_ITEM_TAG_OFFSET - 1)]];
+        
 		[item setTag:count];
-		if([self selectedLanguageController] == lc) {
+        
+	 	if ([self selectedLanguageController] == lc)
+        {
 			[item setState:NSOnState];
 		}
-		[menu addItem:item];						
+		
+        [menu addItem:item];
 		count++;
 	}
 }
 
 - (void)selectLanguage:(id)sender
 {
-	[self selectLanguageAtIndex:[sender tag]-LANGUAGE_ITEM_TAG_OFFSET];
+	[self selectLanguageAtIndex:[sender tag] - LANGUAGE_ITEM_TAG_OFFSET];
 }
 
 @end

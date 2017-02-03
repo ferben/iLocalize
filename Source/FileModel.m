@@ -124,22 +124,22 @@
 	return [mAttributes ignore];
 }
 
-- (void)setEOLType:(int)type
+- (void)setEOLType:(NSUInteger)type
 {
 	[mAttributes setEOLType:type];
 }
 
-- (int)eolType
+- (NSUInteger)eolType
 {
 	return [mAttributes eolType];
 }
 
-- (void)setFormat:(int)format
+- (void)setFormat:(NSUInteger)format
 {
 	[mAttributes setFormat:format];	
 }
 
-- (int)format
+- (NSUInteger)format
 {
 	return [mAttributes format];
 }

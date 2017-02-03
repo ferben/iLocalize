@@ -16,11 +16,12 @@
 
 typedef void(^StringModelCommentBlock)(NSString *comment, unsigned type, int row);
 
-@interface StringModel : NSObject <NSCoding> {
+@interface StringModel : NSObject <NSCoding>
+{
 	NSMutableDictionary	*mAttributes;
 }
 
-+ (StringModel*)model;
++ (StringModel *)model;
 
 - (void)setLock:(BOOL)lock;
 - (BOOL)lock;
@@ -28,16 +29,16 @@ typedef void(^StringModelCommentBlock)(NSString *comment, unsigned type, int row
 - (void)setStatus:(unsigned char)status;
 - (unsigned char)status;
 
-- (void)setLabelIndexes:(NSSet*)indexes;
-- (NSSet*)labelIndexes;
+- (void)setLabelIndexes:(NSSet *)indexes;
+- (NSSet *)labelIndexes;
 
-- (void)setComment:(NSString*)comment;
-- (void)setComment:(NSString*)comment as:(unsigned)type atRow:(int)row;
-- (void)addComment:(NSString*)comment as:(unsigned)type atRow:(int)row;
+- (void)setComment:(NSString *)comment;
+- (void)setComment:(NSString *)comment as:(NSUInteger)type atRow:(NSUInteger)row;
+- (void)addComment:(NSString *)comment as:(unsigned)type atRow:(int)row;
 
-- (void)setKey:(NSString*)key as:(unsigned)type atRow:(int)row;
-- (void)setValue:(NSString*)value as:(unsigned)type atRow:(int)row;
-- (void)setValue:(NSString*)value;
+- (void)setKey:(NSString *)key as:(NSUInteger)type atRow:(NSUInteger)row;
+- (void)setValue:(NSString *)value as:(NSUInteger)type atRow:(NSUInteger)row;
+- (void)setValue:(NSString *)value;
 
 - (int)commentRow;
 - (int)keyRow;
@@ -49,13 +50,13 @@ typedef void(^StringModelCommentBlock)(NSString *comment, unsigned type, int row
 - (int)keyType;
 - (int)valueType;
 
-- (NSString*)comment;
+- (NSString *)comment;
 - (void)setKey:(NSString *)key;
-- (NSString*)key;
-- (NSString*)value;
+- (NSString *)key;
+- (NSString *)value;
 
 - (void)enumerateComments:(StringModelCommentBlock)block;
-- (NSDictionary*)attributes;
+- (NSDictionary *)attributes;
 
 - (NSComparisonResult)compareKeys:(id)other;
 

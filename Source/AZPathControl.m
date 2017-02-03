@@ -8,12 +8,16 @@
 
 #import "AZPathControl.h"
 
-@interface AZPathMenu : NSMenu {
+@interface AZPathMenu : NSMenu
+{
 	NSString *_path;
 	id<AZPathControlDelegate> pathDelegate;
 }
+
 @property (strong) NSString *path;
-- (NSArray*)folders;
+
+- (NSArray *)folders;
+
 @end
 
 @implementation AZPathMenu
@@ -22,26 +26,33 @@
 
 - (id)initWithDelegate:(id<AZPathControlDelegate>)_pathDelegate
 {
-	if(self = [super init]) {
+	if (self = [super init])
+    {
 		pathDelegate = _pathDelegate;
 	}
-	return self;
+	
+    return self;
 }
 
 
-- (NSArray*)folders
+- (NSArray *)folders
 {
 	NSMutableArray *folders = [NSMutableArray array];
 		
 	NSDirectoryEnumerator *enumerator = [[NSFileManager defaultManager] enumeratorAtPath:self.path];
 	NSString *file;
-	while(file = [enumerator nextObject]) {
-		if([pathDelegate isValidPath:[self.path stringByAppendingPathComponent:file]]) {
-			if([[enumerator fileAttributes][NSFileType] isEqualToString:NSFileTypeDirectory]) {
+    
+	while (file = [enumerator nextObject])
+    {
+		if ([pathDelegate isValidPath:[self.path stringByAppendingPathComponent:file]])
+        {
+			if ([[enumerator fileAttributes][NSFileType] isEqualToString:NSFileTypeDirectory])
+            {
 				[folders addObject:[file lastPathComponent]];
 			}
 		}
-		[enumerator skipDescendents];
+		
+        [enumerator skipDescendents];
 	}
 	
 	return folders;
@@ -56,19 +67,19 @@
 	NSString *_element;
 	NSMutableDictionary *attrs;
 	
-	int x;
-	int y;
-	int height;
-	int index;
+	NSUInteger x;
+	NSUInteger y;
+	NSUInteger height;
+	NSUInteger index;
 }
 
 @property (strong) NSString *element;
-@property int x;
-@property int y;
-@property int height;
-@property int index;
+@property NSUInteger x;
+@property NSUInteger y;
+@property NSUInteger height;
+@property NSUInteger index;
 
-+ (AZPathElement*)elementWithComponent:(NSString*)component;
++ (AZPathElement *)elementWithComponent:(NSString *)component;
 
 @end
 
@@ -80,7 +91,7 @@
 static int offset = 10;
 static int triangle = 10;
 
-+ (AZPathElement*)elementWithComponent:(NSString*)component
++ (AZPathElement *)elementWithComponent:(NSString *)component
 {
 	AZPathElement *e = [[AZPathElement alloc] init];
 	e.element = component;
@@ -89,18 +100,20 @@ static int triangle = 10;
 
 - (id)init
 {
-	if(self = [super init]) {
+	if (self = [super init])
+    {
 		attrs = [[NSMutableDictionary alloc] init];
 		attrs[NSFontAttributeName] = [NSFont fontWithName:@"Lucida Grande" size:12];			
 	}
-	return self;
+	
+    return self;
 }
 
 
 - (float)width
 {
 	NSSize esize = [self.element sizeWithAttributes:attrs];
-	return esize.width+triangle+offset*1.5;
+	return esize.width + triangle + offset * 1.5;
 }
 
 - (NSRect)frame
@@ -114,17 +127,17 @@ static int triangle = 10;
 	
 	NSBezierPath *bp = [NSBezierPath bezierPath];
 	[bp moveToPoint:NSMakePoint(x, y)];
-	[bp moveToPoint:NSMakePoint(x, y+height)];
-	[bp moveToPoint:NSMakePoint(x+width-triangle, y+height)];
-	[bp lineToPoint:NSMakePoint(x+width, y+height/2)];
-	[bp lineToPoint:NSMakePoint(x+width-triangle, y)];
+	[bp moveToPoint:NSMakePoint(x, y + height)];
+	[bp moveToPoint:NSMakePoint(x + width - triangle, y + height)];
+	[bp lineToPoint:NSMakePoint(x + width, y + height / 2)];
+	[bp lineToPoint:NSMakePoint(x + width - triangle, y)];
 	[bp moveToPoint:NSMakePoint(x, y)];
 	
 	[[NSColor grayColor] set];
 	[bp stroke];
 	
 	[[NSColor blackColor] set];
-	[self.element drawAtPoint:NSMakePoint(x+offset, height/2-[self.element sizeWithAttributes:attrs].height/2) withAttributes:attrs];
+	[self.element drawAtPoint:NSMakePoint(x+offset, height / 2 - [self.element sizeWithAttributes:attrs].height / 2) withAttributes:attrs];
 }
 
 - (BOOL)pointInFrame:(NSPoint)point
@@ -134,9 +147,12 @@ static int triangle = 10;
 
 - (BOOL)pointInArrow:(NSPoint)point
 {
-	if([self pointInFrame:point]) {
+	if ([self pointInFrame:point])
+    {
 		return point.x > [self frame].origin.x + [self frame].size.width - triangle;
-	} else {
+	}
+    else
+    {
 		return NO;
 	}
 }
@@ -149,17 +165,20 @@ static int triangle = 10;
 
 @synthesize basePath=_basePath;
 
-- (id)initWithFrame:(NSRect)frame {
-    if (self = [super initWithFrame:frame]) {
+- (id)initWithFrame:(NSRect)frame
+{
+    if (self = [super initWithFrame:frame])
+    {
 		components = [[NSMutableArray alloc] init];
 		elements = [[NSMutableArray alloc] init];
 		delegate = nil;
     }
+    
     return self;
 }
 
 
-- (void)setPath:(NSString*)path
+- (void)setPath:(NSString *)path
 {
 	[components removeAllObjects];
 	[components addObjectsFromArray:[path pathComponents]];
@@ -167,7 +186,9 @@ static int triangle = 10;
 	[components removeObjectsInRange:NSMakeRange(0, [self.basePath pathComponents].count)];
 	
 	[elements removeAllObjects];
-	for(NSString *component in components) {
+    
+	for (NSString *component in components)
+    {
 		AZPathElement *e = [AZPathElement elementWithComponent:component];
 		e.index = elements.count;
 		[elements addObject:e];
@@ -176,11 +197,12 @@ static int triangle = 10;
 	[self setNeedsDisplay:YES];
 }
 
-- (NSString*)selectedPath
+- (NSString *)selectedPath
 {
 	NSMutableArray *cps = [NSMutableArray array];
 	[cps addObjectsFromArray:[self.basePath pathComponents]];
 	[cps addObjectsFromArray:components];
+    
 	return [NSString pathWithComponents:cps];
 }
 
@@ -189,22 +211,26 @@ static int triangle = 10;
 	delegate = d;
 }
 
-- (AZPathElement*)elementAtPosition:(NSPoint)p
+- (AZPathElement *)elementAtPosition:(NSPoint)p
 {
-	for(AZPathElement *e in elements) {
-		if([e pointInFrame:p]) {
+	for (AZPathElement *e in elements)
+    {
+		if ([e pointInFrame:p])
+        {
 			return e;
 		}
 	}
-	return nil;
+	
+    return nil;
 }
 
-- (NSString*)pathAtIndex:(int)index
+- (NSString *)pathAtIndex:(NSUInteger)index
 {
 	NSMutableArray *cps = [NSMutableArray array];
 	[cps addObjectsFromArray:[self.basePath pathComponents]];
 	[cps addObjectsFromArray:[components subarrayWithRange:NSMakeRange(0, index+1)]];
-	return [NSString pathWithComponents:cps];
+	
+    return [NSString pathWithComponents:cps];
 }
 
 - (void)drawRect:(NSRect)rect
@@ -214,10 +240,12 @@ static int triangle = 10;
 //	[[NSColor darkGrayColor] set];
 //	NSFrameRect(rect);
 	
-	int x = 0;
-	int y = 0;
-	int height = self.frame.size.height;
-	for(AZPathElement *e in elements) {
+	NSUInteger x = 0;
+	NSUInteger y = 0;
+	NSUInteger height = self.frame.size.height;
+	
+    for (AZPathElement *e in elements)
+    {
 		e.x = x;
 		e.y = y;
 		e.height = height;
@@ -226,12 +254,14 @@ static int triangle = 10;
 	}
 }
 
-- (void)displayHierarchyPopup:(AZPathElement*)e event:(NSEvent*)theEvent
+- (void)displayHierarchyPopup:(AZPathElement *)e event:(NSEvent *)theEvent
 {
 	AZPathMenu *menu = [[AZPathMenu alloc] initWithDelegate:delegate];
 	[menu setPath:[self pathAtIndex:e.index]];
 	[menu setDelegate:self];
-	if(menu) {
+
+    if (menu)
+    {
 		NSRect elementFrame = [self convertRect:[e frame] toView:nil];
 		NSEvent *evt = [NSEvent mouseEventWithType:[theEvent type] location:NSMakePoint(elementFrame.origin.x+elementFrame.size.width, elementFrame.origin.y+elementFrame.size.height) modifierFlags:[theEvent modifierFlags] 
 										 timestamp:[theEvent timestamp] windowNumber:[theEvent windowNumber] context:[theEvent context] eventNumber:[theEvent eventNumber]
@@ -244,10 +274,15 @@ static int triangle = 10;
 {
 	NSPoint curLoc = [self convertPoint:[theEvent locationInWindow] fromView:nil];
 	AZPathElement *e = [self elementAtPosition:curLoc];
-	if(e) {
-		if([e pointInArrow:curLoc]) {
+	
+    if (e)
+    {
+		if ([e pointInArrow:curLoc])
+        {
 			[self displayHierarchyPopup:e event:theEvent];			
-		} else {
+		}
+        else
+        {
 			[self setPath:[self pathAtIndex:e.index]];
 			[delegate pathChanged:self];						
 		}
@@ -258,7 +293,9 @@ static int triangle = 10;
 {
 	NSPoint curLoc = [self convertPoint:[theEvent locationInWindow] fromView:nil];
 	AZPathElement *e = [self elementAtPosition:curLoc];
-	if(e) {
+    
+	if (e)
+    {
 		[self displayHierarchyPopup:e event:theEvent];
 	}
 }
@@ -266,7 +303,7 @@ static int triangle = 10;
 - (IBAction)selectFolder:(id)sender
 {
 	NSMenuItem *item = sender;
-	AZPathMenu *menu = (AZPathMenu*)item.menu;
+	AZPathMenu *menu = (AZPathMenu *)item.menu;
 	NSString *path = [menu.path stringByAppendingPathComponent:item.title];
 	[self setPath:path];
 	[delegate pathChanged:self];
@@ -277,21 +314,27 @@ static int triangle = 10;
 
 - (NSInteger)numberOfItemsInMenu:(NSMenu *)menu
 {
-	return [[(AZPathMenu*)menu folders] count];
+	return [[(AZPathMenu *)menu folders] count];
 }
 
-- (BOOL)hasExplorableDirectories:(NSString*)path
+- (BOOL)hasExplorableDirectories:(NSString *)path
 {
 	NSDirectoryEnumerator *enumerator = [[NSFileManager defaultManager] enumeratorAtPath:path];
 	NSString *file;
-	while(file = [enumerator nextObject]) {
-		if([delegate isValidPath:[path stringByAppendingPathComponent:file]]) {
-			if([[enumerator fileAttributes][NSFileType] isEqualToString:NSFileTypeDirectory]) {
+    
+	while (file = [enumerator nextObject])
+    {
+		if ([delegate isValidPath:[path stringByAppendingPathComponent:file]])
+        {
+			if ([[enumerator fileAttributes][NSFileType] isEqualToString:NSFileTypeDirectory])
+            {
 				return YES;
 			}			
 		}
+        
 		[enumerator skipDescendents];
 	}
+    
 	return NO;
 }
 
@@ -300,12 +343,15 @@ static int triangle = 10;
 	NSDictionary *attrs = @{NSFontAttributeName: [NSFont fontWithName:@"Lucida Grande" size:[NSFont smallSystemFontSize]]};
 	NSString *rawTitle = [(AZPathMenu*)menu folders][index];
 	NSAttributedString *title = [[NSAttributedString alloc] initWithString:rawTitle attributes:attrs];
+    
 	[item setAttributedTitle:title];
 	[item setTarget:self];
 	[item setAction:@selector(selectFolder:)];
 	
 	NSString *path = [[(AZPathMenu*)menu path] stringByAppendingPathComponent:rawTitle];
-	if([path isPathDirectory] && ![path isPathNib] && [self hasExplorableDirectories:path]) {
+    
+	if ([path isPathDirectory] && ![path isPathNib] && [self hasExplorableDirectories:path])
+    {
 		AZPathMenu *submenu = [[AZPathMenu alloc] initWithDelegate:delegate];
 		[submenu setPath:path];
 		[submenu setDelegate:self];

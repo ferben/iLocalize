@@ -12,7 +12,7 @@
 
 @implementation ProjectStatusBarController
 
-+ (ProjectStatusBarController*)newInstance:(ProjectWC*)projectWC
++ (ProjectStatusBarController *)newInstance:(ProjectWC *)projectWC
 {
 	ProjectStatusBarController *controller = [[ProjectStatusBarController alloc] initWithNibName:@"ProjectStatusBar" bundle:nil];
 	controller.projectWC = projectWC;
@@ -24,7 +24,7 @@
 	[self update];
 }
 
-- (NSString*)openForText
+- (NSString *)openForText
 {
 	int minutes = [self.projectWC elapsedMinutesSinceProjectWasOpened];
     int displayHours = minutes / 60;
@@ -36,7 +36,9 @@
     NSString *phour = NSLocalizedString(@"hours", @"Status Bar");
 	
     NSString *info;
-    if(displayHours > 0) {
+    
+    if (displayHours > 0)
+    {
         // Opened since 1 hour and 1 minute
         // Opened since 1 hour and 2 minutes
         // Opened since 2 hours and 1 minute
@@ -45,41 +47,58 @@
         info = [NSString stringWithFormat:NSLocalizedString(@"Open for %d %@ and %d %@", @"Status Bar"), 
 				displayHours, displayHours > 1 ? phour:shour,
 				displayMinutes, displayMinutes > 1 ? pminute:sminute];        
-    } else {
+    }
+    else
+    {
         // Opened since 1 minute
         // Opened since 12 minutes
-		if(displayMinutes == 0) {
+		if (displayMinutes == 0)
+        {
 			info = NSLocalizedString(@"Open for less than a minute", @"Status Bar");
-		} else {
+		}
+        else
+        {
 			info = [NSString stringWithFormat:NSLocalizedString(@"Open for %d %@", @"Status Bar"), 
 					displayMinutes, displayMinutes > 1 ? pminute:sminute];			
 		}
     }
-	return info;
+	
+    return info;
 }
 
 - (void)update
 {
 	LanguageController *lc = [self.projectWC selectedLanguageController];
-    int total = [lc totalNumberOfStrings];
-    int toTranslate = [lc totalNumberOfNonTranslatedStrings];
-	int toCheck = [lc totalNumberOfToCheckStrings];
+    
+    NSUInteger total       = [lc totalNumberOfStrings];
+    NSUInteger toTranslate = [lc totalNumberOfNonTranslatedStrings];
+	NSUInteger toCheck     = [lc totalNumberOfToCheckStrings];
+    
 	NSString *elapsed = [self openForText];
 	
 	NSMutableString *info = [NSMutableString string];
 	[info appendFormat:NSLocalizedString(@"%d strings", @"Status Bar"), total];
-	if(![lc isBaseLanguage]) {
-		if(toTranslate > 0) {
+    
+	if (![lc isBaseLanguage])
+    {
+		if (toTranslate > 0)
+        {
 			[info appendFormat:NSLocalizedString(@" of which %d need to be translated", @"Status Bar"), toTranslate];		
 		}
-		if(toCheck > 0) {
-			if(toTranslate > 0) {
+		
+        if (toCheck > 0)
+        {
+			if (toTranslate > 0)
+            {
 				[info appendFormat:NSLocalizedString(@" and %d need to be verified", @"Status Bar"), toCheck];		
-			} else {
+			}
+            else
+            {
 				[info appendFormat:NSLocalizedString(@" of which %d need to be verified", @"Status Bar"), toCheck];					
 			}
 		}		
 	}
+    
 	[leftSideTextField setStringValue:info];
 	
 	[rightSideTextField setStringValue:elapsed];

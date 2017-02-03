@@ -17,7 +17,7 @@ static NSString *COMMENT_STRING = @"comment_string";
 static NSString *COMMENT_TYPE = @"comment_type";
 static NSString *COMMENT_ROW = @"comment_row";
 
-// New key to old the array of comments when more than one is present (version >= 4.2)
+// New key to hold the array of comments when more than one is present (version >= 4.2)
 static NSString *COMMENTS = @"comments";
 
 static NSString *KEY_STRING = @"key_string";
@@ -32,39 +32,44 @@ static NSString *VALUE_ROW = @"value_row";
 
 + (void)initialize
 {
-	if(self == [StringModel class]) {
+	if (self == [StringModel class])
+    {
 		[self setVersion:0];
 	}
 }
 
-+ (StringModel*)model
++ (StringModel *)model
 {
 	return [[StringModel alloc] init];
 }
 
 - (id)init
 {
-	if(self = [super init]) {
+	if (self = [super init])
+    {
 		mAttributes = [[NSMutableDictionary alloc] init];
 	}
-	return self;
+	
+    return self;
 }
 
 
-- (id)initWithCoder:(NSCoder*)coder
+- (id)initWithCoder:(NSCoder *)coder
 {
-	if(self = [super init]) {
+	if (self = [super init])
+    {
 		mAttributes = [coder decodeObject];
 	}
-	return self;
+	
+    return self;
 }
 
-- (void)encodeWithCoder:(NSCoder*)coder
+- (void)encodeWithCoder:(NSCoder *)coder
 {
 	[coder encodeObject:mAttributes];
 }
 
-- (id)copyWithZone:(NSZone*)zone
+- (id)copyWithZone:(NSZone *)zone
 {
 	StringModel *newModel = [[StringModel alloc] init];
 	newModel->mAttributes = [mAttributes mutableCopy];
@@ -78,13 +83,16 @@ static NSString *VALUE_ROW = @"value_row";
 
 - (BOOL)lock
 {
-	if([self valueType] == STRING_OLDSTYLE) {
+	if ([self valueType] == STRING_OLDSTYLE)
+    {
 		// old-style value are currently locked to avoid editing because otherwhise
 		// the "transformer" bound to the cell will escape this string which we don't want.
 		// In the future, we might give more context to the "transformer" to avoid escaping
 		// old-style value.
 		return YES;
-	} else {
+	}
+    else
+    {
 		return [mAttributes[LOCK] boolValue];		
 	}
 }
@@ -97,14 +105,15 @@ static NSString *VALUE_ROW = @"value_row";
 - (unsigned char)status
 {
 	id status = mAttributes[STATUS];
-	if(status)
+    
+	if (status)
 		return [status unsignedCharValue];
 	else
 		// HACK
 		return (1 << STRING_STATUS_NONE);
 }
 
-- (void)setLabelIndexes:(NSSet*)indexes
+- (void)setLabelIndexes:(NSSet *)indexes
 {
 	mAttributes[LABELS] = indexes;
 }
@@ -112,35 +121,43 @@ static NSString *VALUE_ROW = @"value_row";
 - (NSSet*)labelIndexes
 {
 	NSMutableSet *indexes = mAttributes[LABELS];
-	if(indexes == nil) {
+    
+	if (indexes == nil)
+    {
 		indexes = [[NSMutableSet alloc] init];
 		mAttributes[LABELS] = indexes;
 	}
-	return indexes;
+	
+    return indexes;
 }
 
-- (void)setComment:(NSString*)comment
+- (void)setComment:(NSString *)comment
 {
 	mAttributes[COMMENT_STRING] = comment?comment:@"";
 }
 
-- (void)setComment:(NSString*)comment as:(unsigned)type atRow:(int)row
+- (void)setComment:(NSString *)comment as:(NSUInteger)type atRow:(NSUInteger)row
 {	
 	[self setComment:comment];
-	mAttributes[COMMENT_TYPE] = [NSNumber numberWithInt:type];	
-	mAttributes[COMMENT_ROW] = @(row);	
+	mAttributes[COMMENT_TYPE] = [NSNumber numberWithInteger:type];
+	mAttributes[COMMENT_ROW] = @(row);
 }
 
-- (void)addComment:(NSString*)comment as:(unsigned)type atRow:(int)row
+- (void)addComment:(NSString *)comment as:(unsigned)type atRow:(int)row
 {
-    if (nil == mAttributes[COMMENT_STRING]) {
+    if (nil == mAttributes[COMMENT_STRING])
+    {
         [self setComment:comment as:type atRow:row];
-    } else {
+    }
+    else
+    {
         // If more than one comment is added, then the last comment added
         // will be the one stored in the old place and the previous ones in
         // the additional array
         NSMutableArray *comments = mAttributes[COMMENTS];
-        if (nil == comments) {
+        
+        if (nil == comments)
+        {
             comments = [NSMutableArray array];
             mAttributes[COMMENTS] = comments;
         }
@@ -159,9 +176,11 @@ static NSString *VALUE_ROW = @"value_row";
 
 - (void)enumerateComments:(StringModelCommentBlock)block
 {
-    for (NSDictionary *cdic in mAttributes[COMMENTS]) {
+    for (NSDictionary *cdic in mAttributes[COMMENTS])
+    {
         block(cdic[COMMENT_STRING], [cdic[COMMENT_TYPE] intValue], [cdic[COMMENT_ROW] intValue]);
     }
+    
     block(mAttributes[COMMENT_STRING], [mAttributes[COMMENT_TYPE] intValue], [mAttributes[COMMENT_ROW] intValue]);
 }
 
@@ -170,23 +189,23 @@ static NSString *VALUE_ROW = @"value_row";
 	mAttributes[KEY_STRING] = key?key:@"";	
 }
 
-- (void)setKey:(NSString*)key as:(unsigned)type atRow:(int)row
+- (void)setKey:(NSString *)key as:(NSUInteger)type atRow:(NSUInteger)row
 {
 	[self setKey:key];
-	mAttributes[KEY_TYPE] = [NSNumber numberWithInt:type];		
+	mAttributes[KEY_TYPE] = [NSNumber numberWithInteger:type];
 	mAttributes[KEY_ROW] = @(row);	
 }
 
-- (void)setValue:(NSString*)value as:(unsigned)type atRow:(int)row
+- (void)setValue:(NSString *)value as:(NSUInteger)type atRow:(NSUInteger)row
 {
 	[self setValue:value];
-	mAttributes[VALUE_TYPE] = [NSNumber numberWithInt:type];	
+    mAttributes[VALUE_TYPE] = [NSNumber numberWithInteger:type];
 	mAttributes[VALUE_ROW] = @(row);	
 }
 
-- (void)setValue:(NSString*)value
+- (void)setValue:(NSString *)value
 {
-	mAttributes[VALUE_STRING] = value?value:@"";	
+	mAttributes[VALUE_STRING] = (value) ? value : @"";
 }
 
 - (int)commentRow
@@ -224,32 +243,32 @@ static NSString *VALUE_ROW = @"value_row";
 	return [mAttributes[VALUE_TYPE] intValue];	
 }
 
-- (NSString*)comment
+- (NSString *)comment
 {
 	return mAttributes[COMMENT_STRING];
 }
 
-- (NSString*)key
+- (NSString *)key
 {
 	return mAttributes[KEY_STRING];
 }
 
-- (NSString*)value
+- (NSString *)value
 {
 	return mAttributes[VALUE_STRING];
 }
 
-- (NSDictionary*)attributes
+- (NSDictionary *)attributes
 {
 	return mAttributes;
 }
 
 - (BOOL)isEqual:(id)model
 {
-	return [mAttributes isEqualToDictionary:[(StringModel*)model attributes]];
+	return [mAttributes isEqualToDictionary:[(StringModel *)model attributes]];
 }
 
-- (NSString*)description
+- (NSString *)description
 {
     return [NSString stringWithFormat:@"key = \"%@\", value = \"%@\", comment = \"%@\"", [self key], [self value], [self comment]];
 }

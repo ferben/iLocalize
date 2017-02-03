@@ -117,6 +117,7 @@
 - (void)computeStatistics
 {
     NSArray *vsc = [self visibleStringControllers];
+    
     mNumberOfStrings = [vsc count]; 
     mNumberOfTranslatedStrings = 0;
 	mNumberOfNonTranslatedStrings = 0;
@@ -127,143 +128,157 @@
 	mNumberOfAutoTranslatedStrings = 0;
 	mNumberOfAutoInvariantStrings = 0;
 	
-	if(![self displayProgress])
+	if (![self displayProgress])
 		return;
 	
-	if(mNumberOfStrings == 0)
+	if (mNumberOfStrings == 0)
         return;
 
 	StringController *sc;
-	for(sc in vsc) {
-        if([sc statusToTranslate]) {
+	
+    for (sc in vsc)
+    {
+        if ([sc statusToTranslate])
+        {
             mNumberOfNonTranslatedStrings++;            
-        } else if([sc statusInvariant]) {
+        }
+        else if ([sc statusInvariant])
+        {
             mNumberOfInvariantStrings++;
-            if([sc statusToCheck]) {
+            
+            if ([sc statusToCheck])
+            {
                 mNumberOfToCheckStrings++;				
 				mNumberOfAutoInvariantStrings++;
-			} else {
+			}
+            else
+            {
                 mNumberOfTranslatedStrings++;				
 			}
-        } else {
-            if([sc statusToCheck]) {
+        }
+        else
+        {
+            if ([sc statusToCheck])
+            {
                 mNumberOfToCheckStrings++;
 				mNumberOfAutoTranslatedStrings++;
-			} else {
+			}
+            else
+            {
                 mNumberOfTranslatedStrings++;				
 			}
         }
                                 
-		if([sc statusBaseModified])		
+		if ([sc statusBaseModified])
             // check to see where it is used
 			mNumberOfBaseModifiedStrings++;		
         
-        if([sc lock])
+        if ([sc lock])
             mNumberOfLockedStrings++;
 	}
 }
 
 - (float)percentCompleted
 {
-    if(mNumberOfStrings <= 0)
+    if (mNumberOfStrings == 0)
         return 100.0;
     else
-        return 100.0*mNumberOfTranslatedStrings/mNumberOfStrings;
+        return 100.0 * mNumberOfTranslatedStrings / mNumberOfStrings;
 }
 
 - (float)percentTranslated
 {
-    if(mNumberOfStrings <= 0)
+    if (mNumberOfStrings == 0)
         return 0;
     else
-        return 100.0*mNumberOfTranslatedStrings/mNumberOfStrings;
+        return 100.0 * mNumberOfTranslatedStrings / mNumberOfStrings;
 }
 
 - (float)percentAutoTranslated
 {
-    if(mNumberOfStrings <= 0)
+    if (mNumberOfStrings == 0)
         return 0;
     else
-        return 100.0*mNumberOfToCheckStrings/mNumberOfStrings;
+        return 100.0 * mNumberOfToCheckStrings / mNumberOfStrings;
 }
 
 - (float)percentToTranslate
 {
-    if(mNumberOfStrings <= 0)
+    if (mNumberOfStrings == 0)
         return 0;
     else
-        return 100.0*mNumberOfNonTranslatedStrings/mNumberOfStrings;
+        return 100.0 * mNumberOfNonTranslatedStrings / mNumberOfStrings;
 }
 
-- (int)numberOfStrings
+- (NSUInteger)numberOfStrings
 {
     return mNumberOfStrings;
 }
 
-- (int)numberOfTranslatedStrings
+- (NSUInteger)numberOfTranslatedStrings
 {
     return mNumberOfTranslatedStrings;
 }
 
-- (int)numberOfNonTranslatedStrings
+- (NSUInteger)numberOfNonTranslatedStrings
 {
 	return mNumberOfNonTranslatedStrings;
 }
 
-- (int)numberOfToCheckStrings
+- (NSUInteger)numberOfToCheckStrings
 {
 	return mNumberOfToCheckStrings;
 }
 
-- (int)numberOfInvariantStrings
+- (NSUInteger)numberOfInvariantStrings
 {
 	return mNumberOfInvariantStrings;
 }
 
-- (int)numberOfBaseModifiedStrings
+- (NSUInteger)numberOfBaseModifiedStrings
 {
 	return mNumberOfBaseModifiedStrings;
 }
 
-- (int)numberOfLockedStrings
+- (NSUInteger)numberOfLockedStrings
 {
 	return mNumberOfLockedStrings;
 }
 
-- (int)numberOfAutoTranslatedStrings
+- (NSUInteger)numberOfAutoTranslatedStrings
 {
 	return mNumberOfAutoTranslatedStrings;
 }
 
-- (int)numberOfAutoInvariantStrings
+- (NSUInteger)numberOfAutoInvariantStrings
 {
 	return mNumberOfAutoInvariantStrings;
 }
 
 #pragma mark -
 
-- (int)totalContentCount
+- (NSUInteger)totalContentCount
 {
 	return [[self stringControllers] count];
 }
 
-- (int)filteredContentCount
+- (NSUInteger)filteredContentCount
 {
 	return [[self filteredStringControllers] count];
 }
 
-- (NSString*)contentInfo
+- (NSString *)contentInfo
 {
-	int filteredCount = [self filteredContentCount];
-	int totalCount = [self totalContentCount];
+	NSUInteger filteredCount = [self filteredContentCount];
+	NSUInteger totalCount = [self totalContentCount];
 	
-	if(totalCount == 0)
+	if (totalCount == 0)
 		return NSLocalizedString(@"(empty)", @"File Content Empty");
 	
-	if(totalCount == filteredCount)
-		return [NSString stringWithFormat:@"%d", totalCount];
+	if (totalCount == filteredCount)
+		return [NSString stringWithFormat:@"%ld", totalCount];
 	else
-		return [NSString stringWithFormat:NSLocalizedString(@"%d of %d", @"File Content Info"), filteredCount, totalCount];
+		return [NSString stringWithFormat:NSLocalizedString(@"%ld of %ld", @"File Content Info"), filteredCount, totalCount];
 }
 
 - (id)visibleStringControllers

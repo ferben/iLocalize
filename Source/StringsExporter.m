@@ -21,10 +21,13 @@
 - (id) init
 {
 	self = [super init];
-	if (self != nil) {
+	
+    if (self != nil)
+    {
 		stringsContentModel = nil;
 	}
-	return self;
+	
+    return self;
 }
 
 
@@ -61,7 +64,9 @@
 	[sm setValue:sc.translation as:STRING_QUOTED atRow:row];
     [sm setComment:sc.baseComment as:STRING_QUOTED atRow:row];
 	[stringsContentModel addStringModel:sm];
-	if(row == 0) {
+    
+	if (row == 0)
+    {
 		row = 1;
 	}
 }

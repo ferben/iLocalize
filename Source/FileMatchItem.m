@@ -11,51 +11,56 @@
 
 @implementation FileMatchItem
 
-- (id)initWithFile:(NSString*)file matchingFileControllers:(NSArray*)controllers
+- (id)initWithFile:(NSString *)file matchingFileControllers:(NSArray *)controllers
 {
-	if(self = [super init]) {
+	if (self = [super init])
+    {
 		mFile = file;
 		mMatchingFileControllers = controllers;
 		mMatchingIndex = 0;
 		
 		mRelativePaths = [[NSMutableArray alloc] init];
+        
 		FileController *fileController;
-		for(fileController in mMatchingFileControllers) {
+        
+		for (fileController in mMatchingFileControllers)
+        {
 			[mRelativePaths addObject:[fileController relativeFilePath]];
 		}					
 	}
+    
 	return self;
 }
 
 
-+ (id)itemWithFile:(NSString*)file matchingFileControllers:(NSArray*)controllers
++ (id)itemWithFile:(NSString *)file matchingFileControllers:(NSArray *)controllers
 {
 	return [[FileMatchItem alloc] initWithFile:file matchingFileControllers:controllers];
 }
 
-- (int)numberOfMatchingFiles
+- (NSUInteger)numberOfMatchingFiles
 {
 	return [mMatchingFileControllers count];
 }
 
-- (NSString*)file
+- (NSString *)file
 {
 	return mFile;
 }
 
-- (FileController*)matchingFileController
+- (FileController *)matchingFileController
 {
 	return mMatchingFileControllers[mMatchingIndex];
 }
 
-- (NSArray*)matchingFiles
+- (NSArray *)matchingFiles
 {
 	return mRelativePaths;
 }
 
 - (void)setMatchingValue:(id)value
 {
-	mMatchingIndex = [value intValue];
+	mMatchingIndex = [value integerValue];
 }
 
 - (id)matchingValue

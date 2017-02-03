@@ -8,18 +8,19 @@
 
 @class StringEncoding;
 
-@interface FileModelAttributes : NSObject <NSCoding> {
+@interface FileModelAttributes : NSObject <NSCoding>
+{
 	NSMutableDictionary		*mAttributes;
 }
 
-- (void)setRelativeFilePath:(NSString*)file;
-- (NSString*)relativeFilePath;
+- (void)setRelativeFilePath:(NSString *)file;
+- (NSString *)relativeFilePath;
 
-- (NSString*)filename;
-- (NSString*)language;
+- (NSString *)filename;
+- (NSString *)language;
 
-- (void)setModificationDate:(NSDate*)date;
-- (NSDate*)modificationDate;
+- (void)setModificationDate:(NSDate *)date;
+- (NSDate *)modificationDate;
 
 - (void)setStatus:(unsigned char)status;
 - (unsigned char)status;
@@ -27,10 +28,10 @@
 - (void)setIgnore:(BOOL)flag;
 - (BOOL)ignore;
 
-- (void)setEOLType:(int)type;
+- (void)setEOLType:(NSUInteger)type;
 - (int)eolType;
 
-- (void)setFormat:(int)format;
+- (void)setFormat:(NSUInteger)format;
 - (int)format;
 
 - (void)setLocal:(BOOL)flag;
@@ -39,13 +40,13 @@
 - (void)setHasEncoding:(BOOL)flag;
 - (BOOL)hasEncoding;
 
-- (void)setEncoding:(StringEncoding*)encoding;
-- (StringEncoding*)encoding;
+- (void)setEncoding:(StringEncoding *)encoding;
+- (StringEncoding *)encoding;
 
-- (void)setLabelIndexes:(NSSet*)indexes;
-- (NSSet*)labelIndexes;
+- (void)setLabelIndexes:(NSSet *)indexes;
+- (NSSet *)labelIndexes;
 
-- (void)setAuxiliaryData:(id)data forKey:(NSString*)key;
-- (id)auxiliaryDataForKey:(NSString*)key;
+- (void)setAuxiliaryData:(id)data forKey:(NSString *)key;
+- (id)auxiliaryDataForKey:(NSString *)key;
 
 @end

@@ -18,16 +18,21 @@
 
 - (id)init
 {
-	if (self = [super init]) {
+	if (self = [super init])
+    {
 		unichar spaceUnichar = 0x00B7;
 		spaceCharacter = [[NSString alloc] initWithCharacters:&spaceUnichar length:1];
-		unichar tabUnichar = 0x2192; //0x00AC;
+
+        unichar tabUnichar = 0x2192; //0x00AC;
 		tabCharacter = [[NSString alloc] initWithCharacters:&tabUnichar length:1];
-		unichar newLineUnichar = 0x21B5; //0x00B6;
+
+        unichar newLineUnichar = 0x21B5; //0x00B6;
 		newLineCharacter = [[NSString alloc] initWithCharacters:&newLineUnichar length:1];	
-		showInvisibleCharacters = NO;
+
+        showInvisibleCharacters = NO;
 	}
-	return self;
+
+    return self;
 }
 
 - (void)dealloc
@@ -44,7 +49,7 @@
 	showInvisibleCharacters = flag;
 }
 
-- (void)drawCharacter:(NSString*)character attributes:(NSDictionary*)attrs atIndex:(NSUInteger)index containerOrigin:(NSPoint)containerOrigin
+- (void)drawCharacter:(NSString *)character attributes:(NSDictionary *)attrs atIndex:(NSUInteger)index containerOrigin:(NSPoint)containerOrigin
 {
 	NSPoint pointToDrawAt = [self locationForGlyphAtIndex:index];
 	NSRect glyphFragment = [self lineFragmentRectForGlyphAtIndex:index effectiveRange:NULL];
@@ -61,20 +66,31 @@
 
 - (void)drawGlyphsForGlyphRange:(NSRange)glyphRange atPoint:(NSPoint)containerOrigin
 {
-    if (showInvisibleCharacters) {
+    if (showInvisibleCharacters)
+    {
 		NSAttributedString *aString = [self attributedString];
 		NSString *completeString = [[self textStorage] string];
 		NSUInteger lengthToRedraw = NSMaxRange(glyphRange);	
 //		NSCharacterSet *controlSet = [NSCharacterSet controlCharacterSet];
-		for (unsigned int index = glyphRange.location; index < lengthToRedraw; index++) {
+        
+		for (NSUInteger index = glyphRange.location; index < lengthToRedraw; index++)
+        {
 			unichar characterToCheck = [completeString characterAtIndex:index];
-			if (characterToCheck == ' ') {
+            
+			if (characterToCheck == ' ')
+            {
 				[self drawCharacter:spaceCharacter attributes:[aString attributesAtIndex:index effectiveRange:nil] atIndex:index containerOrigin:containerOrigin];				
-			} else if (characterToCheck == '\t') {
+			}
+            else if (characterToCheck == '\t')
+            {
 				[self drawCharacter:tabCharacter attributes:[aString attributesAtIndex:index effectiveRange:nil] atIndex:index containerOrigin:containerOrigin];				
-			} else if (characterToCheck == '\n' || characterToCheck == '\r' || characterToCheck == 0x2028 || characterToCheck == 0x2029) {
+			}
+            else if (characterToCheck == '\n' || characterToCheck == '\r' || characterToCheck == 0x2028 || characterToCheck == 0x2029)
+            {
 				[self drawCharacter:newLineCharacter attributes:[aString attributesAtIndex:index effectiveRange:nil] atIndex:index containerOrigin:containerOrigin];				
-//			} else if([controlSet characterIsMember:characterToCheck]) {
+//			}
+//          else if([controlSet characterIsMember:characterToCheck])
+//          {
 //				[self drawCharacter:[NSString stringWithFormat:@"%C", 0x0332] attributes:[aString attributesAtIndex:index effectiveRange:nil] atIndex:index containerOrigin:containerOrigin];								
 			}
 		}

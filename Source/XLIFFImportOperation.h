@@ -13,9 +13,11 @@
 /**
  Uses the xliff tree and applies the translation to its StringController.
  */
-@interface XLIFFImportOperation : Operation {
+@interface XLIFFImportOperation : Operation
+{
 	XLIFFImportSettings *settings;
 }
+
 @property (strong) XLIFFImportSettings *settings;
 
 @end

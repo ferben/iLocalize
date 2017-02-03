@@ -35,123 +35,147 @@
 
 - (id)init
 {
-	if(self = [super initWithWindowNibName:@"Statistics"]) {
+	if (self = [super initWithWindowNibName:@"Statistics"])
+    {
 		mStatsDic = [[NSMutableDictionary alloc] init];
 	}
-	return self;
+	
+    return self;
 }
 
 
-- (int)countWords:(NSString*)s
+- (NSUInteger)countWords:(NSString *)s
 {
-	if([s length] == 0) return 0;
+	if ([s length] == 0)
+        return 0;
 	
-	int count = 0;
+	NSUInteger count = 0;
+    
 	NSEnumerator *enumerator = [[s componentsSeparatedByString:@" "] objectEnumerator];
 	NSString *c;
-	while(c = [enumerator nextObject]) {
-		if([c length] > 0) {
+    
+	while (c = [enumerator nextObject])
+    {
+		if ([c length] > 0)
+        {
 			count++;
 		}
 	}
+    
 	return count;
 }
 
-- (void)collectFilesStats:(NSArray*)fcs language:(NSString*)language
+- (void)collectFilesStats:(NSArray *)fcs language:(NSString *)language
 {
 	NSMutableDictionary *stats = mStatsDic[language];
-	if(!stats) {
+    
+	if (!stats)
+    {
 		stats = [NSMutableDictionary dictionary];
 		mStatsDic[language] = stats;
 	}
 		
-	unsigned numberOfNibFiles = 0;
-	unsigned numberOfNibFilesToTranslate = 0;
-	unsigned numberOfStringsFiles = 0;
-	unsigned numberOfStringsFilesToTranslate = 0;
+	NSUInteger numberOfNibFiles = 0;
+	NSUInteger numberOfNibFilesToTranslate = 0;
+	NSUInteger numberOfStringsFiles = 0;
+	NSUInteger numberOfStringsFilesToTranslate = 0;
 	
-	unsigned numberOfStrings = 0;
-	unsigned numberOfWords = 0;
-	unsigned numberOfChars = 0;
+	NSUInteger numberOfStrings = 0;
+	NSUInteger numberOfWords = 0;
+	NSUInteger numberOfChars = 0;
     
-    unsigned numberOfStringsToTranslate = 0;
-    unsigned numberOfWordsToTranslate = 0;
-    unsigned numberOfCharsToTranslate = 0;
+    NSUInteger numberOfStringsToTranslate = 0;
+    NSUInteger numberOfWordsToTranslate = 0;
+    NSUInteger numberOfCharsToTranslate = 0;
     
 	FileController *fc;
-	for(fc in fcs) {
+	
+    for (fc in fcs)
+    {
 		NSArray *scs = [fc filteredStringControllers];
 		NSEnumerator *stringsEnumerator = [scs objectEnumerator];
 		StringController *sc;
-		while(sc = [stringsEnumerator nextObject]) {
-            if(![sc isBaseString]) {
-                if([sc statusToTranslate]) {
+        
+		while (sc = [stringsEnumerator nextObject])
+        {
+            if (![sc isBaseString])
+            {
+                if ([sc statusToTranslate])
+                {
                     NSString *s = [sc base];
                     numberOfWordsToTranslate += [self countWords:s];
                     numberOfCharsToTranslate += [s length];
                     numberOfStringsToTranslate++;
-                } else if([sc statusToCheck]) {
+                }
+                else if ([sc statusToCheck])
+                {
                     NSString *s = [sc base];
                     numberOfWordsToTranslate += [self countWords:s];
                     numberOfCharsToTranslate += [s length];
                     numberOfStringsToTranslate++;                
                 }                
             }
+            
 			NSString *s = [sc translation];
 			numberOfWords += [self countWords:s];
 			numberOfChars += [s length];
-			if([s length] > 0) {
+			
+            if ([s length] > 0)
+            {
 				numberOfStrings++;
 			}
 		}
         
-        if([fc percentCompleted] < 100 && ![fc isBaseFileController]) {
+        if ([fc percentCompleted] < 100 && ![fc isBaseFileController])
+        {
 			// To translate
 			
-			if([[fc relativeFilePath] isPathNib])
+			if ([[fc relativeFilePath] isPathNib])
 				numberOfNibFilesToTranslate++;
 			
-			if([[fc relativeFilePath] isPathStrings])
+			if ([[fc relativeFilePath] isPathStrings])
 				numberOfStringsFilesToTranslate++;			
-		} else {
-			if([[fc relativeFilePath] isPathNib])
+		}
+        else
+        {
+			if ([[fc relativeFilePath] isPathNib])
 				numberOfNibFiles++;
 			
-			if([[fc relativeFilePath] isPathStrings])
+			if ([[fc relativeFilePath] isPathStrings])
 				numberOfStringsFiles++;			
 		}		
 	}
 			
-	unsigned numberOfFiles = [fcs count];
-	unsigned numberOfFilesToTranslate = numberOfNibFilesToTranslate+numberOfStringsFilesToTranslate;
+	NSUInteger numberOfFiles = [fcs count];
+	NSUInteger numberOfFilesToTranslate = numberOfNibFilesToTranslate + numberOfStringsFilesToTranslate;
 	
     // All strings
     
-	stats[KEY_NUMBER_OF_FILES] = [NSNumber numberWithInt:numberOfFiles];
-	stats[KEY_NUMBER_OF_NIB_FILES] = [NSNumber numberWithInt:numberOfNibFiles];
-	stats[KEY_NUMBER_OF_STRINGS_FILES] = [NSNumber numberWithInt:numberOfStringsFiles];
+	stats[KEY_NUMBER_OF_FILES] = [NSNumber numberWithInteger:numberOfFiles];
+	stats[KEY_NUMBER_OF_NIB_FILES] = [NSNumber numberWithInteger:numberOfNibFiles];
+	stats[KEY_NUMBER_OF_STRINGS_FILES] = [NSNumber numberWithInteger:numberOfStringsFiles];
 	
-	stats[KEY_NUMBER_OF_STRINGS] = [NSNumber numberWithInt:numberOfStrings];
-	stats[KEY_NUMBER_OF_STRINGS_PER_FILE] = [NSNumber numberWithInt:numberOfFiles > 0?numberOfStrings/numberOfFiles:0];
+	stats[KEY_NUMBER_OF_STRINGS] = [NSNumber numberWithInteger:numberOfStrings];
+	stats[KEY_NUMBER_OF_STRINGS_PER_FILE] = [NSNumber numberWithInteger: (numberOfFiles > 0) ? numberOfStrings / numberOfFiles : 0];
 
-	stats[KEY_NUMBER_OF_WORDS] = [NSNumber numberWithInt:numberOfWords];
-	stats[KEY_NUMBER_OF_WORDS_PER_STRING] = [NSNumber numberWithInt:numberOfStrings > 0?numberOfWords/numberOfStrings:0];
+	stats[KEY_NUMBER_OF_WORDS] = [NSNumber numberWithInteger:numberOfWords];
+	stats[KEY_NUMBER_OF_WORDS_PER_STRING] = [NSNumber numberWithInteger: (numberOfStrings > 0) ? numberOfWords / numberOfStrings : 0];
 
-	stats[KEY_NUMBER_OF_CHARS] = [NSNumber numberWithInt:numberOfChars];
+	stats[KEY_NUMBER_OF_CHARS] = [NSNumber numberWithInteger:numberOfChars];
     
     // Non-translated strings
     
-	stats[KEY_NUMBER_OF_FILES_TO_TRANSLATE] = [NSNumber numberWithInt:numberOfFilesToTranslate];
-	stats[KEY_NUMBER_OF_NIB_FILES_TO_TRANSLATE] = [NSNumber numberWithInt:numberOfNibFilesToTranslate];
-	stats[KEY_NUMBER_OF_STRINGS_FILES_TO_TRANSLATE] = [NSNumber numberWithInt:numberOfStringsFilesToTranslate];
+	stats[KEY_NUMBER_OF_FILES_TO_TRANSLATE] = [NSNumber numberWithInteger:numberOfFilesToTranslate];
+	stats[KEY_NUMBER_OF_NIB_FILES_TO_TRANSLATE] = [NSNumber numberWithInteger:numberOfNibFilesToTranslate];
+	stats[KEY_NUMBER_OF_STRINGS_FILES_TO_TRANSLATE] = [NSNumber numberWithInteger:numberOfStringsFilesToTranslate];
 	
-	stats[KEY_NUMBER_OF_STRINGS_TO_TRANSLATE] = [NSNumber numberWithInt:numberOfStringsToTranslate];
-	stats[KEY_NUMBER_OF_STRINGS_PER_FILE_TO_TRANSLATE] = [NSNumber numberWithInt:numberOfFilesToTranslate > 0?numberOfStringsToTranslate/numberOfFilesToTranslate:0];
+	stats[KEY_NUMBER_OF_STRINGS_TO_TRANSLATE] = [NSNumber numberWithInteger:numberOfStringsToTranslate];
+	stats[KEY_NUMBER_OF_STRINGS_PER_FILE_TO_TRANSLATE] = [NSNumber numberWithInteger: (numberOfFilesToTranslate > 0) ? numberOfStringsToTranslate / numberOfFilesToTranslate : 0];
     
-	stats[KEY_NUMBER_OF_WORDS_TO_TRANSLATE] = [NSNumber numberWithInt:numberOfWordsToTranslate];
-	stats[KEY_NUMBER_OF_WORDS_PER_STRING_TO_TRANSLATE] = [NSNumber numberWithInt:numberOfStringsToTranslate > 0?numberOfWordsToTranslate/numberOfStringsToTranslate:0];
+	stats[KEY_NUMBER_OF_WORDS_TO_TRANSLATE] = [NSNumber numberWithInteger:numberOfWordsToTranslate];
+	stats[KEY_NUMBER_OF_WORDS_PER_STRING_TO_TRANSLATE] = [NSNumber numberWithInteger: (numberOfStringsToTranslate > 0) ? numberOfWordsToTranslate / numberOfStringsToTranslate : 0];
     
-	stats[KEY_NUMBER_OF_CHARS_TO_TRANSLATE] = [NSNumber numberWithInt:numberOfCharsToTranslate];
+	stats[KEY_NUMBER_OF_CHARS_TO_TRANSLATE] = [NSNumber numberWithInteger:numberOfCharsToTranslate];
     
 }
 
@@ -159,74 +183,94 @@
 {
 	NSEnumerator *enumerator = [[[[self projectProvider] projectController] languageControllers] objectEnumerator];
 	LanguageController *lc;
-	while(lc = [enumerator nextObject]) {
+    
+	while (lc = [enumerator nextObject])
+    {
 		[self collectFilesStats:[lc fileControllers] language:[lc displayLanguage]];		
 	}
 }
 
-- (NSNumber*)statNumberForKey:(NSString*)key mean:(BOOL)mean
+- (NSNumber *)statNumberForKey:(NSString *)key mean:(BOOL)mean
 {
-	if([mSourcePopUp indexOfSelectedItem] == 0) {
+	if ([mSourcePopUp indexOfSelectedItem] == 0)
+    {
 		NSEnumerator *enumerator = [[mStatsDic allValues] objectEnumerator];
 		NSDictionary *dic;
-		unsigned total = 0;
-		unsigned count = 0;
-		while(dic = [enumerator nextObject]) {
+        
+		NSUInteger total = 0;
+		NSUInteger count = 0;
+        
+		while (dic = [enumerator nextObject])
+        {
 			NSNumber *number = dic[key];
-			if(number) {
+            
+			if (number)
+            {
 				total += [number intValue];
 				count++;
 			}
 		}
-		if(count == 0) {
+        
+		if (count == 0)
+        {
 			return NULL;
-		} else {
-			if(mean)
-				return [NSNumber numberWithInt:total/count];
-			else
-				return [NSNumber numberWithInt:total];
 		}
-	} else {
+        else
+        {
+			if (mean)
+				return [NSNumber numberWithInteger:total / count];
+			else
+				return [NSNumber numberWithInteger:total];
+		}
+	}
+    else
+    {
 		NSDictionary *dic = mStatsDic[[mSourcePopUp titleOfSelectedItem]];
 		return dic[key];
 	}	
 }
 
-- (NSString*)formatNumber:(NSNumber*)n
+- (NSString *)formatNumber:(NSNumber *)n
 {
 	NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
 	[formatter setFormat:@"###,##0"];
 	[formatter setThousandSeparator:[[NSLocale currentLocale] objectForKey:NSLocaleGroupingSeparator]];
+    
 	return [formatter stringForObjectValue:n];
 }
 
-- (NSString*)statForKey:(NSString*)key mean:(BOOL)mean
+- (NSString *)statForKey:(NSString *)key mean:(BOOL)mean
 {	
 	NSNumber *number = [self statNumberForKey:key mean:mean];
-	if(number)
+	
+    if (number)
 		return [self formatNumber:number];
 	else
 		return NSLocalizedStringFromTable(@"n/a", @"LocalizableStatistics", nil);		
 }
 
-- (void)addStat:(NSString*)title keyAll:(NSString*)all keyToTranslate:(NSString*)totranslate mean:(BOOL)mean
+- (void)addStat:(NSString *)title keyAll:(NSString *)all keyToTranslate:(NSString *)totranslate mean:(BOOL)mean
 {
 	NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    
 	dic[@"title"] = title;
 	dic[@"all"] = [self statForKey:all mean:mean];
 	dic[@"totranslate"] = [self statForKey:totranslate mean:mean];
 	dic[@"bold"] = @NO;
-	[mStatsController addObject:dic];
+	
+    [mStatsController addObject:dic];
 }
 
-- (void)addStat:(NSString*)title all:(NSString*)all toTranslate:(NSString*)totranslate bold:(BOOL)bold
+- (void)addStat:(NSString *)title all:(NSString *)all toTranslate:(NSString *)totranslate bold:(BOOL)bold
 {
 	NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    
 	dic[@"title"] = title;
 	dic[@"all"] = all;
 	dic[@"totranslate"] = totranslate;
 	dic[@"bold"] = @(bold);
-	[mStatsController addObject:dic];
+	
+    [mStatsController addObject:dic];
 }
 
 - (void)addStatSeparator
@@ -237,17 +281,22 @@
 - (void)updatePrice
 {
 	float priceBase = [mPriceBaseField floatValue];
-	mPriceTotal = 0;
+	
+    mPriceTotal = 0;
     mPriceToTranslateTotal = 0;
-	switch([mPriceUnitPopUp indexOfSelectedItem]) {
+	
+    switch ([mPriceUnitPopUp indexOfSelectedItem])
+    {
 		case 0:	// per word
 			mPriceTotal = priceBase*[[self statNumberForKey:KEY_NUMBER_OF_WORDS mean:NO] floatValue];
 			mPriceToTranslateTotal = priceBase*[[self statNumberForKey:KEY_NUMBER_OF_WORDS_TO_TRANSLATE mean:NO] floatValue];
 			break;
+            
 		case 1: // per characters
 			mPriceTotal = priceBase*[[self statNumberForKey:KEY_NUMBER_OF_CHARS mean:NO] floatValue];
 			mPriceToTranslateTotal = priceBase*[[self statNumberForKey:KEY_NUMBER_OF_CHARS_TO_TRANSLATE mean:NO] floatValue];
 			break;
+            
 		case 2: // per string
 			mPriceTotal = priceBase*[[self statNumberForKey:KEY_NUMBER_OF_STRINGS mean:NO] floatValue];
 			mPriceToTranslateTotal = priceBase*[[self statNumberForKey:KEY_NUMBER_OF_STRINGS_TO_TRANSLATE mean:NO] floatValue];
@@ -280,6 +329,7 @@
 	[self addStatSeparator];
 	
 	[self updatePrice];
+    
 	[self addStat:NSLocalizedStringFromTable(@"Price", @"LocalizableStatistics", @"Statistics")
 			  all:[self formatNumber:@(mPriceTotal)]
 	  toTranslate:[self formatNumber:@(mPriceToTranslateTotal)]
@@ -288,7 +338,7 @@
 
 - (void)willShow
 {
-	while([[mSourcePopUp itemArray] count] > 2)
+	while ([[mSourcePopUp itemArray] count] > 2)
 		[mSourcePopUp removeItemAtIndex:2];
 	
 	[mSourcePopUp addItemsWithTitles:[[[self projectProvider] projectController] displayLanguages]];
@@ -333,10 +383,11 @@
 {
 	NSMutableString *s = [NSMutableString string];
 	
-	if([mSourcePopUp indexOfSelectedItem] == 0)
+	if ([mSourcePopUp indexOfSelectedItem] == 0)
 		[s appendString:NSLocalizedStringFromTable(@"Source: All", @"LocalizableStatistics", @"Statistics")];
 	else
 		[s appendFormat:NSLocalizedStringFromTable(@"Source: %@", @"LocalizableStatistics", @"Statistics"), [mSourcePopUp titleOfSelectedItem]];
+    
 	[s appendString:@"\n"];
 
 	[s appendFormat:NSLocalizedStringFromTable(@"Number of files = %@", @"LocalizableStatistics", @"Statistics"), [self statForKey:KEY_NUMBER_OF_FILES mean:NO]];

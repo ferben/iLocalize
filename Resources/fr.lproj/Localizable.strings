@@ -68,10 +68,10 @@
 "%d nib files are not located in language folder" = "%d fichiers NIB ne sont pas situés dans un dossier langue";
 
 /* File Content Info */
-"%d of %d" = "%1$d de %2$d";
+"%ld of %ld" = "%1$ld de %2$ld";
 
 /* File Content Info */
-"%d of %d %@" = "%1$d de %2$d %3$@";
+"%ld of %ld %@" = "%1$ld de %2$ld %3$@";
 
 /* Glossary Entries Information */
 "%d of %d entries" = "%1$d de %2$d entrées";
