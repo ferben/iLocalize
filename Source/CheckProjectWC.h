@@ -10,9 +10,9 @@
 #import "AZListSelectionView.h"
 
 @interface CheckProjectWC : AbstractWC<AZListSelectionViewDelegate> {
-	IBOutlet NSOutlineView *outlineView;
-	IBOutlet NSButton *checkButton;
-	AZListSelectionView *selectionView;
+    IBOutlet NSOutlineView *outlineView;
+    IBOutlet NSButton *checkButton;
+    AZListSelectionView *selectionView;
 }
 - (NSArray*)checkLanguages;
 - (IBAction)cancel:(id)sender;

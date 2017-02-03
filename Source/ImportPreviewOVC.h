@@ -12,19 +12,19 @@
 @class BundleSource;
 
 @interface ImportPreviewOVC : OperationViewController {
-	IBOutlet NSOutlineView *outlineView;   
-	
+    IBOutlet NSOutlineView *outlineView;   
+    
     BundleSource *baseBundleSource;    
 
-	// Array of ImportDiffItem objects.
-	NSArray *items;
-	
-	// Tree:
-	// operation -> array of ImportDiffItem
-	AZPathNode *root;
-		
-	// Description used to export
-	NSMutableString	*mDescription;
+    // Array of ImportDiffItem objects.
+    NSArray *items;
+    
+    // Tree:
+    // operation -> array of ImportDiffItem
+    AZPathNode *root;
+        
+    // Description used to export
+    NSMutableString    *mDescription;
 }
 
 @property (strong) NSArray *items;

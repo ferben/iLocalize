@@ -23,13 +23,13 @@
 
 - (BOOL)needToSaveToDisk
 {
-	NSEnumerator *enumerator = [self objectEnumerator];
-	FileController *fc;
-	while(fc = [enumerator nextObject]) {
-		if([fc statusSynchToDisk])
-			return YES;
-	}
-	return NO;
+    NSEnumerator *enumerator = [self objectEnumerator];
+    FileController *fc;
+    while(fc = [enumerator nextObject]) {
+        if([fc statusSynchToDisk])
+            return YES;
+    }
+    return NO;
 }
 
 @end
@@ -46,48 +46,48 @@
 
 - (void)awake
 {
-	mFileControllers = NULL;
+    mFileControllers = NULL;
 }
 
 
 - (void)openFileControllers:(NSArray*)fileControllers
 {
-	if([fileControllers count]) {
-		[self setFileControllers:fileControllers];
-		if([fileControllers needToSaveToDisk])
-			[[SaveAllOperation operationWithProjectProvider:[self projectProvider]] checkAndSaveFilesWithConfirmation:YES completion:^{
+    if([fileControllers count]) {
+        [self setFileControllers:fileControllers];
+        if([fileControllers needToSaveToDisk])
+            [[SaveAllOperation operationWithProjectProvider:[self projectProvider]] checkAndSaveFilesWithConfirmation:YES completion:^{
                 [self open];
             }];
-		else
-			[self open];
-	}
+        else
+            [self open];
+    }
 }
 
 - (void)revealFileControllers:(NSArray*)fileControllers
 {
-	FileController *controller;
-	for(controller in fileControllers) {
-		[FileTool revealFile:[controller absoluteFilePath]];
-	}
+    FileController *controller;
+    for(controller in fileControllers) {
+        [FileTool revealFile:[controller absoluteFilePath]];
+    }
 }
 
 - (void)setFileControllers:(NSArray*)fileControllers
 {
-	mFileControllers = fileControllers;
+    mFileControllers = fileControllers;
 }
 
 - (void)open
 {   
-	[self openFiles];
-	[self close];
+    [self openFiles];
+    [self close];
 }
 
 - (void)openFiles
 {
-	FileController *fc;
-	for(fc in mFileControllers) {
-		[[self projectProvider] openFileWithExternalEditor:[fc absoluteFilePath]];
-	}
+    FileController *fc;
+    for(fc in mFileControllers) {
+        [[self projectProvider] openFileWithExternalEditor:[fc absoluteFilePath]];
+    }
 }
 
 @end

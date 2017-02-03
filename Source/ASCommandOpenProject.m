@@ -14,7 +14,7 @@
 
 - (id)performDefaultImplementation
 {
-	NSURL *url = [self directParameter];
+    NSURL *url = [self directParameter];
     NSDocument *document;
 
     NSDocumentController *documentController = [NSDocumentController sharedDocumentController];
@@ -28,7 +28,7 @@
     
     ProjectDocument *myDocument = (ProjectDocument *)document;
     
-	return [ASProject projectWithDocument:myDocument];
+    return [ASProject projectWithDocument:myDocument];
 }
 
 @end

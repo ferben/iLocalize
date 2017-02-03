@@ -13,14 +13,14 @@
 
 @interface ImportDiffItem : NSObject
 {
-	BOOL enabled;
-	NSUInteger operation;
-	
-	// The relative file
-	NSString *file;
-	
-	// The source path
-	NSString *source;
+    BOOL enabled;
+    NSUInteger operation;
+    
+    // The relative file
+    NSString *file;
+    
+    // The source path
+    NSString *source;
 }
 
 @property BOOL enabled;

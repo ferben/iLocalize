@@ -15,23 +15,23 @@
 @class CustomFieldEditor;
 
 @interface GlossaryWC : NSWindowController<NSOpenSavePanelDelegate, AZTableViewDelegate> {
-	IBOutlet AZArrayController	*mEntriesController;
-	IBOutlet NSObjectController	*mGlossaryController;
-	
-	IBOutlet NSTextField		*mInfoField;
-	IBOutlet TableViewCustom	*mEntryTableView;
-	
-	IBOutlet NSView			*mTopRightWindowView;
+    IBOutlet AZArrayController    *mEntriesController;
+    IBOutlet NSObjectController    *mGlossaryController;
+    
+    IBOutlet NSTextField        *mInfoField;
+    IBOutlet TableViewCustom    *mEntryTableView;
+    
+    IBOutlet NSView            *mTopRightWindowView;
 
-    CustomFieldEditor		*mCustomFieldEditor;
-	
-	NSString				*mFilterValue;
+    CustomFieldEditor        *mCustomFieldEditor;
+    
+    NSString                *mFilterValue;
     BOOL                    mCheckWhenSaved;
     
     Glossary                *glossary;
-	AddLanguageWC			*mAddLanguageWC;
-	
-	BOOL					mShowInvisibleCharacters;
+    AddLanguageWC            *mAddLanguageWC;
+    
+    BOOL                    mShowInvisibleCharacters;
 }
 
 @property (strong) Glossary *glossary;

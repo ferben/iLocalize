@@ -18,14 +18,14 @@
 
 @interface ProjectController : AbstractController
 {
-	NSMutableArray		*mLanguageControllers;
+    NSMutableArray        *mLanguageControllers;
 
-	// Temporary state (not saved)
-	NSInteger           mCurrentLanguageIndex;
-	BOOL				mDirtyEnable;
-	DirtyContext		*dirtyContext;
-	NSInteger			dirtyCount;
-	BOOL				markDirty;
+    // Temporary state (not saved)
+    NSInteger           mCurrentLanguageIndex;
+    BOOL                mDirtyEnable;
+    DirtyContext        *dirtyContext;
+    NSInteger            dirtyCount;
+    BOOL                markDirty;
 }
 
 @property (weak) id<ProjectProvider> projectProvider;

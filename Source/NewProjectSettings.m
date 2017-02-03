@@ -20,21 +20,21 @@
 
 - (id)init
 {
-	if((self = [super init])) {
-		
-	}
-	return self;
+    if((self = [super init])) {
+        
+    }
+    return self;
 }
 
 
 - (NSString *)projectFolderPath
 {
-	return [self.projectFolder stringByAppendingPathComponent:self.name];
+    return [self.projectFolder stringByAppendingPathComponent:self.name];
 }
 
 - (NSString *)projectFilePath
 {
-	return [[self projectFolderPath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.%@", self.name, PROJET_EXT]];
+    return [[self projectFolderPath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.%@", self.name, PROJET_EXT]];
 }
 
 @end

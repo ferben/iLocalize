@@ -16,12 +16,12 @@
 
 + (IGroupElementGlossary*)elementWithDictionary:(NSDictionary*)dic
 {
-	IGroupElementGlossary *e = [[self alloc] init];
-	e.glossary = dic[@"glossary"];
-	e.source = dic[@"base"];
-	e.target = dic[@"translation"];
-	e.score = [dic[@"score"] floatValue];
-	return e;
+    IGroupElementGlossary *e = [[self alloc] init];
+    e.glossary = dic[@"glossary"];
+    e.source = dic[@"base"];
+    e.target = dic[@"translation"];
+    e.score = [dic[@"score"] floatValue];
+    return e;
 }
 
 

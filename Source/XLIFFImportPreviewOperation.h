@@ -16,7 +16,7 @@
  its corresponding FileController and StringController.
  */
 @interface XLIFFImportPreviewOperation : Operation {
-	XLIFFImportSettings *settings;
+    XLIFFImportSettings *settings;
 }
 
 @property (strong) XLIFFImportSettings *settings;

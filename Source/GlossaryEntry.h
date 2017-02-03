@@ -10,8 +10,8 @@
  Single entry of a glossary.
  */
 @interface GlossaryEntry : NSObject {
-	NSString *source;
-	NSString *translation;
+    NSString *source;
+    NSString *translation;
 }
 @property (strong) NSString *source;
 @property (strong) NSString *translation;

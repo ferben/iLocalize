@@ -15,13 +15,13 @@
 
 - (StatsWC*)statsWC
 {
-	return (StatsWC*)[self instanceOfAbstractWCName:@"StatsWC"];
+    return (StatsWC*)[self instanceOfAbstractWCName:@"StatsWC"];
 }
 
 - (void)stats
 {
-	[[self statsWC] setDidCloseSelector:nil target:self];
-	[[self statsWC] showAsSheet];				
+    [[self statsWC] setDidCloseSelector:nil target:self];
+    [[self statsWC] showAsSheet];                
 }
 
 @end

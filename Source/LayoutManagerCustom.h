@@ -6,12 +6,12 @@
 //  Copyright 2005 Arizona Software. All rights reserved.
 //
 
-@interface LayoutManagerCustom : NSLayoutManager {	
-	NSString *spaceCharacter;
-	NSString *tabCharacter;
-	NSString *newLineCharacter;
-		
-	BOOL showInvisibleCharacters;
+@interface LayoutManagerCustom : NSLayoutManager {    
+    NSString *spaceCharacter;
+    NSString *tabCharacter;
+    NSString *newLineCharacter;
+        
+    BOOL showInvisibleCharacters;
 }
 - (void)setShowInvisibleCharacters:(BOOL)flag;
 @end

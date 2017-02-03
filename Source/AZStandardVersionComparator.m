@@ -12,10 +12,10 @@
 
 + (AZStandardVersionComparator *)defaultComparator
 {
-	static AZStandardVersionComparator *defaultComparator = nil;
-	if (defaultComparator == nil)
-		defaultComparator = [[AZStandardVersionComparator alloc] init];
-	return defaultComparator;
+    static AZStandardVersionComparator *defaultComparator = nil;
+    if (defaultComparator == nil)
+        defaultComparator = [[AZStandardVersionComparator alloc] init];
+    return defaultComparator;
 }
 
 typedef enum {
@@ -32,7 +32,7 @@ typedef enum {
         return kNumberType;
     } else {
         return kStringType;
-    }	
+    }    
 }
 
 - (NSArray *)splitVersionString:(NSString *)version
@@ -53,7 +53,7 @@ typedef enum {
         newType = [self typeOfCharacter:character];
         if (oldType != newType || oldType == kPeriodType) {
             // We've reached a new segment
-			NSString *aPart = [[NSString alloc] initWithString:s];
+            NSString *aPart = [[NSString alloc] initWithString:s];
             [parts addObject:aPart];
             [s setString:character];
         } else {
@@ -70,7 +70,7 @@ typedef enum {
 
 - (NSComparisonResult)compareVersion:(NSString *)versionA toVersion:(NSString *)versionB;
 {
-	NSArray *partsA = [self splitVersionString:versionA];
+    NSArray *partsA = [self splitVersionString:versionA];
     NSArray *partsB = [self splitVersionString:versionB];
     
     NSString *partA, *partB;
@@ -126,7 +126,7 @@ typedef enum {
         // n holds the index of the part we want.
         NSString *missingPart;
         SUCharacterType missingType;
-		NSComparisonResult shorterResult, largerResult;
+        NSComparisonResult shorterResult, largerResult;
         
         if ([partsA count] > [partsB count]) {
             missingPart = partsA[n];

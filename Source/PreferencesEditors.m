@@ -22,53 +22,53 @@ static PreferencesEditors *prefs = nil;
             prefs = [[PreferencesEditors alloc] init];
     }
     
-	return prefs;
+    return prefs;
 }
 
 + (NSMutableDictionary *)editor:(NSString *)editor extension:(NSString *)extension
 {
-	NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-	dic[@"editor"] = editor;
-	dic[@"extension"] = extension;
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    dic[@"editor"] = editor;
+    dic[@"extension"] = extension;
     
-	return dic;
+    return dic;
 }
 
 + (NSMutableArray *)defaultEditors
 {
-	NSMutableArray *editors = [NSMutableArray array];
-	
-	// nib type has been removed in 3.8 because it is automatically handled by ib3path or ib2path below
-	[editors addObject:[PreferencesEditors editor:@"TextEdit" extension:@"strings"]];
-	[editors addObject:[PreferencesEditors editor:@"TextEdit" extension:@"txt"]];
-	[editors addObject:[PreferencesEditors editor:@"TextEdit" extension:@"rtf"]];
-	[editors addObject:[PreferencesEditors editor:@"TextEdit" extension:@"rtfd"]];
-	[editors addObject:[PreferencesEditors editor:@"Property List Editor" extension:@"plist"]];
-	[editors addObject:[PreferencesEditors editor:@"Preview" extension:@"tiff"]];
-	[editors addObject:[PreferencesEditors editor:@"Preview" extension:@"jpeg"]];
-	[editors addObject:[PreferencesEditors editor:@"Preview" extension:@"tif"]];
-	[editors addObject:[PreferencesEditors editor:@"Preview" extension:@"jpg"]];
-	[editors addObject:[PreferencesEditors editor:@"Preview" extension:@"gif"]];
-	[editors addObject:[PreferencesEditors editor:@"Preview" extension:@"png"]];
-	
-	return editors;
+    NSMutableArray *editors = [NSMutableArray array];
+    
+    // nib type has been removed in 3.8 because it is automatically handled by ib3path or ib2path below
+    [editors addObject:[PreferencesEditors editor:@"TextEdit" extension:@"strings"]];
+    [editors addObject:[PreferencesEditors editor:@"TextEdit" extension:@"txt"]];
+    [editors addObject:[PreferencesEditors editor:@"TextEdit" extension:@"rtf"]];
+    [editors addObject:[PreferencesEditors editor:@"TextEdit" extension:@"rtfd"]];
+    [editors addObject:[PreferencesEditors editor:@"Property List Editor" extension:@"plist"]];
+    [editors addObject:[PreferencesEditors editor:@"Preview" extension:@"tiff"]];
+    [editors addObject:[PreferencesEditors editor:@"Preview" extension:@"jpeg"]];
+    [editors addObject:[PreferencesEditors editor:@"Preview" extension:@"tif"]];
+    [editors addObject:[PreferencesEditors editor:@"Preview" extension:@"jpg"]];
+    [editors addObject:[PreferencesEditors editor:@"Preview" extension:@"gif"]];
+    [editors addObject:[PreferencesEditors editor:@"Preview" extension:@"png"]];
+    
+    return editors;
 }
 
 + (void)initialize
 {
-	NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
 
-	dic[@"ExternalEditors"] = [PreferencesEditors defaultEditors];	
-	
+    dic[@"ExternalEditors"] = [PreferencesEditors defaultEditors];    
+    
     [[NSUserDefaults standardUserDefaults] registerDefaults:dic];
 }
 
 - (id)init
 {
-	if (self = [super init])
+    if (self = [super init])
     {
-		prefs = self;
-		mEditingEditor = nil;
+        prefs = self;
+        mEditingEditor = nil;
         
         NSBundle *myBundle = [NSBundle bundleForClass:[self class]];
         
@@ -80,15 +80,15 @@ static PreferencesEditors *prefs = nil;
                                            reason:@"PreferencesEditors: Could not load resources!"
                                          userInfo:nil];
         }
-	}
+    }
     
-	return self;
+    return self;
 }
 
 - (void)awakeFromNib
 {
-	[mEditorsTableView setTarget:self];
-	[mEditorsTableView setDoubleAction:@selector(editExternalEditor:)];
+    [mEditorsTableView setTarget:self];
+    [mEditorsTableView setDoubleAction:@selector(editExternalEditor:)];
 
     NSEnumerator *enumerator = [[[FMManager shared] fileModules] objectEnumerator];
     FMModule *module;
@@ -142,8 +142,8 @@ static PreferencesEditors *prefs = nil;
     // Store only the custom defined types
     
     NSEnumerator *enumerator = [[mBuiltinTypesController content] objectEnumerator];
-	NSDictionary *typeDic;
-	while(typeDic = [enumerator nextObject]) {
+    NSDictionary *typeDic;
+    while(typeDic = [enumerator nextObject]) {
         NSMutableArray *customExtensions = [NSMutableArray array];
         
         NSEnumerator *extEnumerator = [typeDic[@"extensions"] objectEnumerator];
@@ -154,28 +154,28 @@ static PreferencesEditors *prefs = nil;
         }
         
         data[typeDic[@"type"]] = customExtensions;
-	}
+    }
     
     return data;
 }
 
 - (NSString*)editorForExtension:(NSString*)extension
 {
-	NSArray *editors = [[NSUserDefaults standardUserDefaults] arrayForKey:@"ExternalEditors"];
-	NSEnumerator *enumerator = [editors objectEnumerator];
-	NSDictionary *dic;
-	while(dic = [enumerator nextObject]) {
-		if([dic[@"extension"] isEqualCaseInsensitiveToString:extension])
-			return dic[@"editor"];
-	}
-	return nil;
+    NSArray *editors = [[NSUserDefaults standardUserDefaults] arrayForKey:@"ExternalEditors"];
+    NSEnumerator *enumerator = [editors objectEnumerator];
+    NSDictionary *dic;
+    while(dic = [enumerator nextObject]) {
+        if([dic[@"extension"] isEqualCaseInsensitiveToString:extension])
+            return dic[@"editor"];
+    }
+    return nil;
 }
 
 - (FMModule*)moduleForExtension:(NSString*)extension
 {
-	NSEnumerator *enumerator = [[mBuiltinTypesController content] objectEnumerator];
-	NSDictionary *typeDic;
-	while(typeDic = [enumerator nextObject]) {
+    NSEnumerator *enumerator = [[mBuiltinTypesController content] objectEnumerator];
+    NSDictionary *typeDic;
+    while(typeDic = [enumerator nextObject]) {
         NSEnumerator *extEnumerator = [typeDic[@"extensions"] objectEnumerator];
         NSDictionary *extDic;
         while(extDic = [extEnumerator nextObject]) {
@@ -184,8 +184,8 @@ static PreferencesEditors *prefs = nil;
                     return [typeDic[@"module"] nonretainedObjectValue];
             }
         }
-	}
-	return nil;
+    }
+    return nil;
 }
 
 - (FMModule*)selectedModule
@@ -195,16 +195,16 @@ static PreferencesEditors *prefs = nil;
 
 - (void)editNewInternalEditor
 {
-	int row = [[mBuiltinExtensionsController content] count]-1;
-    [mBuiltinExtensionsTableView editColumn:0 row:row withEvent:nil select:NO];	    
+    int row = [[mBuiltinExtensionsController content] count]-1;
+    [mBuiltinExtensionsTableView editColumn:0 row:row withEvent:nil select:NO];        
 }
 
 - (IBAction)addInternalEditor:(id)sender
 {
-	[mBuiltinExtensionsController addObject:[mBuiltinExtensionsController newObject]];
+    [mBuiltinExtensionsController addObject:[mBuiltinExtensionsController newObject]];
     
-	int row = [[mBuiltinExtensionsController content] count]-1;
-	[mBuiltinExtensionsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:NO];
+    int row = [[mBuiltinExtensionsController content] count]-1;
+    [mBuiltinExtensionsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:NO];
     [self performSelector:@selector(editNewInternalEditor) withObject:nil afterDelay:0];
 }
 
@@ -212,31 +212,31 @@ static PreferencesEditors *prefs = nil;
 
 - (IBAction)editExternalEditor:(id)sender
 {
-	mEditingEditor = [[mEditorsController selectedObjects] firstObject];
-	
-	[mExternalExtensionField setStringValue:mEditingEditor[@"extension"]];
-	[mExternalAppField setStringValue:mEditingEditor[@"editor"]];
-	
-	[NSApp beginSheet:mExternalPanel modalForWindow:mWindow modalDelegate:self didEndSelector:nil contextInfo:nil];	
+    mEditingEditor = [[mEditorsController selectedObjects] firstObject];
+    
+    [mExternalExtensionField setStringValue:mEditingEditor[@"extension"]];
+    [mExternalAppField setStringValue:mEditingEditor[@"editor"]];
+    
+    [NSApp beginSheet:mExternalPanel modalForWindow:mWindow modalDelegate:self didEndSelector:nil contextInfo:nil];    
 }
 
 - (IBAction)addExternalEditor:(id)sender
 {
-	mEditingEditor = nil;
+    mEditingEditor = nil;
 
-	[mExternalExtensionField setStringValue:@""];
-	[mExternalAppField setStringValue:@""];
+    [mExternalExtensionField setStringValue:@""];
+    [mExternalAppField setStringValue:@""];
 
-	[NSApp beginSheet:mExternalPanel modalForWindow:mWindow modalDelegate:self didEndSelector:nil contextInfo:nil];
+    [NSApp beginSheet:mExternalPanel modalForWindow:mWindow modalDelegate:self didEndSelector:nil contextInfo:nil];
 }
 
 #pragma mark -
 
 - (IBAction)externalPanelChoose:(id)sender
 {
-	NSOpenPanel *panel = [NSOpenPanel openPanel];
-	[panel setCanChooseFiles:YES];
-	[panel setCanChooseDirectories:NO];
+    NSOpenPanel *panel = [NSOpenPanel openPanel];
+    [panel setCanChooseFiles:YES];
+    [panel setCanChooseDirectories:NO];
     [panel setDirectoryURL:[NSURL fileURLWithPath:@"/Applications"]];
     [panel beginWithCompletionHandler:^(NSInteger result) {
         if (result == NSFileHandlingPanelOKButton) {
@@ -247,27 +247,27 @@ static PreferencesEditors *prefs = nil;
 
 - (IBAction)externalPanelCancel:(id)sender
 {
-	[NSApp endSheet:mExternalPanel];
-	[mExternalPanel orderOut:self];	
+    [NSApp endSheet:mExternalPanel];
+    [mExternalPanel orderOut:self];    
 }
 
 - (IBAction)externalPanelOK:(id)sender
 {
-	if(mEditingEditor) {
-		mEditingEditor[@"extension"] = [mExternalExtensionField stringValue];
-		mEditingEditor[@"editor"] = [mExternalAppField stringValue];
-		[[[NSUserDefaultsController sharedUserDefaultsController] values] setValue:[mEditorsController content] forKey:@"ExternalEditors"];
-	} else {
-		[mEditorsController addObject:[PreferencesEditors editor:[mExternalAppField stringValue]
-														  extension:[mExternalExtensionField stringValue]]];
-		
-		int row = [[mEditorsController content] count]-1;
-		[mEditorsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:NO];
-		[mEditorsTableView scrollRowToVisible:row];		
-	}
-	
-	[NSApp endSheet:mExternalPanel];
-	[mExternalPanel orderOut:self];
+    if(mEditingEditor) {
+        mEditingEditor[@"extension"] = [mExternalExtensionField stringValue];
+        mEditingEditor[@"editor"] = [mExternalAppField stringValue];
+        [[[NSUserDefaultsController sharedUserDefaultsController] values] setValue:[mEditorsController content] forKey:@"ExternalEditors"];
+    } else {
+        [mEditorsController addObject:[PreferencesEditors editor:[mExternalAppField stringValue]
+                                                          extension:[mExternalExtensionField stringValue]]];
+        
+        int row = [[mEditorsController content] count]-1;
+        [mEditorsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:NO];
+        [mEditorsTableView scrollRowToVisible:row];        
+    }
+    
+    [NSApp endSheet:mExternalPanel];
+    [mExternalPanel orderOut:self];
 }
 
 @end

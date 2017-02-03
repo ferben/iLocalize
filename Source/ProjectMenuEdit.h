@@ -12,8 +12,8 @@
 @class StringEncoding;
 
 @interface ProjectMenuEdit : ProjectMenu {
-	StringEncoding*					mWillConvertUsingEncoding;
-	BOOL							mWillConvertUsingReload;
+    StringEncoding*                    mWillConvertUsingEncoding;
+    BOOL                            mWillConvertUsingReload;
 }
 
 - (IBAction)smartQuoteSubstitution:(id)sender;

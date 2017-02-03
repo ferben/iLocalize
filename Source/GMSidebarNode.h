@@ -10,10 +10,10 @@
 @class ProjectDocument;
 
 @interface GMSidebarNode : NSObject {
-	BOOL _globalGroup;
-	NSString *_title;
-	GlossaryFolder *_folder;
-	NSMutableArray *_children;
+    BOOL _globalGroup;
+    NSString *_title;
+    GlossaryFolder *_folder;
+    NSMutableArray *_children;
 }
 
 @property (nonatomic, strong) NSString *title;

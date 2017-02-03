@@ -14,20 +14,20 @@
 @class SEIFormat;
 
 @interface XMLImporter : NSObject {
-	SEI_FORMAT format;
-	NSXMLDocument *document;
-	NSString *sourceLanguage;
-	NSString *targetLanguage;
-	
-	/**
-	 Dictionary of array of XMLImporterElement. Each key in the dictionary identifies one file.
-	 */
-	AZOrderedDictionary *elementsPerFile;
-	
-	/**
-	 Array of XMLImporterElement that do not belong to a file.
-	 */
-	NSMutableArray *elementsWithoutFile;
+    SEI_FORMAT format;
+    NSXMLDocument *document;
+    NSString *sourceLanguage;
+    NSString *targetLanguage;
+    
+    /**
+     Dictionary of array of XMLImporterElement. Each key in the dictionary identifies one file.
+     */
+    AZOrderedDictionary *elementsPerFile;
+    
+    /**
+     Array of XMLImporterElement that do not belong to a file.
+     */
+    NSMutableArray *elementsWithoutFile;
     
     // Internal flag indicating that the XML parser failed
     // for a unknown reason (see ?) and that we should retry

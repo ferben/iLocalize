@@ -14,8 +14,8 @@
 
 @interface ProjectStructureViewController : NSViewController {
 @public
-	IBOutlet NSTreeController *controller;
-	IBOutlet NSOutlineView *outlineView;
+    IBOutlet NSTreeController *controller;
+    IBOutlet NSOutlineView *outlineView;
 }
 @property (assign) ProjectWC *projectWC;
 

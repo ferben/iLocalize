@@ -15,100 +15,100 @@ static ASManager *shared = nil;
 
 + (ASManager*)shared
 {
-	@synchronized(self) {
-		if(shared == nil) {
-			shared = [[ASManager alloc] init];
-		}
-	}
-	return shared;
+    @synchronized(self) {
+        if(shared == nil) {
+            shared = [[ASManager alloc] init];
+        }
+    }
+    return shared;
 }
 
 - (id)init
 {
-	if(self = [super init]) {
-		mCommandInProgress = nil;
-	}
-	return self;
+    if(self = [super init]) {
+        mCommandInProgress = nil;
+    }
+    return self;
 }
 
 - (void)beginAsyncCommand:(NSScriptCommand*)cmd delegate:(id<ASManagerDelegate>)delegate
 {
-	mCommandInProgress = cmd;
-	mDelegate = delegate;
-	[cmd suspendExecution];
-	//mSuspensionID = [[NSAppleEventManager sharedAppleEventManager] suspendCurrentAppleEvent];
+    mCommandInProgress = cmd;
+    mDelegate = delegate;
+    [cmd suspendExecution];
+    //mSuspensionID = [[NSAppleEventManager sharedAppleEventManager] suspendCurrentAppleEvent];
 }
 
 - (void)endAsyncCommandWithResult:(id)result
 {
-	[mCommandInProgress resumeExecutionWithResult:result];
-	mCommandInProgress = nil;	
+    [mCommandInProgress resumeExecutionWithResult:result];
+    mCommandInProgress = nil;    
 }
 
 - (void)endAsyncCommand
 {
-	[self endAsyncCommandWithResult:nil];
-	//[[NSAppleEventManager sharedAppleEventManager] resumeWithSuspensionID:mSuspensionID];
+    [self endAsyncCommandWithResult:nil];
+    //[[NSAppleEventManager sharedAppleEventManager] resumeWithSuspensionID:mSuspensionID];
 }
 
 - (void)beginSyncCommand:(NSScriptCommand*)cmd delegate:(id<ASManagerDelegate>)delegate
 {
-	mCommandInProgress = cmd;
-	mDelegate = delegate;	
+    mCommandInProgress = cmd;
+    mDelegate = delegate;    
 }
 
 - (void)endSyncCommand
 {
-	mCommandInProgress = nil;	
+    mCommandInProgress = nil;    
 }
 
 - (BOOL)isCommandInProgress
 {
-	return mCommandInProgress != nil;
+    return mCommandInProgress != nil;
 }
 
 - (id)attributeForKey:(NSString*)key
 {
-	return [self attributeForKey:key defaultAttribute:nil];
+    return [self attributeForKey:key defaultAttribute:nil];
 }
 
 - (BOOL)boolValueForKey:(NSString*)key
 {
-	return [self boolValueForKey:key defaultValue:NO];
+    return [self boolValueForKey:key defaultValue:NO];
 }
 
 - (id)attributeForKey:(NSString*)key defaultAttribute:(id)attribute
 {
-	if([self isCommandInProgress]) {
-		return [mDelegate scriptAttributeForKey:key command:mCommandInProgress];
-	} else {
-		return attribute;
-	}
+    if([self isCommandInProgress]) {
+        return [mDelegate scriptAttributeForKey:key command:mCommandInProgress];
+    } else {
+        return attribute;
+    }
 }
 
 - (BOOL)boolValueForKey:(NSString*)key defaultValue:(BOOL)value
 {
-	if([self isCommandInProgress]) {
-		return [mDelegate scriptBoolValueForKey:key command:mCommandInProgress];
-	} else {
-		return value;
-	}
+    if([self isCommandInProgress]) {
+        return [mDelegate scriptBoolValueForKey:key command:mCommandInProgress];
+    } else {
+        return value;
+    }
 }
 
 - (int)intValueForKey:(NSString*)key defaultValue:(int)value
 {
-	if([self isCommandInProgress]) {
-		return [mDelegate scriptIntValueForKey:key command:mCommandInProgress];
-	} else {
-		return value;
-	}	
+    if([self isCommandInProgress]) {
+        return [mDelegate scriptIntValueForKey:key command:mCommandInProgress];
+    } else {
+        return value;
+    }    
 }
 
 - (void)operationCompleted:(NSString*)op
 {
-	if([self isCommandInProgress]) {
-		[mDelegate scriptOperationCompleted:op];
-	}
+    if([self isCommandInProgress]) {
+        [mDelegate scriptOperationCompleted:op];
+    }
 }
 
 @end

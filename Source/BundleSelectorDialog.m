@@ -17,42 +17,42 @@
 
 - (NSString *)promptForBundle
 {
-	NSOpenPanel *panel = [NSOpenPanel openPanel];
+    NSOpenPanel *panel = [NSOpenPanel openPanel];
     
-	[panel setCanChooseFiles:YES];
-	[panel setCanChooseDirectories:YES];
-	[panel setPrompt:NSLocalizedString(@"Select", nil)];
-	[panel setDelegate:self];
-	[panel setAllowsMultipleSelection:NO];
+    [panel setCanChooseFiles:YES];
+    [panel setCanChooseDirectories:YES];
+    [panel setPrompt:NSLocalizedString(@"Select", nil)];
+    [panel setDelegate:self];
+    [panel setAllowsMultipleSelection:NO];
     
     if ([defaultPath isPathExisting])
     {
         [panel setDirectoryURL:[NSURL fileURLWithPath:defaultPath]];
     }
-	
+    
     NSInteger result = [panel runModal];
-	
+    
     if (result == NSModalResponseOK)
     {
-		return [[panel URL] path];
-	}
+        return [[panel URL] path];
+    }
     else
     {
-		return nil;
-	}
+        return nil;
+    }
 }
 
 - (void)promptForBundleForWindow:(NSWindow*)window callback:(CallbackBlockWithFile)_callback
 {
-	self.callback = _callback;
-	
-	NSOpenPanel *panel = [NSOpenPanel openPanel];
-	
+    self.callback = _callback;
+    
+    NSOpenPanel *panel = [NSOpenPanel openPanel];
+    
     [panel setCanChooseFiles:YES];
-	[panel setCanChooseDirectories:YES];
-	[panel setPrompt:NSLocalizedString(@"Select", nil)];
-	[panel setDelegate:self];
-	[panel setAllowsMultipleSelection:NO];
+    [panel setCanChooseDirectories:YES];
+    [panel setPrompt:NSLocalizedString(@"Select", nil)];
+    [panel setDelegate:self];
+    [panel setAllowsMultipleSelection:NO];
     
     if ([defaultPath isPathExisting])
     {
@@ -68,7 +68,7 @@
         else
         {
             self.callback(nil);
-        }	
+        }    
     }];
 }
 
@@ -76,12 +76,12 @@
 {
     NSString *filename = url.path;
     
-	return [filename isPathPackage] || [filename isPathDirectory];
+    return [filename isPathPackage] || [filename isPathDirectory];
 }
 
 - (BOOL)panel:(id)sender validateURL:(NSURL *)url error:(NSError *__autoreleasing *)outError
 {
-	return YES;	
+    return YES;    
 }
 
 @end

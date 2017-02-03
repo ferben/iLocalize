@@ -17,18 +17,18 @@
 
 - (BOOL)loadContentsOnlyWhenDisplaying
 {
-	return YES;
+    return YES;
 }
 
 - (void)fmLoadFile:(NSString*)file intoFileModel:(FileModel*)fileModel
 {
-	[[fileModel fileModelContent] setNonPersistentContent:YES];
-	[[fileModel fileModelContent] setContent:[[NSData alloc] initWithContentsOfFile:file]];
+    [[fileModel fileModelContent] setNonPersistentContent:YES];
+    [[fileModel fileModelContent] setContent:[[NSData alloc] initWithContentsOfFile:file]];
 }
 
 - (void)fmReloadFileController:(FileController*)fileController usingFile:(NSString*)file
 {
-	[self fmLoadFile:file intoFileModel:[fileController fileModel]];
+    [self fmLoadFile:file intoFileModel:[fileController fileModel]];
 }
 
 @end

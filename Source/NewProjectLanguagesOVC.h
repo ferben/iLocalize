@@ -12,14 +12,14 @@
 @class NewProjectSettings;
 
 @interface NewProjectLanguagesOVC : OperationViewController<AZListSelectionViewDelegate> {
-	IBOutlet NSOutlineView *outlineView;
-	IBOutlet NSPopUpButton	*mBaseLanguagePopUp;
-	IBOutlet NSButton       *mCopySourceOnlyIfExists;
+    IBOutlet NSOutlineView *outlineView;
+    IBOutlet NSPopUpButton    *mBaseLanguagePopUp;
+    IBOutlet NSButton       *mCopySourceOnlyIfExists;
 
-	NSMutableArray *languageItems;
-	AZListSelectionView *selectionView;
-	NewProjectSettings *settings;
-	ValidateContinueCallback validateContinueCallback;
+    NSMutableArray *languageItems;
+    AZListSelectionView *selectionView;
+    NewProjectSettings *settings;
+    ValidateContinueCallback validateContinueCallback;
 }
 @property (strong) NewProjectSettings *settings;
 @property (copy) ValidateContinueCallback validateContinueCallback;

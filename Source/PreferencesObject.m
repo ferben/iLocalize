@@ -12,12 +12,12 @@
 
 - (void)setWindow:(NSWindow*)window
 {
-	mWindow = window;	
+    mWindow = window;    
 }
 
 - (NSView*)prefsView
 {
-	return mPrefsView;
+    return mPrefsView;
 }
 
 @end

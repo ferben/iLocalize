@@ -11,11 +11,11 @@
  based on the disk representation. This operation is meant to run asynchronously.
  */
 @interface GlossaryManagerOperation : NSOperation {
-	// The list of folders to analyze
-	NSArray *folders;
-	
-	// Array of extensions allowed for glossary.
-	NSArray *allowedExtensions;
+    // The list of folders to analyze
+    NSArray *folders;
+    
+    // Array of extensions allowed for glossary.
+    NSArray *allowedExtensions;
 }
 @property (strong) NSArray *folders;
 @end

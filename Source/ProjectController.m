@@ -20,17 +20,17 @@
 
 - (id)init
 {
-	if(self = [super init]) {
-		mLanguageControllers = [[NSMutableArray alloc] init];
+    if(self = [super init]) {
+        mLanguageControllers = [[NSMutableArray alloc] init];
 
-		mCurrentLanguageIndex = 0;
-				
-		dirtyContext = [[DirtyContext alloc] init];
-		dirtyCount = 0;
-		
-		[self setDirtyEnable:YES];
-	}
-	return self;
+        mCurrentLanguageIndex = 0;
+                
+        dirtyContext = [[DirtyContext alloc] init];
+        dirtyCount = 0;
+        
+        [self setDirtyEnable:YES];
+    }
+    return self;
 }
 
 
@@ -52,243 +52,243 @@
 
 - (void)addLanguageController:(LanguageController *)languageController
 {
-	[languageController setParent:self];
-	[languageController rebuildFromModel];
-	[mLanguageControllers addObject:languageController];	
-	[self languagesDidChange];
+    [languageController setParent:self];
+    [languageController rebuildFromModel];
+    [mLanguageControllers addObject:languageController];    
+    [self languagesDidChange];
 }
 
 - (void)removeLanguageController:(LanguageController*)languageController
 {
-	[mLanguageControllers removeObject:languageController];	
-	[self languagesDidChange];
+    [mLanguageControllers removeObject:languageController];    
+    [self languagesDidChange];
 }
 
 #pragma mark -
 
 - (void)rebuildFromModel
 {
-	[mLanguageControllers removeAllObjects];
-			
-	NSEnumerator *enumerator = [[[self projectModel] languageModels] objectEnumerator];
-	LanguageModel *languageModel;
-	while((languageModel = [enumerator nextObject])) {
-		LanguageController *languageController = [LanguageController controller];
-		[languageController setBaseLanguageModel:[[self projectModel] baseLanguageModel]];
-		[languageController setLanguageModel:languageModel];				
-		[self addLanguageController:languageController];
-	}		
-	
-	[self languagesDidChange];
+    [mLanguageControllers removeAllObjects];
+            
+    NSEnumerator *enumerator = [[[self projectModel] languageModels] objectEnumerator];
+    LanguageModel *languageModel;
+    while((languageModel = [enumerator nextObject])) {
+        LanguageController *languageController = [LanguageController controller];
+        [languageController setBaseLanguageModel:[[self projectModel] baseLanguageModel]];
+        [languageController setLanguageModel:languageModel];                
+        [self addLanguageController:languageController];
+    }        
+    
+    [self languagesDidChange];
 }
 
 #pragma mark -
 
 - (void)setCurrentLanguageIndex:(NSInteger)index
 {
-	mCurrentLanguageIndex = index;
+    mCurrentLanguageIndex = index;
 }
 
 - (NSInteger)currentLanguageIndex
 {
-	return mCurrentLanguageIndex;
+    return mCurrentLanguageIndex;
 }
 
 #pragma mark -
 
 - (void)setDirtyEnable:(BOOL)flag
 {
-	mDirtyEnable = flag;
+    mDirtyEnable = flag;
 }
 
 - (void)beginDirty
 {
-	if(dirtyCount == 0) {
-		markDirty = NO;
-	}
-	dirtyCount++;
-	[self pushDirtySource:self];
+    if(dirtyCount == 0) {
+        markDirty = NO;
+    }
+    dirtyCount++;
+    [self pushDirtySource:self];
 }
 
 - (void)endDirty
 {
-	dirtyCount--;
-	if(dirtyCount == 0) {
-		[self notifyDirty];		
-	} else if(dirtyCount < 0) {
-		ERROR(@"Dirty count is negative (%ld)", dirtyCount);
-		[self notifyDirty];		
-		dirtyCount = 0;
-	}
+    dirtyCount--;
+    if(dirtyCount == 0) {
+        [self notifyDirty];        
+    } else if(dirtyCount < 0) {
+        ERROR(@"Dirty count is negative (%ld)", dirtyCount);
+        [self notifyDirty];        
+        dirtyCount = 0;
+    }
 }
 
 - (void)markDirty
 {
-	markDirty = YES;
+    markDirty = YES;
 }
 
 - (void)pushDirtySource:(id)source
 {
-	[dirtyContext pushSource:source];
+    [dirtyContext pushSource:source];
 }
 
 - (void)notifyDirtyOnMainThread:(DirtyContext*)dc
 {
-	if([NSThread isMainThread]) {
-		[self dirtyTriggered];		
-		[[NSNotificationCenter defaultCenter] postNotificationName:ILNotificationProjectControllerDidBecomeDirty object:self userInfo:@{@"context": dc}];
-	} else {
-		[self performSelector:@selector(notifyDirtyOnMainThread:) onThread:[NSThread mainThread] withObject:dc waitUntilDone:NO];
-	}	
+    if([NSThread isMainThread]) {
+        [self dirtyTriggered];        
+        [[NSNotificationCenter defaultCenter] postNotificationName:ILNotificationProjectControllerDidBecomeDirty object:self userInfo:@{@"context": dc}];
+    } else {
+        [self performSelector:@selector(notifyDirtyOnMainThread:) onThread:[NSThread mainThread] withObject:dc waitUntilDone:NO];
+    }    
 }
 
 - (void)notifyDirty
-{	
-	if(markDirty) {
-		markDirty = NO;
-		if(mDirtyEnable) {
-			[self pushDirtySource:self];
-			[self notifyDirtyOnMainThread:[dirtyContext copy]];
-			[dirtyContext reset];
-		}		
-	}
+{    
+    if(markDirty) {
+        markDirty = NO;
+        if(mDirtyEnable) {
+            [self pushDirtySource:self];
+            [self notifyDirtyOnMainThread:[dirtyContext copy]];
+            [dirtyContext reset];
+        }        
+    }
 }
 
 - (void)languagesDidChange
 {
-	[self willChangeValueForKey:@"languageControllers"];
-	[self didChangeValueForKey:@"languageControllers"];
+    [self willChangeValueForKey:@"languageControllers"];
+    [self didChangeValueForKey:@"languageControllers"];
 }
 
 - (void)baseStringModelDidChange:(StringModel*)model fileController:(FileController*)fc
 {
-	NSEnumerator *enumerator = [[self languageControllers] objectEnumerator];
-	LanguageController *lc;
-	while(lc = [enumerator nextObject]) {
-		[lc baseStringModelDidChange:model fileController:fc];
-	}
+    NSEnumerator *enumerator = [[self languageControllers] objectEnumerator];
+    LanguageController *lc;
+    while(lc = [enumerator nextObject]) {
+        [lc baseStringModelDidChange:model fileController:fc];
+    }
 }
 
 #pragma mark -
 
 - (BOOL)isLanguageExisting:(NSString*)language
 {
-	return [self languageControllerForLanguage:language] != NULL;
+    return [self languageControllerForLanguage:language] != NULL;
 }
 
 - (NSString*)baseLanguage
 {
-	return [[self baseLanguageController] language]; 
+    return [[self baseLanguageController] language]; 
 }
 
 - (NSMutableArray*)languages
 {
-	NSMutableArray *array = [NSMutableArray array];
-	NSEnumerator *enumerator = [[self languageControllers] objectEnumerator];
-	LanguageController *controller;
-	while(controller = [enumerator nextObject]) {
-		[array addObject:[controller language]];
-	}
-	return array;	
+    NSMutableArray *array = [NSMutableArray array];
+    NSEnumerator *enumerator = [[self languageControllers] objectEnumerator];
+    LanguageController *controller;
+    while(controller = [enumerator nextObject]) {
+        [array addObject:[controller language]];
+    }
+    return array;    
 }
 
 - (NSArray*)displayLanguages
 {
-	NSMutableArray *array = [NSMutableArray array];
-	[[self languageControllers] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-		[array addObject:[obj displayLanguage]];		
-	}];
-	return array;	
+    NSMutableArray *array = [NSMutableArray array];
+    [[self languageControllers] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [array addObject:[obj displayLanguage]];        
+    }];
+    return array;    
 }
 
 #pragma mark -
 
 - (LanguageController*)baseLanguageController
 {
-	return [self languageControllerForLanguage:[[self projectModel] baseLanguage]];
+    return [self languageControllerForLanguage:[[self projectModel] baseLanguage]];
 }
 
 - (NSMutableArray*)languageControllers
 {
-	return mLanguageControllers;
+    return mLanguageControllers;
 }
 
 - (LanguageController*)languageControllerForLanguage:(NSString*)language
 {
-	NSEnumerator *enumerator = [[self languageControllers] objectEnumerator];
-	LanguageController *languageController;
-	while(languageController = [enumerator nextObject]) {
-		NSArray *equivalentLanguages = [LanguageTool equivalentLanguagesWithLanguage:[languageController language]];
-		if([equivalentLanguages containsObject:language])
-			return languageController;
-	}
-	return NULL;
+    NSEnumerator *enumerator = [[self languageControllers] objectEnumerator];
+    LanguageController *languageController;
+    while(languageController = [enumerator nextObject]) {
+        NSArray *equivalentLanguages = [LanguageTool equivalentLanguagesWithLanguage:[languageController language]];
+        if([equivalentLanguages containsObject:language])
+            return languageController;
+    }
+    return NULL;
 }
 
 - (FileController*)correspondingBaseFileControllerForFileController:(FileController*)fileController
 {
-	if([fileController isBaseFileController]) {
-		return fileController;		
-	} else {		
-		return [[self baseLanguageController] fileControllerWithFileModel:[fileController baseFileModel]];
-	}
+    if([fileController isBaseFileController]) {
+        return fileController;        
+    } else {        
+        return [[self baseLanguageController] fileControllerWithFileModel:[fileController baseFileModel]];
+    }
 }
 
 #pragma mark -
 
 - (NSString*)relativePathForSmartPath:(NSString*)smartPath language:(NSString*)language
 {
-	NSEnumerator *enumerator = [[[self languageControllerForLanguage:language] fileControllers] objectEnumerator];
-	FileController *fileController;
-	while(fileController = [enumerator nextObject]) {
-		if([[fileController smartPath] isEqualToString:smartPath])
-			return [fileController relativeFilePath];
-	}	
-	return NULL;	
+    NSEnumerator *enumerator = [[[self languageControllerForLanguage:language] fileControllers] objectEnumerator];
+    FileController *fileController;
+    while(fileController = [enumerator nextObject]) {
+        if([[fileController smartPath] isEqualToString:smartPath])
+            return [fileController relativeFilePath];
+    }    
+    return NULL;    
 }
 
 - (NSString*)relativeBaseLanguagePathForSmartPath:(NSString*)smartPath
 {
-	NSEnumerator *enumerator = [[[self baseLanguageController] fileControllers] objectEnumerator];
-	FileController *fileController;
-	while(fileController = [enumerator nextObject]) {
-		if([[fileController smartPath] isEqualToString:smartPath])
-			return [fileController relativeFilePath];
-	}	
-	return NULL;
+    NSEnumerator *enumerator = [[[self baseLanguageController] fileControllers] objectEnumerator];
+    FileController *fileController;
+    while(fileController = [enumerator nextObject]) {
+        if([[fileController smartPath] isEqualToString:smartPath])
+            return [fileController relativeFilePath];
+    }    
+    return NULL;
 }
 
 - (NSArray*)smartPaths
 {
-	NSMutableArray *array = [NSMutableArray array];
-	NSEnumerator *enumerator = [[[self baseLanguageController] fileControllers] objectEnumerator];
-	FileController *fileController;
-	while(fileController = [enumerator nextObject]) {
-		NSString *smartPath = [fileController smartPath];
-		if(![array containsObject:smartPath])
-			[array addObject:smartPath];
-	}
-	return array;
+    NSMutableArray *array = [NSMutableArray array];
+    NSEnumerator *enumerator = [[[self baseLanguageController] fileControllers] objectEnumerator];
+    FileController *fileController;
+    while(fileController = [enumerator nextObject]) {
+        NSString *smartPath = [fileController smartPath];
+        if(![array containsObject:smartPath])
+            [array addObject:smartPath];
+    }
+    return array;
 }
 
 #pragma mark -
 
 - (NSArray*)needsToBeSavedFileControllers
 {
-	NSMutableArray *array = [NSMutableArray array];
-	for(LanguageController *lc in mLanguageControllers) {
-		[array addObjectsFromArray:[lc fileControllersToSynchToDisk]];		
-	}
-	return array;
+    NSMutableArray *array = [NSMutableArray array];
+    for(LanguageController *lc in mLanguageControllers) {
+        [array addObjectsFromArray:[lc fileControllersToSynchToDisk]];        
+    }
+    return array;
 }
 
 - (NSArray*)needsToBeReloadedFileControllers
 {
-	NSMutableArray *array = [NSMutableArray array];
-	for(LanguageController *lc in mLanguageControllers) {
-		[array addObjectsFromArray:[lc fileControllersToSynchFromDisk]];
-	}	
-	return array;
+    NSMutableArray *array = [NSMutableArray array];
+    for(LanguageController *lc in mLanguageControllers) {
+        [array addObjectsFromArray:[lc fileControllersToSynchFromDisk]];
+    }    
+    return array;
 }
 
 @end

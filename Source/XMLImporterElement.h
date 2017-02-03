@@ -10,10 +10,10 @@
 
 
 @interface XMLImporterElement : NSObject {
-	NSString *file;
-	NSString *key;
-	NSString *source;
-	NSString *translation;
+    NSString *file;
+    NSString *key;
+    NSString *source;
+    NSString *translation;
 }
 @property (strong) NSString *file;
 @property (strong) NSString *key;

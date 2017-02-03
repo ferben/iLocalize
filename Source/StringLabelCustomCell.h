@@ -11,7 +11,7 @@
 @class LabelCustomCellRender;
 
 @interface StringLabelCustomCell : AbstractStringCustomCell {
-	LabelCustomCellRender *mRender;
+    LabelCustomCellRender *mRender;
 }
 
 @end

@@ -13,7 +13,7 @@
 
 - (BOOL)booleanForKey:(id)key
 {
-	return [self[key] boolValue];
+    return [self[key] boolValue];
 }
 
 @end

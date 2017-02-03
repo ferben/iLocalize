@@ -7,8 +7,8 @@
 //
 
 @interface PreferencesObject : NSObject {
-	IBOutlet NSView				*mPrefsView;    
-	NSWindow					*mWindow;
+    IBOutlet NSView                *mPrefsView;    
+    NSWindow                    *mWindow;
 }
 
 - (void)setWindow:(NSWindow*)window;

@@ -15,63 +15,63 @@
 
 + (StringEncoding*)stringEncodingForIdentifier:(NSInteger)identifier
 {
-	BOOL bom = identifier < 0;
-	return [StringEncoding stringEncoding:ABS(identifier) useBOM:bom];
+    BOOL bom = identifier < 0;
+    return [StringEncoding stringEncoding:ABS(identifier) useBOM:bom];
 }
 
 + (StringEncoding*)stringEncoding:(NSStringEncoding)encoding useBOM:(BOOL)useBOM
 {
-	StringEncoding *se = [[StringEncoding alloc] init];
-	se.encoding = encoding;
-	se.bom = useBOM;
-	return se;
+    StringEncoding *se = [[StringEncoding alloc] init];
+    se.encoding = encoding;
+    se.bom = useBOM;
+    return se;
 }
 
 - (NSString*)encodingName
 {
-	return [NSString localizedNameOfStringEncoding:self.encoding];
+    return [NSString localizedNameOfStringEncoding:self.encoding];
 }
 
 - (NSInteger)identifier
 {
-	return self.bom?-self.encoding:self.encoding;
+    return self.bom?-self.encoding:self.encoding;
 }
 
 - (NSString*)description
 {
-	return [NSString stringWithFormat:@"%@, e=%lu, b=%d", [self encodingName], [self encoding], [self bom]];
+    return [NSString stringWithFormat:@"%@, e=%lu, b=%d", [self encodingName], [self encoding], [self bom]];
 }
 
 - (BOOL)isEqual:(id)other
 {
-	if(other == self) return YES;
-	
-	if(!other || ![other isKindOfClass:[self class]]) return NO;
-	
-	return self.encoding == [other encoding] && self.bom == [other bom];
+    if(other == self) return YES;
+    
+    if(!other || ![other isKindOfClass:[self class]]) return NO;
+    
+    return self.encoding == [other encoding] && self.bom == [other bom];
 }
 
 - (NSUInteger)hash
 {
-	return [[NSString stringWithFormat:@"%lu-%d", self.encoding, self.bom] hash];
+    return [[NSString stringWithFormat:@"%lu-%d", self.encoding, self.bom] hash];
 }
 
 - (id)data
 {
-	return @[@(self.encoding), @(self.bom)];
+    return @[@(self.encoding), @(self.bom)];
 }
 
 + (StringEncoding*)stringEncodingWithData:(id)data
 {
-	StringEncoding *e = [[StringEncoding alloc] init];
-	if([data isKindOfClass:[NSArray class]]) {
-		e.encoding = [data[0] unsignedLongValue];
-		e.bom = [data[1] boolValue];
-	} else {
-		e.encoding = [data unsignedLongValue];
-		e.bom = NO;
-	}
-	return e;
+    StringEncoding *e = [[StringEncoding alloc] init];
+    if([data isKindOfClass:[NSArray class]]) {
+        e.encoding = [data[0] unsignedLongValue];
+        e.bom = [data[1] boolValue];
+    } else {
+        e.encoding = [data unsignedLongValue];
+        e.bom = NO;
+    }
+    return e;
 }
 
 @end

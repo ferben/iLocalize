@@ -93,4 +93,4 @@
 
 @interface NSString (Drawing)
 - (float)heightForWidth:(float)inWidth withAttributes:(NSDictionary *)inAttributes;
-@end	
+@end    

@@ -12,57 +12,57 @@
 
 - (void)awakeFromNib
 {
-	mFilterDescriptors = [[NSMutableArray alloc] init];
-	mDelegate = nil;
-	mNewObject = NULL;
+    mFilterDescriptors = [[NSMutableArray alloc] init];
+    mDelegate = nil;
+    mNewObject = NULL;
 }
 
 
 - (void)setFilterDescriptor:(id)filter
 {
-	[mFilterDescriptors removeAllObjects];
-	[mFilterDescriptors addObject:filter];
+    [mFilterDescriptors removeAllObjects];
+    [mFilterDescriptors addObject:filter];
 }
 
 - (void)setFilterDescriptors:(NSArray*)filters
 {
-	[mFilterDescriptors removeAllObjects];
-	[mFilterDescriptors addObjectsFromArray:filters];
+    [mFilterDescriptors removeAllObjects];
+    [mFilterDescriptors addObjectsFromArray:filters];
 }
 
 - (BOOL)acceptObject:(id)object
 {
-	return YES;
+    return YES;
 }
 
 - (void)setDelegate:(id)delegate
 {
-	mDelegate = delegate;
+    mDelegate = delegate;
 }
 
 - (void)insertObject:(id)object atArrangedObjectIndex:(NSUInteger)index
 {
-	mNewObject = object;
-	[super insertObject:object atArrangedObjectIndex:index];
+    mNewObject = object;
+    [super insertObject:object atArrangedObjectIndex:index];
 }
 
 - (NSArray *)arrangeObjects:(NSArray *)objects
 {
-	if([mFilterDescriptors count] == 0 && mDelegate == nil)
-		return [super arrangeObjects:objects];
-	
-	NSMutableArray *array = [NSMutableArray arrayWithCapacity:[objects count]];
-	id object;
-	for(object in objects) {
-		if([mDelegate performSelector:@selector(arrayControllerFilterObject:) withObject:object])
-			[array addObject:object];
-		else if(object == mNewObject) {
-			mNewObject = NULL;
-			[array addObject:object];
-		}
-	}
-	
-	return [super arrangeObjects:array];
+    if([mFilterDescriptors count] == 0 && mDelegate == nil)
+        return [super arrangeObjects:objects];
+    
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:[objects count]];
+    id object;
+    for(object in objects) {
+        if([mDelegate performSelector:@selector(arrayControllerFilterObject:) withObject:object])
+            [array addObject:object];
+        else if(object == mNewObject) {
+            mNewObject = NULL;
+            [array addObject:object];
+        }
+    }
+    
+    return [super arrangeObjects:array];
 }
 
 @end

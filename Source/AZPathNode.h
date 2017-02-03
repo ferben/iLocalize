@@ -15,12 +15,12 @@
     /**
      The parent node or nil if root.
      */
-	AZPathNode *parent;
+    AZPathNode *parent;
     
     /**
      The children nodes. This array contains all the nodes.
      */
-	NSMutableArray *_children;
+    NSMutableArray *_children;
     
     /**
      Array of children after filtering (e.g. localized only)
@@ -35,22 +35,22 @@
     /**
      Name of this node.
      */
-	NSString *name;
+    NSString *name;
     
     /**
      This property is set to the root node only and contains
      the path of the root node.
      */
-	NSString *rootPath;
-	
-	// Language of this path (or nil if this path is not localized)
+    NSString *rootPath;
+    
+    // Language of this path (or nil if this path is not localized)
     NSString *language;
-	
+    
     // True if this node contains at least one language in its children
     BOOL containsLanguages;
     
-	// State of the node. Usually NSOnState, NSMixedState or NSOffState
-	NSInteger state;
+    // State of the node. Usually NSOnState, NSMixedState or NSOffState
+    NSInteger state;
     
     // Flag indicating to hide the language folders (*.lproj)
     BOOL hideLanguageFolders;
@@ -191,5 +191,5 @@
 - (void)visitChildren:(BOOL(^)(AZPathNode *node))block;
 - (void)visitParent:(void(^)(AZPathNode *node))block;
 - (void)visitLeaves:(void(^)(AZPathNode *node))block;
-					   
+                       
 @end

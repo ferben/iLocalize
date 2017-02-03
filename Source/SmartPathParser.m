@@ -19,46 +19,46 @@
 
 + (NSString*)smartPath:(NSString*)path
 {
-	SmartPathParser *parser = [[SmartPathParser alloc] initWithPath:path];
-	return [parser parse];
+    SmartPathParser *parser = [[SmartPathParser alloc] initWithPath:path];
+    return [parser parse];
 }
 
 + (NSString*)smartPath:(NSString*)path lproj:(BOOL)lproj
 {
-	SmartPathParser *parser = [[SmartPathParser alloc] initWithPath:path];
-	[parser setIncludeLProj:lproj];
-	return [parser parse];
+    SmartPathParser *parser = [[SmartPathParser alloc] initWithPath:path];
+    [parser setIncludeLProj:lproj];
+    return [parser parse];
 }
 
 - (id)initWithPath:(NSString*)path
 {
-	if(self = [super init]) {
-		mComponents = [path pathComponents];
-		mSmartPathComponents = [[NSMutableArray alloc] init];
-		mIncludeLProj = NO;
-	}
-	return self;
+    if(self = [super init]) {
+        mComponents = [path pathComponents];
+        mSmartPathComponents = [[NSMutableArray alloc] init];
+        mIncludeLProj = NO;
+    }
+    return self;
 }
 
 
 - (void)setIncludeLProj:(BOOL)lproj
 {
-	mIncludeLProj = lproj;
+    mIncludeLProj = lproj;
 }
 
 - (BOOL)nextComponent
 {
-	mCurrentComponentIndex++;
-	return mCurrentComponentIndex<[mComponents count];
+    mCurrentComponentIndex++;
+    return mCurrentComponentIndex<[mComponents count];
 }
 
 - (NSString*)currentComponentAtIndex:(int)offset
 {
-	unsigned index = mCurrentComponentIndex+offset;
-	if(index>=[mComponents count])
-		return NULL;
-	else
-		return mComponents[mCurrentComponentIndex];
+    unsigned index = mCurrentComponentIndex+offset;
+    if(index>=[mComponents count])
+        return NULL;
+    else
+        return mComponents[mCurrentComponentIndex];
 }
 
 #define C(index) [self currentComponentAtIndex:index]
@@ -66,32 +66,32 @@
 
 - (void)addToSmartPath
 {
-	[mSmartPathComponents addObject:C(0)];
+    [mSmartPathComponents addObject:C(0)];
 }
 
 - (NSString*)parse
 {
-	mCurrentComponentIndex = -1;
-	[mSmartPathComponents removeAllObjects];
+    mCurrentComponentIndex = -1;
+    [mSmartPathComponents removeAllObjects];
 
-	while([self nextComponent]) {
-		if(EQUAL(@"/"))
-			continue;
-		
-		if(EQUAL(@"Contents"))
-			continue;
+    while([self nextComponent]) {
+        if(EQUAL(@"/"))
+            continue;
+        
+        if(EQUAL(@"Contents"))
+            continue;
 
-		if(!mIncludeLProj && [C(0) isPathLanguageProject])
-			break;
+        if(!mIncludeLProj && [C(0) isPathLanguageProject])
+            break;
 
-		[self addToSmartPath];
-		if([[C(0) pathExtension] isEqualToString:@"framework"]) {
-			[self nextComponent];	// Versions
-			[self nextComponent];	// A
-		}
-	}
-	
-	return [NSString pathWithComponents:mSmartPathComponents];
+        [self addToSmartPath];
+        if([[C(0) pathExtension] isEqualToString:@"framework"]) {
+            [self nextComponent];    // Versions
+            [self nextComponent];    // A
+        }
+    }
+    
+    return [NSString pathWithComponents:mSmartPathComponents];
 }
 
 @end

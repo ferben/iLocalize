@@ -7,8 +7,8 @@
 //
 
 @interface FindRegex : NSObject {
-	NSString *regex;
-	BOOL ignoreCase;
+    NSString *regex;
+    BOOL ignoreCase;
 }
 @property (strong) NSString *regex;
 @property BOOL ignoreCase;

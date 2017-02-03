@@ -8,7 +8,7 @@
 
 
 @interface Stack : NSObject <NSCoding> {
-	NSMutableArray	*mStack;
+    NSMutableArray    *mStack;
 }
 - (void)pushObject:(id)object;
 - (id)popObject;

@@ -11,19 +11,19 @@
  with files.
  */
 @interface ImportFilesSettings : NSObject {
-	// The list of files to use for the update
-	NSArray *files;
-	
-	// Array of files with their matching file controller
-	NSArray *matchItems;
+    // The list of files to use for the update
+    NSArray *files;
+    
+    // Array of files with their matching file controller
+    NSArray *matchItems;
 
-	// Update base language settings
-	BOOL updateBaseLanguage;
-	BOOL resetLayout;
+    // Update base language settings
+    BOOL updateBaseLanguage;
+    BOOL resetLayout;
 
-	// Update localized language settings
-	NSString *localizedLanguage;
-	BOOL updateNibLayouts; 
+    // Update localized language settings
+    NSString *localizedLanguage;
+    BOOL updateNibLayouts; 
 }
 @property (strong) NSArray* files;
 @property (strong) NSArray *matchItems;

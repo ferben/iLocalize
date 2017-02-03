@@ -28,12 +28,12 @@
 #define ENCODING_UNICODE_BOM [StringEncoding stringEncoding:NSUnicodeStringEncoding useBOM:YES]
 
 @interface StringEncoding : NSObject {
-	// The encoding of the string
-	NSStringEncoding encoding;
-	
-	// YES if the encoding needs a BOM header or not
-	// when writing it to a file
-	BOOL bom;
+    // The encoding of the string
+    NSStringEncoding encoding;
+    
+    // YES if the encoding needs a BOM header or not
+    // when writing it to a file
+    BOOL bom;
 }
 
 @property NSStringEncoding encoding;

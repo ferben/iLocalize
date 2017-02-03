@@ -12,7 +12,7 @@
 
 - (void)printStackTrace
 {
-	NSLog(@"Stack trace: %@", [self callStackSymbols]);
+    NSLog(@"Stack trace: %@", [self callStackSymbols]);
 }
 
 @end

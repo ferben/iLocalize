@@ -13,10 +13,10 @@
 
 - (void)drawRect:(NSRect)rect
 {
-	[NSBezierPath setDefaultFlatness: 1.0];
-	[NSBezierPath setDefaultLineWidth:1.0];
-	[[NSColor blackColor] set];
-	[NSBezierPath strokeLineFromPoint: rect.origin toPoint: NSMakePoint(rect.origin.x, rect.origin.y+rect.size.height)];	
+    [NSBezierPath setDefaultFlatness: 1.0];
+    [NSBezierPath setDefaultLineWidth:1.0];
+    [[NSColor blackColor] set];
+    [NSBezierPath strokeLineFromPoint: rect.origin toPoint: NSMakePoint(rect.origin.x, rect.origin.y+rect.size.height)];    
 }
 
 @end

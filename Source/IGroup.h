@@ -13,9 +13,9 @@
 @class IGroupElement;
 
 @interface IGroup : NSObject <IGroupEngineManagerDelegate> {
-	IGroupEngineManager *manager;
-	NSString *name;
-	NSArray *elements;
+    IGroupEngineManager *manager;
+    NSString *name;
+    NSArray *elements;
 }
 
 @property (weak) IGroupView *view;

@@ -10,7 +10,7 @@
 #import "IGroupEngineManager.h"
 
 @interface IGroupGlossary : IGroup {
-	NSArray *sortDescriptors;
+    NSArray *sortDescriptors;
 }
 
 @end

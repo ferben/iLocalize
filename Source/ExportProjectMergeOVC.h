@@ -16,8 +16,8 @@
 @private
     ExportProjectSettings *settings;
     AZPathNode *node;
-	IBOutlet NSOutlineView *outlineView;
-	AZPathNodeSelectionView *pathNodeSelectionView;
+    IBOutlet NSOutlineView *outlineView;
+    AZPathNodeSelectionView *pathNodeSelectionView;
 }
 @property (strong) AZPathNode *node;
 @property (strong) ExportProjectSettings *settings;

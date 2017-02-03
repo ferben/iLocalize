@@ -243,7 +243,7 @@ static void printParserInfo(AZXMLParser *parser, NSString *message) {
 
 #pragma mark - XML parsing methods
 
-// [1]   	document	   ::=   	 ( prolog element Misc* ) - ( Char* RestrictedChar Char* )
+// [1]       document       ::=        ( prolog element Misc* ) - ( Char* RestrictedChar Char* )
 static inline BOOL parseDocument(AZXMLParser *parser) {
     if (parser.stop) return YES;
 
@@ -253,7 +253,7 @@ static inline BOOL parseDocument(AZXMLParser *parser) {
     return YES;
 }
 
-// element	   ::=   	 EmptyElemTag | STag content ETag
+// element       ::=        EmptyElemTag | STag content ETag
 static inline BOOL parseElement(AZXMLParser *parser) {
     if (parser.stop) return YES;
 
@@ -267,7 +267,7 @@ static inline BOOL parseElement(AZXMLParser *parser) {
     }
 }
 
-// [40]   	STag	   ::=   	'<' Name (S Attribute)* S? '>'
+// [40]       STag       ::=       '<' Name (S Attribute)* S? '>'
 static inline BOOL parseSTag(AZXMLParser *parser) {
     if (parser.stop) return YES;
 
@@ -284,7 +284,7 @@ static inline BOOL parseSTag(AZXMLParser *parser) {
     return YES;
 }
 
-// [42]   	ETag	   ::=   	'</' Name S? '>'
+// [42]       ETag       ::=       '</' Name S? '>'
 static inline BOOL parseETag(AZXMLParser *parser) {
     if (parser.stop) return YES;
 
@@ -303,7 +303,7 @@ static inline BOOL parseETag(AZXMLParser *parser) {
     return YES;
 }
 
-// [44]   	EmptyElemTag	   ::=   	'<' Name (S Attribute)* S? '/>'
+// [44]       EmptyElemTag       ::=       '<' Name (S Attribute)* S? '/>'
 static inline BOOL parseEmptyElemTag(AZXMLParser *parser) {
     if (parser.stop) return YES;
 
@@ -337,7 +337,7 @@ static inline BOOL parseElemTag(AZXMLParser *parser) {
     return YES;
 }
 
-// [43]   	content	   ::=   	 CharData? ((element | Reference | CDSect | PI | Comment) CharData?)*
+// [43]       content       ::=        CharData? ((element | Reference | CDSect | PI | Comment) CharData?)*
 static inline BOOL parseContent(AZXMLParser *parser) {
     if (parser.stop) return YES;
 
@@ -358,7 +358,7 @@ static inline BOOL parseContent(AZXMLParser *parser) {
     return YES;
 }
 
-// [14]   	CharData	   ::=   	[^<&]* - ([^<&]* ']]>' [^<&]*)
+// [14]       CharData       ::=       [^<&]* - ([^<&]* ']]>' [^<&]*)
 BOOL parseCharData(AZXMLParser *parser) {
     if (parser.stop) return YES;
 
@@ -383,7 +383,7 @@ static inline BOOL parseSingleCharData(AZXMLParser *parser) {
     }
 }
 
-// [41]   	Attribute	   ::=   	 Name Eq AttValue
+// [41]       Attribute       ::=        Name Eq AttValue
 static inline BOOL parseAttribute(AZXMLParser *parser) {
     if (parser.stop) return YES;
 
@@ -400,7 +400,7 @@ static inline BOOL parseAttribute(AZXMLParser *parser) {
     return YES;
 }
 
-// [10]   	AttValue	   ::=   	'"' ([^<&"] | Reference)* '"'
+// [10]       AttValue       ::=       '"' ([^<&"] | Reference)* '"'
 //                                      |  "'" ([^<&'] | Reference)* "'"
 BOOL parseAttValue(AZXMLParser *parser) {
     if (parser.stop) return YES;
@@ -462,7 +462,7 @@ BOOL parseAttValue(AZXMLParser *parser) {
     return YES;
 }
 
-// [67]   	Reference	   ::=   	 EntityRef | CharRef
+// [67]       Reference       ::=        EntityRef | CharRef
 static inline BOOL parseReference(AZXMLParser *parser) {
     if (parser.stop) return YES;
 
@@ -484,7 +484,7 @@ static inline BOOL parseReference(AZXMLParser *parser) {
     return NO;
 }
 
-// [68]   	EntityRef	   ::=   	'&' Name ';'
+// [68]       EntityRef       ::=       '&' Name ';'
 static inline BOOL parseEntityRef(AZXMLParser *parser) {
     if (parser.stop) return YES;
 
@@ -514,7 +514,7 @@ static inline BOOL parseEntityRef(AZXMLParser *parser) {
     return YES;
 }
 
-// [66]   	CharRef	   ::=   	'&#' [0-9]+ ';'
+// [66]       CharRef       ::=       '&#' [0-9]+ ';'
 //                              | '&#x' [0-9a-fA-F]+ ';'
 static inline BOOL parseCharRef(AZXMLParser *parser) {
     if (parser.stop) return YES;
@@ -532,7 +532,7 @@ static inline BOOL parseCharRef(AZXMLParser *parser) {
 }
 
 /**
-[22]   	prolog	   ::=   	 XMLDecl Misc* (doctypedecl Misc*)?
+[22]       prolog       ::=        XMLDecl Misc* (doctypedecl Misc*)?
  */
 static inline BOOL parseProlog(AZXMLParser *parser) {
     if (parser.stop) return YES;
@@ -549,7 +549,7 @@ static inline BOOL parseProlog(AZXMLParser *parser) {
     return YES;
 }
 
-//     [27]   	Misc	   ::=   	 Comment | PI | S
+//     [27]       Misc       ::=        Comment | PI | S
 static inline BOOL parseMisc(AZXMLParser *parser) {
     if (parser.stop) return YES;
 
@@ -571,7 +571,7 @@ static inline BOOL parseMisc(AZXMLParser *parser) {
     return NO;
 }
 
-// [15]   	Comment	   ::=   	'<!--' ((Char - '-') | ('-' (Char - '-')))* '-->'
+// [15]       Comment       ::=       '<!--' ((Char - '-') | ('-' (Char - '-')))* '-->'
 static inline BOOL parseComment(AZXMLParser *parser) {
     if (parser.stop) return YES;
 
@@ -600,7 +600,7 @@ static inline BOOL parseComment(AZXMLParser *parser) {
     return YES;
 }
 
-// [2]   	Char	   ::=   	[#x1-#xD7FF] | [#xE000-#xFFFD] | [#x10000-#x10FFFF]
+// [2]       Char       ::=       [#x1-#xD7FF] | [#xE000-#xFFFD] | [#x10000-#x10FFFF]
 static inline BOOL parseChar(AZXMLParser *parser) {
     unichar c = CHAR_AND_NEXT;
     return (c >= 0x1 && c <= 0xD7FF) || (c >= 0xE000 && c <= 0xFFFD); // || (c >= 0x10000 && c <= 0x10FFFF);
@@ -617,7 +617,7 @@ static inline BOOL parseCharExcept(AZXMLParser *parser, unichar except) {
     }
 }
 
-// [23]   	XMLDecl	   ::=   	'<?xml' VersionInfo EncodingDecl? SDDecl? S? '?>'
+// [23]       XMLDecl       ::=       '<?xml' VersionInfo EncodingDecl? SDDecl? S? '?>'
 static inline BOOL parseXMLDecl(AZXMLParser *parser) {
     if (parser.stop) return YES;
 
@@ -635,8 +635,8 @@ static inline BOOL parseXMLDecl(AZXMLParser *parser) {
     return YES;
 }
 
-// [80]   	EncodingDecl	   ::=   	 S 'encoding' Eq ('"' EncName '"' | "'" EncName "'" )
-// [81]   	EncName	   ::=   	[A-Za-z] ([A-Za-z0-9._] | '-')*	/* Encoding name contains only Latin characters */
+// [80]       EncodingDecl       ::=        S 'encoding' Eq ('"' EncName '"' | "'" EncName "'" )
+// [81]       EncName       ::=       [A-Za-z] ([A-Za-z0-9._] | '-')*    /* Encoding name contains only Latin characters */
 static inline BOOL parseEncodingDecl(AZXMLParser *parser) {
     if (parser.stop) return YES;
 
@@ -685,7 +685,7 @@ static inline BOOL parseLettersOnly(AZXMLParser *parser) {
     return IS_LETTER(c);
 }
 
-// [32]   	SDDecl	   ::=   	 S 'standalone' Eq (("'" ('yes' | 'no') "'") | ('"' ('yes' | 'no') '"'))
+// [32]       SDDecl       ::=        S 'standalone' Eq (("'" ('yes' | 'no') "'") | ('"' ('yes' | 'no') '"'))
 static inline BOOL parseSDDecl(AZXMLParser *parser) {
     if (parser.stop) return YES;
 
@@ -722,8 +722,8 @@ static inline BOOL parseSDDecl(AZXMLParser *parser) {
     return YES;
 }
 
-// [24]   	VersionInfo	   ::=   	 S 'version' Eq ("'" VersionNum "'" | '"' VersionNum '"')
-// [26]   	VersionNum	   ::=   	'1.1'
+// [24]       VersionInfo       ::=        S 'version' Eq ("'" VersionNum "'" | '"' VersionNum '"')
+// [26]       VersionNum       ::=       '1.1'
 static inline BOOL parseVersionInfo(AZXMLParser *parser) {
     if (parser.stop) return YES;
 
@@ -765,7 +765,7 @@ static inline BOOL parseVersionInfo(AZXMLParser *parser) {
     return YES;
 }
 
-// [25]   	Eq	   ::=   	 S? '=' S?
+// [25]       Eq       ::=        S? '=' S?
 static inline BOOL parseEq(AZXMLParser *parser) {
     if (parser.stop) return YES;
 
@@ -783,7 +783,7 @@ static inline BOOL parseEq(AZXMLParser *parser) {
     return YES;
 }
 
-// [3]   	S	   ::=   	(#x20 | #x9 | #xD | #xA)+
+// [3]       S       ::=       (#x20 | #x9 | #xD | #xA)+
 static inline BOOL parseS(AZXMLParser *parser) {
     if (parser.stop) return YES;
 
@@ -801,7 +801,7 @@ static inline BOOL parseS(AZXMLParser *parser) {
     return YES;
 }
 
-// [28]   	doctypedecl	   ::=   	'<!DOCTYPE' S Name (S ExternalID)? S? ('[' intSubset ']' S?)? '>'
+// [28]       doctypedecl       ::=       '<!DOCTYPE' S Name (S ExternalID)? S? ('[' intSubset ']' S?)? '>'
 BOOL parseDoctypedecl(AZXMLParser *parser) {
     if (parser.stop) return YES;
 
@@ -838,7 +838,7 @@ BOOL parseDoctypedecl(AZXMLParser *parser) {
     return YES;
 }
 
-// [75]   	ExternalID	   ::=   	'SYSTEM' S SystemLiteral
+// [75]       ExternalID       ::=       'SYSTEM' S SystemLiteral
 //                                  | 'PUBLIC' S PubidLiteral S SystemLiteral
 BOOL parseExternalID(AZXMLParser *parser) {
     if (parser.stop) return YES;
@@ -862,7 +862,7 @@ BOOL parseExternalID(AZXMLParser *parser) {
     return YES;
 }
 
-// [11]   	SystemLiteral	   ::=   	('"' [^"]* '"') | ("'" [^']* "'")
+// [11]       SystemLiteral       ::=       ('"' [^"]* '"') | ("'" [^']* "'")
 BOOL parseSystemLiteral(AZXMLParser *parser) {
     if (parser.stop) return YES;
 
@@ -911,7 +911,7 @@ BOOL parseSystemLiteral(AZXMLParser *parser) {
     return YES;
 }
 
-// [12]   	PubidLiteral	   ::=   	'"' PubidChar* '"' | "'" (PubidChar - "'")* "'"
+// [12]       PubidLiteral       ::=       '"' PubidChar* '"' | "'" (PubidChar - "'")* "'"
 BOOL parsePubidLiteral(AZXMLParser *parser) {
     if (parser.stop) return YES;
 
@@ -963,7 +963,7 @@ BOOL parsePubidLiteral(AZXMLParser *parser) {
     return YES;
 }
 
-// [13]   	PubidChar	   ::=   	#x20 | #xD | #xA | [a-zA-Z0-9] | [-'()+,./:=?;!*#@$_%]
+// [13]       PubidChar       ::=       #x20 | #xD | #xA | [a-zA-Z0-9] | [-'()+,./:=?;!*#@$_%]
 BOOL parsePubidChar(AZXMLParser *parser) {
     if (parser.stop) return YES;
 
@@ -983,7 +983,7 @@ BOOL parseIntSubset(AZXMLParser *parser) {
     return NO;
 }
 
-// Name	   ::=   	 NameStartChar (NameChar)*
+// Name       ::=        NameStartChar (NameChar)*
 BOOL parseName(AZXMLParser *parser) {
     if (parser.stop) return YES;
 
@@ -995,7 +995,7 @@ BOOL parseName(AZXMLParser *parser) {
     return YES;
 }
 
-// [4]   	NameStartChar	   ::=   	":" | [A-Z] | "_" | [a-z] | [#xC0-#xD6] | [#xD8-#xF6] | [#xF8-#x2FF] | [#x370-#x37D] | [#x37F-#x1FFF] | [#x200C-#x200D] | [#x2070-#x218F] | [#x2C00-#x2FEF] | [#x3001-#xD7FF] | [#xF900-#xFDCF] | [#xFDF0-#xFFFD] | [#x10000-#xEFFFF]
+// [4]       NameStartChar       ::=       ":" | [A-Z] | "_" | [a-z] | [#xC0-#xD6] | [#xD8-#xF6] | [#xF8-#x2FF] | [#x370-#x37D] | [#x37F-#x1FFF] | [#x200C-#x200D] | [#x2070-#x218F] | [#x2C00-#x2FEF] | [#x3001-#xD7FF] | [#xF900-#xFDCF] | [#xFDF0-#xFFFD] | [#x10000-#xEFFFF]
 BOOL parseNameStartChar(AZXMLParser *parser) {
     if (parser.stop) return YES;
 
@@ -1012,7 +1012,7 @@ BOOL parseNameStartChar(AZXMLParser *parser) {
     }
 }
 
-// NameChar	   ::=   	 NameStartChar | "-" | "." | [0-9] | #xB7 | [#x0300-#x036F] | [#x203F-#x2040]
+// NameChar       ::=        NameStartChar | "-" | "." | [0-9] | #xB7 | [#x0300-#x036F] | [#x203F-#x2040]
 BOOL parseNameChar(AZXMLParser *parser) {
     if (parser.stop) return YES;
 

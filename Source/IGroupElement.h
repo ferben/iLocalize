@@ -8,8 +8,8 @@
 
 
 @interface IGroupElement : NSObject {
-	NSString *source;
-	NSString *target;
+    NSString *source;
+    NSString *target;
 }
 
 @property (copy) NSString *source;

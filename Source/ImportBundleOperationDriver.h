@@ -18,11 +18,11 @@
 @class BundleSource;
 
 @interface ImportBundleOperationDriver : OperationDriver {
-	AnalyzeBundleOp *analyzeOp;
-	ImportBundleOVC *importBundleOVC;
-	ImportBundlePreviewOp *previewOp;
-	ImportLocalizedDetectConflictsOp *detectConflictsOp;
-	ImportDiff *importDiff;
+    AnalyzeBundleOp *analyzeOp;
+    ImportBundleOVC *importBundleOVC;
+    ImportBundlePreviewOp *previewOp;
+    ImportLocalizedDetectConflictsOp *detectConflictsOp;
+    ImportDiff *importDiff;
     ScanBundleOp *scanBundleOp;
     ScanBundleOVC *scanBundleOVC;
     

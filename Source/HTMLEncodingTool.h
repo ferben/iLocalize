@@ -11,11 +11,11 @@
 @class StringEncoding;
 
 @interface HTMLEncodingTool : NSObject <XMLParserDelegate> {
-	NSMutableArray *mReplaceRanges;
-	NSString *mScannerEncoding;
-	int mInsideXMLHeader;
-	int mInsideMeta;
-	BOOL mLookingForEncoding;
+    NSMutableArray *mReplaceRanges;
+    NSString *mScannerEncoding;
+    int mInsideXMLHeader;
+    int mInsideMeta;
+    BOOL mLookingForEncoding;
 }
 + (StringEncoding*)encodingOfFile:(NSString*)file hasEncoding:(BOOL*)hasEncoding;
 + (StringEncoding*)encodingOfContent:(NSString*)file hasEncoding:(BOOL*)hasEncoding;

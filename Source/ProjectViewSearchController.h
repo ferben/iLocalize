@@ -11,18 +11,18 @@
 @class SearchContext;
 
 @interface ProjectViewSearchController : NSViewController<NSTextFieldDelegate> {
-	IBOutlet NSTextField *replaceTextField;
-	IBOutlet NSButton *replaceButton;
-	IBOutlet NSButton *replaceAllButton;
-	
-	IBOutlet NSButton *scopeFilesButton;
-	IBOutlet NSButton *scopeKeyButton;
-	IBOutlet NSButton *scopeStringsBaseButton;
-	IBOutlet NSButton *scopeStringsTranslationButton;
-	IBOutlet NSButton *scopeCommentsBaseButton;
-	IBOutlet NSButton *scopeCommentsTranslationButton;
-	
-	SearchContext* context;
+    IBOutlet NSTextField *replaceTextField;
+    IBOutlet NSButton *replaceButton;
+    IBOutlet NSButton *replaceAllButton;
+    
+    IBOutlet NSButton *scopeFilesButton;
+    IBOutlet NSButton *scopeKeyButton;
+    IBOutlet NSButton *scopeStringsBaseButton;
+    IBOutlet NSButton *scopeStringsTranslationButton;
+    IBOutlet NSButton *scopeCommentsBaseButton;
+    IBOutlet NSButton *scopeCommentsTranslationButton;
+    
+    SearchContext* context;
 }
 
 @property (assign) ProjectWC *projectWC;

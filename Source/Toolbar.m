@@ -12,51 +12,51 @@
 
 - (id)init
 {
-	if(self = [super init]) {
-		mWindow = nil;
-		mToolbar = nil;
-		mViewDic = [[NSMutableDictionary alloc] init];
-		mIdentifiers = [[NSMutableArray alloc] init];
-		mDelegate = nil;
-		mResizeContent = YES;
-	}
-	return self;
+    if(self = [super init]) {
+        mWindow = nil;
+        mToolbar = nil;
+        mViewDic = [[NSMutableDictionary alloc] init];
+        mIdentifiers = [[NSMutableArray alloc] init];
+        mDelegate = nil;
+        mResizeContent = YES;
+    }
+    return self;
 }
 
 
 - (void)setResizeContent:(BOOL)resize
 {
-	mResizeContent = resize;
+    mResizeContent = resize;
 }
 
 - (void)setDelegate:(id)delegate
 {
-	mDelegate = delegate;
+    mDelegate = delegate;
 }
 
 - (void)setWindow:(NSWindow*)window
 {
-	mWindow = window;
+    mWindow = window;
 }
 
 - (void)addIdentifier:(NSString*)identifier
 {
-	[mIdentifiers addObject:identifier];
+    [mIdentifiers addObject:identifier];
 }
 
 - (void)addView:(NSView*)view image:(NSImage*)image identifier:(NSString*)ident name:(NSString*)name
 {
-	NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-	dic[@"view"] = view;
-	dic[@"image"] = image;
-	dic[@"name"] = name;
-	mViewDic[ident] = dic;	
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    dic[@"view"] = view;
+    dic[@"image"] = image;
+    dic[@"name"] = name;
+    mViewDic[ident] = dic;    
 }
 
 #pragma mark -
 
 - (void)setupToolbarWithIdentifier:(NSString*)identifier displayMode:(NSToolbarDisplayMode)displayMode
-{	
+{    
     mToolbar = [[NSToolbar alloc] initWithIdentifier:identifier];
     
     [mToolbar setAllowsUserCustomization: NO];
@@ -65,69 +65,69 @@
     
     [mToolbar setDelegate: self];
     
-    [mWindow setToolbar: mToolbar];	
+    [mWindow setToolbar: mToolbar];    
 }
 
 - (NSToolbarItem *) toolbar: (NSToolbar *)toolbar itemForItemIdentifier: (NSString *) itemIdent willBeInsertedIntoToolbar:(BOOL) willBeInserted
 {
     NSToolbarItem *toolbarItem = [[NSToolbarItem alloc] initWithItemIdentifier: itemIdent];
-	
-	NSDictionary *dic = mViewDic[itemIdent];
-	if(dic) {
-		NSSize itemSize = [dic[@"view"] frame].size;
-		
-		[toolbarItem setLabel:dic[@"name"]];
-		[toolbarItem setPaletteLabel:dic[@"name"]];
-		
-		[toolbarItem setImage:dic[@"image"]];
-		[toolbarItem setMinSize:itemSize];
-		[toolbarItem setMaxSize:itemSize];
-		
-		[toolbarItem setTarget:self];
-		[toolbarItem setAction:@selector(selectView:)];
-		
-		return toolbarItem;
-	} else
-		return nil;
+    
+    NSDictionary *dic = mViewDic[itemIdent];
+    if(dic) {
+        NSSize itemSize = [dic[@"view"] frame].size;
+        
+        [toolbarItem setLabel:dic[@"name"]];
+        [toolbarItem setPaletteLabel:dic[@"name"]];
+        
+        [toolbarItem setImage:dic[@"image"]];
+        [toolbarItem setMinSize:itemSize];
+        [toolbarItem setMaxSize:itemSize];
+        
+        [toolbarItem setTarget:self];
+        [toolbarItem setAction:@selector(selectView:)];
+        
+        return toolbarItem;
+    } else
+        return nil;
 }
 
 - (NSArray *) toolbarDefaultItemIdentifiers: (NSToolbar *) toolbar
 {
-	return mIdentifiers;	
+    return mIdentifiers;    
 }
 
 - (NSArray *) toolbarAllowedItemIdentifiers: (NSToolbar *) toolbar
 {
-	NSMutableArray *array = [NSMutableArray array];
-	[array addObjectsFromArray:mIdentifiers];
-	[array addObject:NSToolbarFlexibleSpaceItemIdentifier];
-	[array addObject:NSToolbarSpaceItemIdentifier];
-	[array addObject:NSToolbarSeparatorItemIdentifier];
-	return array;
+    NSMutableArray *array = [NSMutableArray array];
+    [array addObjectsFromArray:mIdentifiers];
+    [array addObject:NSToolbarFlexibleSpaceItemIdentifier];
+    [array addObject:NSToolbarSpaceItemIdentifier];
+    [array addObject:NSToolbarSeparatorItemIdentifier];
+    return array;
 }
 
 - (NSArray *)toolbarSelectableItemIdentifiers:(NSToolbar *)toolbar
 {
-	return mIdentifiers;
+    return mIdentifiers;
 }
 
 #pragma mark -
 
 - (void)setContentView:(NSView*)view
 {
-	[mWindow setContentView:view resize:mResizeContent animate:NO];
+    [mWindow setContentView:view resize:mResizeContent animate:NO];
 }
 
 - (void)selectView:(id)sender
 {
-	[self selectViewWithIdentifier:[sender itemIdentifier]];
+    [self selectViewWithIdentifier:[sender itemIdentifier]];
 }
 
 - (void)selectViewWithIdentifier:(NSString*)ident
 {
-	[mToolbar setSelectedItemIdentifier:ident];	
-	[self setContentView:mViewDic[ident][@"view"]];
-	[mDelegate performSelector:@selector(toolbarDidSelectViewWithIdentifier:) withObject:ident];
+    [mToolbar setSelectedItemIdentifier:ident];    
+    [self setContentView:mViewDic[ident][@"view"]];
+    [mDelegate performSelector:@selector(toolbarDidSelectViewWithIdentifier:) withObject:ident];
 }
 
 @end

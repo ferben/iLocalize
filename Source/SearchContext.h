@@ -7,13 +7,13 @@
 //
 
 @interface SearchContext : NSObject {
-	// Scope such as "file", "base", etc.
-	NSInteger scope;
-	
-	// Options such as "contains", "beginswith", etc.
-	NSInteger options;
-	
-	BOOL ignoreCase;
+    // Scope such as "file", "base", etc.
+    NSInteger scope;
+    
+    // Options such as "contains", "beginswith", etc.
+    NSInteger options;
+    
+    BOOL ignoreCase;
 }
 
 @property NSInteger scope;

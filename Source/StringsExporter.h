@@ -11,8 +11,8 @@
 @class StringsContentModel;
 
 @interface StringsExporter : XMLExporter {
-	StringsContentModel *stringsContentModel;
-	NSUInteger row;
+    StringsContentModel *stringsContentModel;
+    NSUInteger row;
 }
 
 @end

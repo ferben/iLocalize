@@ -36,25 +36,25 @@
 
 - (id)init
 {
-	if ((self = [super init]))
+    if ((self = [super init]))
     {
-	}
-	
+    }
+    
     return self;
 }
 
 - (BOOL)performCopy:(NSString *)targetBundle
 {
-	BOOL success = YES;
-	
-	NSString *sourceApp = [[self projectProvider] sourceApplicationPath];
+    BOOL success = YES;
+    
+    NSString *sourceApp = [[self projectProvider] sourceApplicationPath];
 
-	// Now perform the copy
-	[self setProgressMax:self.settings.filesToCopy.count];
+    // Now perform the copy
+    [self setProgressMax:self.settings.filesToCopy.count];
 
     __block NSError *outError = nil;
     
-	if (self.settings.mergeFiles)
+    if (self.settings.mergeFiles)
     {
         FileMergeOperationManager *fmom = [FileMergeOperationManager manager];
         [fmom mergeProjectFiles:self.settings.filesToCopy projectSource:sourceApp inTarget:targetBundle errorHandler:^BOOL(NSError *error)
@@ -64,7 +64,7 @@
             return NO;
         } progressHandler:^(NSString *source, NSString *target)
         {
-            [self progressIncrement];		
+            [self progressIncrement];        
         }];
     }
     else
@@ -80,79 +80,79 @@
             return NO;
         } progressHandler:^(NSString *source, NSString *target)
         {
-            [self progressIncrement];		
+            [self progressIncrement];        
         }];        
     }
 
-	if (!success)
+    if (!success)
     {
-		[self notifyError:outError];
-		success = NO;
-		goto end;
-	}
-	
+        [self notifyError:outError];
+        success = NO;
+        goto end;
+    }
+    
 end:
-	return success;
+    return success;
 }
 
 - (void)createEmailUsingScript:(NSString *)scriptFile file:(NSString *)file error:(NSString **)error
 {
-	if (![scriptFile isPathExisting])
+    if (![scriptFile isPathExisting])
     {
-		*error = [NSString stringWithFormat:NSLocalizedString(@"Cannot find the script file “%@”", nil), scriptFile];
-		return;
-	}
-	
-	// Content: add two new lines to have the attachment a bit below the main text
-	NSString *content = @"";
+        *error = [NSString stringWithFormat:NSLocalizedString(@"Cannot find the script file “%@”", nil), scriptFile];
+        return;
+    }
+    
+    // Content: add two new lines to have the attachment a bit below the main text
+    NSString *content = @"";
     
     if (self.settings.emailMessage)
     {
         content = [NSString stringWithFormat:@"%@\n\n", self.settings.emailMessage];
     }
-	
-	NSAppleScript *script = [[NSAppleScript alloc] initWithSource:[NSString stringWithContentsOfFile:scriptFile usedEncoding:nil error:nil]];
-	NSAppleEventDescriptor *arguments = [[NSAppleEventDescriptor alloc] initListDescriptor];
-	
+    
+    NSAppleScript *script = [[NSAppleScript alloc] initWithSource:[NSString stringWithContentsOfFile:scriptFile usedEncoding:nil error:nil]];
+    NSAppleEventDescriptor *arguments = [[NSAppleEventDescriptor alloc] initListDescriptor];
+    
     [arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:self.settings.emailToAddress] atIndex:1];
-	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:self.settings.emailSubject] atIndex:2];
-	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:content] atIndex:3];
-	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:file] atIndex:4];
-	
-	NSDictionary *errorInfo = nil;
-	NSAppleEventDescriptor *result = [script callHandler:@"exloc_email" withArguments:arguments errorInfo:&errorInfo];
-	
-	if ([result int32Value] != 0)
+    [arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:self.settings.emailSubject] atIndex:2];
+    [arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:content] atIndex:3];
+    [arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:file] atIndex:4];
+    
+    NSDictionary *errorInfo = nil;
+    NSAppleEventDescriptor *result = [script callHandler:@"exloc_email" withArguments:arguments errorInfo:&errorInfo];
+    
+    if ([result int32Value] != 0)
     {
-		*error = [NSString stringWithFormat:@"%d", (int)[result int32Value]];
-	}
+        *error = [NSString stringWithFormat:@"%d", (int)[result int32Value]];
+    }
     else if (errorInfo)
     {
-		*error = [NSString stringWithFormat:@"%@: %@", errorInfo[NSAppleScriptErrorNumber], errorInfo[NSAppleScriptErrorBriefMessage]];
-	}
-	
+        *error = [NSString stringWithFormat:@"%@: %@", errorInfo[NSAppleScriptErrorNumber], errorInfo[NSAppleScriptErrorBriefMessage]];
+    }
+    
 }
 
 - (void)performCleaning:(NSString *)target
 {
-	[[[self engineProvider] optimizeEngine] cleanApp:target];
+    [[[self engineProvider] optimizeEngine] cleanApp:target];
 }
 
 - (void)performCompactNib:(NSString *)target
 {
-	[[[self engineProvider] optimizeEngine] compactNibInApp:target];
+    [[[self engineProvider] optimizeEngine] compactNibInApp:target];
 }
 
 - (void)performUpgradeNib:(NSString *)target
 {
-	[[[self engineProvider] optimizeEngine] upgradeNibInApp:target];
+    [[[self engineProvider] optimizeEngine] upgradeNibInApp:target];
 }
 
 - (BOOL)performCompress:(NSString *)source to:(NSString *)target
 {
-	NSString *compressedTempTarget = [[source stringByDeletingPathExtension] stringByAppendingPathExtension:@"zip"];
+    NSString *compressedTempTarget = [[source stringByDeletingPathExtension] stringByAppendingPathExtension:@"zip"];
     
-	if ([FileTool zipPath:source toFileName:compressedTempTarget recursive:YES])
+    if ([FileTool zipPath:source toFileName:compressedTempTarget recursive:YES])
     {
         if (![compressedTempTarget isEqualToPath:target])
         {
@@ -164,8 +164,8 @@ end:
             }
         }
         
-		return YES;
-	}
+        return YES;
+    }
     else
     {
         // compose alert
@@ -176,21 +176,21 @@ end:
         [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextOK",@"Alerts",nil)];      // 1st button
         
         // show alert
-		[alert runModal];
+        [alert runModal];
 
         return NO;
-	}	
+    }    
 }
 
 - (void)performEmail: (NSString *)target
 {
-	NSString *error = nil;
+    NSString *error = nil;
 
     [self createEmailUsingScript:[[ProjectExportMailScripts shared] scriptFileForPrograms:[settings emailProgram]]
-							file:target
-						   error:&error];
-	
-	if (error)
+                            file:target
+                           error:&error];
+    
+    if (error)
     {
         // compose alert
         NSAlert *alert = [NSAlert new];
@@ -201,18 +201,18 @@ end:
         
         // show alert
         [alert runModal];
-	}
+    }
 }
 
 - (void)execute
 {
-	[self setOperationName:NSLocalizedString(@"Exporting Project…", nil)];
-			
-	NSString *targetBundle = self.settings.targetBundle;
-	
-	BOOL success = [self performCopy:targetBundle];
+    [self setOperationName:NSLocalizedString(@"Exporting Project…", nil)];
+            
+    NSString *targetBundle = self.settings.targetBundle;
     
-	if (success)
+    BOOL success = [self performCopy:targetBundle];
+    
+    if (success)
     {
         if (!self.settings.mergeFiles)
         {
@@ -229,11 +229,11 @@ end:
             }
         }
 
-		if ([settings compress])
+        if ([settings compress])
         {
-			success = [self performCompress:targetBundle to:self.settings.compressedTargetBundle];
+            success = [self performCompress:targetBundle to:self.settings.compressedTargetBundle];
             
-			if (success)
+            if (success)
             {
                 NSError *err = nil;
                 
@@ -242,15 +242,15 @@ end:
                     ERROR(@"Error removing original bundle: %@", err);
                 }
                 
-				targetBundle = self.settings.compressedTargetBundle;
-			}
-		}
-		
-		if ([settings email] && success)
+                targetBundle = self.settings.compressedTargetBundle;
+            }
+        }
+        
+        if ([settings email] && success)
         {
-			[self performEmail:targetBundle];		
-		}					
-	}
+            [self performEmail:targetBundle];        
+        }                    
+    }
 }
 
 @end

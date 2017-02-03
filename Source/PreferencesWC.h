@@ -9,8 +9,8 @@
 @class Toolbar;
 
 @interface PreferencesWC : NSWindowController {
-	NSMutableArray		*mObservers;
-	Toolbar				*mToolbar;    
+    NSMutableArray        *mObservers;
+    Toolbar                *mToolbar;    
 }
 
 + (PreferencesWC*)shared;

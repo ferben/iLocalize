@@ -13,46 +13,46 @@
 
 - (id)init
 {
-	if(self = [super init]) {
-		mStatus = 0;
-	}
-	return self;
+    if(self = [super init]) {
+        mStatus = 0;
+    }
+    return self;
 }
 
 
 - (void)setStatus:(int)status
 {
-	@synchronized(self) {
-		mStatus = status;		
-	}
+    @synchronized(self) {
+        mStatus = status;        
+    }
 }
 
 - (int)status
 {
-	int temp = 0;
-	@synchronized(self) {
-		temp = mStatus;		
-	}
-	return temp;
+    int temp = 0;
+    @synchronized(self) {
+        temp = mStatus;        
+    }
+    return temp;
 }
 
 - (BOOL)setStatus:(int)newStatus ifStatusEquals:(int)status
 {
-	BOOL success = NO;
-	@synchronized(self) {
-		if([self status] == status) {
-			[self setStatus:newStatus];
-			success = YES;
-		}		
-	}
-	return success;
+    BOOL success = NO;
+    @synchronized(self) {
+        if([self status] == status) {
+            [self setStatus:newStatus];
+            success = YES;
+        }        
+    }
+    return success;
 }
 
 - (void)waitForStatus:(int)status
 {
-	while([self status] != status) {
-		[NSThread sleepUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.01]];
-	}
+    while([self status] != status) {
+        [NSThread sleepUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.01]];
+    }
 }
 
 @end

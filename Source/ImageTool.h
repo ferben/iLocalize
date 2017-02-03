@@ -8,7 +8,7 @@
 
 
 @interface ImageTool : NSObject {
-	NSMutableDictionary		*mImages;
+    NSMutableDictionary        *mImages;
 }
 + (id)shared;
 - (NSImage*)imageNamed:(NSString*)name;

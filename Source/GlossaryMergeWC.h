@@ -9,7 +9,7 @@
 @interface GlossaryMergeWC : NSWindowController {
     IBOutlet NSArrayController  *mMergeController;
     IBOutlet NSPopUpButton      *mMergeDestPopUp;    
-	IBOutlet NSButton			*mRemoveDuplicateEntriesButton;
+    IBOutlet NSButton            *mRemoveDuplicateEntriesButton;
 }
 - (void)setGlossaries:(NSArray*)glossaries;
 - (void)showWithParent:(NSWindow*)parent;

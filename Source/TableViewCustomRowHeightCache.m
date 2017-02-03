@@ -13,45 +13,45 @@
 
 + (TableViewCustomRowHeightCache*)cacheForTableView:(TableViewCustom*)tableView
 {
-	TableViewCustomRowHeightCache *cache = [[TableViewCustomRowHeightCache alloc] init];
-	cache.tableView = tableView;
-	return cache;
+    TableViewCustomRowHeightCache *cache = [[TableViewCustomRowHeightCache alloc] init];
+    cache.tableView = tableView;
+    return cache;
 }
 
 - (id)init
 {
-	if(self = [super init]) {
-		rowHeightCache = [[NSMutableDictionary alloc] init];
-	}
-	return self;
+    if(self = [super init]) {
+        rowHeightCache = [[NSMutableDictionary alloc] init];
+    }
+    return self;
 }
 
 
 - (NSNumber *)cachedHeightForRow:(NSInteger)row
 {
-	return rowHeightCache[@(row)];			
+    return rowHeightCache[@(row)];            
 }
 
 - (void)setCachedHeight:(float)height forRow:(NSInteger)row
 {
-	rowHeightCache[@(row)] = @(height);	
+    rowHeightCache[@(row)] = @(height);    
 }
 
 - (void)clearRowHeightCache
 {
-	[rowHeightCache removeAllObjects];
+    [rowHeightCache removeAllObjects];
 }
 
 - (void)clearRowHeightCacheAtRow:(NSInteger)row
 {
-	[rowHeightCache removeObjectForKey:@(row)];
+    [rowHeightCache removeObjectForKey:@(row)];
 }
 
 - (float)computeCachedRowHeight:(NSInteger)row
 {
-	float height = [self.tableView computeHeightForRow:row];
-	[self setCachedHeight:height forRow:row];
-	return height;
+    float height = [self.tableView computeHeightForRow:row];
+    [self setCachedHeight:height forRow:row];
+    return height;
 }
 
 @end

@@ -34,44 +34,44 @@
 
     for (Glossary *g in glossaries)
     {
-		NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-	
+        NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    
         dic[@"glossary"] = g;
-		dic[@"selected"] = @YES;
-		dic[@"name"] = [g relativeFile];
-		
+        dic[@"selected"] = @YES;
+        dic[@"name"] = [g relativeFile];
+        
         [mMergeController addObject:dic];
-		
-		// Can only merge to a glossary that can be written to the disk!
-		if (![g readOnly])
+        
+        // Can only merge to a glossary that can be written to the disk!
+        if (![g readOnly])
         {
-			[mergeTargetGlossaries addObject:g];	
-		}
+            [mergeTargetGlossaries addObject:g];    
+        }
     }
 
     NSMenu *menu = [[NSMenu alloc] initWithTitle:@""];
     [menu addItemWithTitle:NSLocalizedString(@"< New >", @"Glossary New Menu Item") action:nil keyEquivalent:@""];
-	
-	if (mergeTargetGlossaries.count > 0)
-    {
-		[menu addItem:[NSMenuItem separatorItem]];
-	}
     
-	NSMenuItem *item;
-		
-	for (Glossary *g in mergeTargetGlossaries)
+    if (mergeTargetGlossaries.count > 0)
     {
-		item = [[NSMenuItem alloc] initWithTitle:g.file action:nil keyEquivalent:@""];
+        [menu addItem:[NSMenuItem separatorItem]];
+    }
+    
+    NSMenuItem *item;
+        
+    for (Glossary *g in mergeTargetGlossaries)
+    {
+        item = [[NSMenuItem alloc] initWithTitle:g.file action:nil keyEquivalent:@""];
         [item setRepresentedObject:g];
-		[menu addItem:item];
-	}
+        [menu addItem:item];
+    }
     
     [mMergeDestPopUp setMenu:menu];
 }
 
 - (void)performMerge
 {
-	Glossary *mergedGlossary = [[Glossary alloc] init];
+    Glossary *mergedGlossary = [[Glossary alloc] init];
 
     for (NSDictionary *dic in [mMergeController content])
     {
@@ -79,21 +79,21 @@
         {
             Glossary *g = dic[@"glossary"];
             
-			if (g.sourceLanguage && g.targetLanguage && [g entryCount] > 0)
+            if (g.sourceLanguage && g.targetLanguage && [g entryCount] > 0)
             {
-				mergedGlossary.sourceLanguage = g.sourceLanguage;
-				mergedGlossary.targetLanguage = g.targetLanguage;
-				[mergedGlossary addEntries:g.entries];
-			}
+                mergedGlossary.sourceLanguage = g.sourceLanguage;
+                mergedGlossary.targetLanguage = g.targetLanguage;
+                [mergedGlossary addEntries:g.entries];
+            }
         }
     }
     
-	// Optionally remove duplicate entries
+    // Optionally remove duplicate entries
     if ([mRemoveDuplicateEntriesButton state] == NSOnState)
     {
-		[mergedGlossary removeDuplicateEntries];
-	}
-	
+        [mergedGlossary removeDuplicateEntries];
+    }
+    
     NSInteger index = [mMergeDestPopUp indexOfSelectedItem];
 
     if (index == 0)
@@ -104,7 +104,7 @@
         GlossaryDocument *document = [[NSDocumentController sharedDocumentController] makeUntitledDocumentOfType:@"TMX Glossary" error:&outError];
         [[NSDocumentController sharedDocumentController] addDocument:document];
         
-		[document setGlossary:mergedGlossary];
+        [document setGlossary:mergedGlossary];
         [document makeWindowControllers];
         [document updateChangeCount:NSChangeDone];
         
@@ -114,35 +114,35 @@
     else
     {
         Glossary *g = [[mMergeDestPopUp selectedItem] representedObject];
-		[g removeAllEntries];
-		[g addEntries:mergedGlossary.entries];
-		NSError *error = nil;
+        [g removeAllEntries];
+        [g addEntries:mergedGlossary.entries];
+        NSError *error = nil;
         
-		if (![g writeToFile:&error])
+        if (![g writeToFile:&error])
         {
-			NSAlert *alert = [NSAlert alertWithError:error];
+            NSAlert *alert = [NSAlert alertWithError:error];
             [alert beginSheetModalForWindow:[self window] completionHandler:NULL];
-		}
+        }
     }
 }
 
 - (void)showWithParent:(NSWindow*)parent
 {
-	[NSApp beginSheet:[self window] modalForWindow:parent modalDelegate:self didEndSelector:NULL contextInfo:NULL];
+    [NSApp beginSheet:[self window] modalForWindow:parent modalDelegate:self didEndSelector:NULL contextInfo:NULL];
 }
 
 - (IBAction)cancel:(id)sender
 {
-	[NSApp endSheet:[self window]];
-	[[self window] orderOut:self];
+    [NSApp endSheet:[self window]];
+    [[self window] orderOut:self];
 }
 
 - (IBAction)merge:(id)sender
 {
     [self performMerge];
     
-	[NSApp endSheet:[self window]];
-	[[self window] orderOut:self];    
+    [NSApp endSheet:[self window]];
+    [[self window] orderOut:self];    
 }
 
 @end

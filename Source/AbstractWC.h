@@ -11,18 +11,18 @@
 @class ProjectController;
 
 @interface AbstractWC : NSWindowController {
-	NSWindow				*mParentWindow;
-	
-	SEL						mDidOKSelector;
-	id						mDidOKTarget;
-	
-	SEL						mDidCloseSelector;
-	id						mDidCloseTarget;
-	
-	int						mHideCode;
-	BOOL					mClosed;
-	
-	CallbackBlock			didCloseCallback;
+    NSWindow                *mParentWindow;
+    
+    SEL                        mDidOKSelector;
+    id                        mDidOKTarget;
+    
+    SEL                        mDidCloseSelector;
+    id                        mDidCloseTarget;
+    
+    int                        mHideCode;
+    BOOL                    mClosed;
+    
+    CallbackBlock            didCloseCallback;
 }
 
 @property (copy) CallbackBlock didCloseCallback;

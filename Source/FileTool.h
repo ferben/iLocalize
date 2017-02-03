@@ -9,7 +9,7 @@
 @class Console;
 
 @interface FileTool : NSObject {
-	NSMutableArray		*mAtomicExtensions;
+    NSMutableArray        *mAtomicExtensions;
 }
 
 + (FileTool*)shared;

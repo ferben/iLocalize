@@ -7,8 +7,8 @@
 //
 
 @interface WindowLayerView : NSView {
-	NSString	*mTitle;
-	NSString	*mInfo;
+    NSString    *mTitle;
+    NSString    *mInfo;
 }
 - (void)setTitle:(NSString*)title;
 - (void)setInfo:(NSString*)info;

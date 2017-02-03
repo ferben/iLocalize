@@ -10,9 +10,9 @@
 @class WorkerThread;
 
 @interface PilotThread : NSObject {
-	WorkerThread	*mWorkerThread;
-	SafeData		*mData;
-	id				mDelegate;
+    WorkerThread    *mWorkerThread;
+    SafeData        *mData;
+    id                mDelegate;
 }
 
 - (void)setDelegate:(id)delegate;

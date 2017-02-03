@@ -9,8 +9,8 @@
 @class StringsContentModel;
 
 @interface FileModelContent : NSObject <NSCoding> {
-	BOOL	mNonPersistentContent;
-	id		mContent;
+    BOOL    mNonPersistentContent;
+    id        mContent;
 }
 
 - (void)setNonPersistentContent:(BOOL)flag;

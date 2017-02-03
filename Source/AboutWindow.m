@@ -15,11 +15,11 @@ static AboutWindow *aboutWindow = nil;
 
 + (void)show
 {
-	if(aboutWindow == nil) {
-		aboutWindow = [[AboutWindow alloc] initWithWindowNibName:@"About"];		
-		[[aboutWindow window] center];
-	}
-	[[aboutWindow window] makeKeyAndOrderFront:self];
+    if(aboutWindow == nil) {
+        aboutWindow = [[AboutWindow alloc] initWithWindowNibName:@"About"];        
+        [[aboutWindow window] center];
+    }
+    [[aboutWindow window] makeKeyAndOrderFront:self];
 }
 
 - (void)awakeFromNib
@@ -27,9 +27,9 @@ static AboutWindow *aboutWindow = nil;
     NSString *shortVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleShortVersionString"];
     NSString *buildNumber = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleVersion"];
     NSString *copyright = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"NSHumanReadableCopyright"];
-	
-	[versionTextField setStringValue:[NSString stringWithFormat:@"%@ %@ (%@)", NSLocalizedString(@"Version", @"About Box Version"), shortVersion, buildNumber]];
-	[copyrightTextField setStringValue:copyright];
+    
+    [versionTextField setStringValue:[NSString stringWithFormat:@"%@ %@ (%@)", NSLocalizedString(@"Version", @"About Box Version"), shortVersion, buildNumber]];
+    [copyrightTextField setStringValue:copyright];
 
 #warning Do we still need the License Text button?
     // [licenseTextButton setHidden:YES];
@@ -43,12 +43,12 @@ static AboutWindow *aboutWindow = nil;
 
 - (IBAction)showAcknowledgment:(id)sender
 {
-	[[NSWorkspace sharedWorkspace] openFile:[[self helpBundle] pathForResource:@"Acknowledgments" ofType:@"html" inDirectory:@"misc"]];
+    [[NSWorkspace sharedWorkspace] openFile:[[self helpBundle] pathForResource:@"Acknowledgments" ofType:@"html" inDirectory:@"misc"]];
 }
 
 - (IBAction)showLicenseAgreement:(id)sender
 {
-	[[NSWorkspace sharedWorkspace] openFile:[[self helpBundle] pathForResource:@"LicenseAgreement" ofType:@"html" inDirectory:@"misc"]];	
+    [[NSWorkspace sharedWorkspace] openFile:[[self helpBundle] pathForResource:@"LicenseAgreement" ofType:@"html" inDirectory:@"misc"]];    
 }
 
 @end

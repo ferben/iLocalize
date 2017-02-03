@@ -13,10 +13,10 @@
  Class that groups the attributes of a single scope item.
  */
 @interface GlossaryScopeItem : NSObject {
-	NSInteger state;
-	Glossary *glossary;
-	GlossaryFolder *folder;
-	NSImage *icon;
+    NSInteger state;
+    Glossary *glossary;
+    GlossaryFolder *folder;
+    NSImage *icon;
 }
 
 @property (assign) NSInteger state;

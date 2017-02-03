@@ -13,11 +13,11 @@
 
 @interface FileModel : NSObject <NSCoding>
 {
-	FileModelAttributes	*mAttributes;
-	FileModelContent	*mContent;
-	
-	// volatile
-	LanguageModel		*mLanguageModel;
+    FileModelAttributes    *mAttributes;
+    FileModelContent    *mContent;
+    
+    // volatile
+    LanguageModel        *mLanguageModel;
 }
 
 + (FileModel *)modelWithRelativeFilePath:(NSString *)file;

@@ -12,7 +12,7 @@
 @class Glossary;
 
 @interface GlossaryDocument : NSDocument {
-	Glossary *glossary;
+    Glossary *glossary;
 }
 @property (strong) Glossary *glossary;
 - (GlossaryWC*)glossaryWC;

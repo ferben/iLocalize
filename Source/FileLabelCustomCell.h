@@ -11,7 +11,7 @@
 @class LabelCustomCellRender;
 
 @interface FileLabelCustomCell : AbstractFileCustomCell {
-	LabelCustomCellRender *mRender;
+    LabelCustomCellRender *mRender;
 }
 
 @end

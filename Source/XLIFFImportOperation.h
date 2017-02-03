@@ -15,7 +15,7 @@
  */
 @interface XLIFFImportOperation : Operation
 {
-	XLIFFImportSettings *settings;
+    XLIFFImportSettings *settings;
 }
 
 @property (strong) XLIFFImportSettings *settings;

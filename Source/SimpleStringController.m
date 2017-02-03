@@ -17,11 +17,11 @@
 
 + (SimpleStringController*)stringWithBase:(NSString*)base translation:(NSString*)translation
 {
-	SimpleStringController *sc = [[SimpleStringController alloc] init];
-	sc.key = @"";
-	sc.base = base;
-	sc.translation = translation;
-	return sc;
+    SimpleStringController *sc = [[SimpleStringController alloc] init];
+    sc.key = @"";
+    sc.base = base;
+    sc.translation = translation;
+    return sc;
 }
 
 - (void)setStatus:(unsigned char)status {
@@ -42,17 +42,17 @@
 
 - (void)setAutomaticTranslation:(NSString *)_translation
 {
-	self.translation = _translation;
+    self.translation = _translation;
 }
 
 - (BOOL)isEqual:(id)object
 {
-	return [self.key isEqual:[object key]] && [self.base isEqual:[object base]] && [self.translation isEqual:[object translation]];
+    return [self.key isEqual:[object key]] && [self.base isEqual:[object base]] && [self.translation isEqual:[object translation]];
 }
 
 - (NSString*)description
 {
-	return [NSString stringWithFormat:@"key=%@, base=%@, translation=%@", self.key, self.base, self.translation];
+    return [NSString stringWithFormat:@"key=%@, base=%@, translation=%@", self.key, self.base, self.translation];
 }
 
 @end

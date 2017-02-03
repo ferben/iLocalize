@@ -12,15 +12,15 @@
 
 @interface TableViewCustom : NSTableView<TextViewCustomDelegate>
 {
-	TableViewCustomDefaultDelegate *mDefaultDelegate;
-	TableViewCustomRowHeightCache *rowHeightCache;
-	BOOL	mMouseDownTrigger;
-	NSSize cachedSize;
-	BOOL inRefreshRowHeight;
-	
-	// Text view for cell editing
-	NSInteger editingRow, editingColumn;
-	TextViewCustom *textView;	
+    TableViewCustomDefaultDelegate *mDefaultDelegate;
+    TableViewCustomRowHeightCache *rowHeightCache;
+    BOOL    mMouseDownTrigger;
+    NSSize cachedSize;
+    BOOL inRefreshRowHeight;
+    
+    // Text view for cell editing
+    NSInteger editingRow, editingColumn;
+    TextViewCustom *textView;    
 }
 
 @property (readonly) TableViewCustomRowHeightCache *rowHeightCache;

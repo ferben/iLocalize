@@ -13,19 +13,19 @@
 @class SearchContext;
 
 @interface ExplorerFilter : NSObject {
-	NSString *_name;
-	NSPredicate *_predicate;
-	BOOL _local;
-	BOOL _temporary;
-	NSString *_file;
-	BOOL stringContentMatching;
-	SearchContext *stringContentMatchingContext;
+    NSString *_name;
+    NSPredicate *_predicate;
+    BOOL _local;
+    BOOL _temporary;
+    NSString *_file;
+    BOOL stringContentMatching;
+    SearchContext *stringContentMatchingContext;
 
-	NSMutableDictionary *dataDictionary;
-	
-	NSMutableSet	*mCachedFileLabelsIndexSet;	// cache
-	NSMutableSet	*mCachedStringLabelsIndexSet;	// cache
-	ProjectWC		*mCachedLabelProject;	// cache	
+    NSMutableDictionary *dataDictionary;
+    
+    NSMutableSet    *mCachedFileLabelsIndexSet;    // cache
+    NSMutableSet    *mCachedStringLabelsIndexSet;    // cache
+    ProjectWC        *mCachedLabelProject;    // cache    
 }
 
 @property (strong) NSString *name;

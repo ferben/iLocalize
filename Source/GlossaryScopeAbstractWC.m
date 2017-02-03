@@ -18,125 +18,125 @@
 
 - (id)init
 {
-	if(self = [super initWithWindowNibName:@"GlossaryScope"]) {
-		rootNode = nil;
-	}
-	return self;
+    if(self = [super initWithWindowNibName:@"GlossaryScope"]) {
+        rootNode = nil;
+    }
+    return self;
 }
 
 
 - (void)updatePathNodeStates
 {
-	rootNode = [self.scope rootNode];
+    rootNode = [self.scope rootNode];
     
-	for (TreeNode *pathNode in [rootNode nodes])
+    for (TreeNode *pathNode in [rootNode nodes])
     {
-		NSInteger state = NSMixedState;
+        NSInteger state = NSMixedState;
         
-		for (TreeNode *glossaryNode in [pathNode nodes])
+        for (TreeNode *glossaryNode in [pathNode nodes])
         {
-			GlossaryScopeItem *gsi = [glossaryNode payload];
+            GlossaryScopeItem *gsi = [glossaryNode payload];
             
-			if (state == NSMixedState)
+            if (state == NSMixedState)
             {
-				state = [gsi state];
-			}
+                state = [gsi state];
+            }
             else if (state != [gsi state])
             {
-				state = NSMixedState;
-				break;
-			}
-		}
+                state = NSMixedState;
+                break;
+            }
+        }
         
-		GlossaryScopeItem *pathScopeItem = [pathNode payload];
-		pathScopeItem.state = state;
-	}
+        GlossaryScopeItem *pathScopeItem = [pathNode payload];
+        pathScopeItem.state = state;
+    }
 }
 
 - (void)willShow
 {
-	[self updatePathNodeStates];
-	[outlineView reloadData];
-	[outlineView expandItem:nil expandChildren:YES];
+    [self updatePathNodeStates];
+    [outlineView reloadData];
+    [outlineView expandItem:nil expandChildren:YES];
 }
 
 - (void)setTitle:(NSString*)string
 {
-	[titleTextField setStringValue:string];
+    [titleTextField setStringValue:string];
 }
 
 - (void)setCancellable:(BOOL)flag
 {
-	[cancelButton setHidden:!flag];
+    [cancelButton setHidden:!flag];
 }
 
 #pragma mark Source
 
 - (NSInteger)outlineView:(NSOutlineView *)ov numberOfChildrenOfItem:(id)item
 {
-	if (item == NULL)
+    if (item == NULL)
     {
-		return [rootNode nodes].count;
-	}
+        return [rootNode nodes].count;
+    }
     else
     {
-		return [item nodes].count;
-	}
+        return [item nodes].count;
+    }
 }
 
 - (id)outlineView:(NSOutlineView *)ov child:(int)index ofItem:(id)item
 {
-	if(item == NULL) {
-		return [rootNode nodes][index];
-	} else {
-		return [item nodes][index];
-	}
+    if(item == NULL) {
+        return [rootNode nodes][index];
+    } else {
+        return [item nodes][index];
+    }
 }
 
 - (BOOL)outlineView:(NSOutlineView *)ov isItemExpandable:(id)item
 {
-	return [[item nodes] count] > 0;
+    return [[item nodes] count] > 0;
 }
 
 - (id)outlineView:(NSOutlineView *)ov objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item
 {
-	GlossaryScopeItem *gsi = [item payload];
-	
+    GlossaryScopeItem *gsi = [item payload];
+    
     if ([[item nodes] count] == 0 && [ov levelForItem:item] == 0)
     {
-		return @(NSOffState);
-	}
+        return @(NSOffState);
+    }
     else
     {
-		return [NSNumber numberWithInteger:gsi.state];
-	}
+        return [NSNumber numberWithInteger:gsi.state];
+    }
 }
 
 - (void)outlineView:(NSOutlineView *)ov setObjectValue:(id)object forTableColumn:(NSTableColumn *)tableColumn byItem:(id)item
 {
-	TreeNode *tn = item;
-	GlossaryScopeItem *gsi = [tn payload];
-	gsi.state = [object intValue];
-	if(gsi.state == NSMixedState) {
-		gsi.state = NSOnState;
-	}
-	
-	if(gsi.folder != nil) {
-		// Propagate the state to all the glossary if the item represents a glossary folder.
-		for(TreeNode *c in [tn nodes]) {
-			[[c payload] setState:gsi.state];
-		}
-	} else {
-		[self updatePathNodeStates];
-	}
-	[outlineView reloadData];
+    TreeNode *tn = item;
+    GlossaryScopeItem *gsi = [tn payload];
+    gsi.state = [object intValue];
+    if(gsi.state == NSMixedState) {
+        gsi.state = NSOnState;
+    }
+    
+    if(gsi.folder != nil) {
+        // Propagate the state to all the glossary if the item represents a glossary folder.
+        for(TreeNode *c in [tn nodes]) {
+            [[c payload] setState:gsi.state];
+        }
+    } else {
+        [self updatePathNodeStates];
+    }
+    [outlineView reloadData];
 }
 
 - (void)outlineView:(NSOutlineView *)olv willDisplayCell:(NSCell *)cell forTableColumn:(NSTableColumn *)tableColumn item:(id)item 
-{	
-	//[cell setEnabled:[item nodes].count > 0];
-	[cell setTitle:[item title]];
-	[(KNImageAndTextButtonCell *)cell setImage:[[item payload] icon]];
+{    
+    //[cell setEnabled:[item nodes].count > 0];
+    [cell setTitle:[item title]];
+    [(KNImageAndTextButtonCell *)cell setImage:[[item payload] icon]];
 }
 
 @end

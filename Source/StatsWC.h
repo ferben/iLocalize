@@ -9,18 +9,18 @@
 #import "AbstractWC.h"
 
 @interface StatsWC : AbstractWC {
-	IBOutlet NSPopUpButton			*mSourcePopUp;
-	IBOutlet NSProgressIndicator	*mProgressIndicator;
-	IBOutlet NSTextField			*mProgressInfoField;
-	    
-	IBOutlet NSTextField			*mPriceBaseField;
-	IBOutlet NSPopUpButton			*mPriceUnitPopUp;
-	
-	IBOutlet NSArrayController		*mStatsController;
-	
-	NSMutableDictionary *mStatsDic;
-	float mPriceTotal;
-	float mPriceToTranslateTotal;
+    IBOutlet NSPopUpButton            *mSourcePopUp;
+    IBOutlet NSProgressIndicator    *mProgressIndicator;
+    IBOutlet NSTextField            *mProgressInfoField;
+        
+    IBOutlet NSTextField            *mPriceBaseField;
+    IBOutlet NSPopUpButton            *mPriceUnitPopUp;
+    
+    IBOutlet NSArrayController        *mStatsController;
+    
+    NSMutableDictionary *mStatsDic;
+    float mPriceTotal;
+    float mPriceToTranslateTotal;
 }
 - (IBAction)changeSource:(id)sender;
 - (IBAction)changePriceBase:(id)sender;

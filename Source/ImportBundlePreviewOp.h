@@ -19,7 +19,7 @@
     NSMutableArray      *mFilesIdentical;
     
     BundleSource        *sourcePath;
-	ImportDiff          *importDiff;
+    ImportDiff          *importDiff;
 }
 
 @property (strong) ImportDiff *importDiff;

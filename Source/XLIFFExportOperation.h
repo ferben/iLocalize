@@ -11,7 +11,7 @@
 @class XLIFFExportSettings;
 
 @interface XLIFFExportOperation : Operation {
-	XLIFFExportSettings *settings;
+    XLIFFExportSettings *settings;
 }
 @property (strong) XLIFFExportSettings *settings;
 

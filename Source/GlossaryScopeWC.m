@@ -12,10 +12,10 @@
 
 - (id)init
 {
-	if(self = [super initWithWindowNibName:@"GlossaryScope"]) {
+    if(self = [super initWithWindowNibName:@"GlossaryScope"]) {
 
-	}
-	return self;
+    }
+    return self;
 }
 
 @end

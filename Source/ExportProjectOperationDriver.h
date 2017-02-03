@@ -11,7 +11,7 @@
 @class ExportProjectSettings;
 
 @interface ExportProjectOperationDriver : OperationDriver {
-	ExportProjectSettings		*settings;
+    ExportProjectSettings        *settings;
 }
 
 @end

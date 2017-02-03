@@ -15,11 +15,11 @@
 + (BOOL)allowsReverseTransformation { return NO; }
 
 - (id)transformedValue:(id)value {
-	if([value isKindOfClass:[NSString class]]) {
-		return [value displayLanguageName];
-	} else {
-		return value;
-	}
+    if([value isKindOfClass:[NSString class]]) {
+        return [value displayLanguageName];
+    } else {
+        return value;
+    }
 }
 
 @end

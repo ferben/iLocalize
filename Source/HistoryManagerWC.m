@@ -13,11 +13,11 @@
 
 - (id)init
 {
-	if(self = [super initWithWindowNibName:@"HistoryManager"]) {
+    if(self = [super initWithWindowNibName:@"HistoryManager"]) {
         mHistoryManager = nil;
-		[self window];
-	}
-	return self;
+        [self window];
+    }
+    return self;
 }
 
 
@@ -54,16 +54,16 @@
 
 - (IBAction)cancelNewSnapshot:(id)sender
 {
-	[NSApp endSheet:mNewSnapshotPanel];
-	[mNewSnapshotPanel orderOut:self];
+    [NSApp endSheet:mNewSnapshotPanel];
+    [mNewSnapshotPanel orderOut:self];
 }
 
 - (IBAction)createNewSnapshot:(id)sender
 {
     [mHistoryManager createSnapshot:[mNewSnapshotNameField stringValue] date:[NSDate date]];
     
-	[NSApp endSheet:mNewSnapshotPanel];
-	[mNewSnapshotPanel orderOut:self];
+    [NSApp endSheet:mNewSnapshotPanel];
+    [mNewSnapshotPanel orderOut:self];
 }
 
 - (IBAction)deleteSnapshot:(id)sender
@@ -90,8 +90,8 @@
 
 - (IBAction)closeSnapshotManager:(id)sender
 {
-	[NSApp endSheet:[self window]];
-	[[self window] orderOut:self];
+    [NSApp endSheet:[self window]];
+    [[self window] orderOut:self];
 }
 
 @end

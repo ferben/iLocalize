@@ -16,14 +16,14 @@
 
 - (void)awake
 {
-	mFileControllers = NULL;
+    mFileControllers = NULL;
 }
 
 
 - (void)rebuildBaseFileControllers:(NSArray *)controllers
 {
-	mFileControllers = controllers;
-	
+    mFileControllers = controllers;
+    
     // compose alert
     NSAlert *alert = [NSAlert new];
     [alert setAlertStyle:NSWarningAlertStyle];
@@ -52,23 +52,23 @@
 
 - (void)performRebuild:(NSNumber *)keepLayout
 {
-	if ([mFileControllers count] > 1)
+    if ([mFileControllers count] > 1)
     {
-		[[self operation] setTitle:NSLocalizedString(@"Rebuilding files…", nil)];
-		[[self operation] setCancellable:NO];
-		[[self operation] setIndeterminate:NO];
-		[[self operation] showAsSheet];		
-	}
-	
-	[[self projectWC] fmEditorWillChange];
-	
-	[[self projectWC] disconnectInterface];
-	
-	ImportRebaseBundleOp *op = [ImportRebaseBundleOp operation];
-	op.projectProvider = [self projectProvider];
-	[op rebaseBaseFileControllers:mFileControllers keepLayout:[keepLayout boolValue]];	
-	
-	[[self projectWC] connectInterface];
+        [[self operation] setTitle:NSLocalizedString(@"Rebuilding files…", nil)];
+        [[self operation] setCancellable:NO];
+        [[self operation] setIndeterminate:NO];
+        [[self operation] showAsSheet];        
+    }
+    
+    [[self projectWC] fmEditorWillChange];
+    
+    [[self projectWC] disconnectInterface];
+    
+    ImportRebaseBundleOp *op = [ImportRebaseBundleOp operation];
+    op.projectProvider = [self projectProvider];
+    [op rebaseBaseFileControllers:mFileControllers keepLayout:[keepLayout boolValue]];    
+    
+    [[self projectWC] connectInterface];
     
     [[self operation] hide];
 }

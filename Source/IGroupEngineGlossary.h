@@ -11,7 +11,7 @@
 @class GlossaryScope;
 
 @interface IGroupEngineGlossary : IGroupEngine {
-	GlossaryScope *scope;
+    GlossaryScope *scope;
 }
 @property (strong) GlossaryScope *scope;
 @end

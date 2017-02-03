@@ -29,54 +29,54 @@ enum
 
 - (id)operationForState:(int)state
 {
-	id op = nil;
-	
+    id op = nil;
+    
     switch (state)
     {
-		case STATE_BACKGROUND_OP:
+        case STATE_BACKGROUND_OP:
         {
-			op = [self glossaryOperation];
-			break;
-		}
-	}
+            op = [self glossaryOperation];
+            break;
+        }
+    }
     
-	return op;
+    return op;
 }
 
 - (int)previousState:(int)state
 {
-	int previousState = STATE_ERROR;
+    int previousState = STATE_ERROR;
     
-	switch (state)
+    switch (state)
     {
-		case STATE_INITIAL:
-			previousState = STATE_END;
-			break;
-			
-		case STATE_BACKGROUND_OP:
-			previousState = STATE_END;
-			break;
-	}
+        case STATE_INITIAL:
+            previousState = STATE_END;
+            break;
+            
+        case STATE_BACKGROUND_OP:
+            previousState = STATE_END;
+            break;
+    }
     
-	return previousState;
+    return previousState;
 }
 
 - (int)nextState:(int)state
 {
-	int nextState = STATE_ERROR;
+    int nextState = STATE_ERROR;
     
-	switch (state)
+    switch (state)
     {
-		case STATE_INITIAL:
+        case STATE_INITIAL:
             nextState = STATE_BACKGROUND_OP;
-			break;
-			
-		case STATE_BACKGROUND_OP:
-			nextState = STATE_END;
-			break;
-	}
+            break;
+            
+        case STATE_BACKGROUND_OP:
+            nextState = STATE_END;
+            break;
+    }
     
-	return nextState;
+    return nextState;
 }
 
 - (void)validate:(dispatch_block_t)continueBlock

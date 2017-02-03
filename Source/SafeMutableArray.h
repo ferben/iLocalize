@@ -8,7 +8,7 @@
 
 
 @interface SafeMutableArray : NSObject {
-	NSMutableArray	*mArray;
+    NSMutableArray    *mArray;
 }
 + (id)array;
 - (void)addObject:(id)object;

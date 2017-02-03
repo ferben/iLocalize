@@ -11,8 +11,8 @@
 
 @interface BackgroundUpdater : NSObject
 {
-	NSLock		*mLock;
-	SafeStatus	*mSafeStatus;
+    NSLock        *mLock;
+    SafeStatus    *mSafeStatus;
 }
 
 + (BackgroundUpdater *)shared;

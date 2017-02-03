@@ -13,17 +13,17 @@
 
 - (NSMenu *)menuForEvent:(NSEvent *)theEvent
 {
-	NSPoint mouseLoc = [self convertPoint:[theEvent locationInWindow] fromView:nil];
-	NSInteger row = [self rowAtPoint:mouseLoc];
-	NSInteger column = [self columnAtPoint:mouseLoc];
+    NSPoint mouseLoc = [self convertPoint:[theEvent locationInWindow] fromView:nil];
+    NSInteger row = [self rowAtPoint:mouseLoc];
+    NSInteger column = [self columnAtPoint:mouseLoc];
 
-	id delegate = [self delegate];
+    id delegate = [self delegate];
     
-	if ([delegate conformsToProtocol:@protocol(MenuForTableViewProtocol)])
+    if ([delegate conformsToProtocol:@protocol(MenuForTableViewProtocol)])
     {
-		return [delegate menuForTableView:self column:column row:row];
-	}
-	
+        return [delegate menuForTableView:self column:column row:row];
+    }
+    
     return nil;
 }
 

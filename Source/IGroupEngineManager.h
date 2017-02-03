@@ -26,17 +26,17 @@
 @end
 
 @interface IGroupEngineManager : NSObject {
-	IGroupEngine *engine;
-	IGroupEngineState *state;
-	id<IGroupEngineManagerDelegate> delegate;
-	
-	NSTimer *poolResultsTimer;
-	
-	NSCondition *runCondition;
-	BOOL processState;
-	BOOL run;
-	BOOL running;
-	BOOL enabled;
+    IGroupEngine *engine;
+    IGroupEngineState *state;
+    id<IGroupEngineManagerDelegate> delegate;
+    
+    NSTimer *poolResultsTimer;
+    
+    NSCondition *runCondition;
+    BOOL processState;
+    BOOL run;
+    BOOL running;
+    BOOL enabled;
     
     BOOL processing;    
     BOOL lastProcessingNotified;

@@ -93,7 +93,7 @@
 - (void)notifyContentChanged
 {
     [[NSNotificationCenter defaultCenter] postNotificationName:ILHistoryDidChange
-														object:nil];
+                                                        object:nil];
 }
 
 #pragma mark -

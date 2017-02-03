@@ -11,9 +11,9 @@
 @class FileController;
 
 @interface ProjectFileWarningWC : AbstractWC {
-	IBOutlet NSArrayController	*mWarningsController;
-	IBOutlet NSArrayController	*mKeysController;
-	FileController	*mFileController;
+    IBOutlet NSArrayController    *mWarningsController;
+    IBOutlet NSArrayController    *mKeysController;
+    FileController    *mFileController;
 }
 - (void)setFileController:(FileController*)fc;
 - (IBAction)help:(id)sender;

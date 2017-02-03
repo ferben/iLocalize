@@ -12,10 +12,10 @@
 @class TreeNode;
 
 @interface GlossaryScopeAbstractWC : AbstractWC {
-	IBOutlet NSOutlineView *outlineView;
-	IBOutlet NSTextField *titleTextField;
-	IBOutlet NSButton *cancelButton;
-	TreeNode *rootNode;
+    IBOutlet NSOutlineView *outlineView;
+    IBOutlet NSTextField *titleTextField;
+    IBOutlet NSButton *cancelButton;
+    TreeNode *rootNode;
 }
 
 @property (weak) GlossaryScope *scope;

@@ -23,53 +23,53 @@ static unsigned applyToAllResult = RESOLVE_USE_NONE;
 
 + (void)reset
 {
-	applyToAllResult = RESOLVE_USE_NONE;
+    applyToAllResult = RESOLVE_USE_NONE;
 }
 
 + (void)setOverrideValue:(unsigned)value
 {
-	overrideValue = value;
+    overrideValue = value;
 }
 
 + (unsigned)resolveConflictBetweenProjectFile:(NSString*)projectFile andImportedFile:(NSString*)importedFile provider:(id<ProjectProvider>)provider
 {
-	if(overrideValue == -1) {
-		ImportFilesConflict *dialog = [[ImportFilesConflict alloc] init];
-		unsigned result = [dialog resolveConflictBetweenProjectFile:projectFile andImportedFile:importedFile provider:provider];
-		return result;		
-	} else {
-		return overrideValue;
-	}
+    if(overrideValue == -1) {
+        ImportFilesConflict *dialog = [[ImportFilesConflict alloc] init];
+        unsigned result = [dialog resolveConflictBetweenProjectFile:projectFile andImportedFile:importedFile provider:provider];
+        return result;        
+    } else {
+        return overrideValue;
+    }
 }
 
 - (id)init
 {
-	if(self = [super initWithWindowNibName:@"ImportFilesConflict"]) {
-		mProjectFile = NULL;
-		mImportedFile = NULL;
-		[self window];
-	}
-	return self;
+    if(self = [super initWithWindowNibName:@"ImportFilesConflict"]) {
+        mProjectFile = NULL;
+        mImportedFile = NULL;
+        [self window];
+    }
+    return self;
 }
 
 
 - (void)prepare
 {
-	[self useImportedFile:self];
-	
-	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-	[dateFormatter setDateStyle:NSDateFormatterMediumStyle];
-	[dateFormatter setTimeStyle:NSDateFormatterShortStyle];
-	
-	[mProjectFileNameField setStringValue:[mProjectFile lastPathComponent]];
-	[mProjectFilePathField setStringValue:mProjectFile];
-	[mProjectFileCreationDateField setStringValue:[dateFormatter stringForObjectValue:[mProjectFile pathCreationDate]]];
-	[mProjectFileModificationDateField setStringValue:[dateFormatter stringForObjectValue:[mProjectFile pathModificationDate]]];
+    [self useImportedFile:self];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
+    
+    [mProjectFileNameField setStringValue:[mProjectFile lastPathComponent]];
+    [mProjectFilePathField setStringValue:mProjectFile];
+    [mProjectFileCreationDateField setStringValue:[dateFormatter stringForObjectValue:[mProjectFile pathCreationDate]]];
+    [mProjectFileModificationDateField setStringValue:[dateFormatter stringForObjectValue:[mProjectFile pathModificationDate]]];
 
-	[mImportedFileNameField setStringValue:[mImportedFile lastPathComponent]];
-	[mImportedFilePathField setStringValue:mImportedFile];
-	[mImportedFileCreationDateField setStringValue:[dateFormatter stringForObjectValue:[mImportedFile pathCreationDate]]];
-	[mImportedFileModificationDateField setStringValue:[dateFormatter stringForObjectValue:[mImportedFile pathModificationDate]]];
+    [mImportedFileNameField setStringValue:[mImportedFile lastPathComponent]];
+    [mImportedFilePathField setStringValue:mImportedFile];
+    [mImportedFileCreationDateField setStringValue:[dateFormatter stringForObjectValue:[mImportedFile pathCreationDate]]];
+    [mImportedFileModificationDateField setStringValue:[dateFormatter stringForObjectValue:[mImportedFile pathModificationDate]]];
 }
 
 - (unsigned)resolveConflictBetweenProjectFile:(NSString*)projectFile andImportedFile:(NSString*)importedFile provider:(id<ProjectProvider>)provider
@@ -80,74 +80,74 @@ static unsigned applyToAllResult = RESOLVE_USE_NONE;
             return decision;
     }
     
-	if(applyToAllResult != RESOLVE_USE_NONE)
-		return applyToAllResult;
-	
-	if(![importedFile isPathExisting])
-		return RESOLVE_USE_PROJET_FILE;
+    if(applyToAllResult != RESOLVE_USE_NONE)
+        return applyToAllResult;
+    
+    if(![importedFile isPathExisting])
+        return RESOLVE_USE_PROJET_FILE;
 
-	if(![projectFile isPathExisting])
-		return RESOLVE_USE_PROJET_FILE;
+    if(![projectFile isPathExisting])
+        return RESOLVE_USE_PROJET_FILE;
 
-	if([projectFile isPathContentEqualsToPath:importedFile]) {
-		return RESOLVE_USE_PROJET_FILE;		
-	}
-	
-	mProjectFile = projectFile;
+    if([projectFile isPathContentEqualsToPath:importedFile]) {
+        return RESOLVE_USE_PROJET_FILE;        
+    }
+    
+    mProjectFile = projectFile;
 
-	mImportedFile = importedFile;
+    mImportedFile = importedFile;
 
-	[self prepare];
-	
-	[NSApp runModalForWindow:[self window]];
-	unsigned result = RESOLVE_USE_NONE;
-	if([mUseProjectFileButton state] == NSOnState)
-		result = RESOLVE_USE_PROJET_FILE;
-	else
-		result = RESOLVE_USE_IMPORTED_FILE;
-	
-	if([mApplyToAllButton state] == NSOnState)
-		applyToAllResult = result;
-	
-	return result;
+    [self prepare];
+    
+    [NSApp runModalForWindow:[self window]];
+    unsigned result = RESOLVE_USE_NONE;
+    if([mUseProjectFileButton state] == NSOnState)
+        result = RESOLVE_USE_PROJET_FILE;
+    else
+        result = RESOLVE_USE_IMPORTED_FILE;
+    
+    if([mApplyToAllButton state] == NSOnState)
+        applyToAllResult = result;
+    
+    return result;
 }
 
 - (IBAction)openProjectFile:(id)sender
 {
-	[FileTool openFile:mProjectFile];
+    [FileTool openFile:mProjectFile];
 }
 
 - (IBAction)revealProjectFile:(id)sender
 {
-	[FileTool revealFile:mProjectFile];
+    [FileTool revealFile:mProjectFile];
 }
 
 - (IBAction)useProjectFile:(id)sender
 {
-	[mUseProjectFileButton setState:NSOnState];
-	[mUseImportedFileButton setState:NSOffState];
+    [mUseProjectFileButton setState:NSOnState];
+    [mUseImportedFileButton setState:NSOffState];
 }
 
 - (IBAction)openImportedFile:(id)sender
 {
-	[FileTool openFile:mImportedFile];
+    [FileTool openFile:mImportedFile];
 }
 
 - (IBAction)revealImportedFile:(id)sender
 {
-	[FileTool revealFile:mImportedFile];
+    [FileTool revealFile:mImportedFile];
 }
 
 - (IBAction)useImportedFile:(id)sender
 {
-	[mUseProjectFileButton setState:NSOffState];
-	[mUseImportedFileButton setState:NSOnState];
+    [mUseProjectFileButton setState:NSOffState];
+    [mUseImportedFileButton setState:NSOnState];
 }
 
 - (IBAction)continue:(id)sender
 {
-	[NSApp stopModal];
-	[[self window] orderOut:self];
+    [NSApp stopModal];
+    [[self window] orderOut:self];
 }
 
 @end

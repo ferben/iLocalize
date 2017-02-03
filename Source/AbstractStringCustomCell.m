@@ -12,7 +12,7 @@
 
 - (StringController *)stringController
 {
-	return [self representedObject];
+    return [self representedObject];
 }
 
 @end

@@ -14,16 +14,16 @@
 @class FindContentMatching;
 
 @interface StringController : AbstractController <ProjectLabelPersistent, StringControllerProtocol> {
-	StringModel		*baseStringModel;
-	StringModel		*stringModel;	
-	
-	// Display only
-	FindContentMatching *contentMatching;
-	NSMutableArray	*mStatusDescription;	// description of each status icon used by the tooltips
-	NSRect			mStatusImageRect;		// last rect used to display the status icons (currently only in project window)
-	
-	// Cache only
-	StringController *baseStringController;
+    StringModel        *baseStringModel;
+    StringModel        *stringModel;    
+    
+    // Display only
+    FindContentMatching *contentMatching;
+    NSMutableArray    *mStatusDescription;    // description of each status icon used by the tooltips
+    NSRect            mStatusImageRect;        // last rect used to display the status icons (currently only in project window)
+    
+    // Cache only
+    StringController *baseStringController;
 }
 
 @property (strong) StringModel *baseStringModel;

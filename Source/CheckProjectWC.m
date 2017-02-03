@@ -16,54 +16,54 @@
 
 - (id)init
 {
-	if(self = [super initWithWindowNibName:@"CheckProject"]) {
-		selectionView = [[AZListSelectionView alloc] init];
-	}
-	return self;
+    if(self = [super initWithWindowNibName:@"CheckProject"]) {
+        selectionView = [[AZListSelectionView alloc] init];
+    }
+    return self;
 }
 
 
 - (void)willShow
 {
-	NSMutableArray *elements = [NSMutableArray array];
-	
-	for(LanguageController *languageController in [[[self projectProvider] projectController] languageControllers]) {
-		NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-		dic[@"name"] = [languageController language];
-		dic[@"displayName"] = [languageController displayLanguage];
-		dic[[AZListSelectionView selectedKey]] = @YES;
+    NSMutableArray *elements = [NSMutableArray array];
+    
+    for(LanguageController *languageController in [[[self projectProvider] projectController] languageControllers]) {
+        NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+        dic[@"name"] = [languageController language];
+        dic[@"displayName"] = [languageController displayLanguage];
+        dic[[AZListSelectionView selectedKey]] = @YES;
 
-		[elements addObject:dic];
-	}
-	
-	selectionView.delegate = self;
-	selectionView.outlineView = outlineView;
-	selectionView.elements = elements;
-	[selectionView reloadData];
+        [elements addObject:dic];
+    }
+    
+    selectionView.delegate = self;
+    selectionView.outlineView = outlineView;
+    selectionView.elements = elements;
+    [selectionView reloadData];
 }
 
 - (NSArray*)checkLanguages
 {
-	NSMutableArray *array = [NSMutableArray array];
-	[[selectionView selectedElements] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-		[array addObject:obj[@"name"]];
-	}];
-	return array;
+    NSMutableArray *array = [NSMutableArray array];
+    [[selectionView selectedElements] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [array addObject:obj[@"name"]];
+    }];
+    return array;
 }
 
 - (void)elementsSelectionChanged:(BOOL)noSelection
 {
-	[checkButton setEnabled:!noSelection];
+    [checkButton setEnabled:!noSelection];
 }
 
 - (IBAction)cancel:(id)sender
 {
-	[self hide];	
+    [self hide];    
 }
 
 - (IBAction)check:(id)sender
 {
-	[self hideWithCode:1];	
+    [self hideWithCode:1];    
 }
 
 @end

@@ -15,19 +15,19 @@
 - (id)init
 {
     if(self = [super init]) {
-		LayoutManagerCustom *layoutManager = [[LayoutManagerCustom alloc] init];
-		[[self textContainer] replaceLayoutManager:layoutManager];
+        LayoutManagerCustom *layoutManager = [[LayoutManagerCustom alloc] init];
+        [[self textContainer] replaceLayoutManager:layoutManager];
     }
     return self;
 }
 
 - (void)setShowInvisibleCharacters:(BOOL)flag
 {
-	[(LayoutManagerCustom*)[self layoutManager] setShowInvisibleCharacters:flag];
+    [(LayoutManagerCustom*)[self layoutManager] setShowInvisibleCharacters:flag];
 }
 
 - (BOOL)shouldChangeTextInRange:(NSRange)affectedCharRange replacementString:(NSString *)replacementString
-{	
+{    
     FMEditor *editor = [self.provider currentFileModuleEditor];
     if([editor isKindOfClass:[FMEditorStrings class]]) {
         FMEditorStrings *editorStrings = (FMEditorStrings*)editor;
@@ -37,7 +37,7 @@
             return NO;            
         } 
     }
-	return [super shouldChangeTextInRange:affectedCharRange replacementString:replacementString];
+    return [super shouldChangeTextInRange:affectedCharRange replacementString:replacementString];
 }
 
 @end

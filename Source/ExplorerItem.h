@@ -12,15 +12,15 @@
 @class StringController;
 
 @interface ExplorerItem : NSObject {
-	NSString			*mTitle;
-	NSImage				*mImage;
-	BOOL				mSelectable;
-	BOOL				mEditable;
-	BOOL				mDeletable;
-	BOOL				all;
-	BOOL				group;
-	ExplorerFilter		*mFilter;
-	NSMutableArray		*_children;
+    NSString            *mTitle;
+    NSImage                *mImage;
+    BOOL                mSelectable;
+    BOOL                mEditable;
+    BOOL                mDeletable;
+    BOOL                all;
+    BOOL                group;
+    ExplorerFilter        *mFilter;
+    NSMutableArray        *_children;
 }
 
 @property BOOL all;

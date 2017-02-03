@@ -13,7 +13,7 @@
 
 - (IBAction)languageAction:(id)sender
 {
-	[self.projectWC selectLanguageAtIndex:[sender indexOfSelectedItem]];
+    [self.projectWC selectLanguageAtIndex:[sender indexOfSelectedItem]];
 }
 
 @end

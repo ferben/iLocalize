@@ -16,19 +16,19 @@
 
 - (id)init
 {
-	if (self = [super initWithNibName:@"ExportProjectOptions"])
+    if (self = [super initWithNibName:@"ExportProjectOptions"])
     {
-		[self loadView];
+        [self loadView];
         originalSize = self.view.frame.size;
-	}
+    }
     
-	return self;
+    return self;
 }
 
 - (BOOL)control:(NSControl *)control textView:(NSTextView *)textView doCommandBySelector:(SEL)command
 {
     BOOL result = NO;
-	
+    
     if (command == @selector(insertNewline:))
     {
         // new line action:
@@ -43,48 +43,48 @@
         [textView insertTabIgnoringFieldEditor:self];
         result = YES;
     }
-	
+    
     return result;
 }
 
 //- (void)updateMailPrograms
 //{
-//	[mMailProgramPopUp removeAllItems];
-//	for(NSString *program in [[ProjectExportMailScripts shared] programs])
+//    [mMailProgramPopUp removeAllItems];
+//    for(NSString *program in [[ProjectExportMailScripts shared] programs])
 //  {
-//		[mMailProgramPopUp addItemWithTitle:program];		
-//	}
+//        [mMailProgramPopUp addItemWithTitle:program];        
+//    }
 //}
 
 - (IBAction)email:(id)sender
 {
-	[self stateChanged];
+    [self stateChanged];
 }
 
 - (NSSize)viewSize
 {
-	if (self.settings.email)
+    if (self.settings.email)
     {
         [hideEmailComponentsView setHidden:NO];
 
         return originalSize;
-	}
+    }
     else
     {
         [hideEmailComponentsView setHidden:YES];
         
         return NSMakeSize(originalSize.width, originalSize.height - hideEmailComponentsView.frame.size.height);
-	}
+    }
 }
 
 - (BOOL)canResize
 {
-	return NO;
+    return NO;
 }
 
 - (void)willShow
 {
-	[objectController setContent:self.settings];
+    [objectController setContent:self.settings];
 }
 
 @end

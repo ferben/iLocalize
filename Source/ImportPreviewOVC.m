@@ -24,82 +24,82 @@
 
 - (id)init
 {
-	if ((self = [super initWithNibName:@"ImportPreview"]))
+    if ((self = [super initWithNibName:@"ImportPreview"]))
     {
-		mDescription = [[NSMutableString alloc] init];
-		root = [[AZPathNode alloc] init];
-	}
-	
+        mDescription = [[NSMutableString alloc] init];
+        root = [[AZPathNode alloc] init];
+    }
+    
     return self;
 }
 
 
 - (NSString *)nextButtonTitle
 {
-	return NSLocalizedString(@"Update", nil);
+    return NSLocalizedString(@"Update", nil);
 }
 
 - (void)willShow
 {
-	[mDescription setString:[[NSDate date] description]];
-		
-	NSMutableDictionary *opDic = [NSMutableDictionary dictionary];
+    [mDescription setString:[[NSDate date] description]];
+        
+    NSMutableDictionary *opDic = [NSMutableDictionary dictionary];
     
     for (ImportDiffItem *item in items)
     {
-		if (item.operation == OPERATION_IDENTICAL)
+        if (item.operation == OPERATION_IDENTICAL)
         {
-			continue;
-		}
+            continue;
+        }
         
-		NSNumber *key = [NSNumber numberWithUnsignedInteger:item.operation];
-		NSMutableArray *opItems = opDic[key];
-		
+        NSNumber *key = [NSNumber numberWithUnsignedInteger:item.operation];
+        NSMutableArray *opItems = opDic[key];
+        
         if (!opItems)
         {
-			opItems = [NSMutableArray array];
-			opDic[key] = opItems;
-		}
-		
-        [opItems addObject:item];
-		
+            opItems = [NSMutableArray array];
+            opDic[key] = opItems;
+        }
         
-		[mDescription appendFormat:@"\n[%@] %@", item.operationName, item.file];
+        [opItems addObject:item];
+        
+        
+        [mDescription appendFormat:@"\n[%@] %@", item.operationName, item.file];
     }
     
-	// Build the tree
+    // Build the tree
     [root removeAllChildren];
     
-	NSArray *sortedKeys = [[opDic allKeys] sortedArrayUsingComparator:(NSComparator)^(id obj1, id obj2)
+    NSArray *sortedKeys = [[opDic allKeys] sortedArrayUsingComparator:(NSComparator)^(id obj1, id obj2)
     {
-		return [obj1 compare:obj2]; 
+        return [obj1 compare:obj2]; 
     }];
 
-	for (NSNumber *op in sortedKeys)
+    for (NSNumber *op in sortedKeys)
     {
         // Build the operation node
         AZPathNode *opNode = [AZPathNode rootNodeWithPath:@""];
         opNode.payload = op;
-        		
+                
         // Build the children for that particular operation
-		for (ImportDiffItem *item in opDic[op])
+        for (ImportDiffItem *item in opDic[op])
         {
             AZPathNode *itemNode = [opNode addRelativePath:item.file];
             itemNode.payload = item;
-		}
+        }
         
         [root addNode:opNode];
-	}
+    }
 
     [root applyState:NSOnState];
 
-	[outlineView reloadData];
-	[outlineView expandItem:nil expandChildren:YES];
+    [outlineView reloadData];
+    [outlineView expandItem:nil expandChildren:YES];
 }
 
 - (IBAction)export:(id)sender
 {
-	NSSavePanel *panel = [NSSavePanel savePanel];
+    NSSavePanel *panel = [NSSavePanel savePanel];
     
     [panel setAllowedFileTypes:@[@"txt"]];
     [panel beginSheetModalForWindow:[self window] completionHandler:^(NSInteger result)
@@ -115,26 +115,26 @@
 
 - (NSUInteger)outlineView:(NSOutlineView *)ov numberOfChildrenOfItem:(id)item
 {
-	if (item == NULL)
+    if (item == NULL)
     {
-		return [[root children] count];
-	}
+        return [[root children] count];
+    }
     else
     {
-		return [[item children] count];
-	}
+        return [[item children] count];
+    }
 }
 
 - (id)outlineView:(NSOutlineView *)ov child:(int)index ofItem:(id)item
 {
-	if (item == NULL)
+    if (item == NULL)
     {
-		return [root children][index];
-	}
+        return [root children][index];
+    }
     else
     {
-		return [item children][index];
-	}
+        return [item children][index];
+    }
 }
 
 - (BOOL)outlineView:(NSOutlineView *)ov isItemExpandable:(id)item
@@ -144,8 +144,8 @@
 
 - (id)outlineView:(NSOutlineView *)ov objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item
 {
-	BOOL statusColumn = [[tableColumn identifier] isEqualToString:@"Status"];
-		
+    BOOL statusColumn = [[tableColumn identifier] isEqualToString:@"Status"];
+        
     AZPathNode *pn = item;
     
     if (statusColumn)
@@ -167,115 +167,115 @@
 
 - (void)outlineView:(NSOutlineView *)ov setObjectValue:(id)object forTableColumn:(NSTableColumn *)tableColumn byItem:(id)item
 {
-	int state = [object intValue];
-	
+    int state = [object intValue];
+    
     if (state == NSMixedState)
     {
-		state = NSOnState;
-	}
-	
-	AZPathNode *tn = item;
+        state = NSOnState;
+    }
+    
+    AZPathNode *tn = item;
     [tn applyState:state];
-	[ov reloadData];
+    [ov reloadData];
 }
 
 - (void)outlineView:(NSOutlineView *)olv willDisplayCell:(NSCell *)cell forTableColumn:(NSTableColumn *)tableColumn item:(id)item 
-{	
+{    
     AZPathNode *node = item;
-	BOOL statusColumn = [[tableColumn identifier] isEqualToString:@"Status"];
-	
+    BOOL statusColumn = [[tableColumn identifier] isEqualToString:@"Status"];
+    
     if (!statusColumn)
     {
-		id payload = node.payload;
+        id payload = node.payload;
         
-		NSString *title = nil;
-		NSImage *icon = nil;
+        NSString *title = nil;
+        NSImage *icon = nil;
         
-		if ([payload isKindOfClass:[NSNumber class]])
+        if ([payload isKindOfClass:[NSNumber class]])
         {
-			__block int enabledCount = 0;
+            __block int enabledCount = 0;
             
             [node visitLeaves:^(AZPathNode *n)
             {
                 if (n.state == NSOnState)
                 {
-					enabledCount++;
-				}
+                    enabledCount++;
+                }
             }];
             
-			NSString *ls = @"";
+            NSString *ls = @"";
             
-			switch ([payload intValue])
+            switch ([payload intValue])
             {
-				case OPERATION_ADD:
-					if (enabledCount == 0)
+                case OPERATION_ADD:
+                    if (enabledCount == 0)
                     {
-						ls = NSLocalizedString(@"No file will be added", nil);
-					}
+                        ls = NSLocalizedString(@"No file will be added", nil);
+                    }
                     else if (enabledCount == 1)
                     {
-						ls = NSLocalizedString(@"One file will be added", nil);
-					}
+                        ls = NSLocalizedString(@"One file will be added", nil);
+                    }
                     else
                     {
-						ls = NSLocalizedString(@"%d files will be added", nil);	
-					}
-					
+                        ls = NSLocalizedString(@"%d files will be added", nil);    
+                    }
+                    
                     break;
                     
-				case OPERATION_DELETE:
-					if (enabledCount == 0)
+                case OPERATION_DELETE:
+                    if (enabledCount == 0)
                     {
-						ls = NSLocalizedString(@"No file will be removed", nil);
-					}
+                        ls = NSLocalizedString(@"No file will be removed", nil);
+                    }
                     else if (enabledCount == 1)
                     {
-						ls = NSLocalizedString(@"One file will be removed", nil);
-					}
+                        ls = NSLocalizedString(@"One file will be removed", nil);
+                    }
                     else
                     {
-						ls = NSLocalizedString(@"%d files will be removed", nil);	
-					}
-					
+                        ls = NSLocalizedString(@"%d files will be removed", nil);    
+                    }
+                    
                     break;
-				
+                
                 case OPERATION_UPDATE:
-					if (enabledCount == 0)
+                    if (enabledCount == 0)
                     {
-						ls = NSLocalizedString(@"No file will be updated", nil);
-					}
+                        ls = NSLocalizedString(@"No file will be updated", nil);
+                    }
                     else if (enabledCount == 1)
                     {
-						ls = NSLocalizedString(@"One file will be updated", nil);
-					}
+                        ls = NSLocalizedString(@"One file will be updated", nil);
+                    }
                     else
                     {
-						ls = NSLocalizedString(@"%d files will be updated", nil);	
-					}					
-					
+                        ls = NSLocalizedString(@"%d files will be updated", nil);    
+                    }                    
+                    
                     break;
-			}
+            }
             
-			title = [NSString stringWithFormat:ls, enabledCount];
-		}
+            title = [NSString stringWithFormat:ls, enabledCount];
+        }
         else
         {
-			NSString *relativeFile = [node relativePath];
-			NSString *absoluteFile = [FileTool resolveEquivalentFile:[[self.projectProvider projectController] absoluteProjectPathFromRelativePath:relativeFile]];
+            NSString *relativeFile = [node relativePath];
+            NSString *absoluteFile = [FileTool resolveEquivalentFile:[[self.projectProvider projectController] absoluteProjectPathFromRelativePath:relativeFile]];
             
-			if (![absoluteFile isPathExisting])
+            if (![absoluteFile isPathExisting])
             {
-				// If the path doesn't exist, it means it is a new file to add. We need to use the source path for that.
-				absoluteFile = [FileTool resolveEquivalentFile:[self.baseBundleSource.sourcePath stringByAppendingPathComponent:relativeFile]];
-			}
+                // If the path doesn't exist, it means it is a new file to add. We need to use the source path for that.
+                absoluteFile = [FileTool resolveEquivalentFile:[self.baseBundleSource.sourcePath stringByAppendingPathComponent:relativeFile]];
+            }
 
             title = [node name];
-			icon = [[NSWorkspace sharedWorkspace] iconForFile:absoluteFile];                        
-		}
+            icon = [[NSWorkspace sharedWorkspace] iconForFile:absoluteFile];                        
+        }
 
-		[cell setTitle:title];
-		[cell setImage:icon];		
-	}
+        [cell setTitle:title];
+        [cell setImage:icon];        
+    }
 }
 
 @end

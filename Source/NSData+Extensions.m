@@ -13,25 +13,25 @@
 
 - (NSURL *)newURLFromAliasData
 {
-	Handle ah = NewHandle([self length]);
-	HLock(ah);
-	[self getBytes:*ah length:[self length]];
-	HUnlock(ah);
-		
-	FSRef target;
-	Boolean wasChanged;
-	OSErr err = FSResolveAlias(NULL, (AliasHandle)ah, &target, &wasChanged);
+    Handle ah = NewHandle([self length]);
+    HLock(ah);
+    [self getBytes:*ah length:[self length]];
+    HUnlock(ah);
+        
+    FSRef target;
+    Boolean wasChanged;
+    OSErr err = FSResolveAlias(NULL, (AliasHandle)ah, &target, &wasChanged);
 
-	if (err == noErr)
+    if (err == noErr)
     {
-		CFURLRef aliasURL = CFURLCreateFromFSRef(NULL, &target);
-		return (NSURL*)CFBridgingRelease(aliasURL);
-	}
+        CFURLRef aliasURL = CFURLCreateFromFSRef(NULL, &target);
+        return (NSURL*)CFBridgingRelease(aliasURL);
+    }
     else
     {
-		NSLog(@"Failed to resolve the alias record with error %d", err);
-	}	
-	
+        NSLog(@"Failed to resolve the alias record with error %d", err);
+    }    
+    
     return nil;
 }
 

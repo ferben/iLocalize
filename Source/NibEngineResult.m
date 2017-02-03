@@ -17,11 +17,11 @@
 
 - (id)init
 {
-	if(self = [super init]) {
-		_error = nil;
-		_output = nil;
-	}
-	return self;
+    if(self = [super init]) {
+        _error = nil;
+        _output = nil;
+    }
+    return self;
 }
 
 

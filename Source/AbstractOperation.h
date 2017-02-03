@@ -26,8 +26,8 @@
 @interface AbstractOperation : NSObject
 {
     id <ProjectProvider>   mProjectProvider;
-	NSMutableDictionary   *mAbstractWCInstances;
-	CallbackBlock          didCloseCallback;
+    NSMutableDictionary   *mAbstractWCInstances;
+    CallbackBlock          didCloseCallback;
 }
 
 @property (copy) CallbackBlock didCloseCallback;

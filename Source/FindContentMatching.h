@@ -12,11 +12,11 @@
  and to perform the replace function.
  */
 @interface FindContentMatching : NSObject {
-	
-	/**
-	 Array of ranges for each item.
-	 */
-	NSMutableDictionary *rangesForItem;
+    
+    /**
+     Array of ranges for each item.
+     */
+    NSMutableDictionary *rangesForItem;
 }
 
 /**

@@ -14,10 +14,10 @@
  File to import.
  */
 @interface XLIFFImportFileElement : NSObject<AZListSelectionViewItem> {
-	BOOL selected;
-	FileController *fc;
-	// Array of XLIFFImportStringElement
-	NSArray *stringElements;
+    BOOL selected;
+    FileController *fc;
+    // Array of XLIFFImportStringElement
+    NSArray *stringElements;
 }
 @property BOOL selected;
 @property (strong) FileController *fc;

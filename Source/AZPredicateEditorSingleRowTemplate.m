@@ -12,7 +12,7 @@
 @implementation AZPredicateEditorSingleRowTemplate
 
 - (NSArray *)templateViews {
-	return @[[super templateViews][0]];
+    return @[[super templateViews][0]];
 }
 
 @end

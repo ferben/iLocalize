@@ -9,8 +9,8 @@
 #import "AbstractWC.h"
 
 @interface AddCustomLanguageWC : AbstractWC {
-	IBOutlet NSTextField	*mNameField;
-	IBOutlet NSButton *mOKButton;
+    IBOutlet NSTextField    *mNameField;
+    IBOutlet NSButton *mOKButton;
 }
 - (void)setRenameLanguage:(BOOL)flag;
 - (NSString*)language;

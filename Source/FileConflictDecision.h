@@ -8,8 +8,8 @@
 
 
 @interface FileConflictDecision : NSObject {
-	int decision;
-	NSString *file;
+    int decision;
+    NSString *file;
 }
 @property int decision;
 @property (strong) NSString *file;

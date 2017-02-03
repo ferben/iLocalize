@@ -9,9 +9,9 @@
 #import "TextViewCustomDelegate.h"
 
 @interface TextViewCustom : NSTextView {
-	id <TextViewCustomDelegate> mCustomDelegate;
-	NSString *language;
-	BOOL drawBorder;
+    id <TextViewCustomDelegate> mCustomDelegate;
+    NSString *language;
+    BOOL drawBorder;
 }
 
 /**

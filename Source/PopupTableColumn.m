@@ -13,13 +13,13 @@
 
 - (id)dataCellForRow:(NSInteger)row
 {
-	NSPopUpButtonCell *cell = [[NSPopUpButtonCell alloc] initTextCell:@"" pullsDown:NO];
-	[cell setBordered:NO];
-	// How to set the size of the pop-up ?
-	// QUESTION WWDC
-	[cell setControlSize:NSSmallControlSize];
-	[cell addItemsWithTitles:[mDelegate popUpContentForRow:row]];
-	return cell;	
+    NSPopUpButtonCell *cell = [[NSPopUpButtonCell alloc] initTextCell:@"" pullsDown:NO];
+    [cell setBordered:NO];
+    // How to set the size of the pop-up ?
+    // QUESTION WWDC
+    [cell setControlSize:NSSmallControlSize];
+    [cell addItemsWithTitles:[mDelegate popUpContentForRow:row]];
+    return cell;    
 }
 
 @end

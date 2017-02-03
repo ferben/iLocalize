@@ -15,20 +15,20 @@
 
 - (NSArray*)readableExtensions
 {
-	return @[@"strings"];
+    return @[@"strings"];
 }
 
 - (BOOL)importDocument:(NSURL*)url error:(NSError**)error
 {
-	StringsEngine *engine = [StringsEngine engineWithConsole:nil];
-	StringsContentModel *model = [engine parseStringModelsOfStringsFile:[url path]];
-	for(StringModel *sm in [model strings]) {
-		[self addStringWithKey:nil base:[sm key] translation:[sm value] file:nil];
-	}
-	self.sourceLanguage = nil;
-	self.targetLanguage = nil;
-		
-	return YES;
+    StringsEngine *engine = [StringsEngine engineWithConsole:nil];
+    StringsContentModel *model = [engine parseStringModelsOfStringsFile:[url path]];
+    for(StringModel *sm in [model strings]) {
+        [self addStringWithKey:nil base:[sm key] translation:[sm value] file:nil];
+    }
+    self.sourceLanguage = nil;
+    self.targetLanguage = nil;
+        
+    return YES;
 }
 
 @end

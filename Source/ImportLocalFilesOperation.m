@@ -23,18 +23,18 @@
 
 - (void)execute
 {
-	[self setOperationName:NSLocalizedString(@"Updating Local Files…", nil)];
-	
-	for(FileMatchItem *item in self.settings.matchItems) {
-		FileController *fc = [item matchingFileController];
-		NSString *file = [item file];
+    [self setOperationName:NSLocalizedString(@"Updating Local Files…", nil)];
+    
+    for(FileMatchItem *item in self.settings.matchItems) {
+        FileController *fc = [item matchingFileController];
+        NSString *file = [item file];
 
-		[[FileTool shared] copySourceFile:file
-							toReplaceFile:[fc absoluteFilePath]
-								  console:[self console]];
-		[fc setModificationDate:[[fc absoluteFilePath] pathModificationDate]];
-		[[[self projectProvider] fileModuleEngineForFile:file] reloadFileController:fc usingFile:[fc absoluteFilePath]];		
-	}	
+        [[FileTool shared] copySourceFile:file
+                            toReplaceFile:[fc absoluteFilePath]
+                                  console:[self console]];
+        [fc setModificationDate:[[fc absoluteFilePath] pathModificationDate]];
+        [[[self projectProvider] fileModuleEngineForFile:file] reloadFileController:fc usingFile:[fc absoluteFilePath]];        
+    }    
 }
 
 @end

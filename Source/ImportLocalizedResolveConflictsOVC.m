@@ -19,9 +19,9 @@
 
 - (id)init
 {
-	if(self = [super initWithNibName:@"ImportConflictPreview"]) {
-	}
-	return self;
+    if(self = [super initWithNibName:@"ImportConflictPreview"]) {
+    }
+    return self;
 }
 
 
@@ -32,9 +32,9 @@
     NSEnumerator *enumerator = [[mPreviewController content] objectEnumerator];
     NSDictionary *dic;
     while(dic = [enumerator nextObject]) {
-		FileConflictDecision *d = [[FileConflictDecision alloc] init];
-		d.decision = [dic[@"useSource"] boolValue]?RESOLVE_USE_IMPORTED_FILE:RESOLVE_USE_PROJET_FILE;
-		d.file = dic[@"file"];
+        FileConflictDecision *d = [[FileConflictDecision alloc] init];
+        d.decision = [dic[@"useSource"] boolValue]?RESOLVE_USE_IMPORTED_FILE:RESOLVE_USE_PROJET_FILE;
+        d.file = dic[@"file"];
         [decision addObject:d];
     }
     return decision;
@@ -42,18 +42,18 @@
 
 - (NSString*)nextButtonTitle
 {
-	return NSLocalizedString(@"Continue", nil);
+    return NSLocalizedString(@"Continue", nil);
 }
 
 - (void)willShow
 {
-	[sourcePathControl setDoubleAction:@selector(doubleClickOnPath:)];
-	[sourcePathControl setTarget:self];
-	[targetPathControl setDoubleAction:@selector(doubleClickOnPath:)];
-	[targetPathControl setTarget:self];
-	
+    [sourcePathControl setDoubleAction:@selector(doubleClickOnPath:)];
+    [sourcePathControl setTarget:self];
+    [targetPathControl setDoubleAction:@selector(doubleClickOnPath:)];
+    [targetPathControl setTarget:self];
+    
     [mTableView setAction:@selector(clickOnTableView:)];
-	[mTableView setDoubleAction:@selector(doubleClickOnTableView:)];	
+    [mTableView setDoubleAction:@selector(doubleClickOnTableView:)];    
     
     [mPreviewController removeObjects:[mPreviewController content]];
     
@@ -91,24 +91,24 @@
 
 - (void)willContinue
 {
-	[[self projectProvider] setConflictingFilesDecision:[self conflictingFilesDecision]];
+    [[self projectProvider] setConflictingFilesDecision:[self conflictingFilesDecision]];
 }
 
 - (void)doubleClickOnPath:(id)sender
 {
-	NSPathControl *pc = sender;
-	NSURL *url = [[pc clickedPathComponentCell] URL];
-	if(url) {
-		[FileTool revealFile:[url path]];		
-	}
+    NSPathControl *pc = sender;
+    NSURL *url = [[pc clickedPathComponentCell] URL];
+    if(url) {
+        [FileTool revealFile:[url path]];        
+    }
 }
 
 - (void)tableView:(NSTableView *)aTableView willDisplayCell:(id)aCell forTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex
 {
-	if([[aTableColumn identifier] isEqualToString:@"file"]) {
-		NSString *path = [mPreviewController arrangedObjects][rowIndex][@"source"];
-		[aCell setImage:[[NSWorkspace sharedWorkspace] iconForFile:path]];		
-	}
+    if([[aTableColumn identifier] isEqualToString:@"file"]) {
+        NSString *path = [mPreviewController arrangedObjects][rowIndex][@"source"];
+        [aCell setImage:[[NSWorkspace sharedWorkspace] iconForFile:path]];        
+    }
 }
 
 - (NSString*)sourceFile
@@ -141,12 +141,12 @@
 
 - (IBAction)openSource:(id)sender
 {
-	[FileTool openFile:[self sourceFile]];    
+    [FileTool openFile:[self sourceFile]];    
 }
 
 - (IBAction)revealSource:(id)sender
 {
-	[FileTool revealFile:[self sourceFile]];
+    [FileTool revealFile:[self sourceFile]];
 }
 
 - (IBAction)openProject:(id)sender
@@ -156,7 +156,7 @@
 
 - (IBAction)revealProject:(id)sender
 {
-	[FileTool revealFile:[self projectFile]];
+    [FileTool revealFile:[self projectFile]];
 }
 
 @end

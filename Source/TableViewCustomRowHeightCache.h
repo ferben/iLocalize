@@ -10,7 +10,7 @@
 
 @interface TableViewCustomRowHeightCache : NSObject
 {
-	NSMutableDictionary *rowHeightCache;
+    NSMutableDictionary *rowHeightCache;
 }
 @property (weak) TableViewCustom *tableView;
 

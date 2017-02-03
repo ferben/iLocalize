@@ -14,17 +14,17 @@
  Create one instance of this class per popup to manage.
  */
 @interface LanguageMenuProvider : NSObject {
-	// Array containing all the selected languages during this session
-	NSMutableArray *mSelectedLanguages;
+    // Array containing all the selected languages during this session
+    NSMutableArray *mSelectedLanguages;
 
-	// Map from displayed language name to language info class
-	NSMutableDictionary *mDisplayLanguageToInfo;
+    // Map from displayed language name to language info class
+    NSMutableDictionary *mDisplayLanguageToInfo;
 
-	// Array of common used languages
-	NSMutableArray *mCommonLanguages;
-	
-	// Array of available languages as provided by the system
-	NSMutableDictionary *mLanguages;	
+    // Array of common used languages
+    NSMutableArray *mCommonLanguages;
+    
+    // Array of available languages as provided by the system
+    NSMutableDictionary *mLanguages;    
 }
 
 @property (weak) NSPopUpButton *popupButton;

@@ -58,7 +58,7 @@
 typedef void(^PropagationEngineWillChangeStringController)(id<StringControllerProtocol>string);
 
 @interface PropagationEngine : NSObject {
-	NSMutableArray *punctuationList;
+    NSMutableArray *punctuationList;
 }
 
 + (PropagationEngine*)engine;

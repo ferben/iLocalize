@@ -14,10 +14,10 @@
     OperationWC         *mOperation;
     LanguageController  *mLanguageController;
     
-	NSMutableDictionary	*mCachedRootString;	// cache
-	NSMutableDictionary *mCachedRemainingString; // cache
-	
-	BOOL	mIgnoreCase;
+    NSMutableDictionary    *mCachedRootString;    // cache
+    NSMutableDictionary *mCachedRemainingString; // cache
+    
+    BOOL    mIgnoreCase;
     int     mMaxCount;
     int     mCurrentCount;
 }

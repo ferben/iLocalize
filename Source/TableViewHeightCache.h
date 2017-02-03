@@ -10,10 +10,10 @@
 
 
 @interface TableViewHeightCache : NSObject<NSCopying> {
-	NSDictionary *attributes;
-	NSString *value;
-	CGFloat width;
-	NSUInteger hashValue;
+    NSDictionary *attributes;
+    NSString *value;
+    CGFloat width;
+    NSUInteger hashValue;
 }
 
 @property (strong) NSDictionary *attributes;

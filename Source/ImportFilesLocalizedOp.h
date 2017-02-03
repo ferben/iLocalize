@@ -14,7 +14,7 @@
  This operation updates the specified files in the project.
  */
 @interface ImportFilesLocalizedOp : Operation {
-	ImportFilesSettings *settings;
+    ImportFilesSettings *settings;
 }
 @property (strong) ImportFilesSettings *settings;
 @end

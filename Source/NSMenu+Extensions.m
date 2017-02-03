@@ -13,22 +13,22 @@
 
 - (void)setMenuItemsState:(int)state
 {
-	[[self itemArray] setMenuItemsState:state];
+    [[self itemArray] setMenuItemsState:state];
 }
 
 - (void)setMenuItemState:(int)state atIndex:(int)index
 {
-	[[self itemArray][index] setState:state];
+    [[self itemArray][index] setState:state];
 }
 
 - (void)setMenuItemState:(int)state withTag:(int)tag
 {
-	NSEnumerator *enumerator = [[self itemArray] objectEnumerator];
-	id object;
-	while(object = [enumerator nextObject]) {
-		if([object tag] == tag)
-			[object setState:state];
-	}
+    NSEnumerator *enumerator = [[self itemArray] objectEnumerator];
+    id object;
+    while(object = [enumerator nextObject]) {
+        if([object tag] == tag)
+            [object setState:state];
+    }
 }
 
 @end

@@ -38,46 +38,46 @@ static ProjectBrowserWC *shared = nil;
 
 + (void)browse
 {
-	if(!shared) {
-		shared = [[ProjectBrowserWC alloc] init];	
-	}
+    if(!shared) {
+        shared = [[ProjectBrowserWC alloc] init];    
+    }
     [shared show];
 }
 
 - (id)init
 {
-	if((self = [super initWithWindowNibName:@"ProjectBrowser"])) {		
-		imageCache = [[NSMutableDictionary alloc] init];
-		
-		imageOperationQueue = [[NSOperationQueue alloc] init];
-		[imageOperationQueue setMaxConcurrentOperationCount:NSOperationQueueDefaultMaxConcurrentOperationCount];
-		
-		projects = [[NSMutableArray alloc] init];
-		importedProjects = [[NSMutableArray alloc] init];
-		displayedProjects = [[NSMutableArray alloc] init];
-				
-		dateFormatter = [[NSDateFormatter alloc] init];
-		[dateFormatter setDateStyle:NSDateFormatterMediumStyle];
-		[dateFormatter setTimeStyle:NSDateFormatterNoStyle];
-		
+    if((self = [super initWithWindowNibName:@"ProjectBrowser"])) {        
+        imageCache = [[NSMutableDictionary alloc] init];
+        
+        imageOperationQueue = [[NSOperationQueue alloc] init];
+        [imageOperationQueue setMaxConcurrentOperationCount:NSOperationQueueDefaultMaxConcurrentOperationCount];
+        
+        projects = [[NSMutableArray alloc] init];
+        importedProjects = [[NSMutableArray alloc] init];
+        displayedProjects = [[NSMutableArray alloc] init];
+                
+        dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+        [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
+        
         [[self window] center];
 
-		// Setup the spotlight query
-		query = [[NSMetadataQuery alloc] init];		
-		NSNotificationCenter *nf = [NSNotificationCenter defaultCenter];
-        [nf addObserver:self selector:@selector(queryNotification:) name:nil object:query];		
+        // Setup the spotlight query
+        query = [[NSMetadataQuery alloc] init];        
+        NSNotificationCenter *nf = [NSNotificationCenter defaultCenter];
+        [nf addObserver:self selector:@selector(queryNotification:) name:nil object:query];        
         [query setSortDescriptors:@[[[NSSortDescriptor alloc] initWithKey:(id)kMDItemFSName ascending:YES]]];
-	}
-	return self;
+    }
+    return self;
 }
 
 - (void)dealloc
 {
-	[[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 
 
-	[imageOperationQueue cancelAllOperations];
-	[imageOperationQueue waitUntilAllOperationsAreFinished];
+    [imageOperationQueue cancelAllOperations];
+    [imageOperationQueue waitUntilAllOperationsAreFinished];
 
 
     
@@ -88,12 +88,12 @@ static ProjectBrowserWC *shared = nil;
 {
     NSRect rect = [containerView frame];
     
-	NSScrollView *sv = [[NSScrollView alloc] initWithFrame:NSMakeRect(-1, 0, rect.size.width+2, rect.size.height+1)];
-	[sv setBorderType:NSBezelBorder];
-	[sv setHasVerticalScroller:YES];
-	[sv setHasHorizontalScroller:NO];
-	[sv setAutohidesScrollers:YES];
-	[sv setAutoresizingMask:NSViewHeightSizable|NSViewWidthSizable];
+    NSScrollView *sv = [[NSScrollView alloc] initWithFrame:NSMakeRect(-1, 0, rect.size.width+2, rect.size.height+1)];
+    [sv setBorderType:NSBezelBorder];
+    [sv setHasVerticalScroller:YES];
+    [sv setHasHorizontalScroller:NO];
+    [sv setAutohidesScrollers:YES];
+    [sv setAutoresizingMask:NSViewHeightSizable|NSViewWidthSizable];
     [containerView addSubview:sv];
     
     return sv;
@@ -102,24 +102,24 @@ static ProjectBrowserWC *shared = nil;
 - (NSSortDescriptor*)sortByNameDescriptor
 {
     NSSortDescriptor *nameDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES comparator:(NSComparator)^(id obj1, id obj2) {
-		return [obj1 compare:obj2 options:NSNumericSearch|NSCaseInsensitiveSearch];
-	}];
+        return [obj1 compare:obj2 options:NSNumericSearch|NSCaseInsensitiveSearch];
+    }];
     return nameDescriptor;
 }
 
 - (NSSortDescriptor*)sortByLocationDescriptor
 {
     NSSortDescriptor *locationDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"path" ascending:YES comparator:(NSComparator)^(id obj1, id obj2) {
-		return [obj1 compare:obj2 options:NSNumericSearch|NSCaseInsensitiveSearch];
-	}];
+        return [obj1 compare:obj2 options:NSNumericSearch|NSCaseInsensitiveSearch];
+    }];
     return locationDescriptor;
 }
 
 - (NSSortDescriptor*)sortByDateDescriptor
 {
     NSSortDescriptor *dateDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO comparator:(NSComparator)^(id obj1, id obj2) {
-		return [obj1 compare:obj2];
-	}];
+        return [obj1 compare:obj2];
+    }];
     return dateDescriptor;
 }
 
@@ -155,7 +155,7 @@ static ProjectBrowserWC *shared = nil;
     [nameColumn setMinWidth:width*0.15];    
     [nameColumn setEditable:NO];
     [[nameColumn headerCell] setStringValue:NSLocalizedString(@"Name", @"Project Browser Column")];
-	[nameColumn setSortDescriptorPrototype:[self sortByNameDescriptor]];							
+    [nameColumn setSortDescriptorPrototype:[self sortByNameDescriptor]];                            
     [tableView addTableColumn:nameColumn];
 
     NSTableColumn *locationColumn = [[NSTableColumn alloc] initWithIdentifier:@"location"];
@@ -163,7 +163,7 @@ static ProjectBrowserWC *shared = nil;
     [locationColumn setEditable:NO];
     [[locationColumn headerCell] setStringValue:NSLocalizedString(@"Location", @"Project Browser Column")];
     [[locationColumn dataCell] setLineBreakMode:NSLineBreakByTruncatingMiddle];
-	[locationColumn setSortDescriptorPrototype:[self sortByLocationDescriptor]];							
+    [locationColumn setSortDescriptorPrototype:[self sortByLocationDescriptor]];                            
     [tableView addTableColumn:locationColumn];
 
     NSTableColumn *modifiedColumn = [[NSTableColumn alloc] initWithIdentifier:@"modified"];
@@ -171,7 +171,7 @@ static ProjectBrowserWC *shared = nil;
     [modifiedColumn setMinWidth:width*0.15];
     [modifiedColumn setEditable:NO];
     [[modifiedColumn headerCell] setStringValue:NSLocalizedString(@"Modified Date", @"Project Browser Column")];
-	[modifiedColumn setSortDescriptorPrototype:[self sortByDateDescriptor]];							
+    [modifiedColumn setSortDescriptorPrototype:[self sortByDateDescriptor]];                            
     [tableView addTableColumn:modifiedColumn];
         
     [tableViewScrollView setDocumentView:tableView];
@@ -199,21 +199,21 @@ static ProjectBrowserWC *shared = nil;
 
 - (void)updateBrowserView
 {
-	[displayedProjects removeAllObjects];
-	[displayedProjects addObjectsFromArray:projects];
-	
+    [displayedProjects removeAllObjects];
+    [displayedProjects addObjectsFromArray:projects];
+    
     if(self.sortDescriptor) {
         [displayedProjects sortUsingDescriptors:@[self.sortDescriptor]];        
     }
 
-	// Filter
-	NSString *filter = [searchField stringValue];
-	if([filter length] > 0) {
-		[displayedProjects filterUsingPredicate:[NSPredicate predicateWithFormat:@"name contains[cd] %@", filter]];		
-	}
-	
-	// Reload the data
-	[browserView reloadData];
+    // Filter
+    NSString *filter = [searchField stringValue];
+    if([filter length] > 0) {
+        [displayedProjects filterUsingPredicate:[NSPredicate predicateWithFormat:@"name contains[cd] %@", filter]];        
+    }
+    
+    // Reload the data
+    [browserView reloadData];
     [tableView reloadData];
 }
 
@@ -222,86 +222,86 @@ static ProjectBrowserWC *shared = nil;
  */
 - (void)fetchImage:(ProjectItem*)pi
 {
-	NSString *path = pi.path;
-	@synchronized(imageCache) {
-		if(imageCache[path]) {
-			pi.image = imageCache[path];
-			return;
-		} 
-	}
-	
-	@try {
-		ProjectModel *model = [ProjectDiskOperations readModelFromPath:path];
-		NSString *p = [model projectSourceFilePath];
-		NSImage *image = nil;
-		if([p isPathExisting]) {
-			image = [[NSWorkspace sharedWorkspace] iconForFile:p];
-		}
-		if(!image && [path isPathExisting]) {
-			image = [[NSWorkspace sharedWorkspace] iconForFile:path];
-		}
-		pi.image = image;
-		@synchronized(imageCache) {
-			imageCache[path] = pi.image;		
-		}
-	}
-	@catch (NSException * e) {
-		EXCEPTION2(([NSString stringWithFormat:@"Unable to get the project image from: %@", path]), e);
-	}			
+    NSString *path = pi.path;
+    @synchronized(imageCache) {
+        if(imageCache[path]) {
+            pi.image = imageCache[path];
+            return;
+        } 
+    }
+    
+    @try {
+        ProjectModel *model = [ProjectDiskOperations readModelFromPath:path];
+        NSString *p = [model projectSourceFilePath];
+        NSImage *image = nil;
+        if([p isPathExisting]) {
+            image = [[NSWorkspace sharedWorkspace] iconForFile:p];
+        }
+        if(!image && [path isPathExisting]) {
+            image = [[NSWorkspace sharedWorkspace] iconForFile:path];
+        }
+        pi.image = image;
+        @synchronized(imageCache) {
+            imageCache[path] = pi.image;        
+        }
+    }
+    @catch (NSException * e) {
+        EXCEPTION2(([NSString stringWithFormat:@"Unable to get the project image from: %@", path]), e);
+    }            
  }
 
 - (void)queryUpdateResults:(NSNotification*)notif
 {
-	[importedProjects removeAllObjects];
+    [importedProjects removeAllObjects];
 
-	NSArray* results = [(NSMetadataQuery*)[notif object] results];
-	[results enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-		NSMetadataItem *item = obj;
-		NSString *path = [[item valueForAttribute:(NSString*)kMDItemPath] stringByResolvingSymlinksInPath];
-		NSDate *lastUsedDate = [item valueForAttribute:(NSString*)kMDItemLastUsedDate];
-		if(![path hasSuffix:@"~.ilocalize"]) {
-			ProjectItem *pi = [[ProjectItem alloc] init];
-			pi.name = [[path lastPathComponent] stringByDeletingPathExtension];
-			pi.path = path;
-			if(!lastUsedDate) {
-				lastUsedDate = [path pathModificationDate];
-			}
-			if(lastUsedDate) {
-				pi.date = lastUsedDate;
-			} else {
-				pi.date = nil;
-			}
-			pi.dateFormatter = dateFormatter;
-			[importedProjects addObject:pi];
-			
-			[imageOperationQueue addOperationWithBlock:^(void) {
-				[self fetchImage:pi];
-				[browserView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
-			}];			
-		}
-	}];
+    NSArray* results = [(NSMetadataQuery*)[notif object] results];
+    [results enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSMetadataItem *item = obj;
+        NSString *path = [[item valueForAttribute:(NSString*)kMDItemPath] stringByResolvingSymlinksInPath];
+        NSDate *lastUsedDate = [item valueForAttribute:(NSString*)kMDItemLastUsedDate];
+        if(![path hasSuffix:@"~.ilocalize"]) {
+            ProjectItem *pi = [[ProjectItem alloc] init];
+            pi.name = [[path lastPathComponent] stringByDeletingPathExtension];
+            pi.path = path;
+            if(!lastUsedDate) {
+                lastUsedDate = [path pathModificationDate];
+            }
+            if(lastUsedDate) {
+                pi.date = lastUsedDate;
+            } else {
+                pi.date = nil;
+            }
+            pi.dateFormatter = dateFormatter;
+            [importedProjects addObject:pi];
+            
+            [imageOperationQueue addOperationWithBlock:^(void) {
+                [self fetchImage:pi];
+                [browserView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
+            }];            
+        }
+    }];
 
-	[projects removeAllObjects];
-	[projects addObjectsFromArray:importedProjects];
-	
-	[self updateBrowserView];		
+    [projects removeAllObjects];
+    [projects addObjectsFromArray:importedProjects];
+    
+    [self updateBrowserView];        
 }
 
 - (void)queryNotification:(NSNotification*)note
 {
-	// the NSMetadataQuery will send back a note when updates are happening.
-	
+    // the NSMetadataQuery will send back a note when updates are happening.
+    
     // by looking at the [note name], we can tell what is happening
     if ([[note name] isEqualToString:NSMetadataQueryDidStartGatheringNotification])
     {
         // the query has just started
-		[progressIndicator startAnimation:self];
+        [progressIndicator startAnimation:self];
     }
     else if ([[note name] isEqualToString:NSMetadataQueryDidFinishGatheringNotification])
     {
         // at this point, the query will be done. You may receive an update later on.
-		[self queryUpdateResults:note];
-		[progressIndicator stopAnimation:self];
+        [self queryUpdateResults:note];
+        [progressIndicator stopAnimation:self];
     }
     else if ([[note name] isEqualToString:NSMetadataQueryGatheringProgressNotification])
     {
@@ -311,8 +311,8 @@ static ProjectBrowserWC *shared = nil;
     {
         // an update will happen when Spotlight notices that a file as added,
         // removed, or modified that affected the search results.
-		[self queryUpdateResults:note];
-    }	
+        [self queryUpdateResults:note];
+    }    
 }
 
 - (void)show
@@ -337,13 +337,13 @@ static ProjectBrowserWC *shared = nil;
     }
     [browserView setZoomValue:[zoomSlider floatValue]];
 
-	// Start the query
-	[query setPredicate: [NSPredicate predicateWithFormat: @"(kMDItemKind like \"iLocalize 3 Project\")"]];
-	[query startQuery];		
+    // Start the query
+    [query setPredicate: [NSPredicate predicateWithFormat: @"(kMDItemKind like \"iLocalize 3 Project\")"]];
+    [query startQuery];        
     
     [self switchPresentation];
     
-    [[self window] makeKeyAndOrderFront:self];	
+    [[self window] makeKeyAndOrderFront:self];    
 }
 
 - (ProjectItem*)selectedProjectItem
@@ -354,21 +354,21 @@ static ProjectBrowserWC *shared = nil;
     } else {
         indexes = [tableView selectedRowIndexes];        
     }
-	NSUInteger index = [indexes firstIndex];
-	if(index != NSNotFound) {
-		return displayedProjects[index];
-	} else {
-		return nil;
-	}
+    NSUInteger index = [indexes firstIndex];
+    if(index != NSNotFound) {
+        return displayedProjects[index];
+    } else {
+        return nil;
+    }
 }
 
 - (void)openSelectedProject
 {
-	ProjectItem *item = [self selectedProjectItem];
+    ProjectItem *item = [self selectedProjectItem];
     
-	if (!item)
+    if (!item)
         return;
-	
+    
     NSDocumentController *documentController = [NSDocumentController sharedDocumentController];
     
     [documentController openDocumentWithContentsOfURL:[NSURL fileURLWithPath:item.path] display:YES completionHandler:
@@ -385,8 +385,8 @@ static ProjectBrowserWC *shared = nil;
 
 - (void)keyDown:(NSEvent *)theEvent
 {
-	NSString *keyString = [theEvent charactersIgnoringModifiers];
-	unichar   keyChar = [keyString characterAtIndex:0];
+    NSString *keyString = [theEvent charactersIgnoringModifiers];
+    unichar   keyChar = [keyString characterAtIndex:0];
     if(keyChar == '\r' || keyChar == 3) {
         [self openSelectedProject];
     }
@@ -394,8 +394,8 @@ static ProjectBrowserWC *shared = nil;
 
 - (IBAction)new:(id)sender
 {
-	[[self window] close];		
-	[(ApplicationDelegate*)[NSApp delegate] newProject:sender];
+    [[self window] close];        
+    [(ApplicationDelegate*)[NSApp delegate] newProject:sender];
 }
 
 - (IBAction)delete:(id)sender
@@ -415,7 +415,7 @@ static ProjectBrowserWC *shared = nil;
     {
         NSString *projectPath = [[self selectedProjectItem].path stringByDeletingLastPathComponent];
         [projectPath movePathToTrash];
-	}		
+    }        
 }
 
 - (IBAction)reveal:(id)sender
@@ -425,7 +425,7 @@ static ProjectBrowserWC *shared = nil;
 
 - (IBAction)open:(id)sender
 {
-	[self openSelectedProject];
+    [self openSelectedProject];
 }
 
 - (IBAction)zoom:(id)sender 
@@ -436,14 +436,14 @@ static ProjectBrowserWC *shared = nil;
 - (IBAction)sortByDate:(id)sender
 {
     [self setActiveSortDescriptor:[self sortByDateDescriptor]];
-	[self updateBrowserView];
+    [self updateBrowserView];
     [[NSUserDefaults standardUserDefaults] setObject:kSortOrderByDateValue forKey:kSortOrderKey];
 }
 
 - (IBAction)sortByName:(id)sender
 {
     [self setActiveSortDescriptor:[self sortByNameDescriptor]];
-	[self updateBrowserView];
+    [self updateBrowserView];
     [[NSUserDefaults standardUserDefaults] setObject:kSortOrderByNameValue forKey:kSortOrderKey];
 }
 
@@ -454,16 +454,16 @@ static ProjectBrowserWC *shared = nil;
 
 - (IBAction)search:(id)sender
 {
-	[self updateBrowserView];	
+    [self updateBrowserView];    
 }
 
 - (BOOL)validateMenuItem:(NSMenuItem *)menuItem
 {
-	SEL action = [menuItem action];
-	BOOL enabled = YES;
+    SEL action = [menuItem action];
+    BOOL enabled = YES;
     NSString *sortKey = [self.sortDescriptor key];
     
-	if (action == @selector(sortByDate:))
+    if (action == @selector(sortByDate:))
     {
         if ([sortKey isEqual:@"date"])
         {
@@ -473,7 +473,7 @@ static ProjectBrowserWC *shared = nil;
         {
             [menuItem setState:NSOffState];            
         }
-	}
+    }
     else if(action == @selector(sortByName:))
     {
         if ([sortKey isEqual:@"name"])
@@ -484,35 +484,35 @@ static ProjectBrowserWC *shared = nil;
         {
             [menuItem setState:NSOffState];            
         }
-	}
+    }
     else
     {
-		enabled = [self selectedProjectItem] != nil;
-	}
+        enabled = [self selectedProjectItem] != nil;
+    }
 
-	return enabled;
+    return enabled;
 }
 
 #pragma mark Image Browser
 
 - (NSUInteger) numberOfItemsInImageBrowser:(IKImageBrowserView *)aBrowser
 {
-	return [displayedProjects count];
+    return [displayedProjects count];
 }
 
 - (id) imageBrowser:(IKImageBrowserView *)aBrowser itemAtIndex:(NSUInteger)index
 {
-	return displayedProjects[index];
+    return displayedProjects[index];
 }
 
 - (void) imageBrowser:(IKImageBrowserView *)aBrowser cellWasDoubleClickedAtIndex:(NSUInteger) index
 {
-	[self openSelectedProject];
+    [self openSelectedProject];
 }
 
 - (void) imageBrowser:(IKImageBrowserView *)aBrowser cellWasRightClickedAtIndex:(NSUInteger) index withEvent:(NSEvent *)event
 {
-	[NSMenu popUpContextMenu:actionMenu withEvent:event forView:aBrowser];
+    [NSMenu popUpContextMenu:actionMenu withEvent:event forView:aBrowser];
 }
 
 #pragma mark Table View

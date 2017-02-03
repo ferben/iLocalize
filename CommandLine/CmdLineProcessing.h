@@ -9,7 +9,7 @@
 @class CmdLineProjectProvider;
 
 @interface CmdLineProcessing : NSObject {
-	CmdLineProjectProvider *provider;
+    CmdLineProjectProvider *provider;
 }
 + (BOOL)process;
 @end

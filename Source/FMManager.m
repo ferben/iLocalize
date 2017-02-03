@@ -43,59 +43,59 @@ static FMManager *shared = nil;
         if(shared == nil)
             shared = [[FMManager alloc] init];        
     }
-	return shared;
+    return shared;
 }
 
 - (id)init
 {
-	if(self = [super init]) {
-		mFileModules = [[NSMutableDictionary alloc] init];		
-		mContexts = [[NSMutableDictionary alloc] init];		
-		[self initBuiltInModules];
-	}
-	return self;
+    if(self = [super init]) {
+        mFileModules = [[NSMutableDictionary alloc] init];        
+        mContexts = [[NSMutableDictionary alloc] init];        
+        [self initBuiltInModules];
+    }
+    return self;
 }
 
 
 - (void)initBuiltInModules
 {
-	[[FMStrings moduleWithManager:self] load];
-	[[FMNib moduleWithManager:self] load];
-	[[FMImage moduleWithManager:self] load];
-	[[FMRTF moduleWithManager:self] load];
-	[[FMHTML moduleWithManager:self] load];
-	[[FMTXT moduleWithManager:self] load];
+    [[FMStrings moduleWithManager:self] load];
+    [[FMNib moduleWithManager:self] load];
+    [[FMImage moduleWithManager:self] load];
+    [[FMRTF moduleWithManager:self] load];
+    [[FMHTML moduleWithManager:self] load];
+    [[FMTXT moduleWithManager:self] load];
 }
 
 - (NSArray*)fileModules
 {
-	NSMutableArray *array = [NSMutableArray array];
-	NSEnumerator *enumerator = [[mFileModules allValues] objectEnumerator];
-	FMModule *fm;
-	while(fm = [enumerator nextObject]) {
-		if(![array containsObject:fm])
-			[array addObject:fm];
-	}
-	return array;
+    NSMutableArray *array = [NSMutableArray array];
+    NSEnumerator *enumerator = [[mFileModules allValues] objectEnumerator];
+    FMModule *fm;
+    while(fm = [enumerator nextObject]) {
+        if(![array containsObject:fm])
+            [array addObject:fm];
+    }
+    return array;
 }
 
 - (NSArray*)fileExtensionsForFileModule:(FMModule*)fm
 {
-	NSMutableArray *array = [NSMutableArray array];
-	NSEnumerator *enumerator = [[mFileModules allKeys] objectEnumerator];
-	NSString *ext;
-	while(ext= [enumerator nextObject]) {
-		if(mFileModules[ext] == fm)
-			[array addObject:ext];
-	}
-	return array;
+    NSMutableArray *array = [NSMutableArray array];
+    NSEnumerator *enumerator = [[mFileModules allKeys] objectEnumerator];
+    NSString *ext;
+    while(ext= [enumerator nextObject]) {
+        if(mFileModules[ext] == fm)
+            [array addObject:ext];
+    }
+    return array;
 }
 
 #pragma mark -
 
 - (void)registerFileModule:(FMModule*)fm forFileExtension:(NSString*)extension
 {
-	mFileModules[extension] = fm;
+    mFileModules[extension] = fm;
 }
 
 - (FMModule*)fileModuleForFileExtension:(NSString*)extension
@@ -106,30 +106,30 @@ static FMManager *shared = nil;
         module = [[PreferencesEditors shared] moduleForExtension:extension];
     }
 
-	return module;
+    return module;
 }
 
 - (FMEditor*)editorForFile:(NSString*)file
 {
-	return [[[[self fileModuleForFileExtension:[file pathExtension]] editorClass] alloc] init];
+    return [[[[self fileModuleForFileExtension:[file pathExtension]] editorClass] alloc] init];
 }
 
 - (FMEngine*)engineForFile:(NSString*)file
 {
-	return [[[[self fileModuleForFileExtension:[file pathExtension]] engineClass] alloc] init];	
+    return [[[[self fileModuleForFileExtension:[file pathExtension]] engineClass] alloc] init];    
 }
 
 - (FMController*)controllerForFile:(NSString*)file
 {
-	return [[[[self fileModuleForFileExtension:[file pathExtension]] controllerClass] alloc] init];	
+    return [[[[self fileModuleForFileExtension:[file pathExtension]] controllerClass] alloc] init];    
 }
 
 - (FileController*)defaultControllerForFile:(NSString*)file
 {
-	FileController *fileController = [[FMManager shared] controllerForFile:file];		
-	if(fileController == NULL)
-		fileController = [FileController controller];
-	return fileController;
+    FileController *fileController = [[FMManager shared] controllerForFile:file];        
+    if(fileController == NULL)
+        fileController = [FileController controller];
+    return fileController;
 }
 
 @end

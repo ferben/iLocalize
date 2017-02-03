@@ -147,55 +147,55 @@ typedef NS_ENUM(NSInteger, NewGlossaryOptions)
 - (BOOL)glossaryCreateNewWithLanguage:(NSString*)language error:(NSError **)error
 {
     GlossaryCreator *creator = [GlossaryCreator creator];
-	[creator setProvider:self.projectProvider];
-	[creator setSource:SOURCE_LANGUAGE];
-	[creator setSourceLanguage:[[self.projectProvider projectController] baseLanguage]];
-	[creator setTargetLanguage:language];
-	[creator setIncludeTranslatedStrings:YES];
-	[creator setIncludeNonTranslatedStrings:NO];
-	[creator setExcludeLockedStrings:NO];
-	[creator setRemoveDuplicateEntries:YES];
-	
-	Glossary *g = [creator create];
+    [creator setProvider:self.projectProvider];
+    [creator setSource:SOURCE_LANGUAGE];
+    [creator setSourceLanguage:[[self.projectProvider projectController] baseLanguage]];
+    [creator setTargetLanguage:language];
+    [creator setIncludeTranslatedStrings:YES];
+    [creator setIncludeNonTranslatedStrings:NO];
+    [creator setExcludeLockedStrings:NO];
+    [creator setRemoveDuplicateEntries:YES];
     
-	g.targetFile = g.file = [self glossaryPathWithTargetLanguage:language];
-	g.format = TMX;
+    Glossary *g = [creator create];
     
-	if ([g.file isPathExisting])
-		[g.file movePathToTrash];
-	else
-		[[FileTool shared] preparePath:g.file atomic:YES skipLastComponent:YES];
-	
-	return [g writeToFile:error];
+    g.targetFile = g.file = [self glossaryPathWithTargetLanguage:language];
+    g.format = TMX;
+    
+    if ([g.file isPathExisting])
+        [g.file movePathToTrash];
+    else
+        [[FileTool shared] preparePath:g.file atomic:YES skipLastComponent:YES];
+    
+    return [g writeToFile:error];
 }
 
 - (NSString *)glossaryNameForTargetLanguage:(NSString *)targetLanguage
 {
-	NSString *appName = [self.projectProvider applicationExecutableName];
-	NSString *sourceLanguage = [[self.projectProvider projectController] baseLanguage];
-	
-	NSMutableString *name = [NSMutableString string];
+    NSString *appName = [self.projectProvider applicationExecutableName];
+    NSString *sourceLanguage = [[self.projectProvider projectController] baseLanguage];
     
-	[name appendString:appName];
+    NSMutableString *name = [NSMutableString string];
     
-	if ([sourceLanguage length] > 0)
+    [name appendString:appName];
+    
+    if ([sourceLanguage length] > 0)
     {
-		[name appendString:@" "];
-		[name appendString:sourceLanguage];
-	}
+        [name appendString:@" "];
+        [name appendString:sourceLanguage];
+    }
     
-	if ([targetLanguage length] > 0)
+    if ([targetLanguage length] > 0)
     {
-		[name appendString:@"-"];
-		[name appendString:targetLanguage];
-	}
+        [name appendString:@"-"];
+        [name appendString:targetLanguage];
+    }
     
     return name;
 }
 
 - (NSString *)glossaryPathWithTargetLanguage:(NSString *)targetLanguage
 {
-	return [[[self localPath] stringByAppendingPathComponent:[self glossaryNameForTargetLanguage:targetLanguage]] stringByAppendingPathExtension:@"tmx"];
+    return [[[self localPath] stringByAppendingPathComponent:[self glossaryNameForTargetLanguage:targetLanguage]] stringByAppendingPathExtension:@"tmx"];
 }
 
 - (NSString *)localPath

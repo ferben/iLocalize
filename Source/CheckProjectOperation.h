@@ -10,8 +10,8 @@
 #import "CheckProjectDelegate.h"
 
 @interface CheckProjectOperation : AbstractOperation {
-	id<CheckProjectDelegate> mDelegate;
-	BOOL mDisplayAlertIfSuccess;
+    id<CheckProjectDelegate> mDelegate;
+    BOOL mDisplayAlertIfSuccess;
 }
 - (void)setDelegate:(id<CheckProjectDelegate>)delegate;
 - (void)checkSelectedFile;

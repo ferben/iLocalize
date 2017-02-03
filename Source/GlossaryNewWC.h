@@ -9,7 +9,7 @@
 #import "ProjectProvider.h"
 
 @interface GlossaryNewWC : NSWindowController {
-	IBOutlet NSPopUpButton	*mPathPopup;	
+    IBOutlet NSPopUpButton    *mPathPopup;    
 }
 
 @property (weak) id<ProjectProvider> projectProvider;

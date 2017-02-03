@@ -11,13 +11,13 @@
 @class WindowLayerWC;
 
 @interface DragAndDropOperation : AbstractOperation {
-	WindowLayerWC					*mWindowLayerWC;
-	NSMutableDictionary				*mParameters;
-	int								mOperation;
-	BOOL							mOptionKeyMask;
-	
-	NSMutableArray					*mFilterApplicationPathsCache;
-	NSMutableArray					*mFilterResourcePathsCache;
+    WindowLayerWC                    *mWindowLayerWC;
+    NSMutableDictionary                *mParameters;
+    int                                mOperation;
+    BOOL                            mOptionKeyMask;
+    
+    NSMutableArray                    *mFilterApplicationPathsCache;
+    NSMutableArray                    *mFilterResourcePathsCache;
 }
 
 - (void)modifierFlagsChanged:(NSEvent*)event;

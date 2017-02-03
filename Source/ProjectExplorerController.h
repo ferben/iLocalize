@@ -16,10 +16,10 @@
 
 @interface ProjectExplorerController : NSViewController <ExplorerDelegate> {
 @public
-	IBOutlet NSTreeController		*mSideBarController;
-	IBOutlet NSOutlineView			*mSideBarOutlineView;
-	
-	ExplorerFilter					*_lastSelectedFilter;
+    IBOutlet NSTreeController        *mSideBarController;
+    IBOutlet NSOutlineView            *mSideBarOutlineView;
+    
+    ExplorerFilter                    *_lastSelectedFilter;
 }
 
 @property (assign) ProjectWC *projectWC;

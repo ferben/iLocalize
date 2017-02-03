@@ -9,22 +9,22 @@
 #include "ProjectProvider.h"
 
 @interface ImportFilesConflict : NSWindowController {
-	IBOutlet NSTextField	*mProjectFileNameField;
-	IBOutlet NSTextField	*mProjectFilePathField;
-	IBOutlet NSTextField	*mProjectFileCreationDateField;
-	IBOutlet NSTextField	*mProjectFileModificationDateField;
+    IBOutlet NSTextField    *mProjectFileNameField;
+    IBOutlet NSTextField    *mProjectFilePathField;
+    IBOutlet NSTextField    *mProjectFileCreationDateField;
+    IBOutlet NSTextField    *mProjectFileModificationDateField;
 
-	IBOutlet NSTextField	*mImportedFileNameField;
-	IBOutlet NSTextField	*mImportedFilePathField;
-	IBOutlet NSTextField	*mImportedFileCreationDateField;
-	IBOutlet NSTextField	*mImportedFileModificationDateField;
-	
-	IBOutlet NSButton		*mUseProjectFileButton;
-	IBOutlet NSButton		*mUseImportedFileButton;
-	IBOutlet NSButton		*mApplyToAllButton;
-	
-	NSString				*mProjectFile;
-	NSString				*mImportedFile;
+    IBOutlet NSTextField    *mImportedFileNameField;
+    IBOutlet NSTextField    *mImportedFilePathField;
+    IBOutlet NSTextField    *mImportedFileCreationDateField;
+    IBOutlet NSTextField    *mImportedFileModificationDateField;
+    
+    IBOutlet NSButton        *mUseProjectFileButton;
+    IBOutlet NSButton        *mUseImportedFileButton;
+    IBOutlet NSButton        *mApplyToAllButton;
+    
+    NSString                *mProjectFile;
+    NSString                *mImportedFile;
     
     id <ProjectProvider>    mProjectProvider;
 }

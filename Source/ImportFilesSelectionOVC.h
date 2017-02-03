@@ -11,8 +11,8 @@
 @class ImportFilesSettings;
 
 @interface ImportFilesSelectionOVC : OperationViewController {
-	IBOutlet NSArrayController *filesController;
-	ImportFilesSettings *settings;
+    IBOutlet NSArrayController *filesController;
+    ImportFilesSettings *settings;
 }
 
 @property (strong) ImportFilesSettings *settings;

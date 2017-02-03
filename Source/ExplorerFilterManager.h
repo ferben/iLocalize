@@ -11,10 +11,10 @@
 @class ProjectDocument;
 
 @interface ExplorerFilterManager : NSObject {
-	NSMutableArray		*mGlobalFilters;
-	NSMutableDictionary	*mLocalFilters;
-	
-	NSMutableArray		*mExplorers;
+    NSMutableArray        *mGlobalFilters;
+    NSMutableDictionary    *mLocalFilters;
+    
+    NSMutableArray        *mExplorers;
 }
 
 + (id)shared;

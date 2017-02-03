@@ -18,12 +18,12 @@
 
 @interface PresetsManager : NSObject<NSTextFieldDelegate>
 {
-	NSTextField *nameField;
-	NSTextField *infoAlertLabel;
-	NSButton *okButton;
-	NSString *originalName;
-	BOOL alertIsRenaming;
-	NSInteger currentPresetTag;
+    NSTextField *nameField;
+    NSTextField *infoAlertLabel;
+    NSButton *okButton;
+    NSString *originalName;
+    BOOL alertIsRenaming;
+    NSInteger currentPresetTag;
 }
 
 @property (assign) NSWindow *parentWindow;

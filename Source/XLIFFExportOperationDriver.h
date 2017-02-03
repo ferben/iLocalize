@@ -11,7 +11,7 @@
 @class XLIFFExportSettings;
 
 @interface XLIFFExportOperationDriver : OperationDriver {
-	XLIFFExportSettings *settings;
+    XLIFFExportSettings *settings;
 }
 
 @end

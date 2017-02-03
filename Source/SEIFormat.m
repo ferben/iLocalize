@@ -20,21 +20,21 @@
 
 - (XMLImporter*)createImporter
 {
-	Class c = NSClassFromString(self.importerClassName);
-	XMLImporter *importer = [[c alloc] init];
-	importer.format = format;
-	return importer;
+    Class c = NSClassFromString(self.importerClassName);
+    XMLImporter *importer = [[c alloc] init];
+    importer.format = format;
+    return importer;
 }
 
 - (XMLExporter*)createExporter
 {
-	Class c = NSClassFromString(self.exporterClassName);
-	return [[c alloc] init];
+    Class c = NSClassFromString(self.exporterClassName);
+    return [[c alloc] init];
 }
 
 - (BOOL)writable
 {
-	return self.writableExtension != nil;
+    return self.writableExtension != nil;
 }
 
 @end

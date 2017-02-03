@@ -21,15 +21,15 @@
  */
 @interface Operation : NSObject
 {
-	BOOL cancel;
-	
-	// Array of errors that happened with this operation
-	NSMutableArray *errors;
-	NSMutableArray *warnings;
+    BOOL cancel;
+    
+    // Array of errors that happened with this operation
+    NSMutableArray *errors;
+    NSMutableArray *warnings;
     NSMutableArray *alerts;
-		
-	// Keeping track of the progress
-	NSUInteger progressMax;
+        
+    // Keeping track of the progress
+    NSUInteger progressMax;
     NSUInteger progress;
 }
 

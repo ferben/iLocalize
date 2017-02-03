@@ -7,9 +7,9 @@
 //
 
 @interface NibEngineResult : NSObject {
-	BOOL success;
-	NSString *_error;
-	NSString *_output;
+    BOOL success;
+    NSString *_error;
+    NSString *_output;
 }
 @property BOOL success;
 @property (strong) NSString *error;

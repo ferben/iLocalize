@@ -14,16 +14,16 @@
  with the in-memory content of that folder.
  */
 @interface GlossaryFolderDiff : NSObject {
-	// The disk representation of the glossaries
-	NSMutableDictionary *diskGlossaries;
+    // The disk representation of the glossaries
+    NSMutableDictionary *diskGlossaries;
 
-	// The various files
-	NSMutableArray *newFiles;
-	NSMutableArray *modifiedFiles;
-	NSMutableArray *unmodifiedFiles;
-	NSMutableArray *deletedFiles;
-	
-	NSArray *allowedExtensions;
+    // The various files
+    NSMutableArray *newFiles;
+    NSMutableArray *modifiedFiles;
+    NSMutableArray *unmodifiedFiles;
+    NSMutableArray *deletedFiles;
+    
+    NSArray *allowedExtensions;
 }
 
 @property (strong) NSArray *allowedExtensions;

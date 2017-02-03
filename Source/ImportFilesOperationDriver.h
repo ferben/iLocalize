@@ -13,9 +13,9 @@
 @class ImportLocalizedDetectConflictsOp;
 
 @interface ImportFilesOperationDriver : OperationDriver {
-	ImportFilesSettings *settings;
-	AnalyzeBundleOp *analyzeOp;
-	ImportLocalizedDetectConflictsOp *detectConflictsOp;
+    ImportFilesSettings *settings;
+    AnalyzeBundleOp *analyzeOp;
+    ImportLocalizedDetectConflictsOp *detectConflictsOp;
 }
 @property (strong) ImportFilesSettings *settings;
 @property (strong) AnalyzeBundleOp *analyzeOp;

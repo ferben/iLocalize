@@ -12,7 +12,7 @@ typedef void(^CallbackBlockWithFile)(NSString*);
 
 @interface BundleSelectorDialog : NSObject<NSOpenSavePanelDelegate> {
     NSString *defaultPath;
-	CallbackBlockWithFile callback;
+    CallbackBlockWithFile callback;
 }
 
 @property (copy) NSString *defaultPath;

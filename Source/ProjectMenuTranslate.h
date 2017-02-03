@@ -13,9 +13,9 @@
 @class GlossaryTranslator;
 
 @interface ProjectMenuTranslate : ProjectMenu {
-	GlossaryTranslateWC *wc;
-	GlossaryScope *scope;
-	GlossaryTranslator *translator;
+    GlossaryTranslateWC *wc;
+    GlossaryScope *scope;
+    GlossaryTranslator *translator;
 }
 
 - (IBAction)translateUsingGlossaries:(id)sender;

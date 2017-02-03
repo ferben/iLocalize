@@ -16,12 +16,12 @@
 @class ScanBundleOVC;
 
 @interface NewProjectOperationDriver : OperationDriver {
-	NewProjectSettings *settings;
-	NewProjectGeneralOVC *generalOVC;
-	NewProjectLanguagesOVC *languagesOVC;
-	ScanBundleOp *filterBundleOp;
-	ScanBundleOVC *filterBundleOVC;
-	AnalyzeBundleOp *analyzeOp;
+    NewProjectSettings *settings;
+    NewProjectGeneralOVC *generalOVC;
+    NewProjectLanguagesOVC *languagesOVC;
+    ScanBundleOp *filterBundleOp;
+    ScanBundleOVC *filterBundleOVC;
+    AnalyzeBundleOp *analyzeOp;
 }
 @property (strong) NewProjectSettings *settings;
 @property (strong) NewProjectGeneralOVC *generalOVC;

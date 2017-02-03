@@ -15,10 +15,10 @@
 #import "AZPathNode.h"
 #import "ProjectPrefs.h"
 
-#define LANGUAGE_NAME		@"name"
-#define LANGUAGE_DISPLAY	@"display"
-#define LANGUAGE_PROGRESS	@"progress"
-#define LANGUAGE_WARNING	@"warning"
+#define LANGUAGE_NAME        @"name"
+#define LANGUAGE_DISPLAY    @"display"
+#define LANGUAGE_PROGRESS    @"progress"
+#define LANGUAGE_WARNING    @"warning"
 
 @implementation ExportProjectOVC
 
@@ -28,91 +28,91 @@
 
 - (id)init
 {
-	if ((self = [super initWithNibName:@"ExportProject"]))
+    if ((self = [super initWithNibName:@"ExportProject"]))
     {
-		pathNodeSelectionView = [[AZPathNodeSelectionView alloc] init];
-		languagesSelectionView = [[AZListSelectionView alloc] init];
-		presetsManager = [[PresetsManager alloc] init];
-		presetsManager.delegate = self;
-	}
+        pathNodeSelectionView = [[AZPathNodeSelectionView alloc] init];
+        languagesSelectionView = [[AZListSelectionView alloc] init];
+        presetsManager = [[PresetsManager alloc] init];
+        presetsManager.delegate = self;
+    }
     
-	return self;
+    return self;
 }
 
 
 - (void)updateTargetFolder
 {
     // If the path is not defined or does not exist, use the current directory
-	if (!self.settings.destFolder || ![self.settings.destFolder isPathExisting])
+    if (!self.settings.destFolder || ![self.settings.destFolder isPathExisting])
     {
-		self.settings.destFolder = NSHomeDirectory();
-	}
+        self.settings.destFolder = NSHomeDirectory();
+    }
     
-	[targetPathControl setURL:[NSURL fileURLWithPath:self.settings.destFolder]];
+    [targetPathControl setURL:[NSURL fileURLWithPath:self.settings.destFolder]];
     [self stateChanged];
 }
 
 - (void)updatePaths
 {
-	self.rootPath = [ProjectStructureViewController pathTreeForProjectProvider:[self projectProvider]];
-	pathNodeSelectionView.outlineView = outlineView;
-	pathNodeSelectionView.rootPath = self.rootPath;
-	[pathNodeSelectionView refresh];	
+    self.rootPath = [ProjectStructureViewController pathTreeForProjectProvider:[self projectProvider]];
+    pathNodeSelectionView.outlineView = outlineView;
+    pathNodeSelectionView.rootPath = self.rootPath;
+    [pathNodeSelectionView refresh];    
 
-	if (self.settings.paths == nil)
+    if (self.settings.paths == nil)
     {
-		// if paths is nil, it means everything needs to be exported
-		[pathNodeSelectionView selectAll];
-	}
+        // if paths is nil, it means everything needs to be exported
+        [pathNodeSelectionView selectAll];
+    }
     else
     {
-		[pathNodeSelectionView selectRelativePaths:self.settings.paths];
-	}
+        [pathNodeSelectionView selectRelativePaths:self.settings.paths];
+    }
 }
 
 - (void)updateLanguages
 {
-	NSMutableArray *languages = [NSMutableArray array];
-	
+    NSMutableArray *languages = [NSMutableArray array];
+    
     for (LanguageController *languageController in [[[self projectProvider] projectController] languageControllers])
     {
-		NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-		dic[LANGUAGE_NAME] = [languageController language];
-		dic[LANGUAGE_DISPLAY] = [languageController displayLanguage];
-		dic[[AZListSelectionView selectedKey]] = @([self.settings.languages containsObject:[languageController language]]);			
-		
-		if (![languageController isBaseLanguage])
+        NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+        dic[LANGUAGE_NAME] = [languageController language];
+        dic[LANGUAGE_DISPLAY] = [languageController displayLanguage];
+        dic[[AZListSelectionView selectedKey]] = @([self.settings.languages containsObject:[languageController language]]);            
+        
+        if (![languageController isBaseLanguage])
         {
-			NSString *s = [languageController percentCompletedString];
-			dic[LANGUAGE_PROGRESS] = [s length] == 0 ? NSLocalizedString(@"Done", nil) : s;			
-		}
-		
-		NSImage *image = [languageController allWarningsImage];
-		
+            NSString *s = [languageController percentCompletedString];
+            dic[LANGUAGE_PROGRESS] = [s length] == 0 ? NSLocalizedString(@"Done", nil) : s;            
+        }
+        
+        NSImage *image = [languageController allWarningsImage];
+        
         if (image)
         {
-			dic[LANGUAGE_WARNING] = image;						
-		}
-		
-		[languages addObject:dic];
-	}
+            dic[LANGUAGE_WARNING] = image;                        
+        }
+        
+        [languages addObject:dic];
+    }
     
-	languagesSelectionView.outlineView = languagesOutlineView;
-	languagesSelectionView.elements = languages;
-	[languagesSelectionView reloadData];
+    languagesSelectionView.outlineView = languagesOutlineView;
+    languagesSelectionView.elements = languages;
+    [languagesSelectionView reloadData];
 }
 
 - (void)applySettings
 {
-	[self updateTargetFolder];
-	[self updatePaths];
-	[self updateLanguages];
+    [self updateTargetFolder];
+    [self updatePaths];
+    [self updateLanguages];
 }
 
 - (void)willShow
-{		
-	presetsManager.parentWindow = [self window];
-	presetsManager.popUpButton = presetPopUpButton;
+{        
+    presetsManager.parentWindow = [self window];
+    presetsManager.popUpButton = presetPopUpButton;
     
     if (!self.bypass)
     {
@@ -123,8 +123,8 @@
         // selected preset has carried so far.
         [presetsManager buildPreset];
     }
-	
-	[self applySettings];
+    
+    [self applySettings];
 }
 
 // Returns an array of selected path by the user.
@@ -132,49 +132,49 @@
 {
     if ([pathNodeSelectionView isAllSelected])
     {
-		return nil; // everything
-	}
+        return nil; // everything
+    }
     else
     {
         return [pathNodeSelectionView selectedRelativePaths];
-	}
+    }
 }
 
 - (NSArray *)selectedLanguages
 {
-	NSMutableArray *array = [NSMutableArray array];
+    NSMutableArray *array = [NSMutableArray array];
     
-	for (NSDictionary *dic in [languagesSelectionView selectedElements])
+    for (NSDictionary *dic in [languagesSelectionView selectedElements])
     {
-		if ([dic[[AZListSelectionView selectedKey]] boolValue])
+        if ([dic[[AZListSelectionView selectedKey]] boolValue])
         {
-			[array addObject:dic[LANGUAGE_NAME]];					
-		}
-	}
+            [array addObject:dic[LANGUAGE_NAME]];                    
+        }
+    }
     
-	return array;
+    return array;
 }
 
 - (void)saveSettings
 {
-	self.settings.paths = [self selectedPaths];
-	self.settings.languages = [self selectedLanguages];	
-	self.settings.destFolder = [[targetPathControl URL] path];
+    self.settings.paths = [self selectedPaths];
+    self.settings.languages = [self selectedLanguages];    
+    self.settings.destFolder = [[targetPathControl URL] path];
 }
 
 - (NSString *)nextButtonTitle
 {
-	return NSLocalizedString(@"Export", nil);
+    return NSLocalizedString(@"Export", nil);
 }
 
 - (void)willCancel
 {
-	[self saveSettings];
+    [self saveSettings];
 }
 
 - (void)willContinue
 {
-	[self saveSettings];
+    [self saveSettings];
 }
 
 - (BOOL)canContinue
@@ -184,9 +184,9 @@
 
 - (void)validateContinue:(ValidateContinueCallback)callback
 {
-	[self saveSettings];
+    [self saveSettings];
 
-	if ([self.settings.compressedTargetBundle isPathExisting])
+    if ([self.settings.compressedTargetBundle isPathExisting])
     {
         // compose alert
         NSAlert *alert = [NSAlert new];
@@ -214,77 +214,77 @@
                     callback(YES);
             }
         }];
-	}
+    }
     else
     {
-		callback(YES);	
-	}	
+        callback(YES);    
+    }    
 }
 
 #pragma mark Actions
 
 - (IBAction)options:(id)sender
 {
-	[self saveSettings];
+    [self saveSettings];
 
-	ExportProjectOptionsOVC *ovc = [ExportProjectOptionsOVC createInstance];
-	ovc.projectProvider = self.projectProvider;
-	ovc.settings = self.settings;
+    ExportProjectOptionsOVC *ovc = [ExportProjectOptionsOVC createInstance];
+    ovc.projectProvider = self.projectProvider;
+    ovc.settings = self.settings;
     
-	[self runModalOperationViewController:ovc];
+    [self runModalOperationViewController:ovc];
 }
 
 - (IBAction)chooseTargetDirectory:(id)sender
 {
-	NSOpenPanel *panel = [NSOpenPanel openPanel];
+    NSOpenPanel *panel = [NSOpenPanel openPanel];
     
-	[panel setCanChooseDirectories:YES];
-	[panel setCanChooseFiles:NO];
-	[panel setCanCreateDirectories:YES];
+    [panel setCanChooseDirectories:YES];
+    [panel setCanChooseFiles:NO];
+    [panel setCanCreateDirectories:YES];
     [panel setDirectoryURL:[NSURL fileURLWithPath:self.settings.destFolder]];
-	[panel setTitle:NSLocalizedString(@"Choose Destination Folder", nil)];
-	[panel setPrompt:NSLocalizedString(@"Choose", nil)];
+    [panel setTitle:NSLocalizedString(@"Choose Destination Folder", nil)];
+    [panel setPrompt:NSLocalizedString(@"Choose", nil)];
 
     if ([panel runModal] == NSFileHandlingPanelOKButton)
     {
-		self.settings.destFolder = [[panel URL] path];		
-		[self updateTargetFolder];
-	}
+        self.settings.destFolder = [[panel URL] path];        
+        [self updateTargetFolder];
+    }
 }
 
 #pragma mark Presets Delegate
 
 - (NSArray *)presets
 {
-	return [[self.projectProvider projectPrefs] exportSettingsPresets];
+    return [[self.projectProvider projectPrefs] exportSettingsPresets];
 }
 
 - (void)setPresets:(NSArray *)presets
 {
-	[[self.projectProvider projectPrefs] setExportSettingsPresets:presets];
+    [[self.projectProvider projectPrefs] setExportSettingsPresets:presets];
 }
 
 - (NSString *)presetName:(id)preset
 {
-	return preset[EXPORT_PRESET_NAME];	
+    return preset[EXPORT_PRESET_NAME];    
 }
 
 - (id)createPresetWithName:(NSString *)name
 {
-	[self saveSettings];
-	
-    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-	
-    dic[EXPORT_PRESET_NAME] = name;
-	dic[EXPORT_PRESET_SETTINGS] = [self.settings data];
+    [self saveSettings];
     
-	return dic;	
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    
+    dic[EXPORT_PRESET_NAME] = name;
+    dic[EXPORT_PRESET_SETTINGS] = [self.settings data];
+    
+    return dic;    
 }
 
 - (void)applyPreset:(id)preset
 {
-	[self.settings setData:preset[EXPORT_PRESET_SETTINGS]];
-	[self applySettings];
+    [self.settings setData:preset[EXPORT_PRESET_SETTINGS]];
+    [self applySettings];
 }
 
 @end

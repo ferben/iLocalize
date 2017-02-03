@@ -49,7 +49,7 @@
 - (void)setImage:(NSImage *)anImage {
     if (anImage != image) {
         image = anImage;
-		[image setSize:NSMakeSize(16, 16)];
+        [image setSize:NSMakeSize(16, 16)];
     }
 }
 
@@ -62,58 +62,58 @@
 
 - (void)drawWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
 {
-	// Draw the original button first, then the image.
-	
-	[super drawWithFrame:cellFrame inView:controlView];
-	
-	if (image != nil)
+    // Draw the original button first, then the image.
+    
+    [super drawWithFrame:cellFrame inView:controlView];
+    
+    if (image != nil)
     {
         NSRect imageFrame;
-		
+        
         NSSize imageSize = [image size];
         NSDivideRect(cellFrame, &imageFrame, &cellFrame, KNImageAndTextButtonCellPadding + imageSize.width, NSMinXEdge);
-		
+        
         imageFrame.origin.x += imageFrame.size.width;
         imageFrame.size = imageSize;
-				
+                
         // BOOL oldFlipped = [image isFlipped];
         // [image setFlipped:![controlView isFlipped]];
         [image drawInRect:imageFrame fraction:1];
         // [image setFlipped:oldFlipped];
-	}
+    }
 }
 
 
 -(BOOL)trackMouse:(NSEvent *)theEvent inRect:(NSRect)cellFrame ofView:(NSView *)controlView untilMouseUp:(BOOL)untilMouseUp {
 
-	// Make sure that the mouse only gets tracked if it is clicked on the check box, otherwise 
-	// the row will be checked/unchecked whenever the user clicks on any part of the cell (which is bad).
-	
-	NSPoint event_location = [theEvent locationInWindow];
-	NSPoint localPoint = [controlView convertPoint:event_location fromView:nil];
-	
-	if (localPoint.x <= cellFrame.origin.x + 16) {
-		return [super trackMouse:theEvent inRect:cellFrame ofView:controlView untilMouseUp:untilMouseUp];
-	} else {
-		return NO;
-	}
+    // Make sure that the mouse only gets tracked if it is clicked on the check box, otherwise 
+    // the row will be checked/unchecked whenever the user clicks on any part of the cell (which is bad).
+    
+    NSPoint event_location = [theEvent locationInWindow];
+    NSPoint localPoint = [controlView convertPoint:event_location fromView:nil];
+    
+    if (localPoint.x <= cellFrame.origin.x + 16) {
+        return [super trackMouse:theEvent inRect:cellFrame ofView:controlView untilMouseUp:untilMouseUp];
+    } else {
+        return NO;
+    }
 }
 
 -(NSRect)drawTitle:(NSAttributedString *)title withFrame:(NSRect)frame inView:(NSView *)controlView {
-	
-	// Adjust the rect so we don't interfere with the image's location
-	
-	if (image != nil) {
-		
-		NSRect newFrame = NSOffsetRect(frame, [[self image] size].width + KNImageAndTextButtonCellPadding, 0);
-		newFrame.size.width -= ([[self image] size].width + KNImageAndTextButtonCellPadding);
-		
-		return [super drawTitle:title withFrame:newFrame inView:controlView];
-		
-	} else {
-		return [super drawTitle:title withFrame:frame inView:controlView];
-	}
-	
+    
+    // Adjust the rect so we don't interfere with the image's location
+    
+    if (image != nil) {
+        
+        NSRect newFrame = NSOffsetRect(frame, [[self image] size].width + KNImageAndTextButtonCellPadding, 0);
+        newFrame.size.width -= ([[self image] size].width + KNImageAndTextButtonCellPadding);
+        
+        return [super drawTitle:title withFrame:newFrame inView:controlView];
+        
+    } else {
+        return [super drawTitle:title withFrame:frame inView:controlView];
+    }
+    
 }
 
 @end

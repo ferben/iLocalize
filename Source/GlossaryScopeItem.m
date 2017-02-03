@@ -18,20 +18,20 @@
 
 + (GlossaryScopeItem*)itemWithGlossary:(Glossary*)g state:(int)state icon:(NSImage*)icon
 {
-	GlossaryScopeItem *item = [[GlossaryScopeItem alloc] init];
-	item.glossary = g;
-	item.state = state;
-	item.icon = icon;
-	return item;
+    GlossaryScopeItem *item = [[GlossaryScopeItem alloc] init];
+    item.glossary = g;
+    item.state = state;
+    item.icon = icon;
+    return item;
 }
 
 + (GlossaryScopeItem*)itemWithFolder:(GlossaryFolder*)f state:(int)state icon:(NSImage*)icon
 {
-	GlossaryScopeItem *item = [[GlossaryScopeItem alloc] init];
-	item.folder = f;
-	item.state = state;
-	item.icon = icon;
-	return item;	
+    GlossaryScopeItem *item = [[GlossaryScopeItem alloc] init];
+    item.folder = f;
+    item.state = state;
+    item.icon = icon;
+    return item;    
 }
 
 @end

@@ -41,7 +41,7 @@
 
 - (NSArray*)readableExtensions
 {
-	return @[@"tmx"];
+    return @[@"tmx"];
 }
 
 - (BOOL)canImportGenericDocument:(NSURL*)url error:(NSError**)error
@@ -72,7 +72,7 @@
         NSArray *nodes = [self documentNodesForXPath:@"/tmx" error:error];
         if(nodes.count > 0) {
             return YES;
-        }	
+        }    
         
         self.document = nil;
         
@@ -94,89 +94,89 @@
 
 - (NSString*)readTuvElementLang:(NSXMLElement*)tuvElement
 {
-	NSString *lang = [[tuvElement attributeForName:@"lang"] stringValue];
-	if(!lang) {
-		lang = [[tuvElement attributeForName:@"xml:lang"] stringValue];
-	}
-	return [self normalizedLanguageFromTMXFormat:lang];
+    NSString *lang = [[tuvElement attributeForName:@"lang"] stringValue];
+    if(!lang) {
+        lang = [[tuvElement attributeForName:@"xml:lang"] stringValue];
+    }
+    return [self normalizedLanguageFromTMXFormat:lang];
 }
 
 - (BOOL)parseTuElement:(NSXMLElement*)tuElement
-{		
-	NSString *base = nil;
-	NSString *translation = nil;
-	
-	// Find the file the element belongs to
-	NSString *file = nil;
-	for(NSXMLElement *props in [tuElement elementsForName:@"prop"]) {
-		if([[[props attributeForName:@"type"] stringValue] isEqualToString:@"file"]) {
-			file = [self readElementContent:props];
-			break;
-		}
-	}
-	
-	// Parse the strings
-	for(NSXMLElement *tuvElement in [tuElement elementsForName:@"tuv"]) {
-		NSString *lang = [self readTuvElementLang:tuvElement];		
-		NSString *content = [self readElementContent:[[tuvElement elementsForName:@"seg"] firstObject]];
-		
-		if([lang isEqualToString:self.sourceLanguage]) {
-			base = content;
-		} else if([lang isEqualToString:self.targetLanguage]) {
-			translation = content;
-		} else {
-			continue;
-		}
-	}
-	
-	[self addStringWithKey:nil base:base translation:translation file:file];
-	
-	return YES;
+{        
+    NSString *base = nil;
+    NSString *translation = nil;
+    
+    // Find the file the element belongs to
+    NSString *file = nil;
+    for(NSXMLElement *props in [tuElement elementsForName:@"prop"]) {
+        if([[[props attributeForName:@"type"] stringValue] isEqualToString:@"file"]) {
+            file = [self readElementContent:props];
+            break;
+        }
+    }
+    
+    // Parse the strings
+    for(NSXMLElement *tuvElement in [tuElement elementsForName:@"tuv"]) {
+        NSString *lang = [self readTuvElementLang:tuvElement];        
+        NSString *content = [self readElementContent:[[tuvElement elementsForName:@"seg"] firstObject]];
+        
+        if([lang isEqualToString:self.sourceLanguage]) {
+            base = content;
+        } else if([lang isEqualToString:self.targetLanguage]) {
+            translation = content;
+        } else {
+            continue;
+        }
+    }
+    
+    [self addStringWithKey:nil base:base translation:translation file:file];
+    
+    return YES;
 }
 
 - (BOOL)parseSourceLanguage:(NSError**)error
 {
-	NSArray *nodes = [self documentNodesForXPath:@"/tmx/header" error:error];
-	if((!nodes || IS_ERROR(error))) {
+    NSArray *nodes = [self documentNodesForXPath:@"/tmx/header" error:error];
+    if((!nodes || IS_ERROR(error))) {
         return NO;
     }
-	
-	NSXMLElement *element = [nodes firstObject];
-	self.sourceLanguage = [self normalizedLanguageFromTMXFormat:[[element attributeForName:@"srclang"] stringValue]];
-	return self.sourceLanguage != nil;
+    
+    NSXMLElement *element = [nodes firstObject];
+    self.sourceLanguage = [self normalizedLanguageFromTMXFormat:[[element attributeForName:@"srclang"] stringValue]];
+    return self.sourceLanguage != nil;
 }
 
 - (BOOL)parseTargetLanguage:(NSError**)error
 {
-	NSArray *nodes = [self.document nodesForXPath:@"/tmx/body/tu/tuv" error:error];
-	if((!nodes || IS_ERROR(error))) return NO;
-	
-	for(NSXMLElement *node in nodes) {
-		NSString *lang = [[node attributeForName:@"lang"] stringValue];
-		if(!lang) {
-			lang = [[node attributeForName:@"xml:lang"] stringValue];			
-			if(!lang) continue;
-		}
+    NSArray *nodes = [self.document nodesForXPath:@"/tmx/body/tu/tuv" error:error];
+    if((!nodes || IS_ERROR(error))) return NO;
+    
+    for(NSXMLElement *node in nodes) {
+        NSString *lang = [[node attributeForName:@"lang"] stringValue];
+        if(!lang) {
+            lang = [[node attributeForName:@"xml:lang"] stringValue];            
+            if(!lang) continue;
+        }
         lang = [self normalizedLanguageFromTMXFormat:lang];
-		if(![lang isEqualToString:self.sourceLanguage]) {
-			self.targetLanguage = lang;
-			return YES;
-		}
-	}
-	
-	// Return yes even if the target language couldn't not be found because
-	// it is not an error: empty TMX will not exhibit a target language.
+        if(![lang isEqualToString:self.sourceLanguage]) {
+            self.targetLanguage = lang;
+            return YES;
+        }
+    }
+    
+    // Return yes even if the target language couldn't not be found because
+    // it is not an error: empty TMX will not exhibit a target language.
     // Note: in 4.1 we introduce a custom property element that will take care of that:
     
     NSArray *props = [self.document nodesForXPath:@"/tmx/header/prop" error:error];
-	if((!props || IS_ERROR(error))) return YES;
-	
-	NSXMLElement *element = [props firstObject];
-	if([[[element attributeForName:@"type"] stringValue] isEqualToString:@"x-target"]) {
+    if((!props || IS_ERROR(error))) return YES;
+    
+    NSXMLElement *element = [props firstObject];
+    if([[[element attributeForName:@"type"] stringValue] isEqualToString:@"x-target"]) {
         self.targetLanguage = [self normalizedLanguageFromTMXFormat:[self readElementContent:element]];
     }
 
-	return YES;
+    return YES;
 }
 
 - (BOOL)parseDocument:(NSError**)error

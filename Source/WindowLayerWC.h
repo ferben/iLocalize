@@ -9,9 +9,9 @@
 @class WindowLayerView;
 
 @interface WindowLayerWC : NSWindowController {
-	IBOutlet WindowLayerView	*mView;
-	NSWindow					*mParentWindow;
-	id							mDelegate;
+    IBOutlet WindowLayerView    *mView;
+    NSWindow                    *mParentWindow;
+    id                            mDelegate;
 }
 - (void)setParentWindow:(NSWindow*)window;
 - (void)setDelegate:(id)delegate;

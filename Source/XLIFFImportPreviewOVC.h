@@ -16,10 +16,10 @@
  can deselect the files he doesn't want to be updated.
  */
 @interface XLIFFImportPreviewOVC : OperationViewController<NSOutlineViewDelegate> {
-	IBOutlet NSOutlineView *outlineView;
-	AZListSelectionView *listSelectionView;
+    IBOutlet NSOutlineView *outlineView;
+    AZListSelectionView *listSelectionView;
 
-	XLIFFImportSettings *settings;
+    XLIFFImportSettings *settings;
 }
 @property (strong) XLIFFImportSettings *settings;
 

@@ -9,7 +9,7 @@
 #import "AbstractOperation.h"
 
 @interface OpenAndRevealOperation : AbstractOperation {
-	NSArray				*mFileControllers;
+    NSArray                *mFileControllers;
 }
 - (void)openFileControllers:(NSArray*)fileControllers;
 - (void)revealFileControllers:(NSArray*)fileControllers;

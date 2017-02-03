@@ -8,13 +8,13 @@
 
 @interface ConsoleItem : NSObject <NSCoding>
 {
-	NSDate          *mDate;
-	NSString        *mTitle;
-	NSString        *mDescription;
-	NSInteger        mType;
-	NSString        *mClassName;
-	
-	NSMutableArray  *mItems;
+    NSDate          *mDate;
+    NSString        *mTitle;
+    NSString        *mDescription;
+    NSInteger        mType;
+    NSString        *mClassName;
+    
+    NSMutableArray  *mItems;
 }
 
 + (ConsoleItem *)itemWithTitle:(NSString *)title description:(NSString *)description class:(Class)class type:(long)bit;

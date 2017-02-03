@@ -18,66 +18,66 @@
 
 + (IGroupEngine*)engine
 {
-	return [[self alloc] init];
+    return [[self alloc] init];
 }
 
 - (id) init
 {
-	self = [super init];
-	if (self != nil) {
-		results = [[NSMutableDictionary alloc] init];
-	}
-	return self;
+    self = [super init];
+    if (self != nil) {
+        results = [[NSMutableDictionary alloc] init];
+    }
+    return self;
 }
 
 
 - (void)addResult:(id)result forState:(IGroupEngineState*)state
 {
-	@synchronized(results) {
-		NSMutableArray *array = results[state];
-		if(array == nil) {
-			array = [NSMutableArray array];
-			results[state] = array;
-		}
-		[array addObject:result];
-	}
+    @synchronized(results) {
+        NSMutableArray *array = results[state];
+        if(array == nil) {
+            array = [NSMutableArray array];
+            results[state] = array;
+        }
+        [array addObject:result];
+    }
 }
 
 - (NSArray*)drainResultsForState:(IGroupEngineState*)state
 {
-	NSArray *copiedResults = nil;
-	@synchronized(results) {
-		NSMutableArray *array = results[state];
-		if(array) {
-			copiedResults = [NSArray arrayWithArray:array];
-			[array removeAllObjects];			
-		}
-	}
-	return copiedResults;
+    NSArray *copiedResults = nil;
+    @synchronized(results) {
+        NSMutableArray *array = results[state];
+        if(array) {
+            copiedResults = [NSArray arrayWithArray:array];
+            [array removeAllObjects];            
+        }
+    }
+    return copiedResults;
 }
 
 - (void)runForState:(IGroupEngineState*)state
 {
-	// Remove all outdated states
-	@synchronized(results) {
-		for(IGroupEngineState *state in [NSArray arrayWithArray:[results allKeys]]) {
-			if(state.outdated) {
-				[results removeObjectForKey:state];
-			}
-		}		
-	}
-	
-	// Run for the new state
-	[self _runForState:state];
-	
-	// Reset the state
-	state.languageChanged = NO;
-	state.selectedStringChanged = NO;
+    // Remove all outdated states
+    @synchronized(results) {
+        for(IGroupEngineState *state in [NSArray arrayWithArray:[results allKeys]]) {
+            if(state.outdated) {
+                [results removeObjectForKey:state];
+            }
+        }        
+    }
+    
+    // Run for the new state
+    [self _runForState:state];
+    
+    // Reset the state
+    state.languageChanged = NO;
+    state.selectedStringChanged = NO;
 }
 
 - (void)_runForState:(IGroupEngineState*)state
 {
-	[NSException raise:@"Must be implemented by subclass" format:@"%@", NSStringFromSelector(_cmd)];
+    [NSException raise:@"Must be implemented by subclass" format:@"%@", NSStringFromSelector(_cmd)];
 }
 
 @end

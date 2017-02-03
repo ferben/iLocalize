@@ -19,7 +19,7 @@
 
 - (NSString*)description
 {
-	return [NSString stringWithFormat:@"%@ : [%@] %@ = %@", [super description], self.key, self.source, self.translation];
+    return [NSString stringWithFormat:@"%@ : [%@] %@ = %@", [super description], self.key, self.source, self.translation];
 }
 
 @end

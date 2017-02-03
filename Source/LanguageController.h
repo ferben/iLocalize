@@ -15,23 +15,23 @@
 
 @interface LanguageController : AbstractController
 {
-	LanguageModel		*mBaseLanguageModel;
-	LanguageModel		*mLanguageModel;
-	
-	NSMutableArray		*mFileControllers;
+    LanguageModel        *mBaseLanguageModel;
+    LanguageModel        *mLanguageModel;
+    
+    NSMutableArray        *mFileControllers;
 
-	// volatile
-	NSMutableDictionary	*mPath2FC;
-	
-	// Statistics (not saved)
-	NSUInteger           mNumberOfFilteredFileControllers;
-	NSUInteger           mNumberOfFoundFileControllers;
+    // volatile
+    NSMutableDictionary    *mPath2FC;
+    
+    // Statistics (not saved)
+    NSUInteger           mNumberOfFilteredFileControllers;
+    NSUInteger           mNumberOfFoundFileControllers;
     NSUInteger           mTotalNumberOfStrings;
     NSUInteger           mNumberOfTranslatedStrings;
     NSUInteger           mNumberOfUntranslatedStrings;
-	NSUInteger           mNumberOfToCheckStrings;
-	float                mPercentCompleted;
-	BOOL                 mFilterShowLocalFiles;
+    NSUInteger           mNumberOfToCheckStrings;
+    float                mPercentCompleted;
+    BOOL                 mFilterShowLocalFiles;
 }
 
 - (void)setBaseLanguageModel:(LanguageModel *)model;

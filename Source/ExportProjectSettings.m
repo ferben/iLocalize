@@ -31,11 +31,11 @@
 
 - (id) init
 {
-	self = [super init];
-	if (self != nil) {
-		self.emailProgram = @"Mail";
-	}
-	return self;
+    self = [super init];
+    if (self != nil) {
+        self.emailProgram = @"Mail";
+    }
+    return self;
 }
 
 /**
@@ -44,36 +44,36 @@
  */
 - (NSString*)exportLocalizationSuffix
 {
-	NSMutableString *suffix = [NSMutableString string];
-	for(NSString *language in self.languages) {
-		if([suffix length] > 0)
-			[suffix appendString:@" "];
-		[suffix appendString:language];
-	}
-	return suffix;
+    NSMutableString *suffix = [NSMutableString string];
+    for(NSString *language in self.languages) {
+        if([suffix length] > 0)
+            [suffix appendString:@" "];
+        [suffix appendString:language];
+    }
+    return suffix;
 }
 
 - (NSString*)targetName
 {
-	// Example: ilocalize
-	NSString *targetName = [self.provider applicationExecutableName]; 
-	
-	// Example: app
-	NSString *targetExtension = [[self.provider sourceApplicationPath] pathExtension];
-	
-	// Build the name using the user settings
-	NSMutableString *name = [NSMutableString stringWithString:targetName];
-	if(self.nameIncludesBuildNumber) {
-		NSString *version = [self.provider projectAppVersionString];
-		if(![version isEqualToString:@"n/a"]) {
-			[name appendFormat:@" %@", version];
-		}
-	}
-	if(self.nameIncludesLanguages) {
-		NSString *nameLanguages = [self exportLocalizationSuffix];
-		[name appendFormat:@" (%@)", nameLanguages];		
-	}
-	
+    // Example: ilocalize
+    NSString *targetName = [self.provider applicationExecutableName]; 
+    
+    // Example: app
+    NSString *targetExtension = [[self.provider sourceApplicationPath] pathExtension];
+    
+    // Build the name using the user settings
+    NSMutableString *name = [NSMutableString stringWithString:targetName];
+    if(self.nameIncludesBuildNumber) {
+        NSString *version = [self.provider projectAppVersionString];
+        if(![version isEqualToString:@"n/a"]) {
+            [name appendFormat:@" %@", version];
+        }
+    }
+    if(self.nameIncludesLanguages) {
+        NSString *nameLanguages = [self exportLocalizationSuffix];
+        [name appendFormat:@" (%@)", nameLanguages];        
+    }
+    
     if([targetExtension length] > 0) {
         if(self.exportAsFolder) {
             [name appendFormat:@"_%@", targetExtension];
@@ -81,30 +81,30 @@
             [name appendFormat:@".%@", targetExtension];
         }        
     }
-	
-//	if(self.exportAsFolder) {
-//		// Replaces all the "." in the name by "_" to avoid the Finder to think it is a package.
-//		[name replaceCharactersInRange:NSMakeRange(0, name.length)
-//							withString:[name stringByReplacingOccurrencesOfRegex:@"\\." withString:@"_"]];
-//	}
+    
+//    if(self.exportAsFolder) {
+//        // Replaces all the "." in the name by "_" to avoid the Finder to think it is a package.
+//        [name replaceCharactersInRange:NSMakeRange(0, name.length)
+//                            withString:[name stringByReplacingOccurrencesOfRegex:@"\\." withString:@"_"]];
+//    }
 
-	return name;
+    return name;
 }
 
 - (NSString*)targetBundle
-{	
-	return [self.destFolder stringByAppendingPathComponent:[self targetName]];	
+{    
+    return [self.destFolder stringByAppendingPathComponent:[self targetName]];    
 }
 
 - (NSString*)compressedTargetBundle
 {
-	NSString *compressedTargetBundle;
-	if(self.compress) {
-		compressedTargetBundle = [[[self targetBundle] stringByDeletingPathExtension] stringByAppendingPathExtension:@"zip"];
-	} else {
-		compressedTargetBundle = [self targetBundle];
-	}
-	return compressedTargetBundle;	
+    NSString *compressedTargetBundle;
+    if(self.compress) {
+        compressedTargetBundle = [[[self targetBundle] stringByDeletingPathExtension] stringByAppendingPathExtension:@"zip"];
+    } else {
+        compressedTargetBundle = [self targetBundle];
+    }
+    return compressedTargetBundle;    
 }
 
 - (NSString*)emailSubject {
@@ -113,48 +113,48 @@
 
 + (NSSet*)keyPathsForValuesAffectingTargetName
 {
-	return [NSSet setWithObjects:@"nameIncludesBuildNumber", @"nameIncludesLanguages", @"exportAsFolder", nil ];
+    return [NSSet setWithObjects:@"nameIncludesBuildNumber", @"nameIncludesLanguages", @"exportAsFolder", nil ];
 }
 
 // used for persistence
 - (void)setData:(NSDictionary*)data
 {
-	if(data == nil) return;
-	
-	self.paths = data[@"paths"];
-	self.languages = data[@"languages"];
-	self.exportLanguageFoldersOnly = [data booleanForKey:@"exportLanguageFoldersOnly"];
-	self.exportAsFolder = [data booleanForKey:@"exportAsFolder"];
-	self.compactNib = [data booleanForKey:@"compactNib"];
-	self.upgradeNib = [data booleanForKey:@"upgradeNib"];
-	self.compress = [data booleanForKey:@"compress"];
-	self.nameIncludesBuildNumber = [data booleanForKey:@"nameIncludesBuildNumber"];
-	self.nameIncludesLanguages = [data booleanForKey:@"nameIncludesLanguages"];
-	self.email = [data booleanForKey:@"email"];
-	self.emailProgram = data[@"emailProgram"];
-	self.emailToAddress = data[@"emailToAddress"];
-	self.emailMessage = data[@"emailMessage"];
-	self.destFolder = data[@"destFolder"];
+    if(data == nil) return;
+    
+    self.paths = data[@"paths"];
+    self.languages = data[@"languages"];
+    self.exportLanguageFoldersOnly = [data booleanForKey:@"exportLanguageFoldersOnly"];
+    self.exportAsFolder = [data booleanForKey:@"exportAsFolder"];
+    self.compactNib = [data booleanForKey:@"compactNib"];
+    self.upgradeNib = [data booleanForKey:@"upgradeNib"];
+    self.compress = [data booleanForKey:@"compress"];
+    self.nameIncludesBuildNumber = [data booleanForKey:@"nameIncludesBuildNumber"];
+    self.nameIncludesLanguages = [data booleanForKey:@"nameIncludesLanguages"];
+    self.email = [data booleanForKey:@"email"];
+    self.emailProgram = data[@"emailProgram"];
+    self.emailToAddress = data[@"emailToAddress"];
+    self.emailMessage = data[@"emailMessage"];
+    self.destFolder = data[@"destFolder"];
 }
 
 - (NSDictionary*)data
 {
-	NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-	[dic setObjectOrNil:paths forKey:@"paths"];
-	[dic setObjectOrNil:languages forKey:@"languages"];
-	[dic setBoolean:exportLanguageFoldersOnly forKey:@"exportLanguageFoldersOnly"];
-	[dic setBoolean:exportAsFolder forKey:@"exportAsFolder"];
-	[dic setBoolean:compactNib forKey:@"compactNib"];
-	[dic setBoolean:upgradeNib forKey:@"upgradeNib"];
-	[dic setBoolean:compress forKey:@"compress"];
-	[dic setBoolean:nameIncludesBuildNumber forKey:@"nameIncludesBuildNumber"];
-	[dic setBoolean:nameIncludesLanguages forKey:@"nameIncludesLanguages"];
-	[dic setBoolean:email forKey:@"email"];
-	[dic setObjectOrNil:self.emailToAddress forKey:@"emailToAddress"];
-	[dic setObjectOrNil:emailProgram forKey:@"emailProgram"];
-	[dic setObjectOrNil:emailMessage forKey:@"emailMessage"];
-	[dic setObjectOrNil:destFolder forKey:@"destFolder"];
-	return dic;
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    [dic setObjectOrNil:paths forKey:@"paths"];
+    [dic setObjectOrNil:languages forKey:@"languages"];
+    [dic setBoolean:exportLanguageFoldersOnly forKey:@"exportLanguageFoldersOnly"];
+    [dic setBoolean:exportAsFolder forKey:@"exportAsFolder"];
+    [dic setBoolean:compactNib forKey:@"compactNib"];
+    [dic setBoolean:upgradeNib forKey:@"upgradeNib"];
+    [dic setBoolean:compress forKey:@"compress"];
+    [dic setBoolean:nameIncludesBuildNumber forKey:@"nameIncludesBuildNumber"];
+    [dic setBoolean:nameIncludesLanguages forKey:@"nameIncludesLanguages"];
+    [dic setBoolean:email forKey:@"email"];
+    [dic setObjectOrNil:self.emailToAddress forKey:@"emailToAddress"];
+    [dic setObjectOrNil:emailProgram forKey:@"emailProgram"];
+    [dic setObjectOrNil:emailMessage forKey:@"emailMessage"];
+    [dic setObjectOrNil:destFolder forKey:@"destFolder"];
+    return dic;
 }
 
 @end

@@ -17,42 +17,42 @@
 
 - (BOOL)builtIn
 {
-	return YES;
+    return YES;
 }
 
 - (NSString*)name
 {
-	return NSLocalizedStringFromTable(@"Text", @"LocalizableEditors", @"File Editor Text");
+    return NSLocalizedStringFromTable(@"Text", @"LocalizableEditors", @"File Editor Text");
 }
 
 - (NSImage*)fileImage
 {
-	return [NSImage imageNamed:@"FileIconTXT"];
+    return [NSImage imageNamed:@"FileIconTXT"];
 }
 
 - (Class)editorClass
 {
-	return NSClassFromString(@"FMEditorTXT");
+    return NSClassFromString(@"FMEditorTXT");
 }
 
 - (Class)engineClass
 {
-	return [FMEngineTXT class];
+    return [FMEngineTXT class];
 }
 
 - (Class)controllerClass
 {
-	return [FMControllerTXT class];
+    return [FMControllerTXT class];
 }
 
 - (void)load
 {
-	[[self manager] registerFileModule:self forFileExtension:@"xml"];
-	[[self manager] registerFileModule:self forFileExtension:@"plist"];
-	[[self manager] registerFileModule:self forFileExtension:@"txt"];
-	[[self manager] registerFileModule:self forFileExtension:@"text"];
-	[[self manager] registerFileModule:self forFileExtension:@"css"];
-	[[self manager] registerFileModule:self forFileExtension:@"js"];
+    [[self manager] registerFileModule:self forFileExtension:@"xml"];
+    [[self manager] registerFileModule:self forFileExtension:@"plist"];
+    [[self manager] registerFileModule:self forFileExtension:@"txt"];
+    [[self manager] registerFileModule:self forFileExtension:@"text"];
+    [[self manager] registerFileModule:self forFileExtension:@"css"];
+    [[self manager] registerFileModule:self forFileExtension:@"js"];
 }
 
 @end

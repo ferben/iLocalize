@@ -8,8 +8,8 @@
 
 
 @interface SafeData : NSObject {
-	id				mData;
-	BOOL			mDirty;
+    id                mData;
+    BOOL            mDirty;
 }
 - (void)setData:(id)data;
 - (id)data;

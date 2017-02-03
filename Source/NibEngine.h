@@ -13,12 +13,12 @@
 @class NibEngineResult;
 
 @interface NibEngine : AbstractStringsEngine {
-	NSString		*mNibFile;
-	
-	NSMutableData	*mTaskData;
-	NSMutableData	*mTaskErrorData;
-	
-	Console			*mConsole;
+    NSString        *mNibFile;
+    
+    NSMutableData    *mTaskData;
+    NSMutableData    *mTaskErrorData;
+    
+    Console            *mConsole;
 }
 + (NibEngine*)engineWithConsole:(Console*)console;
 + (BOOL)ensureTool;

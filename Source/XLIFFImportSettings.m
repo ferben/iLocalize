@@ -19,18 +19,18 @@
 // used for persistence
 - (void)setData:(NSDictionary*)data
 {
-	if(data == nil) return;
-	
-	self.file = data[@"file"];
+    if(data == nil) return;
+    
+    self.file = data[@"file"];
     self.useResnameInsteadOfSource = [data[@"useResnameInsteadOfSource"] boolValue];
 }
 
 - (NSDictionary*)data
 {
-	NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-	[dic setObjectOrNil:self.file forKey:@"file"];
-	dic[@"useResnameInsteadOfSource"] = @(self.useResnameInsteadOfSource);
-	return dic;
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    [dic setObjectOrNil:self.file forKey:@"file"];
+    dic[@"useResnameInsteadOfSource"] = @(self.useResnameInsteadOfSource);
+    return dic;
 }
 
 @end

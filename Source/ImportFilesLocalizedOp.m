@@ -17,25 +17,25 @@
 
 - (BOOL)needsDisconnectInterface
 {
-	return YES;
+    return YES;
 }
 
 - (void)execute
 {
-	[self setOperationName:NSLocalizedString(@"Updating Files of Language…", nil)];
-	
-	// Build the list of file controllers and files
-	NSMutableArray *fileControllers = [NSMutableArray array];
-	NSMutableArray *files = [NSMutableArray array];
-	
-	for(FileMatchItem *item in self.settings.matchItems) {
-		[fileControllers addObject:[item matchingFileController]];
-		[files addObject:[item file]];
-	}
-	
-	ImportLanguagesOp *op = [ImportLanguagesOp operation];
-	[self setSubOperation:op];
-	[op updateFileControllers:fileControllers layout:self.settings.updateNibLayouts usingCorrespondingFiles:files resolveConflict:YES];
+    [self setOperationName:NSLocalizedString(@"Updating Files of Language…", nil)];
+    
+    // Build the list of file controllers and files
+    NSMutableArray *fileControllers = [NSMutableArray array];
+    NSMutableArray *files = [NSMutableArray array];
+    
+    for(FileMatchItem *item in self.settings.matchItems) {
+        [fileControllers addObject:[item matchingFileController]];
+        [files addObject:[item file]];
+    }
+    
+    ImportLanguagesOp *op = [ImportLanguagesOp operation];
+    [self setSubOperation:op];
+    [op updateFileControllers:fileControllers layout:self.settings.updateNibLayouts usingCorrespondingFiles:files resolveConflict:YES];
 }
 
 @end

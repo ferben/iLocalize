@@ -9,7 +9,7 @@
 #import "AbstractOperation.h"
 
 @interface ReplaceLocalizedFilesOperation : AbstractOperation {
-	NSArray *mFileControllers;
+    NSArray *mFileControllers;
 }
 - (void)replaceLocalizedFileControllersFromCorrespondingBase:(NSArray*)controllers;
 @end

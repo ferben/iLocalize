@@ -13,7 +13,7 @@
 
 - (BOOL)supportsEncoding
 {
-	return YES;
+    return YES;
 }
 
 @end

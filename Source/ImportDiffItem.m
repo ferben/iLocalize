@@ -21,11 +21,11 @@
     switch (op)
     {
         case OPERATION_ADD:
-			return NSLocalizedString(@"add", @"Diff Operation Add");
+            return NSLocalizedString(@"add", @"Diff Operation Add");
         case OPERATION_DELETE:
-			return NSLocalizedString(@"delete", @"Diff Operation Delete");
+            return NSLocalizedString(@"delete", @"Diff Operation Delete");
         case OPERATION_UPDATE:
-			return NSLocalizedString(@"update", @"Diff Operation Update");
+            return NSLocalizedString(@"update", @"Diff Operation Update");
         case OPERATION_IDENTICAL:
             return @"";
     }
@@ -38,15 +38,15 @@
     switch (op)
     {
         case OPERATION_ADD:
-			return [NSImage imageNamed:@"_file_added"];
+            return [NSImage imageNamed:@"_file_added"];
         case OPERATION_DELETE:
-			return [NSImage imageNamed:@"_file_deleted"];
+            return [NSImage imageNamed:@"_file_deleted"];
         case OPERATION_UPDATE:
-			return [NSImage imageNamed:@"_file_updated"];
+            return [NSImage imageNamed:@"_file_updated"];
         case OPERATION_IDENTICAL:
             return nil;
     }
-	
+    
     return nil;
 }
 
@@ -69,32 +69,32 @@
 
 - (NSString *)operationName
 {
-	return [self operationNameForOpcode:self.operation];
+    return [self operationNameForOpcode:self.operation];
 }
 
 - (NSImage *)image
 {
-	return [self operationImageForOpcode:self.operation];
+    return [self operationImageForOpcode:self.operation];
 }
 
 - (NSColor *)color
 {
-	return [self operationColorForOpcode:self.operation];
+    return [self operationColorForOpcode:self.operation];
 }
 
 - (NSString *)description
 {
-	NSMutableString *s = [NSMutableString string];
-	[s appendFormat:@"Op=%ld", self.operation];
-	[s appendString:@","];
-	[s appendFormat:@"File=%@", self.file];	
-	return s;
+    NSMutableString *s = [NSMutableString string];
+    [s appendFormat:@"Op=%ld", self.operation];
+    [s appendString:@","];
+    [s appendFormat:@"File=%@", self.file];    
+    return s;
 }
 
 /*
  - (NSString *)source
 {
-	return [[SmartPathParser smartPath:self.file] stringByAppendingPathComponent:[self.file lastPathComponent]];
+    return [[SmartPathParser smartPath:self.file] stringByAppendingPathComponent:[self.file lastPathComponent]];
 }
 */
 

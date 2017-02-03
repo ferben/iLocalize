@@ -9,14 +9,14 @@
 @class StringsContentModel;
 
 @interface AbstractStringsEngine : NSObject {
-	// Format in which the strings are layed out int he file
-	NSUInteger format;
-	
-	// Type of end of line used (first EOL is used to detect the type)
-	NSUInteger eolType;
-	
-	// Strings content model
-	StringsContentModel *content;
+    // Format in which the strings are layed out int he file
+    NSUInteger format;
+    
+    // Type of end of line used (first EOL is used to detect the type)
+    NSUInteger eolType;
+    
+    // Strings content model
+    StringsContentModel *content;
 }
 
 @property NSUInteger format;

@@ -9,10 +9,10 @@
 #import "AbstractWC.h"
 
 @interface LineEndingsConverterWC : AbstractWC {
-	IBOutlet NSButton	*mFromMacButton;
-	IBOutlet NSButton	*mFromUnixButton;
-	IBOutlet NSButton	*mFromWindowsButton;
-	IBOutlet NSPopUpButton	*mToFormatPopUp;		
+    IBOutlet NSButton    *mFromMacButton;
+    IBOutlet NSButton    *mFromUnixButton;
+    IBOutlet NSButton    *mFromWindowsButton;
+    IBOutlet NSPopUpButton    *mToFormatPopUp;        
 }
 - (BOOL)fromMac;
 - (BOOL)fromUnix;

@@ -17,65 +17,65 @@
 
 + (IGroup*)groupWithProjectProvider:(id<ProjectProvider>)provider engine:(IGroupEngine*)engine
 {
-	IGroup *group = [[self alloc] init];
-	[group setEngine:engine];
-	[group setProjectProvider:provider];
-	return group;
+    IGroup *group = [[self alloc] init];
+    [group setEngine:engine];
+    [group setProjectProvider:provider];
+    return group;
 }
 
 - (id) init
 {
-	self = [super init];
-	if (self != nil) {
-		manager = nil;
-		elements = [[NSMutableArray alloc] init];
-	}
-	return self;
+    self = [super init];
+    if (self != nil) {
+        manager = nil;
+        elements = [[NSMutableArray alloc] init];
+    }
+    return self;
 }
 
 - (void)dealloc
 {
-	[manager stop];
-	
+    [manager stop];
+    
 
 }
 
 - (void)setEngine:(IGroupEngine*)engine
 {
-	manager = [IGroupEngineManager managerForEngine:engine];
-	[manager setDelegate:self];	
+    manager = [IGroupEngineManager managerForEngine:engine];
+    [manager setDelegate:self];    
 }
 
 - (void)setProjectProvider:(id<ProjectProvider>)provider
 {
     [self willChangeValueForKey:@"projectProvider"];
-	_projectProvider = provider;
+    _projectProvider = provider;
     [self didChangeValueForKey:@"projectProvider"];
-	manager.state.projectProvider = provider;
-	[manager start];	
+    manager.state.projectProvider = provider;
+    [manager start];    
 }
 
 - (void)assignToView:(IGroupView*)groupView
 {
-	self.view = groupView;
-	self.view.group = self;
+    self.view = groupView;
+    self.view.group = self;
 }
 
 #pragma mark For subclasses
 
 - (void)newResults:(NSArray*)results forEngineManaged:(IGroupEngineManager*)manager
 {
-	// for subclass
+    // for subclass
 }
 
 - (void)clearResultsForEngineManaged:(IGroupEngineManager*)manager
 {
-	// for subclass
+    // for subclass
 }
 
 - (void)clickOnElement:(IGroupElement*)element
 {
-	// for subclass
+    // for subclass
 }
 
 - (void)notifyProcessing:(BOOL)processing

@@ -9,7 +9,7 @@
 #import "IGroupEngineState.h"
 
 @interface IGroupEngine : NSObject {
-	NSMutableDictionary *results;
+    NSMutableDictionary *results;
 }
 
 + (IGroupEngine*)engine;

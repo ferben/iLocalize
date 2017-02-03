@@ -51,74 +51,74 @@
 
 - (void)addLocalizableFile:(NSMutableArray*)fcs
 {
-	SimpleFileController *fc = [[SimpleFileController alloc] init];
-	fc.path = @"/Users/bovet/Test.app/Contents/Resources/English.lproj/Localizable.strings";
-	[fcs addObject:fc];
-	
-	SimpleStringController *sc = [[SimpleStringController alloc] init];
-	sc.key = @"title";
-	sc.base = @"Main Window";
-	sc.translation = @"Fenetre \"principale\"";
-	
-	[fc addString:sc];
+    SimpleFileController *fc = [[SimpleFileController alloc] init];
+    fc.path = @"/Users/bovet/Test.app/Contents/Resources/English.lproj/Localizable.strings";
+    [fcs addObject:fc];
+    
+    SimpleStringController *sc = [[SimpleStringController alloc] init];
+    sc.key = @"title";
+    sc.base = @"Main Window";
+    sc.translation = @"Fenetre \"principale\"";
+    
+    [fc addString:sc];
 }
 
 - (void)addAnotherFile:(NSMutableArray*)fcs
 {
-	SimpleFileController *fc = [[SimpleFileController alloc] init];
-	fc.path = @"/Users/bovet/Test.app/Contents/Resources/English.lproj/Another.strings";
-	[fcs addObject:fc];
-	
-	SimpleStringController *sc = [[SimpleStringController alloc] init];
-	sc.key = @"button.title";
-	sc.base = @"Choose";
-	sc.translation = @"Choisir";
-	[fc addString:sc];
+    SimpleFileController *fc = [[SimpleFileController alloc] init];
+    fc.path = @"/Users/bovet/Test.app/Contents/Resources/English.lproj/Another.strings";
+    [fcs addObject:fc];
     
-	sc = [[SimpleStringController alloc] init];
-	sc.key = @"button.tooltip";
-	sc.base = @"Button to choose the file";
-	sc.translation = @"Bouton pour choisir le fichier";
-	[fc addString:sc];
+    SimpleStringController *sc = [[SimpleStringController alloc] init];
+    sc.key = @"button.title";
+    sc.base = @"Choose";
+    sc.translation = @"Choisir";
+    [fc addString:sc];
+    
+    sc = [[SimpleStringController alloc] init];
+    sc.key = @"button.tooltip";
+    sc.base = @"Button to choose the file";
+    sc.translation = @"Bouton pour choisir le fichier";
+    [fc addString:sc];
 }
 
 - (NSString*)exportWithFormat:(int)format
 {
-	NSMutableArray *fcs = [NSMutableArray array];
-	[self addLocalizableFile:fcs];
-	[self addAnotherFile:fcs];
-	
-	XLIFFExportSettings *settings = [[XLIFFExportSettings alloc] init];
-	settings.format = format;
-	settings.sourceLanguage = @"en";
-	settings.targetLanguage = @"fr_CH";
-	settings.files = fcs;
-	
-	XLIFFExportOperation *op = [XLIFFExportOperation operation];
-	op.settings = settings;
-	
-	return [op buildXLIFF];
+    NSMutableArray *fcs = [NSMutableArray array];
+    [self addLocalizableFile:fcs];
+    [self addAnotherFile:fcs];
+    
+    XLIFFExportSettings *settings = [[XLIFFExportSettings alloc] init];
+    settings.format = format;
+    settings.sourceLanguage = @"en";
+    settings.targetLanguage = @"fr_CH";
+    settings.files = fcs;
+    
+    XLIFFExportOperation *op = [XLIFFExportOperation operation];
+    op.settings = settings;
+    
+    return [op buildXLIFF];
 }
 
 #pragma mark Test individual exporters
 
 - (void)testExportXLIFF
 {
-	NSString *content = [self exportWithFormat:XLIFF];
-	
-	NSString *samplePath = [self pathForResource:@"SEI/XLIFF/sample.xml"];
-	NSString *sample = [NSString stringWithContentsOfFile:samplePath usedEncoding:nil error:nil];
-	XCTAssertEqualObjects(sample, content, @"Export XLIFF");
+    NSString *content = [self exportWithFormat:XLIFF];
+    
+    NSString *samplePath = [self pathForResource:@"SEI/XLIFF/sample.xml"];
+    NSString *sample = [NSString stringWithContentsOfFile:samplePath usedEncoding:nil error:nil];
+    XCTAssertEqualObjects(sample, content, @"Export XLIFF");
 }
 
 - (void)testExportTXML
 {
-	NSString *content = [self exportWithFormat:TXML];
-    //	NSLog(@"%@", content);
-	
-	NSString *samplePath = [self pathForResource:@"SEI/TXML/sample.xml"];
-	NSString *sample = [NSString stringWithContentsOfFile:samplePath usedEncoding:nil error:nil];
-	XCTAssertEqualObjects(sample, content, @"Export TXML");
+    NSString *content = [self exportWithFormat:TXML];
+    //    NSLog(@"%@", content);
+    
+    NSString *samplePath = [self pathForResource:@"SEI/TXML/sample.xml"];
+    NSString *sample = [NSString stringWithContentsOfFile:samplePath usedEncoding:nil error:nil];
+    XCTAssertEqualObjects(sample, content, @"Export TXML");
 }
 
 - (void)testExportTXMLLineBreakEscaping
@@ -134,41 +134,41 @@
 
 - (void)testExportTMX
 {
-	NSString *content = [self exportWithFormat:TMX];
-	//	NSLog(@"%@", content);
-	
-	NSString *samplePath = [self pathForResource:@"SEI/TMX/sample.xml"];
-	NSString *sample = [NSString stringWithContentsOfFile:samplePath usedEncoding:nil error:nil];
-	XCTAssertEqualObjects(sample, content, @"Export TMX");
+    NSString *content = [self exportWithFormat:TMX];
+    //    NSLog(@"%@", content);
+    
+    NSString *samplePath = [self pathForResource:@"SEI/TMX/sample.xml"];
+    NSString *sample = [NSString stringWithContentsOfFile:samplePath usedEncoding:nil error:nil];
+    XCTAssertEqualObjects(sample, content, @"Export TMX");
 }
 
 - (void)testExportILG
 {
-	NSString *content = [self exportWithFormat:ILG];
-	//	NSLog(@"%@", content);
-	
-	NSString *samplePath = [self pathForResource:@"SEI/ilg/sample.ilg"];
-	NSString *sample = [NSString stringWithContentsOfFile:samplePath usedEncoding:nil error:nil];
-	XCTAssertEqualObjects(sample, content, @"Export ILG");
+    NSString *content = [self exportWithFormat:ILG];
+    //    NSLog(@"%@", content);
+    
+    NSString *samplePath = [self pathForResource:@"SEI/ilg/sample.ilg"];
+    NSString *sample = [NSString stringWithContentsOfFile:samplePath usedEncoding:nil error:nil];
+    XCTAssertEqualObjects(sample, content, @"Export ILG");
 }
 
 - (void)testExportStrings
 {
-	NSString *content = [self exportWithFormat:STRINGS];
-	//	NSLog(@"%@", content);
-	
-	NSString *samplePath = [self pathForResource:@"SEI/Strings/sample.strings"];
-	NSString *sample = [NSString stringWithContentsOfFile:samplePath usedEncoding:nil error:nil];
-	XCTAssertEqualObjects(sample, content, @"Export Strings");
+    NSString *content = [self exportWithFormat:STRINGS];
+    //    NSLog(@"%@", content);
+    
+    NSString *samplePath = [self pathForResource:@"SEI/Strings/sample.strings"];
+    NSString *sample = [NSString stringWithContentsOfFile:samplePath usedEncoding:nil error:nil];
+    XCTAssertEqualObjects(sample, content, @"Export Strings");
 }
 
 - (void)testExportFactory
 {
-	XCTAssertTrue([[[SEIManager sharedInstance] exporterForFormat:TMX] isKindOfClass:[TMXExporter class]], @"TMX format");
-	XCTAssertTrue([[[SEIManager sharedInstance] exporterForFormat:XLIFF] isKindOfClass:[XLIFFExporter class]], @"XLIFF format");
-	XCTAssertTrue([[[SEIManager sharedInstance] exporterForFormat:TXML] isKindOfClass:[TXMLExporter class]], @"TXML format");
-	XCTAssertTrue([[[SEIManager sharedInstance] exporterForFormat:ILG] isKindOfClass:[ILGExporter class]], @"ILG format");
-	XCTAssertTrue([[[SEIManager sharedInstance] exporterForFormat:STRINGS] isKindOfClass:[StringsExporter class]], @"STRINGS format");
+    XCTAssertTrue([[[SEIManager sharedInstance] exporterForFormat:TMX] isKindOfClass:[TMXExporter class]], @"TMX format");
+    XCTAssertTrue([[[SEIManager sharedInstance] exporterForFormat:XLIFF] isKindOfClass:[XLIFFExporter class]], @"XLIFF format");
+    XCTAssertTrue([[[SEIManager sharedInstance] exporterForFormat:TXML] isKindOfClass:[TXMLExporter class]], @"TXML format");
+    XCTAssertTrue([[[SEIManager sharedInstance] exporterForFormat:ILG] isKindOfClass:[ILGExporter class]], @"ILG format");
+    XCTAssertTrue([[[SEIManager sharedInstance] exporterForFormat:STRINGS] isKindOfClass:[StringsExporter class]], @"STRINGS format");
 }
 
 @end

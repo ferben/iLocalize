@@ -11,7 +11,7 @@
 @class XLIFFImportSettings;
 
 @interface XLIFFImportOperationDriver : OperationDriver {
-	XLIFFImportSettings *settings;
+    XLIFFImportSettings *settings;
 }
 
 @end

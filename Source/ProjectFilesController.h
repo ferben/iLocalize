@@ -15,27 +15,27 @@
 
 @interface ProjectFilesController : NSViewController<NSTableViewDelegate,NSTableViewDataSource> {
 @public
-	IBOutlet AZArrayController	*mFilesController;	
-	IBOutlet TableViewCustom	*mFilesTableView;
-	IBOutlet NSMenuItem			*mFileEncodingContextualMenuItem;
-	IBOutlet NSMenu				*mFilesColumnTableViewContextualMenu;
-	IBOutlet NSMenu				*mFilesTableViewContextualMenu;
-	IBOutlet NSView				*mTranslateWithFileStringsView;
-	
-	ProjectWC					*__unsafe_unretained _projectWC;
-	NSMenu						*mOpenPreviousVersionMenu;
-	ProjectFileWarningWC		*mProjectFileWarning;
-	NSArray						*mPreviouslySelectedFiles;
-	NSMutableArray				*mSelectedFiles;
-	BOOL						mSelectedFilesSupportEncoding;
-	NSMenu						*mFileEncodingMenu;
-	NSMutableSet				*mSelectedEncodingSet;	
-	int							mSearchContext;
-	
-	// Value of the previous selected file controller relative
-	// path that is cached to indicate if the open previous version
-	// menu needs to be re-rendered.
-	NSString *previousRelativePathForVersionMenu;
+    IBOutlet AZArrayController    *mFilesController;    
+    IBOutlet TableViewCustom    *mFilesTableView;
+    IBOutlet NSMenuItem            *mFileEncodingContextualMenuItem;
+    IBOutlet NSMenu                *mFilesColumnTableViewContextualMenu;
+    IBOutlet NSMenu                *mFilesTableViewContextualMenu;
+    IBOutlet NSView                *mTranslateWithFileStringsView;
+    
+    ProjectWC                    *__unsafe_unretained _projectWC;
+    NSMenu                        *mOpenPreviousVersionMenu;
+    ProjectFileWarningWC        *mProjectFileWarning;
+    NSArray                        *mPreviouslySelectedFiles;
+    NSMutableArray                *mSelectedFiles;
+    BOOL                        mSelectedFilesSupportEncoding;
+    NSMenu                        *mFileEncodingMenu;
+    NSMutableSet                *mSelectedEncodingSet;    
+    int                            mSearchContext;
+    
+    // Value of the previous selected file controller relative
+    // path that is cached to indicate if the open previous version
+    // menu needs to be re-rendered.
+    NSString *previousRelativePathForVersionMenu;
 }
 
 @property (strong) NSString *previousRelativePathForVersionMenu;

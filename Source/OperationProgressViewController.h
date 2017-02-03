@@ -15,9 +15,9 @@
  to display the progress of an operation.
  */
 @interface OperationProgressViewController : OperationViewController {
-	IBOutlet NSTextField *nameField;
-	IBOutlet NSProgressIndicator *progressIndicator;
-	IBOutlet NSButton *cancelButton;
+    IBOutlet NSTextField *nameField;
+    IBOutlet NSProgressIndicator *progressIndicator;
+    IBOutlet NSButton *cancelButton;
 }
 
 @property (weak) Operation *operation;

@@ -13,70 +13,70 @@
 
 - (id)initWithManager:(FMManager*)manager
 {
-	if(self = [super init]) {
-		mManager = manager;		
-	}
-	return self;
+    if(self = [super init]) {
+        mManager = manager;        
+    }
+    return self;
 }
 
 + (FMModule*)moduleWithManager:(FMManager*)manager
 {
-	return [[self alloc] initWithManager:manager];
+    return [[self alloc] initWithManager:manager];
 }
 
 - (Class)editorClass
 {
-	return NULL;
+    return NULL;
 }
 
 - (Class)engineClass
 {
-	return NULL;
+    return NULL;
 }
 
 - (Class)controllerClass
 {
-	return NULL;
+    return NULL;
 }
 
 - (FMManager*)manager
 {
-	return mManager;
+    return mManager;
 }
 
 - (NSString*)name
 {
-	return NSStringFromClass([self class]);
+    return NSStringFromClass([self class]);
 }
 
 - (NSString*)path
 {
-	return [self builtIn]?NSLocalizedString(@"Built-in", @"File Editor Built-in"):@"";
+    return [self builtIn]?NSLocalizedString(@"Built-in", @"File Editor Built-in"):@"";
 }
 
 - (NSImage*)fileImage
 {
-	return [NSImage imageNamed:@"FileIconGeneric"];
+    return [NSImage imageNamed:@"FileIconGeneric"];
 }
 
 - (BOOL)supportsFlagLayout
 {
-	return NO;
+    return NO;
 }
 
 - (BOOL)builtIn
 {
-	return NO;
+    return NO;
 }
 
 - (void)load
 {
-	
+    
 }
 
 - (void)unload
 {
-	
+    
 }
 
 @end

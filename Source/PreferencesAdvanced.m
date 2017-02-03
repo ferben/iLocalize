@@ -24,7 +24,7 @@ static id _shared = nil;
 
 - (id)init
 {
-	if (self = [super init])
+    if (self = [super init])
     {
         NSBundle *bundle = [NSBundle bundleForClass:[self class]];
         
@@ -35,7 +35,7 @@ static id _shared = nil;
                                            reason:@"PreferencesAdvanced: Could not load resources!"
                                          userInfo:nil];
         }
-	}
+    }
 
     return self;
 }
@@ -49,12 +49,12 @@ static id _shared = nil;
 
 - (BOOL)autoSnapshotEnabled
 {
-	return [[NSUserDefaults standardUserDefaults] boolForKey:@"enableAutoSnapshot"];
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"enableAutoSnapshot"];
 }
 
 - (NSInteger)maximumNumberOfSnapshots
 {
-	return [[NSUserDefaults standardUserDefaults] integerForKey:@"maxSnapshots"];
+    return [[NSUserDefaults standardUserDefaults] integerForKey:@"maxSnapshots"];
 }
 
 #pragma mark -
@@ -77,7 +77,7 @@ static id _shared = nil;
 
 - (NSString*)interfaceBuilder3Path
 {
-	return [[NSUserDefaults standardUserDefaults] stringForKey:@"ib3path"];
+    return [[NSUserDefaults standardUserDefaults] stringForKey:@"ib3path"];
 }
 
 - (void)browseInterfaceBuilderPath:(NSString*)key
@@ -96,17 +96,17 @@ static id _shared = nil;
 
 - (IBAction)browseIB3Path:(id)sender
 {
-	[self browseInterfaceBuilderPath:@"ib3path"];
+    [self browseInterfaceBuilderPath:@"ib3path"];
 }
 
 #pragma mark ibtool
 
 - (IBAction)addIbtoolPlugin:(id)sender
 {
-	NSOpenPanel *panel = [NSOpenPanel openPanel];
-	[panel setCanChooseFiles:YES];
-	[panel setCanChooseDirectories:NO];
-	[panel setAllowsMultipleSelection:YES];
+    NSOpenPanel *panel = [NSOpenPanel openPanel];
+    [panel setCanChooseFiles:YES];
+    [panel setCanChooseDirectories:NO];
+    [panel setAllowsMultipleSelection:YES];
     [panel beginSheetModalForWindow:mWindow
                   completionHandler:^(NSInteger result) {
                       if(result == NSFileHandlingPanelOKButton) {
@@ -115,7 +115,7 @@ static id _shared = nil;
                               if([[file pathExtension] isEqualToString:@"ibplugin"]) {
                                   NSMutableDictionary *dic = [NSMutableDictionary dictionary];
                                   dic[@"path"] = file;
-                                  [mIbtoolPlugins addObject:dic];		
+                                  [mIbtoolPlugins addObject:dic];        
                               }                              
                           }
                           [[Preferences shared] clearIbtoolPlugins];

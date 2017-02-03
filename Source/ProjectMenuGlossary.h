@@ -13,8 +13,8 @@
 @class GlossaryScopeWC;
 
 @interface ProjectMenuGlossary : ProjectMenu {
-	GlossaryNewWC					*mGlossaryNew;
-	GlossaryScope *glossaryScope;
+    GlossaryNewWC                    *mGlossaryNew;
+    GlossaryScope *glossaryScope;
 }
 @property (nonatomic, strong) GlossaryScopeWC *scopeWC;
 

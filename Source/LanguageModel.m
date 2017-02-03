@@ -19,38 +19,38 @@ static NSString const *kUpdateOrAddInGlossariesSelectedStates = @"kUpdateOrAddIn
 
 + (void)initialize
 {
-	if(self == [LanguageModel class]) {
-		[self setVersion:3];
-	}
+    if(self == [LanguageModel class]) {
+        [self setVersion:3];
+    }
 }
 
 + (LanguageModel*)model
 {
-	return [[LanguageModel alloc] init];
+    return [[LanguageModel alloc] init];
 }
 
 - (id)init
 {
-	if(self = [super init]) {
-		mLanguage = NULL;
-		mFileModelArray = [[NSMutableArray alloc] init];
+    if(self = [super init]) {
+        mLanguage = NULL;
+        mFileModelArray = [[NSMutableArray alloc] init];
         self.translateUsingGlossariesSelectedStates = [NSArray array];
         self.updateOrAddInGlossariesSelectedStates = [NSArray array];
-		
-		// Map from relative file path to FileModel to speed up
-		// the lookup. Make sure to clear this cache when there
-		// is a modification in the file relative path.
-		mPath2Model = [[NSMutableDictionary alloc] init];
-	}
-	return self;
+        
+        // Map from relative file path to FileModel to speed up
+        // the lookup. Make sure to clear this cache when there
+        // is a modification in the file relative path.
+        mPath2Model = [[NSMutableDictionary alloc] init];
+    }
+    return self;
 }
 
 
 - (id)initWithCoder:(NSCoder*)coder
 {
-	if(self = [super init]) {
-		mLanguage = [coder decodeObject];
-		mFileModelArray = [coder decodeObject];
+    if(self = [super init]) {
+        mLanguage = [coder decodeObject];
+        mFileModelArray = [coder decodeObject];
         NSInteger version = [coder versionForClassName:[self className]];
         switch (version) {
             case 1: {
@@ -68,16 +68,16 @@ static NSString const *kUpdateOrAddInGlossariesSelectedStates = @"kUpdateOrAddIn
             }
                 break;
         }
-		mPath2Model = [[NSMutableDictionary alloc] init];
-		[self updateCache];
-	}
-	return self;
+        mPath2Model = [[NSMutableDictionary alloc] init];
+        [self updateCache];
+    }
+    return self;
 }
 
 - (void)encodeWithCoder:(NSCoder*)coder
 {
-	[coder encodeObject:mLanguage];
-	[coder encodeObject:mFileModelArray];
+    [coder encodeObject:mLanguage];
+    [coder encodeObject:mFileModelArray];
 
     NSMutableDictionary *data = [NSMutableDictionary dictionary];
     if (self.translateUsingGlossariesSelectedStates.count > 0) {
@@ -89,8 +89,8 @@ static NSString const *kUpdateOrAddInGlossariesSelectedStates = @"kUpdateOrAddIn
     
     [coder encodeObject:[self encodeObjectOrNil:data]];
     
-	// Version 4: no more local files array, everything in the main array
-	//[coder encodeObject:mLocalFileModelArray];
+    // Version 4: no more local files array, everything in the main array
+    //[coder encodeObject:mLocalFileModelArray];
 }
 
 - (id)encodeObjectOrNil:(id)objectOrNil {
@@ -107,66 +107,66 @@ static NSString const *kUpdateOrAddInGlossariesSelectedStates = @"kUpdateOrAddIn
 
 - (void)setLanguage:(NSString*)language
 {
-	mLanguage = language;
+    mLanguage = language;
 }
 
 - (NSString*)language
 {
-	return mLanguage;
+    return mLanguage;
 }
 
 - (void)addFileModel:(FileModel*)fileModel
 {
-	[mFileModelArray addObject:fileModel];
-	[fileModel setLanguageModel:self];
-	[self addToCache:fileModel];
+    [mFileModelArray addObject:fileModel];
+    [fileModel setLanguageModel:self];
+    [self addToCache:fileModel];
 }
 
 - (void)deleteFileModel:(FileModel*)fileModel
 {
-	[mFileModelArray removeObject:fileModel];
-	[fileModel setLanguageModel:nil];
-	[self removeFromCache:fileModel];
+    [mFileModelArray removeObject:fileModel];
+    [fileModel setLanguageModel:nil];
+    [self removeFromCache:fileModel];
 }
 
 - (NSMutableArray*)fileModels
 {
-	return mFileModelArray;
+    return mFileModelArray;
 }
 
 - (FileModel*)findFileModelForBaseFileModel:(FileModel*)baseFileModel language:(NSString*)language translatedPaths:(NSArray*)translatedPaths
 {
-	FileModel *fileModel;
-	for(fileModel in mFileModelArray) {
-		for(id loopItem in translatedPaths) {
-			if([[fileModel relativeFilePath] isEqualCaseInsensitiveToString:loopItem])
-				return fileModel;        			
-		}
-	}		
-	return nil;
+    FileModel *fileModel;
+    for(fileModel in mFileModelArray) {
+        for(id loopItem in translatedPaths) {
+            if([[fileModel relativeFilePath] isEqualCaseInsensitiveToString:loopItem])
+                return fileModel;                    
+        }
+    }        
+    return nil;
 }
 
 // Return the file model matching the equivalent base file model
 - (FileModel*)fileModelForBaseFileModel:(FileModel*)baseFileModel language:(NSString*)language
 {
-	NSArray *translatedPaths = [FileTool equivalentLanguagePaths:[FileTool translatePath:[baseFileModel relativeFilePath] toLanguage:language]];
-	
-	BOOL optimized = YES;
-	if(optimized) {
-		for(id loopItem in translatedPaths) {
-			FileModel *fm = mPath2Model[[loopItem lowercaseString]];
-			if(fm) return fm;
-		}
-		
-		// Nothing found. Add to cache.
-		FileModel *fm = [self findFileModelForBaseFileModel:baseFileModel language:language translatedPaths:translatedPaths];
-		if(fm) {
-			[self addToCache:fm];
-		}
-	} else {
-		return [self findFileModelForBaseFileModel:baseFileModel language:language translatedPaths:translatedPaths];
-	}
-	return nil;
+    NSArray *translatedPaths = [FileTool equivalentLanguagePaths:[FileTool translatePath:[baseFileModel relativeFilePath] toLanguage:language]];
+    
+    BOOL optimized = YES;
+    if(optimized) {
+        for(id loopItem in translatedPaths) {
+            FileModel *fm = mPath2Model[[loopItem lowercaseString]];
+            if(fm) return fm;
+        }
+        
+        // Nothing found. Add to cache.
+        FileModel *fm = [self findFileModelForBaseFileModel:baseFileModel language:language translatedPaths:translatedPaths];
+        if(fm) {
+            [self addToCache:fm];
+        }
+    } else {
+        return [self findFileModelForBaseFileModel:baseFileModel language:language translatedPaths:translatedPaths];
+    }
+    return nil;
 }
 
 - (FileModel*)fileModelForBaseFileModel:(FileModel*)baseFileModel
@@ -176,48 +176,48 @@ static NSString const *kUpdateOrAddInGlossariesSelectedStates = @"kUpdateOrAddIn
 
 - (void)updateCache
 {
-	[mPath2Model removeAllObjects];
-	int index;
-	for(index = 0; index < [mFileModelArray count]; index++) {
-		FileModel *fm = mFileModelArray[index];
-		[fm setLanguageModel:self];
-		
-		NSArray *equivalentPaths = [FileTool equivalentLanguagePaths:[fm relativeFilePath]];
-		int j;
-		for(j = 0; j < [equivalentPaths count]; j++) {
-			if(mPath2Model[[equivalentPaths[j] lowercaseString]]) {
-				// IL-138:
-				// File is already in the cache which means it is duplicated in the list.
-				// This apparently happens with some old iLocalize project.
-				LOG(@"Removing duplicate file %@", [fm relativeFilePath]);
-				[mFileModelArray removeObjectAtIndex:index];
-				index--;
-				goto removed;
-			}			
-		}
-		[self addToCache:fm];
-		
-	removed:
-		continue;
-	}
+    [mPath2Model removeAllObjects];
+    int index;
+    for(index = 0; index < [mFileModelArray count]; index++) {
+        FileModel *fm = mFileModelArray[index];
+        [fm setLanguageModel:self];
+        
+        NSArray *equivalentPaths = [FileTool equivalentLanguagePaths:[fm relativeFilePath]];
+        int j;
+        for(j = 0; j < [equivalentPaths count]; j++) {
+            if(mPath2Model[[equivalentPaths[j] lowercaseString]]) {
+                // IL-138:
+                // File is already in the cache which means it is duplicated in the list.
+                // This apparently happens with some old iLocalize project.
+                LOG(@"Removing duplicate file %@", [fm relativeFilePath]);
+                [mFileModelArray removeObjectAtIndex:index];
+                index--;
+                goto removed;
+            }            
+        }
+        [self addToCache:fm];
+        
+    removed:
+        continue;
+    }
 }
 
 - (void)addToCache:(FileModel*)fm
 {
-	mPath2Model[[[fm relativeFilePath] lowercaseString]] = fm;
+    mPath2Model[[[fm relativeFilePath] lowercaseString]] = fm;
 }
 
 - (void)removeFromCache:(FileModel*)fm
 {
-	[mPath2Model removeObjectForKey:[[fm relativeFilePath] lowercaseString]];
+    [mPath2Model removeObjectForKey:[[fm relativeFilePath] lowercaseString]];
 }
 
 - (NSString*)description
 {
-	NSMutableString *s = [NSMutableString string];
-	[s appendFormat:@"Name = %@\n", mLanguage];
-	[s appendFormat:@"Files = %@\n", mFileModelArray];
-	return s;
+    NSMutableString *s = [NSMutableString string];
+    [s appendFormat:@"Name = %@\n", mLanguage];
+    [s appendFormat:@"Files = %@\n", mFileModelArray];
+    return s;
 }
 
 @end

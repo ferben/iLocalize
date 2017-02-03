@@ -9,10 +9,10 @@
 #import "ImportDiffItem.h"
 
 @interface ImportDiff : NSObject {
-	NSString *source;
-	
-	// Array of ImportDiffItem objects.
-	NSMutableArray *items;
+    NSString *source;
+    
+    // Array of ImportDiffItem objects.
+    NSMutableArray *items;
 }
 
 @property (strong) NSString *source;

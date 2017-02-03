@@ -10,12 +10,12 @@
 
 @interface FileMatchItem : NSObject
 {
-	NSString			*mFile;
-	NSArray				*mMatchingFileControllers;
-	NSUInteger			mMatchingIndex;
-	
-	// For display only (used by pop-up menu)
-	NSMutableArray		*mRelativePaths;
+    NSString            *mFile;
+    NSArray                *mMatchingFileControllers;
+    NSUInteger            mMatchingIndex;
+    
+    // For display only (used by pop-up menu)
+    NSMutableArray        *mRelativePaths;
 }
 
 + (id)itemWithFile:(NSString *)file matchingFileControllers:(NSArray *)controllers;

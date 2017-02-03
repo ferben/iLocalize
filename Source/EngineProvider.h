@@ -21,21 +21,21 @@
 
 @interface EngineProvider : NSObject
 {
-	ResourceFileEngine		*mResourceFileEngine;
-		
-	ModelEngine				*mModelEngine;
-	
-	LanguageEngine			*mLanguageEngine;
-	FileEngine				*mFileEngine;
-	
-	SynchronizeEngine		*mSynchronizeEngine;
-	ReplaceEngine			*mReplaceEngine;
-	
-	OptimizeEngine			*mOptimizeEngine;
-	
-	FindEngine				*mFindEngine;
-	CleanEngine				*mCleanEngine;
-	CheckEngine				*mCheckEngine;
+    ResourceFileEngine        *mResourceFileEngine;
+        
+    ModelEngine                *mModelEngine;
+    
+    LanguageEngine            *mLanguageEngine;
+    FileEngine                *mFileEngine;
+    
+    SynchronizeEngine        *mSynchronizeEngine;
+    ReplaceEngine            *mReplaceEngine;
+    
+    OptimizeEngine            *mOptimizeEngine;
+    
+    FindEngine                *mFindEngine;
+    CleanEngine                *mCleanEngine;
+    CheckEngine                *mCheckEngine;
 }
 
 @property (weak) id<ProjectProvider> projectProvider;

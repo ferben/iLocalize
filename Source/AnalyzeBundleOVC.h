@@ -11,11 +11,11 @@
 @class AZPathNode;
 
 @interface AnalyzeBundleOVC : OperationViewController {
-	IBOutlet NSOutlineView *outlineView;
-	IBOutlet NSButton *revealButton;
-	IBOutlet NSButton *copyToClipboardButton;
+    IBOutlet NSOutlineView *outlineView;
+    IBOutlet NSButton *revealButton;
+    IBOutlet NSButton *copyToClipboardButton;
     NSString *rootPath;
-	NSArray *problems;
+    NSArray *problems;
     AZPathNode *rootNode;
 }
 

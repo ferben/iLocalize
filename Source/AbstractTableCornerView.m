@@ -19,7 +19,7 @@
 
 - (id)initWithFrame:(NSRect)r controller:(ProjectWC *)controller
 {
-	if (self = [super initWithFrame:r])
+    if (self = [super initWithFrame:r])
     {
         NSBundle *bundle = [NSBundle bundleForClass:[self class]];
 
@@ -31,20 +31,20 @@
                                          userInfo:nil];
         }
 
-		mMainWindowController = controller;
-	}
+        mMainWindowController = controller;
+    }
 
     return self;
 }
 
 - (NSString*)viewNibName
 {
-	return NULL;
+    return NULL;
 }
 
 - (NSMenu*)popupMenu
 {
-	return mMenu;
+    return mMenu;
 }
 
 - (IBAction)menuAction:(id)sender

@@ -34,10 +34,10 @@
 
 - (id)init
 {
-	if (self = [super init])
+    if (self = [super init])
     {
-	}
-	
+    }
+    
     return self;
 }
 
@@ -66,23 +66,23 @@
 
 - (void)createBaseFileModels
 {
-	if ([self cancel])
-		return;
+    if ([self cancel])
+        return;
 
-	[[self console] beginOperation:@"Creating base file models" class:[self class]];
-	
+    [[self console] beginOperation:@"Creating base file models" class:[self class]];
+    
     // NSLog(@"baseLanguage: %@", [self.settings baseLanguage]);
     // NSLog(@"# of localizedLanguages: %ld", [self.settings.localizedLanguages count]);
     
-	NSArray *baseFiles = [[[self engineProvider] resourceFileEngine] filesOfLanguage:[self.settings baseLanguage]];
+    NSArray *baseFiles = [[[self engineProvider] resourceFileEngine] filesOfLanguage:[self.settings baseLanguage]];
     
-	[self setProgressMax:[baseFiles count] * ([self.settings.localizedLanguages count] + 1)];
-		
+    [self setProgressMax:[baseFiles count] * ([self.settings.localizedLanguages count] + 1)];
+        
     [baseFiles enumerateObjectsWithOptions:CONCURRENT_OP_OPTIONS usingBlock:^(id obj, NSUInteger idx, BOOL *stop)
     {
         NSString *baseFile = obj;
         [[self console] addLog:[NSString stringWithFormat:@"From file \"%@\"", baseFile] class:[self class]];
-        [self progressIncrement];		
+        [self progressIncrement];        
         
         FileModel *baseFileModel = [[[self engineProvider] modelEngine] createFileModelFromProjectFile:baseFile];
         
@@ -90,52 +90,52 @@
         
         *stop = [self cancel];
     }];        
-	
-	[[self console] endOperation];
+    
+    [[self console] endOperation];
 }
 
 - (void)createLocalizedFileModels
 {
-	if([self cancel])
-		return;
-	
-	[[self console] beginOperation:@"Creating localized languages" class:[self class]];
-	
-	[[[self engineProvider] languageEngine] addLanguages:self.settings.localizedLanguages
-											   identical:YES
-												  layout:YES
-										copyOnlyIfExists:self.settings.copySourceOnlyIfExists
+    if([self cancel])
+        return;
+    
+    [[self console] beginOperation:@"Creating localized languages" class:[self class]];
+    
+    [[[self engineProvider] languageEngine] addLanguages:self.settings.localizedLanguages
+                                               identical:YES
+                                                  layout:YES
+                                        copyOnlyIfExists:self.settings.copySourceOnlyIfExists
                                                   source:self.settings.source];
-			
-	[[self console] endOperation];
+            
+    [[self console] endOperation];
 }
 
 - (void)prepareProjectModel:(ProjectModel *)model
 {
-	[model setSourceName:[self.settings.source sourceName]];
-	[model setName:self.settings.name];
-	[model setProjectPath:self.settings.projectFolderPath];
-	[model setBaseLanguage:self.settings.baseLanguage];	
+    [model setSourceName:[self.settings.source sourceName]];
+    [model setName:self.settings.name];
+    [model setProjectPath:self.settings.projectFolderPath];
+    [model setBaseLanguage:self.settings.baseLanguage];    
 }
 
 - (void)createProjectDocument
 {
-	// Do not display the window yet - it will be displayed after the project creation (otherwise, we are having problem
-	// with the binding (structure table doesn't work - in fact, LanguageController will/didChangeKey doesn't seem to work but
-	// work as soon as we deselect and select the language again)
-	
-	// Create an empty file  and open it (at the end of the New Project process, the document will be automatically saved)
-	NSString * file = [self.settings projectFilePath];
+    // Do not display the window yet - it will be displayed after the project creation (otherwise, we are having problem
+    // with the binding (structure table doesn't work - in fact, LanguageController will/didChangeKey doesn't seem to work but
+    // work as soon as we deselect and select the language again)
     
-	if ([file isPathExisting])
-		[file removePathFromDisk];
-	else
-		[[FileTool shared] preparePath:file atomic:YES skipLastComponent:YES];
+    // Create an empty file  and open it (at the end of the New Project process, the document will be automatically saved)
+    NSString * file = [self.settings projectFilePath];
     
-	[[NSFileManager defaultManager] createFileAtPath:file contents:NULL attributes:NULL];
+    if ([file isPathExisting])
+        [file removePathFromDisk];
+    else
+        [[FileTool shared] preparePath:file atomic:YES skipLastComponent:YES];
+    
+    [[NSFileManager defaultManager] createFileAtPath:file contents:NULL attributes:NULL];
     
     // NSDocument *document;
-	
+    
     NSDocumentController *documentController = [NSDocumentController sharedDocumentController];
     NSURL *url = [NSURL fileURLWithPath:file];
     
@@ -170,61 +170,61 @@
 
 - (BOOL)cancellable
 {
-	return YES;
+    return YES;
 }
 
 - (void)createProject
 {
     NSDate *beginDate = [NSDate date];
     
-	[self copyMoveSourceToProjectPath];	
-	
-	[[[self engineProvider] resourceFileEngine] parseFilesInPath:[[self projectModel] projectSourceFilePath]];
-	
-	[self createBaseFileModels];
+    [self copyMoveSourceToProjectPath];    
     
-	if ([self cancel])
+    [[[self engineProvider] resourceFileEngine] parseFilesInPath:[[self projectModel] projectSourceFilePath]];
+    
+    [self createBaseFileModels];
+    
+    if ([self cancel])
         return;
-	
-	[self createLocalizedFileModels];
     
-	if ([self cancel])
+    [self createLocalizedFileModels];
+    
+    if ([self cancel])
         return;
 
-	[[self projectController] rebuildFromModel];	
+    [[self projectController] rebuildFromModel];    
     
     [[self console] addLog:[NSString stringWithFormat:@"Created project in %.2f seconds", [[NSDate date] timeIntervalSinceDate:beginDate]] class:[self class]];
 }
 
 - (void)didExecute
 {
-	// Notify the project document that the project has been created
-	ProjectDocument *doc = (ProjectDocument *)self.projectProvider;
-	
+    // Notify the project document that the project has been created
+    ProjectDocument *doc = (ProjectDocument *)self.projectProvider;
+    
     if ([self cancel])
     {
-		[doc performSelectorOnMainThread:@selector(createProjectDidCancel) withObject:nil waitUntilDone:YES];
-	}
+        [doc performSelectorOnMainThread:@selector(createProjectDidCancel) withObject:nil waitUntilDone:YES];
+    }
     else
     {
-		[doc performSelectorOnMainThread:@selector(createProjectDidEnd) withObject:nil waitUntilDone:YES];
-	}	
+        [doc performSelectorOnMainThread:@selector(createProjectDidEnd) withObject:nil waitUntilDone:YES];
+    }    
 }
 
 - (void)execute
 {
-	[[self console] beginOperation:@"Create New Project" class:[self class]];
-	[self setOperationName:NSLocalizedString(@"Creating Project…", nil)];
+    [[self console] beginOperation:@"Create New Project" class:[self class]];
+    [self setOperationName:NSLocalizedString(@"Creating Project…", nil)];
     
-	// This is the first step to do: it creates the document and assign the project provider
-	// to this operation. Must execute on the main thread otherwise we have problems with the timer
-	// that cannot be deallocated later on (it must be allocated/deallocated from the same thread).
+    // This is the first step to do: it creates the document and assign the project provider
+    // to this operation. Must execute on the main thread otherwise we have problems with the timer
+    // that cannot be deallocated later on (it must be allocated/deallocated from the same thread).
     
     [self performSelectorOnMainThread:@selector(createProjectDocument) withObject:nil waitUntilDone:YES];
     
-	[self createProject];
-	
-	[[self console] endOperation];	
+    [self createProject];
+    
+    [[self console] endOperation];    
 }
 
 @end

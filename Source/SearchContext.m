@@ -16,22 +16,22 @@
 
 - (id) init
 {
-	self = [super init];
-	if (self != nil) {
-		self.scope = SCOPE_STRINGS_TRANSLATION|SCOPE_STRINGS_BASE;
-		self.options = SEARCH_CONTAINS;
-		self.ignoreCase = YES;
-	}
-	return self;
+    self = [super init];
+    if (self != nil) {
+        self.scope = SCOPE_STRINGS_TRANSLATION|SCOPE_STRINGS_BASE;
+        self.options = SEARCH_CONTAINS;
+        self.ignoreCase = YES;
+    }
+    return self;
 }
 
 - (id)copyWithZone:(NSZone *)zone
 {
-	SearchContext *c = [[SearchContext alloc] init];
-	c.scope = self.scope;
-	c.options = self.options;
-	c.ignoreCase = self.ignoreCase;
-	return c;
+    SearchContext *c = [[SearchContext alloc] init];
+    c.scope = self.scope;
+    c.options = self.options;
+    c.ignoreCase = self.ignoreCase;
+    return c;
 }
 
 @end

@@ -13,20 +13,20 @@
 
 - (void)setContentView:(NSView*)view
 {
-	// remove old view
-	[[[self subviews] firstObject] removeFromSuperview];
+    // remove old view
+    [[[self subviews] firstObject] removeFromSuperview];
 
-	// Make sure the view can auto-resize
-	[view setAutoresizingMask:NSViewHeightSizable|NSViewWidthSizable|NSViewMinXMargin|NSViewMaxXMargin|NSViewMinYMargin|NSViewMaxYMargin];
+    // Make sure the view can auto-resize
+    [view setAutoresizingMask:NSViewHeightSizable|NSViewWidthSizable|NSViewMinXMargin|NSViewMaxXMargin|NSViewMinYMargin|NSViewMaxYMargin];
 
-	// set the view frame
-	NSRect f = self.frame;
-	f.origin.x = 0;
-	f.origin.y = 0;
-	[view setFrame:f];
+    // set the view frame
+    NSRect f = self.frame;
+    f.origin.x = 0;
+    f.origin.y = 0;
+    [view setFrame:f];
 
-	// add new view
-	[self addSubview:view];	
+    // add new view
+    [self addSubview:view];    
 }
 
 @end

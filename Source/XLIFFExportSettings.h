@@ -9,20 +9,20 @@
 #import "SEIConstants.h"
 
 @interface XLIFFExportSettings : NSObject {
-	// The files to export, this is an array of FileController
-	NSArray *files;
-	
-	// The format
-	SEI_FORMAT format;
-	
-	// The source language
-	NSString *sourceLanguage;
-	
-	// The target language
-	NSString *targetLanguage;
-	
-	// The xliff file that must be generated
-	NSString *targetFile;
+    // The files to export, this is an array of FileController
+    NSArray *files;
+    
+    // The format
+    SEI_FORMAT format;
+    
+    // The source language
+    NSString *sourceLanguage;
+    
+    // The target language
+    NSString *targetLanguage;
+    
+    // The xliff file that must be generated
+    NSString *targetFile;
 }
 
 @property (strong) NSArray *files;

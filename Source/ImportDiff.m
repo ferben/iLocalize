@@ -24,17 +24,17 @@
 
 - (void)clear
 {
-	[items removeAllObjects];
+    [items removeAllObjects];
 }
 
 - (void)addFiles:(NSArray*)files operation:(unsigned)op
 {
     for(NSString *file in files) {
-		ImportDiffItem *item = [[ImportDiffItem alloc] init];
-		item.enabled = YES;
-		item.operation = op;
-		item.file = file;		        
-		item.source = source;
+        ImportDiffItem *item = [[ImportDiffItem alloc] init];
+        item.enabled = YES;
+        item.operation = op;
+        item.file = file;                
+        item.source = source;
         [items addObject:item];
     }
 }
@@ -63,9 +63,9 @@
 {
     NSMutableArray *files = [NSMutableArray array];
     for(ImportDiffItem *item in items) {
-		if(item.enabled && item.operation == op) {
-			[files addObject:item.file];
-		}
+        if(item.enabled && item.operation == op) {
+            [files addObject:item.file];
+        }
     }
     return files;
 }
@@ -108,11 +108,11 @@
 
 - (NSString*)description
 {
-	NSMutableString *s = [NSMutableString string];
-	[s appendFormat:@"Source=%@", self.source];
-	[s appendString:@"\n"];
-	[s appendFormat:@"Items=%@", self.items];	
-	return s;
+    NSMutableString *s = [NSMutableString string];
+    [s appendFormat:@"Source=%@", self.source];
+    [s appendString:@"\n"];
+    [s appendFormat:@"Items=%@", self.items];    
+    return s;
 }
 
 @end

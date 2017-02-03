@@ -13,29 +13,29 @@
 
 - (NSData *)createAliasData
 {
-	FSRef fsRef;
+    FSRef fsRef;
     
-	if (CFURLGetFSRef((CFURLRef)self, &fsRef))
+    if (CFURLGetFSRef((CFURLRef)self, &fsRef))
     {
-		AliasHandle aliasHandle;
-		OSErr err = FSNewAliasMinimal(&fsRef, &aliasHandle);
+        AliasHandle aliasHandle;
+        OSErr err = FSNewAliasMinimal(&fsRef, &aliasHandle);
         
-		if (err == noErr)
+        if (err == noErr)
         {
-			Size aliasSize = GetAliasSize(aliasHandle);
-			return [NSData dataWithBytes:*aliasHandle length:aliasSize];			
-		}
+            Size aliasSize = GetAliasSize(aliasHandle);
+            return [NSData dataWithBytes:*aliasHandle length:aliasSize];            
+        }
         else
         {
-			NSLog(@"Failed to create alias record (%d) for URL %@", err, self);
-		}
-	}
+            NSLog(@"Failed to create alias record (%d) for URL %@", err, self);
+        }
+    }
     else
     {
-		NSLog(@"Failed to create FSRef from URL %@", self);
-	}
+        NSLog(@"Failed to create FSRef from URL %@", self);
+    }
     
-	return nil;
+    return nil;
 }
 
 @end

@@ -10,7 +10,7 @@
 
 @class ProjectDocument;
 @interface ASProject : NSObject <ASManagerDelegate> {
-	ProjectDocument *mDocument;
+    ProjectDocument *mDocument;
 }
 + (ASProject*)projectWithDocument:(ProjectDocument*)doc;
 - (void)setDocument:(ProjectDocument*)doc;

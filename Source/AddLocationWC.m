@@ -13,32 +13,32 @@
 
 - (id)init
 {
-	if (self = [super initWithWindowNibName:@"AddLocation"])
+    if (self = [super initWithWindowNibName:@"AddLocation"])
     {
-	}
-	
+    }
+    
     return self;
 }
 
 - (void)willShow
 {
-	[mPopUpLocation removeAllItems];
-	[mPopUpLocation addItemsWithTitles:[[[self projectProvider] projectController] smartPaths]];
+    [mPopUpLocation removeAllItems];
+    [mPopUpLocation addItemsWithTitles:[[[self projectProvider] projectController] smartPaths]];
 }
 
 - (NSString *)location
 {
-	return [mPopUpLocation titleOfSelectedItem];
+    return [mPopUpLocation titleOfSelectedItem];
 }
 
 - (IBAction)cancel:(id)sender
 {
-	[self hide];	
+    [self hide];    
 }
 
 - (IBAction)add:(id)sender
 {
-	[self hideWithCode:1];	
+    [self hideWithCode:1];    
 }
 
 @end

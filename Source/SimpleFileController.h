@@ -11,8 +11,8 @@
 
 @interface SimpleFileController : NSObject<FileControllerProtocol>
 {
-	NSMutableArray *strings;
-	NSString *path;
+    NSMutableArray *strings;
+    NSString *path;
 }
 @property (strong) NSString *path;
 

@@ -20,18 +20,18 @@
 
 @interface FileController : AbstractController <ProjectLabelPersistent, FileControllerProtocol>
 {
-	FileModel		*mBaseFileModel;
-	FileModel		*mFileModel;	
-	
-	// Variables (used for performance)
-	FMModule		*mFileModule;           // associated file module (if any exists for this type of file)
-	NSString		*mSmartPath;
-	
-	// Temporary (display only)
-	NSMutableArray	*mStatusDescription;    // description of each status icon used by the tooltips
-	NSRect			mStatusImageRect;       // last rect used to display the status icons (currently only in project window)
-	BOOL			mMarkUsed;              // used to indicate the file controller owning the selected string controller(s)
-	NSMutableSet	*mStringsLabelIndexes;  // set of all labels used by the strings owned by this file controller
+    FileModel        *mBaseFileModel;
+    FileModel        *mFileModel;    
+    
+    // Variables (used for performance)
+    FMModule        *mFileModule;           // associated file module (if any exists for this type of file)
+    NSString        *mSmartPath;
+    
+    // Temporary (display only)
+    NSMutableArray    *mStatusDescription;    // description of each status icon used by the tooltips
+    NSRect            mStatusImageRect;       // last rect used to display the status icons (currently only in project window)
+    BOOL            mMarkUsed;              // used to indicate the file controller owning the selected string controller(s)
+    NSMutableSet    *mStringsLabelIndexes;  // set of all labels used by the strings owned by this file controller
 }
 
 - (void)clearCache; // for subclass only

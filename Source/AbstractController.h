@@ -15,10 +15,10 @@
 @interface AbstractController : NSObject
 {
     BOOL    mOperationRunning;
-	
-	// temporary - cache only
-	long			mLabelIndexes;
-	NSMutableString	*mLabelString;
+    
+    // temporary - cache only
+    long            mLabelIndexes;
+    NSMutableString    *mLabelString;
 }
 
 @property (nonatomic, weak) id parent;

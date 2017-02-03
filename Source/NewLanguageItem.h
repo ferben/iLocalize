@@ -9,10 +9,10 @@
 #import "AZListSelectionView.h"
 
 @interface NewLanguageItem : NSObject<AZListSelectionViewItem> {
-	NSString	*mLanguage;
-	NSString	*mDisplay;
-	BOOL		mIsBaseLanguage;
-	BOOL		mImport;
+    NSString    *mLanguage;
+    NSString    *mDisplay;
+    BOOL        mIsBaseLanguage;
+    BOOL        mImport;
 }
 
 + (id)itemWithLanguage:(NSString*)language;

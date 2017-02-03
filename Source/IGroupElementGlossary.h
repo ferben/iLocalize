@@ -11,8 +11,8 @@
 @class Glossary;
 
 @interface IGroupElementGlossary : IGroupElement {
-	float score;
-	Glossary *glossary;
+    float score;
+    Glossary *glossary;
 }
 
 @property float score;

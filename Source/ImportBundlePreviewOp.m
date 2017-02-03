@@ -43,7 +43,7 @@
 
 - (NSString *)baseLanguage
 {
-	return [[self projectController] baseLanguage];
+    return [[self projectController] baseLanguage];
 }
 
 - (NSArray *)getAllSourceRelativeFiles
@@ -68,14 +68,14 @@
 
 - (BOOL)shouldUpdateProjectFile:(NSString *)relativeProjectFile sourceFile:(NSString *)relativeSourceFile
 {
-	NSString *projectAbsoluteFile = [[self projectController] absoluteProjectPathFromRelativePath:relativeProjectFile];
+    NSString *projectAbsoluteFile = [[self projectController] absoluteProjectPathFromRelativePath:relativeProjectFile];
     NSString *sourceAbsoluteFile = [sourcePath.sourcePath stringByAppendingPathComponent:relativeSourceFile];
-	
-	// Check first by using a binary comparison if the files are identical.
-	if ([projectAbsoluteFile isPathContentEqualsToPath:sourceAbsoluteFile])
+    
+    // Check first by using a binary comparison if the files are identical.
+    if ([projectAbsoluteFile isPathContentEqualsToPath:sourceAbsoluteFile])
     {
-		return NO;
-	}
+        return NO;
+    }
     else
     {
         return YES;
@@ -104,12 +104,12 @@
 
 - (BOOL)needsToRebase
 {
-	return ([[self filesToAdd] count]+[[self filesToUpdate] count]+[[self filesToDelete] count]) > 0;
+    return ([[self filesToAdd] count]+[[self filesToUpdate] count]+[[self filesToDelete] count]) > 0;
 }
 
 - (void)execute
 {
-	[self setOperationName:NSLocalizedString(@"Analyzing Bundle for Changes…", nil)];
+    [self setOperationName:NSLocalizedString(@"Analyzing Bundle for Changes…", nil)];
 
     [mFilesToAdd removeAllObjects];
     [mFilesToUpdate removeAllObjects];
@@ -117,86 +117,86 @@
     [mFilesIdentical removeAllObjects];
     
     // Build the list of all kinds of files using the project controller's list of files and the source files
-	NSArray *allSourceRelativeFiles = [self getAllSourceRelativeFiles];
+    NSArray *allSourceRelativeFiles = [self getAllSourceRelativeFiles];
     [mFilesToAdd addObjectsFromArray:allSourceRelativeFiles];
     
-	NSArray *fcs = [[[self projectController] baseLanguageController] fileControllers];
-	NSUInteger total = [fcs count];
-	__block int32_t executed = 0;
-	[self setOperationProgress:0];
+    NSArray *fcs = [[[self projectController] baseLanguageController] fileControllers];
+    NSUInteger total = [fcs count];
+    __block int32_t executed = 0;
+    [self setOperationProgress:0];
 
-	[fcs enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id obj, NSUInteger idx, BOOL *stop)
+    [fcs enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id obj, NSUInteger idx, BOOL *stop)
     {
-		FileController *projectBaseFileController = obj;
+        FileController *projectBaseFileController = obj;
 
         // Skip local file
-		if ([projectBaseFileController isLocal])
+        if ([projectBaseFileController isLocal])
             return;
-		
-        NSString *projectRelativeBaseFile = [projectBaseFileController relativeFilePath];	
-		
-		NSString *sp;
         
-		for (sp in [FileTool equivalentLanguagePaths:projectRelativeBaseFile])
+        NSString *projectRelativeBaseFile = [projectBaseFileController relativeFilePath];    
+        
+        NSString *sp;
+        
+        for (sp in [FileTool equivalentLanguagePaths:projectRelativeBaseFile])
         {
-			if ([allSourceRelativeFiles containsObject:sp])
+            if ([allSourceRelativeFiles containsObject:sp])
                 break;
-		}
-		
-		if (sp)
+        }
+        
+        if (sp)
         {
-			// File exists in the source... now see if the file needs to be updated
-			if ([self shouldUpdateProjectFile:projectRelativeBaseFile sourceFile:sp])
+            // File exists in the source... now see if the file needs to be updated
+            if ([self shouldUpdateProjectFile:projectRelativeBaseFile sourceFile:sp])
             {
-				// File should be updated
-				@synchronized(self)
+                // File should be updated
+                @synchronized(self)
                 {
-					[mFilesToUpdate addObject:sp];
-				}
-			}
+                    [mFilesToUpdate addObject:sp];
+                }
+            }
             else
             {
-				// File is identical
-				@synchronized(self)
+                // File is identical
+                @synchronized(self)
                 {
-					[mFilesIdentical addObject:projectRelativeBaseFile];
-				}
-			}
+                    [mFilesIdentical addObject:projectRelativeBaseFile];
+                }
+            }
             
-			// The file exists in the project, so it doesn't count as a "new" file
-			@synchronized(self)
+            // The file exists in the project, so it doesn't count as a "new" file
+            @synchronized(self)
             {
-				[mFilesToAdd removeObject:sp];
-			}
-		}
+                [mFilesToAdd removeObject:sp];
+            }
+        }
         else
         {
-			// File doesn't exist in the source, it has to be deleted
-			@synchronized(self)
+            // File doesn't exist in the source, it has to be deleted
+            @synchronized(self)
             {
-				[mFilesToDelete addObject:projectRelativeBaseFile];
-			}
-		}			
-		
-		
-		int32_t current = OSAtomicAdd32(1, &executed);
-		[self setOperationProgress:(float)current/total];
-		
-		*stop = [self cancel];
-	}];
-	
-	// Make sure to update the import diff
-	[importDiff clear];		
-	[importDiff setSource:[self sourcePath].sourcePath];			
-	[importDiff addFilesToAdd:[self filesToAdd]];
-	[importDiff addFilesToDelete:[self filesToDelete]];
-	[importDiff addFilesToUpdate:[self filesToUpdate]];
-	[importDiff addFilesIdentical:[self filesIdentical]];	    
+                [mFilesToDelete addObject:projectRelativeBaseFile];
+            }
+        }            
+        
+        
+        int32_t current = OSAtomicAdd32(1, &executed);
+        [self setOperationProgress:(float)current/total];
+        
+        *stop = [self cancel];
+    }];
+    
+    // Make sure to update the import diff
+    [importDiff clear];        
+    [importDiff setSource:[self sourcePath].sourcePath];            
+    [importDiff addFilesToAdd:[self filesToAdd]];
+    [importDiff addFilesToDelete:[self filesToDelete]];
+    [importDiff addFilesToUpdate:[self filesToUpdate]];
+    [importDiff addFilesIdentical:[self filesIdentical]];        
 }
 
 - (BOOL)cancellable
 {
-	return YES;
+    return YES;
 }
 
 @end

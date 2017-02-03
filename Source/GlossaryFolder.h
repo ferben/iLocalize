@@ -12,22 +12,22 @@
  Manages a folder containing glossaries.
  */
 @interface GlossaryFolder : NSObject {
-	// The name of the folder used for display purpose only
-	NSString *name;
-	
-	// The path representing the folder
-	NSString *path;
-	
-	// Dictionary of <file>=><Glossary>.
-	AZOrderedDictionary *glossaryMap;
-	
-	// Flag that indicates if this folder is local to a project
-	BOOL boundToProject;
-	
-	// Flag that indicates if this folder can be removed. The following folders cannot be removed:
-	// - the default global folder (../Library/Application Support/iLocalize/Glossaries)
-	// - each project's local folder
-	BOOL deletable;
+    // The name of the folder used for display purpose only
+    NSString *name;
+    
+    // The path representing the folder
+    NSString *path;
+    
+    // Dictionary of <file>=><Glossary>.
+    AZOrderedDictionary *glossaryMap;
+    
+    // Flag that indicates if this folder is local to a project
+    BOOL boundToProject;
+    
+    // Flag that indicates if this folder can be removed. The following folders cannot be removed:
+    // - the default global folder (../Library/Application Support/iLocalize/Glossaries)
+    // - each project's local folder
+    BOOL deletable;
 }
 @property (strong) NSString *name;
 @property (strong) NSString* path;

@@ -24,64 +24,64 @@ static id _shared = nil;
 
 + (void)initialize
 {
-	NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     
     dic[@"alternateTranslationLimitEnable"] = @YES;
-	dic[@"alternateTranslationLimit"] = @10;
+    dic[@"alternateTranslationLimit"] = @10;
     
-	dic[@"glossaryMatchLimitEnable"] = @YES;
-	dic[@"glossaryMatchLimit"] = @10;
+    dic[@"glossaryMatchLimitEnable"] = @YES;
+    dic[@"glossaryMatchLimit"] = @10;
     
-	dic[@"alternateTranslationThreshold"] = @1;
-	dic[@"glossaryMatchThreshold"] = @1;
+    dic[@"alternateTranslationThreshold"] = @1;
+    dic[@"glossaryMatchThreshold"] = @1;
     
     [[NSUserDefaults standardUserDefaults] registerDefaults:dic];
 }
 
 - (id)init
 {
-	if (self = [super init])
+    if (self = [super init])
     {
         // 2016-01-23 fd: There is no PreferencesInspectors.xib at all?!?
         
         // [NSBundle loadNibNamed:@"PreferencesInspectors" owner:self];
-	}
+    }
     
-	return self;
+    return self;
 }
 
 #pragma mark -
 
 - (BOOL)alternateTranslationLimitEnable
 {
-	return [[NSUserDefaults standardUserDefaults] boolForKey:@"alternateTranslationLimitEnable"];
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"alternateTranslationLimitEnable"];
 }
 
 - (NSInteger)alternateTranslationLimit
 {
-	return [[NSUserDefaults standardUserDefaults] integerForKey:@"alternateTranslationLimit"];
+    return [[NSUserDefaults standardUserDefaults] integerForKey:@"alternateTranslationLimit"];
 }
 
 - (NSInteger)alternateTranslationThreshold
 {
-	return [[NSUserDefaults standardUserDefaults] integerForKey:@"alternateTranslationThreshold"];
+    return [[NSUserDefaults standardUserDefaults] integerForKey:@"alternateTranslationThreshold"];
 }
 
 #pragma mark -
 
 - (BOOL)glossaryMatchLimitEnable
 {
-	return [[NSUserDefaults standardUserDefaults] boolForKey:@"glossaryMatchLimitEnable"];
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"glossaryMatchLimitEnable"];
 }
 
 - (NSInteger)glossaryMatchLimit
 {
-	return [[NSUserDefaults standardUserDefaults] integerForKey:@"glossaryMatchLimit"];
+    return [[NSUserDefaults standardUserDefaults] integerForKey:@"glossaryMatchLimit"];
 }
 
 - (NSInteger)glossaryMatchThreshold
 {
-	return [[NSUserDefaults standardUserDefaults] integerForKey:@"glossaryMatchThreshold"];
+    return [[NSUserDefaults standardUserDefaults] integerForKey:@"glossaryMatchThreshold"];
 }
 
 @end

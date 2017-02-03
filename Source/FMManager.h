@@ -14,8 +14,8 @@
 @class FileController;
 
 @interface FMManager : NSObject {
-	NSMutableDictionary			*mFileModules;
-	NSMutableDictionary			*mContexts;
+    NSMutableDictionary            *mFileModules;
+    NSMutableDictionary            *mContexts;
 }
 
 + (id)shared;

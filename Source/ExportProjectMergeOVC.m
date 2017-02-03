@@ -16,10 +16,10 @@
 
 - (id)init
 {
-	if((self = [super initWithNibName:@"ExportProjectMerge" bundle:nil])) {
-		pathNodeSelectionView = [[AZPathNodeSelectionView alloc] init];
-	}
-	return self;
+    if((self = [super initWithNibName:@"ExportProjectMerge" bundle:nil])) {
+        pathNodeSelectionView = [[AZPathNodeSelectionView alloc] init];
+    }
+    return self;
 }
 
 
@@ -29,10 +29,10 @@
     for(NSString *file in self.settings.filesToCopy) {
         [self.node addRelativePath:file];
     }
-	pathNodeSelectionView.outlineView = outlineView;
-	pathNodeSelectionView.rootPath = self.node;
+    pathNodeSelectionView.outlineView = outlineView;
+    pathNodeSelectionView.rootPath = self.node;
     [pathNodeSelectionView selectAll];
-	[pathNodeSelectionView refresh];	
+    [pathNodeSelectionView refresh];    
 }
 
 - (void)willContinue

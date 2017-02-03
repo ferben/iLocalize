@@ -16,59 +16,59 @@
 
 + (NSString*)writableExtension
 {
-	return @"strings";
+    return @"strings";
 }
 - (id) init
 {
-	self = [super init];
-	
+    self = [super init];
+    
     if (self != nil)
     {
-		stringsContentModel = nil;
-	}
-	
+        stringsContentModel = nil;
+    }
+    
     return self;
 }
 
 
 - (void)buildHeader
 {
-	stringsContentModel = [[StringsContentModel alloc] init];
-	row = 0;
+    stringsContentModel = [[StringsContentModel alloc] init];
+    row = 0;
 }
 
 - (void)buildFooter
 {
-	StringsEngine *engine = [StringsEngine engineWithConsole:nil];
-	NSString *encodedStrings = [engine encodeStringModels:stringsContentModel baseStringModels:nil
-												skipEmpty:NO format:STRINGS_FORMAT_APPLE_STRINGS
-												 encoding:ENCODING_UNICODE];
-	[self.content appendString:encodedStrings];
-	stringsContentModel = nil;
+    StringsEngine *engine = [StringsEngine engineWithConsole:nil];
+    NSString *encodedStrings = [engine encodeStringModels:stringsContentModel baseStringModels:nil
+                                                skipEmpty:NO format:STRINGS_FORMAT_APPLE_STRINGS
+                                                 encoding:ENCODING_UNICODE];
+    [self.content appendString:encodedStrings];
+    stringsContentModel = nil;
 }
 
 - (void)buildFileHeader:(id<FileControllerProtocol>)fc
-{	
-	// there is no nothing of file segment in strings
+{    
+    // there is no nothing of file segment in strings
 }
 
 - (void)buildFileFooter:(id<FileControllerProtocol>)fc
 {
-	// there is no nothing of file segment in strings
+    // there is no nothing of file segment in strings
 }
 
 - (void)buildStringWithString:(id<StringControllerProtocol>)sc index:(NSUInteger)index globalIndex:(NSUInteger)globalIndex file:(id<FileControllerProtocol>)fc
 {
-	StringModel *sm = [StringModel model];
-	[sm setKey:sc.base as:STRING_QUOTED atRow:row];
-	[sm setValue:sc.translation as:STRING_QUOTED atRow:row];
+    StringModel *sm = [StringModel model];
+    [sm setKey:sc.base as:STRING_QUOTED atRow:row];
+    [sm setValue:sc.translation as:STRING_QUOTED atRow:row];
     [sm setComment:sc.baseComment as:STRING_QUOTED atRow:row];
-	[stringsContentModel addStringModel:sm];
+    [stringsContentModel addStringModel:sm];
     
-	if (row == 0)
+    if (row == 0)
     {
-		row = 1;
-	}
+        row = 1;
+    }
 }
 
 

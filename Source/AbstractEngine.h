@@ -16,7 +16,7 @@
 
 @interface AbstractEngine : NSObject
 {
-	EngineProvider	*mEngineProvider;
+    EngineProvider    *mEngineProvider;
 }
 
 - (void)setEngineProvider:(EngineProvider *)factory;

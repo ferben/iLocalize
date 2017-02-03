@@ -22,130 +22,130 @@
 
 + (id)operationWithProjectProvider:(id<ProjectProvider>)provider
 {
-	AbstractOperation *op = [[self alloc] initWithProjectProvider:provider];
-	return op;
+    AbstractOperation *op = [[self alloc] initWithProjectProvider:provider];
+    return op;
 }
 
 - (id)initWithProjectProvider:(id<ProjectProvider>)provider
 {
-	if (self = [super init])
+    if (self = [super init])
     {
-		mProjectProvider = provider;
-		mAbstractWCInstances = [[NSMutableDictionary alloc] init];
-		[self awake];
-	}
+        mProjectProvider = provider;
+        mAbstractWCInstances = [[NSMutableDictionary alloc] init];
+        [self awake];
+    }
     
-	return self;
+    return self;
 }
 
 
 - (void)awake
 {
-	
+    
 }
 
 - (id<ProjectProvider>)projectProvider
 {
-	return mProjectProvider;
+    return mProjectProvider;
 }
 
 - (ProjectController *)projectController
 {
-	return [[self projectProvider] projectController];
+    return [[self projectProvider] projectController];
 }
 
 - (ProjectWC *)projectWC
 {
-	return [[self projectProvider] projectWC];
+    return [[self projectProvider] projectWC];
 }
 
 - (ProjectFilesController *)projectFiles
 {
-	return [[self projectWC] projectFiles];
+    return [[self projectWC] projectFiles];
 }
 
 - (ProjectExplorerController *)projectExplorer
 {
-	return [[self projectWC] projectExplorer];
+    return [[self projectWC] projectExplorer];
 }
 
 - (NSWindow *)projectWindow
 {
-	return [[self projectWC] window];
+    return [[self projectWC] window];
 }
 
 - (NSPopUpButton *)languagesPopUp
 {
-	return [[self projectWC] languagesPopUp];
+    return [[self projectWC] languagesPopUp];
 }
 
 - (NSArrayController *)languagesController
 {
-	return [[self projectWC] languagesController];
+    return [[self projectWC] languagesController];
 }
 
 - (NSArrayController *)filesController
 {
-	return [[self projectWC] filesController];
+    return [[self projectWC] filesController];
 }
 
 - (LanguageController *)selectedLanguageController
 {
-	return [[self projectWC] selectedLanguageController];
+    return [[self projectWC] selectedLanguageController];
 }
 
 - (AbstractWC *)instanceOfAbstractWC:(Class)c
 {
-	AbstractWC *wc = [[c alloc] init];
-	[wc setParentWindow:[self projectWindow]];
-	[wc setProjectProvider:[self projectProvider]];			
-	return wc;
+    AbstractWC *wc = [[c alloc] init];
+    [wc setParentWindow:[self projectWindow]];
+    [wc setProjectProvider:[self projectProvider]];            
+    return wc;
 }
 
 - (AbstractWC *)instanceOfAbstractWCName:(NSString *)className
 {
-	id instance = mAbstractWCInstances[className];
+    id instance = mAbstractWCInstances[className];
     
-	if (instance == NULL)
+    if (instance == NULL)
     {
-		instance = [self instanceOfAbstractWC:NSClassFromString(className)];
-		mAbstractWCInstances[className] = instance;
-	}
+        instance = [self instanceOfAbstractWC:NSClassFromString(className)];
+        mAbstractWCInstances[className] = instance;
+    }
     
-	return instance;
+    return instance;
 }
 
 - (OperationWC *)operation
 {
-	return [[self projectProvider] operation];
+    return [[self projectProvider] operation];
 }
 
 - (OperationDispatcher *)operationDispatcher
 {
-	return [[self projectProvider] operationDispatcher];
+    return [[self projectProvider] operationDispatcher];
 }
 
 - (EngineProvider *)engineProvider
 {
-	return [[self projectProvider] engineProvider];
+    return [[self projectProvider] engineProvider];
 }
 
 - (Console *)console
 {
-	return [[self projectProvider] console];
+    return [[self projectProvider] console];
 }
 
 - (void)refreshListOfFiles
 {
-	[[[self projectWC] selectedLanguageController] filteredFileControllersDidChange];	
+    [[[self projectWC] selectedLanguageController] filteredFileControllersDidChange];    
 }
 
 - (void)close
 {
-	if (self.didCloseCallback)
+    if (self.didCloseCallback)
     {
-		self.didCloseCallback();
-	}
+        self.didCloseCallback();
+    }
 }
 
 @end

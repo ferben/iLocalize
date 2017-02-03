@@ -10,8 +10,8 @@
 #import "ProjectProvider.h"
 
 @interface ProjectDetails : NSViewController {
-	NSUInteger resizingMask;
-	BOOL displayed;
+    NSUInteger resizingMask;
+    BOOL displayed;
 }
 
 @property (assign) ProjectWC *projectWC;

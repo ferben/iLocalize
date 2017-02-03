@@ -8,7 +8,7 @@
 
 #import "ProjectMenu.h"
 
-@interface ProjectMenuView : ProjectMenu {	
+@interface ProjectMenuView : ProjectMenu {    
 
 }
 

@@ -9,10 +9,10 @@
 @class TooltipWindow;
 
 @interface ProjectWindow : NSWindow {
-	NSTimer *mToolTipTimer;
-	TooltipWindow *mTooltipWindow;
-	BOOL mMouseDidMove;
-	BOOL mTooltipDisplayed;
+    NSTimer *mToolTipTimer;
+    TooltipWindow *mTooltipWindow;
+    BOOL mMouseDidMove;
+    BOOL mTooltipDisplayed;
 }
 
 - (void)showTooltip:(NSString*)tt;

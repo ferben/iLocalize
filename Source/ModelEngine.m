@@ -37,42 +37,42 @@
 
 - (LanguageModel *)createLanguageModelForLanguage:(NSString *)language
 {
-	return [self createLanguageModelForLanguage:language identical:NO layout:NO copyOnlyIfExists:NO source:NULL];
+    return [self createLanguageModelForLanguage:language identical:NO layout:NO copyOnlyIfExists:NO source:NULL];
 }
 
 - (NSMutableSet *)relativeFilesOfLanguage:(NSString *)language path:(NSString *)path
 {
-	NSMutableSet *set = [NSMutableSet set];
+    NSMutableSet *set = [NSMutableSet set];
     
-	if (path != nil)
+    if (path != nil)
     {
-		NSDirectoryEnumerator *enumerator = [[NSFileManager defaultManager] enumeratorAtPath:path];
-		NSString *relativeFilePath;
+        NSDirectoryEnumerator *enumerator = [[NSFileManager defaultManager] enumeratorAtPath:path];
+        NSString *relativeFilePath;
         
-		while ((relativeFilePath = [enumerator nextObject]))
+        while ((relativeFilePath = [enumerator nextObject]))
         {
-			NSString *file = [path stringByAppendingPathComponent:relativeFilePath];
+            NSString *file = [path stringByAppendingPathComponent:relativeFilePath];
             
-			if ([[FileTool shared] isFileAtomic:file])
-				[enumerator skipDescendents];
-			
-			if ([[relativeFilePath lastPathComponent] isEqualToString:@"Resources Disabled"])
-				[enumerator skipDescendents];
-			
-			if ([file isValidResourceFile] && [[LanguageTool languageOfFile:relativeFilePath] isEquivalentToLanguage:language])
+            if ([[FileTool shared] isFileAtomic:file])
+                [enumerator skipDescendents];
+            
+            if ([[relativeFilePath lastPathComponent] isEqualToString:@"Resources Disabled"])
+                [enumerator skipDescendents];
+            
+            if ([file isValidResourceFile] && [[LanguageTool languageOfFile:relativeFilePath] isEquivalentToLanguage:language])
             {
-				// The relative file path must begin with /.... it is the way the model expect it
-				if (![relativeFilePath hasPrefix:@"/"])
+                // The relative file path must begin with /.... it is the way the model expect it
+                if (![relativeFilePath hasPrefix:@"/"])
                 {
-					relativeFilePath = [NSString stringWithFormat:@"/%@", relativeFilePath];
-				}
+                    relativeFilePath = [NSString stringWithFormat:@"/%@", relativeFilePath];
+                }
                 
-				[set addObject:relativeFilePath];				
-			}
-		}		
-	}
+                [set addObject:relativeFilePath];                
+            }
+        }        
+    }
     
-	return set;
+    return set;
 }
 
 /* The identical flag is used to know if the external source path is the same version as the base language (in this case, we copy
@@ -85,14 +85,14 @@ all the localized from the external path) or not (in this case, we use the base 
                                  copyOnlyIfExists:(BOOL)copyOnlyIfExists
                                            source:(BundleSource *)source
 {
-	// Reset the "Apply to all" effect of the conflict resolver for each language (see PowerPoint structure file if changes need to be done)
-	[ImportFilesConflict reset];
-	
-	LanguageModel *languageModel = [LanguageModel model];
-	[languageModel setLanguage:language];
+    // Reset the "Apply to all" effect of the conflict resolver for each language (see PowerPoint structure file if changes need to be done)
+    [ImportFilesConflict reset];
+    
+    LanguageModel *languageModel = [LanguageModel model];
+    [languageModel setLanguage:language];
 
-	// Keep track of the local files (i.e. only present in the localized langugage)
-	NSMutableSet *localFiles = [NSMutableSet set];
+    // Keep track of the local files (i.e. only present in the localized langugage)
+    NSMutableSet *localFiles = [NSMutableSet set];
     
     // todo
     for (NSString *path in @[])
@@ -112,7 +112,7 @@ all the localized from the external path) or not (in this case, we use the base 
             [localFiles addObject:[delta stringByAppendingPathComponent:relativeFile]];
         }
     }
-	    
+        
     NSArray *fileModels = [[[self projectModel] baseLanguageModel] fileModels];
     
     [fileModels enumerateObjectsWithOptions:CONCURRENT_OP_OPTIONS usingBlock:^(id obj, NSUInteger idx, BOOL *stop)
@@ -125,38 +125,38 @@ all the localized from the external path) or not (in this case, we use the base 
             return;
         }
         
-		[[self operation] increment];
+        [[self operation] increment];
         
-		FileModel *fileModel = NULL;
+        FileModel *fileModel = NULL;
         
-		if (source)
+        if (source)
         {
-			// Source available			
-		 	if (identical)
+            // Source available            
+             if (identical)
             {
-				// If the source language is identical (same version) as the base language, copy the source language file
-				fileModel = [self createFileModelForLanguage:language
-											 sourceFileModel:baseFileModel
+                // If the source language is identical (same version) as the base language, copy the source language file
+                fileModel = [self createFileModelForLanguage:language
+                                             sourceFileModel:baseFileModel
                                             copyOnlyIfExists:copyOnlyIfExists
-                                     translateFromSourcePath:source.sourcePath];				
-			}
+                                     translateFromSourcePath:source.sourcePath];                
+            }
             else
             {
-				// Otherwise, copy the base language file and perform an update
-				fileModel = [self createFileModelForLanguage:language
-											 sourceFileModel:baseFileModel
-													  layout:layout
+                // Otherwise, copy the base language file and perform an update
+                fileModel = [self createFileModelForLanguage:language
+                                             sourceFileModel:baseFileModel
+                                                      layout:layout
                                             copyOnlyIfExists:copyOnlyIfExists
-										updateFromSourcePath:source.sourcePath];							
-			}
-		}
+                                        updateFromSourcePath:source.sourcePath];                            
+            }
+        }
         else
         {
-			// No source available, create from base file model (and copy the base file to the localized path)
-			fileModel = [self createFileModelForLanguage:language
-										 sourceFileModel:baseFileModel
-												copyFile:YES];
-		}
+            // No source available, create from base file model (and copy the base file to the localized path)
+            fileModel = [self createFileModelForLanguage:language
+                                         sourceFileModel:baseFileModel
+                                                copyFile:YES];
+        }
         
         @synchronized(self)
         {
@@ -169,78 +169,78 @@ all the localized from the external path) or not (in this case, we use the base 
             [languageModel addFileModel:fileModel];            
         }
     }];
-	
-	// Create now the "local" localized files: that is, files that are in the localized language but not in the base language.	
-	for (NSString *relativeFile in localFiles)
+    
+    // Create now the "local" localized files: that is, files that are in the localized language but not in the base language.    
+    for (NSString *relativeFile in localFiles)
     {
-		NSString *sourceAbsolutePath = [source.sourcePath stringByAppendingPathComponent:relativeFile];
-		NSString *targetAbsolutePath = [[[self projectModel] projectSourceFilePath] stringByAppendingPathComponent:relativeFile];
-		
-		[[self console] addLog:[NSString stringWithFormat:@"Copy local file \"%@\" to \"%@\"", sourceAbsolutePath, targetAbsolutePath] class:[self class]];
-				
-		[[FileTool shared] preparePath:targetAbsolutePath 
-								atomic:YES
-					 skipLastComponent:YES];
-		
-		[[FileTool shared] copySourceFile:sourceAbsolutePath
-							toReplaceFile:targetAbsolutePath
-								  console:[self console]];
-							
-		FileModel *fm = [self createFileModelFromProjectFile:[[self projectModel] absoluteProjectPathFromRelativePath:relativeFile]];
-		[fm setLocal:YES];
-		[languageModel addFileModel:fm];
-	}
-	
-	return languageModel;
+        NSString *sourceAbsolutePath = [source.sourcePath stringByAppendingPathComponent:relativeFile];
+        NSString *targetAbsolutePath = [[[self projectModel] projectSourceFilePath] stringByAppendingPathComponent:relativeFile];
+        
+        [[self console] addLog:[NSString stringWithFormat:@"Copy local file \"%@\" to \"%@\"", sourceAbsolutePath, targetAbsolutePath] class:[self class]];
+                
+        [[FileTool shared] preparePath:targetAbsolutePath 
+                                atomic:YES
+                     skipLastComponent:YES];
+        
+        [[FileTool shared] copySourceFile:sourceAbsolutePath
+                            toReplaceFile:targetAbsolutePath
+                                  console:[self console]];
+                            
+        FileModel *fm = [self createFileModelFromProjectFile:[[self projectModel] absoluteProjectPathFromRelativePath:relativeFile]];
+        [fm setLocal:YES];
+        [languageModel addFileModel:fm];
+    }
+    
+    return languageModel;
 }
 
 #pragma mark -
 
-/*	Create a file model based on a file (and its content).
-	Side-effet:	-
+/*    Create a file model based on a file (and its content).
+    Side-effet:    -
 */
 
 - (FileModel *)createFileModelFromProjectFile:(NSString *)file
 {
-	FileModel *fileModel = [FileModel modelWithRelativeFilePath:[[self projectModel] relativePathFromAbsoluteProjectPath:file]];
-	
-	FMEngine *engine = [self fileModuleEngineForFile:file];
-	
-	if ([engine loadContentsOnlyWhenDisplaying])
+    FileModel *fileModel = [FileModel modelWithRelativeFilePath:[[self projectModel] relativePathFromAbsoluteProjectPath:file]];
+    
+    FMEngine *engine = [self fileModuleEngineForFile:file];
+    
+    if ([engine loadContentsOnlyWhenDisplaying])
     {
-		[engine loadEncoding:file intoFileModel:fileModel];
-	}
+        [engine loadEncoding:file intoFileModel:fileModel];
+    }
     else
     {
-		[engine loadFile:file intoFileModel:fileModel];		
-	}
+        [engine loadFile:file intoFileModel:fileModel];        
+    }
     
-	[fileModel setModificationDate:[file pathModificationDate]];
-	
-	return fileModel;
+    [fileModel setModificationDate:[file pathModificationDate]];
+    
+    return fileModel;
 }
 
-/*	Create a copy of a file model for another language and copy the corresponding file.
-	Side-effet:	-
+/*    Create a copy of a file model for another language and copy the corresponding file.
+    Side-effet:    -
     Called from: self
 */
 
 - (FileModel *)createFileModelForLanguage:(NSString*)language sourceFileModel:(FileModel*)sourceFileModel
-{	
-	// Create the new file model with a translated path
-	NSString *relativeFilePath = [FileTool translatePath:[sourceFileModel relativeFilePath] toLanguage:language keepLanguageFormat:YES];
-	FileModel *fileModel = [FileModel modelWithRelativeFilePath:relativeFilePath];
-	[fileModel setFormat:[sourceFileModel format]];
+{    
+    // Create the new file model with a translated path
+    NSString *relativeFilePath = [FileTool translatePath:[sourceFileModel relativeFilePath] toLanguage:language keepLanguageFormat:YES];
+    FileModel *fileModel = [FileModel modelWithRelativeFilePath:relativeFilePath];
+    [fileModel setFormat:[sourceFileModel format]];
     
-	BOOL emptyValue = ![[NSUserDefaults standardUserDefaults] boolForKey:@"autoFillTranslationWithBaseForNewLanguage"];
-	FMEngine *engine = [self fileModuleEngineForFile:relativeFilePath];
+    BOOL emptyValue = ![[NSUserDefaults standardUserDefaults] boolForKey:@"autoFillTranslationWithBaseForNewLanguage"];
+    FMEngine *engine = [self fileModuleEngineForFile:relativeFilePath];
     
-	if(engine)
-		[fileModel setFileModelContent:[engine duplicateFileModelContent:[sourceFileModel fileModelContent] emptyValue:emptyValue]];
-	else
-		[fileModel setFileModelContent:[[sourceFileModel fileModelContent] copy]];
+    if(engine)
+        [fileModel setFileModelContent:[engine duplicateFileModelContent:[sourceFileModel fileModelContent] emptyValue:emptyValue]];
+    else
+        [fileModel setFileModelContent:[[sourceFileModel fileModelContent] copy]];
     
-	return fileModel;
+    return fileModel;
 }
 
 /* Return a modified path by looking at the following:
@@ -251,72 +251,72 @@ all the localized from the external path) or not (in this case, we use the base 
  */
 + (NSString *)resolvePath:(NSString*)path forDefaultLanguage:(NSString*)language
 {
-	NSString *legacyLanguage = [language legacyLanguage];
+    NSString *legacyLanguage = [language legacyLanguage];
     
-	if (legacyLanguage)
+    if (legacyLanguage)
     {
-		NSString *translatedPath = [FileTool translatePath:path toLanguage:[language legacyLanguage] keepLanguageFormat:NO];
-		NSString *lproj = [FileTool languageFolderPathOfPath:translatedPath];
+        NSString *translatedPath = [FileTool translatePath:path toLanguage:[language legacyLanguage] keepLanguageFormat:NO];
+        NSString *lproj = [FileTool languageFolderPathOfPath:translatedPath];
         
-		if ([lproj isPathExisting])
+        if ([lproj isPathExisting])
         {
-			return translatedPath;
-		}			
-	}	
-	
-	NSString *isoLanguage = [language isoLanguage];
+            return translatedPath;
+        }            
+    }    
     
-	if (isoLanguage)
+    NSString *isoLanguage = [language isoLanguage];
+    
+    if (isoLanguage)
     {
-		NSString *translatedPath = [FileTool translatePath:path toLanguage:[language legacyLanguage] keepLanguageFormat:NO];
-		NSString *lproj = [FileTool languageFolderPathOfPath:translatedPath];
+        NSString *translatedPath = [FileTool translatePath:path toLanguage:[language legacyLanguage] keepLanguageFormat:NO];
+        NSString *lproj = [FileTool languageFolderPathOfPath:translatedPath];
         
-		if ([lproj isPathExisting])
+        if ([lproj isPathExisting])
         {
-			return translatedPath;
-		}			
-	}	
-	
-	return path;
+            return translatedPath;
+        }            
+    }    
+    
+    return path;
 }
 
-/*	Create a copy of a file model for another language and copy the underlying file (from inside the project).
-	Side-effet:	file is copied on disk
+/*    Create a copy of a file model for another language and copy the underlying file (from inside the project).
+    Side-effet:    file is copied on disk
     Called from: self, FileEngine
  */
 - (FileModel *)createFileModelForLanguage:(NSString*)language sourceFileModel:(FileModel*)sourceFileModel copyFile:(BOOL)copyFile
 {
-	FileModel *fileModel = [self createFileModelForLanguage:language sourceFileModel:sourceFileModel];
+    FileModel *fileModel = [self createFileModelForLanguage:language sourceFileModel:sourceFileModel];
 
     if (copyFile)
     {
-		// Create the source path
-		NSString *sourceRelativePath = [sourceFileModel relativeFilePath];
-		NSString *sourceAbsolutePath = [[self projectModel] absoluteProjectPathFromRelativePath:sourceRelativePath];
-		
-		// Create the target path
-		NSString *targetRelativePath = [FileTool translatePath:sourceRelativePath toLanguage:language keepLanguageFormat:NO];
-		NSString *targetAbsolutePath = [[self projectModel] absoluteProjectPathFromRelativePath:targetRelativePath];
-		
-		// Let's see if the path already exists with the legacy version of it
-		targetAbsolutePath = [ModelEngine resolvePath:targetAbsolutePath forDefaultLanguage:language];
-		targetRelativePath = [[self projectModel] relativePathFromAbsoluteProjectPath:targetAbsolutePath];		
-				
-		[[self console] addLog:[NSString stringWithFormat:@"Copy file \"%@\" to \"%@\" (%@)", sourceAbsolutePath, targetAbsolutePath, language] class:[self class]];
+        // Create the source path
+        NSString *sourceRelativePath = [sourceFileModel relativeFilePath];
+        NSString *sourceAbsolutePath = [[self projectModel] absoluteProjectPathFromRelativePath:sourceRelativePath];
+        
+        // Create the target path
+        NSString *targetRelativePath = [FileTool translatePath:sourceRelativePath toLanguage:language keepLanguageFormat:NO];
+        NSString *targetAbsolutePath = [[self projectModel] absoluteProjectPathFromRelativePath:targetRelativePath];
+        
+        // Let's see if the path already exists with the legacy version of it
+        targetAbsolutePath = [ModelEngine resolvePath:targetAbsolutePath forDefaultLanguage:language];
+        targetRelativePath = [[self projectModel] relativePathFromAbsoluteProjectPath:targetAbsolutePath];        
+                
+        [[self console] addLog:[NSString stringWithFormat:@"Copy file \"%@\" to \"%@\" (%@)", sourceAbsolutePath, targetAbsolutePath, language] class:[self class]];
 
-		[[FileTool shared] preparePath:targetAbsolutePath 
-								atomic:YES
-					 skipLastComponent:YES];
-		
-		[[FileTool shared] copySourceFile:sourceAbsolutePath
-							toReplaceFile:targetAbsolutePath
-								  console:[self console]];
-		
-		[fileModel setRelativeFilePath:targetRelativePath];
-		[fileModel setModificationDate:[targetAbsolutePath pathModificationDate]];	
-	}
+        [[FileTool shared] preparePath:targetAbsolutePath 
+                                atomic:YES
+                     skipLastComponent:YES];
+        
+        [[FileTool shared] copySourceFile:sourceAbsolutePath
+                            toReplaceFile:targetAbsolutePath
+                                  console:[self console]];
+        
+        [fileModel setRelativeFilePath:targetRelativePath];
+        [fileModel setModificationDate:[targetAbsolutePath pathModificationDate]];    
+    }
     
-	return fileModel;
+    return fileModel;
 }
 
 - (FileModel *)createFileModelForLanguage:(NSString *)language
@@ -324,23 +324,23 @@ all the localized from the external path) or not (in this case, we use the base 
                          copyOnlyIfExists:(BOOL)copyOnlyIfExists
                   translateFromSourcePath:(NSString *)sourcePath
 {
-	NSString *sourceRelativePath = [sourceFileModel relativeFilePath];
-	NSString *sourceAbsolutePath = [[self projectModel] absoluteProjectPathFromRelativePath:sourceRelativePath];
+    NSString *sourceRelativePath = [sourceFileModel relativeFilePath];
+    NSString *sourceAbsolutePath = [[self projectModel] absoluteProjectPathFromRelativePath:sourceRelativePath];
 
     NSString *targetRelativePath = [FileTool translatePath:sourceRelativePath toLanguage:language keepLanguageFormat:YES];
-	NSString *targetAbsolutePath = [[self projectModel] absoluteProjectPathFromRelativePath:targetRelativePath];	
-	
-	NSString *localizedSourceFile = [FileTool resolveEquivalentFile:[sourcePath stringByAppendingPathComponent:targetRelativePath]];
-
-	// use the language format of the source	
-	targetAbsolutePath = [FileTool translatePath:targetAbsolutePath toLanguage:[FileTool languageOfPath:localizedSourceFile]];
+    NSString *targetAbsolutePath = [[self projectModel] absoluteProjectPathFromRelativePath:targetRelativePath];    
     
-	// change the file format if the file already exists in another format
-	targetAbsolutePath = [FileTool resolveEquivalentFile:targetAbsolutePath];
-		
-	BOOL createFromBaseLanguage = NO;
-	
-	if ([localizedSourceFile isPathExisting] == NO)
+    NSString *localizedSourceFile = [FileTool resolveEquivalentFile:[sourcePath stringByAppendingPathComponent:targetRelativePath]];
+
+    // use the language format of the source    
+    targetAbsolutePath = [FileTool translatePath:targetAbsolutePath toLanguage:[FileTool languageOfPath:localizedSourceFile]];
+    
+    // change the file format if the file already exists in another format
+    targetAbsolutePath = [FileTool resolveEquivalentFile:targetAbsolutePath];
+        
+    BOOL createFromBaseLanguage = NO;
+    
+    if ([localizedSourceFile isPathExisting] == NO)
     {
         if (copyOnlyIfExists)
         {
@@ -351,10 +351,10 @@ all the localized from the external path) or not (in this case, we use the base 
             [[self console] addLog:[NSString stringWithFormat:@"Non-existent localized source file \"%@\"", localizedSourceFile] class:[self class]];
             [[self console] addLog:[NSString stringWithFormat:@" -> Will copy instead from \"%@\"", sourceAbsolutePath] class:[self class]];
             localizedSourceFile = sourceAbsolutePath;
-			createFromBaseLanguage = YES;
+            createFromBaseLanguage = YES;
         }
-	}
-	
+    }
+    
     if (localizedSourceFile)
     {
         [[self console] addLog:[NSString stringWithFormat:@"Copy file \"%@\" to \"%@\"", localizedSourceFile, targetAbsolutePath] class:[self class]];
@@ -367,29 +367,29 @@ all the localized from the external path) or not (in this case, we use the base 
                             toReplaceFile:targetAbsolutePath
                                   console:[self console]];        
     }
-	
-	FileModel *fileModel = [self createFileModelForLanguage:language sourceFileModel:sourceFileModel usingLocalizedFile:targetAbsolutePath];
-	
-	// FIX CASE 36
-	if (createFromBaseLanguage && ([[fileModel filename] isPathNib] || [[fileModel filename] isPathStrings]))
-    {
-		/* Make sure that if a localized is created from the base language we mark each string as to be checked
-		otherwise we will end up with base strings marked as translated which is not what the translator expect
-		*/
-		NSEnumerator *enumerator = [[[fileModel fileModelContent] stringsContent] stringsEnumerator];
-		StringModel *sm;
-        
-		while ((sm = [enumerator nextObject]))
-        {
-			[sm setStatus:(1 << STRING_STATUS_TOCHECK)];
-		}		
-	}
-	
-	// Update the relative file path to the one actually existing on the disk
-	[fileModel setRelativeFilePath:[[self projectModel] relativePathFromAbsoluteProjectPath:targetAbsolutePath]];
-	[fileModel setModificationDate:[targetAbsolutePath pathModificationDate]];
     
-	return fileModel;
+    FileModel *fileModel = [self createFileModelForLanguage:language sourceFileModel:sourceFileModel usingLocalizedFile:targetAbsolutePath];
+    
+    // FIX CASE 36
+    if (createFromBaseLanguage && ([[fileModel filename] isPathNib] || [[fileModel filename] isPathStrings]))
+    {
+        /* Make sure that if a localized is created from the base language we mark each string as to be checked
+        otherwise we will end up with base strings marked as translated which is not what the translator expect
+        */
+        NSEnumerator *enumerator = [[[fileModel fileModelContent] stringsContent] stringsEnumerator];
+        StringModel *sm;
+        
+        while ((sm = [enumerator nextObject]))
+        {
+            [sm setStatus:(1 << STRING_STATUS_TOCHECK)];
+        }        
+    }
+    
+    // Update the relative file path to the one actually existing on the disk
+    [fileModel setRelativeFilePath:[[self projectModel] relativePathFromAbsoluteProjectPath:targetAbsolutePath]];
+    [fileModel setModificationDate:[targetAbsolutePath pathModificationDate]];
+    
+    return fileModel;
 }
 
 - (FileModel *)createFileModelForLanguage:(NSString*)language
@@ -398,21 +398,21 @@ all the localized from the external path) or not (in this case, we use the base 
                          copyOnlyIfExists:(BOOL)copyOnlyIfExists
                      updateFromSourcePath:(NSString*)sourcePath
 {
-	NSString *sourceRelativePath = [sourceFileModel relativeFilePath];
-	NSString *sourceAbsolutePath = [[self projectModel] absoluteProjectPathFromRelativePath:sourceRelativePath];
-	
-	NSString *targetRelativePath = [FileTool translatePath:sourceRelativePath toLanguage:language keepLanguageFormat:YES];
-	NSString *targetAbsolutePath = [[self projectModel] absoluteProjectPathFromRelativePath:targetRelativePath];
+    NSString *sourceRelativePath = [sourceFileModel relativeFilePath];
+    NSString *sourceAbsolutePath = [[self projectModel] absoluteProjectPathFromRelativePath:sourceRelativePath];
+    
+    NSString *targetRelativePath = [FileTool translatePath:sourceRelativePath toLanguage:language keepLanguageFormat:YES];
+    NSString *targetAbsolutePath = [[self projectModel] absoluteProjectPathFromRelativePath:targetRelativePath];
 
-	NSString *localizedSourceFile = [FileTool resolveEquivalentFile:[sourcePath stringByAppendingPathComponent:targetRelativePath]];
-	
-	// use the language format of the source	
-	targetAbsolutePath = [FileTool translatePath:targetAbsolutePath toLanguage:[FileTool languageOfPath:localizedSourceFile]];
+    NSString *localizedSourceFile = [FileTool resolveEquivalentFile:[sourcePath stringByAppendingPathComponent:targetRelativePath]];
+    
+    // use the language format of the source    
+    targetAbsolutePath = [FileTool translatePath:targetAbsolutePath toLanguage:[FileTool languageOfPath:localizedSourceFile]];
 
     // change the file format if the file already exists in another format
-	targetAbsolutePath = [FileTool resolveEquivalentFile:targetAbsolutePath];
-	
-	// First copy the base language file to the localized language
+    targetAbsolutePath = [FileTool resolveEquivalentFile:targetAbsolutePath];
+    
+    // First copy the base language file to the localized language
     if (    (copyOnlyIfExists && [localizedSourceFile isPathExisting])
          || !copyOnlyIfExists
        )
@@ -425,7 +425,7 @@ all the localized from the external path) or not (in this case, we use the base 
         
         [[FileTool shared] copySourceFile:sourceAbsolutePath
                             toReplaceFile:targetAbsolutePath
-                                  console:[self console]];				
+                                  console:[self console]];                
         
         // Try to translate from the external source path if the file engine can do that. Otherwise
         // we have to rely on the preferences to see what to do: do nothing, replace with external or ask user
@@ -439,8 +439,8 @@ all the localized from the external path) or not (in this case, we use the base 
             if ([localizedSourceFile isPathExisting] == NO)
             {
                 [[self console] addWarning:[NSString stringWithFormat:@"%@ does not exist", [localizedSourceFile lastPathComponent]]
-							   description:[NSString stringWithFormat:@"Localized source file \"%@\" does not exist", localizedSourceFile] 
-									 class:[self class]];
+                               description:[NSString stringWithFormat:@"Localized source file \"%@\" does not exist", localizedSourceFile] 
+                                     class:[self class]];
                 
                 localizedSourceFile = targetAbsolutePath;
             }
@@ -462,52 +462,52 @@ all the localized from the external path) or not (in this case, we use the base 
         }        
     }
 
-	FileModel *fileModel = [self createFileModelForLanguage:language sourceFileModel:sourceFileModel usingLocalizedFile:localizedSourceFile];
+    FileModel *fileModel = [self createFileModelForLanguage:language sourceFileModel:sourceFileModel usingLocalizedFile:localizedSourceFile];
     
-	// Update the relative file path to the one actually existing on the disk
-	[fileModel setRelativeFilePath:[[self projectModel] relativePathFromAbsoluteProjectPath:targetAbsolutePath]];
-	[fileModel setModificationDate:[targetAbsolutePath pathModificationDate]];
-	
-	if (    [localizedSourceFile isPathExisting]
+    // Update the relative file path to the one actually existing on the disk
+    [fileModel setRelativeFilePath:[[self projectModel] relativePathFromAbsoluteProjectPath:targetAbsolutePath]];
+    [fileModel setModificationDate:[targetAbsolutePath pathModificationDate]];
+    
+    if (    [localizedSourceFile isPathExisting]
          && [[self fileModuleEngineForFile:targetAbsolutePath] supportsContentTranslation]
          && [localizedSourceFile isEqualToString:targetAbsolutePath] == NO
        )
     {
-		// Mark the file to be synchronized to disk if it was a strings, nib or any supported content translation file
-		// and if the localized source file was different from the target absolute path (they may be equal if the localized file
-		// doesn't exist)
-		[fileModel setStatus:(1 << FILE_STATUS_SYNCH_TO_DISK)];
-		
-		// Optionaly apply the localized layout if the user wants
-		if (layout && [targetAbsolutePath isPathNib])
+        // Mark the file to be synchronized to disk if it was a strings, nib or any supported content translation file
+        // and if the localized source file was different from the target absolute path (they may be equal if the localized file
+        // doesn't exist)
+        [fileModel setStatus:(1 << FILE_STATUS_SYNCH_TO_DISK)];
+        
+        // Optionaly apply the localized layout if the user wants
+        if (layout && [targetAbsolutePath isPathNib])
         {
-			[[NibEngine engineWithConsole:[self console]] translateNibFile:targetAbsolutePath 
-													usingLayoutFromNibFile:localizedSourceFile 
-														 usingStringModels:[[fileModel fileModelContent] stringsContent]];					
-		}
-	}
-	
-	return fileModel;
+            [[NibEngine engineWithConsole:[self console]] translateNibFile:targetAbsolutePath 
+                                                    usingLayoutFromNibFile:localizedSourceFile 
+                                                         usingStringModels:[[fileModel fileModelContent] stringsContent]];                    
+        }
+    }
+    
+    return fileModel;
 }
 
 #pragma mark -
 
 - (void)translateFileModel:(FileModel*)fileModel withLocalizedFile:(NSString*)localizedFile
 {
-	[[self fileModuleEngineForFile:localizedFile] translateFileModel:fileModel withLocalizedFile:localizedFile];
+    [[self fileModuleEngineForFile:localizedFile] translateFileModel:fileModel withLocalizedFile:localizedFile];
 }
 
 - (FileModel *)createFileModelForLanguage:(NSString *)language sourceFileModel:(FileModel *)sourceFileModel usingLocalizedFile:(NSString *)localizedFile
 {
-	FileModel *fileModel = [self createFileModelForLanguage:language sourceFileModel:sourceFileModel];
+    FileModel *fileModel = [self createFileModelForLanguage:language sourceFileModel:sourceFileModel];
     
-	// FIX CASE 38
-	if ([localizedFile isPathExisting])
+    // FIX CASE 38
+    if ([localizedFile isPathExisting])
     {
-		[self translateFileModel:fileModel withLocalizedFile:localizedFile];		
-	}
+        [self translateFileModel:fileModel withLocalizedFile:localizedFile];        
+    }
     
-	return fileModel;
+    return fileModel;
 }
 
 @end

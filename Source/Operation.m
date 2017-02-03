@@ -25,16 +25,16 @@
 
 - (id) init
 {
-	self = [super init];
+    self = [super init];
     
-	if (self != nil)
+    if (self != nil)
     {
-		errors = [[NSMutableArray alloc] init];
-		warnings = [[NSMutableArray alloc] init];
-		alerts = [[NSMutableArray alloc] init];
-	}
+        errors = [[NSMutableArray alloc] init];
+        warnings = [[NSMutableArray alloc] init];
+        alerts = [[NSMutableArray alloc] init];
+    }
     
-	return self;
+    return self;
 }
 
 
@@ -42,119 +42,119 @@
 
 - (ProjectController *)projectController
 {
-	return [self.projectProvider projectController];
+    return [self.projectProvider projectController];
 }
 
 - (ProjectModel *)projectModel
 {
-	return [self.projectProvider projectModel];
+    return [self.projectProvider projectModel];
 }
 
 - (EngineProvider *)engineProvider
 {
-	return [self.projectProvider engineProvider];
+    return [self.projectProvider engineProvider];
 }
 
 - (Console *)console
 {
-	return [self.projectProvider console];
+    return [self.projectProvider console];
 }
 
 #pragma mark Operations
 
 - (void)setSubOperation:(Operation *)subop
 {
-	subop.projectProvider = self.projectProvider;	
-	subop.mainOperation = self;
+    subop.projectProvider = self.projectProvider;    
+    subop.mainOperation = self;
 }
 
 - (void)setOperationName:(NSString *)name
 {
-	if (self.mainOperation)
+    if (self.mainOperation)
     {
-		[self.mainOperation setOperationName:name];
-	}
+        [self.mainOperation setOperationName:name];
+    }
     else
     {
-		[self.operationProgressVC setOperationName:name];
-	}
+        [self.operationProgressVC setOperationName:name];
+    }
 }
 
 - (void)setOperationProgress:(float)value
 {
-	if (self.mainOperation)
+    if (self.mainOperation)
     {
-		[self.mainOperation setOperationProgress:value];
-	}
+        [self.mainOperation setOperationProgress:value];
+    }
     else
     {
-		[self.operationProgressVC setOperationProgress:value];
-	}
+        [self.operationProgressVC setOperationProgress:value];
+    }
 }
 
 - (void)setProgressMax:(NSUInteger)max
 {
-	progressMax = max;
-	progress = 0;
+    progressMax = max;
+    progress = 0;
     
-	[self setOperationProgress:(float)progress / progressMax];
+    [self setOperationProgress:(float)progress / progressMax];
 }
 
 - (void)progressIncrement
 {
-	progress++;
-	[self setOperationProgress:(float)progress / progressMax];
+    progress++;
+    [self setOperationProgress:(float)progress / progressMax];
 }
 
 - (BOOL)needsDisconnectInterface
 {
-	return NO;
+    return NO;
 }
 
 - (void)notifyNewProjectProvider:(id<ProjectProvider>)provider
 {
-	self.projectProvider = provider;
-	[driver notifyNewProjectProvider:provider];
+    self.projectProvider = provider;
+    [driver notifyNewProjectProvider:provider];
 }
 
 - (void)notifyProjectDidBecomeDirty
 {
-	[((NSObject *)self.projectProvider) performSelectorOnMainThread:@selector(setDirty) withObject:nil waitUntilDone:YES];
+    [((NSObject *)self.projectProvider) performSelectorOnMainThread:@selector(setDirty) withObject:nil waitUntilDone:YES];
 }
 
 - (NSArray *)errors
 {
-	return errors;
+    return errors;
 }
 
 - (void)notifyException:(NSException *)exception
 {
-	NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-	dic[NSLocalizedDescriptionKey] = [exception reason];
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    dic[NSLocalizedDescriptionKey] = [exception reason];
 
-	NSError *error = [NSError errorWithDomain:ILErrorDomain code:100 userInfo:dic];
-	[self notifyError:error];
+    NSError *error = [NSError errorWithDomain:ILErrorDomain code:100 userInfo:dic];
+    [self notifyError:error];
 }
 
 - (void)notifyError:(NSError *)error
 {
-	if (error)
+    if (error)
     {
-		[errors addObject:error];
-	}
+        [errors addObject:error];
+    }
 }
 
 - (NSArray *)warnings
 {
-	return warnings;
+    return warnings;
 }
 
 - (void)notifyWarning:(NSError *)error
 {
-	if (error)
+    if (error)
     {
-		[warnings addObject:error];
-	}
+        [warnings addObject:error];
+    }
 }
 
 - (NSArray *)alerts
@@ -171,22 +171,22 @@
 
 - (void)execute
 {
-	NSLog(@"!!! This execute() method must be implemented by %@", self);
+    NSLog(@"!!! This execute() method must be implemented by %@", self);
 }
 
 - (void)willExecute 
 {
-	
+    
 }
 
 - (void)didExecute
 {
-	
+    
 }
 
 - (BOOL)cancellable
 {
-	return NO;
+    return NO;
 }
 
 @end

@@ -10,14 +10,14 @@
 @class FindContentMatching;
 
 @interface TableViewCustomCell : NSCell {
-	NSTextStorage *mTextStorage;
-	NSTextContainer *mTextContainer;
-	LayoutManagerCustom *mLayoutManager;
-		
-	BOOL showInvisibleCharacters;
-	
-	FindContentMatching *contentMatching;
-	int contentMatchingItem;	
+    NSTextStorage *mTextStorage;
+    NSTextContainer *mTextContainer;
+    LayoutManagerCustom *mLayoutManager;
+        
+    BOOL showInvisibleCharacters;
+    
+    FindContentMatching *contentMatching;
+    int contentMatchingItem;    
 }
 
 @property (strong) NSColor *foregroundColor;

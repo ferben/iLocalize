@@ -14,28 +14,28 @@
 @class StringEncoding;
 
 @interface StringsEngine : AbstractStringsEngine {
-	// parsing
-	NSString		*mText;
-	
-	int				position;	// current absolute position
-	int				column;		// current column
-	int				row;		// current row
-	int				lastRow;	// row of the last element
-	
-	StringsContentModel	*mStringModels;
-	StringModel		*mCurrentStringModel;
-	
-	// encoding
-	NSMutableString	*mEncodedString;
-	int				mCurrentLine;
-	int				mLastLine;
-	BOOL			mSkipEmptyValue;
-	
-	// general
-	Class			mModelClass;
-	
-	// console
-	Console			*mConsole;	
+    // parsing
+    NSString        *mText;
+    
+    int                position;    // current absolute position
+    int                column;        // current column
+    int                row;        // current row
+    int                lastRow;    // row of the last element
+    
+    StringsContentModel    *mStringModels;
+    StringModel        *mCurrentStringModel;
+    
+    // encoding
+    NSMutableString    *mEncodedString;
+    int                mCurrentLine;
+    int                mLastLine;
+    BOOL            mSkipEmptyValue;
+    
+    // general
+    Class            mModelClass;
+    
+    // console
+    Console            *mConsole;    
 }
 
 + (StringsEngine*)engineWithConsole:(Console*)console;

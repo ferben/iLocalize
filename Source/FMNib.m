@@ -15,43 +15,43 @@
 
 - (BOOL)builtIn
 {
-	return YES;
+    return YES;
 }
 
 - (NSString*)name
 {
-	return NSLocalizedStringFromTable(@"Nib/xib", @"LocalizableEditors", @"File Editor Nib");
+    return NSLocalizedStringFromTable(@"Nib/xib", @"LocalizableEditors", @"File Editor Nib");
 }
 
 - (NSImage*)fileImage
 {
-	return [NSImage imageNamed:@"FileIconNib"];
+    return [NSImage imageNamed:@"FileIconNib"];
 }
 
 - (BOOL)supportsFlagLayout
 {
-	return YES;
+    return YES;
 }
 
 - (Class)editorClass
 {
-	return NSClassFromString(@"FMEditorStrings");
+    return NSClassFromString(@"FMEditorStrings");
 }
 
 - (Class)engineClass
 {
-	return [FMEngineNib class];
+    return [FMEngineNib class];
 }
 
 - (Class)controllerClass
 {
-	return [FMControllerNib class];
+    return [FMControllerNib class];
 }
 
 - (void)load
 {
-	[[self manager] registerFileModule:self forFileExtension:@"nib"];
-	[[self manager] registerFileModule:self forFileExtension:@"xib"];
+    [[self manager] registerFileModule:self forFileExtension:@"nib"];
+    [[self manager] registerFileModule:self forFileExtension:@"xib"];
 }
 
 @end

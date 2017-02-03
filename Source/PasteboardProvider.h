@@ -7,7 +7,7 @@
 //
 
 @interface PasteboardProvider : NSObject {
-	NSMutableDictionary *mTypes;
+    NSMutableDictionary *mTypes;
 }
 
 + (PasteboardProvider*)shared;

@@ -12,11 +12,11 @@
 
 - (void)drawRect:(NSRect)r
 {
-	[[NSImage imageNamed:@"TableViewGreyHeader"] drawInRect:r 
-												  operation:NSCompositeSourceOver 
-												   fraction:1];
-	
-	[super drawRect:r];
+    [[NSImage imageNamed:@"TableViewGreyHeader"] drawInRect:r 
+                                                  operation:NSCompositeSourceOver 
+                                                   fraction:1];
+    
+    [super drawRect:r];
 }
 
 @end

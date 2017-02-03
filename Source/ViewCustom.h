@@ -7,7 +7,7 @@
 //
 
 @interface ViewCustom : NSView {
-	id delegate;
+    id delegate;
 }
 - (void)registerDraggedTypes;
 @end

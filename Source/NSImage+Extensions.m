@@ -25,41 +25,41 @@ static NSRect AZRectCentered(NSRect container, NSRect rect) {
 
 - (void)drawInRect:(NSRect)r operation:(NSCompositingOperation)operation fraction:(float)fraction
 {
-	[self drawInRect:r fromRect:[self frame] operation:operation fraction:fraction];		
+    [self drawInRect:r fromRect:[self frame] operation:operation fraction:fraction];        
 }
 
 - (void)drawAtPoint:(NSPoint)p operation:(NSCompositingOperation)operation fraction:(float)fraction
 {
-	[self drawAtPoint:p fromRect:[self frame] operation:operation fraction:fraction];
+    [self drawAtPoint:p fromRect:[self frame] operation:operation fraction:fraction];
 }
 
 - (NSRect)frame
 {
-	NSSize size = [self size];
-	return NSMakeRect(0, 0, size.width, size.height);
+    NSSize size = [self size];
+    return NSMakeRect(0, 0, size.width, size.height);
 }
 
 - (NSImage*)imageWithFraction:(float)fraction
 {
-	NSImage *image = [[NSImage alloc] initWithSize:[self size]];
-	[image lockFocus];
-	[self drawInRect:[self frame] operation:NSCompositeSourceOver fraction:fraction];
-	[image unlockFocus];
-	return image;
+    NSImage *image = [[NSImage alloc] initWithSize:[self size]];
+    [image lockFocus];
+    [self drawInRect:[self frame] operation:NSCompositeSourceOver fraction:fraction];
+    [image unlockFocus];
+    return image;
 }
 
 - (NSImage*)imageWithSize:(NSSize)size
 {
-	NSRect r = NSMakeRect(0, 0, size.width, size.height);
-		
-	NSImage *target = [[NSImage alloc] initWithSize:size];
-	[target lockFocus];
-//	[source setFlipped:YES];
-	[self drawInRect:r operation:NSCompositeSourceOver fraction:1];
-//	[selectedLayer drawInRect:r operation:NSCompositeSourceAtop fraction:1];
-	[target unlockFocus];	
-	
-	return target;
+    NSRect r = NSMakeRect(0, 0, size.width, size.height);
+        
+    NSImage *target = [[NSImage alloc] initWithSize:size];
+    [target lockFocus];
+//    [source setFlipped:YES];
+    [self drawInRect:r operation:NSCompositeSourceOver fraction:1];
+//    [selectedLayer drawInRect:r operation:NSCompositeSourceAtop fraction:1];
+    [target unlockFocus];    
+    
+    return target;
 }
 
 @end

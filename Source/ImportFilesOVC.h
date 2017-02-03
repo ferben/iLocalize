@@ -11,20 +11,20 @@
 @class ImportFilesSettings;
 
 @interface ImportFilesOVC : OperationViewController {
-	IBOutlet NSButton			*mImportBaseRadio;
-	IBOutlet NSButton			*mImportOtherRadio;
-	IBOutlet NSButton			*mImportCheckLayoutCheckbox;
-	IBOutlet NSButton			*mImportImportLayoutsCheckbox;
+    IBOutlet NSButton            *mImportBaseRadio;
+    IBOutlet NSButton            *mImportOtherRadio;
+    IBOutlet NSButton            *mImportCheckLayoutCheckbox;
+    IBOutlet NSButton            *mImportImportLayoutsCheckbox;
 
-	IBOutlet NSTableView		*mLanguagesTableView;
-	IBOutlet NSArrayController	*mController;
-	
-	IBOutlet NSTextField		*mImportBaseLanguageInfo;
-	
-	IBOutlet NSImageView		*mNibWarningIcon;
-	IBOutlet NSTextField		*mNibWarningText;
+    IBOutlet NSTableView        *mLanguagesTableView;
+    IBOutlet NSArrayController    *mController;
+    
+    IBOutlet NSTextField        *mImportBaseLanguageInfo;
+    
+    IBOutlet NSImageView        *mNibWarningIcon;
+    IBOutlet NSTextField        *mNibWarningText;
 
-	ImportFilesSettings *settings;
+    ImportFilesSettings *settings;
 }
 
 @property (strong) ImportFilesSettings *settings;

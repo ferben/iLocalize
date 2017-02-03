@@ -12,8 +12,8 @@
 
 @interface AbstractTableCornerView : TableCornerViewCustom
 {
-	IBOutlet NSMenu  *mMenu;
-	ProjectWC        *mMainWindowController;
+    IBOutlet NSMenu  *mMenu;
+    ProjectWC        *mMainWindowController;
 }
 
 - (id)initWithFrame:(NSRect)r controller:(ProjectWC *)controller;

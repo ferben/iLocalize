@@ -17,10 +17,10 @@
 
 - (id)init
 {
-	if (self = [super init])
+    if (self = [super init])
     {
-	}
-	
+    }
+    
     return self;
 }
 
@@ -29,31 +29,31 @@
 {
     // Retrieve all the files in the source path
     NSMutableArray *files = [NSMutableArray array];
-	FileOperationManager *fm = [FileOperationManager manager];
+    FileOperationManager *fm = [FileOperationManager manager];
     
-	[fm enumerateDirectory:self.path files:files errorHandler:^(NSURL *url, NSError *error)
+    [fm enumerateDirectory:self.path files:files errorHandler:^(NSURL *url, NSError *error)
     {
-		[self notifyError:error];
-		return NO;
-	}];
-		
+        [self notifyError:error];
+        return NO;
+    }];
+        
     // Now create the tree representation of the source path, using all the discovered files
-	self.node = [AZPathNode rootNodeWithPath:self.path];
+    self.node = [AZPathNode rootNodeWithPath:self.path];
     [self.node beginModifications];
     
-	for (NSString *file in files)
+    for (NSString *file in files)
     {
         [self.node addRelativePath:file];
-	}	
+    }    
 
     [self.node endModifications];    
 }
 
 - (void)execute
 {
-	[self setOperationName:NSLocalizedString(@"Analyzing…", nil)];
-	
-	[self analyzePath];	    
+    [self setOperationName:NSLocalizedString(@"Analyzing…", nil)];
+    
+    [self analyzePath];        
   
     // Import only the localized resources if the source path is not an application that iLocalize can launch.
     // This is because non-localized resources are not useful if the app cannot be launched.

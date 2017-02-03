@@ -20,10 +20,10 @@
 @class ProjectModel;
 
 @interface CmdLineProjectProvider : NSObject <ProjectProvider> {
-	ProjectModel *mProjectModel;
-	Console *mConsole;
-	ProjectController *mProjectController;
-	EngineProvider			*mEngineProvider;
+    ProjectModel *mProjectModel;
+    Console *mConsole;
+    ProjectController *mProjectController;
+    EngineProvider            *mEngineProvider;
 }
 - (void)setProjectModel:(ProjectModel*)model;
 @end

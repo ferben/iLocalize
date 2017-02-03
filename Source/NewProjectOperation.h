@@ -12,7 +12,7 @@
 @class NewProjectSettings;
 
 @interface NewProjectOperation : Operation {
-	NewProjectSettings*	settings;
+    NewProjectSettings*    settings;
 }
 
 @property (strong) NewProjectSettings *settings;

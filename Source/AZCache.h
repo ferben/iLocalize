@@ -7,9 +7,9 @@
 //
 
 @interface AZCache : NSObject {
-	NSMutableDictionary *mTimeBasedSizeDic;
-	NSMutableDictionary *mContentDic;
-	int mCacheSize;
+    NSMutableDictionary *mTimeBasedSizeDic;
+    NSMutableDictionary *mContentDic;
+    int mCacheSize;
 }
 - (void)setCacheSize:(int)size;
 - (void)setObject:(id)anObject forKey:(id)aKey;

@@ -9,7 +9,7 @@
 @class FMManager;
 
 @interface FMModule : NSObject {
-	FMManager	*mManager;
+    FMManager    *mManager;
 }
 
 + (FMModule*)moduleWithManager:(FMManager*)manager;

@@ -11,13 +11,13 @@
 @class StringEncoding;
 
 @interface PreferencesLanguages : PreferencesObject {
-	IBOutlet NSMenu *mLanguagesMenu;
-	IBOutlet NSMenu *mEncodingsMenu;
-	IBOutlet NSPopUpButton *mDefaultEncodingPopup;
-	IBOutlet NSArrayController *mLanguagesController;	
-	IBOutlet NSTableView *mLanguagesTableView;
-	
-	NSMutableDictionary *mLanguagesCache;
+    IBOutlet NSMenu *mLanguagesMenu;
+    IBOutlet NSMenu *mEncodingsMenu;
+    IBOutlet NSPopUpButton *mDefaultEncodingPopup;
+    IBOutlet NSArrayController *mLanguagesController;    
+    IBOutlet NSTableView *mLanguagesTableView;
+    
+    NSMutableDictionary *mLanguagesCache;
 }
 
 + (id)shared;

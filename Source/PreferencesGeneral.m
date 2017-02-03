@@ -30,7 +30,7 @@ static id _shared = nil;
 
 - (id)init
 {
-	if (self = [super init])
+    if (self = [super init])
     {
         // 2016-01-23 fd: There is no PreferencesGeneral.xib any longer.
         // We're using PreferencesLocalization.xib instead.
@@ -46,7 +46,7 @@ static id _shared = nil;
                                          userInfo:nil];
         }
         */
-	}
+    }
 
     return self;
 }
@@ -55,44 +55,44 @@ static id _shared = nil;
 
 - (void)setInspectors:(NSArray*)array
 {
-	[[NSUserDefaults standardUserDefaults] setObject:array forKey:@"Inspectors"];
+    [[NSUserDefaults standardUserDefaults] setObject:array forKey:@"Inspectors"];
 }
 
 - (NSArray*)inspectors
 {
-	return [[NSUserDefaults standardUserDefaults] objectForKey:@"Inspectors"];
+    return [[NSUserDefaults standardUserDefaults] objectForKey:@"Inspectors"];
 }
 
 - (BOOL)automaticallySaveModifiedFiles
 {
-	return [[NSUserDefaults standardUserDefaults] boolForKey:@"automaticallySaveModifiedFiles"];
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"automaticallySaveModifiedFiles"];
 }
 
 - (BOOL)automaticallyReloadFiles
 {
-	return [[NSUserDefaults standardUserDefaults] boolForKey:@"automaticallyReloadFiles"];
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"automaticallyReloadFiles"];
 }
 
 - (BOOL)automaticallySaveProject
 {
-	return [[NSUserDefaults standardUserDefaults] boolForKey:@"autoSaveProject"];
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"autoSaveProject"];
 }
 
 - (NSInteger)automaticallySaveProjectDelay
 {
-	return [[NSUserDefaults standardUserDefaults] integerForKey:@"autoSaveProjectDelay"];
+    return [[NSUserDefaults standardUserDefaults] integerForKey:@"autoSaveProjectDelay"];
 }
 
 - (BOOL)autoUpdateSmartFilters
 {
-	//return [[NSUserDefaults standardUserDefaults] integerForKey:@"autoUpdateSmartFilters"];	
-	// Version 4: always NO
-	return NO;
+    //return [[NSUserDefaults standardUserDefaults] integerForKey:@"autoUpdateSmartFilters"];    
+    // Version 4: always NO
+    return NO;
 }
 
 - (BOOL)recentDocumentsOnlyProject
 {
-	return [[NSUserDefaults standardUserDefaults] boolForKey:@"recentDocumentsOnlyProject"];
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"recentDocumentsOnlyProject"];
 }
 
 @end

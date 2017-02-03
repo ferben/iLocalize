@@ -11,12 +11,12 @@
 
 @interface OperationReportWC : NSWindowController<NSTableViewDelegate>
 {
-	IBOutlet NSArrayController  *mLogsController;
-	IBOutlet TableViewCustom    *mTableView;
-	IBOutlet NSTextView         *mDetailedTextView;
-	Console                     *mConsole;
-	NSUInteger                   mFromIndex;
-	NSUInteger                   mToIndex;
+    IBOutlet NSArrayController  *mLogsController;
+    IBOutlet TableViewCustom    *mTableView;
+    IBOutlet NSTextView         *mDetailedTextView;
+    Console                     *mConsole;
+    NSUInteger                   mFromIndex;
+    NSUInteger                   mToIndex;
 }
 
 + (void)showConsoleIfWarningsOrErrorsSinceLastMark:(Console *)console;

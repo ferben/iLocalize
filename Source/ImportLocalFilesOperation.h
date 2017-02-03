@@ -11,7 +11,7 @@
 @class ImportFilesSettings;
 
 @interface ImportLocalFilesOperation : Operation {
-	ImportFilesSettings *settings;
+    ImportFilesSettings *settings;
 }
 @property (strong) ImportFilesSettings *settings;
 @end

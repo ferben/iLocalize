@@ -23,8 +23,8 @@
 - (id)initWithPattern:(NSString*)pattern ignoreCase:(BOOL)flag
 {
     if(self = [super init]) {
-		self.regex = pattern;
-		self.ignoreCase = flag;
+        self.regex = pattern;
+        self.ignoreCase = flag;
     }
     return self;
 }
@@ -33,32 +33,32 @@
 - (BOOL)regexMatch:(NSString*)string
 {
     if(!string) {
-        return NO;		
-	}
+        return NO;        
+    }
     
-	return [string isMatchedByRegex:regex];
+    return [string isMatchedByRegex:regex];
 }
 
 - (NSMutableArray*)regexRangesInString:(NSString*)string
 {
     if(!string) {
-        return nil;		
-	}
+        return nil;        
+    }
 
-	NSMutableArray *ranges = [NSMutableArray array];
+    NSMutableArray *ranges = [NSMutableArray array];
 
-	[string enumerateStringsMatchedByRegex:regex 
-								   options:ignoreCase?RKLCaseless:RKLNoOptions
-								   inRange:NSMakeRange(0, [string length])
-									 error:nil
-						enumerationOptions:RKLRegexEnumerationNoOptions
-								usingBlock:^(NSInteger captureCount, NSString * const capturedStrings[captureCount], const NSRange capturedRanges[captureCount], volatile BOOL * const stop) {
-									for(int i=0; i<captureCount; i++) {
-										[ranges addObject:[NSValue valueWithRange:capturedRanges[i]]];			
-									}
-								}];
-	
-	return ranges;
+    [string enumerateStringsMatchedByRegex:regex 
+                                   options:ignoreCase?RKLCaseless:RKLNoOptions
+                                   inRange:NSMakeRange(0, [string length])
+                                     error:nil
+                        enumerationOptions:RKLRegexEnumerationNoOptions
+                                usingBlock:^(NSInteger captureCount, NSString * const capturedStrings[captureCount], const NSRange capturedRanges[captureCount], volatile BOOL * const stop) {
+                                    for(int i=0; i<captureCount; i++) {
+                                        [ranges addObject:[NSValue valueWithRange:capturedRanges[i]]];            
+                                    }
+                                }];
+    
+    return ranges;
 }
 
 @end

@@ -13,44 +13,44 @@
 
 - (id)init
 {
-	if(self = [super init]) {
-		mData = NULL;
-		mDirty = NO;
-	}
-	return self;
+    if(self = [super init]) {
+        mData = NULL;
+        mDirty = NO;
+    }
+    return self;
 }
 
 
 - (void)setData:(id)data
 {
-	@synchronized(self) {
-		mData = data;
-		mDirty = YES;		
-	}
+    @synchronized(self) {
+        mData = data;
+        mDirty = YES;        
+    }
 }
 
 - (id)data
 {
-	id temp = NULL;
-	
-	@synchronized(self) {
-		temp = mData;
-		mDirty = NO;		
-	}
-	
-	return temp;
+    id temp = NULL;
+    
+    @synchronized(self) {
+        temp = mData;
+        mDirty = NO;        
+    }
+    
+    return temp;
 }
 
 - (id)dataIfDirtyAndClear
 {
-	id temp = NULL;
-	
-	@synchronized(self) {
-		if(mDirty)
-			temp = [self data];		
-	}
-	
-	return temp;
+    id temp = NULL;
+    
+    @synchronized(self) {
+        if(mDirty)
+            temp = [self data];        
+    }
+    
+    return temp;
 }
 
 @end

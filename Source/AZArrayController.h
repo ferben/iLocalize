@@ -7,9 +7,9 @@
 //
 
 @interface AZArrayController : NSArrayController {
-	NSMutableArray	*mFilterDescriptors;
-	id mDelegate;
-	id mNewObject;
+    NSMutableArray    *mFilterDescriptors;
+    id mDelegate;
+    id mNewObject;
 }
 - (void)setFilterDescriptor:(id)filter;
 - (void)setFilterDescriptors:(NSArray*)filters;

@@ -17,8 +17,8 @@
  the specified bundle and the specified differences.
  */
 @interface ImportRebaseBundleOp : Operation {
-	NSString		*mHistoryFilePath;
-	BOOL			mUsePreviousLayout;
+    NSString        *mHistoryFilePath;
+    BOOL            mUsePreviousLayout;
     ImportDiff      *mImportDiff;
 }
 

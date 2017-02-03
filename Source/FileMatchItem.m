@@ -13,59 +13,59 @@
 
 - (id)initWithFile:(NSString *)file matchingFileControllers:(NSArray *)controllers
 {
-	if (self = [super init])
+    if (self = [super init])
     {
-		mFile = file;
-		mMatchingFileControllers = controllers;
-		mMatchingIndex = 0;
-		
-		mRelativePaths = [[NSMutableArray alloc] init];
+        mFile = file;
+        mMatchingFileControllers = controllers;
+        mMatchingIndex = 0;
         
-		FileController *fileController;
+        mRelativePaths = [[NSMutableArray alloc] init];
         
-		for (fileController in mMatchingFileControllers)
+        FileController *fileController;
+        
+        for (fileController in mMatchingFileControllers)
         {
-			[mRelativePaths addObject:[fileController relativeFilePath]];
-		}					
-	}
+            [mRelativePaths addObject:[fileController relativeFilePath]];
+        }                    
+    }
     
-	return self;
+    return self;
 }
 
 
 + (id)itemWithFile:(NSString *)file matchingFileControllers:(NSArray *)controllers
 {
-	return [[FileMatchItem alloc] initWithFile:file matchingFileControllers:controllers];
+    return [[FileMatchItem alloc] initWithFile:file matchingFileControllers:controllers];
 }
 
 - (NSUInteger)numberOfMatchingFiles
 {
-	return [mMatchingFileControllers count];
+    return [mMatchingFileControllers count];
 }
 
 - (NSString *)file
 {
-	return mFile;
+    return mFile;
 }
 
 - (FileController *)matchingFileController
 {
-	return mMatchingFileControllers[mMatchingIndex];
+    return mMatchingFileControllers[mMatchingIndex];
 }
 
 - (NSArray *)matchingFiles
 {
-	return mRelativePaths;
+    return mRelativePaths;
 }
 
 - (void)setMatchingValue:(id)value
 {
-	mMatchingIndex = [value integerValue];
+    mMatchingIndex = [value integerValue];
 }
 
 - (id)matchingValue
 {
-	return @(mMatchingIndex);
+    return @(mMatchingIndex);
 }
 
 @end

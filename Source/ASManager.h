@@ -37,9 +37,9 @@
 @end
 
 @interface ASManager : NSObject {
-	NSAppleEventManagerSuspensionID mSuspensionID;
-	NSScriptCommand *mCommandInProgress;
-	id mDelegate;
+    NSAppleEventManagerSuspensionID mSuspensionID;
+    NSScriptCommand *mCommandInProgress;
+    id mDelegate;
 }
 
 + (ASManager*)shared;

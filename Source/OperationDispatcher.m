@@ -35,26 +35,26 @@ typedef id(^DispatchBlock)();
 
 - (id)init
 {
-	if (self = [super init])
+    if (self = [super init])
     {
     }
     
-	return self;
+    return self;
 }
 
 - (EngineProvider *)engineProvider
 {
-	return [[self projectProvider] engineProvider];
+    return [[self projectProvider] engineProvider];
 }
 
 - (Console *)console
 {
-	return [[self projectProvider] console];
+    return [[self projectProvider] console];
 }
 
 - (OperationWC *)operationWC
 {
-	return [[self projectProvider] operation];
+    return [[self projectProvider] operation];
 }
 
 - (void)dispatch:(Operation *)op callback:(OperationCompletionCallbackBlock)callback
@@ -194,81 +194,81 @@ typedef id(^DispatchBlock)();
                    block:(DispatchBlock)block
               completion:(OperationDispatcherCompletionBlock)completion
 {
-	if (operation)
+    if (operation)
     {
-		[[NSThread currentThread] setName:[NSString stringWithFormat:@"%@", operation]];
-	}
-		
-	// Note: the provider can be NULL only for the operations triggered from the New Project assistant
-	// because the project does not exist.
-	[self.projectProvider beginOperation];
-
-	// Note: lock the background task during an operation to avoid any problem
-	BOOL backgroundThreadLocked = NO;
-    
-	if (![[BackgroundUpdater shared] tryLockFor:5])
-    {
-		NSLog(@"Background updater thread still running after 5 seconds. Wait 20s more.");
+        [[NSThread currentThread] setName:[NSString stringWithFormat:@"%@", operation]];
+    }
         
-		if (![[BackgroundUpdater shared] tryLockFor:20])
+    // Note: the provider can be NULL only for the operations triggered from the New Project assistant
+    // because the project does not exist.
+    [self.projectProvider beginOperation];
+
+    // Note: lock the background task during an operation to avoid any problem
+    BOOL backgroundThreadLocked = NO;
+    
+    if (![[BackgroundUpdater shared] tryLockFor:5])
+    {
+        NSLog(@"Background updater thread still running after 5 seconds. Wait 20s more.");
+        
+        if (![[BackgroundUpdater shared] tryLockFor:20])
         {
-			NSLog(@"Failed to acquire BackgroundUpdater lock for 20 seconds. Continue to process thread.");
-		}
+            NSLog(@"Failed to acquire BackgroundUpdater lock for 20 seconds. Continue to process thread.");
+        }
         else
         {
-			backgroundThreadLocked = YES;
-		}
-	}
+            backgroundThreadLocked = YES;
+        }
+    }
     else
     {
-		backgroundThreadLocked = YES;
-	}
+        backgroundThreadLocked = YES;
+    }
 
     
-	// Record all new entries in the console
-	[[self console] mark];
-	
+    // Record all new entries in the console
+    [[self console] mark];
+    
     id results = nil;
-	
+    
     @try
     {
-		if (operation)
+        if (operation)
         {
-			[operation execute];
-		}
+            [operation execute];
+        }
         else if (block)
         {
             results = block();
-		}
-	}
+        }
+    }
     @catch (id exception)
     {
-		[exception printStackTrace];
+        [exception printStackTrace];
         
-		if (operation)
+        if (operation)
         {
-			[operation notifyException:exception];
-		}
+            [operation notifyException:exception];
+        }
         else
         {
-			[[self console] addError:[exception reason]
-						 description:[NSString stringWithFormat:@"Exception in operation thread: %@", exception]
-							   class:[self class]];					
-		}
-	}
-	@finally
+            [[self console] addError:[exception reason]
+                         description:[NSString stringWithFormat:@"Exception in operation thread: %@", exception]
+                               class:[self class]];                    
+        }
+    }
+    @finally
     {
-		if (backgroundThreadLocked)
+        if (backgroundThreadLocked)
         {
-			[[BackgroundUpdater shared] unlock];		
-		}
-		
+            [[BackgroundUpdater shared] unlock];        
+        }
+        
         dispatch_async(dispatch_get_main_queue(), ^
         {
             [self.projectProvider endOperation];
             [self finishExecutionWithResults:results operation:operation operationCallback:operationCallback completion:completion];
         });
-	}
+    }
 }
 
 - (void)finishExecutionWithResults:(id)results
@@ -276,54 +276,54 @@ typedef id(^DispatchBlock)();
                  operationCallback:(OperationCompletionCallbackBlock)operationCallback
                         completion:(OperationDispatcherCompletionBlock)completion
 {
-	// Called in main thread
-	
-	BOOL cancelled = [[self operationWC] shouldCancel];
+    // Called in main thread
     
-	if (cancelled)
-    {
-		[[self console] addLog:@"Operation cancelled by user" class:[self class]];		
-	}
-	
-	Console *console = [self console];
+    BOOL cancelled = [[self operationWC] shouldCancel];
     
-	if ([console hasWarningsOrErrors])
+    if (cancelled)
     {
-		if (operation)
+        [[self console] addLog:@"Operation cancelled by user" class:[self class]];        
+    }
+    
+    Console *console = [self console];
+    
+    if ([console hasWarningsOrErrors])
+    {
+        if (operation)
         {
-			// Report the errors at the operation driver WC level instead of displaying an ugly modal dialog
-			for (ConsoleItem *item in [console allItemsSinceMark])
+            // Report the errors at the operation driver WC level instead of displaying an ugly modal dialog
+            for (ConsoleItem *item in [console allItemsSinceMark])
             {
-				NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-				dic[NSLocalizedDescriptionKey] = [item description];
-				
-				NSError *error = [NSError errorWithDomain:ILErrorDomain code:100 userInfo:dic];
+                NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+                dic[NSLocalizedDescriptionKey] = [item description];
                 
-				if ([item isWarning])
+                NSError *error = [NSError errorWithDomain:ILErrorDomain code:100 userInfo:dic];
+                
+                if ([item isWarning])
                 {
-					[operation notifyWarning:error];
-				}
+                    [operation notifyWarning:error];
+                }
                 else
                 {
-					[operation notifyError:error];
-				}
-			}
-		}
+                    [operation notifyError:error];
+                }
+            }
+        }
         else
         {
-			[OperationReportWC showConsoleIfWarningsOrErrorsSinceLastMark:[self console]];		
-		}		
-	}
-	
-	if (operationCallback)
+            [OperationReportWC showConsoleIfWarningsOrErrorsSinceLastMark:[self console]];        
+        }        
+    }
+    
+    if (operationCallback)
     {
-		int state = operation.cancel ? OPERATION_CANCEL : OPERATION_NEXT;
-		operationCallback(state);
-	}
+        int state = operation.cancel ? OPERATION_CANCEL : OPERATION_NEXT;
+        operationCallback(state);
+    }
     else if (completion)
     {
         completion(results);
-	}
+    }
 }
 
 @end

@@ -39,106 +39,106 @@
 
 - (id)init
 {
-	if(self = [super init]) {
-		[self createEngines];
-		[self linkEngines];
-	}
-	return self;
+    if(self = [super init]) {
+        [self createEngines];
+        [self linkEngines];
+    }
+    return self;
 }
 
 
 - (void)createEngines
 {
-	mResourceFileEngine	= [[ResourceFileEngine alloc] init];
-		
-	mModelEngine = [[ModelEngine alloc] init];
+    mResourceFileEngine    = [[ResourceFileEngine alloc] init];
+        
+    mModelEngine = [[ModelEngine alloc] init];
 
-	mLanguageEngine = [[LanguageEngine alloc] init];
-	mFileEngine = [[FileEngine alloc] init];
+    mLanguageEngine = [[LanguageEngine alloc] init];
+    mFileEngine = [[FileEngine alloc] init];
 
-	mSynchronizeEngine = [[SynchronizeEngine alloc] init];
-	mReplaceEngine = [[ReplaceEngine alloc] init];
+    mSynchronizeEngine = [[SynchronizeEngine alloc] init];
+    mReplaceEngine = [[ReplaceEngine alloc] init];
 
-	mOptimizeEngine = [[OptimizeEngine alloc] init];
+    mOptimizeEngine = [[OptimizeEngine alloc] init];
 
 #ifndef TARGET_TOOL
-	mFindEngine = [[FindEngine alloc] init];
+    mFindEngine = [[FindEngine alloc] init];
 #endif
-	mCleanEngine = [[CleanEngine alloc] init];
-	mCheckEngine = [[CheckEngine alloc] init];
+    mCleanEngine = [[CleanEngine alloc] init];
+    mCheckEngine = [[CheckEngine alloc] init];
 }
 
 - (void)linkEngines
 {
-	[mResourceFileEngine setEngineProvider:self];
-	
-	[mModelEngine setEngineProvider:self];
+    [mResourceFileEngine setEngineProvider:self];
+    
+    [mModelEngine setEngineProvider:self];
 
-	[mLanguageEngine setEngineProvider:self];
-	[mFileEngine setEngineProvider:self];
-	
-	[mSynchronizeEngine setEngineProvider:self];
-	[mReplaceEngine setEngineProvider:self];
-		
-	[mOptimizeEngine setEngineProvider:self];
+    [mLanguageEngine setEngineProvider:self];
+    [mFileEngine setEngineProvider:self];
+    
+    [mSynchronizeEngine setEngineProvider:self];
+    [mReplaceEngine setEngineProvider:self];
+        
+    [mOptimizeEngine setEngineProvider:self];
 
 #ifndef TARGET_TOOL
-	[mFindEngine setEngineProvider:self];
+    [mFindEngine setEngineProvider:self];
 #endif
-	[mCleanEngine setEngineProvider:self];
-	[mCheckEngine setEngineProvider:self];
+    [mCleanEngine setEngineProvider:self];
+    [mCheckEngine setEngineProvider:self];
 }
 
 - (ResourceFileEngine*)resourceFileEngine
 {
-	return mResourceFileEngine;
+    return mResourceFileEngine;
 }
 
 - (ModelEngine*)modelEngine
 {
-	return mModelEngine;
+    return mModelEngine;
 }
 
 - (LanguageEngine*)languageEngine
 {
-	return mLanguageEngine;
+    return mLanguageEngine;
 }
 
 - (FileEngine*)fileEngine
 {
-	return mFileEngine;
+    return mFileEngine;
 }
 
 - (SynchronizeEngine*)synchronizeEngine
 {
-	return mSynchronizeEngine;
+    return mSynchronizeEngine;
 }
 
 - (ReplaceEngine*)replaceEngine
 {
-	return mReplaceEngine;
+    return mReplaceEngine;
 }
 
 - (OptimizeEngine*)optimizeEngine
 {
-	return mOptimizeEngine;
+    return mOptimizeEngine;
 }
 
 #ifndef TARGET_TOOL
 - (FindEngine*)findEngine
 {
-	return mFindEngine;
+    return mFindEngine;
 }
 #endif
 
 - (CleanEngine*)cleanEngine
 {
-	return mCleanEngine;
+    return mCleanEngine;
 }
 
 - (CheckEngine*)checkEngine
 {
-	return mCheckEngine;
+    return mCheckEngine;
 }
 
 @end

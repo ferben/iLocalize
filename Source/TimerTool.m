@@ -28,12 +28,12 @@ float u_seconds(ltime_t t)
 
 + (ltime_t)microseconds
 {
-	return u_microseconds();
+    return u_microseconds();
 }
 
 + (float)seconds
 {
-	return u_seconds(u_microseconds());
+    return u_seconds(u_microseconds());
 }
 */
 

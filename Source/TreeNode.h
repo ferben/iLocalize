@@ -8,12 +8,12 @@
 
 @interface TreeNode : NSObject
 {
-	NSString		*mTitle;
-	BOOL			mIsLeaf;
-	BOOL			mIsRoot;
-	TreeNode		*mParentNode;
-	NSMutableArray	*mNodes;
-	id				payload;
+    NSString        *mTitle;
+    BOOL            mIsLeaf;
+    BOOL            mIsRoot;
+    TreeNode        *mParentNode;
+    NSMutableArray    *mNodes;
+    id                payload;
 }
 
 @property (strong) id payload;

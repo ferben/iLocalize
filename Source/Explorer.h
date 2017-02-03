@@ -15,9 +15,9 @@
 @class StringController;
 
 @interface Explorer : NSObject {
-	id <ExplorerDelegate>	mDelegate;
-	
-	ExplorerItem			*_rootItem;
+    id <ExplorerDelegate>    mDelegate;
+    
+    ExplorerItem            *_rootItem;
 }
 
 @property (strong) ExplorerItem *rootItem;

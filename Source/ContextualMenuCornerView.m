@@ -16,25 +16,25 @@
 
 - (id)initWithMenu:(NSMenu*)menu
 {
-	if(self = [super init]) {
-		mMenu = menu;
-	}
-	return self;
+    if(self = [super init]) {
+        mMenu = menu;
+    }
+    return self;
 }
 
 + (id)cornerWithMenu:(NSMenu*)menu
 {
-	return [[self alloc] initWithMenu:menu];
+    return [[self alloc] initWithMenu:menu];
 }
 
 - (NSMenu*)popupMenu
 {
-	return mMenu;
+    return mMenu;
 }
 
 - (NSString*)cornerImage
 {
-	return @"TableViewCornerIcon";
+    return @"TableViewCornerIcon";
 }
 
 @end

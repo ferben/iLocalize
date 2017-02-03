@@ -12,9 +12,9 @@
 #import "HistoryManagerWC.h"
 
 @interface ProjectMenuProject : ProjectMenu {
-	ExportProjectOVC				*mProjectExport;	
-	ProjectLabelsWC				*mProjectLabelsWC;
-	HistoryManagerWC            *mHistoryManagerWC;	
+    ExportProjectOVC                *mProjectExport;    
+    ProjectLabelsWC                *mProjectLabelsWC;
+    HistoryManagerWC            *mHistoryManagerWC;    
 }
 
 - (IBAction)launch:(id)sender;

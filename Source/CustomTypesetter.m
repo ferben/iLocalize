@@ -13,12 +13,12 @@
 
 - (BOOL)shouldBreakLineByWordBeforeCharacterAtIndex:(NSUInteger)charIndex
 {
-	return NO;
+    return NO;
 }
 
 - (BOOL)shouldBreakLineByHyphenatingBeforeCharacterAtIndex:(NSUInteger)charIndex
 {
-	return NO;
+    return NO;
 }
 
 @end

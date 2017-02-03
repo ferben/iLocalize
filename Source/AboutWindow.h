@@ -7,8 +7,8 @@
 //
 
 @interface AboutWindow : NSWindowController {
-	IBOutlet NSTextField *versionTextField;
-	IBOutlet NSTextField *copyrightTextField;
+    IBOutlet NSTextField *versionTextField;
+    IBOutlet NSTextField *copyrightTextField;
     IBOutlet NSButton *licenseTextButton;
 }
 + (void)show;

@@ -16,35 +16,35 @@
 
 + (id)createInstance
 {
-	return [[self alloc] init];
+    return [[self alloc] init];
 }
 
 - (id)initWithNibName:(NSString*)name
 {
-	if((self = [super initWithNibName:name bundle:nil])) {
-	}
-	return self;
+    if((self = [super initWithNibName:name bundle:nil])) {
+    }
+    return self;
 }
 
 
 - (NSArray*)errors
 {
-	return nil;
+    return nil;
 }
 
 - (NSArray*)warnings
 {
-	return nil;
+    return nil;
 }
 
 - (NSArray*)alerts
 {
-	return nil;
+    return nil;
 }
 
 - (NSDictionary*)arguments
 {
-	return self.driverWC.driver.arguments;
+    return self.driverWC.driver.arguments;
 }
 
 - (NSWindow*)visibleWindow
@@ -59,70 +59,70 @@
 
 - (NSSize)viewSize
 {
-	return self.view.frame.size;
+    return self.view.frame.size;
 }
 
 - (BOOL)canResize
 {
-	return YES;
+    return YES;
 }
 
 - (NSString*)nextButtonTitle
 {
-	return NSLocalizedString(@"Next", nil);
+    return NSLocalizedString(@"Next", nil);
 }
 
 - (BOOL)canGoBack
 {
-	return YES;
+    return YES;
 }
 
 - (BOOL)canContinue
 {
-	return YES;
+    return YES;
 }
 
 - (void)stateChanged
 {
-	[self.driverWC viewControllerStateChanged:self];		
-	[self.windowController viewControllerStateChanged:self];
+    [self.driverWC viewControllerStateChanged:self];        
+    [self.windowController viewControllerStateChanged:self];
 }
 
 - (void)beginResizing
 {
-	
+    
 }
 
 - (void)endResizing
 {
-	
+    
 }
 
 - (void)willShow
 {
-	
+    
 }
 
 - (void)willCancel
 {
-	
+    
 }
 
 - (void)validateContinue:(ValidateContinueCallback)callback
 {
-	callback(YES);
+    callback(YES);
 }
 
 - (void)willContinue
 {
-	
+    
 }
 
 - (void)runModalOperationViewController:(OperationViewController*)vc
 {
-	OperationWindowController *wc = [[OperationWindowController alloc] init];
-	wc.viewController = vc;
-	[wc runModalSheetForWindow:[self window]];
+    OperationWindowController *wc = [[OperationWindowController alloc] init];
+    wc.viewController = vc;
+    [wc runModalSheetForWindow:[self window]];
 }
 
 @end

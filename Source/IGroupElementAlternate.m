@@ -17,12 +17,12 @@
 
 + (IGroupElementAlternate*)elementWithDictionary:(NSDictionary*)dic
 {
-	IGroupElementAlternate *e = [[self alloc] init];
-	e.file = [dic[@"fc"] relativeFilePath];
-	e.source = [dic[@"sc"] base];
-	e.target = [dic[@"sc"] translation];
-	e.score = [dic[@"score"] floatValue];
-	return e;
+    IGroupElementAlternate *e = [[self alloc] init];
+    e.file = [dic[@"fc"] relativeFilePath];
+    e.source = [dic[@"sc"] base];
+    e.target = [dic[@"sc"] translation];
+    e.score = [dic[@"score"] floatValue];
+    return e;
 }
 
 

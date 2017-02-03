@@ -24,13 +24,13 @@
 
 @interface XMLParser : NSObject
 {
-	id<XMLParserDelegate> mDelegate;
-	NSString *mString;
-	NSScanner *mScanner;
-	NSMutableCharacterSet *mIdentifierSet;
+    id<XMLParserDelegate> mDelegate;
+    NSString *mString;
+    NSScanner *mScanner;
+    NSMutableCharacterSet *mIdentifierSet;
     NSCharacterSet *mQuotesSet;
-	BOOL mError;
-	BOOL mAbort;
+    BOOL mError;
+    BOOL mAbort;
 }
 
 + (void)parseString:(NSString *)string;

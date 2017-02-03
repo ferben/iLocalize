@@ -10,22 +10,22 @@
 #import "AZListSelectionView.h"
 
 @interface ImportBundleOVC : OperationViewController {
-	IBOutlet NSButton			*mImportBaseButton;
-	IBOutlet NSButton			*mImportLocalizedButton;
-	IBOutlet NSButton			*mImportCheckLayoutCheckbox;
-	IBOutlet NSButton			*mImportImportLayoutsCheckbox;
+    IBOutlet NSButton            *mImportBaseButton;
+    IBOutlet NSButton            *mImportLocalizedButton;
+    IBOutlet NSButton            *mImportCheckLayoutCheckbox;
+    IBOutlet NSButton            *mImportImportLayoutsCheckbox;
     IBOutlet NSButton           *mCopyOnlyIfExistsCheckbox;
-	IBOutlet NSOutlineView		*mLanguagesOutlineView;
-	IBOutlet NSObjectController	*mUIController;
-	
-	IBOutlet NSPathControl		*mBaseBundlePathControl;
-	IBOutlet NSPathControl		*mLocalizedBundlePathControl;
-	
-	IBOutlet NSImageView		*mNibWarningIcon;
-	IBOutlet NSTextField		*mNibWarningText;
+    IBOutlet NSOutlineView        *mLanguagesOutlineView;
+    IBOutlet NSObjectController    *mUIController;
+    
+    IBOutlet NSPathControl        *mBaseBundlePathControl;
+    IBOutlet NSPathControl        *mLocalizedBundlePathControl;
+    
+    IBOutlet NSImageView        *mNibWarningIcon;
+    IBOutlet NSTextField        *mNibWarningText;
 
-	AZListSelectionView			*mLanguagesSelectionView;
-	BOOL applySettingsWithSelectLanguage;
+    AZListSelectionView            *mLanguagesSelectionView;
+    BOOL applySettingsWithSelectLanguage;
 }
 
 - (BOOL)importBaseLanguage;

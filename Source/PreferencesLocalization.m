@@ -27,7 +27,7 @@ static id _shared = nil;
 
 - (id)init
 {
-	if ((self = [super init]))
+    if ((self = [super init]))
     {
         NSBundle *bundle = [NSBundle bundleForClass:[self class]];
         
@@ -38,14 +38,14 @@ static id _shared = nil;
                                            reason:@"PreferencesLocalization: Could not load resources!"
                                          userInfo:nil];
         }
-	}
+    }
 
     return self;
 }
 
 - (IBAction)ignoreControlCharactersChanged:(id)sender
 {
-	[StringTool setIgnoreControlCharacters:[self ignoreControlCharacters]];
+    [StringTool setIgnoreControlCharacters:[self ignoreControlCharacters]];
 }
 
 - (IBAction)help:(id)sender 
@@ -66,45 +66,45 @@ static id _shared = nil;
 
 - (BOOL)ignoreCase
 {
-	return [[NSUserDefaults standardUserDefaults] boolForKey:@"translateIgnoreCase"];
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"translateIgnoreCase"];
 }
 
 - (BOOL)ignoreControlCharacters
 {
-	return [[NSUserDefaults standardUserDefaults] boolForKey:@"translateIgnoreControlCharacters"];
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"translateIgnoreControlCharacters"];
 }
 
 - (void)togglePropagation
 {
-	int next;
-	if([self autoPropagateTranslationNone]) {
-		next = AUTO_PROPAGATE_TRANSLATION_SELECTED;
-	} else if([self autoPropagateTranslationSelectedFiles]) {
-		next = AUTO_PROPAGATE_TRANSLATION_ALL;		
-	} else {
-		next = AUTO_PROPAGATE_TRANSLATION_NONE;
-	}
-	[[NSUserDefaults standardUserDefaults] setInteger:next forKey:@"autoPropagateTranslationMode"];
+    int next;
+    if([self autoPropagateTranslationNone]) {
+        next = AUTO_PROPAGATE_TRANSLATION_SELECTED;
+    } else if([self autoPropagateTranslationSelectedFiles]) {
+        next = AUTO_PROPAGATE_TRANSLATION_ALL;        
+    } else {
+        next = AUTO_PROPAGATE_TRANSLATION_NONE;
+    }
+    [[NSUserDefaults standardUserDefaults] setInteger:next forKey:@"autoPropagateTranslationMode"];
 }
 
 - (NSInteger)propagationMode
 {
-	return [[NSUserDefaults standardUserDefaults] integerForKey:@"autoPropagateTranslationMode"];
+    return [[NSUserDefaults standardUserDefaults] integerForKey:@"autoPropagateTranslationMode"];
 }
 
 - (BOOL)autoPropagateTranslationNone
 {
-	return [[NSUserDefaults standardUserDefaults] integerForKey:@"autoPropagateTranslationMode"] == AUTO_PROPAGATE_TRANSLATION_NONE;	
+    return [[NSUserDefaults standardUserDefaults] integerForKey:@"autoPropagateTranslationMode"] == AUTO_PROPAGATE_TRANSLATION_NONE;    
 }
 
 - (BOOL)autoPropagateTranslationSelectedFiles
 {
-	return [[NSUserDefaults standardUserDefaults] integerForKey:@"autoPropagateTranslationMode"] == AUTO_PROPAGATE_TRANSLATION_SELECTED;	
+    return [[NSUserDefaults standardUserDefaults] integerForKey:@"autoPropagateTranslationMode"] == AUTO_PROPAGATE_TRANSLATION_SELECTED;    
 }
 
 - (BOOL)autoPropagateTranslationAllFiles
 {
-	return [[NSUserDefaults standardUserDefaults] integerForKey:@"autoPropagateTranslationMode"] == AUTO_PROPAGATE_TRANSLATION_ALL;	
+    return [[NSUserDefaults standardUserDefaults] integerForKey:@"autoPropagateTranslationMode"] == AUTO_PROPAGATE_TRANSLATION_ALL;    
 }
 
 @end

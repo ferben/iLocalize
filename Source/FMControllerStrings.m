@@ -29,22 +29,22 @@
 
 - (id)init
 {
-	if((self = [super init])) {
-		mStringControllers = [[NSMutableArray alloc] init];
-		mCachedVisibleStringControllers = nil;
-		mCachedStringControllers = [[NSMutableDictionary alloc] init];
-		
-		[[NSNotificationCenter defaultCenter] addObserver:self
-												 selector:@selector(stringsFilterDidChange:)
-													 name:ILStringsFilterDidChange
-												   object:nil];		
-	}
-	return self;
+    if((self = [super init])) {
+        mStringControllers = [[NSMutableArray alloc] init];
+        mCachedVisibleStringControllers = nil;
+        mCachedStringControllers = [[NSMutableDictionary alloc] init];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(stringsFilterDidChange:)
+                                                     name:ILStringsFilterDidChange
+                                                   object:nil];        
+    }
+    return self;
 }
 
 - (void)dealloc
 {
-	[[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 
 }
 
@@ -52,66 +52,66 @@
 
 - (void)clearCache
 {
-	mCachedVisibleStringControllers = nil;
+    mCachedVisibleStringControllers = nil;
 }
 
 - (void)stringsFilterDidChange:(NSNotification*)notif
 {
-	[self clearCache];
+    [self clearCache];
 }
 
 - (void)clearStringControllers
 {
-	// Don't forget to clear the cache!
-	[self clearCache];	
-	[mStringControllers removeAllObjects];
+    // Don't forget to clear the cache!
+    [self clearCache];    
+    [mStringControllers removeAllObjects];
 }
 
 - (void)rebuildFromModel
 {
-	if([self isLocal]) return;
-	
-	[self clearStringControllers];
-	[mCachedStringControllers removeAllObjects];
+    if([self isLocal]) return;
+    
+    [self clearStringControllers];
+    [mCachedStringControllers removeAllObjects];
 
-	// The base language is always the reference.
-	for(StringModel *baseStringModel in [[[mBaseFileModel fileModelContent] stringsContent] strings]) {
-		StringController *controller = [StringController controller];
-		[controller setParent:self];
-		[controller setBaseStringModel:baseStringModel];
-		StringModel *stringModel = [[[mFileModel fileModelContent] stringsContent] stringModelForKey:[baseStringModel key]];
-		if(stringModel) {
-			[controller setStringModel:stringModel];			
-		} else {
-			[Logger throwExceptionWithReason:[NSString stringWithFormat:@"String model not found for key %@ and file %@", [baseStringModel key], mFileModel]];
-		}
+    // The base language is always the reference.
+    for(StringModel *baseStringModel in [[[mBaseFileModel fileModelContent] stringsContent] strings]) {
+        StringController *controller = [StringController controller];
+        [controller setParent:self];
+        [controller setBaseStringModel:baseStringModel];
+        StringModel *stringModel = [[[mFileModel fileModelContent] stringsContent] stringModelForKey:[baseStringModel key]];
+        if(stringModel) {
+            [controller setStringModel:stringModel];            
+        } else {
+            [Logger throwExceptionWithReason:[NSString stringWithFormat:@"String model not found for key %@ and file %@", [baseStringModel key], mFileModel]];
+        }
 
-		[controller updateStatus];
-		[mStringControllers addObject:controller];
-		mCachedStringControllers[[baseStringModel key]] = controller;
-	}		
-	
-	[super rebuildFromModel];
+        [controller updateStatus];
+        [mStringControllers addObject:controller];
+        mCachedStringControllers[[baseStringModel key]] = controller;
+    }        
+    
+    [super rebuildFromModel];
 }
 
 - (BOOL)supportsEncoding
 {
-	return YES;
+    return YES;
 }
 
 - (BOOL)displayNumberOfStrings
 {
-	return YES;
+    return YES;
 }
 
 - (BOOL)displayStatus
 {
-	return YES;
+    return YES;
 }
 
 - (BOOL)displayProgress
 {
-	return ![self isBaseFileController] && ![self isLocal];
+    return ![self isBaseFileController] && ![self isLocal];
 }
 
 - (void)computeStatistics
@@ -120,22 +120,22 @@
     
     mNumberOfStrings = [vsc count]; 
     mNumberOfTranslatedStrings = 0;
-	mNumberOfNonTranslatedStrings = 0;
-	mNumberOfToCheckStrings = 0;
-	mNumberOfInvariantStrings = 0;
-	mNumberOfBaseModifiedStrings = 0;
+    mNumberOfNonTranslatedStrings = 0;
+    mNumberOfToCheckStrings = 0;
+    mNumberOfInvariantStrings = 0;
+    mNumberOfBaseModifiedStrings = 0;
     mNumberOfLockedStrings = 0;
-	mNumberOfAutoTranslatedStrings = 0;
-	mNumberOfAutoInvariantStrings = 0;
-	
-	if (![self displayProgress])
-		return;
-	
-	if (mNumberOfStrings == 0)
+    mNumberOfAutoTranslatedStrings = 0;
+    mNumberOfAutoInvariantStrings = 0;
+    
+    if (![self displayProgress])
+        return;
+    
+    if (mNumberOfStrings == 0)
         return;
 
-	StringController *sc;
-	
+    StringController *sc;
+    
     for (sc in vsc)
     {
         if ([sc statusToTranslate])
@@ -148,34 +148,34 @@
             
             if ([sc statusToCheck])
             {
-                mNumberOfToCheckStrings++;				
-				mNumberOfAutoInvariantStrings++;
-			}
+                mNumberOfToCheckStrings++;                
+                mNumberOfAutoInvariantStrings++;
+            }
             else
             {
-                mNumberOfTranslatedStrings++;				
-			}
+                mNumberOfTranslatedStrings++;                
+            }
         }
         else
         {
             if ([sc statusToCheck])
             {
                 mNumberOfToCheckStrings++;
-				mNumberOfAutoTranslatedStrings++;
-			}
+                mNumberOfAutoTranslatedStrings++;
+            }
             else
             {
-                mNumberOfTranslatedStrings++;				
-			}
+                mNumberOfTranslatedStrings++;                
+            }
         }
                                 
-		if ([sc statusBaseModified])
+        if ([sc statusBaseModified])
             // check to see where it is used
-			mNumberOfBaseModifiedStrings++;		
+            mNumberOfBaseModifiedStrings++;        
         
         if ([sc lock])
             mNumberOfLockedStrings++;
-	}
+    }
 }
 
 - (float)percentCompleted
@@ -222,112 +222,112 @@
 
 - (NSUInteger)numberOfNonTranslatedStrings
 {
-	return mNumberOfNonTranslatedStrings;
+    return mNumberOfNonTranslatedStrings;
 }
 
 - (NSUInteger)numberOfToCheckStrings
 {
-	return mNumberOfToCheckStrings;
+    return mNumberOfToCheckStrings;
 }
 
 - (NSUInteger)numberOfInvariantStrings
 {
-	return mNumberOfInvariantStrings;
+    return mNumberOfInvariantStrings;
 }
 
 - (NSUInteger)numberOfBaseModifiedStrings
 {
-	return mNumberOfBaseModifiedStrings;
+    return mNumberOfBaseModifiedStrings;
 }
 
 - (NSUInteger)numberOfLockedStrings
 {
-	return mNumberOfLockedStrings;
+    return mNumberOfLockedStrings;
 }
 
 - (NSUInteger)numberOfAutoTranslatedStrings
 {
-	return mNumberOfAutoTranslatedStrings;
+    return mNumberOfAutoTranslatedStrings;
 }
 
 - (NSUInteger)numberOfAutoInvariantStrings
 {
-	return mNumberOfAutoInvariantStrings;
+    return mNumberOfAutoInvariantStrings;
 }
 
 #pragma mark -
 
 - (NSUInteger)totalContentCount
 {
-	return [[self stringControllers] count];
+    return [[self stringControllers] count];
 }
 
 - (NSUInteger)filteredContentCount
 {
-	return [[self filteredStringControllers] count];
+    return [[self filteredStringControllers] count];
 }
 
 - (NSString *)contentInfo
 {
-	NSUInteger filteredCount = [self filteredContentCount];
-	NSUInteger totalCount = [self totalContentCount];
-	
-	if (totalCount == 0)
-		return NSLocalizedString(@"(empty)", @"File Content Empty");
-	
-	if (totalCount == filteredCount)
-		return [NSString stringWithFormat:@"%ld", totalCount];
-	else
-		return [NSString stringWithFormat:NSLocalizedString(@"%ld of %ld", @"File Content Info"), filteredCount, totalCount];
+    NSUInteger filteredCount = [self filteredContentCount];
+    NSUInteger totalCount = [self totalContentCount];
+    
+    if (totalCount == 0)
+        return NSLocalizedString(@"(empty)", @"File Content Empty");
+    
+    if (totalCount == filteredCount)
+        return [NSString stringWithFormat:@"%ld", totalCount];
+    else
+        return [NSString stringWithFormat:NSLocalizedString(@"%ld of %ld", @"File Content Info"), filteredCount, totalCount];
 }
 
 - (id)visibleStringControllers
 {
-	if(!mCachedVisibleStringControllers) {
-		mCachedVisibleStringControllers = [[NSMutableArray alloc] init];
-		
-		for(StringController *sc in mStringControllers) {
-			// IL 3.2: removed these lines because we still want empty base value to be displayed (the key is valid)
-/*			BOOL accept = [[sc base] length]>0;
-			if(!accept)
-				continue;*/
-			
+    if(!mCachedVisibleStringControllers) {
+        mCachedVisibleStringControllers = [[NSMutableArray alloc] init];
+        
+        for(StringController *sc in mStringControllers) {
+            // IL 3.2: removed these lines because we still want empty base value to be displayed (the key is valid)
+/*            BOOL accept = [[sc base] length]>0;
+            if(!accept)
+                continue;*/
+            
 #ifndef TARGET_TOOL
-			BOOL accept = ![[PreferencesFilters shared] stringControllerMatchAnyRegex:sc];
-			if(accept) {
-				[mCachedVisibleStringControllers addObject:sc];				
-			}
+            BOOL accept = ![[PreferencesFilters shared] stringControllerMatchAnyRegex:sc];
+            if(accept) {
+                [mCachedVisibleStringControllers addObject:sc];                
+            }
 #else
-			[mCachedVisibleStringControllers addObject:sc];
+            [mCachedVisibleStringControllers addObject:sc];
 #endif
-		}		
-	}
-	
-	return mCachedVisibleStringControllers;	
+        }        
+    }
+    
+    return mCachedVisibleStringControllers;    
 }
 
 - (id)stringControllerForKey:(NSString*)key
 {
-	id sc = mCachedStringControllers[key];
-	if(!sc) {
-		sc = [[self stringControllers] stringControllerForKey:key];
-		if(sc) {
-			NSLog(@"[%@] Cache doesn't have sc for %@ but the array of string controllers does.", [self filename], key);
-		}
-	}
-	return sc;
+    id sc = mCachedStringControllers[key];
+    if(!sc) {
+        sc = [[self stringControllers] stringControllerForKey:key];
+        if(sc) {
+            NSLog(@"[%@] Cache doesn't have sc for %@ but the array of string controllers does.", [self filename], key);
+        }
+    }
+    return sc;
 }
 
 - (id)stringControllers
 {
-	return mStringControllers;
+    return mStringControllers;
 }
 
 - (id)filteredStringControllers
 {
-	NSMutableArray *array = [self visibleStringControllers];
-	NSPredicate *p = [[[self projectProvider] projectWC] currentFilterPredicate];
-	return [array filteredArrayUsingPredicate:p];
+    NSMutableArray *array = [self visibleStringControllers];
+    NSPredicate *p = [[[self projectProvider] projectWC] currentFilterPredicate];
+    return [array filteredArrayUsingPredicate:p];
 }
 
 @end

@@ -11,16 +11,16 @@
 @class StringController;
 
 @interface PreferencesFilters : PreferencesObject {
-	IBOutlet NSArrayController	*mRegexController;
-	IBOutlet NSTableView		*mRegexTableView;
-	
-	NSMutableArray				*mCachedRegexArray;
-	NSCharacterSet				*mCachedLetterCharacterSet;
-	BOOL						mUpdateRegexCache;
+    IBOutlet NSArrayController    *mRegexController;
+    IBOutlet NSTableView        *mRegexTableView;
+    
+    NSMutableArray                *mCachedRegexArray;
+    NSCharacterSet                *mCachedLetterCharacterSet;
+    BOOL                        mUpdateRegexCache;
 
-	BOOL						mMatchStringsWithEmptyBase;
-	BOOL						mMatchStringsWithNoLetter;
-	BOOL						mMatchStringsWithOnlyOneLetter;
+    BOOL                        mMatchStringsWithEmptyBase;
+    BOOL                        mMatchStringsWithNoLetter;
+    BOOL                        mMatchStringsWithOnlyOneLetter;
 }
 
 + (id)shared;

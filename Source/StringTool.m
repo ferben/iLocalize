@@ -17,149 +17,149 @@ static BOOL ignoreControlCharacters = NO;
 
 + (void)setIgnoreControlCharacters:(BOOL)flag
 {
-	ignoreControlCharacters = flag;
+    ignoreControlCharacters = flag;
 }
 
 + (NSUInteger)numberOfNewLineInString:(NSString *)s
 {
-	NSUInteger count = 0;
-	NSUInteger index;
+    NSUInteger count = 0;
+    NSUInteger index;
     
-	for (index = 0; index < [s length]; index++)
+    for (index = 0; index < [s length]; index++)
     {
-		unichar c0 = [s characterAtIndex:index];
-		unichar c1 = 0;
+        unichar c0 = [s characterAtIndex:index];
+        unichar c1 = 0;
         
-		if (index + 1 < [s length])
-			c1 = [s characterAtIndex:index + 1];
-		
-		if (c0 == CR && c1 == LF)
+        if (index + 1 < [s length])
+            c1 = [s characterAtIndex:index + 1];
+        
+        if (c0 == CR && c1 == LF)
         {
-			// Windows
-			count++;
-			index++;
-		}
-        else if (c0 == LF)	// Unix
-			count++;
-		else if (c0 == CR)	// Mac
-			count++;
-	}
+            // Windows
+            count++;
+            index++;
+        }
+        else if (c0 == LF)    // Unix
+            count++;
+        else if (c0 == CR)    // Mac
+            count++;
+    }
     
-	return count;
+    return count;
 }
 
 + (NSString *)convertLineEndingsString:(NSString *)s from:(int)endings to:(int)ending
 {
-	// Converts both invisible and visible CR/LF line endings
-	
-	NSMutableString *ms = [NSMutableString string];
-	
-	NSString *to = nil;
-	NSString *tos = nil;
+    // Converts both invisible and visible CR/LF line endings
     
-	switch (ending)
-    {
-		case MAC_LINE_ENDINGS:
-			to = MAC_EOL;
-			tos = @"\\r";
-			break;
-		case UNIX_LINE_ENDINGS:
-			to = UNIX_EOL;
-			tos = @"\\n";
-			break;
-		case WINDOWS_LINE_ENDINGS:
-			to = WINDOWS_EOL;
-			tos = @"\\r\\n";
-			break;
-	}
-	
-	BOOL fromMac = endings & (1 << MAC_LINE_ENDINGS);
-	BOOL fromUnix = endings & (1 << UNIX_LINE_ENDINGS);
-	BOOL fromWindows = endings & (1 << WINDOWS_LINE_ENDINGS);
-			
-	NSUInteger index;
+    NSMutableString *ms = [NSMutableString string];
     
-	for (index = 0; index < [s length]; index++)
+    NSString *to = nil;
+    NSString *tos = nil;
+    
+    switch (ending)
     {
-		unichar c0 = [s characterAtIndex:index];
-		unichar c1 = 0;
-        
-		if (index + 1 < [s length])
-			c1 = [s characterAtIndex:index + 1];
-		
-		NSString *s0 = nil;
-        
-		if (index + 2 < [s length])
-			s0 = [s substringWithRange:NSMakeRange(index, 2)];
-		
-		NSString *s1 = nil;
-        
-		if (index + 4 < [s length])
-			s1 = [s substringWithRange:NSMakeRange(index + 2, 2)];
-				
-		if (c0 == CR && c1 == LF)
-        {
-			// Windows
-			index++;
+        case MAC_LINE_ENDINGS:
+            to = MAC_EOL;
+            tos = @"\\r";
+            break;
+        case UNIX_LINE_ENDINGS:
+            to = UNIX_EOL;
+            tos = @"\\n";
+            break;
+        case WINDOWS_LINE_ENDINGS:
+            to = WINDOWS_EOL;
+            tos = @"\\r\\n";
+            break;
+    }
+    
+    BOOL fromMac = endings & (1 << MAC_LINE_ENDINGS);
+    BOOL fromUnix = endings & (1 << UNIX_LINE_ENDINGS);
+    BOOL fromWindows = endings & (1 << WINDOWS_LINE_ENDINGS);
             
-			if (fromWindows)
-				[ms appendString:to];
-			else
-				[ms appendString:WINDOWS_EOL];
-		}
+    NSUInteger index;
+    
+    for (index = 0; index < [s length]; index++)
+    {
+        unichar c0 = [s characterAtIndex:index];
+        unichar c1 = 0;
+        
+        if (index + 1 < [s length])
+            c1 = [s characterAtIndex:index + 1];
+        
+        NSString *s0 = nil;
+        
+        if (index + 2 < [s length])
+            s0 = [s substringWithRange:NSMakeRange(index, 2)];
+        
+        NSString *s1 = nil;
+        
+        if (index + 4 < [s length])
+            s1 = [s substringWithRange:NSMakeRange(index + 2, 2)];
+                
+        if (c0 == CR && c1 == LF)
+        {
+            // Windows
+            index++;
+            
+            if (fromWindows)
+                [ms appendString:to];
+            else
+                [ms appendString:WINDOWS_EOL];
+        }
         else if ([s0 isEqualToString:@"\\r"] && [s1 isEqualToString:@"\\n"])
         {
-			// Windows (visible)
-			index += 3;
+            // Windows (visible)
+            index += 3;
             
-			if (fromWindows)
-				[ms appendString:tos];
-			else
-				[ms appendString:s0];
-		}
+            if (fromWindows)
+                [ms appendString:tos];
+            else
+                [ms appendString:s0];
+        }
         else if (c0 == LF)
         {
-			// Unix
-			if (fromUnix)
-				[ms appendString:to];
-			else
-				[ms appendString:UNIX_EOL];
-		}
+            // Unix
+            if (fromUnix)
+                [ms appendString:to];
+            else
+                [ms appendString:UNIX_EOL];
+        }
         else if ([s0 isEqualToString:@"\\n"])
         {
-			// Unix (visible)
-			index++;
+            // Unix (visible)
+            index++;
             
-			if (fromUnix)
-				[ms appendString:tos];
-			else
-				[ms appendString:@"\\n"];	
-		}
+            if (fromUnix)
+                [ms appendString:tos];
+            else
+                [ms appendString:@"\\n"];    
+        }
         else if (c0 == CR)
         {
-			// Mac
-			if (fromMac)
-				[ms appendString:to];
-			else
-				[ms appendString:MAC_EOL];
-		}
+            // Mac
+            if (fromMac)
+                [ms appendString:to];
+            else
+                [ms appendString:MAC_EOL];
+        }
         else if ([s0 isEqualToString:@"\\r"])
         {
-			// Mac (visible)
-			index++;
+            // Mac (visible)
+            index++;
             
-			if (fromMac)
-				[ms appendString:tos];
-			else
-				[ms appendString:@"\\r"];
-		}
+            if (fromMac)
+                [ms appendString:tos];
+            else
+                [ms appendString:@"\\r"];
+        }
         else
         {
-			[ms appendString:[s substringWithRange:NSMakeRange(index, 1)]];
-		}
-	}
-	
-	return ms;	
+            [ms appendString:[s substringWithRange:NSMakeRange(index, 1)]];
+        }
+    }
+    
+    return ms;    
 }
 
 /**
@@ -169,40 +169,40 @@ static BOOL ignoreControlCharacters = NO;
  */
 + (NSString *)escapeDoubleQuoteInString:(NSString *)s
 {
-	NSMutableString *ms = [NSMutableString stringWithCapacity:[s length]];
-	BOOL escaped = NO;
+    NSMutableString *ms = [NSMutableString stringWithCapacity:[s length]];
+    BOOL escaped = NO;
     
-	for (NSUInteger index = 0; index < [s length]; index++)
+    for (NSUInteger index = 0; index < [s length]; index++)
     {
-		unichar c = [s characterAtIndex:index];
+        unichar c = [s characterAtIndex:index];
         
-		if (c == '"' && !escaped)
+        if (c == '"' && !escaped)
         {
-			[ms appendString:@"\\"];			
-		}
-				
-		if (c == '\\')
+            [ms appendString:@"\\"];            
+        }
+                
+        if (c == '\\')
         {
-			if (!escaped)
+            if (!escaped)
             {
-				escaped = YES;
-			}
+                escaped = YES;
+            }
             else
             {
-				escaped = NO;
-			}
+                escaped = NO;
+            }
 
-		}
+        }
         else
         {
-			escaped = NO;
-		}
+            escaped = NO;
+        }
 
-		
-		[ms appendString:[s substringWithRange:NSMakeRange(index, 1)]];
-	}
-	
-	return ms;
+        
+        [ms appendString:[s substringWithRange:NSMakeRange(index, 1)]];
+    }
+    
+    return ms;
 }
 
 /**
@@ -212,14 +212,14 @@ static BOOL ignoreControlCharacters = NO;
  */
 + (NSString *)removeDoubleQuoteInString:(NSString *)s
 {
-	NSMutableString *ms = [NSMutableString stringWithCapacity:[s length]];
-	BOOL escaped = NO;
+    NSMutableString *ms = [NSMutableString stringWithCapacity:[s length]];
+    BOOL escaped = NO;
     
-	for(NSUInteger index = 0; index < [s length]; index++)
+    for(NSUInteger index = 0; index < [s length]; index++)
     {
-		unichar c = [s characterAtIndex:index];
+        unichar c = [s characterAtIndex:index];
         
-		if (c == '"')
+        if (c == '"')
         {
             if (escaped)
             {
@@ -230,30 +230,30 @@ static BOOL ignoreControlCharacters = NO;
             
             [ms appendString:@" "];
             continue;
-		}
+        }
         
-		if (c == '\\')
+        if (c == '\\')
         {
-			if (!escaped)
+            if (!escaped)
             {
-				escaped = YES;
-			}
+                escaped = YES;
+            }
             else
             {
-				escaped = NO;
-			}
+                escaped = NO;
+            }
             
-		}
+        }
         else
         {
-			escaped = NO;
-		}
+            escaped = NO;
+        }
         
-		
-		[ms appendString:[s substringWithRange:NSMakeRange(index, 1)]];
-	}
-	
-	return ms;
+        
+        [ms appendString:[s substringWithRange:NSMakeRange(index, 1)]];
+    }
+    
+    return ms;
 }
 
 /**
@@ -270,36 +270,36 @@ static BOOL ignoreControlCharacters = NO;
  */
 + (NSString *)unescapeDoubleQuoteInString:(NSString *)s
 {
-	NSMutableString *ms = [NSMutableString stringWithCapacity:[s length]];
-	BOOL escaped = NO;
+    NSMutableString *ms = [NSMutableString stringWithCapacity:[s length]];
+    BOOL escaped = NO;
     
-	for (NSUInteger index = 0; index < [s length]; index++)
+    for (NSUInteger index = 0; index < [s length]; index++)
     {
-		unichar c = [s characterAtIndex:index];
-		
-		if (escaped)
+        unichar c = [s characterAtIndex:index];
+        
+        if (escaped)
         {
-			escaped = NO;
+            escaped = NO;
             
-			if (c != '"')
+            if (c != '"')
             {
-				// keep the backslash
-				[ms appendString:@"\\"];
-			}
-			
+                // keep the backslash
+                [ms appendString:@"\\"];
+            }
+            
             [ms appendFormat:@"%C", c];
-		}
+        }
         else if (c == '\\')
         {
-			escaped = YES;			
-		}
+            escaped = YES;            
+        }
         else
         {
-			[ms appendFormat:@"%C", c];
-		}
-	}
-	
-	return ms;
+            [ms appendFormat:@"%C", c];
+        }
+    }
+    
+    return ms;
 }
 
 BOOL sameControlChar(unichar a, unichar b)
@@ -347,33 +347,33 @@ BOOL sameControlChar(unichar a, unichar b)
         {
             i++;
             
-			if (i >= la)
+            if (i >= la)
             {
-				return NO;
-			}
-			
+                return NO;
+            }
+            
             ca = [a characterAtIndex:i];
             
             if (!sameControlChar(ca, cb))
             {
-                return NO;				
-			}
+                return NO;                
+            }
         }
         else if (ca != '\\' && cb == '\\')
         {
             j++;
             
-			if (j >= lb)
+            if (j >= lb)
             {
-				return NO;
-			}
+                return NO;
+            }
 
             cb = [b characterAtIndex:j];
             
             if (!sameControlChar(cb, ca))
             {
-                return NO;				
-			}
+                return NO;                
+            }
         }
         else if (ca != cb)
         {

@@ -9,12 +9,12 @@
 @class BundleSource;
 
 @interface NewProjectSettings : NSObject {
-	NSString *name;
+    NSString *name;
     BundleSource *source;
-	NSString *projectFolder;
-	NSString *baseLanguage;
-	NSArray *localizedLanguages;
-	BOOL copySourceOnlyIfExists;
+    NSString *projectFolder;
+    NSString *baseLanguage;
+    NSArray *localizedLanguages;
+    BOOL copySourceOnlyIfExists;
 }
 
 /**

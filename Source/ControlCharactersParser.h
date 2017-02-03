@@ -8,8 +8,8 @@
 
 
 @interface ControlCharactersParser : NSObject {
-	NSMutableString		*mString;
-	int					mIndex;
+    NSMutableString        *mString;
+    int                    mIndex;
 }
 + (NSString*)showControlCharacters:(NSString*)string;
 + (NSString*)hideControlCharacters:(NSString*)string;

@@ -7,10 +7,10 @@
 //
 
 @interface SmartPathParser : NSObject {
-	NSArray *mComponents;
-	NSMutableArray	*mSmartPathComponents;
-	int		mCurrentComponentIndex;
-	BOOL	mIncludeLProj;
+    NSArray *mComponents;
+    NSMutableArray    *mSmartPathComponents;
+    int        mCurrentComponentIndex;
+    BOOL    mIncludeLProj;
 }
 + (NSString*)smartPath:(NSString*)path;
 + (NSString*)smartPath:(NSString*)path lproj:(BOOL)lproj;

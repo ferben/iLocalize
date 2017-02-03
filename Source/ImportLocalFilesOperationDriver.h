@@ -12,8 +12,8 @@
 @class AnalyzeBundleOp;
 
 @interface ImportLocalFilesOperationDriver : OperationDriver {
-	ImportFilesSettings *settings;
-	AnalyzeBundleOp *analyzeOp;
+    ImportFilesSettings *settings;
+    AnalyzeBundleOp *analyzeOp;
 }
 @property (strong) ImportFilesSettings *settings;
 @property (strong) AnalyzeBundleOp *analyzeOp;

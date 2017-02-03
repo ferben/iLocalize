@@ -11,16 +11,16 @@
 #import <WebKit/WebFrame.h>
 
 @interface FMEditorHTML : FMEditor {
-	IBOutlet NSTextView				*mBaseBaseTextView;
-	IBOutlet NSTextView				*mLocalizedBaseTextView;
-	IBOutlet NSTextView				*mLocalizedTranslationTextView;	
-	
-	IBOutlet WebView				*mBaseBaseWebView;
-	IBOutlet WebView				*mLocalizedBaseWebView;
-	IBOutlet WebView				*mLocalizedTranslationWebView;
-	
-	BOOL mReloadBasePreview;
-	BOOL mReloadLocalizedPreview;
+    IBOutlet NSTextView                *mBaseBaseTextView;
+    IBOutlet NSTextView                *mLocalizedBaseTextView;
+    IBOutlet NSTextView                *mLocalizedTranslationTextView;    
+    
+    IBOutlet WebView                *mBaseBaseWebView;
+    IBOutlet WebView                *mLocalizedBaseWebView;
+    IBOutlet WebView                *mLocalizedTranslationWebView;
+    
+    BOOL mReloadBasePreview;
+    BOOL mReloadLocalizedPreview;
 }
 - (IBAction)back:(id)sender;
 - (IBAction)forward:(id)sender;

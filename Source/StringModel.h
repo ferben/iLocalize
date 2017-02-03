@@ -6,19 +6,19 @@
 //  Copyright 2004 Arizona Software. All rights reserved.
 //
 
-#define COMMENT_SIMPLE		1
-#define COMMENT_COMPLEX		2
+#define COMMENT_SIMPLE        1
+#define COMMENT_COMPLEX        2
 
-#define STRING_QUOTED		1
-#define STRING_IDENTIFIER	2
-#define STRING_XML			3
-#define STRING_OLDSTYLE		4
+#define STRING_QUOTED        1
+#define STRING_IDENTIFIER    2
+#define STRING_XML            3
+#define STRING_OLDSTYLE        4
 
 typedef void(^StringModelCommentBlock)(NSString *comment, unsigned type, int row);
 
 @interface StringModel : NSObject <NSCoding>
 {
-	NSMutableDictionary	*mAttributes;
+    NSMutableDictionary    *mAttributes;
 }
 
 + (StringModel *)model;

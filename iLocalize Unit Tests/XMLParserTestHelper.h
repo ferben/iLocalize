@@ -9,7 +9,7 @@
 #import "XMLParser.h"
 
 @interface XMLParserTestHelper : NSObject <XMLParserDelegate> {
-	NSMutableArray *mVerifyArray;
+    NSMutableArray *mVerifyArray;
 }
 + (BOOL)parseFile:(NSString*)file verifyFile:(NSString*)verify;
 - (BOOL)verifyWithArray:(NSArray*)array;

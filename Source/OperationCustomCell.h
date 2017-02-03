@@ -7,7 +7,7 @@
 //
 
 @interface OperationCustomCell : NSCell {
-	id mCustomValue;
+    id mCustomValue;
 }
 + (OperationCustomCell*)cell;
 - (void)setCustomValue:(id)value;

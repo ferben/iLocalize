@@ -12,17 +12,17 @@
 @class LanguageMenuProvider;
 
 @interface XLIFFExportOVC : OperationViewController {
-	IBOutlet NSPopUpButton *formatPopup;
-	IBOutlet NSPopUpButton *sourceLanguagePopup;
-	IBOutlet NSPopUpButton *targetLanguagePopup;
-	IBOutlet NSPathControl *filePathControl;
-	
-	// Settings
-	XLIFFExportSettings *settings;
-	
-	// The class that populates the language popups
-	LanguageMenuProvider *sourceLanguageProvider;
-	LanguageMenuProvider *targetLanguageProvider;
+    IBOutlet NSPopUpButton *formatPopup;
+    IBOutlet NSPopUpButton *sourceLanguagePopup;
+    IBOutlet NSPopUpButton *targetLanguagePopup;
+    IBOutlet NSPathControl *filePathControl;
+    
+    // Settings
+    XLIFFExportSettings *settings;
+    
+    // The class that populates the language popups
+    LanguageMenuProvider *sourceLanguageProvider;
+    LanguageMenuProvider *targetLanguageProvider;
 }
 @property (strong) XLIFFExportSettings *settings;
 - (IBAction)chooseFile:(id)sender;

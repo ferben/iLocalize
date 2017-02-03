@@ -15,30 +15,30 @@
 /*
 + (void)search:(id)container forValue:(id)value found:(NSMutableArray*)found path:(NSArray*)path
 {
-	if([container isKindOfClass:[NSDictionary class]]) {
-		for(id key in [container allKeys]) {			
-			[AppTool search:[container objectForKey:key] forValue:value found:found path:[path arrayByAddingObject:key]];			
-		}		
-	} else if([container isKindOfClass:[NSArray class]]) {
-		for(id v in container) {
-			[AppTool search:v forValue:value found:found path:path];			
-		}
-	} else {
-		if([container isEqual:value]) {
-			[found addObject:[NSString stringWithFormat:@"%@: %@", path, value]];
-		}
-	}
+    if([container isKindOfClass:[NSDictionary class]]) {
+        for(id key in [container allKeys]) {            
+            [AppTool search:[container objectForKey:key] forValue:value found:found path:[path arrayByAddingObject:key]];            
+        }        
+    } else if([container isKindOfClass:[NSArray class]]) {
+        for(id v in container) {
+            [AppTool search:v forValue:value found:found path:path];            
+        }
+    } else {
+        if([container isEqual:value]) {
+            [found addObject:[NSString stringWithFormat:@"%@: %@", path, value]];
+        }
+    }
 }
 
 + (void)searchDomains
 {
-	NSMutableArray *found = [NSMutableArray array];
-	
-	for(NSString *domain in [[NSUserDefaults standardUserDefaults] persistentDomainNames]) {
-		NSDictionary *d = [[NSUserDefaults standardUserDefaults] persistentDomainForName:domain];
-		[AppTool search:d forValue:[NSNumber numberWithInt:20] found:found path:[NSArray arrayWithObject:domain]];
-	}
-	NSLog(@"%@", found);	
+    NSMutableArray *found = [NSMutableArray array];
+    
+    for(NSString *domain in [[NSUserDefaults standardUserDefaults] persistentDomainNames]) {
+        NSDictionary *d = [[NSUserDefaults standardUserDefaults] persistentDomainForName:domain];
+        [AppTool search:d forValue:[NSNumber numberWithInt:20] found:found path:[NSArray arrayWithObject:domain]];
+    }
+    NSLog(@"%@", found);    
 }
 */
 

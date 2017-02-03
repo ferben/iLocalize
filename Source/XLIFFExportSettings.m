@@ -19,32 +19,32 @@
 @synthesize targetFile;
 - (id) init
 {
-	self = [super init];
-	if (self != nil) {
-		self.format = XLIFF;
-	}
-	return self;
+    self = [super init];
+    if (self != nil) {
+        self.format = XLIFF;
+    }
+    return self;
 }
 
 // used for persistence
 - (void)setData:(NSDictionary*)data
 {
-	if(data == nil) return;
-	
-	self.format = [data[@"format"] intValue];
-	self.sourceLanguage = data[@"sourceLanguage"];
-	self.targetLanguage = data[@"targetLanguage"];
-	self.targetFile = data[@"targetFile"];
+    if(data == nil) return;
+    
+    self.format = [data[@"format"] intValue];
+    self.sourceLanguage = data[@"sourceLanguage"];
+    self.targetLanguage = data[@"targetLanguage"];
+    self.targetFile = data[@"targetFile"];
 }
 
 - (NSDictionary*)data
 {
-	NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-	dic[@"format"] = [NSNumber numberWithInt:self.format];
-	[dic setObjectOrNil:self.sourceLanguage forKey:@"sourceLanguage"];
-	[dic setObjectOrNil:self.targetLanguage forKey:@"targetLanguage"];
-	[dic setObjectOrNil:self.targetFile forKey:@"targetFile"];	
-	return dic;
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    dic[@"format"] = [NSNumber numberWithInt:self.format];
+    [dic setObjectOrNil:self.sourceLanguage forKey:@"sourceLanguage"];
+    [dic setObjectOrNil:self.targetLanguage forKey:@"targetLanguage"];
+    [dic setObjectOrNil:self.targetFile forKey:@"targetFile"];    
+    return dic;
 }
 
 @end

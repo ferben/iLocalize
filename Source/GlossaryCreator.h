@@ -9,24 +9,24 @@
 #import "ProjectProvider.h"
 
 #define SOURCE_LANGUAGE 0
-#define SOURCE_FILES	1
-#define SOURCE_STRINGS	2
+#define SOURCE_FILES    1
+#define SOURCE_STRINGS    2
 
 @class LanguageController;
 @class Glossary;
 
 @interface GlossaryCreator : NSObject
 {
-	Glossary              *glossary;
-	NSInteger              mSource;
-	LanguageController    *mSourceLanguage;
-	LanguageController    *mTargetLanguage;
-	BOOL                   mIncludeTranslated;
-	BOOL                   mIncludeNonTranslated;
-	BOOL                   mExcludeLocked;
-	BOOL                   mRemoveDuplicateEntries;
-	
-	id <ProjectProvider>   mProvider;
+    Glossary              *glossary;
+    NSInteger              mSource;
+    LanguageController    *mSourceLanguage;
+    LanguageController    *mTargetLanguage;
+    BOOL                   mIncludeTranslated;
+    BOOL                   mIncludeNonTranslated;
+    BOOL                   mExcludeLocked;
+    BOOL                   mRemoveDuplicateEntries;
+    
+    id <ProjectProvider>   mProvider;
 }
 
 + (GlossaryCreator *)creator;

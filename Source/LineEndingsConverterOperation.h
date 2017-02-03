@@ -9,7 +9,7 @@
 #import "AbstractOperation.h"
 
 @interface LineEndingsConverterOperation : AbstractOperation {
-	NSArray	*mFileControllers;
+    NSArray    *mFileControllers;
 }
 - (void)convertFileControllers:(NSArray*)fileControllers;
 @end

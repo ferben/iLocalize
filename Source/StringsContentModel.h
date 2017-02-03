@@ -10,8 +10,8 @@
 
 @interface StringsContentModel : NSObject
 {
-	NSMutableArray *mStrings;
-	NSMutableDictionary *mCache;
+    NSMutableArray *mStrings;
+    NSMutableDictionary *mCache;
 }
 + (StringsContentModel *)model;
 - (void)setStringModels:(NSArray *)models;

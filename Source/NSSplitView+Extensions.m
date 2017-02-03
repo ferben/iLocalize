@@ -12,24 +12,24 @@
 
 - (id)storePositions
 {
-	NSMutableArray *pos = [NSMutableArray array];
-	for(NSView *subview in self.subviews) {
-		[pos addObject:NSStringFromRect(subview.frame)];
-	}
-	return pos;
+    NSMutableArray *pos = [NSMutableArray array];
+    for(NSView *subview in self.subviews) {
+        [pos addObject:NSStringFromRect(subview.frame)];
+    }
+    return pos;
 }
 
 - (void)restorePositions:(id)positions
 {
-	if(![positions isKindOfClass:[NSArray class]]) return;
-			
-	int index = 0;
-	for(NSString *pos in positions) {
-		// check also for the kind of class because old project didn't use a string for pos
-		if(index<self.subviews.count && [pos isKindOfClass:[NSString class]]) {
-			[(self.subviews)[index++] setFrame:NSRectFromString(pos)];			
-		}
-	}
+    if(![positions isKindOfClass:[NSArray class]]) return;
+            
+    int index = 0;
+    for(NSString *pos in positions) {
+        // check also for the kind of class because old project didn't use a string for pos
+        if(index<self.subviews.count && [pos isKindOfClass:[NSString class]]) {
+            [(self.subviews)[index++] setFrame:NSRectFromString(pos)];            
+        }
+    }
 }
 
 @end

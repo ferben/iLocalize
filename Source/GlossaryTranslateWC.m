@@ -13,20 +13,20 @@
 
 - (id)init
 {
-	if(self = [super initWithWindowNibName:@"GlossaryTranslate"]) {
-		
-	}
-	return self;
+    if(self = [super initWithWindowNibName:@"GlossaryTranslate"]) {
+        
+    }
+    return self;
 }
 
 - (IBAction)translateAllFiles:(id)sender
 {
-	[self hideWithCode:1];	
+    [self hideWithCode:1];    
 }
 
 - (IBAction)translateSelectedFiles:(id)sender
 {
-	[self hideWithCode:2];
+    [self hideWithCode:2];
 }
 
 @end

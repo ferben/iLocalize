@@ -13,14 +13,14 @@
 
 - (void)drawBezelWithFrame:(NSRect)frame inView:(NSView *)controlView
 {
-	BOOL selected = [self isHighlighted];
-	NSImage *startCap = [NSImage imageNamed:selected?@"left-strip-selected":@"left-strip"];
-	NSImage *centerFill = [NSImage imageNamed:selected?@"middle-strip-selected":@"middle-strip"];
-	//NSImage *endCap = [NSImage imageNamed:selected?@"right-strip-selected":@"right-strip"];
-	
-	//endCap = centerFill;
-	
-	NSDrawThreePartImage(frame, startCap, centerFill, centerFill, NO, NSCompositeCopy, 1.0, YES);			
+    BOOL selected = [self isHighlighted];
+    NSImage *startCap = [NSImage imageNamed:selected?@"left-strip-selected":@"left-strip"];
+    NSImage *centerFill = [NSImage imageNamed:selected?@"middle-strip-selected":@"middle-strip"];
+    //NSImage *endCap = [NSImage imageNamed:selected?@"right-strip-selected":@"right-strip"];
+    
+    //endCap = centerFill;
+    
+    NSDrawThreePartImage(frame, startCap, centerFill, centerFill, NO, NSCompositeCopy, 1.0, YES);            
 }
 
 @end

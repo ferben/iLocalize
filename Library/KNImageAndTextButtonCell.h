@@ -36,7 +36,7 @@
 
 @interface KNImageAndTextButtonCell : NSButtonCell {
 
-	NSImage *image;
+    NSImage *image;
 }
 
 - (void)setImage:(NSImage *)anImage;

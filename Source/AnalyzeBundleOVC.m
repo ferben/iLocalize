@@ -21,18 +21,18 @@
 
 - (id)init
 {
-	if((self = [super initWithNibName:@"AnalyzeBundle" bundle:nil])) {
+    if((self = [super initWithNibName:@"AnalyzeBundle" bundle:nil])) {
         rootNode = [[AZPathNode alloc] init];
-	}
-	return self;
+    }
+    return self;
 }
 
 
 - (void)updateButtons
 {
-	AZPathNode *item = [outlineView selectedItem];
-	[copyToClipboardButton setEnabled:item != nil];
-	[revealButton setEnabled:item.payload != nil];	
+    AZPathNode *item = [outlineView selectedItem];
+    [copyToClipboardButton setEnabled:item != nil];
+    [revealButton setEnabled:item.payload != nil];    
 }
 
 - (void)awakeFromNib
@@ -51,21 +51,21 @@
         [rootNode addNode:problemNode];
     }
 
-	for(int r=0; r<[outlineView numberOfRows]; r++) {
-		AZPathNode *node = [outlineView itemAtRow:r];
-		if([[node children] count] < 10) {
-			[outlineView expandItem:node];			
-		}
-	}
+    for(int r=0; r<[outlineView numberOfRows]; r++) {
+        AZPathNode *node = [outlineView itemAtRow:r];
+        if([[node children] count] < 10) {
+            [outlineView expandItem:node];            
+        }
+    }
     
-	[self updateButtons];
+    [self updateButtons];
 }
 
 #pragma mark Actions
 
 - (IBAction)copyToClipboard:(id)sender
 {
-	NSMutableString *s = [NSMutableString string];
+    NSMutableString *s = [NSMutableString string];
     for (AZPathNode *node in [outlineView selectedItems]) {
         [node visitLeaves:^(AZPathNode *n) {
             [s appendString:n.payload];
@@ -76,7 +76,7 @@
     if (s.length > 0) {
         NSPasteboard *pb = [NSPasteboard generalPasteboard];
         [pb declareTypes:@[NSStringPboardType] owner:nil];
-        [pb setString:s forType:NSStringPboardType];		        
+        [pb setString:s forType:NSStringPboardType];                
     }
 }
 
@@ -85,7 +85,7 @@
     for (AZPathNode *node in [outlineView selectedItems]) {
         NSString *file = node.payload;
         if(file) {
-            [FileTool revealFile:file];		
+            [FileTool revealFile:file];        
         }
     }
 }
@@ -94,7 +94,7 @@
 
 - (void)outlineViewSelectionDidChange:(NSNotification *)notification
 {
-	[self updateButtons];
+    [self updateButtons];
 }
 
 - (NSString *)outlineView:(NSOutlineView *)outlineView toolTipForCell:(NSCell *)cell rect:(NSRectPointer)rect tableColumn:(NSTableColumn *)tc item:(id)item mouseLocation:(NSPoint)mouseLocation
@@ -111,23 +111,23 @@
 
 - (NSUInteger)outlineView:(NSOutlineView *)ov numberOfChildrenOfItem:(id)item
 {
-	if (item == NULL)
+    if (item == NULL)
     {
         return [[rootNode children] count];
-	}
+    }
     else
     {
         return [[item children] count];
-	}
+    }
 }
 
 - (id)outlineView:(NSOutlineView *)ov child:(int)index ofItem:(id)item
 {
-	if(item == NULL) {
+    if(item == NULL) {
         return [rootNode children][index];
-	} else {
+    } else {
         return [item children][index];
-	}
+    }
 }
 
 - (BOOL)outlineView:(NSOutlineView *)ov isItemExpandable:(id)item
@@ -152,7 +152,7 @@
 }
 
 - (void)outlineView:(NSOutlineView *)olv willDisplayCell:(NSCell *)cell forTableColumn:(NSTableColumn *)tableColumn item:(id)item 
-{	
+{    
     AZPathNode *node = item;
     if([node.payload isKindOfClass:[NSDictionary class]]) {
         [cell setImage:nil];

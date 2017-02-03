@@ -8,14 +8,14 @@
 
 @interface XLIFFImportSettings : NSObject
 {
-	// XLIFF file to import
-	NSString *file;
-	
-	// Files to apply the XLIFF to.
-	NSArray *targetFiles;
-	
-	// An array of XMLImportFileElement
-	NSArray *fileElements;
+    // XLIFF file to import
+    NSString *file;
+    
+    // Files to apply the XLIFF to.
+    NSArray *targetFiles;
+    
+    // An array of XMLImportFileElement
+    NSArray *fileElements;
     
     // Use the xliff "resname" instead of the source to match the translations
     BOOL useResnameInsteadOfSource;

@@ -20,11 +20,11 @@
 
 - (id) init
 {
-	self = [super init];
-	if (self != nil) {
-		settings = [[ExportProjectSettings alloc] init];
-	}
-	return self;
+    self = [super init];
+    if (self != nil) {
+        settings = [[ExportProjectSettings alloc] init];
+    }
+    return self;
 }
 
 
@@ -41,109 +41,109 @@ enum {
  */
 - (NSString*)presetName
 {
-	return [self arguments][EXPORT_PRESET_NAME];
+    return [self arguments][EXPORT_PRESET_NAME];
 }
 
 - (id)operationForState:(int)state
 {
-	id op = nil;
-	switch (state) {
-		case STATE_EXPORT_OVC: {
-			ExportProjectOVC *operation = [ExportProjectOVC createInstance];
-			operation.settings = settings;
+    id op = nil;
+    switch (state) {
+        case STATE_EXPORT_OVC: {
+            ExportProjectOVC *operation = [ExportProjectOVC createInstance];
+            operation.settings = settings;
             // indicate to bypass this view controller if the user choose
             // Export Again As (which means nothing will be displayed but the validation
             // code against Overwrite/Merge will be executed).
             operation.bypass = [self presetName] != nil;
-			op = operation;
-			break;			
-		}
-						
-		case STATE_EXPORT_OP: {
-			ExportProjectOperation *operation = [ExportProjectOperation operation];
-			operation.settings = settings;
-			op = operation;
-			break;						
-		}
+            op = operation;
+            break;            
+        }
+                        
+        case STATE_EXPORT_OP: {
+            ExportProjectOperation *operation = [ExportProjectOperation operation];
+            operation.settings = settings;
+            op = operation;
+            break;                        
+        }
 
         case STATE_EXPORT_MERGE_OP: {
-			ExportProjectPrepareFilesOp *operation = [ExportProjectPrepareFilesOp operation];
-			operation.settings = settings;
-			op = operation;
-			break;						
-		}
+            ExportProjectPrepareFilesOp *operation = [ExportProjectPrepareFilesOp operation];
+            operation.settings = settings;
+            op = operation;
+            break;                        
+        }
             
-		case STATE_EXPORT_MERGE_OVC: {
-			ExportProjectMergeOVC *operation = [ExportProjectMergeOVC createInstance];
-			operation.settings = settings;
-			op = operation;
-			break;						
-		}
-	}
-	return op;
+        case STATE_EXPORT_MERGE_OVC: {
+            ExportProjectMergeOVC *operation = [ExportProjectMergeOVC createInstance];
+            operation.settings = settings;
+            op = operation;
+            break;                        
+        }
+    }
+    return op;
 }
 
 - (void)loadSettings
 {
-	settings.provider = self.provider;
-	[settings setData:[[self.provider projectPrefs] exportSettings]];
+    settings.provider = self.provider;
+    [settings setData:[[self.provider projectPrefs] exportSettings]];
 
-	NSString *presetName = [self presetName];
-	if(presetName) {
-		for(NSDictionary *p in [[self.provider projectPrefs] exportSettingsPresets]) {
-			if([p[EXPORT_PRESET_NAME] isEqualToString:presetName]) {
-				[settings setData:p[EXPORT_PRESET_SETTINGS]];
-			}
-		}
-	}
+    NSString *presetName = [self presetName];
+    if(presetName) {
+        for(NSDictionary *p in [[self.provider projectPrefs] exportSettingsPresets]) {
+            if([p[EXPORT_PRESET_NAME] isEqualToString:presetName]) {
+                [settings setData:p[EXPORT_PRESET_SETTINGS]];
+            }
+        }
+    }
 }
 
 - (void)saveSettings
 {
-	[[self.provider projectPrefs] setExportSettings:[settings data]];
+    [[self.provider projectPrefs] setExportSettings:[settings data]];
 }
 
 - (void)operationCancel
 {
-	[self saveSettings];
-	[super operationCancel];
+    [self saveSettings];
+    [super operationCancel];
 }
 
 - (int)previousState:(int)state
 {
-	int previousState = STATE_ERROR;
-	switch (state) {
-		case STATE_INITIAL:
-			previousState = STATE_END;
-			break;
-			
-		case STATE_EXPORT_OVC:
-			previousState = STATE_END;			
-			break;	
-						
-		case STATE_EXPORT_OP:
+    int previousState = STATE_ERROR;
+    switch (state) {
+        case STATE_INITIAL:
+            previousState = STATE_END;
+            break;
+            
+        case STATE_EXPORT_OVC:
+            previousState = STATE_END;            
+            break;    
+                        
+        case STATE_EXPORT_OP:
         case STATE_EXPORT_MERGE_OP:
         case STATE_EXPORT_MERGE_OVC:
-			previousState = STATE_EXPORT_OVC;			
-			break;				
-	}	
-	return previousState;
+            previousState = STATE_EXPORT_OVC;            
+            break;                
+    }    
+    return previousState;
 }
 
 - (int)nextState:(int)state
 {
-	int nextState = STATE_ERROR;
-	switch (state) {
-		case STATE_INITIAL:
-			[self loadSettings];
-            nextState = STATE_EXPORT_OVC;	
-			break;
-			
-		case STATE_EXPORT_OVC:
-			[self saveSettings];
-			nextState = STATE_EXPORT_MERGE_OP;
-			break;	
-								
+    int nextState = STATE_ERROR;
+    switch (state) {
+        case STATE_INITIAL:
+            [self loadSettings];
+            nextState = STATE_EXPORT_OVC;    
+            break;
+            
+        case STATE_EXPORT_OVC:
+            [self saveSettings];
+            nextState = STATE_EXPORT_MERGE_OP;
+            break;    
+                                
         case STATE_EXPORT_MERGE_OP:
             if(settings.filesToCopy.count == 0) {
                 nextState = STATE_END;
@@ -157,14 +157,14 @@ enum {
             break;
 
         case STATE_EXPORT_MERGE_OVC:
-			nextState = STATE_EXPORT_OP;
+            nextState = STATE_EXPORT_OP;
             break;
 
-		case STATE_EXPORT_OP:
-			nextState = STATE_END;
-			break;
-	}
-	return nextState;
+        case STATE_EXPORT_OP:
+            nextState = STATE_END;
+            break;
+    }
+    return nextState;
 }
 
 @end

@@ -7,13 +7,13 @@
 //
 
 @interface Toolbar : NSObject<NSToolbarDelegate> {
-	NSWindow			*mWindow;
-	NSToolbar			*mToolbar;
-	NSMutableDictionary	*mViewDic;
-	NSMutableArray		*mIdentifiers;
+    NSWindow            *mWindow;
+    NSToolbar            *mToolbar;
+    NSMutableDictionary    *mViewDic;
+    NSMutableArray        *mIdentifiers;
 
-	BOOL				mResizeContent;
-	id					mDelegate;
+    BOOL                mResizeContent;
+    id                    mDelegate;
 }
 
 - (void)setResizeContent:(BOOL)resize;

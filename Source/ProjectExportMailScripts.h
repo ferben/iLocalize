@@ -7,7 +7,7 @@
 //
 
 @interface ProjectExportMailScripts : NSObject {
-	NSMutableArray				*mMailPrograms;
+    NSMutableArray                *mMailPrograms;
 }
 + (ProjectExportMailScripts*)shared;
 - (void)update;

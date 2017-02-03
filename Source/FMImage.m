@@ -14,36 +14,36 @@
 
 - (BOOL)builtIn
 {
-	return YES;
+    return YES;
 }
 
 - (NSString*)name
 {
-	return NSLocalizedStringFromTable(@"Images", @"LocalizableEditors", @"File Editor Images");
+    return NSLocalizedStringFromTable(@"Images", @"LocalizableEditors", @"File Editor Images");
 }
 
 - (NSImage*)fileImage
 {
-	return [NSImage imageNamed:@"FileIconPict"];
+    return [NSImage imageNamed:@"FileIconPict"];
 }
 
 - (Class)editorClass
 {
-	return NSClassFromString(@"FMEditorImage");
+    return NSClassFromString(@"FMEditorImage");
 }
 
 - (Class)engineClass
 {
-	return [FMEngineImage class];
+    return [FMEngineImage class];
 }
 
 - (void)load
 {
-	NSEnumerator *enumerator = [[NSImage imageFileTypes] objectEnumerator];
-	NSString *type;
-	while(type = [enumerator nextObject]) {
-		[[self manager] registerFileModule:self forFileExtension:type];
-	}
+    NSEnumerator *enumerator = [[NSImage imageFileTypes] objectEnumerator];
+    NSString *type;
+    while(type = [enumerator nextObject]) {
+        [[self manager] registerFileModule:self forFileExtension:type];
+    }
 }
 
 @end

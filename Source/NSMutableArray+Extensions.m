@@ -19,31 +19,31 @@
 
 - (void)removeFirstObject
 {
-	if([self count]>0) {
-		[self removeObjectAtIndex:0];
-	}
+    if([self count]>0) {
+        [self removeObjectAtIndex:0];
+    }
 }
 
 - (NSMutableArray*)arrayByRemovingFirstObject
 {
-	NSMutableArray *array = [self mutableCopy];
-	[array removeFirstObject];
-	return array;
+    NSMutableArray *array = [self mutableCopy];
+    [array removeFirstObject];
+    return array;
 }
 
 - (BOOL)removePathOrEquivalent:(NSString*)path
 {
-	@autoreleasepool {
-		BOOL removed = NO;
-		int index;
-		for(index = [self count]-1; index>=0; index--) {
-			if([self[index] isEquivalentToPath:path]) {
-				[self removeObjectAtIndex:index];
-				removed = YES;
-			}
-		}
-		return removed;
-	}	
+    @autoreleasepool {
+        BOOL removed = NO;
+        int index;
+        for(index = [self count]-1; index>=0; index--) {
+            if([self[index] isEquivalentToPath:path]) {
+                [self removeObjectAtIndex:index];
+                removed = YES;
+            }
+        }
+        return removed;
+    }    
 }
 
 @end

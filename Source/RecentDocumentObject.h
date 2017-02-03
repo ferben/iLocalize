@@ -7,8 +7,8 @@
 //
 
 @interface RecentDocumentObject : NSObject {
-	NSURL *url;
-	int disambiguationLevel;
+    NSURL *url;
+    int disambiguationLevel;
 }
 
 @property (strong) NSURL *url;

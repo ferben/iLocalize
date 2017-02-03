@@ -10,15 +10,15 @@
 #import "LanguageMenuProvider.h"
 
 @interface AddLanguageWC : AbstractWC <LanguageMenuProviderDelegate> {
-	IBOutlet NSPopUpButton *mLocalePopUpButton;
-	IBOutlet NSButton *mFillTranslationButton;
-	IBOutlet NSButton *mOKButton;
-		
-	// The class that populates the popup
-	LanguageMenuProvider *languageMenuProvider;
-	
-	NSString *initialLanguageSelection;
-	BOOL mCheckForExistingLanguage;
+    IBOutlet NSPopUpButton *mLocalePopUpButton;
+    IBOutlet NSButton *mFillTranslationButton;
+    IBOutlet NSButton *mOKButton;
+        
+    // The class that populates the popup
+    LanguageMenuProvider *languageMenuProvider;
+    
+    NSString *initialLanguageSelection;
+    BOOL mCheckForExistingLanguage;
 }
 
 @property (strong) NSString *initialLanguageSelection;

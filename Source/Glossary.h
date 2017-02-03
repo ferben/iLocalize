@@ -14,36 +14,36 @@
  In memory representation of a glossary on the disk.
  */
 @interface Glossary : NSObject {
-	// The folder containing the glossary
-	GlossaryFolder *folder;
-	
-	// The file representing the glossary
-	NSString *file;
-	
-	// The target file. It is the same as the file unless the file is an alias.
-	// In this case, the target file contains the target of the alias.
-	NSString *targetFile;
-	
-	// Date of the last modification
-	NSDate *modificationDate;
-	
-	// The format of the glossary
-	SEI_FORMAT format;
-	
-	// The languages of the glossary
-	NSString *sourceLanguage;
-	NSString *targetLanguage;
-	
-	// Array of ILGlossaryEntry
-	NSMutableArray *entries;
-	
-	// Number of entries. This field is used to keep track
-	// of the number of entries without having to keep all the entries in memory.
-	NSInteger entryCount;
-	
-	// Cached structure only
-	NSMutableDictionary *mappedEntries;
-	NSMutableDictionary *mappedCaseInsensitiveEntries;
+    // The folder containing the glossary
+    GlossaryFolder *folder;
+    
+    // The file representing the glossary
+    NSString *file;
+    
+    // The target file. It is the same as the file unless the file is an alias.
+    // In this case, the target file contains the target of the alias.
+    NSString *targetFile;
+    
+    // Date of the last modification
+    NSDate *modificationDate;
+    
+    // The format of the glossary
+    SEI_FORMAT format;
+    
+    // The languages of the glossary
+    NSString *sourceLanguage;
+    NSString *targetLanguage;
+    
+    // Array of ILGlossaryEntry
+    NSMutableArray *entries;
+    
+    // Number of entries. This field is used to keep track
+    // of the number of entries without having to keep all the entries in memory.
+    NSInteger entryCount;
+    
+    // Cached structure only
+    NSMutableDictionary *mappedEntries;
+    NSMutableDictionary *mappedCaseInsensitiveEntries;
 }
 
 @property (strong) GlossaryFolder *folder;

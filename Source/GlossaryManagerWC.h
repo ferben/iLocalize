@@ -13,21 +13,21 @@
 @class GMGlossaryNode;
 
 @interface GlossaryManagerWC : NSWindowController<MenuForTableViewProtocol> {
-	IBOutlet NSTreeController *mPathController;
-	IBOutlet NSTreeController *mGlossaryController;
-	IBOutlet NSOutlineView *mPathOutlineView;
-	IBOutlet NSOutlineView *mGlossaryOutlineView;
-	IBOutlet NSView *mSplitViewThumbView;		
-	IBOutlet NSMenu *mPathMenu;
-	IBOutlet NSMenu *mGlossaryMenu;	
+    IBOutlet NSTreeController *mPathController;
+    IBOutlet NSTreeController *mGlossaryController;
+    IBOutlet NSOutlineView *mPathOutlineView;
+    IBOutlet NSOutlineView *mGlossaryOutlineView;
+    IBOutlet NSView *mSplitViewThumbView;        
+    IBOutlet NSMenu *mPathMenu;
+    IBOutlet NSMenu *mGlossaryMenu;    
     IBOutlet NSSearchField *searchField;
     
-	// Elements to display the processing progress bar
-	IBOutlet AZGlassView *glassView;
-	NSTextField *processingTextField;
-	NSProgressIndicator *processingIndicator;
-	
-	GlossaryMergeWC *mMergeGlossary;
+    // Elements to display the processing progress bar
+    IBOutlet AZGlassView *glassView;
+    NSTextField *processingTextField;
+    NSProgressIndicator *processingIndicator;
+    
+    GlossaryMergeWC *mMergeGlossary;
     GMGlossaryNode *glossaryRootNode;
 }
 

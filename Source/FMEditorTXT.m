@@ -18,42 +18,42 @@
 
 - (NSString*)nibname
 {
-	return @"FMEditorTXT";
+    return @"FMEditorTXT";
 }
 
 - (BOOL)allowsMultipleSelection
 {
-	return NO;
+    return NO;
 }
 
 - (void)updateContent
 {
-	NSString *base = [[self fileController] baseModelContent];
-	if(!base)
+    NSString *base = [[self fileController] baseModelContent];
+    if(!base)
         base = @"";
 
     [mBaseBaseTextView setString:base];
-    [mLocalizedBaseTextView setString:base];		
+    [mLocalizedBaseTextView setString:base];        
 
-	NSString *localized = [[self fileController] modelContent];
-	if(!localized)
+    NSString *localized = [[self fileController] modelContent];
+    if(!localized)
         localized = @"";
             
-    [mLocalizedTranslationTextView setString:localized];	
-	
-	[mBaseBaseTextView setLanguage:[self baseLanguage]];
-	[mLocalizedBaseTextView setLanguage:[self baseLanguage]];
-	[mLocalizedTranslationTextView setLanguage:[self localizedLanguage]];
+    [mLocalizedTranslationTextView setString:localized];    
+    
+    [mBaseBaseTextView setLanguage:[self baseLanguage]];
+    [mLocalizedBaseTextView setLanguage:[self baseLanguage]];
+    [mLocalizedTranslationTextView setLanguage:[self localizedLanguage]];
 }
 
 - (void)textDidChange:(NSNotification *)notif
 {
-	NSTextView *tv = [notif object];
-	NSString *s = [[tv string] copy];
-	if(tv == mLocalizedBaseTextView)
-		[[self fileController] setBaseModelContent:s];
-	else
-		[[self fileController] setModelContent:s];
+    NSTextView *tv = [notif object];
+    NSString *s = [[tv string] copy];
+    if(tv == mLocalizedBaseTextView)
+        [[self fileController] setBaseModelContent:s];
+    else
+        [[self fileController] setModelContent:s];
 }
 
 @end

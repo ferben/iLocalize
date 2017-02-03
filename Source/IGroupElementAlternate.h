@@ -9,8 +9,8 @@
 #import "IGroupElement.h"
 
 @interface IGroupElementAlternate : IGroupElement {
-	float score;
-	NSString *file;
+    float score;
+    NSString *file;
 }
 
 @property float score;

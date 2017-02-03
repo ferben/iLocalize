@@ -13,48 +13,48 @@
 
 - (id)init
 {
-	if (self = [super initWithWindowNibName:@"AddCustomLanguage"])
+    if (self = [super initWithWindowNibName:@"AddCustomLanguage"])
     {
-	}
-	
+    }
+    
     return self;
 }
 
 - (void)willShow
 {
-	[mNameField setStringValue:@""];
+    [mNameField setStringValue:@""];
 }
 
 - (void)setRenameLanguage:(BOOL)flag
 {
-	if (flag)
+    if (flag)
     {
-		[mOKButton setTitle:NSLocalizedString(@"Rename", nil)];		
-	}
+        [mOKButton setTitle:NSLocalizedString(@"Rename", nil)];        
+    }
     else
     {
-		[mOKButton setTitle:NSLocalizedString(@"Add", nil)];
-	}
+        [mOKButton setTitle:NSLocalizedString(@"Add", nil)];
+    }
 }
 
 - (NSString *)language
 {
-	return [mNameField stringValue];
+    return [mNameField stringValue];
 }
 
 - (BOOL)alreadyExists
 {
-	return [[[self projectProvider] projectController] isLanguageExisting:[self language]];
+    return [[[self projectProvider] projectController] isLanguageExisting:[self language]];
 }
 
 - (IBAction)cancel:(id)sender
 {
-	[self hide];	
+    [self hide];    
 }
 
 - (IBAction)add:(id)sender
 {
-	if ([self alreadyExists])
+    if ([self alreadyExists])
     {
         // compose alert
         NSAlert *alert = [NSAlert new];
@@ -65,11 +65,11 @@
         
         // show alert
         [alert runModal];
-	}
+    }
     else
     {
-		[self hideWithCode:1];	
-	}
+        [self hideWithCode:1];    
+    }
 }
 
 @end

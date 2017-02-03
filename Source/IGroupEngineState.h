@@ -9,16 +9,16 @@
 #import "ProjectProvider.h"
 
 @interface IGroupEngineState : NSObject<NSCopying> {
-	NSString *baseLanguage;
-	NSString *targetLanguage;
-	NSString *selectedString;
-	
-	// transient properties
-	BOOL languageChanged;
-	BOOL selectedStringChanged;
+    NSString *baseLanguage;
+    NSString *targetLanguage;
+    NSString *selectedString;
+    
+    // transient properties
+    BOOL languageChanged;
+    BOOL selectedStringChanged;
 
-	// if true, this state is outdated
-	BOOL outdated;
+    // if true, this state is outdated
+    BOOL outdated;
 }
 
 @property (copy) NSString *baseLanguage;

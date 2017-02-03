@@ -9,7 +9,7 @@
 #import "ProjectDetails.h"
 
 @interface ProjectDetailsString : ProjectDetails {
-	IBOutlet NSTextView *mTextView;
+    IBOutlet NSTextView *mTextView;
 }
 
 @end

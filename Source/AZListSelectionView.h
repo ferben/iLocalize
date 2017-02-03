@@ -25,7 +25,7 @@
 @end
 
 @interface AZListSelectionView : NSObject<NSOutlineViewDataSource,NSOutlineViewDelegate> {
-	NSArray *elements;
+    NSArray *elements;
 }
 
 @property (weak) id<AZListSelectionViewDelegate> delegate;

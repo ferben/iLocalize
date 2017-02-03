@@ -9,9 +9,9 @@
 @class OperationViewController;
 
 @interface OperationWindowController : NSWindowController {
-	IBOutlet NSBox *box;
-	NSSize originalContentMaxSize;
-	OperationViewController *viewController;
+    IBOutlet NSBox *box;
+    NSSize originalContentMaxSize;
+    OperationViewController *viewController;
 }
 @property (strong) OperationViewController *viewController;
 - (void)viewControllerStateChanged:(OperationViewController*)_vc;

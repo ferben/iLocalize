@@ -24,19 +24,19 @@
 
 - (id) init
 {
-	self = [super init];
-	if (self != nil) {
-		wc = [[GlossaryTranslateWC alloc] init];
-		scope = [[GlossaryScope alloc] init];
-		translator = [[GlossaryTranslator alloc] init];
-	}
-	return self;
+    self = [super init];
+    if (self != nil) {
+        wc = [[GlossaryTranslateWC alloc] init];
+        scope = [[GlossaryScope alloc] init];
+        translator = [[GlossaryTranslator alloc] init];
+    }
+    return self;
 }
 
 
 - (void)awake
 {
-	scope.projectProvider = self.projectDocument;	
+    scope.projectProvider = self.projectDocument;    
 }
 
 - (IBAction)translateUsingGlossaries:(id)sender
@@ -45,11 +45,11 @@
     LanguageController *lc = [scope.projectProvider selectedLanguageController];
     scope.selectedStates = lc.languageModel.translateUsingGlossariesSelectedStates;
 
-	[wc setDidCloseSelector:@selector(translationWindowDidClose) target:self];
-	[wc setParentWindow:[[self projectWC] window]];
-	[wc setProjectProvider:[self projectDocument]];
-	[wc setScope:scope];
-	[wc showAsSheet];
+    [wc setDidCloseSelector:@selector(translationWindowDidClose) target:self];
+    [wc setParentWindow:[[self projectWC] window]];
+    [wc setProjectProvider:[self projectDocument]];
+    [wc setScope:scope];
+    [wc showAsSheet];
 }
 
 - (IBAction)translateUsingSelectedGlossaryEntry:(id)sender {
@@ -58,51 +58,51 @@
 
 - (void)translationWindowDidClose
 {
-	id<ProjectProvider> provider = [[self projectWC] projectDocument];
+    id<ProjectProvider> provider = [[self projectWC] projectDocument];
     
     // Store the selected state for the current language
     LanguageController *lc = [scope.projectProvider selectedLanguageController];
     lc.languageModel.translateUsingGlossariesSelectedStates = scope.selectedStates;
     
-	[translator setIgnoreCase:[[NSUserDefaults standardUserDefaults] boolForKey:@"translateIgnoreCase"]];
+    [translator setIgnoreCase:[[NSUserDefaults standardUserDefaults] boolForKey:@"translateIgnoreCase"]];
     [translator setLanguageController:[provider selectedLanguageController]];
 
-	NSArray *glossaries = [scope selectedGlossaries];
-	
-	switch ([wc hideCode]) {
-		case 0:
-			// cancel
-			break;
-		case 1: // all files
-			[translator translateFileControllers:[[provider selectedLanguageController] fileControllers]
-								  withGlossaries:glossaries];
-			break;
-		case 2: // selected files
-			[translator translateFileControllers:[provider selectedFileControllers]
-								  withGlossaries:glossaries];
-			break;
-	}
+    NSArray *glossaries = [scope selectedGlossaries];
+    
+    switch ([wc hideCode]) {
+        case 0:
+            // cancel
+            break;
+        case 1: // all files
+            [translator translateFileControllers:[[provider selectedLanguageController] fileControllers]
+                                  withGlossaries:glossaries];
+            break;
+        case 2: // selected files
+            [translator translateFileControllers:[provider selectedFileControllers]
+                                  withGlossaries:glossaries];
+            break;
+    }
 }
 
 - (IBAction)translateUsingExternalStringsFile:(id)sender
 {
     NSArray *fcs = [[self projectDocument] selectedFileControllers];
-	NSDictionary *args = @{@"fcs": fcs};
-	[[XLIFFImportOperationDriver driverWithProjectProvider:[self projectDocument]] executeWithArguments:args];
-//	[[self projectFiles] translateUsingStringsFile];
+    NSDictionary *args = @{@"fcs": fcs};
+    [[XLIFFImportOperationDriver driverWithProjectProvider:[self projectDocument]] executeWithArguments:args];
+//    [[self projectFiles] translateUsingStringsFile];
 }
 
 - (IBAction)clearUpdatedFileSymbols:(id)sender
 {
-	[[self.projectWC selectedFileControllers] makeObjectsPerformSelector:@selector(clearUpdatedStatus)];
+    [[self.projectWC selectedFileControllers] makeObjectsPerformSelector:@selector(clearUpdatedStatus)];
 }
 
 - (void)performActionOnEditor:(BOOL(^)(FMEditor *editor))block {
     FMEditor *currentEditor = [self.projectWC currentFileEditor];
     if (block(currentEditor)) {
         if([[PreferencesGeneral shared] autoUpdateSmartFilters]) {
-			[self.projectWC refreshListOfFiles];
-		}
+            [self.projectWC refreshListOfFiles];
+        }
     }
 }
 
@@ -120,9 +120,9 @@
 
 - (IBAction)approveFile:(id)sender
 {
-	[[self.projectWC selectedFileControllers] makeObjectsPerformSelector:@selector(approve)];
-	if([[PreferencesGeneral shared] autoUpdateSmartFilters])
-		[self.projectWC refreshListOfFiles];
+    [[self.projectWC selectedFileControllers] makeObjectsPerformSelector:@selector(approve)];
+    if([[PreferencesGeneral shared] autoUpdateSmartFilters])
+        [self.projectWC refreshListOfFiles];
 }
 
 - (IBAction)approveIdenticalStringsInSelectedFiles:(id)sender
@@ -345,93 +345,93 @@
 - (BOOL)validateMenuItem:(NSMenuItem*)anItem
 {
     SEL action = [anItem action];
-	BOOL isFilesSelected = [[self.projectWC selectedFileControllers] count] > 0;
-	BOOL isStringsSelected = isFilesSelected && [[self.projectWC selectedStringControllers] count] > 0;
-//	BOOL isMultipleFilesSelected = [[self.projectWC selectedFileControllers] count] > 1;
-	BOOL isBaseLanguage = [[[self projectDocument] selectedLanguageController] isBaseLanguage];
-	if(isBaseLanguage) {
-		return action == @selector(clearUpdatedFileSymbols:);
-	}
-	
-//	if(action == @selector(translateUsingExternalStringsFile:)) {
-//		return !isMultipleFilesSelected && [[self.projectWC currentFileEditor] canTranslateUsingStrings];
-//	}
-		
+    BOOL isFilesSelected = [[self.projectWC selectedFileControllers] count] > 0;
+    BOOL isStringsSelected = isFilesSelected && [[self.projectWC selectedStringControllers] count] > 0;
+//    BOOL isMultipleFilesSelected = [[self.projectWC selectedFileControllers] count] > 1;
+    BOOL isBaseLanguage = [[[self projectDocument] selectedLanguageController] isBaseLanguage];
+    if(isBaseLanguage) {
+        return action == @selector(clearUpdatedFileSymbols:);
+    }
+    
+//    if(action == @selector(translateUsingExternalStringsFile:)) {
+//        return !isMultipleFilesSelected && [[self.projectWC currentFileEditor] canTranslateUsingStrings];
+//    }
+        
     if(action == @selector(translateUsingSelectedGlossaryEntry:)) {
         return [[self.projectWC projectDetailsController] canExecuteCommand:action];
     }
     
-	if(action == @selector(approveFile:)) {
-		return isFilesSelected;
-	}
+    if(action == @selector(approveFile:)) {
+        return isFilesSelected;
+    }
 
-	if(action == @selector(approveString:)) {
-		return isStringsSelected;
-	}
+    if(action == @selector(approveString:)) {
+        return isStringsSelected;
+    }
 
-	if(action == @selector(approveIdenticalStringsInSelectedFiles:)) {
-		return isStringsSelected;
-	}
-	if(action == @selector(approveIdenticalStringsInAllFiles:)) {
-		return isStringsSelected;
-	}
+    if(action == @selector(approveIdenticalStringsInSelectedFiles:)) {
+        return isStringsSelected;
+    }
+    if(action == @selector(approveIdenticalStringsInAllFiles:)) {
+        return isStringsSelected;
+    }
 
-	if(action == @selector(approveAutoTranslatedStringsInSelectedFiles:)) {
-		return isFilesSelected;
-	}
-	if(action == @selector(approveAutoTranslatedStringsInAllFiles:)) {
-		return YES;
-	}
+    if(action == @selector(approveAutoTranslatedStringsInSelectedFiles:)) {
+        return isFilesSelected;
+    }
+    if(action == @selector(approveAutoTranslatedStringsInAllFiles:)) {
+        return YES;
+    }
 
-	if(action == @selector(approveAutoInvariantStringsInSelectedFiles:)) {
-		return isFilesSelected;
-	}
-	if(action == @selector(approveAutoInvariantStringsInAllFiles:)) {
-		return YES;
-	}
+    if(action == @selector(approveAutoInvariantStringsInSelectedFiles:)) {
+        return isFilesSelected;
+    }
+    if(action == @selector(approveAutoInvariantStringsInAllFiles:)) {
+        return YES;
+    }
 
-	if(action == @selector(approveAutoHandledStringsInSelectedFiles:)) {
-		return isFilesSelected;
-	}
-	if(action == @selector(approveAutoHandledStringsInAllFiles:)) {
-		return YES;
-	}
+    if(action == @selector(approveAutoHandledStringsInSelectedFiles:)) {
+        return isFilesSelected;
+    }
+    if(action == @selector(approveAutoHandledStringsInAllFiles:)) {
+        return YES;
+    }
 
-	if(action == @selector(propagateTranslationToIdenticalStringsInSelectedFiles:)) {
-		return isStringsSelected;
-	}
-	if(action == @selector(propagateTranslationToIdenticalStringsInAllFiles:)) {
-		return isStringsSelected;
-	}
+    if(action == @selector(propagateTranslationToIdenticalStringsInSelectedFiles:)) {
+        return isStringsSelected;
+    }
+    if(action == @selector(propagateTranslationToIdenticalStringsInAllFiles:)) {
+        return isStringsSelected;
+    }
 
-	if(action == @selector(markStringsAsTranslated:)) {
-		return isStringsSelected;
-	}
-	if(action == @selector(unmarkStringsAsTranslated:)) {
-		return isStringsSelected;
-	}
+    if(action == @selector(markStringsAsTranslated:)) {
+        return isStringsSelected;
+    }
+    if(action == @selector(unmarkStringsAsTranslated:)) {
+        return isStringsSelected;
+    }
 
-	if(action == @selector(copyBaseStringsToTranslation:)) {
-		return isStringsSelected;
-	}
-	if(action == @selector(swapBaseStringsToTranslation:)) {
-		return isStringsSelected;
-	}
+    if(action == @selector(copyBaseStringsToTranslation:)) {
+        return isStringsSelected;
+    }
+    if(action == @selector(swapBaseStringsToTranslation:)) {
+        return isStringsSelected;
+    }
 
-	if(action == @selector(clearBaseComments:)) {
-		return isStringsSelected;
-	}
-	if(action == @selector(clearTranslationComments:)) {
-		return isStringsSelected;
-	}
-	if(action == @selector(clearComments:)) {
-		return isStringsSelected;
-	}
-	if(action == @selector(clearTranslations:)) {
-		return isStringsSelected;
-	}
-		
-	return YES;		
+    if(action == @selector(clearBaseComments:)) {
+        return isStringsSelected;
+    }
+    if(action == @selector(clearTranslationComments:)) {
+        return isStringsSelected;
+    }
+    if(action == @selector(clearComments:)) {
+        return isStringsSelected;
+    }
+    if(action == @selector(clearTranslations:)) {
+        return isStringsSelected;
+    }
+        
+    return YES;        
 }
 
 @end

@@ -16,38 +16,38 @@
 
 + (void)showConsoleIfWarningsOrErrorsSinceLastMark:(Console *)console
 {
-	if ([console hasWarningsOrErrors])
+    if ([console hasWarningsOrErrors])
     {
-		OperationReportWC *report = [[OperationReportWC alloc] init];
-		[report setConsole:console fromIndex:[console indexMark]];
-		[report display];
-	}	
+        OperationReportWC *report = [[OperationReportWC alloc] init];
+        [report setConsole:console fromIndex:[console indexMark]];
+        [report display];
+    }    
 }
 
 + (void)showConsoleIfWarningsOrErrorsSinceLastMarkWithDelay:(Console *)console
 {
-	[self performSelector:@selector(showConsoleIfWarningsOrErrorsSinceLastMark:) withObject:console afterDelay:0];
+    [self performSelector:@selector(showConsoleIfWarningsOrErrorsSinceLastMark:) withObject:console afterDelay:0];
 }
 
 
 - (id)init
 {
-	if (self = [super initWithWindowNibName:@"OperationReport"])
+    if (self = [super initWithWindowNibName:@"OperationReport"])
     {
-		[self window];
-		[mTableView setDelegate:self];
-		mConsole = nil;	// not retained
-		mFromIndex = 0;
-		mToIndex = 0;
-	}
-	
+        [self window];
+        [mTableView setDelegate:self];
+        mConsole = nil;    // not retained
+        mFromIndex = 0;
+        mToIndex = 0;
+    }
+    
     return self;
 }
 
 - (void)setConsole:(Console * )console fromIndex:(NSUInteger)index
 {
-	mConsole = console;
-	mFromIndex = index;
+    mConsole = console;
+    mFromIndex = index;
     
     // fd:20170203: we're using NSUInteger now and count on base 1.
     // mToIndex = [mConsole numberOfItems] - 1;
@@ -57,66 +57,66 @@
 
 - (int)displayType
 {
-	return 1 << CONSOLE_ERROR | 1 << CONSOLE_WARNING;
+    return 1 << CONSOLE_ERROR | 1 << CONSOLE_WARNING;
 }
 
 - (void)render:(id)item
 {
-	NSMutableDictionary *info = [NSMutableDictionary dictionary];
-	info[@"item"] = item;
-	info[@"type"] = [item isWarning]?[NSImage imageNamed:@"_warning"]:[NSImage imageNamed:@"_warning_red"];
-	info[@"title"] = [item title]==nil?[item description]:[item title];
-	info[@"entry"] = [item description];
-	
-	[mLogsController addObject:info];	
+    NSMutableDictionary *info = [NSMutableDictionary dictionary];
+    info[@"item"] = item;
+    info[@"type"] = [item isWarning]?[NSImage imageNamed:@"_warning"]:[NSImage imageNamed:@"_warning_red"];
+    info[@"title"] = [item title]==nil?[item description]:[item title];
+    info[@"entry"] = [item description];
+    
+    [mLogsController addObject:info];    
 }
 
 - (void)refresh
 {
-	[mLogsController removeObjects:[mLogsController content]];
-	
-	NSArray *items = [mConsole allItemsOfStrictType:[self displayType] range:NSMakeRange(mFromIndex, mToIndex - mFromIndex + 1)];
+    [mLogsController removeObjects:[mLogsController content]];
     
-	id item;
+    NSArray *items = [mConsole allItemsOfStrictType:[self displayType] range:NSMakeRange(mFromIndex, mToIndex - mFromIndex + 1)];
     
-	for (item in items)
+    id item;
+    
+    for (item in items)
     {
-		[self render:item];
-	}
-	
-	[mLogsController setSelectionIndex:0];
+        [self render:item];
+    }
+    
+    [mLogsController setSelectionIndex:0];
 }
 
 - (void)updateDetailedView
 {
-	NSString *string = NULL;
-	
-	if ([mTableView selectedRow] >= 0)
+    NSString *string = NULL;
+    
+    if ([mTableView selectedRow] >= 0)
     {
-		ConsoleItem *item = [[mLogsController selectedObjects] firstObject][@"item"];
-		string = [NSString stringWithFormat:@"[%@] %@", [item dateDescription], [item description]];		
-	}
-	
-	[mDetailedTextView setString:string?string:@""];			
+        ConsoleItem *item = [[mLogsController selectedObjects] firstObject][@"item"];
+        string = [NSString stringWithFormat:@"[%@] %@", [item dateDescription], [item description]];        
+    }
+    
+    [mDetailedTextView setString:string?string:@""];            
 }
 
 - (void)display
 {
-	[[mTableView tableColumnWithIdentifier:@"description"] setDataCell:[OperationCustomCell cell]];
+    [[mTableView tableColumnWithIdentifier:@"description"] setDataCell:[OperationCustomCell cell]];
 
-	[self refresh];
-	[self updateDetailedView];
-	[NSApp runModalForWindow:[self window]];
+    [self refresh];
+    [self updateDetailedView];
+    [NSApp runModalForWindow:[self window]];
 }
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notif
 {
-	[self updateDetailedView];
+    [self updateDetailedView];
 }
 
 - (IBAction)export:(id)sender
 {
-	NSSavePanel *panel = [NSSavePanel savePanel];
+    NSSavePanel *panel = [NSSavePanel savePanel];
     [panel setAllowedFileTypes:@[@"txt"]];
     [panel beginSheetModalForWindow:[self window] completionHandler:^(NSInteger result)
     {
@@ -140,18 +140,18 @@
 
 - (IBAction)close:(id)sender
 {
-	[NSApp stopModal];
-	[[self window] orderOut:self];	
+    [NSApp stopModal];
+    [[self window] orderOut:self];    
 }
 
 #pragma mark - 
 
 - (void)customTableView:(NSTableView *)tv willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex
 {
-	if ([cell isKindOfClass:[OperationCustomCell class]])
+    if ([cell isKindOfClass:[OperationCustomCell class]])
     {
-		[cell setCustomValue:[mLogsController arrangedObjects][rowIndex]];			
-	}
+        [cell setCustomValue:[mLogsController arrangedObjects][rowIndex]];            
+    }
 }
 
 @end

@@ -15,17 +15,17 @@
 @class Stack;
 
 @interface FMEditor : NSObject {
-	IBOutlet NSView	*mBaseView;
-	IBOutlet NSView	*mLocalizedView;
+    IBOutlet NSView    *mBaseView;
+    IBOutlet NSView    *mLocalizedView;
 
-	FMEngine		*mEngine;
-	
-	NSWindow		*mWindow;
-	
-	Stack			*mStackState;
-	
-	LanguageController	*mLanguageController;
-	NSMutableArray			*mFileControllers;
+    FMEngine        *mEngine;
+    
+    NSWindow        *mWindow;
+    
+    Stack            *mStackState;
+    
+    LanguageController    *mLanguageController;
+    NSMutableArray            *mFileControllers;
 }
 
 @property (nonatomic, weak) id<ProjectProvider> projectProvider;

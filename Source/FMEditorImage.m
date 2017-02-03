@@ -14,12 +14,12 @@
 
 - (NSString*)nibname
 {
-	return @"FMEditorImage";
+    return @"FMEditorImage";
 }
 
 - (BOOL)allowsMultipleSelection
 {
-	return NO;
+    return NO;
 }
 
 - (void)updateContent
@@ -27,11 +27,11 @@
     NSImage *baseImage = nil;
     NSImage *localizedImage = nil;
     
-	if([[self fileController] baseModelContent])
-		baseImage = [[NSImage alloc] initWithData:[[self fileController] baseModelContent]];
+    if([[self fileController] baseModelContent])
+        baseImage = [[NSImage alloc] initWithData:[[self fileController] baseModelContent]];
 
     if([[self fileController] modelContent])
-		localizedImage = [[NSImage alloc] initWithData:[[self fileController] modelContent]];
+        localizedImage = [[NSImage alloc] initWithData:[[self fileController] modelContent]];
 
     [mBaseBaseImageView setImage:baseImage];
     [mLocalizedBaseImageView setImage:baseImage];

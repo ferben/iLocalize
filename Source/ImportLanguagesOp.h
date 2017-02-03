@@ -9,11 +9,11 @@
 #import "Operation.h"
 
 @interface ImportLanguagesOp : Operation {
-	NSArray *languages;
-	BOOL identical;
-	BOOL layouts;
-	BOOL copyOnlyIfExists;
-	NSString *sourcePath;
+    NSArray *languages;
+    BOOL identical;
+    BOOL layouts;
+    BOOL copyOnlyIfExists;
+    NSString *sourcePath;
 }
 
 @property (strong) NSArray *languages;

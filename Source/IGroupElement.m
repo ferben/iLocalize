@@ -16,29 +16,29 @@
 
 + (IGroupElement*)elementWithSource:(NSString*)source target:(NSString*)target
 {
-	IGroupElement *e = [[self alloc] init];
-	e.source = source;
-	e.target = target;
-	return e;
+    IGroupElement *e = [[self alloc] init];
+    e.source = source;
+    e.target = target;
+    return e;
 }
 
 
 - (NSUInteger)hash
 {
-	NSUInteger value = 17;
-	value += 37*self.source.hash;
-	value += 37*self.target.hash;
-	return value;
+    NSUInteger value = 17;
+    value += 37*self.source.hash;
+    value += 37*self.target.hash;
+    return value;
 }
 
 - (BOOL)isEqual:(id)other
 {
-	if(![other isKindOfClass:[self class]]) {
-		return NO;
-	}
-	
-	return [[other source] isEqual:self.source] &&
-	[[other target] isEqual:self.target];
+    if(![other isKindOfClass:[self class]]) {
+        return NO;
+    }
+    
+    return [[other source] isEqual:self.source] &&
+    [[other target] isEqual:self.target];
 }
 
 @end

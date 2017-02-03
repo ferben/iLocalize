@@ -22,12 +22,12 @@
 
 - (IBAction)createNewSmartFilter:(id)sender
 {
-	[[self projectExplorer] createNewFilter];
+    [[self projectExplorer] createNewFilter];
 }
 
 - (IBAction)openFilesInExternalEditor:(id)sender
 {
-	[[OpenAndRevealOperation operationWithProjectProvider:[self projectDocument]] openFileControllers:[[self projectFiles] selectedFileControllers]];
+    [[OpenAndRevealOperation operationWithProjectProvider:[self projectDocument]] openFileControllers:[[self projectFiles] selectedFileControllers]];
 }
 
 - (IBAction)openPreviousAndCurrent:(id)sender {
@@ -51,57 +51,57 @@
 
 - (IBAction)revealFilesInFinder:(id)sender
 {
-	[[OpenAndRevealOperation operationWithProjectProvider:[self projectDocument]] revealFileControllers:[[self projectFiles] selectedFileControllers]];
+    [[OpenAndRevealOperation operationWithProjectProvider:[self projectDocument]] revealFileControllers:[[self projectFiles] selectedFileControllers]];
 }
 
 //- (IBAction)saveFile:(id)sender
 //{
-//	[[SaveAllOperation operationWithProjectProvider:[self projectDocument]] saveAll:[[self projectFiles] selectedFileControllers]
-//																createIfNotExisting:YES];
+//    [[SaveAllOperation operationWithProjectProvider:[self projectDocument]] saveAll:[[self projectFiles] selectedFileControllers]
+//                                                                createIfNotExisting:YES];
 //}
 
 - (IBAction)saveDocument:(id)sender
 {
-	[[SaveAllOperation operationWithProjectProvider:[self projectDocument]] saveFilesWithoutConfirmation];
-	[[self projectDocument] saveDocument:sender];
+    [[SaveAllOperation operationWithProjectProvider:[self projectDocument]] saveFilesWithoutConfirmation];
+    [[self projectDocument] saveDocument:sender];
 }
 
 - (IBAction)reloadFile:(id)sender
 {
-	[[SaveAllOperation operationWithProjectProvider:[self projectDocument]] reloadAll:[self.projectWC selectedFileControllers]];	
+    [[SaveAllOperation operationWithProjectProvider:[self projectDocument]] reloadAll:[self.projectWC selectedFileControllers]];    
 }
 
 - (IBAction)showWarning:(id)sender
 {
-	[[self projectFiles] showWarning:[[self.projectWC selectedFileControllers] firstObject]];
+    [[self projectFiles] showWarning:[[self.projectWC selectedFileControllers] firstObject]];
 }
 
 - (IBAction)filesColumnContextualMenuAction:(id)sender
 {
-	[[self projectFiles] showHideFilesTableColumn:sender];
+    [[self projectFiles] showHideFilesTableColumn:sender];
 }
 
 - (BOOL)validateMenuItem:(NSMenuItem*)anItem
 {
     SEL action = [anItem action];
-	BOOL isFilesSelected = [[self.projectWC selectedFileControllers] count] > 0;
-	BOOL isMultipleFilesSelected = [[self.projectWC selectedFileControllers] count] > 1;
-	
-	// OK, handle that here
-	if(action == @selector(revealFilesInFinder:) || action == @selector(openFilesInExternalEditor:)
+    BOOL isFilesSelected = [[self.projectWC selectedFileControllers] count] > 0;
+    BOOL isMultipleFilesSelected = [[self.projectWC selectedFileControllers] count] > 1;
+    
+    // OK, handle that here
+    if(action == @selector(revealFilesInFinder:) || action == @selector(openFilesInExternalEditor:)
        || action == @selector(openPreviousAndCurrent:)) {
-		return isFilesSelected;
-	}
-	
-	if(action == @selector(saveAllFiles:)) {
-		return [[[self.projectWC projectController] needsToBeSavedFileControllers] count] > 0;
-	}
-			
-	if(action == @selector(showWarning:)) {
-		return !isMultipleFilesSelected && [[[self.projectWC selectedFileControllers] firstObject] statusWarning];
-	}
+        return isFilesSelected;
+    }
+    
+    if(action == @selector(saveAllFiles:)) {
+        return [[[self.projectWC projectController] needsToBeSavedFileControllers] count] > 0;
+    }
+            
+    if(action == @selector(showWarning:)) {
+        return !isMultipleFilesSelected && [[[self.projectWC selectedFileControllers] firstObject] statusWarning];
+    }
 
-	return YES;
+    return YES;
 }
 
 @end

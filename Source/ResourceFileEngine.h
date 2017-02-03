@@ -9,7 +9,7 @@
 #import "AbstractEngine.h"
 
 @interface ResourceFileEngine : AbstractEngine {
-	NSMutableArray	*mFiles;
+    NSMutableArray    *mFiles;
 }
 
 + (ResourceFileEngine*)engine;

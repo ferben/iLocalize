@@ -17,11 +17,11 @@
 
 - (id) init
 {
-	self = [super init];
-	if (self != nil) {
-		self.selected = YES;
-	}
-	return self;
+    self = [super init];
+    if (self != nil) {
+        self.selected = YES;
+    }
+    return self;
 }
 
 - (id)objectForKeyedSubscript:(id)key {
@@ -30,20 +30,20 @@
 
 - (id)objectForKey:(NSString*)key
 {
-	if([key isEqualToString:[AZListSelectionView selectedKey]]) {
-		return @(self.selected);
-	} else if ([key isEqualToString:[AZListSelectionView imageKey]]) {
-		return [[fc absoluteFilePath] imageOfPath];
-	} else {
-		return [fc relativeFilePath];
-	}
+    if([key isEqualToString:[AZListSelectionView selectedKey]]) {
+        return @(self.selected);
+    } else if ([key isEqualToString:[AZListSelectionView imageKey]]) {
+        return [[fc absoluteFilePath] imageOfPath];
+    } else {
+        return [fc relativeFilePath];
+    }
 }
 
 - (void)setObject:(id)object forKey:(NSString*)key
 {
-	if([key isEqualToString:[AZListSelectionView selectedKey]]) {
-		self.selected = [object boolValue];
-	}
+    if([key isEqualToString:[AZListSelectionView selectedKey]]) {
+        self.selected = [object boolValue];
+    }
 }
 
 @end

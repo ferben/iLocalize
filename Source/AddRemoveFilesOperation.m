@@ -17,24 +17,24 @@
 
 - (void)awake
 {
-	mFiles = NULL;
-	mLanguage = NULL;
+    mFiles = NULL;
+    mLanguage = NULL;
 }
 
 
 - (AddLocationWC *)addLocationWC
 {
-	return (AddLocationWC *)[self instanceOfAbstractWCName:@"AddLocationWC"];
+    return (AddLocationWC *)[self instanceOfAbstractWCName:@"AddLocationWC"];
 }
 
 #pragma mark -
 
 - (void)addFiles_
 {
-	NSOpenPanel *panel = [NSOpenPanel openPanel];
+    NSOpenPanel *panel = [NSOpenPanel openPanel];
     
-	[panel setCanChooseFiles:YES];
-	[panel setAllowsMultipleSelection:YES];
+    [panel setCanChooseFiles:YES];
+    [panel setAllowsMultipleSelection:YES];
     [panel beginSheetModalForWindow:[self projectWindow]
                   completionHandler:^(NSInteger result)
     {
@@ -50,14 +50,14 @@
 
 - (void)addFiles
 {
-	mLanguage = nil;
-	[self addFiles_];
+    mLanguage = nil;
+    [self addFiles_];
 }
 
 - (void)addFilesToLanguage:(NSString*)language
 {
-	mLanguage = language;
-	[self addFiles_];
+    mLanguage = language;
+    [self addFiles_];
 }
 
 - (void)performAddFiles:(NSArray*)files
@@ -78,28 +78,28 @@
         }
     }
     
-	mFiles = convertedFiles;
-	
-	[[self addLocationWC] setDidCloseSelector:@selector(performAddFiles) target:self];
-	[[self addLocationWC] showAsSheet];
+    mFiles = convertedFiles;
+    
+    [[self addLocationWC] setDidCloseSelector:@selector(performAddFiles) target:self];
+    [[self addLocationWC] showAsSheet];
 }
 
 - (void)performAddFiles
 {
-	if ([[self addLocationWC] hideCode] != 1)
+    if ([[self addLocationWC] hideCode] != 1)
     {
-		[self close];
-		return;
-	}	
-	
-	if ([mFiles count] > 1)
+        [self close];
+        return;
+    }    
+    
+    if ([mFiles count] > 1)
     {
-		[[self operation] setTitle:NSLocalizedString(@"Adding Files…", nil)];
-		[[self operation] setCancellable:NO];
-		[[self operation] setIndeterminate:YES];
-		[[self operation] showAsSheet];		
-	}
-	
+        [[self operation] setTitle:NSLocalizedString(@"Adding Files…", nil)];
+        [[self operation] setCancellable:NO];
+        [[self operation] setIndeterminate:YES];
+        [[self operation] showAsSheet];        
+    }
+    
     [[self operationDispatcher] addFiles:mFiles language:mLanguage toSmartPath:[[self addLocationWC] location] completion:^(id results)
     {
         [[[[self projectProvider] projectWC] languagesController] rearrangeObjects];
@@ -113,7 +113,7 @@
 
 - (void)removeFileControllers:(NSArray*)fileControllers
 {
-	mFileControllers = fileControllers;
+    mFileControllers = fileControllers;
 
     // compose alert
     NSAlert *alert = [NSAlert new];
@@ -126,20 +126,20 @@
     // show and evaluate alert
     if ([alert runModal] == NSAlertFirstButtonReturn)
     {
-		[self close];
-		return;
-	}
-	
-	if ([mFileControllers count] > 1)
+        [self close];
+        return;
+    }
+    
+    if ([mFileControllers count] > 1)
     {
-		[[self operation] setTitle:NSLocalizedString(@"Removing Files…", nil)];
-		[[self operation] setCancellable:NO];
-		[[self operation] setIndeterminate:YES];
-		[[self operation] showAsSheet];		
-	}
-	
-	[[[self projectProvider] projectWC] deselectAll];
-	
+        [[self operation] setTitle:NSLocalizedString(@"Removing Files…", nil)];
+        [[self operation] setCancellable:NO];
+        [[self operation] setIndeterminate:YES];
+        [[self operation] showAsSheet];        
+    }
+    
+    [[[self projectProvider] projectWC] deselectAll];
+    
     [[self operationDispatcher] removeFileControllers:mFileControllers completion:^(id results)
     {
         [[[[self projectProvider] projectWC] languagesController] rearrangeObjects];

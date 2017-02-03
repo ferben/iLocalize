@@ -20,16 +20,16 @@
 
 + (id)controller
 {
-	return [[self alloc] init];
+    return [[self alloc] init];
 }
 
 - (id)init
 {
-	if(self = [super init]) {
-		mLabelIndexes = -1;
-		mLabelString = nil;
-	}
-	return self;
+    if(self = [super init]) {
+        mLabelIndexes = -1;
+        mLabelString = nil;
+    }
+    return self;
 }
 
 
@@ -49,28 +49,28 @@
 
 - (void)rebuildFromModel
 {
-	// Used by subclasses to rebuild themself from the model
+    // Used by subclasses to rebuild themself from the model
 }
 
 - (void)beginDirty
 {
-	[self pushDirtySource:self];
-	[[self parent] beginDirty];
+    [self pushDirtySource:self];
+    [[self parent] beginDirty];
 }
 
 - (void)endDirty
 {
-	[[self parent] endDirty];
+    [[self parent] endDirty];
 }
 
 - (void)markDirty
 {
-	[[self parent] markDirty];	
+    [[self parent] markDirty];    
 }
 
 - (void)pushDirtySource:(id)source
 {
-	[[self parent] pushDirtySource:source];	
+    [[self parent] pushDirtySource:source];    
 }
 
 - (void)dirtyTriggered
@@ -79,61 +79,61 @@
 
 - (id<ProjectProvider>)projectProvider
 {
-	// Should be subclassed at some point (i.e. ProjectController)
-	return [[self parent] projectProvider];
+    // Should be subclassed at some point (i.e. ProjectController)
+    return [[self parent] projectProvider];
 }
 
 - (ProjectModel *)projectModel
 {
-	return [[self projectProvider] projectModel];	
+    return [[self projectProvider] projectModel];    
 }
 
 - (NSUndoManager *)undoManager
 {
-	return [[self projectProvider] projectUndoManager];
+    return [[self projectProvider] projectUndoManager];
 }
 
 // Used by custom cell to fetch the controller object
 
 - (NSValue *)selfValue
 {
-	return [NSValue valueWithNonretainedObject:self];
+    return [NSValue valueWithNonretainedObject:self];
 }
 
 #pragma mark -
 
 - (NSString *)absoluteProjectPathFromRelativePath:(NSString *)relativePath
 {
-	if (relativePath)
+    if (relativePath)
     {
-		return [[self projectModel] absoluteProjectPathFromRelativePath:relativePath];		
-	}
+        return [[self projectModel] absoluteProjectPathFromRelativePath:relativePath];        
+    }
     else
     {
-		return nil;
-	}
+        return nil;
+    }
 }
 
 - (NSString *)relativePathFromAbsoluteProjectPath:(NSString *)absolutePath
 {
-	return [[self projectModel] relativePathFromAbsoluteProjectPath:absolutePath];
+    return [[self projectModel] relativePathFromAbsoluteProjectPath:absolutePath];
 }
 
 - (NSArray *)relativePathsFromAbsoluteProjectPaths:(NSArray *)absolutePaths
 {
-	NSMutableArray *array = [NSMutableArray array];
-	
-	NSString *absolutePath;
+    NSMutableArray *array = [NSMutableArray array];
     
-	for (absolutePath in absolutePaths)
+    NSString *absolutePath;
+    
+    for (absolutePath in absolutePaths)
     {
-		NSString *relativePath = [self relativePathFromAbsoluteProjectPath:absolutePath];
+        NSString *relativePath = [self relativePathFromAbsoluteProjectPath:absolutePath];
         
-		if (relativePath)
-			[array addObject:relativePath];
-	}
+        if (relativePath)
+            [array addObject:relativePath];
+    }
     
-	return array;
+    return array;
 }
 
 #pragma mark -
@@ -141,38 +141,38 @@
 
 - (NSSet *)labelIndexes
 {
-	return nil;
+    return nil;
 }
 
 - (void)updateLabelIndexes
 {
-	if (mLabelString == nil)
+    if (mLabelString == nil)
     {
-		mLabelString = [[NSMutableString alloc] init];
-	}
-	
-	mLabelIndexes = 0;
+        mLabelString = [[NSMutableString alloc] init];
+    }
     
-	for (NSNumber *index in [self labelIndexes])
+    mLabelIndexes = 0;
+    
+    for (NSNumber *index in [self labelIndexes])
     {
-		mLabelIndexes = mLabelIndexes | (1 << [index intValue]);
-		NSString *identifier = [[[[self projectProvider] projectWC] projectLabels] labelIdentifierForIndex:[index intValue]];
+        mLabelIndexes = mLabelIndexes | (1 << [index intValue]);
+        NSString *identifier = [[[[self projectProvider] projectWC] projectLabels] labelIdentifierForIndex:[index intValue]];
         
-		if (identifier)
+        if (identifier)
         {
-			[mLabelString appendString:identifier];
-		}
-	}		
+            [mLabelString appendString:identifier];
+        }
+    }        
 }
 
 - (long)labels
 {
-	if (mLabelIndexes == -1)
+    if (mLabelIndexes == -1)
     {
-		[self updateLabelIndexes];		
-	}
+        [self updateLabelIndexes];        
+    }
     
-	return mLabelIndexes;
+    return mLabelIndexes;
 }
 
 @end

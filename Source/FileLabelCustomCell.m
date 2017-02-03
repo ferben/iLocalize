@@ -15,39 +15,39 @@
 
 - (void)awake
 {
-	[super awake];
-	mRender = [[LabelCustomCellRender alloc] init];
+    [super awake];
+    mRender = [[LabelCustomCellRender alloc] init];
 }
 
 
 - (void)drawInteriorWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
 {
-	[super drawInteriorWithFrame:cellFrame
-						  inView:controlView];
-	
-	[mRender drawLabelCellWithFrame:cellFrame
-							indexes:[[self fileController] labelIndexes]
-							 labels:[[[[self fileController] projectProvider] projectWC] projectLabels]];
+    [super drawInteriorWithFrame:cellFrame
+                          inView:controlView];
+    
+    [mRender drawLabelCellWithFrame:cellFrame
+                            indexes:[[self fileController] labelIndexes]
+                             labels:[[[[self fileController] projectProvider] projectWC] projectLabels]];
 }
 
 - (NSArray *)accessibilityAttributeNames
 {
-	id o = [super accessibilityAttributeNames];
-	// add value attribute to describe the status
-	return [o arrayByAddingObject:NSAccessibilityValueAttribute];	
+    id o = [super accessibilityAttributeNames];
+    // add value attribute to describe the status
+    return [o arrayByAddingObject:NSAccessibilityValueAttribute];    
 }
 
 - (id)accessibilityAttributeValue:(NSString *)attribute
 {
-	id o = [super accessibilityAttributeValue:attribute];	
-	if([attribute isEqualToString:NSAccessibilityRoleAttribute]) {
-		o = NSAccessibilityTextFieldRole;
-	} else if([attribute isEqualToString:NSAccessibilityRoleDescriptionAttribute]) {
-		o = NSAccessibilityRoleDescription(NSAccessibilityTextFieldRole, nil);
-	} else if([attribute isEqualToString:NSAccessibilityValueAttribute]) {
-		o = [[self fileController] pFileLabel];
-	}
-	return o;	
+    id o = [super accessibilityAttributeValue:attribute];    
+    if([attribute isEqualToString:NSAccessibilityRoleAttribute]) {
+        o = NSAccessibilityTextFieldRole;
+    } else if([attribute isEqualToString:NSAccessibilityRoleDescriptionAttribute]) {
+        o = NSAccessibilityRoleDescription(NSAccessibilityTextFieldRole, nil);
+    } else if([attribute isEqualToString:NSAccessibilityValueAttribute]) {
+        o = [[self fileController] pFileLabel];
+    }
+    return o;    
 }
 
 @end

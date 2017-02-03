@@ -13,36 +13,36 @@
 
 + (id)cornerWithTableView:(NSTableView*)tv
 {
-	NSRect frame = [[tv cornerView] frame];
-	return [[self alloc] initWithFrame:frame];
+    NSRect frame = [[tv cornerView] frame];
+    return [[self alloc] initWithFrame:frame];
 }
 
 - (NSMenu*)popupMenu
 {
-	return NULL;
+    return NULL;
 }
 
 - (NSString*)cornerImage
 {
-	return NULL;	// Subclass can use @"TableViewCornerIcon"
+    return NULL;    // Subclass can use @"TableViewCornerIcon"
 }
 
 - (void)mouseDown:(NSEvent*)event
 {
-	if([self popupMenu])
-		[NSMenu popUpContextMenu:[self popupMenu] withEvent:event forView:self];
+    if([self popupMenu])
+        [NSMenu popUpContextMenu:[self popupMenu] withEvent:event forView:self];
 }
 
 - (void)drawRect:(NSRect)r
 {
-//	[super drawRect:r];
+//    [super drawRect:r];
 
-	if([self cornerImage]) {
-		NSImage *image = [NSImage imageNamed:[self cornerImage]];
-		NSSize imageSize = [image size];
-		[image drawInRect:NSMakeRect(r.origin.x+r.size.width*0.5-imageSize.width*0.5, r.origin.y+r.size.height*0.5-imageSize.height*0.5, imageSize.width, imageSize.height)
-				operation:NSCompositeSourceOver
-				 fraction:1];		
-	}
+    if([self cornerImage]) {
+        NSImage *image = [NSImage imageNamed:[self cornerImage]];
+        NSSize imageSize = [image size];
+        [image drawInRect:NSMakeRect(r.origin.x+r.size.width*0.5-imageSize.width*0.5, r.origin.y+r.size.height*0.5-imageSize.height*0.5, imageSize.width, imageSize.height)
+                operation:NSCompositeSourceOver
+                 fraction:1];        
+    }
 }
 @end

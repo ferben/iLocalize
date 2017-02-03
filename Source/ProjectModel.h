@@ -10,13 +10,13 @@
 @class FileModel;
 
 @interface ProjectModel : NSObject <NSCoding> {
-	NSString		*mName;
-	
-	NSString		*mSourceName;
-	NSString		*mProjectPath;
-	
-	NSString		*mBaseLanguage;
-	NSMutableArray	*mLanguageModelArray;
+    NSString        *mName;
+    
+    NSString        *mSourceName;
+    NSString        *mProjectPath;
+    
+    NSString        *mBaseLanguage;
+    NSMutableArray    *mLanguageModelArray;
 }
 
 + (ProjectModel*)model;

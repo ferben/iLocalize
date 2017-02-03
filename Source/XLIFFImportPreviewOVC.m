@@ -17,34 +17,34 @@
 
 - (id)init
 {
-	if(self = [super initWithNibName:@"XLIFFImportPreview"]) {
-		listSelectionView = [[AZListSelectionView alloc] init];
-	}
-	return self;
+    if(self = [super initWithNibName:@"XLIFFImportPreview"]) {
+        listSelectionView = [[AZListSelectionView alloc] init];
+    }
+    return self;
 }
 
 
 - (NSString*)nextButtonTitle
 {
-	return NSLocalizedString(@"Import", nil);
+    return NSLocalizedString(@"Import", nil);
 }
 
 - (void)willShow
 {
-	NSMutableArray *elements = [NSMutableArray array];
-	for(XLIFFImportFileElement *fileElement in settings.fileElements) {
-		if(fileElement.fc) {
-			[elements addObject:fileElement];
-		}
-	}
-	listSelectionView.elements = elements;
-	listSelectionView.outlineView = outlineView;
-	[listSelectionView reloadData];	
+    NSMutableArray *elements = [NSMutableArray array];
+    for(XLIFFImportFileElement *fileElement in settings.fileElements) {
+        if(fileElement.fc) {
+            [elements addObject:fileElement];
+        }
+    }
+    listSelectionView.elements = elements;
+    listSelectionView.outlineView = outlineView;
+    [listSelectionView reloadData];    
 }
 
 - (void)willContinue
 {
-	self.settings.fileElements = [listSelectionView selectedElements];
+    self.settings.fileElements = [listSelectionView selectedElements];
 }
 
 @end

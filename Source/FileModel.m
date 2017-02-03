@@ -21,51 +21,51 @@
 
 + (void)initialize
 {
-	if(self == [FileModel class]) {
-		[self setVersion:0];
-	}
+    if(self == [FileModel class]) {
+        [self setVersion:0];
+    }
 }
 
 + (FileModel*)modelWithRelativeFilePath:(NSString*)file
 {
-	FileModel *model = [[FileModel alloc ] init];
-	[model setRelativeFilePath:file];
-	return model;
+    FileModel *model = [[FileModel alloc ] init];
+    [model setRelativeFilePath:file];
+    return model;
 }
 
 - (id)init
 {
-	if(self = [super init]) {
-		mAttributes = [[FileModelAttributes alloc] init];
-		mContent = [[FileModelContent alloc] init];
-	}
-	return self;
+    if(self = [super init]) {
+        mAttributes = [[FileModelAttributes alloc] init];
+        mContent = [[FileModelContent alloc] init];
+    }
+    return self;
 }
 
 
 - (id)initWithCoder:(NSCoder*)coder
 {
-	if(self = [super init]) {
-		mAttributes = [coder decodeObject];
-		mContent = [coder decodeObject];		
-	}
-	return self;
+    if(self = [super init]) {
+        mAttributes = [coder decodeObject];
+        mContent = [coder decodeObject];        
+    }
+    return self;
 }
 
 - (void)encodeWithCoder:(NSCoder*)coder
 {
-	[coder encodeObject:mAttributes];
-	[coder encodeObject:mContent];
+    [coder encodeObject:mAttributes];
+    [coder encodeObject:mContent];
 }
 
 - (void)setLanguageModel:(LanguageModel*)lm
 {
-	mLanguageModel = lm;
+    mLanguageModel = lm;
 }
 
 - (BOOL)isEqual:(id)model
 {
-	return [mAttributes isEqual:[(FileModel*)model attributes]];
+    return [mAttributes isEqual:[(FileModel*)model attributes]];
 }
 
 @end
@@ -74,129 +74,129 @@
 
 - (void)setRelativeFilePath:(NSString*)file
 {
-	[mLanguageModel removeFromCache:self];
-	[mAttributes setRelativeFilePath:file];
-	[mLanguageModel addToCache:self];
+    [mLanguageModel removeFromCache:self];
+    [mAttributes setRelativeFilePath:file];
+    [mLanguageModel addToCache:self];
 }
 
 - (NSString*)relativeFilePath
 {
-	return [mAttributes relativeFilePath];
+    return [mAttributes relativeFilePath];
 }
 
 - (NSString*)filename
 {
-	return [mAttributes filename];
+    return [mAttributes filename];
 }
 
 - (NSString*)language
 {
-	return [mAttributes language];
+    return [mAttributes language];
 }
 
 - (void)setModificationDate:(NSDate*)date
 {
-	[mAttributes setModificationDate:date];
+    [mAttributes setModificationDate:date];
 }
 
 - (NSDate*)modificationDate
 {
-	return [mAttributes modificationDate];
+    return [mAttributes modificationDate];
 }
 
 - (void)setStatus:(unsigned char)status
 {
-	[mAttributes setStatus:status];
+    [mAttributes setStatus:status];
 }
 
 - (unsigned char)status
 {
-	return [mAttributes status];
+    return [mAttributes status];
 }
 
 - (void)setIgnore:(BOOL)flag
 {
-	[mAttributes setIgnore:flag];
+    [mAttributes setIgnore:flag];
 }
 
 - (BOOL)ignore
 {
-	return [mAttributes ignore];
+    return [mAttributes ignore];
 }
 
 - (void)setEOLType:(NSUInteger)type
 {
-	[mAttributes setEOLType:type];
+    [mAttributes setEOLType:type];
 }
 
 - (NSUInteger)eolType
 {
-	return [mAttributes eolType];
+    return [mAttributes eolType];
 }
 
 - (void)setFormat:(NSUInteger)format
 {
-	[mAttributes setFormat:format];	
+    [mAttributes setFormat:format];    
 }
 
 - (NSUInteger)format
 {
-	return [mAttributes format];
+    return [mAttributes format];
 }
 
 - (void)setLocal:(BOOL)flag
 {
-	[mAttributes setLocal:flag];	
+    [mAttributes setLocal:flag];    
 }
 
 - (BOOL)isLocal
 {
-	return [mAttributes isLocal];	
+    return [mAttributes isLocal];    
 }
 
 - (void)setHasEncoding:(BOOL)flag
 {
-	[mAttributes setHasEncoding:flag];
+    [mAttributes setHasEncoding:flag];
 }
 
 - (BOOL)hasEncoding
 {
-	return [mAttributes hasEncoding];
+    return [mAttributes hasEncoding];
 }
 
 - (void)setEncoding:(StringEncoding*)encoding
 {
-	[mAttributes setEncoding:encoding];
+    [mAttributes setEncoding:encoding];
 }
 
 - (StringEncoding*)encoding
 {
-	return [mAttributes encoding];
+    return [mAttributes encoding];
 }
 
 - (void)setLabelIndexes:(NSSet*)indexes
 {
-	[mAttributes setLabelIndexes:indexes];
+    [mAttributes setLabelIndexes:indexes];
 }
 
 - (NSSet*)labelIndexes
 {
-	return [mAttributes labelIndexes];
+    return [mAttributes labelIndexes];
 }
 
 - (void)setAuxiliaryData:(id)data forKey:(NSString*)key
 {
-	[mAttributes setAuxiliaryData:data forKey:key];
+    [mAttributes setAuxiliaryData:data forKey:key];
 }
 
 - (id)auxiliaryDataForKey:(NSString*)key
 {
-	return [mAttributes auxiliaryDataForKey:key];
+    return [mAttributes auxiliaryDataForKey:key];
 }
 
 - (FileModelAttributes*)attributes
 {
-	return mAttributes;
+    return mAttributes;
 }
 
 - (NSString*)description
@@ -210,12 +210,12 @@
 
 - (void)setFileModelContent:(FileModelContent*)content
 {
-	mContent = content;
+    mContent = content;
 }
 
 - (FileModelContent*)fileModelContent
 {
-	return mContent;
+    return mContent;
 }
 
 @end

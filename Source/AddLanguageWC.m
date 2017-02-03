@@ -16,116 +16,116 @@
 
 - (id)init
 {
-	if (self = [super initWithWindowNibName:@"AddLanguage"])
+    if (self = [super initWithWindowNibName:@"AddLanguage"])
     {
-		languageMenuProvider = [[LanguageMenuProvider alloc] init];
-		languageMenuProvider.actionTarget = self;
-		languageMenuProvider.delegate = self;
-		mCheckForExistingLanguage = YES;
-	}
+        languageMenuProvider = [[LanguageMenuProvider alloc] init];
+        languageMenuProvider.actionTarget = self;
+        languageMenuProvider.delegate = self;
+        mCheckForExistingLanguage = YES;
+    }
     
-	return self;
+    return self;
 }
 
 
 - (BOOL)alreadyExistsLanguage:(NSString *)language
 {
-	return [[[self projectProvider] projectController] isLanguageExisting:language];
+    return [[[self projectProvider] projectController] isLanguageExisting:language];
 }
 
 - (void)updateOKButton
 {
-	BOOL enabled = NO;
+    BOOL enabled = NO;
     
-	if (mCheckForExistingLanguage)
+    if (mCheckForExistingLanguage)
     {
-		NSString *language = [languageMenuProvider selectedLanguage];
+        NSString *language = [languageMenuProvider selectedLanguage];
         
-		if (language)
+        if (language)
         {
-			enabled = ![self alreadyExistsLanguage:language];
-		}
-	}
+            enabled = ![self alreadyExistsLanguage:language];
+        }
+    }
     else
     {
-		enabled = YES;
-	}
+        enabled = YES;
+    }
     
-	[mOKButton setEnabled:enabled];
+    [mOKButton setEnabled:enabled];
 }
 
 - (void)willShow
 {
-	languageMenuProvider.popupButton = mLocalePopUpButton;
-	[languageMenuProvider refreshPopUp];
+    languageMenuProvider.popupButton = mLocalePopUpButton;
+    [languageMenuProvider refreshPopUp];
     
-	if (self.initialLanguageSelection != nil)
+    if (self.initialLanguageSelection != nil)
     {
-		[languageMenuProvider selectLanguage:initialLanguageSelection];
-	}
+        [languageMenuProvider selectLanguage:initialLanguageSelection];
+    }
     else
     {
-		[languageMenuProvider selectCurrentLanguage];
-	}
+        [languageMenuProvider selectCurrentLanguage];
+    }
 
-	[mFillTranslationButton setState:[[NSUserDefaults standardUserDefaults] boolForKey:@"autoFillTranslationWithBaseForNewLanguage"]?NSOnState:NSOffState];
-	[self updateOKButton];
+    [mFillTranslationButton setState:[[NSUserDefaults standardUserDefaults] boolForKey:@"autoFillTranslationWithBaseForNewLanguage"]?NSOnState:NSOffState];
+    [self updateOKButton];
 }
 
 - (void)setCheckForExistingLanguage:(BOOL)flag
 {
-	mCheckForExistingLanguage = flag;
+    mCheckForExistingLanguage = flag;
 }
 
 - (void)setRenameLanguage:(BOOL)flag
 {
-	[mFillTranslationButton setHidden:flag];
+    [mFillTranslationButton setHidden:flag];
     
-	if (flag)
+    if (flag)
     {
-		[mOKButton setTitle:NSLocalizedString(@"Rename", @"Language")];		
-	}
+        [mOKButton setTitle:NSLocalizedString(@"Rename", @"Language")];        
+    }
     else
     {
-		[mOKButton setTitle:NSLocalizedString(@"Add", @"Language")];
-	}
+        [mOKButton setTitle:NSLocalizedString(@"Add", @"Language")];
+    }
 }
 
 - (BOOL)enableMenuItemForLanguage:(NSString *)language
 {
-	if (!mCheckForExistingLanguage)
+    if (!mCheckForExistingLanguage)
     {
-		return YES;
-	}
-	
-	if (!language)
+        return YES;
+    }
+    
+    if (!language)
     {
-		return YES;
-	}
-	
-	return ![self alreadyExistsLanguage:language];
+        return YES;
+    }
+    
+    return ![self alreadyExistsLanguage:language];
 }
 
 - (NSString *)language
 {
-	return [languageMenuProvider selectedLanguage];
+    return [languageMenuProvider selectedLanguage];
 }
 
 - (IBAction)languageSelected:(id)sender
 {
-	[self updateOKButton];
+    [self updateOKButton];
 }
 
 - (IBAction)cancel:(id)sender
 {
-	[self hide];	
+    [self hide];    
 }
 
 - (IBAction)add:(id)sender
 {
-	[[NSUserDefaults standardUserDefaults] setBool:[mFillTranslationButton state] == NSOnState forKey:@"autoFillTranslationWithBaseForNewLanguage"];
+    [[NSUserDefaults standardUserDefaults] setBool:[mFillTranslationButton state] == NSOnState forKey:@"autoFillTranslationWithBaseForNewLanguage"];
 
-	if (mCheckForExistingLanguage && [self alreadyExistsLanguage:[self language]])
+    if (mCheckForExistingLanguage && [self alreadyExistsLanguage:[self language]])
     {
         // compose alert
         NSAlert *alert = [NSAlert new];
@@ -136,11 +136,11 @@
         
         // show alert
         [alert runModal];
-	}
+    }
     else
     {
-		[self hideWithCode:1];	
-	}
+        [self hideWithCode:1];    
+    }
 }
 
 @end

@@ -9,9 +9,9 @@
 #import "FMEditor.h"
 
 @interface FMEditorImage : FMEditor {
-	IBOutlet NSImageView	*mBaseBaseImageView;
-	IBOutlet NSImageView	*mLocalizedBaseImageView;
-	IBOutlet NSImageView	*mLocalizedTranslationImageView;
+    IBOutlet NSImageView    *mBaseBaseImageView;
+    IBOutlet NSImageView    *mLocalizedBaseImageView;
+    IBOutlet NSImageView    *mLocalizedTranslationImageView;
 }
 
 @end

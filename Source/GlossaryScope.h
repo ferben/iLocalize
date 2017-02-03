@@ -15,10 +15,10 @@
  which ones are selected for processing.
  */
 @interface GlossaryScope : NSObject {
-	/**
-	 Map of root node for each language. A root node contains the tree of scopes.
-	 */
-	NSMutableDictionary *nodesForLanguage;
+    /**
+     Map of root node for each language. A root node contains the tree of scopes.
+     */
+    NSMutableDictionary *nodesForLanguage;
 }
 
 /**

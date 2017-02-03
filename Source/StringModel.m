@@ -32,115 +32,115 @@ static NSString *VALUE_ROW = @"value_row";
 
 + (void)initialize
 {
-	if (self == [StringModel class])
+    if (self == [StringModel class])
     {
-		[self setVersion:0];
-	}
+        [self setVersion:0];
+    }
 }
 
 + (StringModel *)model
 {
-	return [[StringModel alloc] init];
+    return [[StringModel alloc] init];
 }
 
 - (id)init
 {
-	if (self = [super init])
+    if (self = [super init])
     {
-		mAttributes = [[NSMutableDictionary alloc] init];
-	}
-	
+        mAttributes = [[NSMutableDictionary alloc] init];
+    }
+    
     return self;
 }
 
 
 - (id)initWithCoder:(NSCoder *)coder
 {
-	if (self = [super init])
+    if (self = [super init])
     {
-		mAttributes = [coder decodeObject];
-	}
-	
+        mAttributes = [coder decodeObject];
+    }
+    
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)coder
 {
-	[coder encodeObject:mAttributes];
+    [coder encodeObject:mAttributes];
 }
 
 - (id)copyWithZone:(NSZone *)zone
 {
-	StringModel *newModel = [[StringModel alloc] init];
-	newModel->mAttributes = [mAttributes mutableCopy];
-	return newModel;
+    StringModel *newModel = [[StringModel alloc] init];
+    newModel->mAttributes = [mAttributes mutableCopy];
+    return newModel;
 }
 
 - (void)setLock:(BOOL)lock
 {
-	mAttributes[LOCK] = @(lock);	
+    mAttributes[LOCK] = @(lock);    
 }
 
 - (BOOL)lock
 {
-	if ([self valueType] == STRING_OLDSTYLE)
+    if ([self valueType] == STRING_OLDSTYLE)
     {
-		// old-style value are currently locked to avoid editing because otherwhise
-		// the "transformer" bound to the cell will escape this string which we don't want.
-		// In the future, we might give more context to the "transformer" to avoid escaping
-		// old-style value.
-		return YES;
-	}
+        // old-style value are currently locked to avoid editing because otherwhise
+        // the "transformer" bound to the cell will escape this string which we don't want.
+        // In the future, we might give more context to the "transformer" to avoid escaping
+        // old-style value.
+        return YES;
+    }
     else
     {
-		return [mAttributes[LOCK] boolValue];		
-	}
+        return [mAttributes[LOCK] boolValue];        
+    }
 }
 
 - (void)setStatus:(unsigned char)status
 {
-	mAttributes[STATUS] = @(status);	
+    mAttributes[STATUS] = @(status);    
 }
 
 - (unsigned char)status
 {
-	id status = mAttributes[STATUS];
+    id status = mAttributes[STATUS];
     
-	if (status)
-		return [status unsignedCharValue];
-	else
-		// HACK
-		return (1 << STRING_STATUS_NONE);
+    if (status)
+        return [status unsignedCharValue];
+    else
+        // HACK
+        return (1 << STRING_STATUS_NONE);
 }
 
 - (void)setLabelIndexes:(NSSet *)indexes
 {
-	mAttributes[LABELS] = indexes;
+    mAttributes[LABELS] = indexes;
 }
 
 - (NSSet*)labelIndexes
 {
-	NSMutableSet *indexes = mAttributes[LABELS];
+    NSMutableSet *indexes = mAttributes[LABELS];
     
-	if (indexes == nil)
+    if (indexes == nil)
     {
-		indexes = [[NSMutableSet alloc] init];
-		mAttributes[LABELS] = indexes;
-	}
-	
+        indexes = [[NSMutableSet alloc] init];
+        mAttributes[LABELS] = indexes;
+    }
+    
     return indexes;
 }
 
 - (void)setComment:(NSString *)comment
 {
-	mAttributes[COMMENT_STRING] = comment?comment:@"";
+    mAttributes[COMMENT_STRING] = comment?comment:@"";
 }
 
 - (void)setComment:(NSString *)comment as:(NSUInteger)type atRow:(NSUInteger)row
-{	
-	[self setComment:comment];
-	mAttributes[COMMENT_TYPE] = [NSNumber numberWithInteger:type];
-	mAttributes[COMMENT_ROW] = @(row);
+{    
+    [self setComment:comment];
+    mAttributes[COMMENT_TYPE] = [NSNumber numberWithInteger:type];
+    mAttributes[COMMENT_ROW] = @(row);
 }
 
 - (void)addComment:(NSString *)comment as:(unsigned)type atRow:(int)row
@@ -186,86 +186,86 @@ static NSString *VALUE_ROW = @"value_row";
 
 - (void)setKey:(NSString*)key
 {
-	mAttributes[KEY_STRING] = key?key:@"";	
+    mAttributes[KEY_STRING] = key?key:@"";    
 }
 
 - (void)setKey:(NSString *)key as:(NSUInteger)type atRow:(NSUInteger)row
 {
-	[self setKey:key];
-	mAttributes[KEY_TYPE] = [NSNumber numberWithInteger:type];
-	mAttributes[KEY_ROW] = @(row);	
+    [self setKey:key];
+    mAttributes[KEY_TYPE] = [NSNumber numberWithInteger:type];
+    mAttributes[KEY_ROW] = @(row);    
 }
 
 - (void)setValue:(NSString *)value as:(NSUInteger)type atRow:(NSUInteger)row
 {
-	[self setValue:value];
+    [self setValue:value];
     mAttributes[VALUE_TYPE] = [NSNumber numberWithInteger:type];
-	mAttributes[VALUE_ROW] = @(row);	
+    mAttributes[VALUE_ROW] = @(row);    
 }
 
 - (void)setValue:(NSString *)value
 {
-	mAttributes[VALUE_STRING] = (value) ? value : @"";
+    mAttributes[VALUE_STRING] = (value) ? value : @"";
 }
 
 - (int)commentRow
 {
-	return [mAttributes[COMMENT_ROW] intValue];
+    return [mAttributes[COMMENT_ROW] intValue];
 }
 
 - (int)keyRow
 {
-	return [mAttributes[KEY_ROW] intValue];
+    return [mAttributes[KEY_ROW] intValue];
 }
 
 - (int)valueRow
 {
-	return [mAttributes[VALUE_ROW] intValue];
+    return [mAttributes[VALUE_ROW] intValue];
 }
 
 - (void)setCommentType:(int)type
 {
-	mAttributes[COMMENT_TYPE] = @(type);		
+    mAttributes[COMMENT_TYPE] = @(type);        
 }
 
 - (int)commentType
 {
-	return [mAttributes[COMMENT_TYPE] intValue];	
+    return [mAttributes[COMMENT_TYPE] intValue];    
 }
 
 - (int)keyType
 {
-	return [mAttributes[KEY_TYPE] intValue];	
+    return [mAttributes[KEY_TYPE] intValue];    
 }
 
 - (int)valueType
 {
-	return [mAttributes[VALUE_TYPE] intValue];	
+    return [mAttributes[VALUE_TYPE] intValue];    
 }
 
 - (NSString *)comment
 {
-	return mAttributes[COMMENT_STRING];
+    return mAttributes[COMMENT_STRING];
 }
 
 - (NSString *)key
 {
-	return mAttributes[KEY_STRING];
+    return mAttributes[KEY_STRING];
 }
 
 - (NSString *)value
 {
-	return mAttributes[VALUE_STRING];
+    return mAttributes[VALUE_STRING];
 }
 
 - (NSDictionary *)attributes
 {
-	return mAttributes;
+    return mAttributes;
 }
 
 - (BOOL)isEqual:(id)model
 {
-	return [mAttributes isEqualToDictionary:[(StringModel *)model attributes]];
+    return [mAttributes isEqualToDictionary:[(StringModel *)model attributes]];
 }
 
 - (NSString *)description
@@ -275,7 +275,7 @@ static NSString *VALUE_ROW = @"value_row";
 
 - (NSComparisonResult)compareKeys:(id)other
 {
-	return [[self key] compare:[other key]];
+    return [[self key] compare:[other key]];
 }
 
 @end

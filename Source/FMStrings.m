@@ -15,37 +15,37 @@
 
 - (BOOL)builtIn
 {
-	return YES;
+    return YES;
 }
 
 - (NSString*)name
 {
-	return NSLocalizedStringFromTable(@"Strings", @"LocalizableEditors", @"File Editor Strings");
+    return NSLocalizedStringFromTable(@"Strings", @"LocalizableEditors", @"File Editor Strings");
 }
 
 - (NSImage*)fileImage
 {
-	return [NSImage imageNamed:@"FileIconTXT"];
+    return [NSImage imageNamed:@"FileIconTXT"];
 }
 
 - (Class)editorClass
 {
-	return NSClassFromString(@"FMEditorStrings");
+    return NSClassFromString(@"FMEditorStrings");
 }
 
 - (Class)engineClass
 {
-	return [FMEngineStrings class];
+    return [FMEngineStrings class];
 }
 
 - (Class)controllerClass
 {
-	return [FMControllerStrings class];
+    return [FMControllerStrings class];
 }
 
 - (void)load
 {
-	[[self manager] registerFileModule:self forFileExtension:@"strings"];
+    [[self manager] registerFileModule:self forFileExtension:@"strings"];
 }
 
 @end

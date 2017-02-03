@@ -17,25 +17,25 @@ static NSMutableDictionary *tagToIdentifier = nil;
 
 - (id)init
 {
-	if(self = [super init]) {
-		if(!identifierToTag) {
-			identifierToTag = [[NSMutableDictionary alloc] init];
-		}
-		if(!tagToIdentifier) {
-			tagToIdentifier = [[NSMutableDictionary alloc] init];			
-		}
+    if(self = [super init]) {
+        if(!identifierToTag) {
+            identifierToTag = [[NSMutableDictionary alloc] init];
+        }
+        if(!tagToIdentifier) {
+            tagToIdentifier = [[NSMutableDictionary alloc] init];            
+        }
 
-		[identifierToTag removeAllObjects];
-		[tagToIdentifier removeAllObjects];
-		
-		int tag = 0;
-		for(LanguageInfoModel *model in [LanguageTool availableLanguageInfos]) {
-			identifierToTag[model.identifier] = @(tag);
-			tagToIdentifier[@(tag)] = model.identifier;
-			tag++;
-		}		
-	}
-	return self;
+        [identifierToTag removeAllObjects];
+        [tagToIdentifier removeAllObjects];
+        
+        int tag = 0;
+        for(LanguageInfoModel *model in [LanguageTool availableLanguageInfos]) {
+            identifierToTag[model.identifier] = @(tag);
+            tagToIdentifier[@(tag)] = model.identifier;
+            tag++;
+        }        
+    }
+    return self;
 }
 
 + (Class)transformedValueClass
@@ -51,13 +51,13 @@ static NSMutableDictionary *tagToIdentifier = nil;
 // Language identifier to tag
 - (id)transformedValue:(id)value
 {
-	return identifierToTag[value];
+    return identifierToTag[value];
 }
 
 // tag to language identifier
 - (id)reverseTransformedValue:(id)value
 {
-	return tagToIdentifier[value];
+    return tagToIdentifier[value];
 }
 
 @end

@@ -7,15 +7,15 @@
 //
 
 @interface GlossaryNotIndexedWC : NSWindowController {
-	IBOutlet NSPopUpButton	*mActionPopUp;
-	IBOutlet NSPopUpButton	*mPathPopUp;
-	
-	NSString	*mGlossaryPath;
-	NSArray		*mPaths;
-	BOOL		mLocalPathExists;
-	NSString	*targetPath;
-	
-	CallbackBlock didCloseCallback;
+    IBOutlet NSPopUpButton    *mActionPopUp;
+    IBOutlet NSPopUpButton    *mPathPopUp;
+    
+    NSString    *mGlossaryPath;
+    NSArray        *mPaths;
+    BOOL        mLocalPathExists;
+    NSString    *targetPath;
+    
+    CallbackBlock didCloseCallback;
 }
 
 @property (copy) CallbackBlock didCloseCallback;

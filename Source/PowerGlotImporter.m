@@ -12,14 +12,14 @@
 
 - (NSArray*)readableExtensions
 {
-	return @[@"text", @"txt"];
+    return @[@"text", @"txt"];
 }
 
 - (BOOL)importDocument:(NSURL*)url error:(NSError**)error
 {
     NSString *content = [[NSString alloc] initWithData:[NSData dataWithContentsOfURL:url] encoding:NSUTF8StringEncoding];
-	if(content == NULL) {
-		content = [NSString stringWithContentsOfURL:url usedEncoding:nil error:error];
+    if(content == NULL) {
+        content = [NSString stringWithContentsOfURL:url usedEncoding:nil error:error];
         if (nil == content) {
             return NO;
         }
@@ -55,10 +55,10 @@
         [self addStringWithKey:nil base:source translation:target file:nil];
     }
 
-	self.sourceLanguage = nil;
-	self.targetLanguage = nil;
+    self.sourceLanguage = nil;
+    self.targetLanguage = nil;
     
-	return YES;
+    return YES;
 }
 
 @end

@@ -10,7 +10,7 @@
 #import "IGroupEngineManager.h"
 
 @interface IGroupAlternate : IGroup {
-	NSArray *sortDescriptors;
+    NSArray *sortDescriptors;
 }
 
 @end

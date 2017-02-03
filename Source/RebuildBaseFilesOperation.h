@@ -9,7 +9,7 @@
 #import "AbstractOperation.h"
 
 @interface RebuildBaseFilesOperation : AbstractOperation {
-	NSArray *mFileControllers;
+    NSArray *mFileControllers;
 }
 - (void)rebuildBaseFileControllers:(NSArray*)controllers;
 @end

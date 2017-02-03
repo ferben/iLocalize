@@ -25,117 +25,117 @@
 
 - (id)init
 {
-	if(self = [super initWithNibName:@"ImportFiles"]) {
+    if(self = [super initWithNibName:@"ImportFiles"]) {
 
-	}
-	return self;
+    }
+    return self;
 }
 
 
 - (void)willShow
 {
-	if([[[self projectProvider] selectedLanguageController] isBaseLanguage])
-		[self importBaseRadio:self];
-	else {
-		[self importOtherRadio:self];
+    if([[[self projectProvider] selectedLanguageController] isBaseLanguage])
+        [self importBaseRadio:self];
+    else {
+        [self importOtherRadio:self];
         [mImportImportLayoutsCheckbox setState:NSOnState];
     }
-	
-	NSString *baseLanguage = [[[self projectProvider] projectModel] baseLanguage];
-	[mImportBaseLanguageInfo setStringValue:[NSString stringWithFormat:NSLocalizedString(@"Update “%@” and rebase all other languages. All strings in the other languages will be localized according to the current translation.", NULL), [baseLanguage displayLanguageName]]];
+    
+    NSString *baseLanguage = [[[self projectProvider] projectModel] baseLanguage];
+    [mImportBaseLanguageInfo setStringValue:[NSString stringWithFormat:NSLocalizedString(@"Update “%@” and rebase all other languages. All strings in the other languages will be localized according to the current translation.", NULL), [baseLanguage displayLanguageName]]];
 
-	[mController removeObjects:[mController content]];
-	
-	NSEnumerator *enumerator = [[[[self projectProvider] projectController] languages] objectEnumerator];
-	NSString *language;
-	ProjectController *pc = [[self projectProvider] projectController];
-	id selectionObject = nil;
-	while(language = [enumerator nextObject]) {
-		if(![pc isLanguageExisting:language])
-			continue;
-		
-		if([[pc baseLanguage] isEqualCaseInsensitiveToString:language])
-			continue;
-				
-		NSMutableDictionary *o = [NSMutableDictionary dictionaryWithObject:language forKey:@"language"];
-		if([[[[self projectProvider] selectedLanguageController] language] isEqualToString:language]) {
-			selectionObject = o;			
-		}
-		o[@"displayLanguage"] = [language displayLanguageName];
-		
-		[mController addObject:o];
-	}
+    [mController removeObjects:[mController content]];
+    
+    NSEnumerator *enumerator = [[[[self projectProvider] projectController] languages] objectEnumerator];
+    NSString *language;
+    ProjectController *pc = [[self projectProvider] projectController];
+    id selectionObject = nil;
+    while(language = [enumerator nextObject]) {
+        if(![pc isLanguageExisting:language])
+            continue;
+        
+        if([[pc baseLanguage] isEqualCaseInsensitiveToString:language])
+            continue;
+                
+        NSMutableDictionary *o = [NSMutableDictionary dictionaryWithObject:language forKey:@"language"];
+        if([[[[self projectProvider] selectedLanguageController] language] isEqualToString:language]) {
+            selectionObject = o;            
+        }
+        o[@"displayLanguage"] = [language displayLanguageName];
+        
+        [mController addObject:o];
+    }
     if(selectionObject)
-		[mController setSelectedObjects:@[selectionObject]];
-	
+        [mController setSelectedObjects:@[selectionObject]];
+    
     [self updateInterface];
 }
 
 - (void)saveSettings
 {
-	self.settings.updateBaseLanguage = ([mImportBaseRadio state] == NSOnState);
-	self.settings.resetLayout = ([mImportCheckLayoutCheckbox state] == NSOnState);
-	self.settings.updateNibLayouts = ([mImportImportLayoutsCheckbox state] == NSOnState);
-	
+    self.settings.updateBaseLanguage = ([mImportBaseRadio state] == NSOnState);
+    self.settings.resetLayout = ([mImportCheckLayoutCheckbox state] == NSOnState);
+    self.settings.updateNibLayouts = ([mImportImportLayoutsCheckbox state] == NSOnState);
+    
     NSInteger index = [mLanguagesTableView selectedRow];
-	
+    
     if (index >= 0)
     {
-		self.settings.localizedLanguage = [mController content][index][@"language"];		
-	}
+        self.settings.localizedLanguage = [mController content][index][@"language"];        
+    }
     else
     {
-		self.settings.localizedLanguage = nil;
-	}
+        self.settings.localizedLanguage = nil;
+    }
 }
 
 - (NSString*)nextButtonTitle
 {
-	return NSLocalizedString(@"Update", nil);
+    return NSLocalizedString(@"Update", nil);
 }
 
 - (void)willContinue
 {
-	[self saveSettings];
+    [self saveSettings];
 }
 
 - (void)updateInterface
 {
-	BOOL visible = self.settings.resetLayout || self.settings.updateNibLayouts;
-	[mNibWarningIcon setHidden:!visible];
-	[mNibWarningText setHidden:!visible];
+    BOOL visible = self.settings.resetLayout || self.settings.updateNibLayouts;
+    [mNibWarningIcon setHidden:!visible];
+    [mNibWarningText setHidden:!visible];
 }
 
 - (IBAction)keepExistingNibLayouts:(id)sender
 {
-	[self saveSettings];
-	[self updateInterface];	
+    [self saveSettings];
+    [self updateInterface];    
 }
 
 - (IBAction)importNibLayouts:(id)sender
 {
-	[self saveSettings];
-	[self updateInterface];
+    [self saveSettings];
+    [self updateInterface];
 }
 
 - (IBAction)importBaseRadio:(id)sender
 {
-	[mImportBaseRadio setState:NSOnState];
-	[mImportOtherRadio setState:NSOffState];
-	[mImportCheckLayoutCheckbox setEnabled:YES];
-	[mImportImportLayoutsCheckbox setEnabled:NO];
-	[mLanguagesTableView setEnabled:NO];
+    [mImportBaseRadio setState:NSOnState];
+    [mImportOtherRadio setState:NSOffState];
+    [mImportCheckLayoutCheckbox setEnabled:YES];
+    [mImportImportLayoutsCheckbox setEnabled:NO];
+    [mLanguagesTableView setEnabled:NO];
 }
 
 - (IBAction)importOtherRadio:(id)sender
 {
-	[mImportBaseRadio setState:NSOffState];
-	[mImportOtherRadio setState:NSOnState];
-	[mImportCheckLayoutCheckbox setEnabled:NO];
-	[mImportImportLayoutsCheckbox setEnabled:YES];
-	[mLanguagesTableView setEnabled:YES];
-//	[[self window] makeFirstResponder:mLanguagesTableView];
-	[mController setSelectionIndex:0];
+    [mImportBaseRadio setState:NSOffState];
+    [mImportOtherRadio setState:NSOnState];
+    [mImportCheckLayoutCheckbox setEnabled:NO];
+    [mImportImportLayoutsCheckbox setEnabled:YES];
+    [mLanguagesTableView setEnabled:YES];
+//    [[self window] makeFirstResponder:mLanguagesTableView];
+    [mController setSelectionIndex:0];
 }
 
 //- (IBAction)help:(id)sender

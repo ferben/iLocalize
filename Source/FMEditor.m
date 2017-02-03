@@ -23,25 +23,25 @@
 
 + (id)editor
 {
-	return [[self alloc] init];
+    return [[self alloc] init];
 }
 
 - (id)init
 {
-	if ((self = [super init]))
+    if ((self = [super init]))
     {
-		mEngine = NULL;
-		
-		mWindow = NULL;
-		mStackState = [[Stack alloc] init];
-				
-		mFileControllers = [[NSMutableArray alloc] init];
-		
-		[[NSNotificationCenter defaultCenter] addObserver:self
-												 selector:@selector(engineDidReload:)
-													 name:ILNotificationEngineDidReload
-												   object:nil];
-		
+        mEngine = NULL;
+        
+        mWindow = NULL;
+        mStackState = [[Stack alloc] init];
+                
+        mFileControllers = [[NSMutableArray alloc] init];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(engineDidReload:)
+                                                     name:ILNotificationEngineDidReload
+                                                   object:nil];
+        
         NSBundle *bundle = [NSBundle bundleForClass:[self class]];
 
         if (![bundle loadNibNamed:[self nibname] owner:self topLevelObjects:nil])
@@ -53,16 +53,16 @@
         }
         
         [self registerToPreferences];
-	}
+    }
     
-	return self;
+    return self;
 }
 
 - (void)dealloc
 {
-	[[NSNotificationCenter defaultCenter] removeObserver:self];
-	
-	[self unregisterFromPreferences];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+    [self unregisterFromPreferences];
 
 }
 
@@ -70,7 +70,7 @@
 
 - (void)engineDidReload:(NSNotification*)notif
 {
-	if([notif object] == mEngine) {
+    if([notif object] == mEngine) {
         // Be sure to execute the updateContent on the main thread, otherwise the HTML view
         // doesn't get correctly updated.
         [self performSelectorOnMainThread:@selector(updateContent) withObject:nil waitUntilDone:YES];        
@@ -81,56 +81,56 @@
 
 - (ProjectPrefs*)projectPrefs
 {
-	return [[self projectProvider] projectPrefs];
+    return [[self projectProvider] projectPrefs];
 }
 
 - (NSUndoManager*)undoManager
 {
-	return [[self projectProvider] projectUndoManager];
+    return [[self projectProvider] projectUndoManager];
 }
 
 - (Console*)console
 {
-	return [[self projectProvider] console];
+    return [[self projectProvider] console];
 }
 
 - (void)setEngine:(FMEngine*)engine
 {
-	mEngine = engine;
+    mEngine = engine;
 }
 
 - (FMEngine*)engine
 {
-	return mEngine;
+    return mEngine;
 }
 
 - (void)setWindow:(NSWindow*)window
 {
-	mWindow = window;
+    mWindow = window;
 }
 
 - (NSWindow*)window
 {
-	return mWindow;
+    return mWindow;
 }
 
 - (Stack*)stackState
 {
-	return mStackState;
+    return mStackState;
 }
 
 - (NSString*)nibname
 {
-	return NULL;
+    return NULL;
 }
 
 - (NSView*)view
 {
-	if([self isBaseLanguage]) {
-		return mBaseView;
-	} else {
-		return mLocalizedView;
-	}
+    if([self isBaseLanguage]) {
+        return mBaseView;
+    } else {
+        return mLocalizedView;
+    }
 }
 
 - (NSArray*)keyViews
@@ -140,64 +140,64 @@
 
 - (BOOL)allowsMultipleSelection
 {
-	return NO;
+    return NO;
 }
 
 - (BOOL)canExportToStrings
 {
-	return NO;
+    return NO;
 }
 
 - (BOOL)canTranslateUsingStrings
 {
-	return NO;
+    return NO;
 }
 
 - (NSString*)baseLanguage
 {
-	return [[self languageController] baseLanguage];
+    return [[self languageController] baseLanguage];
 }
 
 - (NSString*)baseLanguageDisplay
 {
-	return [[self baseLanguage] displayLanguageName];
+    return [[self baseLanguage] displayLanguageName];
 }
 
 - (NSString*)localizedLanguage
 {
-	return [[self languageController] language];
+    return [[self languageController] language];
 }
 
 - (NSString*)localizedLanguageDisplay
 {
-	return [[self localizedLanguage] displayLanguageName];
+    return [[self localizedLanguage] displayLanguageName];
 }
 
 - (BOOL)isBaseLanguage
 {
-	return [[self languageController] isBaseLanguage];
+    return [[self languageController] isBaseLanguage];
 }
 
 - (void)setLanguageController:(LanguageController*)lc
 {
-	mLanguageController = lc;
+    mLanguageController = lc;
 }
 
 - (LanguageController*)languageController
 {
-	return mLanguageController;
+    return mLanguageController;
 }
 
 - (NSArray*)allFilesOfSelectedLanguage
 {
-	return [[self languageController] fileControllers];
+    return [[self languageController] fileControllers];
 }
 
 #pragma mark -
 
 - (void)awake
 {
-	
+    
 }
 
 - (void)close {
@@ -206,33 +206,33 @@
 
 - (void)makeVisibleInBox:(NSView*)box
 {
-	[self ensureContent];
-	[self updateContent];
-	[box setContentView:[self view]];
-	// Invoke willShow after setting the view into the box
-	// because the box will resize the view so any layout computation
-	// in willShow need to have happen with the view having the proper size.
-	[self willShow];
-	[self setWindow:[box window]];
+    [self ensureContent];
+    [self updateContent];
+    [box setContentView:[self view]];
+    // Invoke willShow after setting the view into the box
+    // because the box will resize the view so any layout computation
+    // in willShow need to have happen with the view having the proper size.
+    [self willShow];
+    [self setWindow:[box window]];
 }
 
 - (void)makeInvisible
 {
-	[self willHide];
-	
-	mLanguageController = nil;
-	
-	[mFileControllers removeAllObjects];
+    [self willHide];
+    
+    mLanguageController = nil;
+    
+    [mFileControllers removeAllObjects];
 }
 
 - (void)willShow
 {
-	
+    
 }
 
 - (void)willHide
 {
-	
+    
 }
 
 - (void)setFileControllers:(NSArray*)fcs
@@ -247,85 +247,85 @@
 
 - (FileController*)fileController
 {
-	return [mFileControllers firstObject];
+    return [mFileControllers firstObject];
 }
 
 - (void)exportFile:(NSString*)sourcePath toStringsFile:(NSString*)targetPath
 {
-	
+    
 }
 
 - (void)translateUsingStringsFile:(NSString*)file
 {
-	
+    
 }
 
 - (void)selectContentItem:(id)item
 {
-	
+    
 }
 
 - (NSArray*)selectedContentItems
 {
-	return NULL;
+    return NULL;
 }
 
 - (void)selectNextItem
 {
-	
+    
 }
 
 - (void)ensureContent
 {
-	// Ensure that all file content has been loaded (because it will be displayed)
-	
-	FileController *fc;
-	for(fc in mFileControllers) {
-		if(![fc hasBaseModelContent])
-			[[self engine] loadFile:[fc absoluteBaseFilePath] intoFileModel:[fc baseFileModel]];
-		
-		if(![fc hasModelContent])
-			[[self engine] loadFile:[fc absoluteFilePath] intoFileModel:[fc fileModel]];
-	}	
+    // Ensure that all file content has been loaded (because it will be displayed)
+    
+    FileController *fc;
+    for(fc in mFileControllers) {
+        if(![fc hasBaseModelContent])
+            [[self engine] loadFile:[fc absoluteBaseFilePath] intoFileModel:[fc baseFileModel]];
+        
+        if(![fc hasModelContent])
+            [[self engine] loadFile:[fc absoluteFilePath] intoFileModel:[fc fileModel]];
+    }    
 }
 
 - (void)updateContent
 {
-	
+    
 }
 
 #pragma mark -
 
 - (void)registerToPreferences
 {
-	
+    
 }
 
 - (void)unregisterFromPreferences
 {
-	[[PreferencesWC shared] removeObserver:self];
+    [[PreferencesWC shared] removeObserver:self];
 }
 
 #pragma mark -
 
 - (void)pushState
 {
-	
+    
 }
 
 - (void)popState
 {
-	
+    
 }
 
 - (NSString*)windowToolTipRequestedAtPosition:(NSPoint)pos
 {
-	return nil;
+    return nil;
 }
 
 - (IBAction)performDebugAction:(id)sender
 {
-	
+    
 }
 
 @end

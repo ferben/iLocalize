@@ -12,22 +12,22 @@
 @class Console;
 
 @interface ConsoleWC : NSWindowController {
-	id <ProjectProvider>		mProjectProvider;
-	NSInteger                   mDisplayType;
-	
-	IBOutlet NSPopUpButton		*mShowTypeButton;
-	IBOutlet NSTextField		*mDeleteOldDays;
-	
-	IBOutlet NSOutlineView		*mOutlineView;
-	IBOutlet NSTableView		*mOperationTableView;
-	IBOutlet NSTableView		*mLogTableView;
-	IBOutlet NSTextView			*mDetailedTextView;
-	
-	NSMutableArray				*mOperationArray;
-	NSMutableArray				*mLogItemArray;
-	NSMutableDictionary			*mLevelForItemDictionary;
-	
-	BOOL						mHierarchical;
+    id <ProjectProvider>        mProjectProvider;
+    NSInteger                   mDisplayType;
+    
+    IBOutlet NSPopUpButton        *mShowTypeButton;
+    IBOutlet NSTextField        *mDeleteOldDays;
+    
+    IBOutlet NSOutlineView        *mOutlineView;
+    IBOutlet NSTableView        *mOperationTableView;
+    IBOutlet NSTableView        *mLogTableView;
+    IBOutlet NSTextView            *mDetailedTextView;
+    
+    NSMutableArray                *mOperationArray;
+    NSMutableArray                *mLogItemArray;
+    NSMutableDictionary            *mLevelForItemDictionary;
+    
+    BOOL                        mHierarchical;
 }
 
 - (id)initWithProjectProvider:(id<ProjectProvider>)projectProvider;

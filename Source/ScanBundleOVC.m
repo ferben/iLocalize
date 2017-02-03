@@ -15,18 +15,18 @@
 
 - (id)init
 {
-	if((self = [super initWithNibName:@"ScanBundle" bundle:nil])) {
-		pathNodeSelectionView = [[AZPathNodeSelectionView alloc] init];
-	}
-	return self;
+    if((self = [super initWithNibName:@"ScanBundle" bundle:nil])) {
+        pathNodeSelectionView = [[AZPathNodeSelectionView alloc] init];
+    }
+    return self;
 }
 
 
 - (void)willShow
 {
-	pathNodeSelectionView.outlineView = outlineView;
-	pathNodeSelectionView.rootPath = self.node;
-	[pathNodeSelectionView refresh];	
+    pathNodeSelectionView.outlineView = outlineView;
+    pathNodeSelectionView.rootPath = self.node;
+    [pathNodeSelectionView refresh];    
 }
 
 //- (IBAction)toggleLocalizedOnly:(id)sender
@@ -35,7 +35,7 @@
 //        n.localizedPathsOnly = [sender state] == NSOnState;
 //        return YES;
 //    }];
-//	[pathNodeSelectionView refresh];	
+//    [pathNodeSelectionView refresh];    
 //}
 
 @end

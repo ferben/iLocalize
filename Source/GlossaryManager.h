@@ -14,14 +14,14 @@
  Manager of all the glossary folders and glossaries.
  */
 @interface GlossaryManager : NSObject {
-	// Array of IGlossaryFolder
-	NSMutableArray *folders;
-	
-	// The queue used to refresh the glossary asynchronously
-	NSOperationQueue *refreshQueue;
-	
-	// Flag indicating if the background processing is active or not
-	BOOL processing;	
+    // Array of IGlossaryFolder
+    NSMutableArray *folders;
+    
+    // The queue used to refresh the glossary asynchronously
+    NSOperationQueue *refreshQueue;
+    
+    // Flag indicating if the background processing is active or not
+    BOOL processing;    
 }
 
 @property BOOL processing;

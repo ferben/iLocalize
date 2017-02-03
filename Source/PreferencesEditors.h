@@ -12,18 +12,18 @@
 
 @interface PreferencesEditors : PreferencesObject
 {
-	IBOutlet NSTableView		*mEditorsTableView;
-	IBOutlet NSArrayController	*mEditorsController;
+    IBOutlet NSTableView        *mEditorsTableView;
+    IBOutlet NSArrayController    *mEditorsController;
     
     IBOutlet NSArrayController  *mBuiltinTypesController;
     IBOutlet NSArrayController  *mBuiltinExtensionsController;
     IBOutlet NSTableView        *mBuiltinExtensionsTableView;
-	
-	IBOutlet NSPanel			*mExternalPanel;
-	IBOutlet NSTextField		*mExternalExtensionField;
-	IBOutlet NSTextField		*mExternalAppField;
-	
-	NSMutableDictionary			*mEditingEditor;
+    
+    IBOutlet NSPanel            *mExternalPanel;
+    IBOutlet NSTextField        *mExternalExtensionField;
+    IBOutlet NSTextField        *mExternalAppField;
+    
+    NSMutableDictionary            *mEditingEditor;
 }
 
 + (id)shared;

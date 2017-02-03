@@ -25,19 +25,19 @@
 
 + (AZPathNode *)rootNodeWithPath:(NSString*)path
 {
-	AZPathNode *node = [[AZPathNode alloc] init];
+    AZPathNode *node = [[AZPathNode alloc] init];
     node.rootPath = path;
     node.name = [path lastPathComponent];
-	return node;
+    return node;
 }
 
 - (id) init
 {
-	self = [super init];
-	
+    self = [super init];
+    
     if (self != nil)
     {
-		_children = [[NSMutableArray alloc] init];
+        _children = [[NSMutableArray alloc] init];
         filteredChildren = nil;
         displayableChildren = nil;
         self.containsLanguages = NO;
@@ -47,8 +47,8 @@
         languagePlaceholderNode = NO;
         languagePlaceholderNodes = nil;
         childrenSortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES selector:@selector(caseInsensitiveCompare:)];
-	}
-	
+    }
+    
     return self;
 }
 
@@ -59,36 +59,36 @@
 
     if ([self children].count > 0)
     {
-		// This node has children. Propagate the state to all the children.
-		[self visitChildren:^BOOL(AZPathNode *child)
+        // This node has children. Propagate the state to all the children.
+        [self visitChildren:^BOOL(AZPathNode *child)
         {
-			child.state = state;
+            child.state = state;
             return YES;
-		}];
-	}
-	
-	// Update the state of the parent of the node
-	[self visitParent:^(AZPathNode *pnode)
+        }];
+    }
+    
+    // Update the state of the parent of the node
+    [self visitParent:^(AZPathNode *pnode)
     {
-		// Set the state of the parent depending on the states of its direct children.
-		
-		NSInteger parentState = NSMixedState;
+        // Set the state of the parent depending on the states of its direct children.
         
-		for (AZPathNode *child in [pnode children])
+        NSInteger parentState = NSMixedState;
+        
+        for (AZPathNode *child in [pnode children])
         {
-			if (parentState == NSMixedState)
+            if (parentState == NSMixedState)
             {
-				parentState = child.state;
-			}
+                parentState = child.state;
+            }
             else if (parentState != child.state)
             {
-				parentState = NSMixedState;
-				break;
-			}			
-		}
+                parentState = NSMixedState;
+                break;
+            }            
+        }
         
-		pnode.state = parentState;
-	}];	
+        pnode.state = parentState;
+    }];    
 }
 
 - (void)setState:(NSInteger)inState
@@ -103,7 +103,7 @@
         }        
     }    
     
-    state = inState;	
+    state = inState;    
 }
 
 - (NSInteger)state
@@ -125,31 +125,31 @@
 // of this node and all its parent.
 - (void)pathComponents:(NSMutableArray*)components
 {
-	[parent pathComponents:components];
-	if(self.name) {
-		[components addObject:self.name];		
-	}
+    [parent pathComponents:components];
+    if(self.name) {
+        [components addObject:self.name];        
+    }
 }
 
 - (NSString*)relativePath
 {
-	NSMutableArray *components = [NSMutableArray array];
-	[self pathComponents:components];
-	return [NSString pathWithComponents:components];
+    NSMutableArray *components = [NSMutableArray array];
+    [self pathComponents:components];
+    return [NSString pathWithComponents:components];
 }
 
 - (NSString*)absolutePath
 {
-	if(self.parent && !self.rootPath) {
+    if(self.parent && !self.rootPath) {
         // Ask the parent for the rootpath if it is not set already in this node:
         // A situation can happen when this node is a root node for the path structure
         // but it is nevertheless added to a parent node (e.g. the preview when rebasing
         // a project where the root nodes are the operation and under each operation there is
         // the tree structure).
-		return [[parent absolutePath] stringByAppendingPathComponent:name];
-	} else {
+        return [[parent absolutePath] stringByAppendingPathComponent:name];
+    } else {
         return self.rootPath;
-	}
+    }
 }
 
 // Invalidate all the filters
@@ -164,52 +164,52 @@
 {
     node.parent = self;
     [_children addObject:node];        
-	[_children sortUsingDescriptors:@[childrenSortDescriptor]];
+    [_children sortUsingDescriptors:@[childrenSortDescriptor]];
     [self invalidateFilters];
 }
 
 // Internal method
 - (AZPathNode*)addNewChild:(NSMutableArray*)components
 {
-	if([components count] > 0) {
+    if([components count] > 0) {
         // Try to add the component to one of its children if matching
-		NSString *childComponent = [components firstObject];
-		for(AZPathNode *child in _children) {
-			if([child.name isEqualToString:childComponent]) {
-				return [child addPathComponents:components];
-			}
-		}
+        NSString *childComponent = [components firstObject];
+        for(AZPathNode *child in _children) {
+            if([child.name isEqualToString:childComponent]) {
+                return [child addPathComponents:components];
+            }
+        }
 
         // No children matching, add it as a child
-		AZPathNode *child = [[AZPathNode alloc] init];
+        AZPathNode *child = [[AZPathNode alloc] init];
         child.name = childComponent;
         
         [self addNode:child];
-		AZPathNode *leafChild = [child addPathComponents:components];
+        AZPathNode *leafChild = [child addPathComponents:components];
         if(leafChild == nil) {
             leafChild = child;
         }
         return leafChild;
-	} else {
+    } else {
         return nil;
     }
 }
 
 - (AZPathNode*)addPathComponents:(NSMutableArray*)components
 {
-	NSString *c = [components firstObject];
+    NSString *c = [components firstObject];
     if(c == nil) return nil;
 
-	if(self.name == nil) {
-		[components removeObjectAtIndex:0];
-		self.name = c;
-		return [self addPathComponents:components];
-	} else if([c isEqualToString:name]) {
-		[components removeObjectAtIndex:0];
-		return [self addNewChild:components];
-	} else {
-		return [self addNewChild:components];
-	}
+    if(self.name == nil) {
+        [components removeObjectAtIndex:0];
+        self.name = c;
+        return [self addPathComponents:components];
+    } else if([c isEqualToString:name]) {
+        [components removeObjectAtIndex:0];
+        return [self addNewChild:components];
+    } else {
+        return [self addNewChild:components];
+    }
 }
 
 - (AZPathNode*)addRelativePath:(NSString *)relativePath
@@ -218,14 +218,14 @@
         [Logger throwExceptionWithReason:@"Cannot add a path to a non-root node"];
     }
     
-	NSMutableArray *components = [NSMutableArray arrayWithArray:[relativePath pathComponents]];
+    NSMutableArray *components = [NSMutableArray arrayWithArray:[relativePath pathComponents]];
     if([[components firstObject] isEqualToString:@"/"]) {
         [components removeFirstObject];
     }
-	if([[components lastObject] isEqualToString:@"/"] && components.count > 1) {
-		[components removeObjectAtIndex:components.count-1];
-	}
-	return [self addPathComponents:components];
+    if([[components lastObject] isEqualToString:@"/"] && components.count > 1) {
+        [components removeObjectAtIndex:components.count-1];
+    }
+    return [self addPathComponents:components];
 }
 
 - (void)beginModifications
@@ -437,12 +437,12 @@
 
 - (NSString*)description
 {
-	return [NSString stringWithFormat:@"%@ - %ld children", self.name, _children.count];
+    return [NSString stringWithFormat:@"%@ - %ld children", self.name, _children.count];
 }
 
 - (BOOL)isEqual:(id)object
 {
-	return [[self absolutePath] isEqualToPath:[object absolutePath]];
+    return [[self absolutePath] isEqualToPath:[object absolutePath]];
 }
 
 - (void)visitAll:(BOOL(^)(AZPathNode *node))block
@@ -458,31 +458,31 @@
 
 - (void)visitChildren:(BOOL(^)(AZPathNode *node))block
 {
-	for(AZPathNode *c in [self children]) {
-		if(block(c)) {
+    for(AZPathNode *c in [self children]) {
+        if(block(c)) {
             [c visitChildren:block];            
         }
-	}
+    }
 }
 
 - (void)visitParent:(void(^)(AZPathNode *node))block
 {
-	AZPathNode *p = self.parent;
-	if(p) {
-		block(p);
-		[p visitParent:block];
-	}
+    AZPathNode *p = self.parent;
+    if(p) {
+        block(p);
+        [p visitParent:block];
+    }
 }
 
 - (void)visitLeaves:(void(^)(AZPathNode *node))block
 {
-	if([self children].count == 0) {
-		block(self);
-	} else {
-		for(AZPathNode *c in [self children]) {
-			[c visitLeaves:block];
-		}		
-	}
+    if([self children].count == 0) {
+        block(self);
+    } else {
+        for(AZPathNode *c in [self children]) {
+            [c visitLeaves:block];
+        }        
+    }
 
 }
 

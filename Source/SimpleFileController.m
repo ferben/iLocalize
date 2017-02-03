@@ -15,36 +15,36 @@
 
 - (id) init
 {
-	self = [super init];
-	if (self != nil) {
-		strings = [[NSMutableArray alloc] init];
-	}
-	return self;
+    self = [super init];
+    if (self != nil) {
+        strings = [[NSMutableArray alloc] init];
+    }
+    return self;
 }
 
 - (void)addString:(id<StringControllerProtocol>)string
 {
-	[strings addObject:string];
+    [strings addObject:string];
 }
 
 - (NSArray*)filteredStringControllers
 {
-	return strings;
+    return strings;
 }
 
 - (NSArray*)stringControllers
 {
-	return strings;
+    return strings;
 }
 
 - (NSString*)filename
 {
-	return [path lastPathComponent];
+    return [path lastPathComponent];
 }
 
 - (NSString*)relativeFilePath
 {
-	return path;
+    return path;
 }
 
 @end

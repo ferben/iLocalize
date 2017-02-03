@@ -7,8 +7,8 @@
 //
 
 @interface RecentDocuments : NSObject<NSMenuDelegate> {
-	NSMutableArray *recentObjects;
-	BOOL dirtyMenu;
+    NSMutableArray *recentObjects;
+    BOOL dirtyMenu;
 }
 
 @property (strong) NSString *identifier;

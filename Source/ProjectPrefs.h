@@ -9,27 +9,27 @@
 @protocol ProjectProvider;
 
 @interface ProjectPrefs : NSObject <NSCoding> {
-	NSString *selectedLanguage;
-	NSString *selectedFile;
-	NSArray *labels;
-	NSRect windowPosition;
-	NSDictionary *interfacePrefs;
-	NSArray *filesColumnInfo;
-	NSDictionary *updateBundlePrefs;
-	NSDictionary *exportSettings;
-	NSArray *exportSettingsPresets;
-	NSDictionary *exportXLIFFSettings;
-	NSDictionary *importXLIFFSettings;
-	
-	// array of files identifying each filter. This array is used to keep track of the ordering of the filters per project
-	NSArray *filterFiles;
-	
-	BOOL showTextZone;
-	BOOL showKeyColumn;
-	BOOL showInvisibleCharacters;
-	BOOL showLocalFiles;
-	BOOL showStatusBar;
-	BOOL showStructureView;
+    NSString *selectedLanguage;
+    NSString *selectedFile;
+    NSArray *labels;
+    NSRect windowPosition;
+    NSDictionary *interfacePrefs;
+    NSArray *filesColumnInfo;
+    NSDictionary *updateBundlePrefs;
+    NSDictionary *exportSettings;
+    NSArray *exportSettingsPresets;
+    NSDictionary *exportXLIFFSettings;
+    NSDictionary *importXLIFFSettings;
+    
+    // array of files identifying each filter. This array is used to keep track of the ordering of the filters per project
+    NSArray *filterFiles;
+    
+    BOOL showTextZone;
+    BOOL showKeyColumn;
+    BOOL showInvisibleCharacters;
+    BOOL showLocalFiles;
+    BOOL showStatusBar;
+    BOOL showStructureView;
 }
 
 @property (weak) id<ProjectProvider> projectProvider;

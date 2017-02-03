@@ -12,18 +12,18 @@
 @class NewProjectSettings;
 
 @interface NewProjectGeneralOVC : OperationViewController<PresetsManagerDelegate> {
-	IBOutlet NSPopUpButton	*mPresetPopUp;
-	
-	IBOutlet NSPathControl	*projectFolderPathControl;
-	IBOutlet NSPathControl	*projectSourcePathControl;
-	
-	IBOutlet NSTextField	*projectNameField;
-	
-	IBOutlet NSTextField	*projectInfoField;
-	
-	NewProjectSettings *settings;
+    IBOutlet NSPopUpButton    *mPresetPopUp;
+    
+    IBOutlet NSPathControl    *projectFolderPathControl;
+    IBOutlet NSPathControl    *projectSourcePathControl;
+    
+    IBOutlet NSTextField    *projectNameField;
+    
+    IBOutlet NSTextField    *projectInfoField;
+    
+    NewProjectSettings *settings;
 
-	PresetsManager *presetsManager;
+    PresetsManager *presetsManager;
 }
 
 @property (strong) NewProjectSettings *settings;

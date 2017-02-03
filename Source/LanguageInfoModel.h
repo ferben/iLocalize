@@ -11,7 +11,7 @@
 //
 
 @interface LanguageInfoModel : NSObject {
-	NSString *_identifier;
+    NSString *_identifier;
 }
 
 @property (strong) NSString *identifier;

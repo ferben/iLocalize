@@ -9,11 +9,11 @@
 @class FileModel;
 
 @interface LanguageModel : NSObject <NSCoding> {
-	NSString			*mLanguage;
-	NSMutableArray		*mFileModelArray;
-	
-	// volatile
-	NSMutableDictionary *mPath2Model;
+    NSString            *mLanguage;
+    NSMutableArray        *mFileModelArray;
+    
+    // volatile
+    NSMutableDictionary *mPath2Model;
 }
 
 @property (nonatomic, strong) NSArray *translateUsingGlossariesSelectedStates;

@@ -9,8 +9,8 @@
 @class ProjectWC;
 
 @interface ProjectStatusBarController : NSViewController {
-	IBOutlet NSTextField *leftSideTextField;
-	IBOutlet NSTextField *rightSideTextField;
+    IBOutlet NSTextField *leftSideTextField;
+    IBOutlet NSTextField *rightSideTextField;
 }
 @property (assign) ProjectWC *projectWC;
 

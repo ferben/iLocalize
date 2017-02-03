@@ -94,7 +94,7 @@
     XCTAssertEqual(parser.error.code, AZXMLParserErrorCodeEndOfText, @"End of text expected");
 }
 
-// [10]   	AttValue	   ::=   	'"' ([^<&"] | Reference)* '"'
+// [10]       AttValue       ::=       '"' ([^<&"] | Reference)* '"'
 //                                      |  "'" ([^<&'] | Reference)* "'"
 - (void)testAttValue {
     {
@@ -160,7 +160,7 @@
     }
 }
 
-// Name	   ::=   	 NameStartChar (NameChar)*
+// Name       ::=        NameStartChar (NameChar)*
 - (void)testName {
     {
         AZXMLParser *parser = [AZXMLParser parserWithText:@"a123139"];

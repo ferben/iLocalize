@@ -11,35 +11,35 @@
 #import "XMLExporter.h"
 
 @interface SEIFormat : NSObject {
-	/**
-	 Format ID.
-	 */
-	SEI_FORMAT format;
-	
-	/**
-	 Display name of the format. E.g. ILG (iLocalize Glossary)
-	 */
-	NSString *displayName;
+    /**
+     Format ID.
+     */
+    SEI_FORMAT format;
+    
+    /**
+     Display name of the format. E.g. ILG (iLocalize Glossary)
+     */
+    NSString *displayName;
 
-	/**
-	 Name of the importer class.
-	 */
-	NSString *importerClassName;
+    /**
+     Name of the importer class.
+     */
+    NSString *importerClassName;
 
-	/**
-	 Name of the exporter class.
-	 */
-	NSString *exporterClassName;
-	
-	/**
-	 Array of extensions that identifies this format.
-	 */
-	NSArray *readableExtensions;
-	
-	/**
-	 Extension to use when writing this format to a file.
-	 */
-	NSString *writableExtension;
+    /**
+     Name of the exporter class.
+     */
+    NSString *exporterClassName;
+    
+    /**
+     Array of extensions that identifies this format.
+     */
+    NSArray *readableExtensions;
+    
+    /**
+     Extension to use when writing this format to a file.
+     */
+    NSString *writableExtension;
 }
 
 @property SEI_FORMAT format;

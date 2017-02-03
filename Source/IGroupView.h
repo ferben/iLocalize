@@ -10,9 +10,9 @@
 
 
 @interface IGroupView : NSView {
-	IGroup *group;
-	NSTrackingArea *trackingArea;
-	int selectedElementIndex;
+    IGroup *group;
+    NSTrackingArea *trackingArea;
+    int selectedElementIndex;
 }
 @property (strong) IGroup *group;
 @end

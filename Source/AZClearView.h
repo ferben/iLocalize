@@ -7,7 +7,7 @@
 //
 
 @interface AZClearView : NSView {
-	CGFloat yLine;
+    CGFloat yLine;
 }
 /**
  The number of pixel from the top of the bounds.

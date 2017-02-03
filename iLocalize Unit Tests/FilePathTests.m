@@ -111,16 +111,16 @@
 
 - (void)testFilterBundleOperation
 {
-	ScanBundleOp *op = [[ScanBundleOp alloc] init];
-	op.path = [self pathForResource:@"Contents/FilterBundle.app"];
-	[op execute];
+    ScanBundleOp *op = [[ScanBundleOp alloc] init];
+    op.path = [self pathForResource:@"Contents/FilterBundle.app"];
+    [op execute];
     
     [op.node setUseLanguagePlaceholder:NO]; // Because ScanBundleOp set it to YES
     
     /*
-	 Expected hierarchy:
-	 FilterBundle.app
-	 +- Contents
+     Expected hierarchy:
+     FilterBundle.app
+     +- Contents
      ...+- Info.plist
      ...+- MacOS
      ......+- MyApp
@@ -134,7 +134,7 @@
      ............+- InfoPlist.strings
      ............+- Localizable.strings
      .........+- Helper.strings
-	 */
+     */
     
     AZPathNode *root = op.node;
     [self assertNode:root location:nil name:@"FilterBundle.app" childrenCount:1 containsLanguages:YES language:nil];

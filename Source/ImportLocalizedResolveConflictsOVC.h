@@ -12,9 +12,9 @@
     IBOutlet NSTableView        *mTableView;
     IBOutlet NSArrayController  *mPreviewController;
     IBOutlet NSPathControl *sourcePathControl;
-	IBOutlet NSPathControl *targetPathControl;
-	
-	// Array of FileConflictItem objects;
+    IBOutlet NSPathControl *targetPathControl;
+    
+    // Array of FileConflictItem objects;
     NSArray     *fileConflictItems;
     NSString    *mProjectPath;
 }

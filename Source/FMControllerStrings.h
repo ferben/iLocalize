@@ -10,20 +10,20 @@
 
 @interface FMControllerStrings : FMController
 {
-	NSMutableArray	*mStringControllers;
-	
-	NSMutableArray	*mCachedVisibleStringControllers;	// cache only
-	NSMutableDictionary *mCachedStringControllers; // cache only
-	
-	// Statistics (not saved)
+    NSMutableArray    *mStringControllers;
+    
+    NSMutableArray    *mCachedVisibleStringControllers;    // cache only
+    NSMutableDictionary *mCachedStringControllers; // cache only
+    
+    // Statistics (not saved)
     NSUInteger   mNumberOfStrings;
     NSUInteger   mNumberOfTranslatedStrings;
-	NSUInteger   mNumberOfNonTranslatedStrings;
-	NSUInteger   mNumberOfToCheckStrings;	
-	NSUInteger   mNumberOfInvariantStrings;	
-	NSUInteger   mNumberOfBaseModifiedStrings;
+    NSUInteger   mNumberOfNonTranslatedStrings;
+    NSUInteger   mNumberOfToCheckStrings;    
+    NSUInteger   mNumberOfInvariantStrings;    
+    NSUInteger   mNumberOfBaseModifiedStrings;
     NSUInteger   mNumberOfLockedStrings;
-	NSUInteger   mNumberOfAutoTranslatedStrings;
-	int				mNumberOfAutoInvariantStrings;
+    NSUInteger   mNumberOfAutoTranslatedStrings;
+    int                mNumberOfAutoInvariantStrings;
 }
 @end

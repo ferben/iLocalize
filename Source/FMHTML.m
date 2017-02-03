@@ -17,38 +17,38 @@
 
 - (BOOL)builtIn
 {
-	return YES;
+    return YES;
 }
 
 - (NSString*)name
 {
-	return NSLocalizedStringFromTable(@"HTML", @"LocalizableEditors", @"File Editor HTML");
+    return NSLocalizedStringFromTable(@"HTML", @"LocalizableEditors", @"File Editor HTML");
 }
 
 - (NSImage*)fileImage
 {
-	return [NSImage imageNamed:@"FileIconHTML"];
+    return [NSImage imageNamed:@"FileIconHTML"];
 }
 
 - (Class)editorClass
 {
-	return NSClassFromString(@"FMEditorHTML");
+    return NSClassFromString(@"FMEditorHTML");
 }
 
 - (Class)engineClass
 {
-	return [FMEngineHTML class];
+    return [FMEngineHTML class];
 }
 
 - (Class)controllerClass
 {
-	return [FMControllerHTML class];
+    return [FMControllerHTML class];
 }
 
 - (void)load
 {
-	[[self manager] registerFileModule:self forFileExtension:@"htm"];
-	[[self manager] registerFileModule:self forFileExtension:@"html"];
+    [[self manager] registerFileModule:self forFileExtension:@"htm"];
+    [[self manager] registerFileModule:self forFileExtension:@"html"];
 }
 
 @end

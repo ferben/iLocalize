@@ -19,12 +19,12 @@
     AZPathNode *node;
     NSArray *files;
     
-	NSMutableArray *mProblems;
-	NSMutableArray *mOutsideNibs;
-	NSMutableArray *mCompiledNibs;
-	NSMutableArray *mDuplicateFiles;
-	NSMutableArray *mReadOnlyFiles;
-	NSMutableDictionary *mVisitedLanguages;
+    NSMutableArray *mProblems;
+    NSMutableArray *mOutsideNibs;
+    NSMutableArray *mCompiledNibs;
+    NSMutableArray *mDuplicateFiles;
+    NSMutableArray *mReadOnlyFiles;
+    NSMutableDictionary *mVisitedLanguages;
 }
 
 /**

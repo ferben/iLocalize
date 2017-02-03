@@ -10,7 +10,7 @@
 
 @interface FileModelAttributes : NSObject <NSCoding>
 {
-	NSMutableDictionary		*mAttributes;
+    NSMutableDictionary        *mAttributes;
 }
 
 - (void)setRelativeFilePath:(NSString *)file;

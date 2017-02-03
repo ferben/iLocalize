@@ -14,33 +14,33 @@
 
 - (BOOL)builtIn
 {
-	return YES;
+    return YES;
 }
 
 - (NSString*)name
 {
-	return NSLocalizedStringFromTable(@"RT/RTFD", @"LocalizableEditors", @"File Editor RTF");
+    return NSLocalizedStringFromTable(@"RT/RTFD", @"LocalizableEditors", @"File Editor RTF");
 }
 
 - (NSImage*)fileImage
 {
-	return [NSImage imageNamed:@"FileIconRTF"];
+    return [NSImage imageNamed:@"FileIconRTF"];
 }
 
 - (Class)editorClass
 {
-	return NSClassFromString(@"FMEditorRTF");
+    return NSClassFromString(@"FMEditorRTF");
 }
 
 - (Class)engineClass
 {
-	return [FMEngineRTF class];
+    return [FMEngineRTF class];
 }
 
 - (void)load
 {
-	[[self manager] registerFileModule:self forFileExtension:@"rtf"];
-	[[self manager] registerFileModule:self forFileExtension:@"rtfd"];
+    [[self manager] registerFileModule:self forFileExtension:@"rtf"];
+    [[self manager] registerFileModule:self forFileExtension:@"rtfd"];
 }
 
 @end

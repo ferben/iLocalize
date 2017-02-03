@@ -21,7 +21,7 @@
 
 - (BOOL)assertLaunch
 {
-	if (![[[self projectProvider] sourceApplicationPath] isPathExisting])
+    if (![[[self projectProvider] sourceApplicationPath] isPathExisting])
     {
         // compose alert
         NSAlert *alert = [NSAlert new];
@@ -32,29 +32,29 @@
         [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextOK",@"Alerts",nil)];  // 1st button
         
         // show alert
-		[alert runModal];
+        [alert runModal];
         
-		return NO;
-	}
+        return NO;
+    }
     else
     {
-		return YES;		
-	}
+        return YES;        
+    }
 }
 
 - (void)launch
 {
-	if (![self assertLaunch])
+    if (![self assertLaunch])
         return;
-	
-	NSString *path = [[[self projectProvider] projectModel] projectSourceFilePath];
     
-	if ([path isPathApplication])
+    NSString *path = [[[self projectProvider] projectModel] projectSourceFilePath];
+    
+    if ([path isPathApplication])
     {
-		[AppTool launchApplication:[[self projectProvider] sourceApplicationPath] 
-						  language:[[self selectedLanguageController] language]
-					  bringToFront:YES];
-	}
+        [AppTool launchApplication:[[self projectProvider] sourceApplicationPath] 
+                          language:[[self selectedLanguageController] language]
+                      bringToFront:YES];
+    }
     else
     {
         // compose alert
@@ -67,7 +67,7 @@
         
         // show alert
         [alert runModal];
-	}
+    }
 
     [self close];
 }

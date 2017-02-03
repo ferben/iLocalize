@@ -13,7 +13,7 @@
 
 - (FileController*)fileController
 {
-	return [[self objectValue] nonretainedObjectValue];
+    return [[self objectValue] nonretainedObjectValue];
 }
 
 @end

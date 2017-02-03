@@ -30,10 +30,10 @@
 
 - (id)init
 {
-	if (self = [super init])
+    if (self = [super init])
     {
-	}
-	
+    }
+    
     return self;
 }
 
@@ -42,17 +42,17 @@
 
 - (IBAction)smartQuoteSubstitution:(id)sender
 {
-	[PreferencesLanguages setQuoteSubstitutionEnabled:![PreferencesLanguages quoteSubstitutionEnabled]];
+    [PreferencesLanguages setQuoteSubstitutionEnabled:![PreferencesLanguages quoteSubstitutionEnabled]];
 }
-	
+    
 - (IBAction)lockString:(id)sender
 {
-	BOOL lock = [(StringController *)[[[self projectWC] selectedStringControllers] firstObject] lock];
-	
+    BOOL lock = [(StringController *)[[[self projectWC] selectedStringControllers] firstObject] lock];
+    
     for (StringController *sc in [[self projectWC] selectedStringControllers])
     {
-		[sc setLock:!lock];
-	}
+        [sc setLock:!lock];
+    }
     
     FMEditor *editor = [[self projectWC] currentFileEditor];
     
@@ -65,16 +65,16 @@
 
 - (void)performEncodingConversion
 {
-	[[EncodingOperation operationWithProjectProvider:[self projectDocument]] convertFileControllers:[self.projectWC selectedFileControllers]
-																						 toEncoding:mWillConvertUsingEncoding
-																							 reload:mWillConvertUsingReload];
+    [[EncodingOperation operationWithProjectProvider:[self projectDocument]] convertFileControllers:[self.projectWC selectedFileControllers]
+                                                                                         toEncoding:mWillConvertUsingEncoding
+                                                                                             reload:mWillConvertUsingReload];
 }
 
 - (IBAction)fileEncodingMenuAction:(id)sender
 {
-	mWillConvertUsingEncoding = [(NSMenuItem*)sender representedObject];
-	NSString *encodingName = [mWillConvertUsingEncoding encodingName];
-	
+    mWillConvertUsingEncoding = [(NSMenuItem*)sender representedObject];
+    NSString *encodingName = [mWillConvertUsingEncoding encodingName];
+    
     // compose alert
     NSAlert *alert = [NSAlert new];
     [alert setAlertStyle:NSWarningAlertStyle];
@@ -102,7 +102,7 @@
  */
 - (IBAction)searchProject:(id)sender
 {
-	[[self projectWC] selectSearchField];
+    [[self projectWC] selectSearchField];
 }
 
 /**
@@ -110,7 +110,7 @@
  */
 - (IBAction)search:(id)sender
 {
-	[[self projectWC] doSearch];
+    [[self projectWC] doSearch];
 }
 
 #pragma mark -
@@ -119,38 +119,38 @@
 - (BOOL)validateMenuItem:(NSMenuItem*)anItem
 {
     SEL action = [anItem action];
-	BOOL isFilesSelected = [[self.projectWC selectedFileControllers] count] > 0;
-	
-	if (action == @selector(smartQuoteSubstitution:))
+    BOOL isFilesSelected = [[self.projectWC selectedFileControllers] count] > 0;
+    
+    if (action == @selector(smartQuoteSubstitution:))
     {
-		[anItem setState:[PreferencesLanguages quoteSubstitutionEnabled]?NSOnState:NSOffState];
-		return YES;
-	}
+        [anItem setState:[PreferencesLanguages quoteSubstitutionEnabled]?NSOnState:NSOffState];
+        return YES;
+    }
 
-	if (action == @selector(lockString:))
+    if (action == @selector(lockString:))
     {
-		BOOL lock = [(StringController *)[[[self projectWC] selectedStringControllers] firstObject] lock];
-		[anItem setTitle:lock?NSLocalizedString(@"Unlock", nil):NSLocalizedString(@"Lock", nil)];
+        BOOL lock = [(StringController *)[[[self projectWC] selectedStringControllers] firstObject] lock];
+        [anItem setTitle:lock?NSLocalizedString(@"Unlock", nil):NSLocalizedString(@"Lock", nil)];
         
-		return [[[self projectWC] selectedStringControllers] count] > 0;
-	}
-	
-	if (action == @selector(fileEncodingMenuAction:))
+        return [[[self projectWC] selectedStringControllers] count] > 0;
+    }
+    
+    if (action == @selector(fileEncodingMenuAction:))
     {
-		StringEncoding *se = [anItem representedObject];
-		[anItem setState:[[self projectFiles] encodingStateForSelectedFilesWithEncoding:se]];
-		
-		if ([[self projectFiles] selectedFilesSupportEncoding])
+        StringEncoding *se = [anItem representedObject];
+        [anItem setState:[[self projectFiles] encodingStateForSelectedFilesWithEncoding:se]];
+        
+        if ([[self projectFiles] selectedFilesSupportEncoding])
         {
-			return isFilesSelected;
-		}
+            return isFilesSelected;
+        }
         else
         {
-			return NO;
-		}
-	}
-	
-	return YES;		
+            return NO;
+        }
+    }
+    
+    return YES;        
 }
 
 @end

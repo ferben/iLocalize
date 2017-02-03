@@ -28,9 +28,9 @@
 #import "Constants.h"
 #import "SafeStatus.h"
 
-#define STOPPED		0
-#define RUNNING		1
-#define STOP		2
+#define STOPPED        0
+#define RUNNING        1
+#define STOP        2
 
 @implementation BackgroundUpdater
 
@@ -44,56 +44,56 @@ static BackgroundUpdater *_shared = nil;
             _shared = [[BackgroundUpdater alloc] init];        
     }
     
-	return _shared;
+    return _shared;
 }
 
 - (id)init
 {
-	if (self = [super init])
+    if (self = [super init])
     {
-		mLock = [[NSLock alloc] init];
-		mSafeStatus = [[SafeStatus alloc] init];
-		[mSafeStatus setStatus:STOPPED];
+        mLock = [[NSLock alloc] init];
+        mSafeStatus = [[SafeStatus alloc] init];
+        [mSafeStatus setStatus:STOPPED];
 
-		[[NSNotificationCenter defaultCenter] addObserver:self
-												 selector:@selector(projectProviderWillClose:)
-													 name:ILNotificationProjectProviderWillClose
-												   object:nil];		
-	}
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(projectProviderWillClose:)
+                                                     name:ILNotificationProjectProviderWillClose
+                                                   object:nil];        
+    }
     
-	return self;
+    return self;
 }
 
 - (void)dealloc
 {
-	[[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)projectProviderWillClose:(NSNotification*)notif
 {
-	[self stopAndWaitForCompletion];
+    [self stopAndWaitForCompletion];
 }
 
 - (void)performUpdateWithProjectProvider:(id<ProjectProvider>)projectProvider
 {
     NSMutableArray *fcToUpdate = [NSMutableArray array];
     
-	for (LanguageController *languageController in [[projectProvider projectController] languageControllers])
+    for (LanguageController *languageController in [[projectProvider projectController] languageControllers])
     {
-		if ([mSafeStatus status] == STOP)
+        if ([mSafeStatus status] == STOP)
             break;
-		
-		for (FileController *fileController in [languageController fileControllers])
+        
+        for (FileController *fileController in [languageController fileControllers])
         {
-			if ([mSafeStatus status] == STOP)
+            if ([mSafeStatus status] == STOP)
                 break;
-			
+            
             if ([fileController needsToUpdateStatus])
             {
                 [fcToUpdate addObject:fileController];
             }
-		}
-	}
+        }
+    }
 
     if (fcToUpdate.count > 0)
     {
@@ -108,77 +108,77 @@ static BackgroundUpdater *_shared = nil;
 
 - (void)updateAllProjects
 {
-	for (NSWindow *window in [NSApp windows])
+    for (NSWindow *window in [NSApp windows])
     {
-		id controller = [window windowController];
+        id controller = [window windowController];
         
-		if ([controller isKindOfClass:[ProjectWC class]])
+        if ([controller isKindOfClass:[ProjectWC class]])
         {
-			[self performUpdateWithProjectProvider:[controller projectDocument]];
-		}
-		
-		if ([mSafeStatus status] == STOP)
-			break;
-	}	
+            [self performUpdateWithProjectProvider:[controller projectDocument]];
+        }
+        
+        if ([mSafeStatus status] == STOP)
+            break;
+    }    
 }
 
 - (void)updateGlossaryPaths
 {
-	[[GlossaryManager sharedInstance] reload];
+    [[GlossaryManager sharedInstance] reload];
 }
 
 #pragma mark -
 
 - (void)performUpdate
-{	
-	// Do not execute the background more than one at a time
-	if (![mLock tryLock])
-		return;
-			
-	@try
+{    
+    // Do not execute the background more than one at a time
+    if (![mLock tryLock])
+        return;
+            
+    @try
     {
-		[mSafeStatus waitForStatus:STOPPED];
-		[mSafeStatus setStatus:RUNNING];
+        [mSafeStatus waitForStatus:STOPPED];
+        [mSafeStatus setStatus:RUNNING];
 
-		[self updateAllProjects];
-		[self updateGlossaryPaths];
-	}
-	@catch(id exception)
+        [self updateAllProjects];
+        [self updateGlossaryPaths];
+    }
+    @catch(id exception)
     {
-		[exception printStackTrace];
-		NSLog(@"[BackgroundUpdater] Exception while performing background update: %@", exception);		
-	}
-	@finally
+        [exception printStackTrace];
+        NSLog(@"[BackgroundUpdater] Exception while performing background update: %@", exception);        
+    }
+    @finally
     {
-		[mSafeStatus setStatus:STOPPED];
-		[mLock unlock];		
-	}
+        [mSafeStatus setStatus:STOPPED];
+        [mLock unlock];        
+    }
 }
 
 - (BOOL)tryLockFor:(NSTimeInterval)seconds
 {
-	return [mLock lockBeforeDate:[NSDate dateWithTimeIntervalSinceNow:seconds]];
+    return [mLock lockBeforeDate:[NSDate dateWithTimeIntervalSinceNow:seconds]];
 }
 
 - (void)lock
 {
-	[mLock lock];
+    [mLock lock];
 }
 
 - (void)unlock
 {
-	[mLock unlock];
+    [mLock unlock];
 }
 
 - (void)stopAndWaitForCompletion
 {
-	if ([mSafeStatus setStatus:STOP ifStatusEquals:RUNNING])
+    if ([mSafeStatus setStatus:STOP ifStatusEquals:RUNNING])
     {
-		while ([mSafeStatus status] != STOPPED)
+        while ([mSafeStatus status] != STOPPED)
         {
-			[[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.01]];
-		}
-	}
+            [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.01]];
+        }
+    }
 }
 
 @end

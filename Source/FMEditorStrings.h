@@ -15,45 +15,45 @@
 @class AZClearView;
 
 @interface FMEditorStrings : FMEditor<NSTextViewDelegate, NSTableViewDelegate, TextViewCustomDelegate, AZTableViewDelegate> {
-	IBOutlet NSView					*mBaseTableView;
-	IBOutlet NSView					*mLocalizedTableView;
-	
-	IBOutlet NSView					*mEmptyView;
-	IBOutlet NSArrayController		*mStringsController;
-	
-	IBOutlet TableViewCustom		*mBaseStringsTableView;
-	IBOutlet TableViewCustom		*mLocalizedStringsTableView;
-				
-	IBOutlet NSMenu					*mTableViewContextualMenu;
-	IBOutlet NSMenu					*mTextViewContextualMenu;
-	
-	IBOutlet NSMenuItem				*mLabelsMenuItem;
-	IBOutlet NSMenu					*mTableCornerMenu;
+    IBOutlet NSView                    *mBaseTableView;
+    IBOutlet NSView                    *mLocalizedTableView;
+    
+    IBOutlet NSView                    *mEmptyView;
+    IBOutlet NSArrayController        *mStringsController;
+    
+    IBOutlet TableViewCustom        *mBaseStringsTableView;
+    IBOutlet TableViewCustom        *mLocalizedStringsTableView;
+                
+    IBOutlet NSMenu                    *mTableViewContextualMenu;
+    IBOutlet NSMenu                    *mTextViewContextualMenu;
+    
+    IBOutlet NSMenuItem                *mLabelsMenuItem;
+    IBOutlet NSMenu                    *mTableCornerMenu;
 
-	// Base editor view
-	AZClearView						*baseEditorView;
-	NSButton						*baseLockButton;
-	NSButton						*baseCommentButton;
-	NSTextField						*baseInfoField;
-	TextViewCustom					*baseTextView;
+    // Base editor view
+    AZClearView                        *baseEditorView;
+    NSButton                        *baseLockButton;
+    NSButton                        *baseCommentButton;
+    NSTextField                        *baseInfoField;
+    TextViewCustom                    *baseTextView;
 
-	// Localized editor view
-	AZClearView						*localizedEditorView;
-	NSButton						*localizedLockButton;
-	NSButton						*localizedCommentButton;
-	NSButton						*propagationModeButton;
-	NSTextField						*localizedBaseInfoField;
-	NSTextField						*localizedInfoField;
+    // Localized editor view
+    AZClearView                        *localizedEditorView;
+    NSButton                        *localizedLockButton;
+    NSButton                        *localizedCommentButton;
+    NSButton                        *propagationModeButton;
+    NSTextField                        *localizedBaseInfoField;
+    NSTextField                        *localizedInfoField;
 
-	TextViewCustom					*localizedBaseTextView;
-	TextViewCustom					*localizedTextView;
+    TextViewCustom                    *localizedBaseTextView;
+    TextViewCustom                    *localizedTextView;
 
-	//
-		
-	BOOL							mIgnoreCase;
-	
-	BOOL							mDisplayingComments;
-	NSIndexSet						*mSelectedStringsRowIndexes;
+    //
+        
+    BOOL                            mIgnoreCase;
+    
+    BOOL                            mDisplayingComments;
+    NSIndexSet                        *mSelectedStringsRowIndexes;
     
     BOOL                            mEditedColumnIsBase;
     

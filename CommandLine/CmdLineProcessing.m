@@ -27,12 +27,12 @@
 
 - (id) init
 {
-	self = [super init];
-	if (self != nil) {
-		provider = [[CmdLineProjectProvider alloc] init];
-		[ImportFilesConflict setOverrideValue:RESOLVE_USE_IMPORTED_FILE];
-	}
-	return self;
+    self = [super init];
+    if (self != nil) {
+        provider = [[CmdLineProjectProvider alloc] init];
+        [ImportFilesConflict setOverrideValue:RESOLVE_USE_IMPORTED_FILE];
+    }
+    return self;
 }
 
 - (void)dealloc
@@ -43,10 +43,10 @@
 
 - (void)saveProjectToFile:(NSString*)file
 {
-	if(file) {
-		NSData *data = [ProjectDiskOperations dataForModel:[provider projectModel] prefs:[provider projectPrefs]];	
-		[data writeToURL:[NSURL fileURLWithPath:file] atomically:NO];			
-	}
+    if(file) {
+        NSData *data = [ProjectDiskOperations dataForModel:[provider projectModel] prefs:[provider projectPrefs]];    
+        [data writeToURL:[NSURL fileURLWithPath:file] atomically:NO];            
+    }
 }
 
 /**
@@ -55,33 +55,33 @@
  */
 - (void)createProjectWithName:(NSString*)name folder:(NSString*)folder source:(NSString*)source baseLanguage:(NSString*)baseLanguage languages:(NSString*)languages
 {
-	NSLog(@"Create project with:");
-	NSLog(@"  name = %@", name);
-	NSLog(@"  folder = %@", folder);
-	NSLog(@"  source = %@", source);
-	NSLog(@"  base lang = %@", baseLanguage);
-	NSLog(@"  languages = %@", languages);
+    NSLog(@"Create project with:");
+    NSLog(@"  name = %@", name);
+    NSLog(@"  folder = %@", folder);
+    NSLog(@"  source = %@", source);
+    NSLog(@"  base lang = %@", baseLanguage);
+    NSLog(@"  languages = %@", languages);
 
     BundleSource *bundleSource = [BundleSource sourceWithPath:source];
 
-	NewProjectSettings *settings = [[NewProjectSettings alloc] init];
-	[settings setName:@"test"];
-	[settings setSource:bundleSource];
-	[settings setProjectFolder:folder];
-	[settings setBaseLanguage:baseLanguage];
-	[settings setLocalizedLanguages:[languages componentsSeparatedByString:@","]];
-	[settings setCopySourceOnlyIfExists:YES];
-	
+    NewProjectSettings *settings = [[NewProjectSettings alloc] init];
+    [settings setName:@"test"];
+    [settings setSource:bundleSource];
+    [settings setProjectFolder:folder];
+    [settings setBaseLanguage:baseLanguage];
+    [settings setLocalizedLanguages:[languages componentsSeparatedByString:@","]];
+    [settings setCopySourceOnlyIfExists:YES];
+    
     ScanBundleOp *scanBundleOp = [ScanBundleOp operation];
     scanBundleOp.path = settings.source.sourcePath;
     [scanBundleOp execute];
     settings.source.sourceNode = scanBundleOp.node; 
 
-	NewProjectOperation *op = [NewProjectOperation operation];
-	op.projectProvider = provider;	
-	op.settings = settings;
-	[op prepareProjectModel:[op.projectProvider projectModel]];
-	[op createProject];
+    NewProjectOperation *op = [NewProjectOperation operation];
+    op.projectProvider = provider;    
+    op.settings = settings;
+    [op prepareProjectModel:[op.projectProvider projectModel]];
+    [op createProject];
 }
 
 /**
@@ -90,14 +90,14 @@
  */
 - (void)rebaseProjectFromPath:(NSString*)projectPath withSource:(NSString*)source
 {
-	NSLog(@"Rebase project with:");
-	NSLog(@"  project = %@", projectPath);
-	NSLog(@"  source = %@", source);
-	
-	// Read project
-	[provider setProjectModel:[ProjectDiskOperations readModelFromPath:projectPath]];
+    NSLog(@"Rebase project with:");
+    NSLog(@"  project = %@", projectPath);
+    NSLog(@"  source = %@", source);
+    
+    // Read project
+    [provider setProjectModel:[ProjectDiskOperations readModelFromPath:projectPath]];
 
-	ImportDiff *importDiff = [[ImportDiff alloc] init];
+    ImportDiff *importDiff = [[ImportDiff alloc] init];
     BundleSource *bundleSource = [BundleSource sourceWithPath:source];
 
     ScanBundleOp *scanBundleOp = [ScanBundleOp operation];
@@ -105,17 +105,17 @@
     [scanBundleOp execute];
     bundleSource.sourceNode = scanBundleOp.node; 
 
-	ImportBundlePreviewOp *previewOp = [ImportBundlePreviewOp operation];
-	previewOp.projectProvider = provider;
-	previewOp.importDiff = importDiff;
-	[previewOp setSourcePath:bundleSource];
-	[previewOp execute];
-	
-	ImportRebaseBundleOp *rebaseOp = [ImportRebaseBundleOp operation];
-	rebaseOp.projectProvider = provider;
-	[rebaseOp setUsePreviousLayout:YES];
-	[rebaseOp setImportDiff:importDiff];
-	[rebaseOp execute];
+    ImportBundlePreviewOp *previewOp = [ImportBundlePreviewOp operation];
+    previewOp.projectProvider = provider;
+    previewOp.importDiff = importDiff;
+    [previewOp setSourcePath:bundleSource];
+    [previewOp execute];
+    
+    ImportRebaseBundleOp *rebaseOp = [ImportRebaseBundleOp operation];
+    rebaseOp.projectProvider = provider;
+    [rebaseOp setUsePreviousLayout:YES];
+    [rebaseOp setImportDiff:importDiff];
+    [rebaseOp execute];
 }
 
 /**
@@ -124,22 +124,22 @@
  */
 - (void)updateProjectFromPath:(NSString*)projectPath usingSource:(NSString*)source languages:(NSString*)languages
 {
-	NSLog(@"Update project with:");
-	NSLog(@"  project = %@", projectPath);
-	NSLog(@"  source = %@", source);
-	NSLog(@"  languages = %@", languages);
-	
-	// Read project
-	[provider setProjectModel:[ProjectDiskOperations readModelFromPath:projectPath]];
+    NSLog(@"Update project with:");
+    NSLog(@"  project = %@", projectPath);
+    NSLog(@"  source = %@", source);
+    NSLog(@"  languages = %@", languages);
+    
+    // Read project
+    [provider setProjectModel:[ProjectDiskOperations readModelFromPath:projectPath]];
 
-	ImportLanguagesOp *importOp = [ImportLanguagesOp operation];
-	importOp.projectProvider = provider;
-	importOp.languages = [languages componentsSeparatedByString:@","];
-	importOp.identical = NO;
-	importOp.layouts = YES;
-	importOp.copyOnlyIfExists = YES;
-	importOp.sourcePath = source;
-	[importOp execute];
+    ImportLanguagesOp *importOp = [ImportLanguagesOp operation];
+    importOp.projectProvider = provider;
+    importOp.languages = [languages componentsSeparatedByString:@","];
+    importOp.identical = NO;
+    importOp.layouts = YES;
+    importOp.copyOnlyIfExists = YES;
+    importOp.sourcePath = source;
+    [importOp execute];
 }
 
 /**
@@ -148,72 +148,72 @@
  */
 - (void)extractLanguage:(NSString*)language source:(NSString*)source target:(NSString*)target
 {
-	FileOperationManager *m = [FileOperationManager manager];
-	NSMutableArray *files = [NSMutableArray array];
-	BOOL success = [m enumerateDirectory:source files:files errorHandler:^(NSURL *url, NSError *error) {
-		NSLog(@"Problem listing content directory at \"%@\": %@", url, error);
-		return NO;
-	}];
-	if(success) {
-		[m excludeNonLocalizedFiles:files];
-		[m normalizeLanguages:[NSArray arrayWithObject:language] files:files];
-		[m includeLocalizedFilesFromLanguages:[NSArray arrayWithObject:language] files:files];
-		[m copyFiles:files source:source target:target errorHandler:^(NSError *error) {
-			NSLog(@"Problem copying the files: %@", error);
-			return NO;
-		}];
-	}
+    FileOperationManager *m = [FileOperationManager manager];
+    NSMutableArray *files = [NSMutableArray array];
+    BOOL success = [m enumerateDirectory:source files:files errorHandler:^(NSURL *url, NSError *error) {
+        NSLog(@"Problem listing content directory at \"%@\": %@", url, error);
+        return NO;
+    }];
+    if(success) {
+        [m excludeNonLocalizedFiles:files];
+        [m normalizeLanguages:[NSArray arrayWithObject:language] files:files];
+        [m includeLocalizedFilesFromLanguages:[NSArray arrayWithObject:language] files:files];
+        [m copyFiles:files source:source target:target errorHandler:^(NSError *error) {
+            NSLog(@"Problem copying the files: %@", error);
+            return NO;
+        }];
+    }
 }
 
 - (BOOL)processCommand:(NSString*)cmd args:(NSDictionary*)args {
     BOOL processed = NO;
-	NSString *projectFile = nil;
+    NSString *projectFile = nil;
 
-	if([cmd isEqualToString:@"createproject"]) {
-		[self createProjectWithName:[args objectForKey:@"name"]
-							 folder:[args objectForKey:@"folder"]
-							 source:[args objectForKey:@"source"]
-					   baseLanguage:[args objectForKey:@"base"]
-						  languages:[args objectForKey:@"languages"]];
-		NSString *name = [args objectForKey:@"name"];
-		projectFile = [[args objectForKey:@"folder"] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@/%@.ilocalize", name, name]];
-		processed = YES;
-	}	
-	
-	if([cmd isEqualToString:@"rebaseproject"]) {
-		[self rebaseProjectFromPath:[args objectForKey:@"project"]
-						 withSource:[args objectForKey:@"source"]];
-		projectFile = [args objectForKey:@"project"];
-		processed = YES;
-	}	
-	
-	if([cmd isEqualToString:@"updateproject"]) {
-		[self updateProjectFromPath:[args objectForKey:@"project"]
-						usingSource:[args objectForKey:@"source"]
-						  languages:[args objectForKey:@"languages"]];
-		projectFile = [args objectForKey:@"project"];
-		processed = YES;
-	}	
+    if([cmd isEqualToString:@"createproject"]) {
+        [self createProjectWithName:[args objectForKey:@"name"]
+                             folder:[args objectForKey:@"folder"]
+                             source:[args objectForKey:@"source"]
+                       baseLanguage:[args objectForKey:@"base"]
+                          languages:[args objectForKey:@"languages"]];
+        NSString *name = [args objectForKey:@"name"];
+        projectFile = [[args objectForKey:@"folder"] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@/%@.ilocalize", name, name]];
+        processed = YES;
+    }    
     
-	if([cmd isEqualToString:@"extract"]) {
-		[self extractLanguage:[args objectForKey:@"language"]
-					   source:[args objectForKey:@"source"]
-					   target:[args objectForKey:@"target"]];
-		processed = YES;
-	}	
-	
-	if(processed && projectFile) {
-		[self saveProjectToFile:projectFile];
-	}
-	return processed;    
+    if([cmd isEqualToString:@"rebaseproject"]) {
+        [self rebaseProjectFromPath:[args objectForKey:@"project"]
+                         withSource:[args objectForKey:@"source"]];
+        projectFile = [args objectForKey:@"project"];
+        processed = YES;
+    }    
+    
+    if([cmd isEqualToString:@"updateproject"]) {
+        [self updateProjectFromPath:[args objectForKey:@"project"]
+                        usingSource:[args objectForKey:@"source"]
+                          languages:[args objectForKey:@"languages"]];
+        projectFile = [args objectForKey:@"project"];
+        processed = YES;
+    }    
+    
+    if([cmd isEqualToString:@"extract"]) {
+        [self extractLanguage:[args objectForKey:@"language"]
+                       source:[args objectForKey:@"source"]
+                       target:[args objectForKey:@"target"]];
+        processed = YES;
+    }    
+    
+    if(processed && projectFile) {
+        [self saveProjectToFile:projectFile];
+    }
+    return processed;    
 }
 
 - (BOOL)processCommands
 {
     NSUserDefaults *sd = [NSUserDefaults standardUserDefaults];
-	[[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"consoleDisplayUsingNSLog"];
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"consoleDisplayUsingNSLog"];
 
-	NSString *cmd = [sd stringForKey:@"cmd"];
+    NSString *cmd = [sd stringForKey:@"cmd"];
     if ([cmd isEqualToString:@"__exec_test"]) {
         // Special cmd set by the Scheme Tool when running from within Xcode. This allows to debug the tool process.
         NSMutableArray *cmds = [NSMutableArray arrayWithCapacity:10];
@@ -252,9 +252,9 @@
 
 + (BOOL)process
 {
-	CmdLineProcessing *clp = [[CmdLineProcessing alloc] init];
-	BOOL processed = [clp processCommands];
-	return processed;
+    CmdLineProcessing *clp = [[CmdLineProcessing alloc] init];
+    BOOL processed = [clp processCommands];
+    return processed;
 }
 
 @end

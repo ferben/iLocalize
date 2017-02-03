@@ -18,43 +18,43 @@
 
 - (NSString*)nibname
 {
-	return @"FMEditorRTF";
+    return @"FMEditorRTF";
 }
 
 - (BOOL)allowsMultipleSelection
 {
-	return NO;
+    return NO;
 }
 
 - (void)updateContent
 {
-	id base = [[self fileController] baseModelContent];
-	if(base) {
-		[[mBaseBaseTextView textStorage] setAttributedString:base];
-		[[mLocalizedBaseTextView textStorage] setAttributedString:base];
-	} else {
+    id base = [[self fileController] baseModelContent];
+    if(base) {
+        [[mBaseBaseTextView textStorage] setAttributedString:base];
+        [[mLocalizedBaseTextView textStorage] setAttributedString:base];
+    } else {
         [mBaseBaseTextView setString:@""];
         [mLocalizedBaseTextView setString:@""];
     }
-	id localized = [[self fileController] modelContent];
-	if(localized)
-		[[mLocalizedTranslationTextView textStorage] setAttributedString:localized];		
+    id localized = [[self fileController] modelContent];
+    if(localized)
+        [[mLocalizedTranslationTextView textStorage] setAttributedString:localized];        
     else
-		[mLocalizedTranslationTextView setString:@""];	
-	
-	[mBaseBaseTextView setLanguage:[self baseLanguage]];
-	[mLocalizedBaseTextView setLanguage:[self baseLanguage]];
-	[mLocalizedTranslationTextView setLanguage:[self localizedLanguage]];	
+        [mLocalizedTranslationTextView setString:@""];    
+    
+    [mBaseBaseTextView setLanguage:[self baseLanguage]];
+    [mLocalizedBaseTextView setLanguage:[self baseLanguage]];
+    [mLocalizedTranslationTextView setLanguage:[self localizedLanguage]];    
 }
 
 - (void)textDidChange:(NSNotification *)notif
 {
-	NSTextView *tv = [notif object];
-	NSAttributedString *as = [[NSAttributedString alloc] initWithAttributedString:[[tv textStorage] copy]];
-	if(tv == mLocalizedBaseTextView)
-		[[self fileController] setBaseModelContent:as];
-	else
-		[[self fileController] setModelContent:as];
+    NSTextView *tv = [notif object];
+    NSAttributedString *as = [[NSAttributedString alloc] initWithAttributedString:[[tv textStorage] copy]];
+    if(tv == mLocalizedBaseTextView)
+        [[self fileController] setBaseModelContent:as];
+    else
+        [[self fileController] setModelContent:as];
 }
 
 @end

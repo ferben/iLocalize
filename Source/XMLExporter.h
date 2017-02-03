@@ -10,11 +10,11 @@
 #import "StringControllerProtocol.h"
 
 @interface XMLExporter : NSObject {
-	NSString *sourceLanguage;
-	NSString *targetLanguage;
-	NSMutableString *content;
-	CallbackErrorBlock errorCallback;
-	NSUInteger globalStringIndex;
+    NSString *sourceLanguage;
+    NSString *targetLanguage;
+    NSMutableString *content;
+    CallbackErrorBlock errorCallback;
+    NSUInteger globalStringIndex;
 }
 
 @property (strong) NSString *sourceLanguage;

@@ -14,14 +14,14 @@
 
 - (void)awake
 {
-	mFileControllers = NULL;
+    mFileControllers = NULL;
 }
 
 
 - (void)replaceLocalizedFileControllersFromCorrespondingBase:(NSArray *)controllers
 {
-	mFileControllers = [controllers copy];
-	
+    mFileControllers = [controllers copy];
+    
     // compose alert
     NSAlert *alert = [NSAlert new];
     [alert setAlertStyle:NSWarningAlertStyle];
@@ -49,14 +49,14 @@
 
 - (void)performReplace:(BOOL)keepLayout
 {
-	if ([mFileControllers count] > 1)
+    if ([mFileControllers count] > 1)
     {
-		[[self operation] setTitle:NSLocalizedString(@"Rebuilding localized files…", nil)];
-		[[self operation] setCancellable:NO];
-		[[self operation] setIndeterminate:NO];
-		[[self operation] showAsSheet];		
-	}
-	
+        [[self operation] setTitle:NSLocalizedString(@"Rebuilding localized files…", nil)];
+        [[self operation] setCancellable:NO];
+        [[self operation] setIndeterminate:NO];
+        [[self operation] showAsSheet];        
+    }
+    
     [[self operationDispatcher] replaceLocalizedFileControllersWithCorrespondingBase:mFileControllers
                                                                           keepLayout:keepLayout
                                                                           completion:^(id results)

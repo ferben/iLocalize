@@ -9,7 +9,7 @@
 @class StringEncoding;
 
 @interface StringEncodingTool : NSObject {
-	NSMutableArray		*mAvailableEncodings;
+    NSMutableArray        *mAvailableEncodings;
 }
 
 + (id)shared;

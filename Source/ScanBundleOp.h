@@ -15,10 +15,10 @@
  the files and folders inside the input path. 
  */
 @interface ScanBundleOp : Operation {
-	/**
-	 The source path.
-	 */
-	NSString *path;
+    /**
+     The source path.
+     */
+    NSString *path;
 
     /**
      The node representing the source path content.

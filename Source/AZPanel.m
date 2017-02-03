@@ -16,7 +16,7 @@
 
 - (BOOL)becomesKeyOnlyIfNeeded
 {
-	return YES;
+    return YES;
 }
 
 @end

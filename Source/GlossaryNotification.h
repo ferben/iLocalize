@@ -15,40 +15,40 @@
 @class GlossaryFolder;
 
 enum NOTIFICATION_ACTION {
-	INDEX_CHANGED,
-	GLOSSARY_SAVED,
+    INDEX_CHANGED,
+    GLOSSARY_SAVED,
     GLOSSARY_DELETED,
-	FOLDER_ADDED,
-	FOLDER_DELETED,
-	PROCESSING_STARTED,
-	PROCESSING_STOPPED,
-	PROCESSING_UPDATED
+    FOLDER_ADDED,
+    FOLDER_DELETED,
+    PROCESSING_STARTED,
+    PROCESSING_STOPPED,
+    PROCESSING_UPDATED
 };
 
 /**
  Notification object that is being posted for any glossary notification.
  */
 @interface GlossaryNotification : NSObject {
-	// Array of new files detected in one of the glossary folder
-	NSArray *listOfNewFiles;
-	
-	// Array of modified files (changes on the disk)
-	NSArray *modifiedFiles;
-	
-	// Array of files removed from one of the glossary folder
-	NSArray *deletedFiles;
+    // Array of new files detected in one of the glossary folder
+    NSArray *listOfNewFiles;
+    
+    // Array of modified files (changes on the disk)
+    NSArray *modifiedFiles;
+    
+    // Array of files removed from one of the glossary folder
+    NSArray *deletedFiles;
 
-	// The folder
-	GlossaryFolder *folder;
-	
-	// Source of the notification to avoid recursive notification
-	id source;
-	
-	// Percentage of processing
-	double processingPercentage;
-	
-	// Type of action
-	int action;
+    // The folder
+    GlossaryFolder *folder;
+    
+    // Source of the notification to avoid recursive notification
+    id source;
+    
+    // Percentage of processing
+    double processingPercentage;
+    
+    // Type of action
+    int action;
 }
 @property (strong) NSArray *listOfNewFiles;
 @property (strong) NSArray *modifiedFiles;

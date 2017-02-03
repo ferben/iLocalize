@@ -10,9 +10,9 @@
 
 @interface GMGlossaryNode : NSObject
 {
-	Glossary *_glossary;
-	NSString *_path;
-	NSMutableArray *children;	
+    Glossary *_glossary;
+    NSString *_path;
+    NSMutableArray *children;    
     NSString *searchString;
 }
 

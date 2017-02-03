@@ -15,46 +15,46 @@
 
 + (LanguageInfoModel*)infoWithIdentifier:(NSString*)identifier
 {
-	LanguageInfoModel *info = [[LanguageInfoModel alloc] init];
-	info.identifier = identifier;
-	return info;
+    LanguageInfoModel *info = [[LanguageInfoModel alloc] init];
+    info.identifier = identifier;
+    return info;
 }
 
 - (id)init
 {
-	if(self = [super init]) {
-		_identifier = nil;
-	}
-	return self;
+    if(self = [super init]) {
+        _identifier = nil;
+    }
+    return self;
 }
 
 
 /*
 - (BOOL)isEqual:(id)object
 {
-	NSLog(@">%@", [object class]);
-	return [super isEqual:object];
+    NSLog(@">%@", [object class]);
+    return [super isEqual:object];
 }
 */
 
 - (NSComparisonResult)compareDisplayName:(LanguageInfoModel*)other
 {
-	return [[self displayName] caseInsensitiveCompare:[other displayName]];
+    return [[self displayName] caseInsensitiveCompare:[other displayName]];
 }
 
 - (NSString*)displayName
 {
-	return [self.identifier displayLanguageName];
+    return [self.identifier displayLanguageName];
 }
 
 - (NSString*)languageIdentifier
 {
-	return [LanguageTool languageIdentifierForLanguage:self.identifier];
+    return [LanguageTool languageIdentifierForLanguage:self.identifier];
 }
 
 - (NSString*)description
 {
-	return [self languageIdentifier];
+    return [self languageIdentifier];
 }
 
 @end

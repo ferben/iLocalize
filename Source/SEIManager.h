@@ -12,7 +12,7 @@
 @class XMLExporter;
 
 @interface SEIManager : NSObject {
-	NSMutableArray *formats;
+    NSMutableArray *formats;
 }
 
 + (SEIManager*)sharedInstance;

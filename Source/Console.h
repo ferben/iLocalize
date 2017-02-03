@@ -6,29 +6,29 @@
 //  Copyright 2004 Arizona Software. All rights reserved.
 //
 
-#define CONSOLE_ALL			0	// For display: display all type of items
+#define CONSOLE_ALL            0    // For display: display all type of items
 
-#define CONSOLE_LOG			1	// Log - only for information
-#define CONSOLE_WARNING		2	// Warning - can continue without problem
-#define CONSOLE_ERROR		3	// Error - can continue but must be reported to the user (may cause problem)
-#define CONSOLE_FATAL		4	// Exception - has to stop and report to the user
-#define CONSOLE_OPERATION	5	// Operation name - used to separate errors
+#define CONSOLE_LOG            1    // Log - only for information
+#define CONSOLE_WARNING        2    // Warning - can continue without problem
+#define CONSOLE_ERROR        3    // Error - can continue but must be reported to the user (may cause problem)
+#define CONSOLE_FATAL        4    // Exception - has to stop and report to the user
+#define CONSOLE_OPERATION    5    // Operation name - used to separate errors
 
-#define CONSOLE_ROOT	@"root"
+#define CONSOLE_ROOT    @"root"
 
 @class Stack;
 @class ConsoleItem;
 
 @interface Console : NSObject <NSCoding>
 {
-	ConsoleItem  *mRootItem;
-	Stack        *mCurrentItemStack;
-	
-	int           mDeleteOldDays;
-	int           mWarningsCount;
-	int           mErrorsCount;
-	
-	NSUInteger    mIndexMark;
+    ConsoleItem  *mRootItem;
+    Stack        *mCurrentItemStack;
+    
+    int           mDeleteOldDays;
+    int           mWarningsCount;
+    int           mErrorsCount;
+    
+    NSUInteger    mIndexMark;
 }
 
 - (void)removeAllItems;

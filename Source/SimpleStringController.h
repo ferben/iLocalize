@@ -10,9 +10,9 @@
 
 @interface SimpleStringController : NSObject<StringControllerProtocol>
 {
-	NSString *key;
-	NSString *base;
-	NSString *translation;
+    NSString *key;
+    NSString *base;
+    NSString *translation;
 }
 
 + (SimpleStringController*)stringWithBase:(NSString*)base translation:(NSString*)translation;

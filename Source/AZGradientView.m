@@ -16,21 +16,21 @@
 - (id)initWithFrame:(NSRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-		self.bottomLine = NO;
+        self.bottomLine = NO;
     }
     return self;
 }
 
 - (void)drawRect:(NSRect)rect {
-	NSImage *strip = [NSImage imageNamed:@"gradient-strip"];
-	NSDrawThreePartImage(self.bounds, strip, strip, strip, NO, NSCompositeCopy, 1.0, NO);			
-	
-	if(self.bottomLine) {
-		[[NSColor grayColor] set];
-		NSRect r = self.bounds;
-		r.size.height = 1;
-		NSFrameRect(r);
-	}
+    NSImage *strip = [NSImage imageNamed:@"gradient-strip"];
+    NSDrawThreePartImage(self.bounds, strip, strip, strip, NO, NSCompositeCopy, 1.0, NO);            
+    
+    if(self.bottomLine) {
+        [[NSColor grayColor] set];
+        NSRect r = self.bounds;
+        r.size.height = 1;
+        NSFrameRect(r);
+    }
 }
 
 @end

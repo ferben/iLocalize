@@ -9,13 +9,13 @@
 #import "AbstractEngine.h"
 
 @interface CleanEngine : AbstractEngine {
-	BOOL mCleanDoubleQuotationMark;
-	BOOL mCleanQuotationMark;
-	BOOL mCleanEllipsis;
-	BOOL mCleanNonbreakableSpace;
-	BOOL mCleanTrailingSpace;
-	
-	BOOL mCleanMarkModifiedStrings;
+    BOOL mCleanDoubleQuotationMark;
+    BOOL mCleanQuotationMark;
+    BOOL mCleanEllipsis;
+    BOOL mCleanNonbreakableSpace;
+    BOOL mCleanTrailingSpace;
+    
+    BOOL mCleanMarkModifiedStrings;
 }
 - (void)cleanWithAttributes:(NSDictionary*)attributes;
 @end

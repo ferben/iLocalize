@@ -10,8 +10,8 @@
  Mutable dictionary that guarantees ordering of the keys as they are inserted.
  */
 @interface AZOrderedDictionary : NSObject {
-	NSMutableDictionary *dic;
-	NSMutableArray *orderedKeys;
+    NSMutableDictionary *dic;
+    NSMutableArray *orderedKeys;
 }
 - (void)setObject:(id)o forKey:(id)key;
 - (id)objectForKey:(id)key;

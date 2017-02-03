@@ -23,33 +23,33 @@
 
 - (void)execute
 {
-	[self setOperationName:NSLocalizedString(@"Updating Project…", nil)];
-	[self setProgressMax:settings.fileElements.count];
-	
-	[[self console] beginOperation:@"Import XML" class:[self class]];
+    [self setOperationName:NSLocalizedString(@"Updating Project…", nil)];
+    [self setProgressMax:settings.fileElements.count];
+    
+    [[self console] beginOperation:@"Import XML" class:[self class]];
 
-	for (XLIFFImportFileElement *fileElement in settings.fileElements)
+    for (XLIFFImportFileElement *fileElement in settings.fileElements)
     {
-		if (fileElement.fc)
+        if (fileElement.fc)
         {
-			[[self console] beginOperation:[NSString stringWithFormat:@"Updating file %@", [fileElement.fc relativeFilePath]] class:[self class]];
+            [[self console] beginOperation:[NSString stringWithFormat:@"Updating file %@", [fileElement.fc relativeFilePath]] class:[self class]];
             
-			for (XLIFFImportStringElement *stringElement in fileElement.stringElements)
+            for (XLIFFImportStringElement *stringElement in fileElement.stringElements)
             {
-				if (stringElement.sc)
+                if (stringElement.sc)
                 {
-					[[self console] addLog:[NSString stringWithFormat:@"Updating string with key '%@' to value '%@'", [stringElement.sc key], stringElement.translation] class:[self class]];
-					[stringElement.sc setAutomaticTranslation:stringElement.translation];									
-				}
-			}
+                    [[self console] addLog:[NSString stringWithFormat:@"Updating string with key '%@' to value '%@'", [stringElement.sc key], stringElement.translation] class:[self class]];
+                    [stringElement.sc setAutomaticTranslation:stringElement.translation];                                    
+                }
+            }
             
-			[[self console] endOperation];			
-		}
+            [[self console] endOperation];            
+        }
         
-		[self progressIncrement];
-	}
-	
-	[[self console] endOperation];
+        [self progressIncrement];
+    }
+    
+    [[self console] endOperation];
 }
 
 @end

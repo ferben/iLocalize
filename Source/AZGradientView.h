@@ -10,7 +10,7 @@
 
 
 @interface AZGradientView : NSView {
-	BOOL bottomLine;
+    BOOL bottomLine;
 }
 @property BOOL bottomLine;
 @end

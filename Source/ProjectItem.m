@@ -24,7 +24,7 @@
 
 - (id)  imageRepresentation
 {
-	return self.image;
+    return self.image;
 }
 
 - (NSString *) imageUID
@@ -34,12 +34,12 @@
 
 - (NSString *) imageTitle
 {
-	return self.name;
+    return self.name;
 }
 
 - (NSString *) imageSubtitle
 {
-	return [dateFormatter stringFromDate:self.date];
+    return [dateFormatter stringFromDate:self.date];
 }
 
 @end

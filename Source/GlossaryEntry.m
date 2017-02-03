@@ -16,20 +16,20 @@
 
 
 - (BOOL)isEqual:(id)anObject
-{	
-	if(![anObject isKindOfClass:[GlossaryEntry class]]) {
-		return NO;
-	}
-	
-	return [self.source isEqual:[anObject source]] && [self.translation isEqual:[anObject translation]];
+{    
+    if(![anObject isKindOfClass:[GlossaryEntry class]]) {
+        return NO;
+    }
+    
+    return [self.source isEqual:[anObject source]] && [self.translation isEqual:[anObject translation]];
 }
 
 - (NSUInteger)hash
 {
-	NSUInteger value = 17;
-	value += 37*self.source.hash;
-	value += 37*self.translation.hash;
-	return value;
+    NSUInteger value = 17;
+    value += 37*self.source.hash;
+    value += 37*self.translation.hash;
+    return value;
 }
 
 - (NSString*)description {

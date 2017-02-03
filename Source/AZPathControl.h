@@ -16,10 +16,10 @@
 @end
 
 @interface AZPathControl : AZGradientView<NSMenuDelegate> {
-	NSString *_basePath;
-	NSMutableArray *components;
-	NSMutableArray *elements;
-	id<AZPathControlDelegate> delegate;
+    NSString *_basePath;
+    NSMutableArray *components;
+    NSMutableArray *elements;
+    id<AZPathControlDelegate> delegate;
 }
 
 @property (strong) NSString *basePath;

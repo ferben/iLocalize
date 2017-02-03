@@ -16,12 +16,12 @@ typedef void (^XMLParserErrorElementCallback)(NSError *error);
  Event driven XML parser.
  */
 @interface XMLImporterParser : NSObject<NSXMLParserDelegate> {
-	Stack *elements;
-	BOOL aborted;
-	NSMutableString *textContent;
-	XMLParserStartElementCallback startElementCallback;
-	XMLParserEndElementCallback endElementCallback;	
-	XMLParserErrorElementCallback errorElementCallback;
+    Stack *elements;
+    BOOL aborted;
+    NSMutableString *textContent;
+    XMLParserStartElementCallback startElementCallback;
+    XMLParserEndElementCallback endElementCallback;    
+    XMLParserErrorElementCallback errorElementCallback;
 }
 
 @property (copy) XMLParserStartElementCallback startElementCallback;

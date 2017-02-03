@@ -8,28 +8,28 @@
 
 #import "ProjectProvider.h"
 
-@interface ExportProjectSettings : NSObject {	
-	// Which paths to export
-	NSArray *paths;
-	
-	// Which languages to export
-	NSArray *languages;
-	
-	// Options
-	BOOL exportLanguageFoldersOnly;
-	BOOL exportAsFolder;
-	BOOL compactNib;
+@interface ExportProjectSettings : NSObject {    
+    // Which paths to export
+    NSArray *paths;
+    
+    // Which languages to export
+    NSArray *languages;
+    
+    // Options
+    BOOL exportLanguageFoldersOnly;
+    BOOL exportAsFolder;
+    BOOL compactNib;
     BOOL upgradeNib;
-	BOOL compress;
-	BOOL nameIncludesBuildNumber;
-	BOOL nameIncludesLanguages;
-	BOOL email;
-	NSString *emailProgram;
-	NSString *emailMessage;
-	
-	// Destination folder
-	NSString *destFolder;
-	
+    BOOL compress;
+    BOOL nameIncludesBuildNumber;
+    BOOL nameIncludesLanguages;
+    BOOL email;
+    NSString *emailProgram;
+    NSString *emailMessage;
+    
+    // Destination folder
+    NSString *destFolder;
+    
     // Files to copy (not persisted)
     BOOL mergeFiles;
     NSArray *filesToCopy;

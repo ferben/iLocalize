@@ -39,122 +39,122 @@ static GlossaryManagerWC *shared = nil;
             shared = [[GlossaryManagerWC alloc] init];        
     }
     
-	return shared;
+    return shared;
 }
 
 - (id)init
 {
-	if ((self = [super initWithWindowNibName:@"GlossaryManager"]))
+    if ((self = [super initWithWindowNibName:@"GlossaryManager"]))
     {
-		processingTextField = nil;
-		processingIndicator = nil;
-		
-		[[NSNotificationCenter defaultCenter] addObserver:self
-												 selector:@selector(glossaryDidChange:)
-													 name:GlossaryDidChange
-												   object:nil];
-		
-		[[NSNotificationCenter defaultCenter] addObserver:self
-												 selector:@selector(glossaryProcessingDidChange:)
-													 name:GlossaryProcessingDidChange
-												   object:nil];
-		
-		[[NSNotificationCenter defaultCenter] addObserver:self
-												 selector:@selector(projectDocumentDidClose:)
-													 name:ILNotificationProjectProviderDidClose
-												   object:nil];		
+        processingTextField = nil;
+        processingIndicator = nil;
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(glossaryDidChange:)
+                                                     name:GlossaryDidChange
+                                                   object:nil];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(glossaryProcessingDidChange:)
+                                                     name:GlossaryProcessingDidChange
+                                                   object:nil];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(projectDocumentDidClose:)
+                                                     name:ILNotificationProjectProviderDidClose
+                                                   object:nil];        
 
-		[[NSNotificationCenter defaultCenter] addObserver:self
-												 selector:@selector(projectDocumentDidOpen:)
-													 name:ILNotificationProjectProviderDidOpen
-												   object:nil];		
-		        
-		[self window];
-	}
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(projectDocumentDidOpen:)
+                                                     name:ILNotificationProjectProviderDidOpen
+                                                   object:nil];        
+                
+        [self window];
+    }
 
     return self;
 }
 
 - (void)dealloc
 {
-	[[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)awakeFromNib
 {
-	[[mPathOutlineView tableColumnWithIdentifier:@"Path"] setDataCell:[[ImageAndTextCell alloc] init]];
+    [[mPathOutlineView tableColumnWithIdentifier:@"Path"] setDataCell:[[ImageAndTextCell alloc] init]];
 
-	for (NSTableColumn *column in [mGlossaryOutlineView tableColumns])
+    for (NSTableColumn *column in [mGlossaryOutlineView tableColumns])
     {
-		[column setDataCell:[[ImageAndTextCell alloc] init]];
-	}
+        [column setDataCell:[[ImageAndTextCell alloc] init]];
+    }
 
-	[mPathOutlineView registerForDraggedTypes:@[NSFilenamesPboardType]];     
-	[mGlossaryOutlineView registerForDraggedTypes:@[NSFilenamesPboardType]];   
-	[mGlossaryOutlineView setDraggingSourceOperationMask:(NSDragOperationCopy | NSDragOperationMove) forLocal:NO];	
-	
-	[mGlossaryOutlineView setDoubleAction:@selector(doubleClickOnGlossariesOutlineView:)];	
+    [mPathOutlineView registerForDraggedTypes:@[NSFilenamesPboardType]];     
+    [mGlossaryOutlineView registerForDraggedTypes:@[NSFilenamesPboardType]];   
+    [mGlossaryOutlineView setDraggingSourceOperationMask:(NSDragOperationCopy | NSDragOperationMove) forLocal:NO];    
+    
+    [mGlossaryOutlineView setDoubleAction:@selector(doubleClickOnGlossariesOutlineView:)];    
 
-	[self startProcessingFeedback];
+    [self startProcessingFeedback];
 }
 
 - (void)show
 {
-	[self buildSideBar];
-	[[self window] makeKeyAndOrderFront:self];
+    [self buildSideBar];
+    [[self window] makeKeyAndOrderFront:self];
 }
 
 - (void)startProcessingFeedback
 {
-	if ([[GlossaryManager sharedInstance] processing])
+    if ([[GlossaryManager sharedInstance] processing])
     {
-		NSRect rect = [glassView frame];
+        NSRect rect = [glassView frame];
         
-		if (!processingIndicator)
+        if (!processingIndicator)
         {
-			processingIndicator = [[NSProgressIndicator alloc] initWithFrame:NSMakeRect(10, rect.size.height / 2 - 7, 100, 14)];
-			[processingIndicator setMinValue:0];
-			[processingIndicator setMaxValue:100];
-			[processingIndicator setDoubleValue:0];
-			[processingIndicator setIndeterminate:NO];
-		}
+            processingIndicator = [[NSProgressIndicator alloc] initWithFrame:NSMakeRect(10, rect.size.height / 2 - 7, 100, 14)];
+            [processingIndicator setMinValue:0];
+            [processingIndicator setMaxValue:100];
+            [processingIndicator setDoubleValue:0];
+            [processingIndicator setIndeterminate:NO];
+        }
         
-		[glassView addSubview:processingIndicator];
+        [glassView addSubview:processingIndicator];
 
-		if (!processingTextField)
+        if (!processingTextField)
         {
-			processingTextField = [[NSTextField alloc] initWithFrame:NSMakeRect(110, rect.size.height / 2 - 7, 100, 14)];
-			[processingTextField setEditable:NO];
-			[processingTextField setFont:[NSFont systemFontOfSize:[NSFont smallSystemFontSize]]];		
-			[processingTextField setBordered:NO];
-			[processingTextField setDrawsBackground:NO];			
-			[processingTextField setStringValue:NSLocalizedString(@"Indexing…", @"Glossary Indexing Process")];
-		}
+            processingTextField = [[NSTextField alloc] initWithFrame:NSMakeRect(110, rect.size.height / 2 - 7, 100, 14)];
+            [processingTextField setEditable:NO];
+            [processingTextField setFont:[NSFont systemFontOfSize:[NSFont smallSystemFontSize]]];        
+            [processingTextField setBordered:NO];
+            [processingTextField setDrawsBackground:NO];            
+            [processingTextField setStringValue:NSLocalizedString(@"Indexing…", @"Glossary Indexing Process")];
+        }
         
-		[glassView addSubview:processingTextField];
-		
-		[processingIndicator startAnimation:self];
-	}
+        [glassView addSubview:processingTextField];
+        
+        [processingIndicator startAnimation:self];
+    }
 }
 
 - (void)glossaryProcessingDidChange:(NSNotification *)notif
 {
-	GlossaryNotification *n = [notif object];
+    GlossaryNotification *n = [notif object];
     
-	if (n.action == PROCESSING_STARTED)
+    if (n.action == PROCESSING_STARTED)
     {
-		[self startProcessingFeedback];
-	}
+        [self startProcessingFeedback];
+    }
     else if (n.action == PROCESSING_STOPPED)
     {
-		[processingTextField removeFromSuperview];
-		[processingIndicator stopAnimation:self];
-		[processingIndicator removeFromSuperview];
-	}
+        [processingTextField removeFromSuperview];
+        [processingIndicator stopAnimation:self];
+        [processingIndicator removeFromSuperview];
+    }
     else if (n.action == PROCESSING_UPDATED)
     {
-		[processingIndicator setDoubleValue:n.processingPercentage];		
-	}
+        [processingIndicator setDoubleValue:n.processingPercentage];        
+    }
 }
 
 #pragma mark -
@@ -164,163 +164,163 @@ NSInteger projectDocumentSort(id doc1, id doc2, void *context)
     NSString *fileName1 = [doc1 fileURL].path;
     NSString *fileName2 = [doc2 fileURL].path;
     
-	return [fileName1 caseInsensitiveCompare:fileName2];
+    return [fileName1 caseInsensitiveCompare:fileName2];
 }
 
 - (NSArray *)projectDocumentGlossaries
 {
-	return [[GlossaryManager orderedProjectDocuments] sortedArrayUsingFunction:projectDocumentSort context:nil];
+    return [[GlossaryManager orderedProjectDocuments] sortedArrayUsingFunction:projectDocumentSort context:nil];
 }
 
 - (GMSidebarNode *)addProjectDocumentGlossaries
 {
-	GMSidebarNode *group = [GMSidebarNode projectGroup];
+    GMSidebarNode *group = [GMSidebarNode projectGroup];
     
-	for (ProjectDocument *doc in [self projectDocumentGlossaries])
+    for (ProjectDocument *doc in [self projectDocumentGlossaries])
     {
-		[group.children addObject:[GMSidebarNode nodeWithProjectDocument:doc]];
-	}
-	
+        [group.children addObject:[GMSidebarNode nodeWithProjectDocument:doc]];
+    }
+    
     return group;
 }
 
 NSInteger glossaryPathSort(id doc1, id doc2, void *context)
 {
-	return [[doc1 path] caseInsensitiveCompare:[doc2 path]];
+    return [[doc1 path] caseInsensitiveCompare:[doc2 path]];
 }
 
 - (NSArray *)sortedGlobalFolders
 {
-	return [[[GlossaryManager sharedInstance] globalFolders] sortedArrayUsingFunction:glossaryPathSort context:nil];
+    return [[[GlossaryManager sharedInstance] globalFolders] sortedArrayUsingFunction:glossaryPathSort context:nil];
 }
 
 - (GMSidebarNode *)addGlobalPathGlossaries
 {
-	GMSidebarNode *group = [GMSidebarNode globalGroup];	
-	
+    GMSidebarNode *group = [GMSidebarNode globalGroup];    
+    
     for (GlossaryFolder *folder in [self sortedGlobalFolders])
     {
-		[group.children addObject:[GMSidebarNode nodeWithPath:folder]];
-	}
-	
+        [group.children addObject:[GMSidebarNode nodeWithPath:folder]];
+    }
+    
     return group;
 }
 
 - (NSIndexPath *)indexPathOfNode:(id)node inArray:(NSArray *)array indexPath:(NSIndexPath *)parent
 {
-	int index = 0;
+    int index = 0;
     
-	for (id n in array)
+    for (id n in array)
     {
-		if ([n isEqual:node])
+        if ([n isEqual:node])
         {
-			return [parent indexPathByAddingIndex:index];
-		}
+            return [parent indexPathByAddingIndex:index];
+        }
         else if ([[n children] count] > 0)
         {
-			NSIndexPath *path = [self indexPathOfNode:node inArray:[n children] indexPath:[parent indexPathByAddingIndex:index]];
+            NSIndexPath *path = [self indexPathOfNode:node inArray:[n children] indexPath:[parent indexPathByAddingIndex:index]];
             
-			if (path)
+            if (path)
             {
-				return path;
-			}
-		}
-		
-		index++;
-	}
+                return path;
+            }
+        }
+        
+        index++;
+    }
     
-	return nil;
+    return nil;
 }
 
 - (NSIndexPath *)indexPathForSidebarNode:(GMSidebarNode *)node
 {
-	return [self indexPathOfNode:node inArray:[mPathController content] indexPath:[[NSIndexPath alloc] init]];
+    return [self indexPathOfNode:node inArray:[mPathController content] indexPath:[[NSIndexPath alloc] init]];
 }
 
 - (void)selectDefaultSidebarNode
 {
-	GMSidebarNode *projectNode = [mPathController content][0];
-	GMSidebarNode *globalNode  = [mPathController content][1];
+    GMSidebarNode *projectNode = [mPathController content][0];
+    GMSidebarNode *globalNode  = [mPathController content][1];
 
-	if ([[projectNode children] count] > 0)
+    if ([[projectNode children] count] > 0)
     {
-		NSIndexPath *path = [NSIndexPath indexPathWithIndex:0];
-		[mPathController setSelectionIndexPath:[path indexPathByAddingIndex:0]];
-	}
+        NSIndexPath *path = [NSIndexPath indexPathWithIndex:0];
+        [mPathController setSelectionIndexPath:[path indexPathByAddingIndex:0]];
+    }
     else if ([[globalNode children] count] > 0)
     {
-		NSIndexPath *path = [NSIndexPath indexPathWithIndex:1];
-		[mPathController setSelectionIndexPath:[path indexPathByAddingIndex:0]];
-	}
+        NSIndexPath *path = [NSIndexPath indexPathWithIndex:1];
+        [mPathController setSelectionIndexPath:[path indexPathByAddingIndex:0]];
+    }
 }
 
 - (void)buildSideBar
 {
-	NSMutableArray *rootItems = [NSMutableArray array];
-	[rootItems addObject:[self addProjectDocumentGlossaries]];
-	[rootItems addObject:[self addGlobalPathGlossaries]];
-	
-	[mPathController setContent:rootItems];
-	[mPathController rearrangeObjects];
-	[self selectDefaultSidebarNode];
-	
-	[mPathOutlineView expandItem:nil expandChildren:YES];
+    NSMutableArray *rootItems = [NSMutableArray array];
+    [rootItems addObject:[self addProjectDocumentGlossaries]];
+    [rootItems addObject:[self addGlobalPathGlossaries]];
+    
+    [mPathController setContent:rootItems];
+    [mPathController rearrangeObjects];
+    [self selectDefaultSidebarNode];
+    
+    [mPathOutlineView expandItem:nil expandChildren:YES];
 }
 
 - (void)updateProjectDocumentGlossaries:(GMSidebarNode*)node
 {
-	[node.children removeAllObjects];
-	
+    [node.children removeAllObjects];
+    
     for (ProjectDocument *doc in [self projectDocumentGlossaries])
     {
-		[node.children addObject:[GMSidebarNode nodeWithProjectDocument:doc]];
-	}	
+        [node.children addObject:[GMSidebarNode nodeWithProjectDocument:doc]];
+    }    
 }
 
 - (void)updateGlobalPathGlossaries:(GMSidebarNode*)node
 {
-	[node.children removeAllObjects];
-	
+    [node.children removeAllObjects];
+    
     for (GlossaryFolder *folder in [self sortedGlobalFolders])
     {
-		[node.children addObject:[GMSidebarNode nodeWithPath:folder]];
-	}	
+        [node.children addObject:[GMSidebarNode nodeWithPath:folder]];
+    }    
 }
 
 - (void)refresh
 {
-	GMSidebarNode *selectedNode = [[mPathController selectedObjects] firstObject];
+    GMSidebarNode *selectedNode = [[mPathController selectedObjects] firstObject];
 
-	NSArray *rootItems = [mPathController content];	
-	[self updateProjectDocumentGlossaries:[rootItems firstObject]];
-	[self updateGlobalPathGlossaries:rootItems[1]];
+    NSArray *rootItems = [mPathController content];    
+    [self updateProjectDocumentGlossaries:[rootItems firstObject]];
+    [self updateGlobalPathGlossaries:rootItems[1]];
 
-	[mPathController rearrangeObjects];	
-	[mPathOutlineView expandItem:nil expandChildren:YES];
-		
-	NSIndexPath *path = [self indexPathForSidebarNode:selectedNode];
-	
+    [mPathController rearrangeObjects];    
+    [mPathOutlineView expandItem:nil expandChildren:YES];
+        
+    NSIndexPath *path = [self indexPathForSidebarNode:selectedNode];
+    
     if (path)
     {
-		[mPathController setSelectionIndexPath:path];		
-	}
+        [mPathController setSelectionIndexPath:path];        
+    }
     else
     {
-		[self selectDefaultSidebarNode];
-	}
-	
-	[self refreshGlossaries];
+        [self selectDefaultSidebarNode];
+    }
+    
+    [self refreshGlossaries];
 }
 
 - (GMSidebarNode *)selectedSidebarNode
 {
-	return [[mPathController selectedObjects] firstObject];		
+    return [[mPathController selectedObjects] firstObject];        
 }
 
 - (NSArray *)selectedGlossaries
 {
-	NSMutableArray *array = [NSMutableArray array];
-	
+    NSMutableArray *array = [NSMutableArray array];
+    
     for (GMGlossaryNode *node in [mGlossaryController selectedObjects])
     {
         if (node.glossary)
@@ -329,26 +329,26 @@ NSInteger glossaryPathSort(id doc1, id doc2, void *context)
         }
     }
     
-	return array;
+    return array;
 }
 
 - (BOOL)performDragOperation:(NSDragOperation)operation sourcePath:(NSString *)source targetFolderPath:(NSString *)targetFolder
 {
-	NSString *target = [targetFolder stringByAppendingPathComponent:[source lastPathComponent]];
+    NSString *target = [targetFolder stringByAppendingPathComponent:[source lastPathComponent]];
     
-	if ([target isPathExisting])
-		return YES;
-	
-	[[FileTool shared] preparePath:target atomic:YES skipLastComponent:YES];
-	
-	switch (operation)
+    if ([target isPathExisting])
+        return YES;
+    
+    [[FileTool shared] preparePath:target atomic:YES skipLastComponent:YES];
+    
+    switch (operation)
     {
-		case NSDragOperationCopy:
-			return [[NSFileManager defaultManager] copyItemAtPath:source toPath:target error:nil];
-		case NSDragOperationMove:
-			return [[NSFileManager defaultManager] moveItemAtPath:source toPath:target error:nil];
-		case NSDragOperationLink:
-			return [FileTool createAliasOfFile:source toFile:target];
+        case NSDragOperationCopy:
+            return [[NSFileManager defaultManager] copyItemAtPath:source toPath:target error:nil];
+        case NSDragOperationMove:
+            return [[NSFileManager defaultManager] moveItemAtPath:source toPath:target error:nil];
+        case NSDragOperationLink:
+            return [FileTool createAliasOfFile:source toFile:target];
 
         // unused so far
         case NSDragOperationAll_Obsolete:
@@ -358,65 +358,65 @@ NSInteger glossaryPathSort(id doc1, id doc2, void *context)
         case NSDragOperationNone:
         case NSDragOperationPrivate:
             ;
-	}
-	
-	return NO;
+    }
+    
+    return NO;
 }
 
 - (BOOL)isSourcePathsWritable:(id <NSDraggingInfo>)info
 {
-	NSPasteboard *pboard = [info draggingPasteboard];
-	
+    NSPasteboard *pboard = [info draggingPasteboard];
+    
     if ([[pboard types] containsObject:NSFilenamesPboardType])
     {
-		for (NSString *path in [pboard propertyListForType:NSFilenamesPboardType])
+        for (NSString *path in [pboard propertyListForType:NSFilenamesPboardType])
         {
-			if (![[NSFileManager defaultManager] isWritableFileAtPath:path])
+            if (![[NSFileManager defaultManager] isWritableFileAtPath:path])
             {
-				return NO;
-			}			
-		}
-	}
+                return NO;
+            }            
+        }
+    }
     
-	return YES;		
+    return YES;        
 }
 
 - (NSDragOperation)dragOperationForFile:(id <NSDraggingInfo>)info
 {
-	NSDragOperation operation = [info draggingSourceOperationMask];
-	
-	if (![self isSourcePathsWritable:info])
+    NSDragOperation operation = [info draggingSourceOperationMask];
+    
+    if (![self isSourcePathsWritable:info])
     {
-		return NSDragOperationCopy;
-	}
-	
-	if (operation == (NSDragOperationGeneric | NSDragOperationCopy))
+        return NSDragOperationCopy;
+    }
+    
+    if (operation == (NSDragOperationGeneric | NSDragOperationCopy))
     {
-		// Like in Finder when creating alias
-		return NSDragOperationLink;
-	}
-	
+        // Like in Finder when creating alias
+        return NSDragOperationLink;
+    }
+    
     if (operation & NSDragOperationGeneric)
     {
-		return NSDragOperationMove;
-	}
-	
-	if (operation & NSDragOperationCopy)
+        return NSDragOperationMove;
+    }
+    
+    if (operation & NSDragOperationCopy)
     {
-		return NSDragOperationCopy;
-	}
-	
-	if (operation & NSDragOperationMove)
+        return NSDragOperationCopy;
+    }
+    
+    if (operation & NSDragOperationMove)
     {
-		return NSDragOperationMove;
-	}
-	
-	if (operation & NSDragOperationLink)
+        return NSDragOperationMove;
+    }
+    
+    if (operation & NSDragOperationLink)
     {
-		return NSDragOperationLink;
-	}
-	
-	return NSDragOperationNone;	
+        return NSDragOperationLink;
+    }
+    
+    return NSDragOperationNone;    
 }
 
 #pragma mark -
@@ -424,17 +424,17 @@ NSInteger glossaryPathSort(id doc1, id doc2, void *context)
 
 - (void)projectDocumentDidOpen:(NSNotification *)notif
 {
-	[self refresh];	
+    [self refresh];    
 }
 
 - (void)projectDocumentDidClose:(NSNotification *)notif
 {
-	[self refresh];	
+    [self refresh];    
 }
 
 - (void)glossaryDidChange:(NSNotification *)notif
 {
-	[self refresh];
+    [self refresh];
 }
 
 #pragma mark -
@@ -447,12 +447,12 @@ NSInteger glossaryPathSort(id doc1, id doc2, void *context)
 
 - (IBAction)pathRevealInFinder:(id)sender
 {
-	GMSidebarNode *node = [self selectedSidebarNode];
-	
+    GMSidebarNode *node = [self selectedSidebarNode];
+    
     if(node)
     {
-		[FileTool revealFile:node.folder.path];
-	}
+        [FileTool revealFile:node.folder.path];
+    }
 }
 
 - (IBAction)pathAdd:(id)sender
@@ -461,7 +461,7 @@ NSInteger glossaryPathSort(id doc1, id doc2, void *context)
     
     [panel setCanChooseFiles:NO];
     [panel setCanChooseDirectories:YES];
-	[panel setCanCreateDirectories:YES];
+    [panel setCanCreateDirectories:YES];
     [panel setDirectoryURL:[NSURL fileURLWithPath:NSHomeDirectory()]];
     [panel beginSheetModalForWindow:[self window]
                   completionHandler:^(NSInteger result)
@@ -477,13 +477,13 @@ NSInteger glossaryPathSort(id doc1, id doc2, void *context)
 
 - (IBAction)pathRemove:(id)sender
 {
-	GMSidebarNode *node = [self selectedSidebarNode];
-	
+    GMSidebarNode *node = [self selectedSidebarNode];
+    
     if ([node isGlobal])
     {
-		[[GlossaryManager sharedInstance] removeFolder:node.folder];
+        [[GlossaryManager sharedInstance] removeFolder:node.folder];
         [[PreferencesWC shared] save];
-	}
+    }
 }
 
 #pragma mark -
@@ -493,7 +493,7 @@ NSInteger glossaryPathSort(id doc1, id doc2, void *context)
 {
     NSDocumentController *documentController = [NSDocumentController sharedDocumentController];
     
-	for (Glossary *g in [self selectedGlossaries])
+    for (Glossary *g in [self selectedGlossaries])
     {
         [documentController openDocumentWithContentsOfURL:[NSURL fileURLWithPath:g.targetFile] display:YES completionHandler:
          ^(NSDocument *document, BOOL documentWasAlreadyOpen, NSError *error)
@@ -501,23 +501,23 @@ NSInteger glossaryPathSort(id doc1, id doc2, void *context)
              if (error)
                  [documentController presentError:error];
          }];
-	}
+    }
 }
 
 - (IBAction)glossaryRevealInFinder:(id)sender
 {
-	for (Glossary *g in [self selectedGlossaries])
+    for (Glossary *g in [self selectedGlossaries])
     {
-		[FileTool revealFile:g.file];
-	}
+        [FileTool revealFile:g.file];
+    }
 }
 
 - (IBAction)glossaryMerge:(id)sender
 {
-	if (!mMergeGlossary)
+    if (!mMergeGlossary)
     {
-		mMergeGlossary = [[GlossaryMergeWC alloc] init];		
-	}
+        mMergeGlossary = [[GlossaryMergeWC alloc] init];        
+    }
     
     [mMergeGlossary setGlossaries:[self selectedGlossaries]];
     [mMergeGlossary showWithParent:[self window]];
@@ -545,26 +545,26 @@ NSInteger glossaryPathSort(id doc1, id doc2, void *context)
         }
         
         notif.deletedFiles = deletedFiles;
-        [[NSNotificationCenter defaultCenter] postNotificationName:GlossaryDidChange object:notif];		
+        [[NSNotificationCenter defaultCenter] postNotificationName:GlossaryDidChange object:notif];        
 
-		for (NSString *file in deletedFiles)
+        for (NSString *file in deletedFiles)
         {
-			[file movePathToTrash];
-		}
-		
+            [file movePathToTrash];
+        }
+        
         [[GlossaryManager sharedInstance] reload];
         [self refresh];
-	}		
+    }        
 }
 
 - (void)doubleClickOnGlossariesOutlineView:(id)sender
 {
-	NSInteger row = [sender clickedRow];
+    NSInteger row = [sender clickedRow];
     
-	if (row < 0)
+    if (row < 0)
         return;
 
-	[self glossaryOpen:sender];
+    [self glossaryOpen:sender];
 }
 
 #pragma mark -
@@ -572,146 +572,146 @@ NSInteger glossaryPathSort(id doc1, id doc2, void *context)
 
 - (NSRect)splitView:(NSSplitView *)splitView additionalEffectiveRectOfDividerAtIndex:(NSInteger)dividerIndex
 {
-	NSRect r = [mSplitViewThumbView bounds];
+    NSRect r = [mSplitViewThumbView bounds];
     
-	r.origin.x = r.origin.x + r.size.width - 15;
-	r.size.width = 15;
+    r.origin.x = r.origin.x + r.size.width - 15;
+    r.size.width = 15;
     
-	return [mSplitViewThumbView convertRect:r toView:splitView]; 		
+    return [mSplitViewThumbView convertRect:r toView:splitView];         
 }
 
 #pragma mark -
 #pragma mark Sidebar Outline View
-	
+    
 - (NSArray *)glossaryNodesForPath:(GlossaryFolder *)folder
 {
-	self.glossaryRootNode = [GMGlossaryNode nodeWithPath:nil];
+    self.glossaryRootNode = [GMGlossaryNode nodeWithPath:nil];
     
-	for (Glossary *g in [folder glossaries])
+    for (Glossary *g in [folder glossaries])
     {
-		[self.glossaryRootNode insert:g];
-	}
+        [self.glossaryRootNode insert:g];
+    }
     
     [self.glossaryRootNode applySearchString:[searchField stringValue]];
-	return self.glossaryRootNode.children;
+    return self.glossaryRootNode.children;
 }
 
 - (void)refreshGlossaries
 {
-	// Save expanded nodes
-	NSMutableArray *expandedItems = [NSMutableArray array];
-	
+    // Save expanded nodes
+    NSMutableArray *expandedItems = [NSMutableArray array];
+    
     for (int row = 0; row < [mGlossaryOutlineView numberOfRows]; row++)
     {
-		id item = [mGlossaryOutlineView itemAtRow:row];
-	
+        id item = [mGlossaryOutlineView itemAtRow:row];
+    
         if ([mGlossaryOutlineView isItemExpanded:item])
         {
-			[expandedItems addObject:[item representedObject]];			
-		}
-	}
-		
-	GMSidebarNode *node = [self selectedSidebarNode];
-	
+            [expandedItems addObject:[item representedObject]];            
+        }
+    }
+        
+    GMSidebarNode *node = [self selectedSidebarNode];
+    
     if (node)
     {
-		[mGlossaryController setContent:[self glossaryNodesForPath:node.folder]];
-	}
+        [mGlossaryController setContent:[self glossaryNodesForPath:node.folder]];
+    }
     else
     {
         self.glossaryRootNode = nil;
-		[mGlossaryController setContent:nil];
-	}		
-	
+        [mGlossaryController setContent:nil];
+    }        
+    
     [mGlossaryController rearrangeObjects];
-	
-	// Restore expanded nodes
-	for (int row = 0; row < [mGlossaryOutlineView numberOfRows]; row++)
+    
+    // Restore expanded nodes
+    for (int row = 0; row < [mGlossaryOutlineView numberOfRows]; row++)
     {
-		id item = [mGlossaryOutlineView itemAtRow:row];
-	
+        id item = [mGlossaryOutlineView itemAtRow:row];
+    
         for (GMGlossaryNode *node in expandedItems)
         {
-			if ([[item representedObject] isEqualTo:node])
+            if ([[item representedObject] isEqualTo:node])
             {
-				[mGlossaryOutlineView expandItem:item];
-			}			
-		}
-	}
+                [mGlossaryOutlineView expandItem:item];
+            }            
+        }
+    }
     
-	[mGlossaryOutlineView expandItem:[mGlossaryOutlineView itemAtRow:0]];	
+    [mGlossaryOutlineView expandItem:[mGlossaryOutlineView itemAtRow:0]];    
 }
 
 - (void)outlineViewSelectionDidChange:(NSNotification *)notification
 {
-	if ([notification object] == mPathOutlineView)
+    if ([notification object] == mPathOutlineView)
     {
-		[self refreshGlossaries];
-	}
+        [self refreshGlossaries];
+    }
 }
 
 - (void)outlineView:(NSOutlineView *)outlineView willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn item:(id)item
 {
-	if (outlineView == mPathOutlineView)
+    if (outlineView == mPathOutlineView)
     {
-		GMSidebarNode *node = [item representedObject];
-	
+        GMSidebarNode *node = [item representedObject];
+    
         if ([node isGroup])
         {
-			[cell setImage:nil];
-		}
+            [cell setImage:nil];
+        }
         else
         {
-			[cell setImage:node.image];			
-		}
-	}
+            [cell setImage:node.image];            
+        }
+    }
     else
     {
-		if ([[tableColumn identifier] isEqualToString:@"Name"])
+        if ([[tableColumn identifier] isEqualToString:@"Name"])
         {
-			[cell setImage:[[NSWorkspace sharedWorkspace] iconForFile:[[item representedObject] file]]];		
-		}		
-	}	
+            [cell setImage:[[NSWorkspace sharedWorkspace] iconForFile:[[item representedObject] file]]];        
+        }        
+    }    
 }
 
 - (BOOL)outlineView:(NSOutlineView *)outlineView isGroupItem:(id)item
 {
-	if (outlineView == mPathOutlineView)
+    if (outlineView == mPathOutlineView)
     {
-		return [[item representedObject] isGroup];		
-	}
+        return [[item representedObject] isGroup];        
+    }
     else
     {
-		return NO;
-	}
+        return NO;
+    }
 }
 
 - (BOOL)outlineView:(NSOutlineView *)ov shouldSelectItem:(id)item
 {
-	if (ov == mPathOutlineView)
+    if (ov == mPathOutlineView)
     {
-		return ![[item representedObject] isGroup];		
-	}
+        return ![[item representedObject] isGroup];        
+    }
     else
     {
-		return YES;
-	}
+        return YES;
+    }
 }
 
 - (NSMenu *)menuForTableView:(NSTableView *)tv column:(NSInteger)column row:(NSInteger)row
 {
-	if (tv == mPathOutlineView)
+    if (tv == mPathOutlineView)
     {
-		return mPathMenu;
-	}
+        return mPathMenu;
+    }
     else if (tv == mGlossaryOutlineView)
     {
-		return mGlossaryMenu;
-	}
+        return mGlossaryMenu;
+    }
     else
     {
-		return nil;
-	}
+        return nil;
+    }
 }
 
 #pragma mark -
@@ -719,94 +719,94 @@ NSInteger glossaryPathSort(id doc1, id doc2, void *context)
 
 - (BOOL)isDraggingFolder:(id <NSDraggingInfo>)info
 {
-	NSPasteboard *pboard = [info draggingPasteboard];
-	
+    NSPasteboard *pboard = [info draggingPasteboard];
+    
     if ([[pboard types] containsObject:NSFilenamesPboardType])
     {
-		for (NSString *path in [pboard propertyListForType:NSFilenamesPboardType])
+        for (NSString *path in [pboard propertyListForType:NSFilenamesPboardType])
         {
-			if (![path isPathDirectory]) return NO;
-		}
-	}
+            if (![path isPathDirectory]) return NO;
+        }
+    }
     
-	return YES;
+    return YES;
 }
 
 - (BOOL)isDraggingFile:(id <NSDraggingInfo>)info
 {
-	NSPasteboard *pboard = [info draggingPasteboard];
-	
+    NSPasteboard *pboard = [info draggingPasteboard];
+    
     if ([[pboard types] containsObject:NSFilenamesPboardType])
     {
-		for (NSString *path in [pboard propertyListForType:NSFilenamesPboardType])
+        for (NSString *path in [pboard propertyListForType:NSFilenamesPboardType])
         {
-			if (![path isPathRegular])
+            if (![path isPathRegular])
                 return NO;
-		}
-	}
+        }
+    }
     
-	return YES;
+    return YES;
 }
 
 - (NSDragOperation)outlineView:(NSOutlineView *)outlineView validateDrop:(id <NSDraggingInfo>)info proposedItem:(id)item proposedChildIndex:(int)index
 {
-	GMSidebarNode *node = [item representedObject];
+    GMSidebarNode *node = [item representedObject];
 
-	if ([self isDraggingFolder:info])
+    if ([self isDraggingFolder:info])
     {
-		if ([node isGlobalGroup] || [node isGlobal])
+        if ([node isGlobalGroup] || [node isGlobal])
         {
-			if ([node isGlobal])
+            if ([node isGlobal])
             {
-				// if the item for the drop is a global path, redirect the drop to the global group item
-				[outlineView setDropItem:[mPathOutlineView parentForItem:item] dropChildIndex:NSOutlineViewDropOnItemIndex];			
-			}
-			
+                // if the item for the drop is a global path, redirect the drop to the global group item
+                [outlineView setDropItem:[mPathOutlineView parentForItem:item] dropChildIndex:NSOutlineViewDropOnItemIndex];            
+            }
+            
             return NSDragOperationLink;
-		}
-	}
+        }
+    }
     else if ([self isDraggingFile:info])
     {
-		if ([node isGlobal])
+        if ([node isGlobal])
         {
-			return [self dragOperationForFile:info];		
-		}		
-	}
+            return [self dragOperationForFile:info];        
+        }        
+    }
     
-	return NSDragOperationNone;		
+    return NSDragOperationNone;        
 }
 
 - (BOOL)outlineView:(NSOutlineView *)outlineView acceptDrop:(id <NSDraggingInfo>)info item:(id)item childIndex:(int)index
 {
-	if ([self isDraggingFolder:info])
+    if ([self isDraggingFolder:info])
     {
-		NSPasteboard *pboard = [info draggingPasteboard];
-	
+        NSPasteboard *pboard = [info draggingPasteboard];
+    
         for (NSString *path in [pboard propertyListForType:NSFilenamesPboardType])
         {
-			[[GlossaryManager sharedInstance] addFolder:[GlossaryFolder folderForPath:path name:[path lastPathComponent]]];
-//			[[GlossaryManager shared] addGlobalPath:[GlossaryPath pathWithPath:path name:[path lastPathComponent] deletable:YES]];
-		}		
-		
+            [[GlossaryManager sharedInstance] addFolder:[GlossaryFolder folderForPath:path name:[path lastPathComponent]]];
+//            [[GlossaryManager shared] addGlobalPath:[GlossaryPath pathWithPath:path name:[path lastPathComponent] deletable:YES]];
+        }        
+        
         return YES;
-	}
+    }
     else if ([self isDraggingFile:info])
     {
-		NSPasteboard *pboard = [info draggingPasteboard];
-		GMSidebarNode *node = [item representedObject];
-		NSString *targetFolderPath = node.folder.path;
-	
+        NSPasteboard *pboard = [info draggingPasteboard];
+        GMSidebarNode *node = [item representedObject];
+        NSString *targetFolderPath = node.folder.path;
+    
         for (NSString *path in [pboard propertyListForType:NSFilenamesPboardType])
         {
-			[self performDragOperation:[self dragOperationForFile:info] sourcePath:path targetFolderPath:targetFolderPath];
-		}		
-		
+            [self performDragOperation:[self dragOperationForFile:info] sourcePath:path targetFolderPath:targetFolderPath];
+        }        
+        
         return YES;
-	}
+    }
     else
     {
-		return NO;
-	}
+        return NO;
+    }
 }
 
 #pragma mark -
@@ -814,7 +814,7 @@ NSInteger glossaryPathSort(id doc1, id doc2, void *context)
 
 - (NSDragOperation)tableView:(NSTableView*)tv validateDrop:(id <NSDraggingInfo>)info proposedRow:(int)row proposedDropOperation:(NSTableViewDropOperation)op
 {
-	return [self dragOperationForFile:info];
+    return [self dragOperationForFile:info];
 }
 
 - (void)dragOperationError:(NSString *)title info:(NSString *)info
@@ -827,58 +827,58 @@ NSInteger glossaryPathSort(id doc1, id doc2, void *context)
     [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextOK",@"Alerts",nil)];     // 1st button
     
     // show alert
-	[alert runModal];
+    [alert runModal];
 }
 
 - (BOOL)tableView:(NSTableView *)aTableView acceptDrop:(id <NSDraggingInfo>)info row:(int)row dropOperation:(NSTableViewDropOperation)operation
 {
-	NSPasteboard *pboard = [info draggingPasteboard];
-	
+    NSPasteboard *pboard = [info draggingPasteboard];
+    
     if ([[pboard types] containsObject:NSFilenamesPboardType])
     {
-		GMSidebarNode *node = [self selectedSidebarNode];
-		NSString *targetFolder = node.folder.path;
-		
+        GMSidebarNode *node = [self selectedSidebarNode];
+        NSString *targetFolder = node.folder.path;
+        
         for (NSString *path in [pboard propertyListForType:NSFilenamesPboardType])
         {
-			if (![self performDragOperation:operation sourcePath:path targetFolderPath:targetFolder])
+            if (![self performDragOperation:operation sourcePath:path targetFolderPath:targetFolder])
             {
-				[self dragOperationError:NSLocalizedString(@"An error has occurred while executing the drag and drop operation", nil) 
-									info:[NSString stringWithFormat:NSLocalizedString(@"Path = %@", nil), path]];
-				break;
-			}
-		}
+                [self dragOperationError:NSLocalizedString(@"An error has occurred while executing the drag and drop operation", nil) 
+                                    info:[NSString stringWithFormat:NSLocalizedString(@"Path = %@", nil), path]];
+                break;
+            }
+        }
         
-		[[GlossaryManager sharedInstance] reload];
-//		[[GlossaryManager shared] updatePaths];
-		return YES;
-	}
+        [[GlossaryManager sharedInstance] reload];
+//        [[GlossaryManager shared] updatePaths];
+        return YES;
+    }
     else
     {
-		return NO;			
-	}
+        return NO;            
+    }
 }
 
 - (BOOL)tableView:(NSTableView *)tv writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard*)pboard
 {
-	NSMutableArray *files = [NSMutableArray array];
+    NSMutableArray *files = [NSMutableArray array];
 
-	NSUInteger index = [rowIndexes firstIndex];
-	
+    NSUInteger index = [rowIndexes firstIndex];
+    
     while (index != NSNotFound)
     {
-		Glossary *g = [mGlossaryController content][index];
-		[files addObject:[g file]];
-		index = [rowIndexes indexGreaterThanIndex:index];
-	}
-		
-	if ([files count] > 0)
+        Glossary *g = [mGlossaryController content][index];
+        [files addObject:[g file]];
+        index = [rowIndexes indexGreaterThanIndex:index];
+    }
+        
+    if ([files count] > 0)
     {
-		[pboard declareTypes:@[NSFilenamesPboardType] owner:nil];
-		[pboard setPropertyList:files forType:NSFilenamesPboardType];		
-	}
-	
-	return ([files count] > 0);
+        [pboard declareTypes:@[NSFilenamesPboardType] owner:nil];
+        [pboard setPropertyList:files forType:NSFilenamesPboardType];        
+    }
+    
+    return ([files count] > 0);
 }
 
 #pragma mark -
@@ -887,42 +887,42 @@ NSInteger glossaryPathSort(id doc1, id doc2, void *context)
 - (BOOL)validateMenuItem:(NSMenuItem*)anItem
 {
     SEL action = [anItem action];
-	BOOL pathSelected = [self selectedSidebarNode] != nil;
-	NSUInteger countGlossarySelected = [[mGlossaryController selectedObjects] count];
-	BOOL glossarySelected = countGlossarySelected > 0;
-	BOOL globalNode = [[self selectedSidebarNode] isGlobal];
-	
-	if (action == @selector(pathRevealInFinder:))
+    BOOL pathSelected = [self selectedSidebarNode] != nil;
+    NSUInteger countGlossarySelected = [[mGlossaryController selectedObjects] count];
+    BOOL glossarySelected = countGlossarySelected > 0;
+    BOOL globalNode = [[self selectedSidebarNode] isGlobal];
+    
+    if (action == @selector(pathRevealInFinder:))
     {
-		return pathSelected;
-	}
-	
+        return pathSelected;
+    }
+    
     if (action == @selector(pathRemove:))
     {
-		return pathSelected && globalNode;
-	}
+        return pathSelected && globalNode;
+    }
 
-	if (action == @selector(glossaryOpen:))
+    if (action == @selector(glossaryOpen:))
     {
-		return glossarySelected;
-	}
-	
+        return glossarySelected;
+    }
+    
     if (action == @selector(glossaryRevealInFinder:))
     {
-		return glossarySelected;
-	}
-	
+        return glossarySelected;
+    }
+    
     if (action == @selector(glossaryMerge:))
     {
-		return (countGlossarySelected > 1);
-	}
-	
+        return (countGlossarySelected > 1);
+    }
+    
     if (action == @selector(glossaryDelete:))
     {
-		return glossarySelected;
-	}
-	
-	return YES;
+        return glossarySelected;
+    }
+    
+    return YES;
 }
 
 @end

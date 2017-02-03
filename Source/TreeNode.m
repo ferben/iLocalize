@@ -14,140 +14,140 @@
 
 + (TreeNode*)rootNode
 {
-	TreeNode *node = [[self alloc] init];
-	[node setIsRoot:YES];
-	return node;
+    TreeNode *node = [[self alloc] init];
+    [node setIsRoot:YES];
+    return node;
 }
 
 + (TreeNode*)leafNode
 {
-	TreeNode *node = [[self alloc] init];
-	[node setIsLeaf:YES];
-	return node;	
+    TreeNode *node = [[self alloc] init];
+    [node setIsLeaf:YES];
+    return node;    
 }
 
 + (TreeNode*)node
 {
-	return [[self alloc] init];
+    return [[self alloc] init];
 }
 
 + (TreeNode*)nodeWithTitle:(NSString*)title
 {
-	TreeNode *node = [[self alloc] init];
-	[node setTitle:title];
-	return node;
+    TreeNode *node = [[self alloc] init];
+    [node setTitle:title];
+    return node;
 }
 
 - (id)init
 {
-	if(self = [super init]) {
-		mTitle = NULL;
-		mIsRoot = NO;
-		mIsLeaf = NO;
-		mParentNode = NULL;
-		mNodes = NULL;
-	}
-	return self;
+    if(self = [super init]) {
+        mTitle = NULL;
+        mIsRoot = NO;
+        mIsLeaf = NO;
+        mParentNode = NULL;
+        mNodes = NULL;
+    }
+    return self;
 }
 
 
 - (void)setTitle:(NSString*)title
 {
-	mTitle = title;
+    mTitle = title;
 }
 
 - (NSString*)title
 {
-	return mTitle;
+    return mTitle;
 }
 
 - (NSUInteger)numberOfNodes
 {
-	return [mNodes count];
+    return [mNodes count];
 }
 
 - (void)checkNodes
 {
-	if(mNodes == NULL)
-		mNodes = [[NSMutableArray alloc] init];
+    if(mNodes == NULL)
+        mNodes = [[NSMutableArray alloc] init];
 }
 
 - (void)addNode:(TreeNode*)node
 {
-	[self checkNodes];
-	
-	[node setParentNode:self];
-	[mNodes addObject:node];
+    [self checkNodes];
+    
+    [node setParentNode:self];
+    [mNodes addObject:node];
 }
 
 - (void)addNodes:(NSArray*)nodes
 {
-	[self checkNodes];
-	
-	[mNodes addObjectsFromArray:nodes];
+    [self checkNodes];
+    
+    [mNodes addObjectsFromArray:nodes];
 }
 
 - (void)deleteNode:(TreeNode*)node
 {
-	[mNodes removeObject:node];
+    [mNodes removeObject:node];
 }
 
 - (void)deleteAllNodes
 {
-	[mNodes removeAllObjects];
+    [mNodes removeAllObjects];
 }
 
 - (TreeNode*)nodeAtIndex:(int)index
 {
-	return mNodes[index];
+    return mNodes[index];
 }
 
 - (NSMutableArray*)nodes
 {
-	return mNodes;
+    return mNodes;
 }
 
 - (TreeNode*)rootNode
 {
-	if([self isRoot])
-		return self;
-	else
-		return [[self parentNode] rootNode];
+    if([self isRoot])
+        return self;
+    else
+        return [[self parentNode] rootNode];
 }
 
 - (void)setParentNode:(TreeNode*)parentNode
 {
-	mParentNode = parentNode;
+    mParentNode = parentNode;
 }
 
 - (TreeNode*)parentNode
 {
-	return mParentNode;
+    return mParentNode;
 }
 
 - (void)setIsLeaf:(BOOL)leaf
 {
-	mIsLeaf = leaf;
+    mIsLeaf = leaf;
 }
 
 - (BOOL)isLeaf
 {
-	return mIsLeaf;
+    return mIsLeaf;
 }
 
 - (void)setIsRoot:(BOOL)root
 {
-	mIsRoot = root;
+    mIsRoot = root;
 }
 
 - (BOOL)isRoot
 {
-	return mIsRoot;
+    return mIsRoot;
 }
 
 - (NSString*)description
 {
-	return [NSString stringWithFormat:@"%@{%@}", mTitle, mNodes];
+    return [NSString stringWithFormat:@"%@{%@}", mTitle, mNodes];
 }
 
 @end

@@ -35,18 +35,18 @@ typedef void(^OperationCompletionCallbackBlock)(NSUInteger action);
  overriding the method nextOperation.
  */
 @interface OperationDriver : NSObject {
-	OperationDriverWC *opWC;
-	OperationDispatcher *dispatcher;
-	
-	// Current operation (can be an Operation or an OperationVC
-	id currentOperation;
-	
-	// Current state of the driver. This state will transition to other states,
-	// as defined by the subclass of this driver.
-	int currentState;
-	
-	// The optional arguments
-	NSDictionary *arguments;
+    OperationDriverWC *opWC;
+    OperationDispatcher *dispatcher;
+    
+    // Current operation (can be an Operation or an OperationVC
+    id currentOperation;
+    
+    // Current state of the driver. This state will transition to other states,
+    // as defined by the subclass of this driver.
+    int currentState;
+    
+    // The optional arguments
+    NSDictionary *arguments;
 }
 
 @property (weak) id<ProjectProvider> provider;
