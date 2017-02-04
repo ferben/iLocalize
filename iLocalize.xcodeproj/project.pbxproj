@@ -99,6 +99,7 @@
 		125677581A1A6FAE002117B0 /* FMEditorImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125677571A1A6FAE002117B0 /* FMEditorImage.xib */; };
 		1256775A1A1A7036002117B0 /* FMEditorRTF.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125677591A1A7036002117B0 /* FMEditorRTF.xib */; };
 		1256775C1A1A70B9002117B0 /* FMEditorTXT.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1256775B1A1A70B9002117B0 /* FMEditorTXT.xib */; };
+		12BC4F811E45E5EE007F5E8A /* iLocalize.help in Resources */ = {isa = PBXBuildFile; fileRef = 12BC4F801E45E5EE007F5E8A /* iLocalize.help */; };
 		12E7D8F61A204E2D0081037B /* ilocalize.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 12E7D8F51A204E2D0081037B /* ilocalize.sdef */; };
 		12F05F681A14FB4B00BFB4B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12F05F671A14FB4B00BFB4B4 /* Images.xcassets */; };
 		12F05F6A1A14FB7400BFB4B4 /* ApplicationIcons.icns in Resources */ = {isa = PBXBuildFile; fileRef = 12F05F691A14FB7400BFB4B4 /* ApplicationIcons.icns */; };
@@ -718,6 +719,7 @@
 		125677591A1A7036002117B0 /* FMEditorRTF.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMEditorRTF.xib; sourceTree = "<group>"; };
 		1256775B1A1A70B9002117B0 /* FMEditorTXT.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMEditorTXT.xib; sourceTree = "<group>"; };
 		127259B41E43C94E00318718 /* ToDo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ToDo.txt; sourceTree = "<group>"; };
+		12BC4F801E45E5EE007F5E8A /* iLocalize.help */ = {isa = PBXFileReference; lastKnownFileType = folder; path = iLocalize.help; sourceTree = "<group>"; };
 		12DECFB41C63452B00B84094 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		12DECFB61C63452B00B84094 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		12DECFB71C63452B00B84094 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LocalizableEditors.strings; sourceTree = "<group>"; };
@@ -2626,6 +2628,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				12BC4F801E45E5EE007F5E8A /* iLocalize.help */,
 				12442B6A1E3FAD28003CE206 /* Alerts.strings */,
 				12E7D8F51A204E2D0081037B /* ilocalize.sdef */,
 				125677551A1A6EF3002117B0 /* FMEditorHTML.xib */,
@@ -4470,6 +4473,7 @@
 				A751E16E13045B19007635F2 /* label_blue.png in Resources */,
 				12442B6C1E3FAD29003CE206 /* Alerts.strings in Resources */,
 				A751E16F13045B19007635F2 /* label_green.png in Resources */,
+				12BC4F811E45E5EE007F5E8A /* iLocalize.help in Resources */,
 				A751E17013045B19007635F2 /* label_orange.png in Resources */,
 				125673911A1A681E002117B0 /* LineEndingsConverter.xib in Resources */,
 				A751E17113045B19007635F2 /* label_purple.png in Resources */,

@@ -11,6 +11,7 @@
     IBOutlet NSTextField  *versionTextField;
     IBOutlet NSTextField  *copyrightTextField;
     IBOutlet NSButton     *licenseTextButton;
+    IBOutlet NSButton     *acknowledgmentButton;
 }
 
 + (void)show;

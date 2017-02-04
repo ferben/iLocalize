@@ -7,6 +7,7 @@
 //
 
 #import "AboutWindow.h"
+#import "NSHelpManager+Extensions.h"
 
 
 @implementation AboutWindow
@@ -15,10 +16,12 @@ static AboutWindow *aboutWindow = nil;
 
 + (void)show
 {
-    if(aboutWindow == nil) {
+    if (aboutWindow == nil)
+    {
         aboutWindow = [[AboutWindow alloc] initWithWindowNibName:@"About"];        
         [[aboutWindow window] center];
     }
+    
     [[aboutWindow window] makeKeyAndOrderFront:self];
 }
 
@@ -31,8 +34,8 @@ static AboutWindow *aboutWindow = nil;
     [versionTextField setStringValue:[NSString stringWithFormat:@"%@ %@ (%@)", NSLocalizedString(@"Version", @"About Box Version"), shortVersion, buildNumber]];
     [copyrightTextField setStringValue:copyright];
 
-#warning Do we still need the License Text button?
     // [licenseTextButton setHidden:YES];
+    // [acknowledgmentButton setHidden:YES];
 }
 
 - (NSBundle *)helpBundle
@@ -43,12 +46,12 @@ static AboutWindow *aboutWindow = nil;
 
 - (IBAction)showAcknowledgment:(id)sender
 {
-    [[NSWorkspace sharedWorkspace] openFile:[[self helpBundle] pathForResource:@"Acknowledgments" ofType:@"html" inDirectory:@"misc"]];
+    [[NSWorkspace sharedWorkspace] openFile:[[self helpBundle] pathForResource:@"Acknowledgments.html" ofType:nil inDirectory:nil]];
 }
 
 - (IBAction)showLicenseAgreement:(id)sender
 {
-    [[NSWorkspace sharedWorkspace] openFile:[[self helpBundle] pathForResource:@"LicenseAgreement" ofType:@"html" inDirectory:@"misc"]];    
+    [[NSWorkspace sharedWorkspace] openFile:[[self helpBundle] pathForResource:@"LicenseAgreement.html" ofType:nil inDirectory:nil]];
 }
 
 @end

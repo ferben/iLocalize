@@ -183,7 +183,7 @@
 	<key>CFBundleHelpBookFolder</key>
 	<string>iLocalize.help</string>
 	<key>CFBundleHelpBookName</key>
-	<string>iLocalize Help</string>
+	<string>ch.arizona-software.ilocalize.help</string>
 	<key>CFBundleIconFile</key>
 	<string>ApplicationIcons</string>
 	<key>CFBundleIdentifier</key>

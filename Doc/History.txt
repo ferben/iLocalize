@@ -31,5 +31,6 @@
 #               - all deprecated alert methods adjusted
 #   fd  Feb 03: - all .h files reformatted - we want visually corresponding curly brackets and splendid source layouts
 #               - RemoveLanguageOperation.m: As this is a destructive alert, we don't want to be the destructive button to be the default button!
+#               - AboutBox: License Agreement and Acknowledgments are shown again.
 #
 # --------------------------------------------------------------------------------
