@@ -13,7 +13,7 @@
 
 
 // AlertButtonTexts
-"AlertButtonTextOK" = "OK";
+"AlertButtonTextAdd" = "Добавить";
 "AlertButtonTextCancel" = "Отменить";
 "AlertButtonTextCheck" = "Проверить";
 "AlertButtonTextClear" = "Очистить";
@@ -23,6 +23,7 @@
 "AlertButtonTextDontOpen" = "Не открывать";
 "AlertButtonTextMerge" = "Объединить…";
 "AlertButtonTextMoveToTrash" = "Переместить в Корзинуh";
+"AlertButtonTextOK" = "OK";
 "AlertButtonTextOpen" = "Открыть";
 "AlertButtonTextOpenAndUpgrade" = "Открыть и обновить";
 "AlertButtonTextOverwrite" = "Перезаписать";

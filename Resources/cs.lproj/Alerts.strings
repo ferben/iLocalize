@@ -13,7 +13,7 @@
 
 
 // AlertButtonTexts
-"AlertButtonTextOK" = "OK";
+"AlertButtonTextAdd" = "Přidat";
 "AlertButtonTextCancel" = "Zrušit";
 "AlertButtonTextCheck" = "Ověřit";
 "AlertButtonTextClear" = "Vyčistit";
@@ -23,6 +23,7 @@
 "AlertButtonTextDontOpen" = "Neotevírat";
 "AlertButtonTextMerge" = "Sloučit…";
 "AlertButtonTextMoveToTrash" = "Přesunout do Koše";
+"AlertButtonTextOK" = "OK";
 "AlertButtonTextOpen" = "Otevřít";
 "AlertButtonTextOpenAndUpgrade" = "Otevřít a aktualizovat";
 "AlertButtonTextOverwrite" = "Přepsat";

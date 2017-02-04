@@ -13,7 +13,7 @@
 
 
 // AlertButtonTexts
-"AlertButtonTextOK" = "OK";
+"AlertButtonTextAdd" = "TIlføj";
 "AlertButtonTextCancel" = "Annuller";
 "AlertButtonTextCheck" = "Kontroller";
 "AlertButtonTextClear" = "Slet";
@@ -23,6 +23,7 @@
 "AlertButtonTextDontOpen" = "Åbn ikke";
 "AlertButtonTextMerge" = "Flet…";
 "AlertButtonTextMoveToTrash" = "Flyt til Papirkurv";
+"AlertButtonTextOK" = "OK";
 "AlertButtonTextOpen" = "Åbn";
 "AlertButtonTextOpenAndUpgrade" = "Åbn og opgrader";
 "AlertButtonTextOverwrite" = "Overskriv";

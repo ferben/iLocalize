@@ -112,9 +112,6 @@
 /* Diff Operation Add */
 "add" = "voeg toe";
 
-/* Language */
-"Add" = "Voeg toe";
-
 /* No comment provided by engineer. */
 "Add Language…" = "Voeg taal toe…";
 

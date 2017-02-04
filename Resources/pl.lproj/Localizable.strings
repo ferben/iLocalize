@@ -110,10 +110,7 @@
 "< New >" = "< Nowy >";
 
 /* Diff Operation Add */
-"add" = "Dodaj";
-
-/* Language */
-"Add" = "Dodaj";
+"add" = "dodaj";
 
 /* No comment provided by engineer. */
 "Add Language…" = "Dodaj język…";

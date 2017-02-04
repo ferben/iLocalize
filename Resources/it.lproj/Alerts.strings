@@ -13,7 +13,7 @@
 
 
 // AlertButtonTexts
-"AlertButtonTextOK" = "OK";
+"AlertButtonTextAdd" = "Aggiungi";
 "AlertButtonTextCancel" = "Annulla";
 "AlertButtonTextCheck" = "Controlla";
 "AlertButtonTextClear" = "Elimina";
@@ -23,6 +23,7 @@
 "AlertButtonTextDontOpen" = "Non Aprire";
 "AlertButtonTextMerge" = "Merge…";
 "AlertButtonTextMoveToTrash" = "Sposta nel Cestino";
+"AlertButtonTextOK" = "OK";
 "AlertButtonTextOpen" = "Apri";
 "AlertButtonTextOpenAndUpgrade" = "Apri e Aggiorna";
 "AlertButtonTextOverwrite" = "Sovrascrivi";

@@ -83,11 +83,11 @@
     
     if (flag)
     {
-        [mOKButton setTitle:NSLocalizedString(@"Rename", @"Language")];        
+        [mOKButton setTitle:NSLocalizedStringFromTable(@"AlertButtonTextRename", @"Alerts", nil)];        
     }
     else
     {
-        [mOKButton setTitle:NSLocalizedString(@"Add", @"Language")];
+        [mOKButton setTitle:NSLocalizedStringFromTable(@"AlertButtonTextAdd", @"Alerts", nil)];
     }
 }
 

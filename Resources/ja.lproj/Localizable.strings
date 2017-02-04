@@ -112,9 +112,6 @@
 /* Diff Operation Add */
 "add" = "追加";
 
-/* Language */
-"Add" = "追加";
-
 /* No comment provided by engineer. */
 "Add Language…" = "言語を追加…";
 

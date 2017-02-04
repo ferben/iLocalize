@@ -13,7 +13,7 @@
 
 
 // AlertButtonTexts
-"AlertButtonTextOK" = "OK";
+"AlertButtonTextAdd" = "追加";
 "AlertButtonTextCancel" = "キャンセル";
 "AlertButtonTextCheck" = "チェック";
 "AlertButtonTextClear" = "消去";
@@ -23,6 +23,7 @@
 "AlertButtonTextDontOpen" = "開かない";
 "AlertButtonTextMerge" = "マージ…";
 "AlertButtonTextMoveToTrash" = "ゴミ箱に入れる";
+"AlertButtonTextOK" = "OK";
 "AlertButtonTextOpen" = "Open";
 "AlertButtonTextOpenAndUpgrade" = "開いて更新";
 "AlertButtonTextOverwrite" = "上書き";

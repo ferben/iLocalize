@@ -112,9 +112,6 @@
 /* Diff Operation Add */
 "add" = "hinzufügen";
 
-/* Language */
-"Add" = "Hinzufügen";
-
 /* No comment provided by engineer. */
 "Add Language…" = "Sprache hinzufügen …";
 

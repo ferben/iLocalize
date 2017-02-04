@@ -13,7 +13,7 @@
 
 
 // AlertButtonTexts
-"AlertButtonTextOK" = "OK";
+"AlertButtonTextAdd" = "Voeg toe";
 "AlertButtonTextCancel" = "Annuleer";
 "AlertButtonTextCheck" = "Controleer";
 "AlertButtonTextClear" = "Wis";
@@ -23,6 +23,7 @@
 "AlertButtonTextDontOpen" = "Open niet";
 "AlertButtonTextMerge" = "Voeg samen…";
 "AlertButtonTextMoveToTrash" = "Verplaats naar prullenmand";
+"AlertButtonTextOK" = "OK";
 "AlertButtonTextOpen" = "Open";
 "AlertButtonTextOpenAndUpgrade" = "Open en upgrade";
 "AlertButtonTextOverwrite" = "Overschrijf";
