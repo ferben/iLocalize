@@ -26,6 +26,13 @@
     [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextDelete",@"Alerts",nil)];      // 1st button
     [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextCancel",@"Alerts",nil)];      // 2nd button
     
+    // As this is a destructive alert, we don't want to be the destructive button to be the default button!
+    NSArray *buttons = [alert buttons];
+
+    // note: rightmost button is index 0
+    [[buttons objectAtIndex:1] setKeyEquivalent: @"\r"];
+    [[buttons objectAtIndex:0] setKeyEquivalent:@""];
+
     // show alert
     [alert beginSheetModalForWindow:[self projectWindow] completionHandler:^(NSModalResponse alertReturnCode)
      {
@@ -36,13 +43,10 @@
          
          [[[self projectProvider] projectWC] selectLanguageAtIndex:0];
          
-         // old stuff from -beginSheetModalForWindow:modalDelegate:didEndSelector:contextInfo:
-         // contextInfo:(__bridge_retained void*)@{@"language" : [language language], @"self" : self }];
-         // NSDictionary *info = (__bridge_transfer NSDictionary *)(contextInfo);
-         
          // In order for the selection to be changed before removing the language: otherwise, crash can occur
          // because the deleted language can be still updated after it has been removed (or is being removed)
-         dispatch_async(dispatch_get_main_queue(), ^{
+         dispatch_async(dispatch_get_main_queue(),^
+         {
              [[self operationDispatcher] removeLanguage:[language language] completion:^(id results)
              {
                  [self close];
