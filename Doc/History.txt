@@ -29,5 +29,7 @@
 #   fd  Feb 02: - deployment target set to OS X 10.11
 #               - Project now gets the current GIT commit # by Build Phase script
 #               - all deprecated alert methods adjusted
+#   fd  Feb 03: - all .h files reformatted - we want visually corresponding curly brackets and splendid source layouts
+#               - RemoveLanguageOperation.m: As this is a destructive alert, we don't want to be the destructive button to be the default button!
 #
 # --------------------------------------------------------------------------------

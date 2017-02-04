@@ -4327,13 +4327,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A751E35F13045B19007635F2 /* Build configuration list for PBXNativeTarget "iLocalize" */;
 			buildPhases = (
-				A751E35E13045B19007635F2 /* GenScript */,
-				A70DFFD5183876D70020E7A8 /* Bump version */,
-				12442B681E3FA966003CE206 /* Version Tracking */,
 				A751E15913045B19007635F2 /* Resources */,
+				12442B681E3FA966003CE206 /* Version Tracking */,
 				A751E20E13045B19007635F2 /* Sources */,
 				A751E35513045B19007635F2 /* Frameworks */,
-				A729B6DE1829F773009D4579 /* Copy Languages */,
 			);
 			buildRules = (
 			);
@@ -4375,7 +4372,7 @@
 						TestTargetID = A751E15813045B19007635F2;
 					};
 					A751E15813045B19007635F2 = {
-						DevelopmentTeam = 32PKJMKZ6U;
+						DevelopmentTeam = 6WH3C43QRG;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -4610,48 +4607,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "git=`sh /etc/profile; which git`\n# branch_name=`$git symbolic-ref HEAD | sed -e 's,.*/\\\\(.*\\\\),\\\\1,'`\nbranch_name=`$git rev-parse --abbrev-ref HEAD`\ngit_count=`$git rev-list $branch_name |wc -l | sed 's/^ *//;s/ *$//'`\n\nbase_count=1\n\nsum_count=$(($base_count+$git_count))\n\nbuild_number=\"$sum_count\"\nif [ $CONFIGURATION != \"Release\" ]; then\nbuild_number+=\"-$branch_name\"\nfi\n\nplist=\"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\ndsym_plist=\"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist\"\n\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $build_number\" \"$plist\"\nif [ -f \"$DSYM_INFO_PLIST\" ] ; then\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $build_number\" \"$dsym_plist\"\nfi";
-		};
-		A70DFFD5183876D70020E7A8 /* Bump version */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Bump version";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-			shellPath = /bin/sh;
-			shellScript = "# source scripts/xcode_version.sh\n";
-		};
-		A729B6DE1829F773009D4579 /* Copy Languages */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Languages";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-			shellPath = /bin/sh;
-			shellScript = "# // Set the path to the product\n# export ILOCALIZE_APP=${TARGET_BUILD_DIR}/${TARGET_NAME}.app\n\n# // Copy all the localized languages\n# source scripts/xcode_copylanguage.sh\n";
-		};
-		A751E35E13045B19007635F2 /* GenScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = GenScript;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# echo $(pwd)\n# genstrings -o en.lproj Source/*.h Source/*.m";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -6719,7 +6674,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = 32PKJMKZ6U;
+				DEVELOPMENT_TEAM = 6WH3C43QRG;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = iLocalize_Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -6736,7 +6691,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = 32PKJMKZ6U;
+				DEVELOPMENT_TEAM = 6WH3C43QRG;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = iLocalize_Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
