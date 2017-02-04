@@ -136,7 +136,7 @@
 
 // ProjectMenuEdit
 "ProjectMenuEditChangeTitle" = "Change the encoding of the selected files?";
-"ProjectMenuEditChangeDescr" = "Do you want to reload each file as '%@' or save the current in-memory content of each file as a '%@' file?";
+"ProjectMenuEditChangeDescr" = "Do you want to reload each file as '%1$@' or save the current in-memory content of each file as a '%2$@' file?";
 
 // RebuildBaseFiles
 "RebuildBaseFilesTitle" = "Rebuild selected base files?";
