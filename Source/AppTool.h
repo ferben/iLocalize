@@ -6,8 +6,10 @@
 //  Copyright 2005 Arizona Software. All rights reserved.
 //
 
-@interface AppTool : NSObject {
-
+@interface AppTool : NSObject
+{
 }
-+ (BOOL)launchApplication:(NSString*)app language:(NSString*)language bringToFront:(BOOL)bringToFront;
+
++ (BOOL)launchApplication:(NSString *)app language:(NSString *)language bringToFront:(BOOL)bringToFront;
+
 @end

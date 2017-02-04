@@ -8,10 +8,12 @@
 
 #import "AbstractEngine.h"
 
-@interface OptimizeEngine : AbstractEngine {
-
+@interface OptimizeEngine : AbstractEngine
+{
 }
-- (void)compactNibInApp:(NSString*)app;
-- (void)upgradeNibInApp:(NSString*)app;
-- (void)cleanApp:(NSString*)app;
+
+- (void)compactNibInApp:(NSString *)app;
+- (void)upgradeNibInApp:(NSString *)app;
+- (void)cleanApp:(NSString *)app;
+
 @end

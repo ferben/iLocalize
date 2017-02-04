@@ -9,17 +9,18 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface TableViewHeightCache : NSObject<NSCopying> {
-    NSDictionary *attributes;
-    NSString *value;
-    CGFloat width;
-    NSUInteger hashValue;
+@interface TableViewHeightCache : NSObject<NSCopying>
+{
+    NSDictionary  *attributes;
+    NSString      *value;
+    CGFloat        width;
+    NSUInteger     hashValue;
 }
 
 @property (strong) NSDictionary *attributes;
 @property (strong) NSString *value;
 @property CGFloat width;
 
-+ (CGFloat)heightForValue:(NSString*)value width:(CGFloat)width defaultHeight:(CGFloat)height attributes:(NSDictionary*)attributes;
++ (CGFloat)heightForValue:(NSString *)value width:(CGFloat)width defaultHeight:(CGFloat)height attributes:(NSDictionary *)attributes;
 
 @end

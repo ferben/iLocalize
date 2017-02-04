@@ -10,31 +10,32 @@
 @class ExplorerFilter;
 @class SearchContext;
 
-@interface ProjectViewSearchController : NSViewController<NSTextFieldDelegate> {
-    IBOutlet NSTextField *replaceTextField;
-    IBOutlet NSButton *replaceButton;
-    IBOutlet NSButton *replaceAllButton;
+@interface ProjectViewSearchController : NSViewController<NSTextFieldDelegate>
+{
+    IBOutlet NSTextField  *replaceTextField;
+    IBOutlet NSButton     *replaceButton;
+    IBOutlet NSButton     *replaceAllButton;
     
-    IBOutlet NSButton *scopeFilesButton;
-    IBOutlet NSButton *scopeKeyButton;
-    IBOutlet NSButton *scopeStringsBaseButton;
-    IBOutlet NSButton *scopeStringsTranslationButton;
-    IBOutlet NSButton *scopeCommentsBaseButton;
-    IBOutlet NSButton *scopeCommentsTranslationButton;
+    IBOutlet NSButton     *scopeFilesButton;
+    IBOutlet NSButton     *scopeKeyButton;
+    IBOutlet NSButton     *scopeStringsBaseButton;
+    IBOutlet NSButton     *scopeStringsTranslationButton;
+    IBOutlet NSButton     *scopeCommentsBaseButton;
+    IBOutlet NSButton     *scopeCommentsTranslationButton;
     
-    SearchContext* context;
+    SearchContext         *context;
 }
 
 @property (assign) ProjectWC *projectWC;
 @property (strong) SearchContext *context;
 
-+ (ProjectViewSearchController*)newInstance:(ProjectWC*)projectWC;
++ (ProjectViewSearchController *)newInstance:(ProjectWC *)projectWC;
 
 - (void)updateInterface;
 
 - (CGFloat)viewHeight;
 
-- (NSString*)replaceString;
+- (NSString *)replaceString;
 
 - (IBAction)contextChanged:(id)sender;
 - (IBAction)save:(id)sender;

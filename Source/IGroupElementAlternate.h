@@ -8,14 +8,15 @@
 
 #import "IGroupElement.h"
 
-@interface IGroupElementAlternate : IGroupElement {
-    float score;
-    NSString *file;
+@interface IGroupElementAlternate : IGroupElement
+{
+    float      score;
+    NSString  *file;
 }
 
 @property float score;
 @property (strong) NSString *file;
 
-+ (IGroupElementAlternate*)elementWithDictionary:(NSDictionary*)dic;
++ (IGroupElementAlternate *)elementWithDictionary:(NSDictionary *)dic;
 
 @end

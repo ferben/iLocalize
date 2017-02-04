@@ -11,28 +11,29 @@
 @class ProjectController;
 @class Console;
 
-@interface ConsoleWC : NSWindowController {
-    id <ProjectProvider>        mProjectProvider;
-    NSInteger                   mDisplayType;
+@interface ConsoleWC : NSWindowController
+{
+    id <ProjectProvider>     mProjectProvider;
+    NSInteger                mDisplayType;
     
-    IBOutlet NSPopUpButton        *mShowTypeButton;
-    IBOutlet NSTextField        *mDeleteOldDays;
+    IBOutlet NSPopUpButton  *mShowTypeButton;
+    IBOutlet NSTextField    *mDeleteOldDays;
     
-    IBOutlet NSOutlineView        *mOutlineView;
-    IBOutlet NSTableView        *mOperationTableView;
-    IBOutlet NSTableView        *mLogTableView;
-    IBOutlet NSTextView            *mDetailedTextView;
+    IBOutlet NSOutlineView  *mOutlineView;
+    IBOutlet NSTableView    *mOperationTableView;
+    IBOutlet NSTableView    *mLogTableView;
+    IBOutlet NSTextView     *mDetailedTextView;
     
-    NSMutableArray                *mOperationArray;
-    NSMutableArray                *mLogItemArray;
-    NSMutableDictionary            *mLevelForItemDictionary;
+    NSMutableArray          *mOperationArray;
+    NSMutableArray          *mLogItemArray;
+    NSMutableDictionary     *mLevelForItemDictionary;
     
-    BOOL                        mHierarchical;
+    BOOL                     mHierarchical;
 }
 
 - (id)initWithProjectProvider:(id<ProjectProvider>)projectProvider;
 
-- (Console*)console;
+- (Console *)console;
 
 - (void)refresh;
 - (void)show;
@@ -43,4 +44,5 @@
 - (IBAction)refresh:(id)sender;
 - (IBAction)clearAll:(id)sender;
 - (IBAction)export:(id)sender;
+
 @end

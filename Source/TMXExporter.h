@@ -8,8 +8,8 @@
 
 #import "XMLExporter.h"
 
-@interface TMXExporter : XMLExporter {
-
+@interface TMXExporter : XMLExporter
+{
 }
 
 @end

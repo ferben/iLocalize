@@ -8,8 +8,8 @@
 
 #import "XMLImporter.h"
 
-@interface TMXImporter : XMLImporter {
-
+@interface TMXImporter : XMLImporter
+{
 }
 
 @end

@@ -7,13 +7,16 @@
 //
 
 
-@interface Stack : NSObject <NSCoding> {
-    NSMutableArray    *mStack;
+@interface Stack : NSObject <NSCoding>
+{
+    NSMutableArray  *mStack;
 }
+
 - (void)pushObject:(id)object;
 - (id)popObject;
 - (id)currentObject;
 - (void)clear;
 - (NSUInteger)count;
-- (BOOL)isEqualToArray:(NSArray*)array;
+- (BOOL)isEqualToArray:(NSArray *)array;
+
 @end

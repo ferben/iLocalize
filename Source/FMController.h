@@ -8,8 +8,8 @@
 
 #import "FileController.h"
 
-@interface FMController : FileController {
-    
+@interface FMController : FileController
+{
 }
 
 @end

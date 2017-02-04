@@ -10,8 +10,8 @@
 
 @interface PreferencesAdvanced : PreferencesObject
 {
-    IBOutlet NSArrayController *mIbtoolPlugins;
-    IBOutlet NSMatrix          *mUpdatesModeMatrix;
+    IBOutlet NSArrayController  *mIbtoolPlugins;
+    IBOutlet NSMatrix           *mUpdatesModeMatrix;
 }
 
 + (id)shared;

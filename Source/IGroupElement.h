@@ -7,14 +7,15 @@
 //
 
 
-@interface IGroupElement : NSObject {
-    NSString *source;
-    NSString *target;
+@interface IGroupElement : NSObject
+{
+    NSString  *source;
+    NSString  *target;
 }
 
 @property (copy) NSString *source;
 @property (copy) NSString *target;
 
-+ (IGroupElement*)elementWithSource:(NSString*)source target:(NSString*)target;
++ (IGroupElement *)elementWithSource:(NSString *)source target:(NSString *)target;
 
 @end

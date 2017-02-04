@@ -8,8 +8,11 @@
 
 #import "AbstractOperation.h"
 
-@interface LineEndingsConverterOperation : AbstractOperation {
-    NSArray    *mFileControllers;
+@interface LineEndingsConverterOperation : AbstractOperation
+{
+    NSArray  *mFileControllers;
 }
-- (void)convertFileControllers:(NSArray*)fileControllers;
+
+- (void)convertFileControllers:(NSArray *)fileControllers;
+
 @end

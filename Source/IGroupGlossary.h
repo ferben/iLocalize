@@ -9,8 +9,9 @@
 #import "IGroup.h"
 #import "IGroupEngineManager.h"
 
-@interface IGroupGlossary : IGroup {
-    NSArray *sortDescriptors;
+@interface IGroupGlossary : IGroup
+{
+    NSArray  *sortDescriptors;
 }
 
 @end

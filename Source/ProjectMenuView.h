@@ -8,8 +8,8 @@
 
 #import "ProjectMenu.h"
 
-@interface ProjectMenuView : ProjectMenu {    
-
+@interface ProjectMenuView : ProjectMenu
+{
 }
 
 - (IBAction)showInfoProject:(id)sender;

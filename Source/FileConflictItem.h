@@ -9,10 +9,12 @@
 /**
  This class holds a file information with its source and its corresponding project file.
  */
-@interface FileConflictItem : NSObject {
-    NSString *source;
-    NSString *project;
+@interface FileConflictItem : NSObject
+{
+    NSString  *source;
+    NSString  *project;
 }
 @property (strong) NSString *source;
 @property (strong) NSString *project;
+
 @end

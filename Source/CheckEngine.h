@@ -26,4 +26,5 @@
 - (NSUInteger)checkLanguages:(NSArray *)languages;
 - (BOOL)checkFormattingCharactersOfBaseString:(NSString *)base localizedString:(NSString *)localized;
 - (void)markStringController:(StringController *)sc;
+
 @end

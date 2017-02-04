@@ -10,26 +10,27 @@
 
 @class ProjectController;
 
-@interface AbstractWC : NSWindowController {
-    NSWindow                *mParentWindow;
+@interface AbstractWC : NSWindowController
+{
+    NSWindow       *mParentWindow;
     
-    SEL                        mDidOKSelector;
-    id                        mDidOKTarget;
+    SEL             mDidOKSelector;
+    id              mDidOKTarget;
     
-    SEL                        mDidCloseSelector;
-    id                        mDidCloseTarget;
+    SEL             mDidCloseSelector;
+    id              mDidCloseTarget;
     
-    int                        mHideCode;
-    BOOL                    mClosed;
+    int             mHideCode;
+    BOOL            mClosed;
     
-    CallbackBlock            didCloseCallback;
+    CallbackBlock   didCloseCallback;
 }
 
 @property (copy) CallbackBlock didCloseCallback;
 @property (weak) id<ProjectProvider> projectProvider;
 
-- (void)setParentWindow:(NSWindow*)window;
-- (NSWindow*)parentWindow;
+- (void)setParentWindow:(NSWindow *)window;
+- (NSWindow *)parentWindow;
 
 - (IBAction)cancel:(id)sender;
 - (IBAction)ok:(id)sender;

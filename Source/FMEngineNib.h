@@ -8,8 +8,8 @@
 
 #import "FMEngineStrings.h"
 
-@interface FMEngineNib : FMEngineStrings {
-
+@interface FMEngineNib : FMEngineStrings
+{
 }
 
 @end

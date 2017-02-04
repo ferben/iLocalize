@@ -8,8 +8,8 @@
 
 #import "GlossaryScopeAbstractWC.h"
 
-@interface GlossaryTranslateWC : GlossaryScopeAbstractWC {
-
+@interface GlossaryTranslateWC : GlossaryScopeAbstractWC
+{
 }
 
 - (IBAction)translateAllFiles:(id)sender;

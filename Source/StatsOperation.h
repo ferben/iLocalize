@@ -8,8 +8,10 @@
 
 #import "AbstractOperation.h"
 
-@interface StatsOperation : AbstractOperation {
-
+@interface StatsOperation : AbstractOperation
+{
 }
+
 - (void)stats;
+
 @end

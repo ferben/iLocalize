@@ -13,8 +13,11 @@
 /**
  This operation rebases the specified files in the project.
  */
-@interface ImportFilesBaseLanguageOp : Operation {
-    ImportFilesSettings *settings;
+@interface ImportFilesBaseLanguageOp : Operation
+{
+    ImportFilesSettings  *settings;
 }
+
 @property (strong) ImportFilesSettings *settings;
+
 @end

@@ -9,12 +9,13 @@
 #import "FileControllerProtocol.h"
 #import "StringControllerProtocol.h"
 
-@interface XMLExporter : NSObject {
-    NSString *sourceLanguage;
-    NSString *targetLanguage;
-    NSMutableString *content;
-    CallbackErrorBlock errorCallback;
-    NSUInteger globalStringIndex;
+@interface XMLExporter : NSObject
+{
+    NSString            *sourceLanguage;
+    NSString            *targetLanguage;
+    NSMutableString     *content;
+    CallbackErrorBlock   errorCallback;
+    NSUInteger           globalStringIndex;
 }
 
 @property (strong) NSString *sourceLanguage;
@@ -22,9 +23,9 @@
 @property (strong, readonly) NSMutableString *content;
 @property (copy) CallbackErrorBlock errorCallback;
 
-+ (NSString*)writableExtension;
++ (NSString *)writableExtension;
 
-- (void)reportInvalidXMLCharacters:(NSString*)s location:(NSUInteger)location fc:(id<FileControllerProtocol>)fc sc:(id<StringControllerProtocol>)sc;
+- (void)reportInvalidXMLCharacters:(NSString *)s location:(NSUInteger)location fc:(id<FileControllerProtocol>)fc sc:(id<StringControllerProtocol>)sc;
 
 - (void)buildHeader;
 - (void)buildFooter;

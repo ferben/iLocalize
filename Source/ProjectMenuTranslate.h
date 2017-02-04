@@ -12,10 +12,11 @@
 @class GlossaryScope;
 @class GlossaryTranslator;
 
-@interface ProjectMenuTranslate : ProjectMenu {
-    GlossaryTranslateWC *wc;
-    GlossaryScope *scope;
-    GlossaryTranslator *translator;
+@interface ProjectMenuTranslate : ProjectMenu
+{
+    GlossaryTranslateWC  *wc;
+    GlossaryScope        *scope;
+    GlossaryTranslator   *translator;
 }
 
 - (IBAction)translateUsingGlossaries:(id)sender;

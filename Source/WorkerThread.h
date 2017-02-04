@@ -10,14 +10,15 @@
 @class SafeData;
 @class SafeStatus;
 
-@interface WorkerThread : NSObject {
-    PilotThread        *mPilotThread;
-    SafeData        *mData;
-    BOOL            mRequestStop;
-    BOOL            mRunning;
+@interface WorkerThread : NSObject
+{
+    PilotThread  *mPilotThread;
+    SafeData     *mData;
+    BOOL          mRequestStop;
+    BOOL          mRunning;
 }
 
-- (void)setPilot:(PilotThread*)pilot;
+- (void)setPilot:(PilotThread *)pilot;
 
 - (void)startWorkingWithData:(id)data;
 - (void)stopWorking;

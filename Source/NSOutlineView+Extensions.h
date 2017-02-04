@@ -8,7 +8,11 @@
 
 
 @interface NSOutlineView (iLocalize)
+{
+}
+
 - (id)selectedItem;
-- (NSArray*)selectedItems;
+- (NSArray *)selectedItems;
 - (id)rootItemOfItem:(id)item;
+
 @end

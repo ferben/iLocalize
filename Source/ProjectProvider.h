@@ -19,36 +19,36 @@
 
 - (void)setUndoManagerEnabled:(BOOL)flag;
 - (BOOL)undoManagerEnabled;
-- (NSUndoManager*)projectUndoManager;
+- (NSUndoManager *)projectUndoManager;
 
-- (ProjectModel*)projectModel;
-- (ProjectPrefs*)projectPrefs;
-- (Structure*)structure;
-- (Explorer*)explorer;
-- (Console*)console;
-- (HistoryManager*)historyManager;
+- (ProjectModel *)projectModel;
+- (ProjectPrefs *)projectPrefs;
+- (Structure *)structure;
+- (Explorer *)explorer;
+- (Console *)console;
+- (HistoryManager *)historyManager;
 
-- (ProjectDocument*)projectDocument;
-- (ProjectController*)projectController;
-- (LanguageController*)selectedLanguageController;
-- (NSArray*)selectedFileControllers;
-- (NSArray*)selectedStringControllers;
+- (ProjectDocument *)projectDocument;
+- (ProjectController *)projectController;
+- (LanguageController *)selectedLanguageController;
+- (NSArray *)selectedFileControllers;
+- (NSArray *)selectedStringControllers;
 
-- (ProjectWC*)projectWC;
-- (OperationWC*)operation;
+- (ProjectWC *)projectWC;
+- (OperationWC *)operation;
 
-- (OperationDispatcher*)operationDispatcher;
-- (EngineProvider*)engineProvider;
+- (OperationDispatcher *)operationDispatcher;
+- (EngineProvider *)engineProvider;
 
-- (FMEditor*)currentFileModuleEditor;
+- (FMEditor *)currentFileModuleEditor;
 
-- (FMEditor*)fileModuleEditorForFile:(NSString*)file;
-- (FMEngine*)fileModuleEngineForFile:(NSString*)file;
+- (FMEditor *)fileModuleEditorForFile:(NSString *)file;
+- (FMEngine *)fileModuleEngineForFile:(NSString *)file;
 
-- (NSString*)sourceApplicationPath;
+- (NSString *)sourceApplicationPath;
 
-- (NSString*)projectAppVersionString;
-- (NSString*)applicationExecutableName;
+- (NSString *)projectAppVersionString;
+- (NSString *)applicationExecutableName;
 
 - (void)beginOperation;
 - (void)endOperation;
@@ -56,11 +56,11 @@
 - (void)rearrangeFilesController;
 
 - (void)resetConflictingFilesDecision;
-- (void)setConflictingFilesDecision:(NSArray*)decision;
-- (int)decisionForConflictingRelativeFile:(NSString*)file;
+- (void)setConflictingFilesDecision:(NSArray *)decision;
+- (int)decisionForConflictingRelativeFile:(NSString *)file;
 
 - (void)setDirty;
 
-- (void)openFileWithExternalEditor:(NSString*)file;
+- (void)openFileWithExternalEditor:(NSString *)file;
 
 @end

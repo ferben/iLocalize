@@ -8,8 +8,8 @@
 
 #import "AbstractOperation.h"
 
-@interface AddLanguageOperation : AbstractOperation {
-
+@interface AddLanguageOperation : AbstractOperation
+{
 }
 
 - (void)addLanguage;

@@ -10,28 +10,29 @@
 @class ProjectWC;
 @class ProjectDetails;
 
-@interface ProjectDetailsController : NSViewController {
+@interface ProjectDetailsController : NSViewController
+{
     // view of the buttons (owned)
-    IBOutlet NSMatrix        *mButtonMatrix;
+    IBOutlet NSMatrix    *mButtonMatrix;
     
     // split view that need to be manipulated (show/hide) - not owned
-    AZSplitView                * __weak splitView;
+    AZSplitView          *__weak splitView;
     
     // container view for the details view - not owned
-    NSView                    * __weak containerView;
+    NSView               *__weak containerView;
 
-    ProjectWC                * __unsafe_unretained projectWC;
+    ProjectWC            *__unsafe_unretained projectWC;
 
-    NSMutableDictionary        *mProjectDetails;
-    NSView                    *mCurrentDetailsView;
+    NSMutableDictionary  *mProjectDetails;
+    NSView               *mCurrentDetailsView;
 
-    NSInteger                detailsIndex;
-    NSInteger                lastDetailsIndex;
+    NSInteger             detailsIndex;
+    NSInteger             lastDetailsIndex;
     
     // Queue for all the toggle request in order to execute
     // them one at a time, serially.
-    NSMutableArray            *toggleRequests;
-    NSNull                    *currentToggleRequest;
+    NSMutableArray       *toggleRequests;
+    NSNull               *currentToggleRequest;
 }
 
 @property (assign) ProjectWC *projectWC;
@@ -39,10 +40,10 @@
 @property (weak) NSView *containerView;
 @property (strong) NSNull *currentToggleRequest;
 
-+ (ProjectDetailsController*)newInstance:(ProjectWC*)projectWC;
++ (ProjectDetailsController *)newInstance:(ProjectWC *)projectWC;
 
-- (NSView*)buttonView;
-- (NSArray*)keyViews;
+- (NSView *)buttonView;
+- (NSArray *)keyViews;
 
 - (void)update;
 

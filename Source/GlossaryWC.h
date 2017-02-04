@@ -14,34 +14,35 @@
 @class TableViewCustom;
 @class CustomFieldEditor;
 
-@interface GlossaryWC : NSWindowController<NSOpenSavePanelDelegate, AZTableViewDelegate> {
-    IBOutlet AZArrayController    *mEntriesController;
-    IBOutlet NSObjectController    *mGlossaryController;
+@interface GlossaryWC : NSWindowController<NSOpenSavePanelDelegate, AZTableViewDelegate>
+{
+    IBOutlet AZArrayController   *mEntriesController;
+    IBOutlet NSObjectController  *mGlossaryController;
     
-    IBOutlet NSTextField        *mInfoField;
-    IBOutlet TableViewCustom    *mEntryTableView;
+    IBOutlet NSTextField         *mInfoField;
+    IBOutlet TableViewCustom     *mEntryTableView;
     
-    IBOutlet NSView            *mTopRightWindowView;
+    IBOutlet NSView              *mTopRightWindowView;
 
-    CustomFieldEditor        *mCustomFieldEditor;
+    CustomFieldEditor            *mCustomFieldEditor;
     
-    NSString                *mFilterValue;
-    BOOL                    mCheckWhenSaved;
+    NSString                     *mFilterValue;
+    BOOL                          mCheckWhenSaved;
     
-    Glossary                *glossary;
-    AddLanguageWC            *mAddLanguageWC;
+    Glossary                     *glossary;
+    AddLanguageWC                *mAddLanguageWC;
     
-    BOOL                    mShowInvisibleCharacters;
+    BOOL                          mShowInvisibleCharacters;
 }
 
 @property (strong) Glossary *glossary;
 
-+ (GlossaryWC*)controller;
++ (GlossaryWC *)controller;
 
 - (void)reload;
 - (void)applyChanges;
 
-- (void)selectEntryWithBase:(NSString*)base translation:(NSString*)translation;
+- (void)selectEntryWithBase:(NSString *)base translation:(NSString *)translation;
 
 - (IBAction)indexGlossary:(id)sender;
 

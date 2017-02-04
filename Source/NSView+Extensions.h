@@ -13,6 +13,6 @@
  Sets a view as the only subview of the receiver. It acts like NSBox, that is by setting
  the view to the size of the receiver.
  */
-- (void)setContentView:(NSView*)view;
+- (void)setContentView:(NSView *)view;
 
 @end

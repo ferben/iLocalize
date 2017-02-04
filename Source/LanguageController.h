@@ -18,24 +18,24 @@
     LanguageModel        *mBaseLanguageModel;
     LanguageModel        *mLanguageModel;
     
-    NSMutableArray        *mFileControllers;
+    NSMutableArray       *mFileControllers;
 
     // volatile
-    NSMutableDictionary    *mPath2FC;
+    NSMutableDictionary  *mPath2FC;
     
     // Statistics (not saved)
-    NSUInteger           mNumberOfFilteredFileControllers;
-    NSUInteger           mNumberOfFoundFileControllers;
-    NSUInteger           mTotalNumberOfStrings;
-    NSUInteger           mNumberOfTranslatedStrings;
-    NSUInteger           mNumberOfUntranslatedStrings;
-    NSUInteger           mNumberOfToCheckStrings;
-    float                mPercentCompleted;
-    BOOL                 mFilterShowLocalFiles;
+    NSUInteger            mNumberOfFilteredFileControllers;
+    NSUInteger            mNumberOfFoundFileControllers;
+    NSUInteger            mTotalNumberOfStrings;
+    NSUInteger            mNumberOfTranslatedStrings;
+    NSUInteger            mNumberOfUntranslatedStrings;
+    NSUInteger            mNumberOfToCheckStrings;
+    float                 mPercentCompleted;
+    BOOL                  mFilterShowLocalFiles;
 }
 
 - (void)setBaseLanguageModel:(LanguageModel *)model;
-- (LanguageModel*)baseLanguageModel;
+- (LanguageModel *)baseLanguageModel;
 
 - (void)setLanguageModel:(LanguageModel *)model;
 - (LanguageModel *)languageModel;

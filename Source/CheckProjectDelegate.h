@@ -7,5 +7,7 @@
 //
 
 @protocol CheckProjectDelegate
+
 - (void)checkProjectCompleted;
+
 @end

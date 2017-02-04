@@ -6,8 +6,8 @@
 //  Copyright 2009 Arizona Software. All rights reserved.
 //
 
-@interface AZGlassPopUpButtonCell : NSPopUpButtonCell {
-
+@interface AZGlassPopUpButtonCell : NSPopUpButtonCell
+{
 }
 
 @end

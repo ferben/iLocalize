@@ -14,15 +14,15 @@
 
 @interface ProjectDetailsGlossary : ProjectDetails <IGroupEngineManagerDelegate, NSTableViewDelegate>
 {
-    IBOutlet NSTableView *mTableView;
-    IBOutlet NSArrayController *mResultsController;
-    IBOutlet NSMenu *actionMenu;
-    IBOutlet NSTextField *searchField;
-    IBOutlet NSProgressIndicator *progressIndicator;
-    NSTableColumn *scoreColumn;
-    IGroupEngineManager *mGroupEngineManager;
-    NSArray *sortDescriptors;
-    NSArray *elements;
+    IBOutlet NSTableView          *mTableView;
+    IBOutlet NSArrayController    *mResultsController;
+    IBOutlet NSMenu               *actionMenu;
+    IBOutlet NSTextField          *searchField;
+    IBOutlet NSProgressIndicator  *progressIndicator;
+    NSTableColumn                 *scoreColumn;
+    IGroupEngineManager           *mGroupEngineManager;
+    NSArray                       *sortDescriptors;
+    NSArray                       *elements;
 }
 
 @property (strong) GlossaryScopeWC *scopeWC;

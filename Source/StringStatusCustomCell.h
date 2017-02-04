@@ -8,8 +8,8 @@
 
 #import "AbstractStringCustomCell.h"
 
-@interface StringStatusCustomCell : AbstractStringCustomCell {
-
+@interface StringStatusCustomCell : AbstractStringCustomCell
+{
 }
 
 @end

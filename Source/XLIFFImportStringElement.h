@@ -11,10 +11,13 @@
 /**
  String to import.
  */
-@interface XLIFFImportStringElement : NSObject {
-    StringController *sc;
-    NSString *translation;
+@interface XLIFFImportStringElement : NSObject
+{
+    StringController  *sc;
+    NSString          *translation;
 }
+
 @property (strong) StringController *sc;
 @property (strong) NSString *translation;
+
 @end

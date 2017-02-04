@@ -11,40 +11,41 @@
 @class XMLImporter;
 @class XMLExporter;
 
-@interface SEIManager : NSObject {
-    NSMutableArray *formats;
+@interface SEIManager : NSObject
+{
+    NSMutableArray  *formats;
 }
 
-+ (SEIManager*)sharedInstance;
++ (SEIManager *)sharedInstance;
 
-- (void)populatePopup:(NSPopUpButton*)popup;
-- (void)selectPopup:(NSPopUpButton*)popup itemForFormat:(SEI_FORMAT)format;
-- (SEI_FORMAT)selectedFormat:(NSPopUpButton*)popup;
-- (NSString*)writableExtensionForFormat:(SEI_FORMAT)format;
+- (void)populatePopup:(NSPopUpButton *)popup;
+- (void)selectPopup:(NSPopUpButton *)popup itemForFormat:(SEI_FORMAT)format;
+- (SEI_FORMAT)selectedFormat:(NSPopUpButton *)popup;
+- (NSString *)writableExtensionForFormat:(SEI_FORMAT)format;
 
 /**
  Returns all the importable extensions.
  */
-- (NSArray*)allImportableExtensions;
+- (NSArray *)allImportableExtensions;
 
 /**
  Returns the format corresponding to the doc type.
  */
-- (SEI_FORMAT)formatOfDocType:(NSString*)docType defaultFormat:(SEI_FORMAT)defaultFormat;
+- (SEI_FORMAT)formatOfDocType:(NSString *)docType defaultFormat:(SEI_FORMAT)defaultFormat;
 
 /**
  Returns the format of the given file.
  */
-- (SEI_FORMAT)formatOfFile:(NSURL*)url error:(NSError**)error;
+- (SEI_FORMAT)formatOfFile:(NSURL *)url error:(NSError **)error;
 
 /**
  Returns the proper importer for the given file type.
  */
-- (XMLImporter*)importerForFile:(NSURL*)url error:(NSError**)error;
+- (XMLImporter *)importerForFile:(NSURL *)url error:(NSError **)error;
 
 /**
  Returns the proper exporter for the given format.
  */
-- (XMLExporter*)exporterForFormat:(SEI_FORMAT)format;
+- (XMLExporter *)exporterForFormat:(SEI_FORMAT)format;
 
 @end

@@ -17,20 +17,21 @@
 @class ScanBundleOVC;
 @class BundleSource;
 
-@interface ImportBundleOperationDriver : OperationDriver {
-    AnalyzeBundleOp *analyzeOp;
-    ImportBundleOVC *importBundleOVC;
-    ImportBundlePreviewOp *previewOp;
-    ImportLocalizedDetectConflictsOp *detectConflictsOp;
-    ImportDiff *importDiff;
-    ScanBundleOp *scanBundleOp;
-    ScanBundleOVC *scanBundleOVC;
+@interface ImportBundleOperationDriver : OperationDriver
+{
+    AnalyzeBundleOp                   *analyzeOp;
+    ImportBundleOVC                   *importBundleOVC;
+    ImportBundlePreviewOp             *previewOp;
+    ImportLocalizedDetectConflictsOp  *detectConflictsOp;
+    ImportDiff                        *importDiff;
+    ScanBundleOp                      *scanBundleOp;
+    ScanBundleOVC                     *scanBundleOVC;
     
     /**
      Holds the path information about the base bundle, that is:
      the source path and the selected files within that path.
      */
-    BundleSource *baseBundleSource;    
+    BundleSource                      *baseBundleSource;
 }
 @property (strong) AnalyzeBundleOp *analyzeOp;
 @property (strong) ImportBundleOVC *importBundleOVC;
@@ -39,4 +40,5 @@
 @property (strong) ScanBundleOp *scanBundleOp;
 @property (strong) ScanBundleOVC *scanBundleOVC;
 @property (strong) BundleSource *baseBundleSource;
+
 @end

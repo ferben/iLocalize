@@ -9,14 +9,17 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface XMLImporterElement : NSObject {
-    NSString *file;
-    NSString *key;
-    NSString *source;
-    NSString *translation;
+@interface XMLImporterElement : NSObject
+{
+    NSString  *file;
+    NSString  *key;
+    NSString  *source;
+    NSString  *translation;
 }
+
 @property (strong) NSString *file;
 @property (strong) NSString *key;
 @property (strong) NSString *source;
 @property (strong) NSString *translation;
+
 @end

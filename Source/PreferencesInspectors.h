@@ -10,7 +10,6 @@
 
 @interface PreferencesInspectors : PreferencesObject
 {
-
 }
 
 + (id)shared;

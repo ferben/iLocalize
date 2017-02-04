@@ -19,11 +19,14 @@
 @class ProjectDocument;
 @class ProjectModel;
 
-@interface CmdLineProjectProvider : NSObject <ProjectProvider> {
-    ProjectModel *mProjectModel;
-    Console *mConsole;
-    ProjectController *mProjectController;
-    EngineProvider            *mEngineProvider;
+@interface CmdLineProjectProvider : NSObject <ProjectProvider>
+{
+    ProjectModel       *mProjectModel;
+    Console            *mConsole;
+    ProjectController  *mProjectController;
+    EngineProvider     *mEngineProvider;
 }
-- (void)setProjectModel:(ProjectModel*)model;
+
+- (void)setProjectModel:(ProjectModel *)model;
+
 @end

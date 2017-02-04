@@ -8,8 +8,8 @@
 
 #import "AbstractFileCustomCell.h"
 
-@interface FileProgressCustomCell : AbstractFileCustomCell {
-
+@interface FileProgressCustomCell : AbstractFileCustomCell
+{
 }
 
 @end

@@ -11,21 +11,24 @@
 @class AZPathControl;
 
 @protocol AZPathControlDelegate
-- (void)pathChanged:(AZPathControl*)control;
-- (BOOL)isValidPath:(NSString*)path;
+
+- (void)pathChanged:(AZPathControl *)control;
+- (BOOL)isValidPath:(NSString *)path;
+
 @end
 
-@interface AZPathControl : AZGradientView<NSMenuDelegate> {
-    NSString *_basePath;
-    NSMutableArray *components;
-    NSMutableArray *elements;
-    id<AZPathControlDelegate> delegate;
+@interface AZPathControl : AZGradientView<NSMenuDelegate>
+{
+    NSString                   *_basePath;
+    NSMutableArray             *components;
+    NSMutableArray             *elements;
+    id<AZPathControlDelegate>   delegate;
 }
 
 @property (strong) NSString *basePath;
 
-- (void)setPath:(NSString*)path;
-- (NSString*)selectedPath;
+- (void)setPath:(NSString *)path;
+- (NSString *)selectedPath;
 
 - (void)setDelegate:(id<AZPathControlDelegate>)delegate;
 

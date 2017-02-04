@@ -16,7 +16,7 @@
 
 @interface AbstractEngine : NSObject
 {
-    EngineProvider    *mEngineProvider;
+    EngineProvider  *mEngineProvider;
 }
 
 - (void)setEngineProvider:(EngineProvider *)factory;
@@ -33,6 +33,6 @@
 
 - (void)notifyProjectDidBecomeDirty;
 - (void)notifyAllFileControllersDidChange;
-- (void)notifyProjectSelectLanguage:(NSString*)language;
+- (void)notifyProjectSelectLanguage:(NSString *)language;
 
 @end

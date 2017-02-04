@@ -6,23 +6,24 @@
 //  Copyright 2005 Arizona Software. All rights reserved.
 //
 
-@interface GlossaryNotIndexedWC : NSWindowController {
-    IBOutlet NSPopUpButton    *mActionPopUp;
-    IBOutlet NSPopUpButton    *mPathPopUp;
+@interface GlossaryNotIndexedWC : NSWindowController
+{
+    IBOutlet NSPopUpButton  *mActionPopUp;
+    IBOutlet NSPopUpButton  *mPathPopUp;
     
-    NSString    *mGlossaryPath;
-    NSArray        *mPaths;
-    BOOL        mLocalPathExists;
-    NSString    *targetPath;
+    NSString                *mGlossaryPath;
+    NSArray                 *mPaths;
+    BOOL                     mLocalPathExists;
+    NSString                *targetPath;
     
-    CallbackBlock didCloseCallback;
+    CallbackBlock            didCloseCallback;
 }
 
 @property (copy) CallbackBlock didCloseCallback;
 @property (strong) NSString *targetPath;
 
-- (void)setGlossaryPath:(NSString*)glossaryPath;;
-- (void)showWithParent:(NSWindow*)parent;
+- (void)setGlossaryPath:(NSString *)glossaryPath;;
+- (void)showWithParent:(NSWindow *)parent;
 
 - (IBAction)cancel:(id)sender;
 - (IBAction)ok:(id)sender;

@@ -8,15 +8,16 @@
 
 @class StringsContentModel;
 
-@interface AbstractStringsEngine : NSObject {
+@interface AbstractStringsEngine : NSObject
+{
     // Format in which the strings are layed out int he file
-    NSUInteger format;
+    NSUInteger            format;
     
     // Type of end of line used (first EOL is used to detect the type)
-    NSUInteger eolType;
+    NSUInteger            eolType;
     
     // Strings content model
-    StringsContentModel *content;
+    StringsContentModel  *content;
 }
 
 @property NSUInteger format;

@@ -8,14 +8,15 @@
 
 @class TooltipWindow;
 
-@interface ProjectWindow : NSWindow {
-    NSTimer *mToolTipTimer;
-    TooltipWindow *mTooltipWindow;
-    BOOL mMouseDidMove;
-    BOOL mTooltipDisplayed;
+@interface ProjectWindow : NSWindow
+{
+    NSTimer        *mToolTipTimer;
+    TooltipWindow  *mTooltipWindow;
+    BOOL            mMouseDidMove;
+    BOOL            mTooltipDisplayed;
 }
 
-- (void)showTooltip:(NSString*)tt;
+- (void)showTooltip:(NSString *)tt;
 - (void)hideTooltip;
 
 @end

@@ -15,13 +15,14 @@
  This operation parses the XLIFF file and assign to each of its file and string
  its corresponding FileController and StringController.
  */
-@interface XLIFFImportPreviewOperation : Operation {
-    XLIFFImportSettings *settings;
+@interface XLIFFImportPreviewOperation : Operation
+{
+    XLIFFImportSettings  *settings;
 }
 
 @property (strong) XLIFFImportSettings *settings;
 
 // accessor for unit tests
-- (XMLImporter*)parse:(NSError**)error;
+- (XMLImporter *)parse:(NSError **)error;
 
 @end

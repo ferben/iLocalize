@@ -6,8 +6,11 @@
 //  Copyright 2005 Arizona Software. All rights reserved.
 //
 
-@interface ViewCustom : NSView {
-    id delegate;
+@interface ViewCustom : NSView
+{
+    id   delegate;
 }
+
 - (void)registerDraggedTypes;
+
 @end

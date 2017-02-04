@@ -7,10 +7,13 @@
 //
 
 
-@interface ImageTool : NSObject {
-    NSMutableDictionary        *mImages;
+@interface ImageTool : NSObject
+{
+    NSMutableDictionary  *mImages;
 }
+
 + (id)shared;
-- (NSImage*)imageNamed:(NSString*)name;
-- (NSImage*)imageNamed:(NSString*)name selected:(BOOL)selected;
+- (NSImage *)imageNamed:(NSString *)name;
+- (NSImage *)imageNamed:(NSString *)name selected:(BOOL)selected;
+
 @end

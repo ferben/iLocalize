@@ -8,22 +8,23 @@
 
 #import "AbstractEngine.h"
 
-@interface ResourceFileEngine : AbstractEngine {
-    NSMutableArray    *mFiles;
+@interface ResourceFileEngine : AbstractEngine
+{
+    NSMutableArray  *mFiles;
 }
 
-+ (ResourceFileEngine*)engine;
++ (ResourceFileEngine *)engine;
 
 /**
  Parses the specified array of absolute file path
  */
-- (void)parseFiles:(NSArray*)files;
+- (void)parseFiles:(NSArray *)files;
 
-- (void)parseFilesInPath:(NSString*)path;
+- (void)parseFilesInPath:(NSString *)path;
 
-- (NSArray*)files;
-- (NSArray*)filesOfLanguage:(NSString*)language;
+- (NSArray *)files;
+- (NSArray *)filesOfLanguage:(NSString *)language;
 
-- (void)removeFilesOfLanguages:(NSArray*)languages inPath:(NSString*)path;
+- (void)removeFilesOfLanguages:(NSArray *)languages inPath:(NSString *)path;
 
 @end

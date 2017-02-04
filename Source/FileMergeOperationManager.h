@@ -10,15 +10,15 @@
  This class handles the merging operation of a set of files
  into a target directory.
  */
-@interface FileMergeOperationManager : NSObject {
-@private
-    
+@interface FileMergeOperationManager : NSObject
+{
+    @private
 }
 
 /**
  Returns a new instance of the manager.
  */
-+ (FileMergeOperationManager*)manager;
++ (FileMergeOperationManager *)manager;
 
 /**
  Discovers all the files that can be merged. A file can be merged (that is, replaced by its project file correspondant) only if:
@@ -34,7 +34,7 @@
  @return YES if the discovery was successfull, NO otherwise
 
  */
-- (BOOL)discoverMergeableFiles:(NSMutableArray*)mergeableFiles inTarget:(NSString*)target usingProjectFiles:(NSArray*)projectFiles projectSource:(NSString*)source errorHandler:(BOOL (^)(NSURL *url, NSError *error))handler;
+- (BOOL)discoverMergeableFiles:(NSMutableArray *)mergeableFiles inTarget:(NSString *)target usingProjectFiles:(NSArray *)projectFiles projectSource:(NSString *)source errorHandler:(BOOL (^)(NSURL *url, NSError *error))handler;
 
 /**
  Perform the actually merging of the specified project files inside the target. The merging here means that each project file
@@ -43,6 +43,6 @@
  @param source Project absolute source path
  @param target Target absolute path
  */
-- (void)mergeProjectFiles:(NSArray*)projectFiles projectSource:(NSString*)source inTarget:(NSString*)target errorHandler:(BOOL (^)(NSError *error))handler progressHandler:(void (^)(NSString *source, NSString *target))progress;
+- (void)mergeProjectFiles:(NSArray *)projectFiles projectSource:(NSString *)source inTarget:(NSString *)target errorHandler:(BOOL (^)(NSError *error))handler progressHandler:(void (^)(NSString *source, NSString *target))progress;
 
 @end

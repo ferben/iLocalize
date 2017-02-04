@@ -9,16 +9,16 @@
 #import "AbstractEngine.h"
 #import "BundleSource.h"
 
-@interface LanguageEngine : AbstractEngine {
-
+@interface LanguageEngine : AbstractEngine
+{
 }
 
-- (void)addLanguage:(NSString*)language;
-- (void)addLanguage:(NSString*)language identical:(BOOL)identical layout:(BOOL)layout copyOnlyIfExists:(BOOL)copyOnlyIfExists source:(BundleSource*)source;
-- (void)addLanguages:(NSArray*)languages identical:(BOOL)identical layout:(BOOL)layout copyOnlyIfExists:(BOOL)copyOnlyIfExists source:(BundleSource*)source;
+- (void)addLanguage:(NSString *)language;
+- (void)addLanguage:(NSString *)language identical:(BOOL)identical layout:(BOOL)layout copyOnlyIfExists:(BOOL)copyOnlyIfExists source:(BundleSource *)source;
+- (void)addLanguages:(NSArray *)languages identical:(BOOL)identical layout:(BOOL)layout copyOnlyIfExists:(BOOL)copyOnlyIfExists source:(BundleSource *)source;
 
-- (void)renameLanguage:(NSString*)source toLanguage:(NSString*)target;
+- (void)renameLanguage:(NSString *)source toLanguage:(NSString *)target;
 
-- (void)removeLanguage:(NSString*)language;
+- (void)removeLanguage:(NSString *)language;
 
 @end

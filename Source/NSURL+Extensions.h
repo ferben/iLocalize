@@ -7,5 +7,9 @@
 //
 
 @interface NSURL (Extensions)
-- (NSData*)createAliasData;
+{
+}
+
+- (NSData *)createAliasData;
+
 @end

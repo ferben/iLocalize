@@ -7,24 +7,27 @@
 //
 
 @protocol LanguageMenuProviderDelegate
-- (BOOL)enableMenuItemForLanguage:(NSString*)language;
+
+- (BOOL)enableMenuItemForLanguage:(NSString *)language;
+
 @end
 
 /**
  Create one instance of this class per popup to manage.
  */
-@interface LanguageMenuProvider : NSObject {
+@interface LanguageMenuProvider : NSObject
+{
     // Array containing all the selected languages during this session
-    NSMutableArray *mSelectedLanguages;
+    NSMutableArray       *mSelectedLanguages;
 
     // Map from displayed language name to language info class
-    NSMutableDictionary *mDisplayLanguageToInfo;
+    NSMutableDictionary  *mDisplayLanguageToInfo;
 
     // Array of common used languages
-    NSMutableArray *mCommonLanguages;
+    NSMutableArray       *mCommonLanguages;
     
     // Array of available languages as provided by the system
-    NSMutableDictionary *mLanguages;    
+    NSMutableDictionary     *mLanguages;
 }
 
 @property (weak) NSPopUpButton *popupButton;
@@ -37,9 +40,9 @@
 
 - (void)refreshPopUp;
 
-- (void)selectLanguage:(NSString*)language;
+- (void)selectLanguage:(NSString *)language;
 - (void)selectCurrentLanguage;
 
-- (NSString*)selectedLanguage;
+- (NSString *)selectedLanguage;
 
 @end

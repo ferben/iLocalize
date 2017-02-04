@@ -21,16 +21,16 @@
  */
 @interface Operation : NSObject
 {
-    BOOL cancel;
+    BOOL             cancel;
     
     // Array of errors that happened with this operation
-    NSMutableArray *errors;
-    NSMutableArray *warnings;
-    NSMutableArray *alerts;
+    NSMutableArray  *errors;
+    NSMutableArray  *warnings;
+    NSMutableArray  *alerts;
         
     // Keeping track of the progress
-    NSUInteger progressMax;
-    NSUInteger progress;
+    NSUInteger       progressMax;
+    NSUInteger       progress;
 }
 
 @property (weak) OperationDriver *driver;

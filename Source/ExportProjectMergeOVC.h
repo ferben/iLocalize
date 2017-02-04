@@ -12,13 +12,16 @@
 
 @class ExportProjectSettings;
 
-@interface ExportProjectMergeOVC : OperationViewController {
-@private
-    ExportProjectSettings *settings;
-    AZPathNode *node;
-    IBOutlet NSOutlineView *outlineView;
-    AZPathNodeSelectionView *pathNodeSelectionView;
+@interface ExportProjectMergeOVC : OperationViewController
+{
+    @private
+    ExportProjectSettings    *settings;
+    AZPathNode               *node;
+    IBOutlet NSOutlineView   *outlineView;
+    AZPathNodeSelectionView  *pathNodeSelectionView;
 }
+
 @property (strong) AZPathNode *node;
 @property (strong) ExportProjectSettings *settings;
+
 @end

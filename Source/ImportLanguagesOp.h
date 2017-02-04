@@ -8,12 +8,13 @@
 
 #import "Operation.h"
 
-@interface ImportLanguagesOp : Operation {
-    NSArray *languages;
-    BOOL identical;
-    BOOL layouts;
-    BOOL copyOnlyIfExists;
-    NSString *sourcePath;
+@interface ImportLanguagesOp : Operation
+{
+    NSArray   *languages;
+    BOOL       identical;
+    BOOL       layouts;
+    BOOL       copyOnlyIfExists;
+    NSString  *sourcePath;
 }
 
 @property (strong) NSArray *languages;
@@ -25,6 +26,6 @@
 /**
  Exposed here because it is used by the ImportFilesLocalizedOp operation.
  */
-- (void)updateFileControllers:(NSArray*)fileControllers layout:(BOOL)layout usingCorrespondingFiles:(NSArray*)files resolveConflict:(BOOL)resolveConflict;
+- (void)updateFileControllers:(NSArray *)fileControllers layout:(BOOL)layout usingCorrespondingFiles:(NSArray *)files resolveConflict:(BOOL)resolveConflict;
 
 @end

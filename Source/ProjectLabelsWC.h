@@ -8,9 +8,10 @@
 
 #import "AbstractWC.h"
 
-@interface ProjectLabelsWC : AbstractWC {
-    IBOutlet NSArrayController    *mLabelsController;
-    IBOutlet NSMenu                *mColorMenu;
+@interface ProjectLabelsWC : AbstractWC
+{
+    IBOutlet NSArrayController  *mLabelsController;
+    IBOutlet NSMenu             *mColorMenu;
 }
 
 - (IBAction)remove:(id)sender;

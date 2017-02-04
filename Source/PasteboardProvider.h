@@ -6,13 +6,14 @@
 //  Copyright 2005 Arizona Software. All rights reserved.
 //
 
-@interface PasteboardProvider : NSObject {
-    NSMutableDictionary *mTypes;
+@interface PasteboardProvider : NSObject
+{
+    NSMutableDictionary  *mTypes;
 }
 
-+ (PasteboardProvider*)shared;
++ (PasteboardProvider *)shared;
 
-- (void)declareTypes:(NSArray*)types owner:(id)owner pasteboard:(NSPasteboard*)pb;
+- (void)declareTypes:(NSArray *)types owner:(id)owner pasteboard:(NSPasteboard *)pb;
 - (void)removeOwner:(id)owner;
 
 @end

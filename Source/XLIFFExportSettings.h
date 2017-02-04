@@ -8,21 +8,22 @@
 
 #import "SEIConstants.h"
 
-@interface XLIFFExportSettings : NSObject {
+@interface XLIFFExportSettings : NSObject
+{
     // The files to export, this is an array of FileController
-    NSArray *files;
+    NSArray     *files;
     
     // The format
-    SEI_FORMAT format;
+    SEI_FORMAT   format;
     
     // The source language
-    NSString *sourceLanguage;
+    NSString    *sourceLanguage;
     
     // The target language
-    NSString *targetLanguage;
+    NSString    *targetLanguage;
     
     // The xliff file that must be generated
-    NSString *targetFile;
+    NSString    *targetFile;
 }
 
 @property (strong) NSArray *files;
@@ -31,7 +32,7 @@
 @property (strong) NSString *targetLanguage;
 @property (strong) NSString *targetFile;
 
-- (void)setData:(NSDictionary*)data;
-- (NSDictionary*)data;
+- (void)setData:(NSDictionary *)data;
+- (NSDictionary *)data;
 
 @end

@@ -9,10 +9,13 @@
 #import "IGroup.h"
 
 
-@interface IGroupView : NSView {
-    IGroup *group;
-    NSTrackingArea *trackingArea;
-    int selectedElementIndex;
+@interface IGroupView : NSView
+{
+    IGroup          *group;
+    NSTrackingArea  *trackingArea;
+    int              selectedElementIndex;
 }
+
 @property (strong) IGroup *group;
+
 @end

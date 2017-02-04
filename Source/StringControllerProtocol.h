@@ -8,14 +8,14 @@
 
 @protocol StringControllerProtocol
 
-- (NSString*)key;
+- (NSString *)key;
 
-- (NSString*)base;
-- (NSString*)baseComment;
-- (NSString*)translation;
-- (NSString*)translationComment;
+- (NSString *)base;
+- (NSString *)baseComment;
+- (NSString *)translation;
+- (NSString *)translationComment;
 
-- (void)setAutomaticTranslation:(NSString*)translation;
+- (void)setAutomaticTranslation:(NSString *)translation;
 - (void)setStatus:(unsigned char)status;
 - (unsigned char)status;
 

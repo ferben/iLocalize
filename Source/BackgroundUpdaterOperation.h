@@ -10,7 +10,7 @@
 
 @interface BackgroundUpdaterOperation : Operation
 {
-    NSArray *fcs;
+    NSArray  *fcs;
 }
 
 @property (nonatomic, strong) NSArray *fcs;

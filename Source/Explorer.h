@@ -14,10 +14,11 @@
 
 @class StringController;
 
-@interface Explorer : NSObject {
-    id <ExplorerDelegate>    mDelegate;
+@interface Explorer : NSObject
+{
+    id <ExplorerDelegate>   mDelegate;
     
-    ExplorerItem            *_rootItem;
+    ExplorerItem           *_rootItem;
 }
 
 @property (strong) ExplorerItem *rootItem;
@@ -25,20 +26,20 @@
 
 - (void)setDelegate:(id)delegate;
 
-- (ExplorerItem*)allItem;
+- (ExplorerItem *)allItem;
 
-- (ExplorerItem*)itemForFilter:(ExplorerFilter*)filter;
+- (ExplorerItem *)itemForFilter:(ExplorerFilter *)filter;
 
-- (BOOL)createSmartFilter:(ExplorerFilter*)filter;
-- (void)deleteItem:(ExplorerItem*)item;
+- (BOOL)createSmartFilter:(ExplorerFilter *)filter;
+- (void)deleteItem:(ExplorerItem *)item;
 
-- (void)revalidateFindStringWrappersForStringController:(StringController*)sc;
-- (void)removeFindStringWrappersForStringController:(StringController*)sc;
+- (void)revalidateFindStringWrappersForStringController:(StringController *)sc;
+- (void)removeFindStringWrappersForStringController:(StringController *)sc;
 
 - (void)rebuild;
 
-- (void)explorerFilterDidAdd:(ExplorerFilter*)filter;
-- (void)explorerFilterDidChange:(ExplorerFilter*)filter;
-- (void)explorerFilterDidRemove:(ExplorerFilter*)filter;
+- (void)explorerFilterDidAdd:(ExplorerFilter *)filter;
+- (void)explorerFilterDidChange:(ExplorerFilter *)filter;
+- (void)explorerFilterDidRemove:(ExplorerFilter *)filter;
 
 @end

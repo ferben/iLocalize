@@ -7,8 +7,9 @@
 //
 
 
-@interface SafeStatus : NSObject {
-    int                mStatus;
+@interface SafeStatus : NSObject
+{
+    int   mStatus;
 }
 
 - (void)setStatus:(int)status;

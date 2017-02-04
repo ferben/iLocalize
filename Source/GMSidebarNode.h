@@ -9,11 +9,12 @@
 @class GlossaryFolder;
 @class ProjectDocument;
 
-@interface GMSidebarNode : NSObject {
-    BOOL _globalGroup;
-    NSString *_title;
-    GlossaryFolder *_folder;
-    NSMutableArray *_children;
+@interface GMSidebarNode : NSObject
+{
+    BOOL             _globalGroup;
+    NSString        *_title;
+    GlossaryFolder  *_folder;
+    NSMutableArray  *_children;
 }
 
 @property (nonatomic, strong) NSString *title;
@@ -21,12 +22,12 @@
 @property (weak) ProjectDocument *document;
 @property (readonly) NSMutableArray *children;
 
-+ (GMSidebarNode*)projectGroup;
-+ (GMSidebarNode*)globalGroup;
-+ (GMSidebarNode*)nodeWithPath:(GlossaryFolder*)folder;
-+ (GMSidebarNode*)nodeWithProjectDocument:(ProjectDocument*)doc;
++ (GMSidebarNode *)projectGroup;
++ (GMSidebarNode *)globalGroup;
++ (GMSidebarNode *)nodeWithPath:(GlossaryFolder *)folder;
++ (GMSidebarNode *)nodeWithProjectDocument:(ProjectDocument *)doc;
 
-- (NSImage*)image;
+- (NSImage *)image;
 - (BOOL)isGlobal;
 - (BOOL)isGroup;
 - (BOOL)isGlobalGroup;

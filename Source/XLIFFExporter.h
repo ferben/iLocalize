@@ -8,8 +8,8 @@
 
 #import "XMLExporter.h"
 
-@interface XLIFFExporter : XMLExporter {
-
+@interface XLIFFExporter : XMLExporter
+{
 }
 
 @end

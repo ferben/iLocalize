@@ -8,31 +8,32 @@
 
 #import "ProjectProvider.h"
 
-@interface ExportProjectSettings : NSObject {    
+@interface ExportProjectSettings : NSObject
+{
     // Which paths to export
-    NSArray *paths;
+    NSArray   *paths;
     
     // Which languages to export
-    NSArray *languages;
+    NSArray   *languages;
     
     // Options
-    BOOL exportLanguageFoldersOnly;
-    BOOL exportAsFolder;
-    BOOL compactNib;
-    BOOL upgradeNib;
-    BOOL compress;
-    BOOL nameIncludesBuildNumber;
-    BOOL nameIncludesLanguages;
-    BOOL email;
-    NSString *emailProgram;
-    NSString *emailMessage;
+    BOOL       exportLanguageFoldersOnly;
+    BOOL       exportAsFolder;
+    BOOL       compactNib;
+    BOOL       upgradeNib;
+    BOOL       compress;
+    BOOL       nameIncludesBuildNumber;
+    BOOL       nameIncludesLanguages;
+    BOOL       email;
+    NSString  *emailProgram;
+    NSString  *emailMessage;
     
     // Destination folder
-    NSString *destFolder;
+    NSString  *destFolder;
     
     // Files to copy (not persisted)
-    BOOL mergeFiles;
-    NSArray *filesToCopy;
+    BOOL       mergeFiles;
+    NSArray   *filesToCopy;
 }
 
 @property (strong) NSArray *paths;
@@ -59,20 +60,20 @@
 /**
  Returns the name of the exported target (before any compression).
  */
-- (NSString*)targetName;
+- (NSString *)targetName;
 
 /**
  Returns the path of the exported target (before any compression).
  */
-- (NSString*)targetBundle;
+- (NSString *)targetBundle;
 
 /**
  Returns the path of the exported target, including any compression.
  */
-- (NSString*)compressedTargetBundle;
+- (NSString *)compressedTargetBundle;
 
 // used for persistence
-- (void)setData:(NSDictionary*)data;
-- (NSDictionary*)data;
+- (void)setData:(NSDictionary *)data;
+- (NSDictionary *)data;
 
 @end

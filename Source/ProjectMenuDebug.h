@@ -8,8 +8,8 @@
 
 #import "ProjectMenu.h"
 
-@interface ProjectMenuDebug : ProjectMenu {
-
+@interface ProjectMenuDebug : ProjectMenu
+{
 }
 
 @end

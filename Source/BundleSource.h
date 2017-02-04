@@ -14,17 +14,18 @@
  considered for the various operations, such as creating a new project or
  rebasing a project.
  */
-@interface BundleSource : NSObject {
-@private
+@interface BundleSource : NSObject
+{
+    @private
     /**
      The path of the source. This path is always the root directory of the source.
      */
-    NSString *sourcePath;
+    NSString    *sourcePath;
     
     /**
      A node representing the content of the source path as a tree.
      */
-    AZPathNode *sourceNode;
+    AZPathNode  *sourceNode;
 }
 
 @property (strong) NSString *sourcePath;
@@ -33,21 +34,21 @@
 /**
  Creates a source with a single path.
  */
-+ (BundleSource*)sourceWithPath:(NSString*)sourcePath;
++ (BundleSource *)sourceWithPath:(NSString *)sourcePath;
 
 /**
  Returns the name of the source.
  */
-- (NSString*)sourceName;
+- (NSString *)sourceName;
 
 /**
  Returns an array of absolute files to use (that are selected in the tree).
  */
-- (NSArray*)sourceFiles;
+- (NSArray *)sourceFiles;
 
 /**
  Returns an array of relative files to use. This array is derived from the source node.
  */
-- (NSArray*)relativeSourceFiles;
+- (NSArray *)relativeSourceFiles;
 
 @end

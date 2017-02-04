@@ -10,17 +10,18 @@
 
 @class StringController;
 
-@interface PreferencesFilters : PreferencesObject {
-    IBOutlet NSArrayController    *mRegexController;
+@interface PreferencesFilters : PreferencesObject
+{
+    IBOutlet NSArrayController  *mRegexController;
     IBOutlet NSTableView        *mRegexTableView;
     
-    NSMutableArray                *mCachedRegexArray;
-    NSCharacterSet                *mCachedLetterCharacterSet;
-    BOOL                        mUpdateRegexCache;
+    NSMutableArray              *mCachedRegexArray;
+    NSCharacterSet              *mCachedLetterCharacterSet;
+    BOOL                         mUpdateRegexCache;
 
-    BOOL                        mMatchStringsWithEmptyBase;
-    BOOL                        mMatchStringsWithNoLetter;
-    BOOL                        mMatchStringsWithOnlyOneLetter;
+    BOOL                         mMatchStringsWithEmptyBase;
+    BOOL                         mMatchStringsWithNoLetter;
+    BOOL                         mMatchStringsWithOnlyOneLetter;
 }
 
 + (id)shared;
@@ -28,6 +29,6 @@
 - (IBAction)addFilter:(id)sender;
 - (IBAction)removeFilter:(id)sender;
 - (IBAction)filterAction:(id)sender;
-- (BOOL)stringControllerMatchAnyRegex:(StringController*)sc;
+- (BOOL)stringControllerMatchAnyRegex:(StringController *)sc;
 
 @end

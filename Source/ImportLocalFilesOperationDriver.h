@@ -11,10 +11,13 @@
 @class ImportFilesSettings;
 @class AnalyzeBundleOp;
 
-@interface ImportLocalFilesOperationDriver : OperationDriver {
-    ImportFilesSettings *settings;
-    AnalyzeBundleOp *analyzeOp;
+@interface ImportLocalFilesOperationDriver : OperationDriver
+{
+    ImportFilesSettings  *settings;
+    AnalyzeBundleOp      *analyzeOp;
 }
+
 @property (strong) ImportFilesSettings *settings;
 @property (strong) AnalyzeBundleOp *analyzeOp;
+
 @end

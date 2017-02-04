@@ -8,14 +8,15 @@
 
 #import "XMLExporter.h"
 
-@interface TXMLExporter : XMLExporter {
-    NSDateFormatter *dateFormatter;
+@interface TXMLExporter : XMLExporter
+{
+    NSDateFormatter  *dateFormatter;
 }
 
 /**
  Returns a string that is escaped for the TXML specification. In other words:
  - all newline characters must be escaped with <ut type="unknown" x="1">\n</ut>
  */
-+ (NSString*)escapedString:(NSString*)s;
++ (NSString *)escapedString:(NSString *)s;
 
 @end

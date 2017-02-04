@@ -8,8 +8,10 @@
 
 #import "AbstractOperation.h"
 
-@interface CleanOperation : AbstractOperation {
-
+@interface CleanOperation : AbstractOperation
+{
 }
+
 - (void)clean;
+
 @end

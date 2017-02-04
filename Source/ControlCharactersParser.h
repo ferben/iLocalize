@@ -7,10 +7,13 @@
 //
 
 
-@interface ControlCharactersParser : NSObject {
-    NSMutableString        *mString;
-    int                    mIndex;
+@interface ControlCharactersParser : NSObject
+{
+    NSMutableString  *mString;
+    int               mIndex;
 }
-+ (NSString*)showControlCharacters:(NSString*)string;
-+ (NSString*)hideControlCharacters:(NSString*)string;
+
++ (NSString *)showControlCharacters:(NSString *)string;
++ (NSString *)hideControlCharacters:(NSString *)string;
+
 @end

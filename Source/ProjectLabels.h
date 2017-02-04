@@ -9,25 +9,27 @@
 @class ProjectWC;
 
 @interface ProjectLabels : NSObject
+{
+}
 
-+ (NSMutableArray*)defaultLabels;
++ (NSMutableArray *)defaultLabels;
 
-+ (NSImage*)createLabelImageForColor:(int)color identifier:(NSString*)identifier;
++ (NSImage *)createLabelImageForColor:(int)color identifier:(NSString *)identifier;
 
-+ (void)updateLabelsMenuForCurrentSelection:(NSMenu*)menu controllers:(NSArray*)controllers;
-+ (void)labelContextMenuAction:(id)sender controllers:(NSArray*)controllers;
++ (void)updateLabelsMenuForCurrentSelection:(NSMenu *)menu controllers:(NSArray *)controllers;
++ (void)labelContextMenuAction:(id)sender controllers:(NSArray *)controllers;
 
 @property (nonatomic, assign) ProjectWC *projectWC;
 
-- (void)buildLabelColorsMenu:(NSMenu*)menu;
-- (void)buildLabelsMenu:(NSMenu*)menu target:(id)target action:(SEL)action;
-- (NSImage*)createLabelImageForLabelIndex:(int)index;
+- (void)buildLabelColorsMenu:(NSMenu *)menu;
+- (void)buildLabelsMenu:(NSMenu *)menu target:(id)target action:(SEL)action;
+- (NSImage *)createLabelImageForLabelIndex:(int)index;
 
-- (int)labelIndexForIdentifier:(NSString*)identifier;
-- (NSString*)labelIdentifierForIndex:(int)index;
+- (int)labelIndexForIdentifier:(NSString *)identifier;
+- (NSString *)labelIdentifierForIndex:(int)index;
 
-- (NSMutableArray*)labels;
+- (NSMutableArray *)labels;
 
-- (NSMenu*)fileLabelsMenu;
+- (NSMenu *)fileLabelsMenu;
 
 @end

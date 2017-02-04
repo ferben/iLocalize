@@ -12,43 +12,44 @@
 @class NewProjectSettings;
 @class ConsoleWC;
 
-@interface ProjectDocument : NSDocument <ProjectProvider,CheckProjectDelegate> {
+@interface ProjectDocument : NSDocument <ProjectProvider,CheckProjectDelegate>
+{
     // Models    
-    ProjectModel                    *mProjectModel;
-    ProjectPrefs                    *mProjectPrefs;
-    Console                            *mConsole;
+    ProjectModel         *mProjectModel;
+    ProjectPrefs         *mProjectPrefs;
+    Console              *mConsole;
 
     // Models (not saved, built dynamically)
-    Structure                        *mStructure;
-    Explorer                        *mExplorer;
+    Structure            *mStructure;
+    Explorer             *mExplorer;
     
     // Controllers    
-    ProjectController                *mProjectController;
+    ProjectController    *mProjectController;
     
     // Windows    
-    ConsoleWC                        *mConsoleWindowController;    
+    ConsoleWC            *mConsoleWindowController;
     
     // Operations    
-    OperationDispatcher                *mOperationDispatcher;
-    OperationWC                        *mOperationWC;
+    OperationDispatcher  *mOperationDispatcher;
+    OperationWC          *mOperationWC;
     
     // Engines
-    EngineProvider                    *mEngineProvider;
+    EngineProvider       *mEngineProvider;
     
     // File Modules
-    NSMutableDictionary                *mFMEditors;
-    NSMutableDictionary                *mFMEngines;
+    NSMutableDictionary  *mFMEditors;
+    NSMutableDictionary  *mFMEngines;
     
     // Conflicting file resolver
-    NSMutableArray                  *mConflictingFilesDecision;
+    NSMutableArray       *mConflictingFilesDecision;
 
     // Version of the OS where the document has been created
-    NSUInteger                      mOSVersion;
+    NSUInteger            mOSVersion;
             
-    BOOL                            mUndoManagerEnabled;
+    BOOL                  mUndoManagerEnabled;
     
     // Boolean indicating when an operation is running
-    BOOL                            operationRunning;    
+    BOOL                  operationRunning;
 }
 
 @property BOOL operationRunning;

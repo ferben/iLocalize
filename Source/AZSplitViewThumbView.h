@@ -6,8 +6,8 @@
 //  Copyright 2008 Arizona Software. All rights reserved.
 //
 
-@interface AZSplitViewThumbView : NSView {
-
+@interface AZSplitViewThumbView : NSView
+{
 }
 
 @end

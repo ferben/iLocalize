@@ -17,11 +17,12 @@ typedef void(^ValidateContinueCallback)(BOOL);
  This class represents a single operation view controller that 
  manages a single view.
  */
-@interface OperationViewController : NSViewController {
+@interface OperationViewController : NSViewController
+{
     // If YES, this flag indicates that this view controlller should be bypassed,
     // that is, not made visible to user but to have its validateContinue to be invoked
     // in order to execute any validation code that is located in it.
-    BOOL bypass;
+    BOOL   bypass;
 }
 
 // This view controller can either be in an operation window controller
@@ -40,24 +41,24 @@ typedef void(^ValidateContinueCallback)(BOOL);
 /**
  Initialize the view controller with the given nib name
  */
-- (id)initWithNibName:(NSString*)name;
+- (id)initWithNibName:(NSString *)name;
 
 /**
  Returns the arguments that were specified when launching the operation driver
  or null if no arguments.
  */
-- (NSDictionary*)arguments;
+- (NSDictionary *)arguments;
 
 /**
  Returns the visible window where this view is located. If this view is not visible (bypass), then
  the window is the project window.
  */
-- (NSWindow*)visibleWindow;
+- (NSWindow *)visibleWindow;
 
 /**
  Returns the window where this view is located
  */
-- (NSWindow*)window;
+- (NSWindow *)window;
 
 /**
  Returns the size of the view.
@@ -73,7 +74,7 @@ typedef void(^ValidateContinueCallback)(BOOL);
  Returns the title of the Next button. If nil is returned, the button will use
  its default name.
  */
-- (NSString*)nextButtonTitle;
+- (NSString *)nextButtonTitle;
 
 /**
  Returns YES if the Next button is enabled, NO to disable it. This method is invoked
@@ -129,6 +130,6 @@ typedef void(^ValidateContinueCallback)(BOOL);
 /**
  Shows a modal sheet with the given operation view controller.
  */
-- (void)runModalOperationViewController:(OperationViewController*)vc;
+- (void)runModalOperationViewController:(OperationViewController *)vc;
 
 @end

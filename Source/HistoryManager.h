@@ -9,23 +9,24 @@
 @class ProjectController;
 @class StringController;
 
-@interface HistoryManager : NSObject {
-    NSMutableArray      *mHistorySnapshots;
-    NSMutableDictionary *mHistoryData;
+@interface HistoryManager : NSObject
+{
+    NSMutableArray       *mHistorySnapshots;
+    NSMutableDictionary  *mHistoryData;
     
-    ProjectController   *mProjectController;
-    NSString            *mFile;
-    BOOL                mDirty;
+    ProjectController    *mProjectController;
+    NSString             *mFile;
+    BOOL                  mDirty;
 }
 
-- (void)setProjectController:(ProjectController*)controller;
+- (void)setProjectController:(ProjectController *)controller;
 
 - (void)saveData;
 
-- (void)createSnapshot:(NSString*)name  date:(NSDate*)date;
+- (void)createSnapshot:(NSString *)name  date:(NSDate *)date;
 - (void)deleteSnapshot:(unsigned int)uid;
 
-- (NSArray*)historyForStringController:(StringController*)sc;
-- (NSArray*)snapshots;
+- (NSArray *)historyForStringController:(StringController *)sc;
+- (NSArray *)snapshots;
 
 @end

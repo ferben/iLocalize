@@ -8,8 +8,8 @@
 
 #import "FMModule.h"
 
-@interface FMNib : FMModule {
-
+@interface FMNib : FMModule
+{
 }
 
 @end

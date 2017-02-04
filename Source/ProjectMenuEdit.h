@@ -11,9 +11,10 @@
 @class ProjectViewSearchController;
 @class StringEncoding;
 
-@interface ProjectMenuEdit : ProjectMenu {
-    StringEncoding*                    mWillConvertUsingEncoding;
-    BOOL                            mWillConvertUsingReload;
+@interface ProjectMenuEdit : ProjectMenu
+{
+    StringEncoding  *mWillConvertUsingEncoding;
+    BOOL             mWillConvertUsingReload;
 }
 
 - (IBAction)smartQuoteSubstitution:(id)sender;

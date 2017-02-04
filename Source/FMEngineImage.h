@@ -8,8 +8,8 @@
 
 #import "FMEngine.h"
 
-@interface FMEngineImage : FMEngine {
-
+@interface FMEngineImage : FMEngine
+{
 }
 
 @end

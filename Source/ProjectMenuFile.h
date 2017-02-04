@@ -8,8 +8,8 @@
 
 #import "ProjectMenu.h"
 
-@interface ProjectMenuFile : ProjectMenu {
-
+@interface ProjectMenuFile : ProjectMenu
+{
 }
 
 - (IBAction)createNewSmartFilter:(id)sender;

@@ -9,5 +9,7 @@
 #import "OperationDriver.h"
 
 @interface NewGlossaryOperationDriver : OperationDriver
+{
+}
 
 @end

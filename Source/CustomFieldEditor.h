@@ -9,6 +9,8 @@
 #import "ProjectProvider.h"
 
 @interface CustomFieldEditor : NSTextView
+{
+}
 
 @property (nonatomic, weak) id<ProjectProvider> provider;
 

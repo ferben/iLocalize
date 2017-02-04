@@ -7,8 +7,12 @@
 //
 
 @interface NSMutableArray (iLocalize)
+{
+}
+
 - (void)addObjectSafe:(id)object;
 - (void)removeFirstObject;
-- (NSMutableArray*)arrayByRemovingFirstObject;
-- (BOOL)removePathOrEquivalent:(NSString*)path;
+- (NSMutableArray *)arrayByRemovingFirstObject;
+- (BOOL)removePathOrEquivalent:(NSString *)path;
+
 @end

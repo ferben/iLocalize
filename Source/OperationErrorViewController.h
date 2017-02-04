@@ -10,18 +10,22 @@
 
 @class TableViewCustom;
 
-@interface OperationErrorViewController : OperationViewController<NSTableViewDataSource, NSTableViewDelegate> {
-    IBOutlet NSImageView *imageView;
-    IBOutlet NSTextField *infoField;
-    IBOutlet NSTextView *textView;
-    IBOutlet TableViewCustom *tableView;
+@interface OperationErrorViewController : OperationViewController<NSTableViewDataSource, NSTableViewDelegate>
+{
+    IBOutlet NSImageView      *imageView;
+    IBOutlet NSTextField      *infoField;
+    IBOutlet NSTextView       *textView;
+    IBOutlet TableViewCustom  *tableView;
     
-    NSMutableArray *items;
+    NSMutableArray            *items;
 
-    BOOL lastOperation;
-    BOOL hasErrors;
+    BOOL                       lastOperation;
+    BOOL                       hasErrors;
 }
+
 @property BOOL lastOperation;
-- (void)addErrors:(NSArray*)errors;
-- (void)addWarnings:(NSArray*)warnings;
+
+- (void)addErrors:(NSArray *)errors;
+- (void)addWarnings:(NSArray *)warnings;
+
 @end

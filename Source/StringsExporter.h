@@ -10,9 +10,10 @@
 
 @class StringsContentModel;
 
-@interface StringsExporter : XMLExporter {
-    StringsContentModel *stringsContentModel;
-    NSUInteger row;
+@interface StringsExporter : XMLExporter
+{
+    StringsContentModel  *stringsContentModel;
+    NSUInteger            row;
 }
 
 @end

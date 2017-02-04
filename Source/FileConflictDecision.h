@@ -7,10 +7,13 @@
 //
 
 
-@interface FileConflictDecision : NSObject {
-    int decision;
-    NSString *file;
+@interface FileConflictDecision : NSObject
+{
+    int        decision;
+    NSString  *file;
 }
+
 @property int decision;
 @property (strong) NSString *file;
+
 @end

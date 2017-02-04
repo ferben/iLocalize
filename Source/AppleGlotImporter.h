@@ -8,8 +8,8 @@
 
 #import "XMLImporter.h"
 
-@interface AppleGlotImporter : XMLImporter {
-
+@interface AppleGlotImporter : XMLImporter
+{
 }
 
 @end

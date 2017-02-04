@@ -6,11 +6,13 @@
 //  Copyright 2011 Arizona Software. All rights reserved.
 //
 
-@interface AboutWindow : NSWindowController {
-    IBOutlet NSTextField *versionTextField;
-    IBOutlet NSTextField *copyrightTextField;
-    IBOutlet NSButton *licenseTextButton;
+@interface AboutWindow : NSWindowController
+{
+    IBOutlet NSTextField  *versionTextField;
+    IBOutlet NSTextField  *copyrightTextField;
+    IBOutlet NSButton     *licenseTextButton;
 }
+
 + (void)show;
 - (IBAction)showAcknowledgment:(id)sender;
 - (IBAction)showLicenseAgreement:(id)sender;

@@ -10,20 +10,21 @@
 
 @class WindowLayerWC;
 
-@interface DragAndDropOperation : AbstractOperation {
-    WindowLayerWC                    *mWindowLayerWC;
-    NSMutableDictionary                *mParameters;
-    int                                mOperation;
-    BOOL                            mOptionKeyMask;
+@interface DragAndDropOperation : AbstractOperation
+{
+    WindowLayerWC         *mWindowLayerWC;
+    NSMutableDictionary   *mParameters;
+    int                    mOperation;
+    BOOL                   mOptionKeyMask;
     
-    NSMutableArray                    *mFilterApplicationPathsCache;
-    NSMutableArray                    *mFilterResourcePathsCache;
+    NSMutableArray        *mFilterApplicationPathsCache;
+    NSMutableArray        *mFilterResourcePathsCache;
 }
 
-- (void)modifierFlagsChanged:(NSEvent*)event;
-- (NSDragOperation)dragOperationEnteredForPasteboard:(NSPasteboard*)pboard;
-- (NSDragOperation)dragOperationUpdatedForPasteboard:(NSPasteboard*)pboard;
-- (BOOL)dragOperationPerformWithPasteboard:(NSPasteboard*)pboard;
+- (void)modifierFlagsChanged:(NSEvent *)event;
+- (NSDragOperation)dragOperationEnteredForPasteboard:(NSPasteboard *)pboard;
+- (NSDragOperation)dragOperationUpdatedForPasteboard:(NSPasteboard *)pboard;
+- (BOOL)dragOperationPerformWithPasteboard:(NSPasteboard *)pboard;
 - (void)dragOperationEnded;
 
 @end

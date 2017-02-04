@@ -8,8 +8,8 @@
 
 #import "AbstractFileCustomCell.h"
 
-@interface FileEncodingCustomCell : AbstractFileCustomCell {
-
+@interface FileEncodingCustomCell : AbstractFileCustomCell
+{
 }
 
 @end

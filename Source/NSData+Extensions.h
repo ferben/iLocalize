@@ -7,5 +7,9 @@
 //
 
 @interface NSData (Extensions)
-- (NSURL*)newURLFromAliasData;
+{
+}
+
+- (NSURL *)newURLFromAliasData;
+
 @end

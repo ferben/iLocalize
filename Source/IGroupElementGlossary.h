@@ -10,14 +10,15 @@
 
 @class Glossary;
 
-@interface IGroupElementGlossary : IGroupElement {
-    float score;
-    Glossary *glossary;
+@interface IGroupElementGlossary : IGroupElement
+{
+    float      score;
+    Glossary  *glossary;
 }
 
 @property float score;
 @property (strong) Glossary *glossary;
 
-+ (IGroupElementGlossary*)elementWithDictionary:(NSDictionary*)dic;
++ (IGroupElementGlossary *)elementWithDictionary:(NSDictionary *)dic;
 
 @end

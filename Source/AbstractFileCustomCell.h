@@ -12,9 +12,11 @@
 @class FileController;
 
 @interface AbstractFileCustomCell : TableViewCustomCell
+{
+}
 
 @property (nonatomic, assign) ProjectWC *projectWC;
 
-- (FileController*)fileController;
+- (FileController *)fileController;
 
 @end

@@ -19,6 +19,6 @@ California 94305, USA.
 
 @interface NSAppleScript (HandlerCalls)
 
-- (NSAppleEventDescriptor *) callHandler: (NSString *) handler withArguments: (NSAppleEventDescriptor *) arguments errorInfo: (NSDictionary **) errorInfo;
+- (NSAppleEventDescriptor *) callHandler:(NSString *)handler withArguments:(NSAppleEventDescriptor *)arguments errorInfo:(NSDictionary **)errorInfo;
 
 @end

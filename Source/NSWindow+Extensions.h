@@ -7,5 +7,9 @@
 //
 
 @interface NSWindow (Extensions)
+{
+}
+
 - (void)setContentView:(NSView*)view resize:(BOOL)resize animate:(BOOL)animate;
+
 @end

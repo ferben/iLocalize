@@ -8,23 +8,24 @@
 
 #import "Operation.h"
 
-#define PROBLEM_COMPILE_NIBS @"PROBLEM_COMPILE_NIBS"
-#define PROBLEM_OUTSIDE_NIBS @"PROBLEM_OUTSIDE_NIBS"
-#define PROBLEM_DUPLICATE_FILES @"PROBLEM_DUPLICATE_FILES"
-#define PROBLEM_READONLY_FILES @"PROBLEM_READONLY_FILES"
+#define PROBLEM_COMPILE_NIBS     @"PROBLEM_COMPILE_NIBS"
+#define PROBLEM_OUTSIDE_NIBS     @"PROBLEM_OUTSIDE_NIBS"
+#define PROBLEM_DUPLICATE_FILES  @"PROBLEM_DUPLICATE_FILES"
+#define PROBLEM_READONLY_FILES   @"PROBLEM_READONLY_FILES"
 
 @class AZPathNode;
 
-@interface AnalyzeBundleOp : Operation {
-    AZPathNode *node;
-    NSArray *files;
+@interface AnalyzeBundleOp : Operation
+{
+    AZPathNode           *node;
+    NSArray              *files;
     
-    NSMutableArray *mProblems;
-    NSMutableArray *mOutsideNibs;
-    NSMutableArray *mCompiledNibs;
-    NSMutableArray *mDuplicateFiles;
-    NSMutableArray *mReadOnlyFiles;
-    NSMutableDictionary *mVisitedLanguages;
+    NSMutableArray       *mProblems;
+    NSMutableArray       *mOutsideNibs;
+    NSMutableArray       *mCompiledNibs;
+    NSMutableArray       *mDuplicateFiles;
+    NSMutableArray       *mReadOnlyFiles;
+    NSMutableDictionary  *mVisitedLanguages;
 }
 
 /**
@@ -38,6 +39,6 @@
 @property (strong) NSArray *files;
 
 - (BOOL)hasProblems;
-- (NSArray*)problems;
+- (NSArray *)problems;
 
 @end

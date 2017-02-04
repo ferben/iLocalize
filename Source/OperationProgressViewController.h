@@ -14,10 +14,11 @@
  This class manages a view controller with a progress bar that is used
  to display the progress of an operation.
  */
-@interface OperationProgressViewController : OperationViewController {
-    IBOutlet NSTextField *nameField;
-    IBOutlet NSProgressIndicator *progressIndicator;
-    IBOutlet NSButton *cancelButton;
+@interface OperationProgressViewController : OperationViewController
+{
+    IBOutlet NSTextField          *nameField;
+    IBOutlet NSProgressIndicator  *progressIndicator;
+    IBOutlet NSButton             *cancelButton;
 }
 
 @property (weak) Operation *operation;
@@ -26,12 +27,12 @@
  Creates a new instance of this view controller that will manage
  the progress of the specified operation.
  */
-+ (OperationProgressViewController*)createWithOperation:(Operation*)op;
++ (OperationProgressViewController *)createWithOperation:(Operation *)op;
 
 /**
  Sets the name of the operation.
  */
-- (void)setOperationName:(NSString*)name;
+- (void)setOperationName:(NSString *)name;
 
 /**
  Sets the progress of the operation, between 0 and 1.

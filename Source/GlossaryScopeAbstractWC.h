@@ -11,16 +11,17 @@
 @class GlossaryScope;
 @class TreeNode;
 
-@interface GlossaryScopeAbstractWC : AbstractWC {
-    IBOutlet NSOutlineView *outlineView;
-    IBOutlet NSTextField *titleTextField;
-    IBOutlet NSButton *cancelButton;
-    TreeNode *rootNode;
+@interface GlossaryScopeAbstractWC : AbstractWC
+{
+    IBOutlet NSOutlineView  *outlineView;
+    IBOutlet NSTextField    *titleTextField;
+    IBOutlet NSButton       *cancelButton;
+    TreeNode                *rootNode;
 }
 
 @property (weak) GlossaryScope *scope;
 
-- (void)setTitle:(NSString*)string;
+- (void)setTitle:(NSString *)string;
 - (void)setCancellable:(BOOL)flag;
 
 @end

@@ -9,8 +9,11 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface AZGradientView : NSView {
-    BOOL bottomLine;
+@interface AZGradientView : NSView
+{
+    BOOL   bottomLine;
 }
+
 @property BOOL bottomLine;
+
 @end

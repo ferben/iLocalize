@@ -9,5 +9,9 @@
 #import <ExceptionHandling/NSExceptionHandler.h>
 
 @interface NSException (Extensions)
+{
+}
+
 - (void)printStackTrace;
+
 @end

@@ -7,4 +7,6 @@
 //
 
 @interface NSPopUpButton (iLocalize)
+{
+}
 @end

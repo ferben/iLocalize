@@ -13,37 +13,38 @@
 /**
  In memory representation of a glossary on the disk.
  */
-@interface Glossary : NSObject {
+@interface Glossary : NSObject
+{
     // The folder containing the glossary
-    GlossaryFolder *folder;
+    GlossaryFolder       *folder;
     
     // The file representing the glossary
-    NSString *file;
+    NSString             *file;
     
     // The target file. It is the same as the file unless the file is an alias.
     // In this case, the target file contains the target of the alias.
-    NSString *targetFile;
+    NSString             *targetFile;
     
     // Date of the last modification
-    NSDate *modificationDate;
+    NSDate               *modificationDate;
     
     // The format of the glossary
-    SEI_FORMAT format;
+    SEI_FORMAT            format;
     
     // The languages of the glossary
-    NSString *sourceLanguage;
-    NSString *targetLanguage;
+    NSString             *sourceLanguage;
+    NSString             *targetLanguage;
     
     // Array of ILGlossaryEntry
-    NSMutableArray *entries;
+    NSMutableArray       *entries;
     
     // Number of entries. This field is used to keep track
     // of the number of entries without having to keep all the entries in memory.
-    NSInteger entryCount;
+    NSInteger             entryCount;
     
     // Cached structure only
-    NSMutableDictionary *mappedEntries;
-    NSMutableDictionary *mappedCaseInsensitiveEntries;
+    NSMutableDictionary  *mappedEntries;
+    NSMutableDictionary  *mappedCaseInsensitiveEntries;
 }
 
 @property (strong) GlossaryFolder *folder;
@@ -58,13 +59,13 @@
 /**
  Returns the name of the glossary which is the last path component.
  */
-- (NSString*)name;
+- (NSString *)name;
 
 /**
  Returns the relative file of the glossary which is the portion of the path
  relative to the glossary folder.
  */
-- (NSString*)relativeFile;
+- (NSString *)relativeFile;
 
 /**
  Returns true if the entries are loaded in memory.
@@ -74,23 +75,23 @@
 /**
  Adds an entry to the glossary.
  */
-- (void)addEntryWithSource:(NSString*)source translation:(NSString*)translation;
+- (void)addEntryWithSource:(NSString *)source translation:(NSString *)translation;
 
 /**
  Adds an array of entries to the glossary.
  */
-- (void)addEntries:(NSArray*)otherEntries;
+- (void)addEntries:(NSArray *)otherEntries;
 
 /**
  Replaces all matching entries in this glossary with the specified entries.
  Entries are matching using their source string.
  */
-- (void)replaceEntries:(NSArray*)otherEntries;
+- (void)replaceEntries:(NSArray *)otherEntries;
 
 /**
  Replaces (or adds if the entry doesn't exist) the entries in this glossary
  */
-- (void)updateEntries:(NSArray*)otherEntries;
+- (void)updateEntries:(NSArray *)otherEntries;
 
 /**
  Removes all the entries of this glossary.
@@ -106,18 +107,18 @@
 /**
  Returns an array of ILGlossaryEntry. If the entries are not in memory, they are loaded.
  */
-- (NSArray*)entries;
+- (NSArray *)entries;
 
 /**
  Returns a dictionary of the entries such as <source> => <translation>. The source is converted
  to lower case.
  */
-- (NSDictionary*)mappedCaseInsensitiveEntries;
+- (NSDictionary *)mappedCaseInsensitiveEntries;
 
 /**
  Returns a dictionary of the entries such as <source> => <translation>.
  */
-- (NSDictionary*)mappedEntries;
+- (NSDictionary *)mappedEntries;
 
 /**
  Loads the properties of the glossary, such as languages and number of entries.
@@ -144,7 +145,7 @@
 /**
  Writes the glossary to the file.
  */
-- (BOOL)writeToFile:(NSError**)error;
+- (BOOL)writeToFile:(NSError **)error;
 
 /**
  Writes the glossary content to another file, leaving the original file intact (export).
@@ -152,17 +153,17 @@
  @param referenceFile The file that actually identifies this glossary. It can be different than inFile if inFile is a temporary file for example before being
  moved to referenceFile.
  */
-- (BOOL)exportToFile:(NSString*)inFile referenceFile:(NSString*)referenceFile format:(SEI_FORMAT)inFormat error:(NSError**)error;
+- (BOOL)exportToFile:(NSString *)inFile referenceFile:(NSString *)referenceFile format:(SEI_FORMAT)inFormat error:(NSError **)error;
 
 /**
  Sets the persistent data of this glossary.
  @return true if the persistent data were successfully applied.
  */
-- (BOOL)setPersistentData:(NSDictionary*)data;
+- (BOOL)setPersistentData:(NSDictionary *)data;
 
 /**
  Returns the persistent data of this glossary.
  */
-- (NSDictionary*)persistentData;
+- (NSDictionary *)persistentData;
 
 @end

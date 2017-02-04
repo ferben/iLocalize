@@ -10,12 +10,15 @@
  Operation used by the GlossaryManager to refresh the folder state
  based on the disk representation. This operation is meant to run asynchronously.
  */
-@interface GlossaryManagerOperation : NSOperation {
+@interface GlossaryManagerOperation : NSOperation
+{
     // The list of folders to analyze
-    NSArray *folders;
+    NSArray  *folders;
     
     // Array of extensions allowed for glossary.
-    NSArray *allowedExtensions;
+    NSArray  *allowedExtensions;
 }
+
 @property (strong) NSArray *folders;
+
 @end

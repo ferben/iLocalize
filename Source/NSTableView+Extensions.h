@@ -7,5 +7,6 @@
 //
 
 @interface NSTableView (iLocalize)
-
+{
+}
 @end

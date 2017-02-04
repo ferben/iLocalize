@@ -8,15 +8,16 @@
 
 #import "AZListSelectionView.h"
 
-@interface ImportAppItem : NSObject<AZListSelectionViewItem> {
-    NSString    *mLanguage;
-    BOOL        mImport;
+@interface ImportAppItem : NSObject<AZListSelectionViewItem>
+{
+    NSString  *mLanguage;
+    BOOL       mImport;
 }
 
-+ (id)itemWithLanguage:(NSString*)language;
++ (id)itemWithLanguage:(NSString *)language;
 
-- (NSString*)language;
-- (NSString*)displayLanguage;
+- (NSString *)language;
+- (NSString *)displayLanguage;
 
 - (void)setImport:(BOOL)flag;
 - (BOOL)import;

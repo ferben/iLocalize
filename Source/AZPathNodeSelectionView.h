@@ -13,15 +13,17 @@
  can select.
  */
 @interface AZPathNodeSelectionView : NSObject<NSOutlineViewDelegate, NSOutlineViewDataSource>
+{
+}
 
 @property (weak) AZPathNode *rootPath;
 @property (weak) NSOutlineView *outlineView;
 
 - (void)selectAll;
-- (void)selectRelativePaths:(NSArray*)paths;
+- (void)selectRelativePaths:(NSArray *)paths;
 
 - (BOOL)isAllSelected;
-- (NSArray*)selectedRelativePaths;
+- (NSArray *)selectedRelativePaths;
 
 - (void)refresh;
 

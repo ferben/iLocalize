@@ -9,9 +9,11 @@
 #import "ProjectProvider.h"
 
 @interface IGroupViewAll : NSView
+{
+}
 
 @property (weak) id<ProjectProvider> projectProvider;
 
-- (void)addToView:(NSView*)parentView;
+- (void)addToView:(NSView *)parentView;
 
 @end

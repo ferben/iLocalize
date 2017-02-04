@@ -10,13 +10,14 @@
 
 @class AZPathNode;
 
-@interface AnalyzeBundleOVC : OperationViewController {
-    IBOutlet NSOutlineView *outlineView;
-    IBOutlet NSButton *revealButton;
-    IBOutlet NSButton *copyToClipboardButton;
-    NSString *rootPath;
-    NSArray *problems;
-    AZPathNode *rootNode;
+@interface AnalyzeBundleOVC : OperationViewController
+{
+    IBOutlet NSOutlineView  *outlineView;
+    IBOutlet NSButton       *revealButton;
+    IBOutlet NSButton       *copyToClipboardButton;
+    NSString                *rootPath;
+    NSArray                 *problems;
+    AZPathNode              *rootNode;
 }
 
 @property (strong) NSString *rootPath;

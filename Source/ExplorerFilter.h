@@ -12,20 +12,21 @@
 @class StringController;
 @class SearchContext;
 
-@interface ExplorerFilter : NSObject {
-    NSString *_name;
-    NSPredicate *_predicate;
-    BOOL _local;
-    BOOL _temporary;
-    NSString *_file;
-    BOOL stringContentMatching;
-    SearchContext *stringContentMatchingContext;
+@interface ExplorerFilter : NSObject
+{
+    NSString             *_name;
+    NSPredicate          *_predicate;
+    BOOL                  _local;
+    BOOL                  _temporary;
+    NSString             *_file;
+    BOOL                  stringContentMatching;
+    SearchContext        *stringContentMatchingContext;
 
-    NSMutableDictionary *dataDictionary;
+    NSMutableDictionary  *dataDictionary;
     
-    NSMutableSet    *mCachedFileLabelsIndexSet;    // cache
-    NSMutableSet    *mCachedStringLabelsIndexSet;    // cache
-    ProjectWC        *mCachedLabelProject;    // cache    
+    NSMutableSet         *mCachedFileLabelsIndexSet;    // cache
+    NSMutableSet         *mCachedStringLabelsIndexSet;  // cache
+    ProjectWC            *mCachedLabelProject;          // cache
 }
 
 @property (strong) NSString *name;
@@ -37,11 +38,11 @@
 @property (copy) SearchContext *stringContentMatchingContext;
 
 + (id)filter;
-+ (id)filterWithContext:(SearchContext*)context string:(NSString*)value;
++ (id)filterWithContext:(SearchContext *)context string:(NSString *)value;
 
-- (void)applyTo:(StringController*)sc;
+- (void)applyTo:(StringController *)sc;
 
-- (BOOL)setPropertyData:(NSData*)data;
-- (NSData*)propertyData;
+- (BOOL)setPropertyData:(NSData *)data;
+- (NSData *)propertyData;
 
 @end

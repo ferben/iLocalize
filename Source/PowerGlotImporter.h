@@ -9,5 +9,7 @@
 #import "XMLImporter.h"
 
 @interface PowerGlotImporter : XMLImporter
+{
+}
 
 @end

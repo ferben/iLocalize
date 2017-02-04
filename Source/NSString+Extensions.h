@@ -7,6 +7,8 @@
 //
 
 @interface NSString (iLocalizePathAttributes)
+{
+}
 
 /**
  Returns YES if the path represents an application that can be 
@@ -42,55 +44,75 @@
 
 - (BOOL)isValidResourceFile;
 
-- (NSString*)firstPathComponent;
-- (NSString*)stringByRemovingFirstPathComponent;
+- (NSString *)firstPathComponent;
+- (NSString *)stringByRemovingFirstPathComponent;
 
-- (NSDate*)pathCreationDate;
-- (NSDate*)pathModificationDate;
+- (NSDate *)pathCreationDate;
+- (NSDate *)pathModificationDate;
 
-- (BOOL)isEqualCaseInsensitiveToString:(NSString*)string;
-- (BOOL)isEqualToString:(NSString*)string ignoreCase:(BOOL)ignore;
-- (BOOL)isEqualToPath:(NSString*)path;
-- (BOOL)isEquivalentToPath:(NSString*)path;
+- (BOOL)isEqualCaseInsensitiveToString:(NSString *)string;
+- (BOOL)isEqualToString:(NSString *)string ignoreCase:(BOOL)ignore;
+- (BOOL)isEqualToPath:(NSString *)path;
+- (BOOL)isEquivalentToPath:(NSString *)path;
 
-- (BOOL)isPathContentEqualsToPath:(NSString*)path;
+- (BOOL)isPathContentEqualsToPath:(NSString *)path;
 
-- (NSString*)stringByRemovingPrefixIgnoringCase:(NSString*)prefix;
-- (NSString*)stringByRemovingPrefix:(NSString*)prefix;
+- (NSString *)stringByRemovingPrefixIgnoringCase:(NSString *)prefix;
+- (NSString *)stringByRemovingPrefix:(NSString *)prefix;
 
-- (NSString*)stringByRemovingSuffix:(NSString*)suffix;
+- (NSString *)stringByRemovingSuffix:(NSString *)suffix;
 
-- (NSImage*)imageOfPath;
+- (NSImage *)imageOfPath;
 
 @end
 
 @interface NSString (iLocalizePathAction)
-- (BOOL)removePathFromDisk:(NSError**)error;
+{
+}
+
+- (BOOL)removePathFromDisk:(NSError **)error;
 - (BOOL)removePathFromDisk;
 - (BOOL)movePathToTrash;
+
 @end
 
 @interface NSString (iLocalizeLanguage)
-- (BOOL)isEquivalentToLanguageCode:(NSString*)language;
-- (BOOL)isEquivalentToLanguage:(NSString*)language;
+{
+}
+
+- (BOOL)isEquivalentToLanguageCode:(NSString *)language;
+- (BOOL)isEquivalentToLanguage:(NSString *)language;
 - (BOOL)isLegacyLanguage;
-- (NSString*)legacyLanguage;
-- (NSString*)isoLanguage;
-- (NSString*)displayLanguageName;
-- (NSString*)languageOfPath;
+- (NSString *)legacyLanguage;
+- (NSString *)isoLanguage;
+- (NSString *)displayLanguageName;
+- (NSString *)languageOfPath;
+
 @end
 
 @interface NSString (iLocalizeComparaison)
+{
+}
+
 - (BOOL)isEqualToValue:(NSString*)otherValue options:(unsigned)options;
+
 @end
 
 @interface NSString (XML)
-- (BOOL)containsValidXMLCharacters:(NSUInteger*)badCharacterLocation;
+{
+}
+
+- (BOOL)containsValidXMLCharacters:(NSUInteger *)badCharacterLocation;
 - (BOOL)xmlNeedsToBeEscaped;
-- (NSString*)xmlEscaped;
-- (NSString*)xmlUnescaped;
+- (NSString *)xmlEscaped;
+- (NSString *)xmlUnescaped;
+
 @end
 
 @interface NSString (Drawing)
+{
+}
+
 - (float)heightForWidth:(float)inWidth withAttributes:(NSDictionary *)inAttributes;
-@end    
+
+@end

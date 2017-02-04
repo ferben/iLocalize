@@ -6,10 +6,13 @@
 //  Copyright 2005 Arizona Software. All rights reserved.
 //
 
-@interface WindowLayerView : NSView {
-    NSString    *mTitle;
-    NSString    *mInfo;
+@interface WindowLayerView : NSView
+{
+    NSString  *mTitle;
+    NSString  *mInfo;
 }
-- (void)setTitle:(NSString*)title;
-- (void)setInfo:(NSString*)info;
+
+- (void)setTitle:(NSString *)title;
+- (void)setInfo:(NSString *)info;
+
 @end

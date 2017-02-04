@@ -12,5 +12,9 @@
 @class StringController;
 
 @interface NSArray (FMStringsExtension)
-- (StringController*)stringControllerForKey:(NSString*)key;;
+{
+}
+
+- (StringController *)stringControllerForKey:(NSString *)key;
+
 @end

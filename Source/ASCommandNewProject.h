@@ -6,8 +6,8 @@
 //  Copyright 2007 Arizona Software. All rights reserved.
 //
 
-@interface ASCommandNewProject : NSScriptCommand {
-
+@interface ASCommandNewProject : NSScriptCommand
+{
 }
 
 @end

@@ -10,8 +10,9 @@
 
 @class LabelCustomCellRender;
 
-@interface FileLabelCustomCell : AbstractFileCustomCell {
-    LabelCustomCellRender *mRender;
+@interface FileLabelCustomCell : AbstractFileCustomCell
+{
+    LabelCustomCellRender  *mRender;
 }
 
 @end

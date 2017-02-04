@@ -6,8 +6,8 @@
 //  Copyright 2005 Arizona Software. All rights reserved.
 //
 
-@interface AZOutlineView : NSOutlineView {
-
+@interface AZOutlineView : NSOutlineView
+{
 }
 
 @end

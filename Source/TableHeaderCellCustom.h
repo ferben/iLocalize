@@ -7,8 +7,8 @@
 //
 
 
-@interface TableHeaderCellCustom : NSTableHeaderCell {
-
+@interface TableHeaderCellCustom : NSTableHeaderCell
+{
 }
 
 @end

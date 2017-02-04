@@ -12,14 +12,15 @@
 @class Explorer;
 @class ProjectExplorerController;
 
-@interface ExplorerFilterEditor : AbstractWC {
-    IBOutlet NSTextField            *mNameField;
-    IBOutlet NSPredicateEditor        *mPredicateEditor;
-    IBOutlet NSButton                *mGlobalButton;    
+@interface ExplorerFilterEditor : AbstractWC
+{
+    IBOutlet NSTextField        *mNameField;
+    IBOutlet NSPredicateEditor  *mPredicateEditor;
+    IBOutlet NSButton           *mGlobalButton;
 }
 
 @property (weak) ProjectExplorerController *controller;
-@property (strong) ExplorerFilter    *filter;
+@property (strong) ExplorerFilter *filter;
 @property (weak) Explorer *explorer;
 
 - (IBAction)cancel:(id)sender;

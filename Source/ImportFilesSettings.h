@@ -10,25 +10,28 @@
  This class contains all the settings needed to update the project
  with files.
  */
-@interface ImportFilesSettings : NSObject {
+@interface ImportFilesSettings : NSObject
+{
     // The list of files to use for the update
-    NSArray *files;
+    NSArray   *files;
     
     // Array of files with their matching file controller
-    NSArray *matchItems;
+    NSArray   *matchItems;
 
     // Update base language settings
-    BOOL updateBaseLanguage;
-    BOOL resetLayout;
+    BOOL       updateBaseLanguage;
+    BOOL       resetLayout;
 
     // Update localized language settings
-    NSString *localizedLanguage;
-    BOOL updateNibLayouts; 
+    NSString  *localizedLanguage;
+    BOOL       updateNibLayouts;
 }
-@property (strong) NSArray* files;
+
+@property (strong) NSArray *files;
 @property (strong) NSArray *matchItems;
 @property BOOL updateBaseLanguage;
 @property BOOL resetLayout;
 @property BOOL updateNibLayouts;
 @property (strong) NSString *localizedLanguage;
+
 @end

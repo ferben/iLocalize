@@ -11,8 +11,9 @@
 @class ProjectModel;
 @class NewProjectSettings;
 
-@interface NewProjectOperation : Operation {
-    NewProjectSettings*    settings;
+@interface NewProjectOperation : Operation
+{
+    NewProjectSettings  *settings;
 }
 
 @property (strong) NewProjectSettings *settings;

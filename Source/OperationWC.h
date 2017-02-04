@@ -13,13 +13,13 @@
 
 @interface OperationWC : AbstractWC
 {
-    IBOutlet NSTextField            *mTitleField;
-    IBOutlet NSTextField            *mInfoField;
-    IBOutlet NSProgressIndicator    *mProgressIndicator;
-    IBOutlet NSButton                *mCancelButton;
+    IBOutlet NSTextField          *mTitleField;
+    IBOutlet NSTextField          *mInfoField;
+    IBOutlet NSProgressIndicator  *mProgressIndicator;
+    IBOutlet NSButton             *mCancelButton;
         
-    BOOL                            mShouldCancel;
-    Stack                            *mIndeterminateStack;
+    BOOL                           mShouldCancel;
+    Stack                         *mIndeterminateStack;
 }
 
 // New operation dialogs are using this instance

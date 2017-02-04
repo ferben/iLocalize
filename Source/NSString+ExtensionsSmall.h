@@ -7,7 +7,11 @@
 //
 
 @interface NSString (iLocalizeExtensionsSmall)
+{
+}
+
 - (BOOL)isPathExisting;
-- (NSString*)parentPath;
+- (NSString *)parentPath;
 - (int)numberOfLines;
+
 @end

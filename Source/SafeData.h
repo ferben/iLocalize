@@ -7,11 +7,14 @@
 //
 
 
-@interface SafeData : NSObject {
-    id                mData;
-    BOOL            mDirty;
+@interface SafeData : NSObject
+{
+    id     mData;
+    BOOL   mDirty;
 }
+
 - (void)setData:(id)data;
 - (id)data;
 - (id)dataIfDirtyAndClear;
+
 @end

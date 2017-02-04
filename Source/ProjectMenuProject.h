@@ -11,10 +11,11 @@
 #import "ProjectLabelsWC.h"
 #import "HistoryManagerWC.h"
 
-@interface ProjectMenuProject : ProjectMenu {
-    ExportProjectOVC                *mProjectExport;    
-    ProjectLabelsWC                *mProjectLabelsWC;
-    HistoryManagerWC            *mHistoryManagerWC;    
+@interface ProjectMenuProject : ProjectMenu
+{
+    ExportProjectOVC  *mProjectExport;
+    ProjectLabelsWC   *mProjectLabelsWC;
+    HistoryManagerWC  *mHistoryManagerWC;
 }
 
 - (IBAction)launch:(id)sender;

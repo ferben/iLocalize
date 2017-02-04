@@ -16,10 +16,11 @@
  This operation perform a rebase of the project using
  the specified bundle and the specified differences.
  */
-@interface ImportRebaseBundleOp : Operation {
-    NSString        *mHistoryFilePath;
-    BOOL            mUsePreviousLayout;
-    ImportDiff      *mImportDiff;
+@interface ImportRebaseBundleOp : Operation
+{
+    NSString    *mHistoryFilePath;
+    BOOL         mUsePreviousLayout;
+    ImportDiff  *mImportDiff;
 }
 
 @property BOOL usePreviousLayout;
@@ -28,12 +29,12 @@
 /**
  This method is exposed because it is also used by the ImportFilesBaseLanguageOp
  */
-- (void)rebaseFileControllers:(NSArray*)fileControllers usingCorrespondingFiles:(NSArray*)files;
+- (void)rebaseFileControllers:(NSArray *)fileControllers usingCorrespondingFiles:(NSArray *)files;
 
 /**
  This method rebases an array of base file controllers. It is used by other classes which
  is why it is exposed here.
  */
-- (void)rebaseBaseFileControllers:(NSArray*)fileControllers keepLayout:(BOOL)layout;
+- (void)rebaseBaseFileControllers:(NSArray *)fileControllers keepLayout:(BOOL)layout;
 
 @end

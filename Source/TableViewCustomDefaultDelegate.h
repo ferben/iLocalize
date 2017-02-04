@@ -12,6 +12,7 @@
 @class TextViewCustom;
 
 @protocol AZTableViewDelegate
+
 @optional
 - (BOOL)textView:(NSTextView *)tv shouldChangeTextInRange:(NSRange)affectedCharRange replacementString:(NSString *)replacementString;
 - (void)tableViewTextDidBeginEditing:(NSTableView*)tv columnIdentifier:(NSString*)identifier rowIndex:(NSInteger)rowIndex textView:(TextViewCustom*)textView;
@@ -23,6 +24,8 @@
 @end
 
 @interface TableViewCustomDefaultDelegate : NSObject<NSTableViewDelegate>
+{
+}
 
 @property (weak) TableViewCustom *tableView;
 @property (weak) id<NSTableViewDelegate,AZTableViewDelegate> childDelegate;

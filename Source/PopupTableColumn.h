@@ -8,7 +8,9 @@
 
 #import "Protocols.h"
 
-@interface PopupTableColumn : NSTableColumn {
-    id<PopupTableColumnDelegate> mDelegate;
+@interface PopupTableColumn : NSTableColumn
+{
+    id<PopupTableColumnDelegate>   mDelegate;
 }
+
 @end

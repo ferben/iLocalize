@@ -8,8 +8,8 @@
 
 #import "PreferencesObject.h"
 
-@interface PreferencesLocalization : PreferencesObject {
-
+@interface PreferencesLocalization : PreferencesObject
+{
 }
 
 + (id)shared;

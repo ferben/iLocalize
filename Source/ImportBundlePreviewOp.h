@@ -12,14 +12,15 @@
 @class ImportDiff;
 @class BundleSource;
 
-@interface ImportBundlePreviewOp : Operation {
-    NSMutableArray      *mFilesToAdd;
-    NSMutableArray      *mFilesToUpdate;
-    NSMutableArray      *mFilesToDelete;
-    NSMutableArray      *mFilesIdentical;
+@interface ImportBundlePreviewOp : Operation
+{
+    NSMutableArray  *mFilesToAdd;
+    NSMutableArray  *mFilesToUpdate;
+    NSMutableArray  *mFilesToDelete;
+    NSMutableArray  *mFilesIdentical;
     
-    BundleSource        *sourcePath;
-    ImportDiff          *importDiff;
+    BundleSource    *sourcePath;
+    ImportDiff      *importDiff;
 }
 
 @property (strong) ImportDiff *importDiff;
@@ -28,10 +29,10 @@
 - (BOOL)needsToRebase;
 
 // Exposed for Unit Testing
-- (NSArray*)filesToAdd;
-- (NSArray*)filesToUpdate;
-- (NSArray*)filesToDelete;
-- (NSArray*)filesIdentical;
+- (NSArray *)filesToAdd;
+- (NSArray *)filesToUpdate;
+- (NSArray *)filesToDelete;
+- (NSArray *)filesIdentical;
 
 @end
 

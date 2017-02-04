@@ -8,8 +8,8 @@
 
 #import "IGroupEngine.h"
 
-@interface IGroupEngineAlternate : IGroupEngine {
-
+@interface IGroupEngineAlternate : IGroupEngine
+{
 }
 
 @end

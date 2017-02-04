@@ -8,8 +8,8 @@
 
 // Used to draw the details button of the main project window
 
-@interface AZGlassButtonCell : NSButtonCell {
-
+@interface AZGlassButtonCell : NSButtonCell
+{
 }
 
 @end

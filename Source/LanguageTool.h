@@ -6,36 +6,36 @@
 //  Copyright 2004 Arizona Software. All rights reserved.
 //
 
-@interface LanguageTool : NSObject {
-
+@interface LanguageTool : NSObject
+{
 }
 
-+ (BOOL)setSpellCheckerLanguage:(NSString*)language;
++ (BOOL)setSpellCheckerLanguage:(NSString *)language;
 
-+ (NSArray*)defaultLanguageIdentifiers;
++ (NSArray *)defaultLanguageIdentifiers;
 
-+ (NSArray*)languagesInPath:(NSString*)path shallow:(BOOL)shallow;
-+ (NSArray*)languagesInPath:(NSString*)path;
-+ (NSArray*)legacyLanguagesInPath:(NSString*)path;
-+ (NSString*)languageOfFile:(NSString*)file;
-+ (NSString*)fileByDeletingLanguageComponent:(NSString*)file;
++ (NSArray *)languagesInPath:(NSString *)path shallow:(BOOL)shallow;
++ (NSArray *)languagesInPath:(NSString *)path;
++ (NSArray *)legacyLanguagesInPath:(NSString *)path;
++ (NSString *)languageOfFile:(NSString *)file;
++ (NSString *)fileByDeletingLanguageComponent:(NSString *)file;
 
-+ (NSArray*)nonNormalizedLanguagesInPath:(NSString*)path;
++ (NSArray *)nonNormalizedLanguagesInPath:(NSString *)path;
 
-+ (NSString*)languageEquivalentToLanguage:(NSString*)a;
-+ (BOOL)isLanguage:(NSString*)a equalsToLanguage:(NSString*)b;
-+ (NSArray*)equivalentLanguagesWithLanguage:(NSString*)base;
-+ (BOOL)isLanguageCode:(NSString*)a equivalentToLanguageCode:(NSString*)b;
++ (NSString *)languageEquivalentToLanguage:(NSString *)a;
++ (BOOL)isLanguage:(NSString *)a equalsToLanguage:(NSString *)b;
++ (NSArray *)equivalentLanguagesWithLanguage:(NSString *)base;
++ (BOOL)isLanguageCode:(NSString *)a equivalentToLanguageCode:(NSString *)b;
 
-+ (NSArray*)availableLegacyLanguages;
-+ (NSString*)legacyLanguageForLanguage:(NSString*)language;
-+ (NSString*)isoLanguageForLanguage:(NSString*)language;
-+ (NSArray*)legacyLanguages:(NSArray*)languages;
++ (NSArray *)availableLegacyLanguages;
++ (NSString *)legacyLanguageForLanguage:(NSString *)language;
++ (NSString *)isoLanguageForLanguage:(NSString *)language;
++ (NSArray *)legacyLanguages:(NSArray *)languages;
 
-+ (NSString*)displayNameForLanguage:(NSString*)language;
-+ (NSString*)languageIdentifierForLanguage:(NSString*)language;
++ (NSString *)displayNameForLanguage:(NSString *)language;
++ (NSString *)languageIdentifierForLanguage:(NSString *)language;
 
-+ (NSArray*)availableLanguageInfos;
-+ (void)fillAvailableLanguageIdentifiersToMenu:(NSMenu*)menu target:(id)target action:(SEL)action;
++ (NSArray *)availableLanguageInfos;
++ (void)fillAvailableLanguageIdentifiersToMenu:(NSMenu *)menu target:(id)target action:(SEL)action;
 
 @end

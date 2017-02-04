@@ -9,9 +9,10 @@
 #import "ProjectWC.h"
 #import "ProjectProvider.h"
 
-@interface ProjectDetails : NSViewController {
-    NSUInteger resizingMask;
-    BOOL displayed;
+@interface ProjectDetails : NSViewController
+{
+    NSUInteger   resizingMask;
+    BOOL         displayed;
 }
 
 @property (assign) ProjectWC *projectWC;
@@ -23,11 +24,11 @@
 - (void)setResizableFlag:(BOOL)flag;
 
 // This menu will be displayed in the divider part of the details split view
-- (NSMenu*)actionMenu;
+- (NSMenu *)actionMenu;
 
 // Returns the view that should be inserted in the key view loop.
 // Usually this is the table view that contains the information
-- (NSView*)keyView;
+- (NSView *)keyView;
 
 - (void)awakeFromNib;
 
@@ -42,9 +43,9 @@
 - (void)begin;
 - (void)commit;
 
-- (void)addDetail:(NSString*)detail;
-- (void)addDetail:(NSString*)detail value:(NSString*)value;
-- (void)addSection:(NSString*)title;
+- (void)addDetail:(NSString *)detail;
+- (void)addDetail:(NSString *)detail value:(NSString *)value;
+- (void)addSection:(NSString *)title;
 - (void)addSeparator;
 
 - (BOOL)canExecuteCommand:(SEL)command;

@@ -9,8 +9,8 @@
 /**
  Transformer that transforms a language ISO code to a displayable name.
  */
-@interface DisplayLanguageTransformer : NSValueTransformer {
-
+@interface DisplayLanguageTransformer : NSValueTransformer
+{
 }
 
 @end

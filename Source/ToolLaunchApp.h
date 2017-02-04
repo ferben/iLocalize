@@ -6,10 +6,13 @@
 //  Copyright 2005 Arizona Software. All rights reserved.
 //
 
-@interface ToolLaunchApp : NSWindowController {
+@interface ToolLaunchApp : NSWindowController
+{
     IBOutlet NSPopUpButton  *mLanguagesPopUp;
 }
-- (void)launchApplication:(NSString*)path;
+
+- (void)launchApplication:(NSString *)path;
 - (IBAction)cancel:(id)sender;
 - (IBAction)launch:(id)sender;
+
 @end

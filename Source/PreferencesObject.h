@@ -6,12 +6,13 @@
 //  Copyright 2005 Arizona Software. All rights reserved.
 //
 
-@interface PreferencesObject : NSObject {
-    IBOutlet NSView                *mPrefsView;    
-    NSWindow                    *mWindow;
+@interface PreferencesObject : NSObject
+{
+    IBOutlet NSView  *mPrefsView;
+    NSWindow         *mWindow;
 }
 
-- (void)setWindow:(NSWindow*)window;
-- (NSView*)prefsView;
+- (void)setWindow:(NSWindow *)window;
+- (NSView *)prefsView;
 
 @end

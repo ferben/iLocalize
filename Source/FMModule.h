@@ -8,22 +8,23 @@
 
 @class FMManager;
 
-@interface FMModule : NSObject {
-    FMManager    *mManager;
+@interface FMModule : NSObject
+{
+    FMManager  *mManager;
 }
 
-+ (FMModule*)moduleWithManager:(FMManager*)manager;
++ (FMModule *)moduleWithManager:(FMManager *)manager;
 
 - (Class)editorClass;
 - (Class)engineClass;
 - (Class)controllerClass;
 
-- (FMManager*)manager;
+- (FMManager *)manager;
 
-- (NSString*)name;
-- (NSString*)path;
+- (NSString *)name;
+- (NSString *)path;
 
-- (NSImage*)fileImage;
+- (NSImage *)fileImage;
 - (BOOL)supportsFlagLayout;
 
 - (BOOL)builtIn;

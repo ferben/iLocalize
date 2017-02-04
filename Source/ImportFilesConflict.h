@@ -8,31 +8,32 @@
 
 #include "ProjectProvider.h"
 
-@interface ImportFilesConflict : NSWindowController {
-    IBOutlet NSTextField    *mProjectFileNameField;
-    IBOutlet NSTextField    *mProjectFilePathField;
-    IBOutlet NSTextField    *mProjectFileCreationDateField;
-    IBOutlet NSTextField    *mProjectFileModificationDateField;
+@interface ImportFilesConflict : NSWindowController
+{
+    IBOutlet NSTextField  *mProjectFileNameField;
+    IBOutlet NSTextField  *mProjectFilePathField;
+    IBOutlet NSTextField  *mProjectFileCreationDateField;
+    IBOutlet NSTextField  *mProjectFileModificationDateField;
 
-    IBOutlet NSTextField    *mImportedFileNameField;
-    IBOutlet NSTextField    *mImportedFilePathField;
-    IBOutlet NSTextField    *mImportedFileCreationDateField;
-    IBOutlet NSTextField    *mImportedFileModificationDateField;
+    IBOutlet NSTextField  *mImportedFileNameField;
+    IBOutlet NSTextField  *mImportedFilePathField;
+    IBOutlet NSTextField  *mImportedFileCreationDateField;
+    IBOutlet NSTextField  *mImportedFileModificationDateField;
     
-    IBOutlet NSButton        *mUseProjectFileButton;
-    IBOutlet NSButton        *mUseImportedFileButton;
-    IBOutlet NSButton        *mApplyToAllButton;
+    IBOutlet NSButton     *mUseProjectFileButton;
+    IBOutlet NSButton     *mUseImportedFileButton;
+    IBOutlet NSButton     *mApplyToAllButton;
     
-    NSString                *mProjectFile;
-    NSString                *mImportedFile;
+    NSString              *mProjectFile;
+    NSString              *mImportedFile;
     
-    id <ProjectProvider>    mProjectProvider;
+    id <ProjectProvider>   mProjectProvider;
 }
 
 + (void)reset;
 + (void)setOverrideValue:(unsigned)value;
 
-+ (unsigned)resolveConflictBetweenProjectFile:(NSString*)projectFile andImportedFile:(NSString*)importedFile provider:(id<ProjectProvider>)provider;
++ (unsigned)resolveConflictBetweenProjectFile:(NSString *)projectFile andImportedFile:(NSString *)importedFile provider:(id<ProjectProvider>)provider;
 
 - (IBAction)openProjectFile:(id)sender;
 - (IBAction)revealProjectFile:(id)sender;

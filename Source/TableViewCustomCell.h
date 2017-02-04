@@ -9,15 +9,16 @@
 @class LayoutManagerCustom;
 @class FindContentMatching;
 
-@interface TableViewCustomCell : NSCell {
-    NSTextStorage *mTextStorage;
-    NSTextContainer *mTextContainer;
-    LayoutManagerCustom *mLayoutManager;
+@interface TableViewCustomCell : NSCell
+{
+    NSTextStorage        *mTextStorage;
+    NSTextContainer      *mTextContainer;
+    LayoutManagerCustom  *mLayoutManager;
         
-    BOOL showInvisibleCharacters;
+    BOOL                  showInvisibleCharacters;
     
-    FindContentMatching *contentMatching;
-    int contentMatchingItem;    
+    FindContentMatching  *contentMatching;
+    int                   contentMatchingItem;
 }
 
 @property (strong) NSColor *foregroundColor;
@@ -26,8 +27,8 @@
 @property (strong) FindContentMatching *contentMatching;
 @property (assign) int contentMatchingItem;
 
-+ (TableViewCustomCell*)cell;
-+ (TableViewCustomCell*)textCell;
++ (TableViewCustomCell *)cell;
++ (TableViewCustomCell *)textCell;
 
 - (void)awake;
 

@@ -10,10 +10,11 @@
 
 @class TextViewCustom;
 
-@interface FMEditorRTF : FMEditor {    
-    IBOutlet TextViewCustom                *mBaseBaseTextView;
-    IBOutlet TextViewCustom                *mLocalizedBaseTextView;
-    IBOutlet TextViewCustom                *mLocalizedTranslationTextView;
+@interface FMEditorRTF : FMEditor
+{
+    IBOutlet TextViewCustom  *mBaseBaseTextView;
+    IBOutlet TextViewCustom  *mLocalizedBaseTextView;
+    IBOutlet TextViewCustom  *mLocalizedTranslationTextView;
 }
 
 @end

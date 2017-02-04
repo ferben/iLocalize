@@ -12,10 +12,11 @@
 @class IGroupView;
 @class IGroupElement;
 
-@interface IGroup : NSObject <IGroupEngineManagerDelegate> {
-    IGroupEngineManager *manager;
-    NSString *name;
-    NSArray *elements;
+@interface IGroup : NSObject <IGroupEngineManagerDelegate>
+{
+    IGroupEngineManager  *manager;
+    NSString             *name;
+    NSArray              *elements;
 }
 
 @property (weak) IGroupView *view;
@@ -23,12 +24,12 @@
 @property (strong) NSArray *elements;
 @property (nonatomic, weak) id<ProjectProvider> projectProvider;
 
-+ (IGroup*)groupWithProjectProvider:(id<ProjectProvider>)provider engine:(IGroupEngine*)engine;
++ (IGroup *)groupWithProjectProvider:(id<ProjectProvider>)provider engine:(IGroupEngine *)engine;
 
-- (void)setEngine:(IGroupEngine*)engine;
+- (void)setEngine:(IGroupEngine *)engine;
 
-- (void)assignToView:(IGroupView*)view;
+- (void)assignToView:(IGroupView *)view;
 
-- (void)clickOnElement:(IGroupElement*)element;
+- (void)clickOnElement:(IGroupElement *)element;
 
 @end

@@ -8,19 +8,20 @@
 
 @class HistoryManager;
 
-@interface HistoryManagerWC : NSWindowController {
+@interface HistoryManagerWC : NSWindowController
+{
     IBOutlet NSArrayController  *mSnapshotsController;
     
-    IBOutlet NSPanel        *mNewSnapshotPanel;
-    IBOutlet NSTextField    *mNewSnapshotNameField;
+    IBOutlet NSPanel            *mNewSnapshotPanel;
+    IBOutlet NSTextField        *mNewSnapshotNameField;
     
-    HistoryManager          *mHistoryManager;   // not retained
+    HistoryManager              *mHistoryManager;   // not retained
 }
 
-- (void)setHistoryManager:(HistoryManager*)manager;
+- (void)setHistoryManager:(HistoryManager *)manager;
 
-- (void)createSnapshot:(NSWindow*)parent;
-- (void)displaySnapshots:(NSWindow*)parent;
+- (void)createSnapshot:(NSWindow *)parent;
+- (void)displaySnapshots:(NSWindow *)parent;
 
 - (IBAction)cancelNewSnapshot:(id)sender;
 - (IBAction)createNewSnapshot:(id)sender;

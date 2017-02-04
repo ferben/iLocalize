@@ -10,15 +10,15 @@
 
 @interface SimpleStringController : NSObject<StringControllerProtocol>
 {
-    NSString *key;
-    NSString *base;
-    NSString *translation;
+    NSString  *key;
+    NSString  *base;
+    NSString  *translation;
 }
-
-+ (SimpleStringController*)stringWithBase:(NSString*)base translation:(NSString*)translation;
 
 @property (strong) NSString *key;
 @property (strong) NSString *base;
 @property (strong) NSString *translation;
+
++ (SimpleStringController *)stringWithBase:(NSString *)base translation:(NSString *)translation;
 
 @end

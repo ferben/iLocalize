@@ -9,6 +9,8 @@
 #import "Operation.h"
 
 @interface NewGlossaryOperation : Operation
+{
+}
 
 @property (nonatomic, strong) NSArray *languages;
 

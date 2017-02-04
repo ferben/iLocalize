@@ -10,8 +10,10 @@
 
 @class LanguageController;
 
-@interface RemoveLanguageOperation : AbstractOperation {
-
+@interface RemoveLanguageOperation : AbstractOperation
+{
 }
-- (void)removeLanguage:(LanguageController*)language;
+
+- (void)removeLanguage:(LanguageController *)language;
+
 @end

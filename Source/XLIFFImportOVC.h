@@ -10,11 +10,15 @@
 
 @class XLIFFImportSettings;
 
-@interface XLIFFImportOVC : OperationViewController {
-    IBOutlet NSPathControl *filePathControl;
-    XLIFFImportSettings *settings;
+@interface XLIFFImportOVC : OperationViewController
+{
+    IBOutlet NSPathControl  *filePathControl;
+    XLIFFImportSettings     *settings;
 }
+
 @property (weak) IBOutlet NSButton *useResnameInsteadOfSource;
 @property (strong) XLIFFImportSettings *settings;
+
 - (IBAction)chooseFile:(id)sender;
+
 @end

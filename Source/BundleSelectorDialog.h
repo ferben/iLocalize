@@ -8,17 +8,18 @@
 
 @class BundleSelectorDialog;
 
-typedef void(^CallbackBlockWithFile)(NSString*);
+typedef void(^CallbackBlockWithFile)(NSString *);
 
-@interface BundleSelectorDialog : NSObject<NSOpenSavePanelDelegate> {
-    NSString *defaultPath;
-    CallbackBlockWithFile callback;
+@interface BundleSelectorDialog : NSObject<NSOpenSavePanelDelegate>
+{
+    NSString               *defaultPath;
+    CallbackBlockWithFile   callback;
 }
 
 @property (copy) NSString *defaultPath;
 @property (copy) CallbackBlockWithFile callback;
 
-- (NSString*)promptForBundle;
-- (void)promptForBundleForWindow:(NSWindow*)window callback:(CallbackBlockWithFile)callback;
+- (NSString *)promptForBundle;
+- (void)promptForBundleForWindow:(NSWindow *)window callback:(CallbackBlockWithFile)callback;
 
 @end

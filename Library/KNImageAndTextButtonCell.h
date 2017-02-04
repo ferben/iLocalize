@@ -34,9 +34,9 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface KNImageAndTextButtonCell : NSButtonCell {
-
-    NSImage *image;
+@interface KNImageAndTextButtonCell : NSButtonCell
+{
+    NSImage   *image;
 }
 
 - (void)setImage:(NSImage *)anImage;

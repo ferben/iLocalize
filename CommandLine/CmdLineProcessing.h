@@ -8,8 +8,11 @@
 
 @class CmdLineProjectProvider;
 
-@interface CmdLineProcessing : NSObject {
-    CmdLineProjectProvider *provider;
+@interface CmdLineProcessing : NSObject
+{
+    CmdLineProjectProvider  *provider;
 }
+
 + (BOOL)process;
+
 @end

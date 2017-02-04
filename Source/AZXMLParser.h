@@ -10,8 +10,9 @@
 
 /** The various errors that the parser can emit
  */
-typedef NS_ENUM(NSInteger, AZXMLParserErrorCode) {
-    AZXMLParserErrorCodeNone = 0,
+typedef NS_ENUM(NSInteger, AZXMLParserErrorCode)
+{
+    AZXMLParserErrorCodeNone          = 0,
     AZXMLParserErrorCodeEndOfText,
     AZXMLParserErrorCodeMismatch,
     AZXMLParserErrorCodeUnsupported,
@@ -21,9 +22,9 @@ typedef NS_ENUM(NSInteger, AZXMLParserErrorCode) {
 
 @protocol AZXMLParserDelegate <NSObject>
 
-- (void)parser:(AZXMLParser*)parser didStartElement:(NSString *)elementName attributes:(NSDictionary *)attributes;
-- (void)parser:(AZXMLParser*)parser didEndElement:(NSString *)elementName;
-- (void)parser:(AZXMLParser*)parser foundCharacters:(NSString *)string;
+- (void)parser:(AZXMLParser *)parser didStartElement:(NSString *)elementName attributes:(NSDictionary *)attributes;
+- (void)parser:(AZXMLParser *)parser didEndElement:(NSString *)elementName;
+- (void)parser:(AZXMLParser *)parser foundCharacters:(NSString *)string;
 
 @end
 
@@ -35,6 +36,8 @@ typedef void(^AZXMLParserFoundCharactersBlock)(AZXMLParser *parser, NSString *st
  tailored at the needs of iLocalize
  */
 @interface AZXMLParser : NSObject
+{
+}
 
 /** The optional delegate
  */
@@ -60,11 +63,11 @@ typedef void(^AZXMLParserFoundCharactersBlock)(AZXMLParser *parser, NSString *st
  */
 @property (nonatomic) BOOL stop;
 
-+ (AZXMLParser*)parserWithPath:(NSString*)path;
++ (AZXMLParser *)parserWithPath:(NSString *)path;
 
-+ (AZXMLParser*)parserWithUrl:(NSURL*)url;
++ (AZXMLParser *)parserWithUrl:(NSURL *)url;
 
-+ (AZXMLParser*)parserWithText:(NSString*)text;
++ (AZXMLParser *)parserWithText:(NSString *)text;
 
 - (BOOL)parse;
 

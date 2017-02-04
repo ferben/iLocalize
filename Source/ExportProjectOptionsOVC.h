@@ -12,10 +12,10 @@
 
 @interface ExportProjectOptionsOVC : OperationViewController
 {
-    IBOutlet NSObjectController *objectController;
-    ExportProjectSettings *settings;
-    NSSize originalSize;
-    IBOutlet NSView *hideEmailComponentsView;
+    IBOutlet NSObjectController  *objectController;
+    ExportProjectSettings        *settings;
+    NSSize                        originalSize;
+    IBOutlet NSView              *hideEmailComponentsView;
 }
 
 @property (strong) ExportProjectSettings *settings;

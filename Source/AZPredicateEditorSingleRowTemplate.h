@@ -6,8 +6,8 @@
 //  Copyright 2009 Arizona Software. All rights reserved.
 //
 
-@interface AZPredicateEditorSingleRowTemplate : NSPredicateEditorRowTemplate {
-
+@interface AZPredicateEditorSingleRowTemplate : NSPredicateEditorRowTemplate
+{
 }
 
 @end

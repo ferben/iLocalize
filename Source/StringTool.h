@@ -18,4 +18,5 @@
 + (NSString *)unescapeDoubleQuoteInString:(NSString *)s;
 + (BOOL)isString:(NSString *)a equalToString:(NSString *)b ignoreEscapeDifferences:(BOOL)ignoreEscapeDifferences ignoreCase:(BOOL)ignoreCase;
 + (BOOL)isString:(NSString *)a equalIgnoringEscapeToString:(NSString *)b ignoreCase:(BOOL)ignoreCase;
+
 @end

@@ -12,10 +12,12 @@
 @class GlossaryScope;
 @class GlossaryScopeWC;
 
-@interface ProjectMenuGlossary : ProjectMenu {
-    GlossaryNewWC                    *mGlossaryNew;
-    GlossaryScope *glossaryScope;
+@interface ProjectMenuGlossary : ProjectMenu
+{
+    GlossaryNewWC  *mGlossaryNew;
+    GlossaryScope  *glossaryScope;
 }
+
 @property (nonatomic, strong) GlossaryScopeWC *scopeWC;
 
 - (IBAction)newGlossary:(id)sender;
@@ -24,4 +26,5 @@
 
 //- (IBAction)addToGlossary:(id)sender;
 - (IBAction)updateInGlossary:(id)sender;
+
 @end

@@ -10,10 +10,12 @@
 
 @class FileController;
 
-@interface ReplaceEngine : AbstractEngine {
-
+@interface ReplaceEngine : AbstractEngine
+{
 }
-- (void)replaceLocalizedFileControllersWithCorrespondingBase:(NSArray*)fileControllers keepLayout:(BOOL)layout;
-- (void)replaceLocalizedFileControllerAndCheckAgainWithCorrespondingBase:(FileController*)fileController keepLayout:(BOOL)layout;
-- (void)replaceLocalizedFileControllerWithCorrespondingBase:(FileController*)fileController keepLayout:(BOOL)layout;
+
+- (void)replaceLocalizedFileControllersWithCorrespondingBase:(NSArray *)fileControllers keepLayout:(BOOL)layout;
+- (void)replaceLocalizedFileControllerAndCheckAgainWithCorrespondingBase:(FileController *)fileController keepLayout:(BOOL)layout;
+- (void)replaceLocalizedFileControllerWithCorrespondingBase:(FileController *)fileController keepLayout:(BOOL)layout;
+
 @end

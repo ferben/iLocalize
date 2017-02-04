@@ -16,16 +16,16 @@
 
 @property (assign) ProjectWC *projectWC;
 
-+ (id)newInstance:(ProjectWC*)projectWC;
++ (id)newInstance:(ProjectWC *)projectWC;
 
 - (void)awake;
 - (void)destroy;
 
-- (ProjectDocument*)projectDocument;
-- (ProjectFilesController*)projectFiles;
-- (ProjectExplorerController*)projectExplorer;
-- (ProjectDetailsController*)projectDetails;
+- (ProjectDocument *)projectDocument;
+- (ProjectFilesController *)projectFiles;
+- (ProjectExplorerController *)projectExplorer;
+- (ProjectDetailsController *)projectDetails;
 
-- (NSWindow*)window;
+- (NSWindow *)window;
 
 @end

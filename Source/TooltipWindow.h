@@ -6,9 +6,10 @@
 
 @interface TooltipWindow : NSWindow
 {
-    NSTimer *closeTimer;
-    id tooltipObject;
+    NSTimer   *closeTimer;
+    id         tooltipObject;
 }
+
 + (id)tipWithString:(NSString *)tip frame:(NSRect)frame display:(BOOL)display;
 + (id)tipWithAttributedString:(NSAttributedString *)tip frame:(NSRect)frame display:(BOOL)display;
 

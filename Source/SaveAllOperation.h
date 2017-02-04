@@ -9,11 +9,13 @@
 #import "AbstractOperation.h"
 
 @interface SaveAllOperation : AbstractOperation
+{
+}
 
-- (void)saveAll:(NSArray*)files;
-- (void)saveAll:(NSArray*)files createIfNotExisting:(BOOL)createIfNotExisting;
+- (void)saveAll:(NSArray *)files;
+- (void)saveAll:(NSArray *)files createIfNotExisting:(BOOL)createIfNotExisting;
 
-- (void)reloadAll:(NSArray*)files;
+- (void)reloadAll:(NSArray *)files;
 
 - (void)saveFiles;
 - (void)saveFilesWithoutConfirmation;

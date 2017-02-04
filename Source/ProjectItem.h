@@ -10,11 +10,11 @@
 
 @interface ProjectItem : NSObject
 {
-    NSString *path;
-    NSString *name;
-    NSDate *date;
-    NSDateFormatter *dateFormatter;
-    NSImage *image;
+    NSString         *path;
+    NSString         *name;
+    NSDate           *date;
+    NSDateFormatter  *dateFormatter;
+    NSImage          *image;
 }
 
 @property (strong) NSString *path;
@@ -23,6 +23,6 @@
 @property (strong) NSDateFormatter *dateFormatter;
 @property (strong) NSImage *image;
 
-- (NSString *) imageSubtitle;
+- (NSString *)imageSubtitle;
 
 @end

@@ -8,10 +8,12 @@
 
 #import "AbstractWC.h"
 
-@interface CleanWC : AbstractWC {
-
+@interface CleanWC : AbstractWC
+{
 }
-- (NSDictionary*)attributes;
+
+- (NSDictionary *)attributes;
 - (IBAction)cancel:(id)sender;
 - (IBAction)clean:(id)sender;
+
 @end

@@ -13,8 +13,8 @@
 
 @interface FileModel : NSObject <NSCoding>
 {
-    FileModelAttributes    *mAttributes;
-    FileModelContent    *mContent;
+    FileModelAttributes  *mAttributes;
+    FileModelContent     *mContent;
     
     // volatile
     LanguageModel        *mLanguageModel;
@@ -27,6 +27,8 @@
 @end
 
 @interface FileModel (Attributes)
+{
+}
 
 - (void)setRelativeFilePath:(NSString *)file;
 - (NSString *)relativeFilePath;
@@ -67,6 +69,8 @@
 @end
 
 @interface FileModel (Content)
+{
+}
 
 - (void)setFileModelContent:(FileModelContent *)content;
 - (FileModelContent *)fileModelContent;

@@ -10,21 +10,22 @@
 
 @class AZAnimationRequest;
 
-@interface AZSplitView : NSSplitView {
-    CGFloat mPreviousPosition;
-    NSString *title;
+@interface AZSplitView : NSSplitView
+{
+    CGFloat              mPreviousPosition;
+    NSString            *title;
     
     // Last rectangle of the divider
-    NSRect dividerRect;
+    NSRect               dividerRect;
     
     // The action menu is displayed in the thumbnail view
-    NSMenu *actionMenu;
+    NSMenu              *actionMenu;
 
     // List of requests to collapse or expand the split view
-    NSMutableArray *requests;
+    NSMutableArray      *requests;
     
     // Current request being executed
-    AZAnimationRequest *currentRequest;
+    AZAnimationRequest  *currentRequest;
 }
 
 @property (strong) NSString *title;

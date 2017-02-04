@@ -8,13 +8,17 @@
 
 @class OperationViewController;
 
-@interface OperationWindowController : NSWindowController {
-    IBOutlet NSBox *box;
-    NSSize originalContentMaxSize;
-    OperationViewController *viewController;
+@interface OperationWindowController : NSWindowController
+{
+    IBOutlet NSBox           *box;
+    NSSize                    originalContentMaxSize;
+    OperationViewController  *viewController;
 }
+
 @property (strong) OperationViewController *viewController;
-- (void)viewControllerStateChanged:(OperationViewController*)_vc;
-- (void)runModalSheetForWindow:(NSWindow*)parent;
+
+- (void)viewControllerStateChanged:(OperationViewController *)_vc;
+- (void)runModalSheetForWindow:(NSWindow *)parent;
 - (IBAction)done:(id)sender;
+
 @end

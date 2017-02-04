@@ -8,8 +8,8 @@
 
 #import "TableCornerViewCustom.h"
 
-@interface LanguagesTableCornerView : TableCornerViewCustom {
-
+@interface LanguagesTableCornerView : TableCornerViewCustom
+{
 }
 
 @end

@@ -8,33 +8,34 @@
 
 #import <Quartz/Quartz.h>
 
-@interface ProjectBrowserWC : NSWindowController<NSTableViewDataSource,NSTableViewDelegate> {
-    IBOutlet NSView *containerView;
-    IBOutlet NSProgressIndicator    *progressIndicator;    
-    IBOutlet NSPopUpButton *actionPopUpButton;
-    IBOutlet NSSegmentedControl *presentationControl;
-    IBOutlet NSSearchField *searchField;
-    IBOutlet NSMenu *actionMenu;
-    IBOutlet NSMenuItem *dateOrderMenuItem;
-    IBOutlet NSMenuItem *nameOrderMenuItem;
-    IBOutlet NSSlider *zoomSlider;
+@interface ProjectBrowserWC : NSWindowController<NSTableViewDataSource,NSTableViewDelegate>
+{
+    IBOutlet NSView               *containerView;
+    IBOutlet NSProgressIndicator  *progressIndicator;
+    IBOutlet NSPopUpButton        *actionPopUpButton;
+    IBOutlet NSSegmentedControl   *presentationControl;
+    IBOutlet NSSearchField        *searchField;
+    IBOutlet NSMenu               *actionMenu;
+    IBOutlet NSMenuItem           *dateOrderMenuItem;
+    IBOutlet NSMenuItem           *nameOrderMenuItem;
+    IBOutlet NSSlider             *zoomSlider;
     
-    NSScrollView *imageBrowserScrollView;
-    NSScrollView *tableViewScrollView;
-    IKImageBrowserView *browserView;
-    NSTableView *tableView;
+    NSScrollView                  *imageBrowserScrollView;
+    NSScrollView                  *tableViewScrollView;
+    IKImageBrowserView            *browserView;
+    NSTableView                   *tableView;
 
-    NSSortDescriptor *sortDescriptor;
+    NSSortDescriptor              *sortDescriptor;
     
-    NSOperationQueue *imageOperationQueue;
-    NSMutableArray *queriedPaths;
-    NSMutableArray *projects;
-    NSMutableArray *importedProjects;
-    NSMutableArray *displayedProjects;
+    NSOperationQueue              *imageOperationQueue;
+    NSMutableArray                *queriedPaths;
+    NSMutableArray                *projects;
+    NSMutableArray                *importedProjects;
+    NSMutableArray                *displayedProjects;
     
-    NSDateFormatter *dateFormatter;
+    NSDateFormatter               *dateFormatter;
     
-    NSMetadataQuery *query;
+    NSMetadataQuery               *query;
 }
 
 @property (strong) NSSortDescriptor *sortDescriptor;

@@ -6,9 +6,12 @@
 //  Copyright 2007 __MyCompanyName__. All rights reserved.
 //
 
-@interface OperationCustomCell : NSCell {
-    id mCustomValue;
+@interface OperationCustomCell : NSCell
+{
+    id   mCustomValue;
 }
-+ (OperationCustomCell*)cell;
+
++ (OperationCustomCell *)cell;
 - (void)setCustomValue:(id)value;
+
 @end

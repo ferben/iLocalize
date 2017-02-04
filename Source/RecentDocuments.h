@@ -6,9 +6,10 @@
 //  Copyright 2009 Arizona Software. All rights reserved.
 //
 
-@interface RecentDocuments : NSObject<NSMenuDelegate> {
-    NSMutableArray *recentObjects;
-    BOOL dirtyMenu;
+@interface RecentDocuments : NSObject<NSMenuDelegate>
+{
+    NSMutableArray  *recentObjects;
+    BOOL             dirtyMenu;
 }
 
 @property (strong) NSString *identifier;
@@ -18,15 +19,15 @@
 + (void)loadAll;
 + (void)saveAll;
 
-+ (void)documentOpened:(NSDocument*)doc;
-+ (void)documentClosed:(NSDocument*)doc;
++ (void)documentOpened:(NSDocument *)doc;
++ (void)documentClosed:(NSDocument *)doc;
 
-+ (RecentDocuments*)findInstanceWithID:(NSString*)identifier;
-+ (RecentDocuments*)createInstanceForDocumentExtensions:(NSArray*)extensions identifier:(NSString*)identifier;
++ (RecentDocuments *)findInstanceWithID:(NSString *)identifier;
++ (RecentDocuments *)createInstanceForDocumentExtensions:(NSArray *)extensions identifier:(NSString *)identifier;
 
-- (void)setMenu:(NSMenu*)menu;
+- (void)setMenu:(NSMenu *)menu;
 
-- (NSArray*)urls;
+- (NSArray *)urls;
 
 - (void)load;
 - (void)save;

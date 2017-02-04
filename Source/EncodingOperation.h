@@ -10,8 +10,10 @@
 
 @class StringEncoding;
 
-@interface EncodingOperation : AbstractOperation {
-
+@interface EncodingOperation : AbstractOperation
+{
 }
-- (void)convertFileControllers:(NSArray*)fcs toEncoding:(StringEncoding*)encoding reload:(BOOL)reload;
+
+- (void)convertFileControllers:(NSArray *)fcs toEncoding:(StringEncoding *)encoding reload:(BOOL)reload;
+
 @end

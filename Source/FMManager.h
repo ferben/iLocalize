@@ -13,23 +13,24 @@
 
 @class FileController;
 
-@interface FMManager : NSObject {
-    NSMutableDictionary            *mFileModules;
-    NSMutableDictionary            *mContexts;
+@interface FMManager : NSObject
+{
+    NSMutableDictionary  *mFileModules;
+    NSMutableDictionary  *mContexts;
 }
 
 + (id)shared;
 
-- (NSArray*)fileModules;
-- (NSArray*)fileExtensionsForFileModule:(FMModule*)fm;
+- (NSArray *)fileModules;
+- (NSArray *)fileExtensionsForFileModule:(FMModule *)fm;
 
-- (void)registerFileModule:(FMModule*)fm forFileExtension:(NSString*)extension;
-- (FMModule*)fileModuleForFileExtension:(NSString*)extension;
+- (void)registerFileModule:(FMModule *)fm forFileExtension:(NSString *)extension;
+- (FMModule *)fileModuleForFileExtension:(NSString *)extension;
 
-- (FMEditor*)editorForFile:(NSString*)file;
-- (FMEngine*)engineForFile:(NSString*)file;
-- (FMController*)controllerForFile:(NSString*)file;
+- (FMEditor *)editorForFile:(NSString *)file;
+- (FMEngine *)engineForFile:(NSString *)file;
+- (FMController *)controllerForFile:(NSString *)file;
 
-- (FileController*)defaultControllerForFile:(NSString*)file;
+- (FileController *)defaultControllerForFile:(NSString *)file;
 
 @end

@@ -13,9 +13,10 @@
 /**
  This operation prepares the list of files to copy (or to merge).
  */
-@interface ExportProjectPrepareFilesOp : Operation {
-@private
-    ExportProjectSettings *settings;
+@interface ExportProjectPrepareFilesOp : Operation
+{
+    @private
+    ExportProjectSettings  *settings;
 }
 
 @property (strong) ExportProjectSettings *settings;

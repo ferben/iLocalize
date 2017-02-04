@@ -7,6 +7,10 @@
 //
 
 @interface NSSplitView (Extensions)
+{
+}
+
 - (id)storePositions;
 - (void)restorePositions:(id)pos;
+
 @end

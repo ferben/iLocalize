@@ -11,27 +11,28 @@
 @class FileController;
 @class StringController;
 
-@interface ExplorerItem : NSObject {
-    NSString            *mTitle;
-    NSImage                *mImage;
-    BOOL                mSelectable;
-    BOOL                mEditable;
-    BOOL                mDeletable;
-    BOOL                all;
-    BOOL                group;
-    ExplorerFilter        *mFilter;
-    NSMutableArray        *_children;
+@interface ExplorerItem : NSObject
+{
+    NSString        *mTitle;
+    NSImage         *mImage;
+    BOOL             mSelectable;
+    BOOL             mEditable;
+    BOOL             mDeletable;
+    BOOL             all;
+    BOOL             group;
+    ExplorerFilter  *mFilter;
+    NSMutableArray  *_children;
 }
 
 @property BOOL all;
 @property BOOL group;
 @property (readonly) NSArray *children;
 
-+ (ExplorerItem*)itemWithTitle:(NSString*)title;
-+ (ExplorerItem*)groupItemWithTitle:(NSString*)title;
++ (ExplorerItem *)itemWithTitle:(NSString *)title;
++ (ExplorerItem *)groupItemWithTitle:(NSString *)title;
 
-- (void)setImage:(NSImage*)image;
-- (NSImage*)image;
+- (void)setImage:(NSImage *)image;
+- (NSImage *)image;
 
 - (void)setSelectable:(BOOL)flag;
 - (BOOL)selectable;
@@ -42,21 +43,21 @@
 - (void)setEditable:(BOOL)flag;
 - (BOOL)editable;
 
-- (void)setFilter:(ExplorerFilter*)filter;
-- (ExplorerFilter*)filter;
+- (void)setFilter:(ExplorerFilter *)filter;
+- (ExplorerFilter *)filter;
 
-- (void)setTitle:(NSString*)title;
-- (NSString*)title;
+- (void)setTitle:(NSString *)title;
+- (NSString *)title;
 
-- (void)addChild:(ExplorerItem*)child;
-- (void)removeChild:(ExplorerItem*)child;
+- (void)addChild:(ExplorerItem *)child;
+- (void)removeChild:(ExplorerItem *)child;
 
-- (void)removeItem:(ExplorerItem*)item;
+- (void)removeItem:(ExplorerItem *)item;
 
-- (ExplorerItem*)itemForFilter:(ExplorerFilter*)filter;
-- (NSIndexPath*)indexPathOfItem:(ExplorerItem*)item;
+- (ExplorerItem *)itemForFilter:(ExplorerFilter *)filter;
+- (NSIndexPath *)indexPathOfItem:(ExplorerItem *)item;
 
-- (void)moveFiltersIdentifiedByFiles:(NSArray*)files toChildIndex:(int)index;
-- (void)reorderByFilterFiles:(NSArray*)files;
+- (void)moveFiltersIdentifiedByFiles:(NSArray *)files toChildIndex:(int)index;
+- (void)reorderByFilterFiles:(NSArray *)files;
 
 @end

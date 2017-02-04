@@ -8,8 +8,8 @@
 
 #import "XMLExporter.h"
 
-@interface ILGExporter : XMLExporter {
-
+@interface ILGExporter : XMLExporter
+{
 }
 
 @end

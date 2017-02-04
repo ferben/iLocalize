@@ -21,42 +21,42 @@
 
 @interface EngineProvider : NSObject
 {
-    ResourceFileEngine        *mResourceFileEngine;
+    ResourceFileEngine  *mResourceFileEngine;
         
-    ModelEngine                *mModelEngine;
+    ModelEngine         *mModelEngine;
     
-    LanguageEngine            *mLanguageEngine;
-    FileEngine                *mFileEngine;
+    LanguageEngine      *mLanguageEngine;
+    FileEngine          *mFileEngine;
     
-    SynchronizeEngine        *mSynchronizeEngine;
-    ReplaceEngine            *mReplaceEngine;
+    SynchronizeEngine   *mSynchronizeEngine;
+    ReplaceEngine       *mReplaceEngine;
     
-    OptimizeEngine            *mOptimizeEngine;
+    OptimizeEngine      *mOptimizeEngine;
     
-    FindEngine                *mFindEngine;
-    CleanEngine                *mCleanEngine;
-    CheckEngine                *mCheckEngine;
+    FindEngine          *mFindEngine;
+    CleanEngine         *mCleanEngine;
+    CheckEngine         *mCheckEngine;
 }
 
 @property (weak) id<ProjectProvider> projectProvider;
 
-- (ResourceFileEngine*)resourceFileEngine;
+- (ResourceFileEngine *)resourceFileEngine;
 
-- (ModelEngine*)modelEngine;
+- (ModelEngine *)modelEngine;
 
-- (LanguageEngine*)languageEngine;
-- (FileEngine*)fileEngine;
+- (LanguageEngine *)languageEngine;
+- (FileEngine *)fileEngine;
 
-- (SynchronizeEngine*)synchronizeEngine;
-- (ReplaceEngine*)replaceEngine;
+- (SynchronizeEngine *)synchronizeEngine;
+- (ReplaceEngine *)replaceEngine;
 
-- (OptimizeEngine*)optimizeEngine;
+- (OptimizeEngine *)optimizeEngine;
 
 #ifndef TARGET_TOOL
-- (FindEngine*)findEngine;
+- (FindEngine *)findEngine;
 #endif
 
-- (CleanEngine*)cleanEngine;
-- (CheckEngine*)checkEngine;
+- (CleanEngine *)cleanEngine;
+- (CheckEngine *)checkEngine;
 
 @end

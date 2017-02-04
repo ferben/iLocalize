@@ -9,8 +9,8 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface CustomTypesetter : NSATSTypesetter {
-
+@interface CustomTypesetter : NSATSTypesetter
+{
 }
 
 @end

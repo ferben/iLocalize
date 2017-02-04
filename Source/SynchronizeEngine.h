@@ -10,15 +10,17 @@
 
 @class FileController;
 
-@interface SynchronizeEngine : AbstractEngine {
-
+@interface SynchronizeEngine : AbstractEngine
+{
 }
-- (void)synchronizeToDisk:(FileController*)fileController;
-- (void)synchronizeToDiskIfNeeded:(FileController*)fileController;
 
-- (void)synchronizeFromDisk:(FileController*)fileController;
-- (void)synchronizeFromDiskIfNeeded:(FileController*)fileController;
+- (void)synchronizeToDisk:(FileController *)fileController;
+- (void)synchronizeToDiskIfNeeded:(FileController *)fileController;
 
-- (void)synchronizeFileController:(FileController*)fileController;
-- (void)synchronizeFileControllers:(NSArray*)fileControllers;
+- (void)synchronizeFromDisk:(FileController *)fileController;
+- (void)synchronizeFromDiskIfNeeded:(FileController *)fileController;
+
+- (void)synchronizeFileController:(FileController *)fileController;
+- (void)synchronizeFileControllers:(NSArray *)fileControllers;
+
 @end

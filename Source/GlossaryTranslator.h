@@ -10,27 +10,28 @@
 @class OperationWC;
 @class LanguageController;
 
-@interface GlossaryTranslator : NSObject {
-    OperationWC         *mOperation;
-    LanguageController  *mLanguageController;
+@interface GlossaryTranslator : NSObject
+{
+    OperationWC          *mOperation;
+    LanguageController   *mLanguageController;
     
-    NSMutableDictionary    *mCachedRootString;    // cache
-    NSMutableDictionary *mCachedRemainingString; // cache
+    NSMutableDictionary  *mCachedRootString;       // cache
+    NSMutableDictionary  *mCachedRemainingString;  // cache
     
-    BOOL    mIgnoreCase;
-    int     mMaxCount;
-    int     mCurrentCount;
+    BOOL                  mIgnoreCase;
+    int                   mMaxCount;
+    int                   mCurrentCount;
 }
 
-+ (GlossaryTranslator*)translator;
++ (GlossaryTranslator *)translator;
 
 - (void)setIgnoreCase:(BOOL)flag;
-- (void)setLanguageController:(LanguageController*)lc;
+- (void)setLanguageController:(LanguageController *)lc;
 
-- (void)translateStringControllers:(NSArray*)scs withString:(NSString*)string base:(NSString*)base;
-- (void)translateFileControllers:(NSArray*)fcs withString:(NSString*)string base:(NSString*)base;
+- (void)translateStringControllers:(NSArray *)scs withString:(NSString *)string base:(NSString *)base;
+- (void)translateFileControllers:(NSArray *)fcs withString:(NSString *)string base:(NSString *)base;
 
-- (void)translateStringControllers:(NSArray*)scs withGlossaries:(NSArray*)glossaries;
-- (void)translateFileControllers:(NSArray*)fcs withGlossaries:(NSArray*)glossaries;
+- (void)translateStringControllers:(NSArray *)scs withGlossaries:(NSArray *)glossaries;
+- (void)translateFileControllers:(NSArray *)fcs withGlossaries:(NSArray *)glossaries;
 
 @end

@@ -8,7 +8,8 @@
 
 #import "GlossaryScopeAbstractWC.h"
 
-@interface GlossaryScopeWC : GlossaryScopeAbstractWC {
+@interface GlossaryScopeWC : GlossaryScopeAbstractWC
+{
 }
 
 @end

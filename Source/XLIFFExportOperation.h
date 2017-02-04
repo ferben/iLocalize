@@ -10,12 +10,13 @@
 
 @class XLIFFExportSettings;
 
-@interface XLIFFExportOperation : Operation {
-    XLIFFExportSettings *settings;
+@interface XLIFFExportOperation : Operation
+{
+    XLIFFExportSettings  *settings;
 }
 @property (strong) XLIFFExportSettings *settings;
 
 // accessor for unit tests
-- (NSString*)buildXLIFF;
+- (NSString *)buildXLIFF;
 
 @end

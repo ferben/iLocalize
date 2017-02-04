@@ -8,30 +8,31 @@
 
 @class FileModel;
 
-@interface LanguageModel : NSObject <NSCoding> {
-    NSString            *mLanguage;
-    NSMutableArray        *mFileModelArray;
+@interface LanguageModel : NSObject <NSCoding>
+{
+    NSString             *mLanguage;
+    NSMutableArray       *mFileModelArray;
     
     // volatile
-    NSMutableDictionary *mPath2Model;
+    NSMutableDictionary  *mPath2Model;
 }
 
 @property (nonatomic, strong) NSArray *translateUsingGlossariesSelectedStates;
 @property (nonatomic, strong) NSArray *updateOrAddInGlossariesSelectedStates;
 
-+ (LanguageModel*)model;
++ (LanguageModel *)model;
 
-- (void)setLanguage:(NSString*)language;
-- (NSString*)language;
+- (void)setLanguage:(NSString *)language;
+- (NSString *)language;
 
-- (void)addFileModel:(FileModel*)fileModel;
-- (void)deleteFileModel:(FileModel*)fileModel;
-- (NSMutableArray*)fileModels;
-- (void)removeFromCache:(FileModel*)fileModel;
+- (void)addFileModel:(FileModel *)fileModel;
+- (void)deleteFileModel:(FileModel *)fileModel;
+- (NSMutableArray *)fileModels;
+- (void)removeFromCache:(FileModel *)fileModel;
 
-- (FileModel*)fileModelForBaseFileModel:(FileModel*)baseFileModel;
+- (FileModel *)fileModelForBaseFileModel:(FileModel *)baseFileModel;
 
-- (void)addToCache:(FileModel*)fm;
-- (void)removeFromCache:(FileModel*)fm;
+- (void)addToCache:(FileModel *)fm;
+- (void)removeFromCache:(FileModel *)fm;
 
 @end

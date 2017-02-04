@@ -19,13 +19,14 @@
 @protocol AZListSelectionViewItem
 
 - (id)objectForKeyedSubscript:(id)key;
-- (id)objectForKey:(NSString*)key;
-- (void)setObject:(id)object forKey:(NSString*)key;
+- (id)objectForKey:(NSString *)key;
+- (void)setObject:(id)object forKey:(NSString *)key;
 
 @end
 
-@interface AZListSelectionView : NSObject<NSOutlineViewDataSource,NSOutlineViewDelegate> {
-    NSArray *elements;
+@interface AZListSelectionView : NSObject<NSOutlineViewDataSource,NSOutlineViewDelegate>
+{
+    NSArray  *elements;
 }
 
 @property (weak) id<AZListSelectionViewDelegate> delegate;
@@ -41,12 +42,12 @@
 /**
  Returns the name of the key that will store the selection information in the dictionary of each element.
  */
-+ (NSString*)selectedKey;
++ (NSString *)selectedKey;
 
 /**
  Returns the name of the key that will store an optional image to be used in the first column of the outline view.
  */
-+ (NSString*)imageKey;
++ (NSString *)imageKey;
 
 /**
  Reload the data.
@@ -56,6 +57,6 @@
 /**
  Returns an array of dictionary for all the selected elements.
  */
-- (NSArray*)selectedElements;
+- (NSArray *)selectedElements;
 
 @end

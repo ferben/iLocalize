@@ -6,13 +6,16 @@
 //  Copyright 2005 Arizona Software. All rights reserved.
 //
 
-@interface GlossaryMergeWC : NSWindowController {
+@interface GlossaryMergeWC : NSWindowController
+{
     IBOutlet NSArrayController  *mMergeController;
     IBOutlet NSPopUpButton      *mMergeDestPopUp;    
-    IBOutlet NSButton            *mRemoveDuplicateEntriesButton;
+    IBOutlet NSButton           *mRemoveDuplicateEntriesButton;
 }
-- (void)setGlossaries:(NSArray*)glossaries;
-- (void)showWithParent:(NSWindow*)parent;
+
+- (void)setGlossaries:(NSArray *)glossaries;
+- (void)showWithParent:(NSWindow *)parent;
 - (IBAction)cancel:(id)sender;
 - (IBAction)merge:(id)sender;
+
 @end

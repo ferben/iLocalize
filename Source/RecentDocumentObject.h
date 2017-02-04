@@ -6,19 +6,20 @@
 //  Copyright 2009 Arizona Software. All rights reserved.
 //
 
-@interface RecentDocumentObject : NSObject {
-    NSURL *url;
-    int disambiguationLevel;
+@interface RecentDocumentObject : NSObject
+{
+    NSURL  *url;
+    int     disambiguationLevel;
 }
 
 @property (strong) NSURL *url;
 
-+ (RecentDocumentObject*)createWithData:(NSData*)data;
-+ (RecentDocumentObject*)createWithDocument:(NSDocument*)doc;
-+ (RecentDocumentObject*)createWithURL:(NSURL*)url;
++ (RecentDocumentObject *)createWithData:(NSData *)data;
++ (RecentDocumentObject *)createWithDocument:(NSDocument *)doc;
++ (RecentDocumentObject *)createWithURL:(NSURL *)url;
 
-- (NSString*)menuTitle;
-- (NSAttributedString*)menuAttributedTitle;
+- (NSString *)menuTitle;
+- (NSAttributedString *)menuAttributedTitle;
 
 - (void)resetMenuTitleDisambiguationLevel;
 - (void)incrementMenuTitleDisambiguationLevel;

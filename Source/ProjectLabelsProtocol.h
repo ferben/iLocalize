@@ -1,5 +1,6 @@
-
 @protocol ProjectLabelPersistent
-- (void)setLabelIndexes:(NSSet*)indexes;
-- (NSSet*)labelIndexes;
+
+- (void)setLabelIndexes:(NSSet *)indexes;
+- (NSSet *)labelIndexes;
+
 @end

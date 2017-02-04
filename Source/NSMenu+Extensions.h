@@ -7,7 +7,11 @@
 //
 
 @interface NSMenu (iLocalize)
+{
+}
+
 - (void)setMenuItemsState:(int)state;
 - (void)setMenuItemState:(int)state atIndex:(int)index;
 - (void)setMenuItemState:(int)state withTag:(int)tag;
+
 @end

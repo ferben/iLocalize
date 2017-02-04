@@ -6,8 +6,8 @@
 //  Copyright 2009 Arizona Software. All rights reserved.
 //
 
-@interface AZGlassView : NSView {
-
+@interface AZGlassView : NSView
+{
 }
 
 @end

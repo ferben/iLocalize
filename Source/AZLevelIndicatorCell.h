@@ -6,8 +6,8 @@
 //  Copyright 2011 Arizona Software. All rights reserved.
 //
 
-@interface AZLevelIndicatorCell : NSTextFieldCell {
-
+@interface AZLevelIndicatorCell : NSTextFieldCell
+{
 }
 
 @end

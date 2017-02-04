@@ -14,11 +14,12 @@
  Class that handles a scope of glossaries, that is, among a set of glossary,
  which ones are selected for processing.
  */
-@interface GlossaryScope : NSObject {
+@interface GlossaryScope : NSObject
+{
     /**
      Map of root node for each language. A root node contains the tree of scopes.
      */
-    NSMutableDictionary *nodesForLanguage;
+    NSMutableDictionary  *nodesForLanguage;
 }
 
 /**
@@ -41,7 +42,7 @@
 /**
  Returns the root node of the tree representing all the available scopes.
  */
-- (TreeNode*)rootNode;
+- (TreeNode *)rootNode;
 
 /**
  Deselect all the glossaries
@@ -51,6 +52,6 @@
 /**
  Returns an array of glossaries that are selected.
  */
-- (NSArray*)selectedGlossaries;
+- (NSArray *)selectedGlossaries;
 
 @end

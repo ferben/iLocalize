@@ -14,60 +14,61 @@
 @class StringController;
 @class AZClearView;
 
-@interface FMEditorStrings : FMEditor<NSTextViewDelegate, NSTableViewDelegate, TextViewCustomDelegate, AZTableViewDelegate> {
-    IBOutlet NSView                    *mBaseTableView;
-    IBOutlet NSView                    *mLocalizedTableView;
+@interface FMEditorStrings : FMEditor<NSTextViewDelegate, NSTableViewDelegate, TextViewCustomDelegate, AZTableViewDelegate>
+{
+    IBOutlet NSView             *mBaseTableView;
+    IBOutlet NSView             *mLocalizedTableView;
     
-    IBOutlet NSView                    *mEmptyView;
-    IBOutlet NSArrayController        *mStringsController;
+    IBOutlet NSView             *mEmptyView;
+    IBOutlet NSArrayController  *mStringsController;
     
-    IBOutlet TableViewCustom        *mBaseStringsTableView;
-    IBOutlet TableViewCustom        *mLocalizedStringsTableView;
+    IBOutlet TableViewCustom    *mBaseStringsTableView;
+    IBOutlet TableViewCustom    *mLocalizedStringsTableView;
                 
-    IBOutlet NSMenu                    *mTableViewContextualMenu;
-    IBOutlet NSMenu                    *mTextViewContextualMenu;
+    IBOutlet NSMenu             *mTableViewContextualMenu;
+    IBOutlet NSMenu             *mTextViewContextualMenu;
     
-    IBOutlet NSMenuItem                *mLabelsMenuItem;
-    IBOutlet NSMenu                    *mTableCornerMenu;
+    IBOutlet NSMenuItem         *mLabelsMenuItem;
+    IBOutlet NSMenu             *mTableCornerMenu;
 
     // Base editor view
-    AZClearView                        *baseEditorView;
-    NSButton                        *baseLockButton;
-    NSButton                        *baseCommentButton;
-    NSTextField                        *baseInfoField;
-    TextViewCustom                    *baseTextView;
+    AZClearView                 *baseEditorView;
+    NSButton                    *baseLockButton;
+    NSButton                    *baseCommentButton;
+    NSTextField                 *baseInfoField;
+    TextViewCustom              *baseTextView;
 
     // Localized editor view
-    AZClearView                        *localizedEditorView;
-    NSButton                        *localizedLockButton;
-    NSButton                        *localizedCommentButton;
-    NSButton                        *propagationModeButton;
-    NSTextField                        *localizedBaseInfoField;
-    NSTextField                        *localizedInfoField;
+    AZClearView                 *localizedEditorView;
+    NSButton                    *localizedLockButton;
+    NSButton                    *localizedCommentButton;
+    NSButton                    *propagationModeButton;
+    NSTextField                 *localizedBaseInfoField;
+    NSTextField                 *localizedInfoField;
 
-    TextViewCustom                    *localizedBaseTextView;
-    TextViewCustom                    *localizedTextView;
+    TextViewCustom              *localizedBaseTextView;
+    TextViewCustom              *localizedTextView;
 
     //
         
-    BOOL                            mIgnoreCase;
+    BOOL                         mIgnoreCase;
     
-    BOOL                            mDisplayingComments;
-    NSIndexSet                        *mSelectedStringsRowIndexes;
+    BOOL                         mDisplayingComments;
+    NSIndexSet                  *mSelectedStringsRowIndexes;
     
-    BOOL                            mEditedColumnIsBase;
+    BOOL                         mEditedColumnIsBase;
     
     // Cache information
-    BOOL    mQuoteSubstitution;
-    NSString *mOpenDoubleBaseLanguage;
-    NSString *mCloseDoubleBaseLanguage;
-    NSString *mOpenSingleBaseLanguage;
-    NSString *mCloseSingleBaseLanguage;
+    BOOL                         mQuoteSubstitution;
+    NSString                    *mOpenDoubleBaseLanguage;
+    NSString                    *mCloseDoubleBaseLanguage;
+    NSString                    *mOpenSingleBaseLanguage;
+    NSString                    *mCloseSingleBaseLanguage;
     
-    NSString *mOpenDoubleLocalizedLanguage;
-    NSString *mCloseDoubleLocalizedLanguage;
-    NSString *mOpenSingleLocalizedLanguage;
-    NSString *mCloseSingleLocalizedLanguage;    
+    NSString                    *mOpenDoubleLocalizedLanguage;
+    NSString                    *mCloseDoubleLocalizedLanguage;
+    NSString                    *mOpenSingleLocalizedLanguage;
+    NSString                    *mCloseSingleLocalizedLanguage;
 }
 
 - (void)updateTextZone;
@@ -76,12 +77,12 @@
 
 - (void)buildViews;
 
-- (NSArrayController*)stringsController;
+- (NSArrayController *)stringsController;
 
-- (NSArray*)selectedStringControllers;
-- (StringController*)selectedStringController;
+- (NSArray *)selectedStringControllers;
+- (StringController *)selectedStringController;
 
-- (NSString*)quoteSubstitutionOfString:(NSString*)string range:(NSRange)affectedCharRange replacementString:(NSString*)replacementString;
+- (NSString *)quoteSubstitutionOfString:(NSString *)string range:(NSRange)affectedCharRange replacementString:(NSString *)replacementString;
 
 - (IBAction)setSearchString:(id)sender;
 
@@ -93,7 +94,7 @@
 - (IBAction)toggleLock:(id)sender;
 - (IBAction)toggleComment:(id)sender;
 
-- (NSString*)propagationTitle:(NSInteger)mode;
+- (NSString *)propagationTitle:(NSInteger)mode;
 - (void)updatePropagationMode;
 - (IBAction)togglePropagation:(id)sender;
 

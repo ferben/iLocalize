@@ -8,8 +8,8 @@
 
 #import "FMController.h"
 
-@interface FMControllerHTML : FMController {
-
+@interface FMControllerHTML : FMController
+{
 }
 
 @end

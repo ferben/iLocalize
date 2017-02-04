@@ -57,16 +57,17 @@
 
 typedef void(^PropagationEngineWillChangeStringController)(id<StringControllerProtocol>string);
 
-@interface PropagationEngine : NSObject {
-    NSMutableArray *punctuationList;
+@interface PropagationEngine : NSObject
+{
+    NSMutableArray  *punctuationList;
 }
 
-+ (PropagationEngine*)engine;
++ (PropagationEngine *)engine;
 
 /**
  Return the extraction for the given string.
  */
-- (Extraction*)extract:(NSString*)s;
+- (Extraction *)extract:(NSString *)s;
 
 /**
  Propagate the "root" content of a string controller protocol to an array of string controller protocol.
@@ -75,6 +76,6 @@ typedef void(^PropagationEngineWillChangeStringController)(id<StringControllerPr
  @param ignoreCase Flag that indicates if the case should be taken into account when comparing the root
  @param block Block that will be invoked just before the string controller is being modified
  */
-- (void)propagateString:(id<StringControllerProtocol>)string toStrings:(NSArray*)scs ignoreCase:(BOOL)ignoreCase block:(PropagationEngineWillChangeStringController)block;
+- (void)propagateString:(id<StringControllerProtocol>)string toStrings:(NSArray *)scs ignoreCase:(BOOL)ignoreCase block:(PropagationEngineWillChangeStringController)block;
 
 @end

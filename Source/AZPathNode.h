@@ -9,70 +9,70 @@
 /**
  Node representing a path.
  */
-@interface AZPathNode : NSObject {
-
-@private
+@interface AZPathNode : NSObject
+{
+    @private
     /**
      The parent node or nil if root.
      */
-    AZPathNode *parent;
+    AZPathNode        *parent;
     
     /**
      The children nodes. This array contains all the nodes.
      */
-    NSMutableArray *_children;
+    NSMutableArray    *_children;
     
     /**
      Array of children after filtering (e.g. localized only)
      */
-    NSArray *filteredChildren;
+    NSArray           *filteredChildren;
     
     /**
      Array of children suitable for display (e.g. with language placeholder)
      */
-    NSArray *displayableChildren;
+    NSArray           *displayableChildren;
     
     /**
      Name of this node.
      */
-    NSString *name;
+    NSString          *name;
     
     /**
      This property is set to the root node only and contains
      the path of the root node.
      */
-    NSString *rootPath;
+    NSString          *rootPath;
     
     // Language of this path (or nil if this path is not localized)
-    NSString *language;
+    NSString          *language;
     
     // True if this node contains at least one language in its children
-    BOOL containsLanguages;
+    BOOL               containsLanguages;
     
     // State of the node. Usually NSOnState, NSMixedState or NSOffState
-    NSInteger state;
+    NSInteger          state;
     
     // Flag indicating to hide the language folders (*.lproj)
-    BOOL hideLanguageFolders;
+    BOOL               hideLanguageFolders;
     
     // Flag indicating to return only children that contains at least one language
-    BOOL useLocalizedPathsOnly;
+    BOOL               useLocalizedPathsOnly;
     
     // Flag indicating to return placeholder nodes instead of the language children
-    BOOL useLanguagePlaceholder;
+    BOOL               useLanguagePlaceholder;
     
     // Flag indicating this node is the language placeholder node. This is used so the user can choose to
     // select the languages of this node but not other children of this node
-    BOOL languagePlaceholderNode;
+    BOOL               languagePlaceholderNode;
     
     // Nodes that the language placeholder represents.
-    NSArray *languagePlaceholderNodes;
+    NSArray           *languagePlaceholderNodes;
     
     // Internal sort descriptor used to keep the children sorted
-    NSSortDescriptor *childrenSortDescriptor;
+    NSSortDescriptor  *childrenSortDescriptor;
     
     // The optional payload of this node
-    id payload;
+    id                 payload;
 }
 
 @property (strong) AZPathNode *parent;
@@ -86,7 +86,7 @@
 /**
  Creates a root node with the specified path.
  */
-+ (AZPathNode*)rootNodeWithPath:(NSString*)path;
++ (AZPathNode *)rootNodeWithPath:(NSString *)path;
 
 /**
  Sets the state of this node and propagate to its children and parents.
@@ -98,17 +98,17 @@
 /**
  Returns the path of this node relative to the root node path.
  */
-- (NSString*)relativePath;
+- (NSString *)relativePath;
 
 /**
  Returns the absolute path of this node.
  */
-- (NSString*)absolutePath;
+- (NSString *)absolutePath;
 
 /**
  Add a node. When building a tree of path, you should use addRelativePath instead.
  */
-- (void)addNode:(AZPathNode*)node;
+- (void)addNode:(AZPathNode *)node;
 
 /**
  Add a relative path to this root node.
@@ -117,7 +117,7 @@
  
  @return The node that represent the last element of the path (the leaf node)
  */
-- (AZPathNode*)addRelativePath:(NSString*)relativePath;
+- (AZPathNode *)addRelativePath:(NSString *)relativePath;
 
 /**
  Invoke this method before starting to modify this node using addRelativePath.
@@ -133,32 +133,33 @@
 /**
  Returns the title of this node tailored for display.
  */
-- (NSString*)title;
+- (NSString *)title;
 
 /**
  Returns the image associated with this node.
  */
-- (NSImage*)image;
+- (NSImage *)image;
 
 /**
  Returns the node at the specified tree location. The location specified the branch
  to follow, such as:
  @"0,0,1" : child(0).child(0).child(1)
  */
-- (AZPathNode*)childAtLocation:(NSString*)location;
+- (AZPathNode *)childAtLocation:(NSString *)location;
+
 // The same but with the displayable children
-- (AZPathNode*)displayableChildAtLocation:(NSString*)location;
+- (AZPathNode *)displayableChildAtLocation:(NSString *)location;
 
 /**
  Returns the children of this node. The array returned by this method
  is filtered by the flag mentioned above.
  */
-- (NSArray*)children;
+- (NSArray *)children;
 
 /**
  Returns the children of this node that can be dispalyed.
  */
-- (NSArray*)displayableChildren;
+- (NSArray *)displayableChildren;
 
 /**
  Removes all the children of this node.
@@ -168,8 +169,8 @@
 /**
  Returns an array of all the selected paths (relative)
  */
-- (NSArray*)selectedRelativePaths;
-- (NSArray*)selectedAbsolutePaths;
+- (NSArray *)selectedRelativePaths;
+- (NSArray *)selectedAbsolutePaths;
 
 /**
  Hide language folders from the displayed children.

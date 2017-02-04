@@ -9,8 +9,10 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface AZActionPopUpButtonCell : NSPopUpButtonCell {
-
+@interface AZActionPopUpButtonCell : NSPopUpButtonCell
+{
 }
+
 //+ (void)drawInFrame:(NSRect)frame;
+
 @end

@@ -8,7 +8,8 @@
 
 #import "TableViewCustomCell.h"
 
-@interface LanguageCustomCell : TableViewCustomCell {
-
+@interface LanguageCustomCell : TableViewCustomCell
+{
 }
+
 @end

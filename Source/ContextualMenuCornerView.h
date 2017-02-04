@@ -8,8 +8,11 @@
 
 #import "TableCornerViewCustom.h"
 
-@interface ContextualMenuCornerView : TableCornerViewCustom {
-    NSMenu *mMenu;
+@interface ContextualMenuCornerView : TableCornerViewCustom
+{
+    NSMenu  *mMenu;
 }
-+ (id)cornerWithMenu:(NSMenu*)menu;
+
++ (id)cornerWithMenu:(NSMenu *)menu;
+
 @end

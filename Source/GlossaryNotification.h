@@ -7,14 +7,15 @@
 //
 
 // Notification used when a glossary has changed on the disk or a folder has been modified
-#define GlossaryDidChange @"GlossaryDidChange"
+#define GlossaryDidChange  @"GlossaryDidChange"
 
 // Notification used when the background indexing starts and stops
-#define GlossaryProcessingDidChange @"GlossaryProcessingDidChange"
+#define GlossaryProcessingDidChange  @"GlossaryProcessingDidChange"
 
 @class GlossaryFolder;
 
-enum NOTIFICATION_ACTION {
+enum NOTIFICATION_ACTION
+{
     INDEX_CHANGED,
     GLOSSARY_SAVED,
     GLOSSARY_DELETED,
@@ -28,28 +29,30 @@ enum NOTIFICATION_ACTION {
 /**
  Notification object that is being posted for any glossary notification.
  */
-@interface GlossaryNotification : NSObject {
+@interface GlossaryNotification : NSObject
+{
     // Array of new files detected in one of the glossary folder
-    NSArray *listOfNewFiles;
+    NSArray         *listOfNewFiles;
     
     // Array of modified files (changes on the disk)
-    NSArray *modifiedFiles;
+    NSArray         *modifiedFiles;
     
     // Array of files removed from one of the glossary folder
-    NSArray *deletedFiles;
+    NSArray         *deletedFiles;
 
     // The folder
-    GlossaryFolder *folder;
+    GlossaryFolder  *folder;
     
     // Source of the notification to avoid recursive notification
-    id source;
+    id               source;
     
     // Percentage of processing
-    double processingPercentage;
+    double           processingPercentage;
     
     // Type of action
-    int action;
+    int              action;
 }
+
 @property (strong) NSArray *listOfNewFiles;
 @property (strong) NSArray *modifiedFiles;
 @property (strong) NSArray *deletedFiles;
@@ -58,6 +61,6 @@ enum NOTIFICATION_ACTION {
 @property (strong) id source;
 @property int action;
 
-+ (GlossaryNotification*)notificationWithAction:(int)action;
++ (GlossaryNotification *)notificationWithAction:(int)action;
 
 @end

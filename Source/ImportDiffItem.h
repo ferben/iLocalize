@@ -6,21 +6,21 @@
 //  Copyright 2011 Arizona Software. All rights reserved.
 //
 
-#define OPERATION_ADD       1
-#define OPERATION_DELETE    2
-#define OPERATION_UPDATE    3
-#define OPERATION_IDENTICAL 4
+#define OPERATION_ADD        1
+#define OPERATION_DELETE     2
+#define OPERATION_UPDATE     3
+#define OPERATION_IDENTICAL  4
 
 @interface ImportDiffItem : NSObject
 {
-    BOOL enabled;
-    NSUInteger operation;
+    BOOL         enabled;
+    NSUInteger   operation;
     
     // The relative file
-    NSString *file;
+    NSString    *file;
     
     // The source path
-    NSString *source;
+    NSString    *source;
 }
 
 @property BOOL enabled;

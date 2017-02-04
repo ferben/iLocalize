@@ -8,25 +8,26 @@
 
 @class Toolbar;
 
-@interface PreferencesWC : NSWindowController {
-    NSMutableArray        *mObservers;
-    Toolbar                *mToolbar;    
+@interface PreferencesWC : NSWindowController
+{
+    NSMutableArray  *mObservers;
+    Toolbar         *mToolbar;
 }
 
-+ (PreferencesWC*)shared;
++ (PreferencesWC *)shared;
 
 - (void)show;
 
 - (void)load;
 - (void)save;
 
-- (void)setProjectPresets:(NSArray*)array;
-- (NSArray*)projectPresets;
+- (void)setProjectPresets:(NSArray *)array;
+- (NSArray *)projectPresets;
 
-- (void)setLicenseBundleVersionAccepted:(NSString*)build;
-- (NSString*)licenseBundleVersionAccepted;
+- (void)setLicenseBundleVersionAccepted:(NSString *)build;
+- (NSString *)licenseBundleVersionAccepted;
 
-- (void)addObserver:(id)observer selector:(SEL)selector forKey:(NSString*)key;
+- (void)addObserver:(id)observer selector:(SEL)selector forKey:(NSString *)key;
 - (void)removeObserver:(id)observer;
 
 @end

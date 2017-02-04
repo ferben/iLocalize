@@ -10,9 +10,11 @@
 
 // typedef unsigned long long ltime_t;
 
-@interface TimerTool : NSObject {
-
+@interface TimerTool : NSObject
+{
 }
+
 // + (ltime_t)microseconds;
 // + (float)seconds;
+
 @end

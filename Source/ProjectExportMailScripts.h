@@ -6,11 +6,14 @@
 //  Copyright 2007 Arizona Software. All rights reserved.
 //
 
-@interface ProjectExportMailScripts : NSObject {
-    NSMutableArray                *mMailPrograms;
+@interface ProjectExportMailScripts : NSObject
+{
+    NSMutableArray  *mMailPrograms;
 }
-+ (ProjectExportMailScripts*)shared;
+
++ (ProjectExportMailScripts *)shared;
 - (void)update;
-- (NSArray*)programs;
-- (NSString*)scriptFileForPrograms:(NSString*)program;
+- (NSArray *)programs;
+- (NSString *)scriptFileForPrograms:(NSString *)program;
+
 @end

@@ -7,4 +7,6 @@
 //
 
 @interface NSObject (Inspector)
+{
+}
 @end

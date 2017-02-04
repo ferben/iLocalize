@@ -6,14 +6,15 @@
 //  Copyright 2011 Arizona Software. All rights reserved.
 //
 
-@interface SearchContext : NSObject {
+@interface SearchContext : NSObject
+{
     // Scope such as "file", "base", etc.
-    NSInteger scope;
+    NSInteger   scope;
     
     // Options such as "contains", "beginswith", etc.
-    NSInteger options;
+    NSInteger   options;
     
-    BOOL ignoreCase;
+    BOOL        ignoreCase;
 }
 
 @property NSInteger scope;

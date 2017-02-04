@@ -14,14 +14,15 @@
 /**
  Displays for each file its potential matches so the user can choose which one to take.
  */
-@interface ImportFilesMultiMatchOVC : OperationViewController<PopupTableColumnDelegate> {
-    IBOutlet NSTableView *tableView;
+@interface ImportFilesMultiMatchOVC : OperationViewController<PopupTableColumnDelegate>
+{
+    IBOutlet NSTableView  *tableView;
     
     // Array of all the FileMatchItem objects
-    NSArray    *matchItems;
+    NSArray               *matchItems;
     
     // Array of the FileMatchItem that have more than once matches
-    NSMutableArray *multiMatchItems;
+    NSMutableArray        *multiMatchItems;
 }
 
 @property (strong) NSArray *matchItems;
@@ -32,6 +33,6 @@
  
  @param multipleMatch YES if one or more files have multiple matches.
  */
-+ (NSArray*)matchesFiles:(NSArray*)files languageController:(LanguageController*)languageController multipleMatch:(BOOL*)multipleMatch;
++ (NSArray *)matchesFiles:(NSArray *)files languageController:(LanguageController *)languageController multipleMatch:(BOOL *)multipleMatch;
 
 @end

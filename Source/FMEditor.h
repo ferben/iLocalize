@@ -14,18 +14,19 @@
 @class Console;
 @class Stack;
 
-@interface FMEditor : NSObject {
-    IBOutlet NSView    *mBaseView;
-    IBOutlet NSView    *mLocalizedView;
+@interface FMEditor : NSObject
+{
+    IBOutlet NSView     *mBaseView;
+    IBOutlet NSView     *mLocalizedView;
 
-    FMEngine        *mEngine;
+    FMEngine            *mEngine;
     
-    NSWindow        *mWindow;
+    NSWindow            *mWindow;
     
-    Stack            *mStackState;
+    Stack               *mStackState;
     
-    LanguageController    *mLanguageController;
-    NSMutableArray            *mFileControllers;
+    LanguageController  *mLanguageController;
+    NSMutableArray      *mFileControllers;
 }
 
 @property (nonatomic, weak) id<ProjectProvider> projectProvider;
@@ -35,54 +36,54 @@
 - (void)awake;
 - (void)close;
 
-- (ProjectPrefs*)projectPrefs;
-- (NSUndoManager*)undoManager;
-- (Console*)console;
+- (ProjectPrefs *)projectPrefs;
+- (NSUndoManager *)undoManager;
+- (Console *)console;
 
-- (void)setEngine:(FMEngine*)engine;
-- (FMEngine*)engine;
+- (void)setEngine:(FMEngine *)engine;
+- (FMEngine *)engine;
 
-- (NSWindow*)window;
-- (Stack*)stackState;
+- (NSWindow *)window;
+- (Stack *)stackState;
 
-- (NSView*)view;
-- (NSArray*)keyViews;
+- (NSView *)view;
+- (NSArray *)keyViews;
 - (BOOL)allowsMultipleSelection;
 
 - (BOOL)canExportToStrings;
 - (BOOL)canTranslateUsingStrings;
 
-- (void)makeVisibleInBox:(NSView*)box;
+- (void)makeVisibleInBox:(NSView *)box;
 - (void)makeInvisible;
 
-- (NSString*)baseLanguage;
-- (NSString*)baseLanguageDisplay;
+- (NSString *)baseLanguage;
+- (NSString *)baseLanguageDisplay;
 
-- (NSString*)localizedLanguage;
-- (NSString*)localizedLanguageDisplay;
+- (NSString *)localizedLanguage;
+- (NSString *)localizedLanguageDisplay;
 
 - (BOOL)isBaseLanguage;
 
-- (void)setLanguageController:(LanguageController*)lc;
-- (LanguageController*)languageController;
+- (void)setLanguageController:(LanguageController *)lc;
+- (LanguageController *)languageController;
 
-- (NSArray*)allFilesOfSelectedLanguage;
+- (NSArray *)allFilesOfSelectedLanguage;
 
-- (void)setFileControllers:(NSArray*)fcs;
-- (FileController*)fileController;
+- (void)setFileControllers:(NSArray *)fcs;
+- (FileController *)fileController;
 
-- (void)exportFile:(NSString*)sourcePath toStringsFile:(NSString*)targetPath;
-- (void)translateUsingStringsFile:(NSString*)file;
+- (void)exportFile:(NSString *)sourcePath toStringsFile:(NSString *)targetPath;
+- (void)translateUsingStringsFile:(NSString *)file;
 
 - (void)selectContentItem:(id)item;
-- (NSArray*)selectedContentItems;
+- (NSArray *)selectedContentItems;
 
 - (void)selectNextItem;
 
 - (void)pushState;
 - (void)popState;
 
-- (NSString*)windowToolTipRequestedAtPosition:(NSPoint)pos;
+- (NSString *)windowToolTipRequestedAtPosition:(NSPoint)pos;
 
 - (IBAction)performDebugAction:(id)sender;
 

@@ -9,14 +9,18 @@
 #import "ProjectDetails.h"
 #import "IGroupEngineManager.h"
 
-@interface ProjectDetailsAlternate : ProjectDetails<IGroupEngineManagerDelegate,NSTableViewDelegate> {
-    IBOutlet NSTableView *mTableView;
-    IBOutlet NSArrayController *mResultsController;
-    IBOutlet NSTextField *searchField;
-    IGroupEngineManager *mGroupEngineManager;
-    NSArray *sortDescriptors;
-    NSArray *elements;
+@interface ProjectDetailsAlternate : ProjectDetails<IGroupEngineManagerDelegate,NSTableViewDelegate>
+{
+    IBOutlet NSTableView        *mTableView;
+    IBOutlet NSArrayController  *mResultsController;
+    IBOutlet NSTextField        *searchField;
+    IGroupEngineManager         *mGroupEngineManager;
+    NSArray                     *sortDescriptors;
+    NSArray                     *elements;
 }
+
 @property (strong) NSArray *elements;
+
 - (IBAction)search:(id)sender;
+
 @end

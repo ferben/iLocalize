@@ -10,30 +10,31 @@
 @class ExplorerFilter;
 @class ProjectDocument;
 
-@interface ExplorerFilterManager : NSObject {
-    NSMutableArray        *mGlobalFilters;
-    NSMutableDictionary    *mLocalFilters;
+@interface ExplorerFilterManager : NSObject
+{
+    NSMutableArray       *mGlobalFilters;
+    NSMutableDictionary  *mLocalFilters;
     
-    NSMutableArray        *mExplorers;
+    NSMutableArray       *mExplorers;
 }
 
 + (id)shared;
 
-+ (NSArray*)defaultFilterNames;
++ (NSArray *)defaultFilterNames;
 
-- (NSString*)globalPath;
+- (NSString *)globalPath;
 
-- (void)registerExplorer:(Explorer*)explorer;
-- (void)unregisterExplorer:(Explorer*)explorer;
+- (void)registerExplorer:(Explorer *)explorer;
+- (void)unregisterExplorer:(Explorer *)explorer;
 
 - (void)loadGlobalFilters;
-- (NSArray*)globalFilters;
+- (NSArray *)globalFilters;
 
-- (void)loadLocalFiltersForExplorer:(Explorer*)explorer;
-- (NSMutableArray*)localFiltersForExplorer:(Explorer*)explorer;
+- (void)loadLocalFiltersForExplorer:(Explorer *)explorer;
+- (NSMutableArray *)localFiltersForExplorer:(Explorer *)explorer;
 
-- (BOOL)registerFilter:(ExplorerFilter*)filter explorer:(Explorer*)explorer;
-- (void)removeFilter:(ExplorerFilter*)filter explorer:(Explorer*)explorer;
-- (void)saveFilter:(ExplorerFilter*)filter explorer:(Explorer*)explorer;
+- (BOOL)registerFilter:(ExplorerFilter *)filter explorer:(Explorer *)explorer;
+- (void)removeFilter:(ExplorerFilter *)filter explorer:(Explorer *)explorer;
+- (void)saveFilter:(ExplorerFilter *)filter explorer:(Explorer *)explorer;
 
 @end

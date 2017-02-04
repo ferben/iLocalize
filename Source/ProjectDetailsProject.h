@@ -8,8 +8,9 @@
 
 #import "ProjectDetails.h"
 
-@interface ProjectDetailsProject : ProjectDetails {
-    IBOutlet NSTextView *mTextView;
+@interface ProjectDetailsProject : ProjectDetails
+{
+    IBOutlet NSTextView  *mTextView;
 }
 
 @end

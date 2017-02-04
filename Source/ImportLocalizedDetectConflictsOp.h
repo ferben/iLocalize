@@ -11,16 +11,17 @@
 /**
  This operation detects any conflicts when updating the localized languages.
  */
-@interface ImportLocalizedDetectConflictsOp : Operation {
+@interface ImportLocalizedDetectConflictsOp : Operation
+{
     // Either there is a list of FileConflictItem
-    NSArray *fileConflictItems;
+    NSArray         *fileConflictItems;
     
     // Or there is a list of language and the localized bundle
-    NSArray *languages;
-    NSString *localizedBundle;
+    NSArray         *languages;
+    NSString        *localizedBundle;
     
     // Array of conflicting file items
-    NSMutableArray *conflictingFileItems;
+    NSMutableArray  *conflictingFileItems;
 }
 
 @property (strong) NSArray *fileConflictItems;
@@ -30,6 +31,6 @@
 /**
  Returns an array of FileConflictItem objects.
  */
-- (NSArray*)conflictingFileItems;
+- (NSArray *)conflictingFileItems;
 
 @end

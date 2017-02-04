@@ -10,13 +10,14 @@
 
 @class StringsContentModel;
 
-@interface FMEngineStrings : FMEngine {
+@interface FMEngineStrings : FMEngine
+{
 }
 
-- (void)fmRebaseFileContentWithContent:(StringsContentModel*)content fileController:(FileController*)fileController;
-- (void)fmRebaseTranslateContentWithContent:(StringsContentModel*)content fileController:(FileController*)fileController;
-- (void)fmRebaseAndTranslateContentWithContent:(StringsContentModel*)content fileController:(FileController*)fileController usingPreviousLayout:(BOOL)previousLayout;
+- (void)fmRebaseFileContentWithContent:(StringsContentModel *)content fileController:(FileController *)fileController;
+- (void)fmRebaseTranslateContentWithContent:(StringsContentModel *)content fileController:(FileController *)fileController;
+- (void)fmRebaseAndTranslateContentWithContent:(StringsContentModel *)content fileController:(FileController *)fileController usingPreviousLayout:(BOOL)previousLayout;
 
-- (void)fmReloadFileController:(FileController*)fileController usingFile:(NSString*)file;
+- (void)fmReloadFileController:(FileController *)fileController usingFile:(NSString *)file;
 
 @end

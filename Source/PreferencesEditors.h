@@ -13,7 +13,7 @@
 @interface PreferencesEditors : PreferencesObject
 {
     IBOutlet NSTableView        *mEditorsTableView;
-    IBOutlet NSArrayController    *mEditorsController;
+    IBOutlet NSArrayController  *mEditorsController;
     
     IBOutlet NSArrayController  *mBuiltinTypesController;
     IBOutlet NSArrayController  *mBuiltinExtensionsController;
@@ -23,7 +23,7 @@
     IBOutlet NSTextField        *mExternalExtensionField;
     IBOutlet NSTextField        *mExternalAppField;
     
-    NSMutableDictionary            *mEditingEditor;
+    NSMutableDictionary         *mEditingEditor;
 }
 
 + (id)shared;
@@ -31,9 +31,9 @@
 - (void)loadData:(NSDictionary *)data;
 - (NSDictionary  *)data;
 
-- (NSString *)editorForExtension:(NSString*)extension;
+- (NSString *)editorForExtension:(NSString *)extension;
 
-- (FMModule *)moduleForExtension:(NSString*)extension;
+- (FMModule *)moduleForExtension:(NSString *)extension;
 
 - (IBAction)addExternalEditor:(id)sender;
 - (IBAction)addInternalEditor:(id)sender;

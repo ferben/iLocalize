@@ -13,12 +13,15 @@
 /**
  File to import.
  */
-@interface XLIFFImportFileElement : NSObject<AZListSelectionViewItem> {
-    BOOL selected;
-    FileController *fc;
+@interface XLIFFImportFileElement : NSObject<AZListSelectionViewItem>
+{
+    BOOL             selected;
+    FileController  *fc;
+    
     // Array of XLIFFImportStringElement
-    NSArray *stringElements;
+    NSArray         *stringElements;
 }
+
 @property BOOL selected;
 @property (strong) FileController *fc;
 @property (strong) NSArray *stringElements;

@@ -8,10 +8,13 @@
 
 #import "AbstractWC.h"
 
-@interface AddLocationWC : AbstractWC {
-    IBOutlet NSPopUpButton    *mPopUpLocation;
+@interface AddLocationWC : AbstractWC
+{
+    IBOutlet NSPopUpButton  *mPopUpLocation;
 }
-- (NSString*)location;
+
+- (NSString *)location;
 - (IBAction)cancel:(id)sender;
 - (IBAction)add:(id)sender;
+
 @end

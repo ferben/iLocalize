@@ -8,13 +8,14 @@
 
 @class BundleSource;
 
-@interface NewProjectSettings : NSObject {
-    NSString *name;
-    BundleSource *source;
-    NSString *projectFolder;
-    NSString *baseLanguage;
-    NSArray *localizedLanguages;
-    BOOL copySourceOnlyIfExists;
+@interface NewProjectSettings : NSObject
+{
+    NSString      *name;
+    BundleSource  *source;
+    NSString      *projectFolder;
+    NSString      *baseLanguage;
+    NSArray       *localizedLanguages;
+    BOOL           copySourceOnlyIfExists;
 }
 
 /**
@@ -40,12 +41,12 @@
  Returns the path to the folder containing the project.
  It is <projectFolder>/<name>.
  */
-- (NSString*)projectFolderPath;
+- (NSString *)projectFolderPath;
 
 /**
  Returns the path to the project file.
  It is <projectFolder>/<name>/<name.ilocalize>
  */
-- (NSString*)projectFilePath;
+- (NSString *)projectFilePath;
 
 @end

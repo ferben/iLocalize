@@ -14,7 +14,6 @@
 
 @interface ModelEngine : AbstractEngine
 {
-
 }
 
 - (LanguageModel *)createLanguageModelForLanguage:(NSString *)language;

@@ -10,8 +10,9 @@
 
 @class XLIFFExportSettings;
 
-@interface XLIFFExportOperationDriver : OperationDriver {
-    XLIFFExportSettings *settings;
+@interface XLIFFExportOperationDriver : OperationDriver
+{
+    XLIFFExportSettings  *settings;
 }
 
 @end

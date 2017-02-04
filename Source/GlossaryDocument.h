@@ -11,9 +11,13 @@
 @class GlossaryWC;
 @class Glossary;
 
-@interface GlossaryDocument : NSDocument {
-    Glossary *glossary;
+@interface GlossaryDocument : NSDocument
+{
+    Glossary  *glossary;
 }
+
 @property (strong) Glossary *glossary;
-- (GlossaryWC*)glossaryWC;
+
+- (GlossaryWC *)glossaryWC;
+
 @end

@@ -8,8 +8,10 @@
 
 #import "ProjectMenu.h"
 
-@interface ProjectMenuToolbar : ProjectMenu {
-
+@interface ProjectMenuToolbar : ProjectMenu
+{
 }
+
 - (IBAction)languageAction:(id)sender;
+
 @end

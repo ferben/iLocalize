@@ -8,8 +8,8 @@
 
 #import "FMControllerStrings.h"
 
-@interface FMControllerNib : FMControllerStrings {
-
+@interface FMControllerNib : FMControllerStrings
+{
 }
 
 @end

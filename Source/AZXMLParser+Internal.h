@@ -9,6 +9,8 @@
 #import "AZXMLParser.h"
 
 @interface AZXMLParser ()
+{
+}
 
 @property (nonatomic, readonly) unichar currentCharacter;
 

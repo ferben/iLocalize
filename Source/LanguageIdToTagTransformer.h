@@ -9,8 +9,8 @@
 // Description:
 // This transformer is used when selecting the language in a menu
 // from a tag (and vice-versa)
-@interface LanguageIdToTagTransformer : NSValueTransformer {
-
+@interface LanguageIdToTagTransformer : NSValueTransformer
+{
 }
 
 @end

@@ -6,25 +6,26 @@
 //  Copyright 2005 Arizona Software. All rights reserved.
 //
 
-@interface Toolbar : NSObject<NSToolbarDelegate> {
-    NSWindow            *mWindow;
+@interface Toolbar : NSObject<NSToolbarDelegate>
+{
+    NSWindow             *mWindow;
     NSToolbar            *mToolbar;
-    NSMutableDictionary    *mViewDic;
-    NSMutableArray        *mIdentifiers;
+    NSMutableDictionary  *mViewDic;
+    NSMutableArray       *mIdentifiers;
 
-    BOOL                mResizeContent;
+    BOOL                  mResizeContent;
     id                    mDelegate;
 }
 
 - (void)setResizeContent:(BOOL)resize;
 
 - (void)setDelegate:(id)delegate;
-- (void)setWindow:(NSWindow*)window;
+- (void)setWindow:(NSWindow *)window;
 
-- (void)addIdentifier:(NSString*)identifier;
-- (void)addView:(NSView*)view image:(NSImage*)image identifier:(NSString*)ident name:(NSString*)name;
-- (void)setupToolbarWithIdentifier:(NSString*)identifier displayMode:(NSToolbarDisplayMode)displayMode;
+- (void)addIdentifier:(NSString *)identifier;
+- (void)addView:(NSView *)view image:(NSImage *)image identifier:(NSString *)ident name:(NSString *)name;
+- (void)setupToolbarWithIdentifier:(NSString *)identifier displayMode:(NSToolbarDisplayMode)displayMode;
 
-- (void)selectViewWithIdentifier:(NSString*)ident;
+- (void)selectViewWithIdentifier:(NSString *)ident;
 
 @end

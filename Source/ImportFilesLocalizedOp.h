@@ -13,8 +13,11 @@
 /**
  This operation updates the specified files in the project.
  */
-@interface ImportFilesLocalizedOp : Operation {
-    ImportFilesSettings *settings;
+@interface ImportFilesLocalizedOp : Operation
+{
+    ImportFilesSettings  *settings;
 }
+
 @property (strong) ImportFilesSettings *settings;
+
 @end

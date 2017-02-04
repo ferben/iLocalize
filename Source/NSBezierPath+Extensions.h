@@ -7,5 +7,9 @@
 //
 
 @interface NSBezierPath (iLocalize)
+{
+}
+
 + (void)fillRoundRect:(NSRect)rect radius:(float)radius;
+
 @end

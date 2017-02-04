@@ -10,14 +10,15 @@
 //  Copyright 2009 Arizona Software. All rights reserved.
 //
 
-@interface LanguageInfoModel : NSObject {
-    NSString *_identifier;
+@interface LanguageInfoModel : NSObject
+{
+    NSString  *_identifier;
 }
 
 @property (strong) NSString *identifier;
 @property (weak, readonly) NSString *displayName;
 @property (weak, readonly) NSString *languageIdentifier;
 
-+ (LanguageInfoModel*)infoWithIdentifier:(NSString*)identifier;
++ (LanguageInfoModel *)infoWithIdentifier:(NSString *)identifier;
 
 @end

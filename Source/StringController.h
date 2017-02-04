@@ -13,17 +13,18 @@
 @class StringModel;
 @class FindContentMatching;
 
-@interface StringController : AbstractController <ProjectLabelPersistent, StringControllerProtocol> {
-    StringModel        *baseStringModel;
-    StringModel        *stringModel;    
+@interface StringController : AbstractController <ProjectLabelPersistent, StringControllerProtocol>
+{
+    StringModel          *baseStringModel;
+    StringModel          *stringModel;
     
     // Display only
-    FindContentMatching *contentMatching;
-    NSMutableArray    *mStatusDescription;    // description of each status icon used by the tooltips
-    NSRect            mStatusImageRect;        // last rect used to display the status icons (currently only in project window)
+    FindContentMatching  *contentMatching;
+    NSMutableArray       *mStatusDescription;  // description of each status icon used by the tooltips
+    NSRect                mStatusImageRect;    // last rect used to display the status icons (currently only in project window)
     
     // Cache only
-    StringController *baseStringController;
+    StringController     *baseStringController;
 }
 
 @property (strong) StringModel *baseStringModel;
@@ -71,23 +72,23 @@
 - (BOOL)statusWarning;
 
 - (void)setKey:(NSString *)key;
-- (NSString*)key;
+- (NSString *)key;
 
 - (void)setBaseComment:(NSString*)comment;
-- (NSString*)baseComment;
+- (NSString *)baseComment;
 
 - (void)setBase:(NSString*)base;
-- (NSString*)base;
+- (NSString *)base;
 
-- (StringController*)baseStringController;
+- (StringController *)baseStringController;
 
-- (void)setTranslationComment:(NSString*)comment;
-- (NSString*)translationComment;
+- (void)setTranslationComment:(NSString *)comment;
+- (NSString *)translationComment;
 
-- (void)setAutomaticTranslation:(NSString*)translation;
-- (void)setAutomaticTranslation:(NSString*)translation force:(BOOL)force;
-- (void)setTranslation:(NSString*)translation;
-- (NSString*)translation;
+- (void)setAutomaticTranslation:(NSString *)translation;
+- (void)setAutomaticTranslation:(NSString *)translation force:(BOOL)force;
+- (void)setTranslation:(NSString *)translation;
+- (NSString *)translation;
 
 - (void)setLock:(BOOL)lock;
 - (BOOL)lock;
@@ -97,13 +98,13 @@
 - (BOOL)baseLock;
 - (BOOL)baseEditable;
 
-- (StringController*)pBase;
+- (StringController *)pBase;
 - (id)pFile;
-- (NSString*)pTranslation;
+- (NSString *)pTranslation;
 
-- (NSString*)pLabel;
-- (NSArray*)pString;
-- (NSString*)pComment;
-- (NSString*)pKey;
+- (NSString *)pLabel;
+- (NSArray *)pString;
+- (NSString *)pComment;
+- (NSString *)pKey;
 
 @end

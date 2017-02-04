@@ -7,5 +7,9 @@
 //
 
 @interface NSDictionary (Extensions)
+{
+}
+
 - (BOOL)booleanForKey:(id)key;
+
 @end

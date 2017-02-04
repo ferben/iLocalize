@@ -19,16 +19,18 @@
  window to refresh only the parties that are concerned.
  */
 @interface DirtyContext : NSObject
+{
+}
 
 @property (weak) StringController *sc;
 @property (weak) FileController *fc;
 @property (weak) LanguageController *lc;
 @property (weak) ProjectController *pc;
 
-+ (DirtyContext*)contextWithStringController:(StringController*)sc;
-+ (DirtyContext*)contextWithFileController:(FileController*)sc;
++ (DirtyContext *)contextWithStringController:(StringController *)sc;
++ (DirtyContext *)contextWithFileController:(FileController *)sc;
 
-- (void)accumulate:(DirtyContext*)other;
+- (void)accumulate:(DirtyContext *)other;
 - (void)pushSource:(id)source;
 - (void)reset;
 

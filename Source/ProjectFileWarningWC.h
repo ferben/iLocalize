@@ -10,13 +10,16 @@
 
 @class FileController;
 
-@interface ProjectFileWarningWC : AbstractWC {
-    IBOutlet NSArrayController    *mWarningsController;
-    IBOutlet NSArrayController    *mKeysController;
-    FileController    *mFileController;
+@interface ProjectFileWarningWC : AbstractWC
+{
+    IBOutlet NSArrayController  *mWarningsController;
+    IBOutlet NSArrayController  *mKeysController;
+    FileController              *mFileController;
 }
-- (void)setFileController:(FileController*)fc;
+
+- (void)setFileController:(FileController *)fc;
 - (IBAction)help:(id)sender;
 - (IBAction)export:(id)sender;
 - (IBAction)ok:(id)sender;
+
 @end

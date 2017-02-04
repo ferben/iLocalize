@@ -7,17 +7,21 @@
 //
 
 @interface NSArray (iLocalize)
-- (id)firstObject;
-- (NSArray*)arrayByRemovingPrefix:(NSString*)prefix;
-- (NSArray*)arrayOfObjectsNotInArray:(NSArray*)objects;
-- (NSArray*)objectsAtRows:(NSArray*)rows;
-- (void)setMenuItemsState:(int)state;
-- (NSImage*)imageUnion;
+{
+}
 
-- (NSArray*)pathsIncludingOnlyBundles;
-- (NSArray*)pathsExcludingBundles;
-- (NSArray*)pathsExcludingExtensions:(NSArray*)extensions;
+- (id)firstObject;
+- (NSArray *)arrayByRemovingPrefix:(NSString *)prefix;
+- (NSArray *)arrayOfObjectsNotInArray:(NSArray *)objects;
+- (NSArray *)objectsAtRows:(NSArray *)rows;
+- (void)setMenuItemsState:(int)state;
+- (NSImage *)imageUnion;
+
+- (NSArray *)pathsIncludingOnlyBundles;
+- (NSArray *)pathsExcludingBundles;
+- (NSArray *)pathsExcludingExtensions:(NSArray *)extensions;
 
 - (BOOL)supportOperation:(int)op;
-- (NSArray*)buildArrayOfFileControllerPaths;
+- (NSArray *)buildArrayOfFileControllerPaths;
+
 @end

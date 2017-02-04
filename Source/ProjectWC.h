@@ -51,59 +51,59 @@
 
 @interface ProjectWC : NSWindowController <ProjectWindowProtocol, NSSplitViewDelegate, NSMenuDelegate>
 {
-    IBOutlet NSObjectController        *mProjectController;
-    IBOutlet NSArrayController        *mLanguagesController;
+    IBOutlet NSObjectController     *mProjectController;
+    IBOutlet NSArrayController      *mLanguagesController;
     
     // Project controllers
-    ProjectExplorerController        *mProjectExplorerController;
+    ProjectExplorerController       *mProjectExplorerController;
     ProjectDetailsController        *mProjectDetailsController;
-    ProjectFilesController            *mProjectFilesController;
-    ProjectViewSearchController        *mProjectViewSearchController;
+    ProjectFilesController          *mProjectFilesController;
+    ProjectViewSearchController     *mProjectViewSearchController;
     ProjectStructureViewController  *mProjectStructureController;
-    ProjectStatusBarController        *mProjectStatusBarController;
+    ProjectStatusBarController      *mProjectStatusBarController;
 
     // Project handlers    
-    IBOutlet ProjectLabels            *mProjectLabels;
+    IBOutlet ProjectLabels          *mProjectLabels;
     
     // Menu handlers
-    ProjectMenuFile                    *mProjectMenuFile;
-    ProjectMenuEdit                    *mProjectMenuEdit;
-    ProjectMenuView                    *mProjectMenuView;
-    ProjectMenuProject                *mProjectMenuProject;
+    ProjectMenuFile                 *mProjectMenuFile;
+    ProjectMenuEdit                 *mProjectMenuEdit;
+    ProjectMenuView                 *mProjectMenuView;
+    ProjectMenuProject              *mProjectMenuProject;
     ProjectMenuTranslate            *mProjectMenuTranslate;
-    ProjectMenuGlossary                *mProjectMenuGlossary;
-    ProjectMenuToolbar                *mProjectMenuToolbar;
+    ProjectMenuGlossary             *mProjectMenuGlossary;
+    ProjectMenuToolbar              *mProjectMenuToolbar;
     ProjectMenuDebug                *mProjectMenuDebug;
 
     // Main views
-    NSSplitView                        *mMainSplitView;    
+    NSSplitView                     *mMainSplitView;
         // Left-side views:
-        AZSplitView                        *mSidebarSplitView;    
-            NSView                        *mSidebarDetailsView;
+        AZSplitView                 *mSidebarSplitView;
+            NSView                  *mSidebarDetailsView;
             // Bottom of left-side views
-        AZSplitViewThumbView            *mMainSplitViewThumbView;
+        AZSplitViewThumbView        *mMainSplitViewThumbView;
         
         // Right-side views
-        NSView                            *mRightSideContainerView;
-        NSSplitView                        *mRightSideContainerSplitView;
-            NSSplitView                        *mStructureFilesSplitView;
+        NSView                      *mRightSideContainerView;
+        NSSplitView                 *mRightSideContainerSplitView;
+            NSSplitView             *mStructureFilesSplitView;
             
     // Editor views
-    NSView                            *mFileEditorContainerView;
-    IBOutlet NSView                    *mFileEditorNoView;
-    IBOutlet NSView                    *mFileEditorNotEditableView;
-    IBOutlet NSView                    *mFileEditorNotApplicableView;
-    IBOutlet NSView                    *mFileEditorIgnoreView;
+    NSView                          *mFileEditorContainerView;
+    IBOutlet NSView                 *mFileEditorNoView;
+    IBOutlet NSView                 *mFileEditorNotEditableView;
+    IBOutlet NSView                 *mFileEditorNotApplicableView;
+    IBOutlet NSView                 *mFileEditorIgnoreView;
         
     // Toolbar
     IBOutlet NSToolbar              *mToolbar;
-    IBOutlet NSPopUpButton            *mLanguagePopUp;
-    IBOutlet NSSearchField            *mSearchField;
-    IBOutlet NSToolbarItem            *mLanguageToolbarItem;
-    IBOutlet NSToolbarItem            *mSearchToolbarItem;
+    IBOutlet NSPopUpButton          *mLanguagePopUp;
+    IBOutlet NSSearchField          *mSearchField;
+    IBOutlet NSToolbarItem          *mLanguageToolbarItem;
+    IBOutlet NSToolbarItem          *mSearchToolbarItem;
     
     // Menu items
-    IBOutlet NSMenuItem                *mLabelsMenuItem;
+    IBOutlet NSMenuItem             *mLabelsMenuItem;
 
     // Operations
     DragAndDropOperation            *mDragAndDropOperation;
@@ -111,31 +111,31 @@
     // States
     FMEditor                        *mCurrentFMEditor;
     CustomFieldEditor               *mCustomFieldEditor;
-    NSPredicate                        *mExplorerPredicate;
-    NSPredicate                        *mPathPredicate;
+    NSPredicate                     *mExplorerPredicate;
+    NSPredicate                     *mPathPredicate;
     
     // The key view loop
     NSMutableArray                  *keyViewsLoop;
     
     // State to re-connect the interface
-    NSString *reconnectLanguage;
-    NSString *reconnectFile;
+    NSString                        *reconnectLanguage;
+    NSString                        *reconnectFile;
     
     // History
     HistoryManager                  *mHistoryManager;
 
     // Elapsed time
-    NSDate                            *mElapsedDate;
-    NSTimer                            *mElapsedTimer;    
+    NSDate                          *mElapsedDate;
+    NSTimer                         *mElapsedTimer;
     
     // UI states
-    BOOL                            mSearchViewVisible;
+    BOOL                             mSearchViewVisible;
 }
 
 @property (copy) NSString *reconnectLanguage;
 @property (copy) NSString *reconnectFile;
 
-- (void)addToAsNextResponder:(NSResponder*)responder;
+- (void)addToAsNextResponder:(NSResponder *)responder;
 
 - (void)toggleStructureView;
 - (void)ensureStructureView;
@@ -146,7 +146,7 @@
 - (BOOL)isStatusBarVisible;
 
 - (void)showSearchView;
-- (void)showSearchView:(ExplorerFilter*)filter;
+- (void)showSearchView:(ExplorerFilter *)filter;
 - (void)hideSearchView;
 
 - (void)selectSearchField;

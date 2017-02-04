@@ -9,17 +9,18 @@
 @class NewProjectSettings;
 @class ProjectDocument;
 
-@interface ApplicationDelegate : NSObject<NSMenuDelegate> {
-    IBOutlet NSMenuItem    *mOpenPreviousVersionMenuItem;
-    IBOutlet NSMenuItem    *mViewLanguageMenuItem;
-    IBOutlet NSMenuItem    *mEncodingMenuItem;
+@interface ApplicationDelegate : NSObject<NSMenuDelegate>
+{
+    IBOutlet NSMenuItem  *mOpenPreviousVersionMenuItem;
+    IBOutlet NSMenuItem  *mViewLanguageMenuItem;
+    IBOutlet NSMenuItem  *mEncodingMenuItem;
     
-    IBOutlet NSMenu *mFileMenu;
-    IBOutlet NSMenu *mOpenRecentProjectMenu;
-    IBOutlet NSMenu *mOpenRecentGlossaryMenu;
-    IBOutlet NSMenu *mHelpMenu;
+    IBOutlet NSMenu      *mFileMenu;
+    IBOutlet NSMenu      *mOpenRecentProjectMenu;
+    IBOutlet NSMenu      *mOpenRecentGlossaryMenu;
+    IBOutlet NSMenu      *mHelpMenu;
     
-    NSWindowController *mSymbolWindowController;
+    NSWindowController   *mSymbolWindowController;
 }
 
 - (IBAction)aboutWindow:(id)sender;

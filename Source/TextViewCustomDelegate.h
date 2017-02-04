@@ -9,9 +9,11 @@
 @class TextViewCustom;
 
 @protocol TextViewCustomDelegate <NSObject>
+
 @optional
-- (NSMenu*)customTextViewAsksForContextualMenu:(TextViewCustom*)tv;
-- (BOOL)textViewKeyPressed:(NSEvent*)event;
-- (void)textViewDidHitEnterKey:(TextViewCustom*)tv;
-- (void)textViewResigned:(TextViewCustom*)tv;
+- (NSMenu *)customTextViewAsksForContextualMenu:(TextViewCustom *)tv;
+- (BOOL)textViewKeyPressed:(NSEvent *)event;
+- (void)textViewDidHitEnterKey:(TextViewCustom *)tv;
+- (void)textViewResigned:(TextViewCustom *)tv;
+
 @end

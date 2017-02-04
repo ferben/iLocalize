@@ -10,8 +10,11 @@
 
 @class ExportProjectSettings;
 
-@interface ExportProjectOperation : Operation {
-    ExportProjectSettings *settings;
+@interface ExportProjectOperation : Operation
+{
+    ExportProjectSettings  *settings;
 }
+
 @property (strong) ExportProjectSettings *settings;
+
 @end

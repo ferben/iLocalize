@@ -14,16 +14,17 @@
  This operation takes as input a path and returns an AZPathNode that represents the tree of all
  the files and folders inside the input path. 
  */
-@interface ScanBundleOp : Operation {
+@interface ScanBundleOp : Operation
+{
     /**
      The source path.
      */
-    NSString *path;
+    NSString    *path;
 
     /**
      The node representing the source path content.
      */
-    AZPathNode *node;
+    AZPathNode  *node;
 }
 
 @property (strong) NSString *path;

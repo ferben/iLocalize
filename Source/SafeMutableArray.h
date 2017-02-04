@@ -7,13 +7,16 @@
 //
 
 
-@interface SafeMutableArray : NSObject {
-    NSMutableArray    *mArray;
+@interface SafeMutableArray : NSObject
+{
+    NSMutableArray  *mArray;
 }
+
 + (id)array;
 - (void)addObject:(id)object;
 - (id)readFirstObjectAndRemove;
-- (NSArray*)readObjectsAndRemove:(int)max;
+- (NSArray *)readObjectsAndRemove:(int)max;
 - (NSUInteger)count;
 - (void)clear;
+
 @end

@@ -8,10 +8,10 @@
 
 #import "StringModel.h"
 
-@interface NibStringModel : StringModel {
-
+@interface NibStringModel : StringModel
+{
 }
 
-- (NSString*)type;
+- (NSString *)type;
 
 @end

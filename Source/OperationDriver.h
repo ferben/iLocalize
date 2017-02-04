@@ -9,17 +9,17 @@
 #import "ProjectProvider.h"
 
 // Constants for the results of the operation
-#define OPERATION_CANCEL 0
-#define OPERATION_GO_BACK 1
-#define OPERATION_NEXT 2
+#define OPERATION_CANCEL   0
+#define OPERATION_GO_BACK  1
+#define OPERATION_NEXT    2
 
 // Constants for the states of the state machine driver.
 // Error
-#define STATE_ERROR -1
+#define STATE_ERROR    -1
 // Initial state
-#define STATE_INITIAL -2
+#define STATE_INITIAL  -2
 // End state (no state will follow)
-#define STATE_END -3
+#define STATE_END      -3
 
 typedef void(^OperationCompletionCallbackBlock)(NSUInteger action);
 
@@ -34,31 +34,32 @@ typedef void(^OperationCompletionCallbackBlock)(NSUInteger action);
  This class must be subclassed to provide the sequence of operations by 
  overriding the method nextOperation.
  */
-@interface OperationDriver : NSObject {
-    OperationDriverWC *opWC;
-    OperationDispatcher *dispatcher;
+@interface OperationDriver : NSObject
+{
+    OperationDriverWC    *opWC;
+    OperationDispatcher  *dispatcher;
     
     // Current operation (can be an Operation or an OperationVC
-    id currentOperation;
+    id                    currentOperation;
     
     // Current state of the driver. This state will transition to other states,
     // as defined by the subclass of this driver.
-    int currentState;
+    int                   currentState;
     
     // The optional arguments
-    NSDictionary *arguments;
+    NSDictionary         *arguments;
 }
 
 @property (weak) id<ProjectProvider> provider;
 @property (strong) id currentOperation;
 @property (strong) NSDictionary *arguments;
 
-+ (OperationDriver*)driverWithProjectProvider:(id<ProjectProvider>)provider;
++ (OperationDriver *)driverWithProjectProvider:(id<ProjectProvider>)provider;
 
 /**
  Returns the title of the window.
  */
-- (NSString*)windowTitle;
+- (NSString *)windowTitle;
 
 /**
  Returns YES if this driver is a driver for an assistant. The iLocalize icon
@@ -101,7 +102,7 @@ typedef void(^OperationCompletionCallbackBlock)(NSUInteger action);
  Executes the sequence of operation with the specified arguments.
  The arguments will be available in all the OperationViewController.
  */
-- (void)executeWithArguments:(NSDictionary*)args;
+- (void)executeWithArguments:(NSDictionary *)args;
 
 /**
  This method is invoked once before the driver executes

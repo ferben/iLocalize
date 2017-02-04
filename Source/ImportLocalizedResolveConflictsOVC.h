@@ -8,18 +8,19 @@
 
 #import "OperationViewController.h"
 
-@interface ImportLocalizedResolveConflictsOVC : OperationViewController {
+@interface ImportLocalizedResolveConflictsOVC : OperationViewController
+{
     IBOutlet NSTableView        *mTableView;
     IBOutlet NSArrayController  *mPreviewController;
-    IBOutlet NSPathControl *sourcePathControl;
-    IBOutlet NSPathControl *targetPathControl;
+    IBOutlet NSPathControl      *sourcePathControl;
+    IBOutlet NSPathControl      *targetPathControl;
     
     // Array of FileConflictItem objects;
-    NSArray     *fileConflictItems;
-    NSString    *mProjectPath;
+    NSArray                     *fileConflictItems;
+    NSString                    *mProjectPath;
 }
 
-@property (strong) NSArray* fileConflictItems;
+@property (strong) NSArray *fileConflictItems;
 
 - (IBAction)allSource:(id)sender;
 - (IBAction)allProject:(id)sender;

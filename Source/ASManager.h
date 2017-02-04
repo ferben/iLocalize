@@ -30,36 +30,39 @@
 #define SCRIPT_OPERATION_EXPORT @"export"
 
 @protocol ASManagerDelegate
-- (id)scriptAttributeForKey:(NSString*)key command:(NSScriptCommand*)cmd;
-- (BOOL)scriptBoolValueForKey:(NSString*)key command:(NSScriptCommand*)cmd;
-- (int)scriptIntValueForKey:(NSString*)key command:(NSScriptCommand*)cmd;
-- (void)scriptOperationCompleted:(NSString*)op;
+
+- (id)scriptAttributeForKey:(NSString *)key command:(NSScriptCommand *)cmd;
+- (BOOL)scriptBoolValueForKey:(NSString *)key command:(NSScriptCommand *)cmd;
+- (int)scriptIntValueForKey:(NSString *)key command:(NSScriptCommand *)cmd;
+- (void)scriptOperationCompleted:(NSString *)op;
+
 @end
 
-@interface ASManager : NSObject {
-    NSAppleEventManagerSuspensionID mSuspensionID;
-    NSScriptCommand *mCommandInProgress;
-    id mDelegate;
+@interface ASManager : NSObject
+{
+    NSAppleEventManagerSuspensionID   mSuspensionID;
+    NSScriptCommand                  *mCommandInProgress;
+    id                                mDelegate;
 }
 
-+ (ASManager*)shared;
++ (ASManager *)shared;
 
-- (void)beginAsyncCommand:(NSScriptCommand*)cmd delegate:(id<ASManagerDelegate>)delegate;
+- (void)beginAsyncCommand:(NSScriptCommand *)cmd delegate:(id<ASManagerDelegate>)delegate;
 - (void)endAsyncCommandWithResult:(id)result;
 - (void)endAsyncCommand;
 
-- (void)beginSyncCommand:(NSScriptCommand*)cmd delegate:(id<ASManagerDelegate>)delegate;
+- (void)beginSyncCommand:(NSScriptCommand *)cmd delegate:(id<ASManagerDelegate>)delegate;
 - (void)endSyncCommand;
 
 - (BOOL)isCommandInProgress;
 
-- (id)attributeForKey:(NSString*)key;
-- (BOOL)boolValueForKey:(NSString*)key;
+- (id)attributeForKey:(NSString *)key;
+- (BOOL)boolValueForKey:(NSString *)key;
 
-- (id)attributeForKey:(NSString*)key defaultAttribute:(id)attribute;
-- (BOOL)boolValueForKey:(NSString*)key defaultValue:(BOOL)value;
-- (int)intValueForKey:(NSString*)key defaultValue:(int)value;
+- (id)attributeForKey:(NSString *)key defaultAttribute:(id)attribute;
+- (BOOL)boolValueForKey:(NSString *)key defaultValue:(BOOL)value;
+- (int)intValueForKey:(NSString *)key defaultValue:(int)value;
 
-- (void)operationCompleted:(NSString*)op;
+- (void)operationCompleted:(NSString *)op;
 
 @end

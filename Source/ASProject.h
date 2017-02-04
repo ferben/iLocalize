@@ -9,10 +9,13 @@
 #import "ASManager.h"
 
 @class ProjectDocument;
-@interface ASProject : NSObject <ASManagerDelegate> {
-    ProjectDocument *mDocument;
+@interface ASProject : NSObject <ASManagerDelegate>
+{
+    ProjectDocument  *mDocument;
 }
-+ (ASProject*)projectWithDocument:(ProjectDocument*)doc;
-- (void)setDocument:(ProjectDocument*)doc;
-- (NSString*)name;
+
++ (ASProject *)projectWithDocument:(ProjectDocument *)doc;
+- (void)setDocument:(ProjectDocument *)doc;
+- (NSString *)name;
+
 @end

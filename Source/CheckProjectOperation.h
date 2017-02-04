@@ -9,14 +9,17 @@
 #import "AbstractOperation.h"
 #import "CheckProjectDelegate.h"
 
-@interface CheckProjectOperation : AbstractOperation {
-    id<CheckProjectDelegate> mDelegate;
-    BOOL mDisplayAlertIfSuccess;
+@interface CheckProjectOperation : AbstractOperation
+{
+    id<CheckProjectDelegate>   mDelegate;
+    BOOL                       mDisplayAlertIfSuccess;
 }
+
 - (void)setDelegate:(id<CheckProjectDelegate>)delegate;
 - (void)checkSelectedFile;
 - (void)checkProject;
 - (void)checkAllProject;
 - (void)checkAllProjectNoAlertIfSuccess;
-- (void)checkLanguages:(NSArray*)languages;
+- (void)checkLanguages:(NSArray *)languages;
+
 @end

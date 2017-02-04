@@ -6,7 +6,10 @@
 //  Copyright 2005 Arizona Software. All rights reserved.
 //
 
-@interface TableCornerViewCustom : NSView {
+@interface TableCornerViewCustom : NSView
+{
 }
-+ (id)cornerWithTableView:(NSTableView*)tv;
+
++ (id)cornerWithTableView:(NSTableView *)tv;
+
 @end

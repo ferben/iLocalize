@@ -6,8 +6,8 @@
 //  Copyright 2005 Arizona Software. All rights reserved.
 //
 
-@interface ImmutableToMutableArrayOfObjectsTransformer : NSValueTransformer {
-
+@interface ImmutableToMutableArrayOfObjectsTransformer : NSValueTransformer
+{
 }
 
 @end

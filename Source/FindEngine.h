@@ -11,8 +11,8 @@
 @class StringController;
 @class SearchContext;
 
-@interface FindEngine : AbstractEngine {
-
+@interface FindEngine : AbstractEngine
+{
 }
 
 /**
@@ -24,17 +24,17 @@
  Find all the files containing the strings with the specified string in 
  the specified context.
  */
-- (void)findString:(NSString*)string context:(SearchContext*)context;
+- (void)findString:(NSString *)string context:(SearchContext *)context;
 
 /**
  Replaces the selected strings with the specified string.
  */
-- (void)replaceWithString:(NSString*)replaceString context:(SearchContext*)context;
+- (void)replaceWithString:(NSString *)replaceString context:(SearchContext *)context;
 
 /**
  Replaces all matching strings with the specified string in 
  the specified context.
  */
-- (void)replaceAllStrings:(NSString*)searchString withString:(NSString*)replaceString context:(SearchContext*)context;
+- (void)replaceAllStrings:(NSString *)searchString withString:(NSString *)replaceString context:(SearchContext *)context;
 
 @end

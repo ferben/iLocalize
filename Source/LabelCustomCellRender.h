@@ -8,9 +8,12 @@
 
 @class ProjectLabels;
 
-@interface LabelCustomCellRender : NSObject {
-    NSImage            *mCachedImage;
-    NSMutableSet    *mCachedSet;
+@interface LabelCustomCellRender : NSObject
+{
+    NSImage       *mCachedImage;
+    NSMutableSet  *mCachedSet;
 }
-- (void)drawLabelCellWithFrame:(NSRect)cellFrame indexes:(NSSet*)labelIndexes labels:(ProjectLabels*)labels;
+
+- (void)drawLabelCellWithFrame:(NSRect)cellFrame indexes:(NSSet *)labelIndexes labels:(ProjectLabels *)labels;
+
 @end

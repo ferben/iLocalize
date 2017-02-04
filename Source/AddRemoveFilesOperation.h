@@ -8,12 +8,15 @@
 
 #import "AbstractOperation.h"
 
-@interface AddRemoveFilesOperation : AbstractOperation {
-    NSArray        *mFiles;
-    NSArray        *mFileControllers;
-    NSString    *mLanguage;
+@interface AddRemoveFilesOperation : AbstractOperation
+{
+    NSArray   *mFiles;
+    NSArray   *mFileControllers;
+    NSString  *mLanguage;
 }
+
 - (void)addFiles;
-- (void)addFilesToLanguage:(NSString*)language;
-- (void)removeFileControllers:(NSArray*)fileControllers;
+- (void)addFilesToLanguage:(NSString *)language;
+- (void)removeFileControllers:(NSArray *)fileControllers;
+
 @end

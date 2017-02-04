@@ -8,11 +8,11 @@
 
 @protocol FileControllerProtocol
 
-- (NSArray*)stringControllers;
-- (NSArray*)filteredStringControllers;
+- (NSArray *)stringControllers;
+- (NSArray *)filteredStringControllers;
 
-- (NSString*)filename;
-- (NSString*)relativeFilePath;
+- (NSString *)filename;
+- (NSString *)relativeFilePath;
 
 @end
 

@@ -7,6 +7,10 @@
 //
 
 @interface NSMutableDictionary (Extensions)
+{
+}
+
 - (void)setObjectOrNil:(id)object forKey:(id)key;
 - (void)setBoolean:(BOOL)value forKey:(id)key;
+
 @end
