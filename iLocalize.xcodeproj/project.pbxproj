@@ -719,7 +719,7 @@
 		125677591A1A7036002117B0 /* FMEditorRTF.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMEditorRTF.xib; sourceTree = "<group>"; };
 		1256775B1A1A70B9002117B0 /* FMEditorTXT.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMEditorTXT.xib; sourceTree = "<group>"; };
 		127259B41E43C94E00318718 /* ToDo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ToDo.txt; sourceTree = "<group>"; };
-		12BC4F801E45E5EE007F5E8A /* iLocalize.help */ = {isa = PBXFileReference; lastKnownFileType = folder; path = iLocalize.help; sourceTree = "<group>"; };
+		12BC4F801E45E5EE007F5E8A /* iLocalize.help */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = iLocalize.help; sourceTree = "<group>"; };
 		12DECFB41C63452B00B84094 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		12DECFB61C63452B00B84094 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		12DECFB71C63452B00B84094 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LocalizableEditors.strings; sourceTree = "<group>"; };
