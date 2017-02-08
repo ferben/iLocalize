@@ -187,6 +187,9 @@ static NSDateFormatter *dateFormatter = nil;
 
 - (NSArray *)itemsOfType:(NSInteger)type items:(NSArray *)items
 {
+    if ([items count] == 0)
+        return nil;
+    
     if (type == CONSOLE_ALL)
         return items;
     
