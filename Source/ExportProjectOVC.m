@@ -45,7 +45,13 @@
     // If the path is not defined or does not exist, use the current directory
     if (!self.settings.destFolder || ![self.settings.destFolder isPathExisting])
     {
-        self.settings.destFolder = NSHomeDirectory();
+        // self.settings.destFolder = NSHomeDirectory();
+        
+        // fd:20170321: we're now using the user's Desktop by default
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, YES );
+        NSString *theDesktopPath = [paths objectAtIndex:0];
+
+        self.settings.destFolder = theDesktopPath;
     }
     
     [targetPathControl setURL:[NSURL fileURLWithPath:self.settings.destFolder]];

@@ -406,16 +406,20 @@
     [[self console] endOperation];
 }
 
-- (void)processRebaseBaseFileController:(FileController*)baseFileController usingFile:(NSString*)file
+- (void)processRebaseBaseFileController:(FileController *)baseFileController usingFile:(NSString *)file
 {
     int eolType = -1;
+    
     id content = [[self fileModuleEngineForFile:file] rebaseBaseFileController:baseFileController usingFile:file eolType:&eolType];
+    
     [[baseFileController fileModel] setEOLType:eolType];
     
     // Rebase all languages
     NSEnumerator *enumerator = [[[self projectController] languageControllers] objectEnumerator];
     LanguageController *languageController;
-    while((languageController = [enumerator nextObject])) {
+    
+    while ((languageController = [enumerator nextObject]))
+    {
         [self processRebaseBaseFileController:baseFileController 
                                   withContent:content
                            languageController:languageController];
