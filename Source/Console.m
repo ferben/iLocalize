@@ -124,12 +124,13 @@
                              seconds:-[limit secondOfMinute]];
     NSUInteger i;
     
+    // base 0
     NSUInteger j = [self numberOfItemsOfType:CONSOLE_ALL];
     
     if (j == 0)
         return;
     
-    for (i = j; i > 0; i--)
+    for (i = j - 1; i > 0; i--)
     {
         id item = [self itemOfType:CONSOLE_ALL atIndex:i];
         
