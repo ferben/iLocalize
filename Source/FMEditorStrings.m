@@ -1713,7 +1713,7 @@ static int toolHeight = 23;
     BOOL backwards = ([[[NSApplication sharedApplication] currentEvent] modifierFlags] & NSShiftKeyMask) > 0;
     
     NSUInteger startIndex = [content indexOfObject:[self selectedStringController]];
-    NSUInteger maxIndex = [content count];
+    NSUInteger maxIndex = [content count] - 1;
     NSUInteger index = startIndex;
     
     while (YES)
@@ -1727,13 +1727,11 @@ static int toolHeight = 23;
             index++;            
         }
         
-        if (index >= maxIndex)
+        if (index > maxIndex)
             index = 0;
         
         if (index == 0)
         {
-            // fd:20170203: we're using NSUInteger now and count on base 1.
-            // index = maxIndex - 1;
             index = maxIndex;
         }
         
