@@ -1,4 +1,4 @@
-/* 
+/*
   Alerts.strings
   iLocalize
 
@@ -82,7 +82,7 @@
 "GlossaryNotIndexedAliasTitle" = "Nie można utworzyć skrótu";
 "GlossaryNotIndexedAliasDescr" = "Nie można utworzyć skrótu, ponieważ wystąpił błąd.";
 "GlossaryNotIndexedMoveTitle" = "Nie można przenieść słownika";
-"GlossaryNotIndexedMoveDescr" = "Wystąpił błąd podczas próby przeniesienia słownika: %@;
+"GlossaryNotIndexedMoveDescr" = "Wystąpił błąd podczas próby przeniesienia słownika: %@";
 
 // History Manager
 "HistoryManagerDeleteTitle" = "Usunąć zaznaczony stan?";

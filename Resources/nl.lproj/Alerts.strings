@@ -9,7 +9,7 @@
 // DefaultTexts
 "AlertNoUndoDescr" = "Dit kan niet ongedaan gemaakt worden.";
 "AlertOverwriteItDescr" = "Wilt u het overschrijven?";
-"AlertKeepNIBLayout" = "Behoud layout vertaalde NIBs"";
+"AlertKeepNIBLayout" = "Behoud layout vertaalde NIBs";
 
 
 // AlertButtonTexts
