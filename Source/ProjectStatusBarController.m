@@ -77,24 +77,24 @@
     NSString *elapsed = [self openForText];
     
     NSMutableString *info = [NSMutableString string];
-    [info appendFormat:NSLocalizedString(@"%d strings", @"Status Bar"), total];
+    [info appendFormat:NSLocalizedString(@"%lu strings", @"Status Bar"), (unsigned long)total];
     
     if (![lc isBaseLanguage])
     {
         if (toTranslate > 0)
         {
-            [info appendFormat:NSLocalizedString(@" of which %d need to be translated", @"Status Bar"), toTranslate];        
+            [info appendFormat:NSLocalizedString(@" of which %lu need to be translated", @"Status Bar"), (unsigned long)toTranslate];        
         }
         
         if (toCheck > 0)
         {
             if (toTranslate > 0)
             {
-                [info appendFormat:NSLocalizedString(@" and %d need to be verified", @"Status Bar"), toCheck];        
+                [info appendFormat:NSLocalizedString(@" and %lu need to be verified", @"Status Bar"), (unsigned long)toCheck];        
             }
             else
             {
-                [info appendFormat:NSLocalizedString(@" of which %d need to be verified", @"Status Bar"), toCheck];                    
+                [info appendFormat:NSLocalizedString(@" of which %lu need to be verified", @"Status Bar"), (unsigned long)toCheck];                    
             }
         }        
     }

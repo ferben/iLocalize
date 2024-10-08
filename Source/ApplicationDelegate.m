@@ -222,7 +222,7 @@ static NSDictionary *customHelpMenuDic = nil;
     {
         // compose alert
         NSAlert *alert = [NSAlert new];
-        [alert setAlertStyle:NSWarningAlertStyle];
+        [alert setAlertStyle:NSAlertStyleWarning];
         [alert setMessageText:NSLocalizedStringFromTable(@"ApplicationDelegateNIBToolTitle",@"Alerts",nil)];
         [alert setInformativeText:NSLocalizedStringFromTable(@"ApplicationDelegateNIBToolDescr",@"Alerts",nil)];
         [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextOK",@"Alerts",nil)];

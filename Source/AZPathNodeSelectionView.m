@@ -13,7 +13,7 @@
 
 - (void)selectAll
 {
-    [self.rootPath applyState:NSOnState];
+    [self.rootPath applyState:NSControlStateValueOn];
     [self refresh];
 }
 
@@ -21,7 +21,7 @@
 {
     [self.rootPath visitLeaves:^(AZPathNode *node) {
         if([paths containsObject:[node relativePath]]) {
-            [node applyState:NSOnState];
+            [node applyState:NSControlStateValueOn];
         }
     }];    
     [self refresh];
@@ -29,7 +29,7 @@
 
 - (BOOL)isAllSelected
 {
-    return self.rootPath.state == NSOnState;
+    return self.rootPath.state == NSControlStateValueOn;
 }
 
 - (NSArray*)selectedRelativePaths
@@ -91,8 +91,8 @@
 - (void)outlineView:(NSOutlineView *)ov setObjectValue:(id)object forTableColumn:(NSTableColumn *)tableColumn byItem:(id)item
 {
     int state = [object intValue];
-    if(state == NSMixedState) {
-        state = NSOnState;
+    if(state == NSControlStateValueMixed) {
+        state = NSControlStateValueOn;
     }
     
     [((AZPathNode*)item) applyState:state];

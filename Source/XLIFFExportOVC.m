@@ -49,7 +49,7 @@
 {
     NSSavePanel *panel = [NSSavePanel savePanel];
     [panel setAllowedFileTypes:@[[self exportExtension]]];
-    if([panel runModal] == NSFileHandlingPanelOKButton) {
+    if([panel runModal] == NSModalResponseOK) {
         [filePathControl setURL:[panel URL]];
         [self stateChanged];
     }    

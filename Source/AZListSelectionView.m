@@ -33,7 +33,7 @@
 
 - (NSInteger)stateOfElement:(id<AZListSelectionViewItem>)element
 {
-    return [[element objectForKey:[AZListSelectionView selectedKey]] boolValue] ? NSOnState : NSOffState;
+    return [[element objectForKey:[AZListSelectionView selectedKey]] boolValue] ? NSControlStateValueOn : NSControlStateValueOff;
 }
 
 - (void)setElement:(id<AZListSelectionViewItem>)element selection:(BOOL)selection
@@ -43,7 +43,7 @@
 
 - (NSInteger)rootState
 {
-    NSInteger state = NSOffState;
+    NSInteger state = NSControlStateValueOff;
     
     if (elements.count > 0)
     {
@@ -53,7 +53,7 @@
         {
             if (state != [self stateOfElement:elements[index]])
             {
-                state = NSMixedState;
+                state = NSControlStateValueMixed;
                 break;
             }
         }        
@@ -140,7 +140,7 @@
 - (void)outlineView:(NSOutlineView *)outlineView setObjectValue:(id)object forTableColumn:(NSTableColumn *)tableColumn byItem:(id)item
 {
     NSInteger state = [object intValue];
-    BOOL selected = state == NSOnState || state == NSMixedState;
+    BOOL selected = state == NSControlStateValueOn || state == NSControlStateValueMixed;
 
     
     if ([item isKindOfClass:[AZListSelectionView class]]) {

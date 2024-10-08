@@ -84,7 +84,7 @@ typedef NS_ENUM(NSInteger, NewGlossaryOptions)
     // show alert
     NSInteger alertReturnCode = [alert runModal];
 
-    BOOL suppressWarning = [alert suppressionButton].state == NSOnState;
+    BOOL suppressWarning = [alert suppressionButton].state == NSControlStateValueOn;
 
     if (alertReturnCode == NSAlertFirstButtonReturn)
     {

@@ -94,9 +94,9 @@
     
     if(action == @selector(showFilesCommonToAllLanguages:)) {
         if([[self preferences] showLocalFiles]) {
-            [anItem setState:NSOffState];
+            [anItem setState:NSControlStateValueOff];
         } else {
-            [anItem setState:NSOnState];
+            [anItem setState:NSControlStateValueOn];
         }
         return YES;
     }
@@ -105,9 +105,9 @@
         NSString *language = [[[self projectWC] selectedLanguageController] displayLanguage];
         [anItem setTitle:[NSString stringWithFormat:NSLocalizedString(@"Show Files Specific To “%@”", nil), language]];
         if([[self preferences] showLocalFiles]) {
-            [anItem setState:NSOnState];
+            [anItem setState:NSControlStateValueOn];
         } else {
-            [anItem setState:NSOffState];
+            [anItem setState:NSControlStateValueOff];
         }
         return YES;
     }

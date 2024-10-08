@@ -89,7 +89,7 @@
     }
     
     // Optionally remove duplicate entries
-    if ([mRemoveDuplicateEntriesButton state] == NSOnState)
+    if ([mRemoveDuplicateEntriesButton state] == NSControlStateValueOn)
     {
         [mergedGlossary removeDuplicateEntries];
     }

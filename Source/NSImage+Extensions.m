@@ -17,7 +17,7 @@ static NSRect AZRectCentered(NSRect container, NSRect rect) {
 - (void)drawInRect:(NSRect)rect fraction:(CGFloat)fraction {
     [self drawInRect:AZRectCentered(rect, [self frame])
             fromRect:[self frame]
-           operation:NSCompositeSourceOver
+           operation:NSCompositingOperationSourceOver
             fraction:fraction
       respectFlipped:YES
                hints:nil];
@@ -43,7 +43,7 @@ static NSRect AZRectCentered(NSRect container, NSRect rect) {
 {
     NSImage *image = [[NSImage alloc] initWithSize:[self size]];
     [image lockFocus];
-    [self drawInRect:[self frame] operation:NSCompositeSourceOver fraction:fraction];
+    [self drawInRect:[self frame] operation:NSCompositingOperationSourceOver fraction:fraction];
     [image unlockFocus];
     return image;
 }
@@ -55,7 +55,7 @@ static NSRect AZRectCentered(NSRect container, NSRect rect) {
     NSImage *target = [[NSImage alloc] initWithSize:size];
     [target lockFocus];
 //    [source setFlipped:YES];
-    [self drawInRect:r operation:NSCompositeSourceOver fraction:1];
+    [self drawInRect:r operation:NSCompositingOperationSourceOver fraction:1];
 //    [selectedLayer drawInRect:r operation:NSCompositeSourceAtop fraction:1];
     [target unlockFocus];    
     

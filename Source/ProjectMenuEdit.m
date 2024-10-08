@@ -123,7 +123,7 @@
     
     if (action == @selector(smartQuoteSubstitution:))
     {
-        [anItem setState:[PreferencesLanguages quoteSubstitutionEnabled]?NSOnState:NSOffState];
+        [anItem setState:[PreferencesLanguages quoteSubstitutionEnabled]?NSControlStateValueOn:NSControlStateValueOff];
         return YES;
     }
 

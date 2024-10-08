@@ -31,19 +31,19 @@
     
     for (TreeNode *pathNode in [rootNode nodes])
     {
-        NSInteger state = NSMixedState;
+        NSInteger state = NSControlStateValueMixed;
         
         for (TreeNode *glossaryNode in [pathNode nodes])
         {
             GlossaryScopeItem *gsi = [glossaryNode payload];
             
-            if (state == NSMixedState)
+            if (state == NSControlStateValueMixed)
             {
                 state = [gsi state];
             }
             else if (state != [gsi state])
             {
-                state = NSMixedState;
+                state = NSControlStateValueMixed;
                 break;
             }
         }
@@ -104,7 +104,7 @@
     
     if ([[item nodes] count] == 0 && [ov levelForItem:item] == 0)
     {
-        return @(NSOffState);
+        return @(NSControlStateValueOff);
     }
     else
     {
@@ -117,8 +117,8 @@
     TreeNode *tn = item;
     GlossaryScopeItem *gsi = [tn payload];
     gsi.state = [object intValue];
-    if(gsi.state == NSMixedState) {
-        gsi.state = NSOnState;
+    if(gsi.state == NSControlStateValueMixed) {
+        gsi.state = NSControlStateValueOn;
     }
     
     if(gsi.folder != nil) {

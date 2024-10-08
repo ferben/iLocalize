@@ -33,7 +33,7 @@
     p.y += cellFrame.size.height * 0.5 - imageSize.height * 0.5;
     // [image setFlipped:YES];
     [image drawInRect:NSMakeRect(p.x, p.y, imageSize.width, imageSize.height)
-            operation:NSCompositeSourceOver 
+            operation:NSCompositingOperationSourceOver 
              fraction:1];
 
     [[NSGraphicsContext currentContext] setImageInterpolation:oldInterpolation];

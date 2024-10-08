@@ -214,7 +214,7 @@
                 title = NSLocalizedString(@"One entry", @"Glossary Entries Information");
                 break;
             default:
-                title = [NSString stringWithFormat:NSLocalizedString(@"%d entries", @"Glossary Entries Information"), total];
+                title = [NSString stringWithFormat:NSLocalizedString(@"%lu entries", @"Glossary Entries Information"), (unsigned long)total];
                 break;
         }
     }
@@ -226,10 +226,10 @@
                 title = NSLocalizedString(@"No entry", @"Glossary Entries Information");
                 break;
             case 1:
-                title = [NSString stringWithFormat:NSLocalizedString(@"%d of one entry", @"Glossary Entries Information"), arranged];
+                title = [NSString stringWithFormat:NSLocalizedString(@"%lu of one entry", @"Glossary Entries Information"), (unsigned long)arranged];
                 break;
             default:
-                title = [NSString stringWithFormat:NSLocalizedString(@"%d of %d entries", @"Glossary Entries Information"), arranged, total];
+                title = [NSString stringWithFormat:NSLocalizedString(@"%lu of %lu entries", @"Glossary Entries Information"), (unsigned long)arranged, (unsigned long)total];
                 break;
         }        
     }
@@ -255,7 +255,7 @@
 
 - (IBAction)add:(id)sender
 {
-    [sender setState:NSOffState];
+    [sender setState:NSControlStateValueOff];
 
     GlossaryEntry *entry = [[GlossaryEntry alloc] init];
     entry.source = @"";
@@ -420,7 +420,7 @@
 
 int entrySort(id e1, id e2, void *context)
 {
-    return [[e1 source] compare:[e2 source]];
+    return (int)[[e1 source] compare:[e2 source]] ;
 }
 
 - (IBAction)removeDuplicateEntries:(id)sender
@@ -428,7 +428,7 @@ int entrySort(id e1, id e2, void *context)
     // compose alert
     NSAlert *alert = [NSAlert new];
     
-    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert setAlertStyle:NSAlertStyleWarning];
     [alert setMessageText:NSLocalizedStringFromTable(@"GlossaryRemoveTitle",@"Alerts",nil)];
     [alert setInformativeText:NSLocalizedStringFromTable(@"AlertNoUndoDescr",@"Alerts",nil)];
     [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextRemove",@"Alerts",nil)];  // 1st button
@@ -468,7 +468,7 @@ int entrySort(id e1, id e2, void *context)
     [[PasteboardProvider shared] declareTypes:@[PBOARD_DATA_ROW_INDEXES, PBOARD_DATA_STRINGS]
                                         owner:self
                                    pasteboard:pboard];
-    [pboard setData:[NSArchiver archivedDataWithRootObject:rowIndexes] forType:PBOARD_DATA_ROW_INDEXES];
+    [pboard setData:[NSKeyedArchiver archivedDataWithRootObject:rowIndexes] forType:PBOARD_DATA_ROW_INDEXES];
     return YES;
 }
 
@@ -480,7 +480,7 @@ int entrySort(id e1, id e2, void *context)
         return;
     }
     
-    NSIndexSet *rowIndexes = [NSUnarchiver unarchiveObjectWithData:[sender dataForType:PBOARD_DATA_ROW_INDEXES]];
+    NSIndexSet *rowIndexes = [NSKeyedUnarchiver unarchiveObjectWithData:[sender dataForType:PBOARD_DATA_ROW_INDEXES]];
     
     if ([type isEqualToString:PBOARD_DATA_STRINGS])
     {
@@ -495,7 +495,7 @@ int entrySort(id e1, id e2, void *context)
             [array addObject:dic];
         }
         
-        [sender setData:[NSArchiver archivedDataWithRootObject:array] forType:type];
+        [sender setData:[NSKeyedArchiver archivedDataWithRootObject:array] forType:type];
     }
 }
 
@@ -526,15 +526,15 @@ int entrySort(id e1, id e2, void *context)
 
     if ([[pboard types] containsObject:PBOARD_DATA_LANGUAGE_STRINGS])
     {
-        scs = [NSUnarchiver unarchiveObjectWithData:[pboard dataForType:PBOARD_DATA_LANGUAGE_STRINGS]];        
+        scs = [NSKeyedUnarchiver unarchiveObjectWithData:[pboard dataForType:PBOARD_DATA_LANGUAGE_STRINGS]];
     }
     else if([[pboard types] containsObject:PBOARD_DATA_FILES_STRINGS])
     {
-        scs = [NSUnarchiver unarchiveObjectWithData:[pboard dataForType:PBOARD_DATA_FILES_STRINGS]];
+        scs = [NSKeyedUnarchiver unarchiveObjectWithData:[pboard dataForType:PBOARD_DATA_FILES_STRINGS]];
     }
     else if([[pboard types] containsObject:PBOARD_DATA_STRINGS])
     {
-        scs = [NSUnarchiver unarchiveObjectWithData:[pboard dataForType:PBOARD_DATA_STRINGS]];
+        scs = [NSKeyedUnarchiver unarchiveObjectWithData:[pboard dataForType:PBOARD_DATA_STRINGS]];
     }
     
     BOOL dirty = NO;
@@ -576,7 +576,7 @@ int entrySort(id e1, id e2, void *context)
 {
     NSArray *content = [mEntriesController arrangedObjects];
     
-    BOOL backwards = ([[[NSApplication sharedApplication] currentEvent] modifierFlags] & NSShiftKeyMask) > 0;    
+    BOOL backwards = ([[[NSApplication sharedApplication] currentEvent] modifierFlags] & NSEventModifierFlagShift) > 0;
     
     NSUInteger startIndex = [content indexOfObject:[[mEntriesController selectedObjects] firstObject]];
     NSUInteger maxIndex = [content count];
@@ -688,7 +688,7 @@ int entrySort(id e1, id e2, void *context)
     
     NSEvent *event = [NSApp currentEvent];
     
-    if ([event type] == NSKeyDown)
+    if ([event type] == NSEventTypeKeyDown)
     {
         NSString *chars = [event charactersIgnoringModifiers];
     
@@ -705,15 +705,15 @@ int entrySort(id e1, id e2, void *context)
     
     if ([[tableColumn identifier] isEqualToString:@"Source"])
     {
-        [cell setValue:entry.source];        
+        [(NSDictionaryControllerKeyValuePair*)cell setValue:entry.source];
     }
     
     if ([[tableColumn identifier] isEqualToString:@"Target"])
     {
-        [cell setValue:entry.translation];        
+        [(NSDictionaryControllerKeyValuePair*)cell setValue:entry.translation];
     }
     
-    if ([cell isHighlighted])
+    if ([(NSCell*)cell isHighlighted])
     {
         [cell setForegroundColor:[NSColor whiteColor]];
     }

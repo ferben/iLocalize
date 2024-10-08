@@ -32,7 +32,7 @@
 //- (IBAction)toggleLocalizedOnly:(id)sender
 //{
 //    [self.node visitAll:^BOOL(AZPathNode *n) {
-//        n.localizedPathsOnly = [sender state] == NSOnState;
+//        n.localizedPathsOnly = [sender state] == NSControlStateValueOn;
 //        return YES;
 //    }];
 //    [pathNodeSelectionView refresh];    

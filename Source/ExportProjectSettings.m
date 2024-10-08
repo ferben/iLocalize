@@ -7,7 +7,7 @@
 //
 
 #import "ExportProjectSettings.h"
-#import <RegexKitLite.h>
+#import "RegexKitLite.h"
 
 @implementation ExportProjectSettings
 

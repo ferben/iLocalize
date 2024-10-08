@@ -56,7 +56,7 @@
 
 - (void)willContinue
 {
-    settings.copySourceOnlyIfExists = [mCopySourceOnlyIfExists state] != NSOnState;    
+    settings.copySourceOnlyIfExists = [mCopySourceOnlyIfExists state] != NSControlStateValueOn;    
     self.settings.baseLanguage = [self baseLanguage];
     self.settings.localizedLanguages = [self localizedLanguages];
 }

@@ -393,7 +393,7 @@
 {
     BOOL processed = NO;
     unichar c = [[event charactersIgnoringModifiers] characterAtIndex:0];
-    if(([event modifierFlags] & NSAlternateKeyMask) > 0) {
+    if(([event modifierFlags] & NSEventModifierFlagOption) > 0) {
         return NO;
     }
     

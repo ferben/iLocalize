@@ -87,7 +87,7 @@
 
 - (IBAction)hierarchical:(id)sender
 {
-    mHierarchical = [sender state] == NSOnState;
+    mHierarchical = [sender state] == NSControlStateValueOn;
     [self refresh];
 }
 

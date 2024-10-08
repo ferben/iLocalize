@@ -24,7 +24,7 @@
 #import "FMEngine.h"
 
 #import "SmartPathParser.h"
-#import "Exploreritem.h"
+#import "ExplorerItem.h"
 
 #import "PreferencesLanguages.h"
 

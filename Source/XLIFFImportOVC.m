@@ -24,7 +24,7 @@
 
 
 - (void)awakeFromNib {
-    self.useResnameInsteadOfSource.state = NSOffState;
+    self.useResnameInsteadOfSource.state = NSControlStateValueOff;
     self.useResnameInsteadOfSource.hidden = YES;
 }
 
@@ -38,7 +38,7 @@
     NSOpenPanel *panel = [NSOpenPanel openPanel];
     [panel setAllowedFileTypes:[[SEIManager sharedInstance] allImportableExtensions]];
     [panel beginSheetModalForWindow:[self window] completionHandler:^(NSInteger result) {
-        if(result == NSFileHandlingPanelOKButton) {
+        if(result == NSModalResponseOK) {
             [filePathControl setURL:[panel URL]];
             [self stateChanged];
         }                    
@@ -53,7 +53,7 @@
 - (void)saveSettings
 {
     self.settings.file = [[filePathControl URL] path];
-    self.settings.useResnameInsteadOfSource = self.useResnameInsteadOfSource.state == NSOnState;
+    self.settings.useResnameInsteadOfSource = self.useResnameInsteadOfSource.state == NSControlStateValueOn;
 }
 
 - (BOOL)canContinue
@@ -69,7 +69,7 @@
         [filePathControl setURL:nil];
     }
     
-    self.useResnameInsteadOfSource.state = self.settings.useResnameInsteadOfSource?NSOnState:NSOffState;
+    self.useResnameInsteadOfSource.state = self.settings.useResnameInsteadOfSource?NSControlStateValueOn:NSControlStateValueOff;
 
     [filePathControl setTarget:self];
     [filePathControl setAction:@selector(filePathChanged:)];

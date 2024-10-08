@@ -63,7 +63,7 @@
     [self.node setUseLanguagePlaceholder:YES];
     
     // Select all the paths by default
-    [self.node applyState:NSOnState];    
+    [self.node applyState:NSControlStateValueOn];    
 }
 
 @end

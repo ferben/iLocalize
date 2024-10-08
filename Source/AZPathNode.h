@@ -49,7 +49,7 @@
     // True if this node contains at least one language in its children
     BOOL               containsLanguages;
     
-    // State of the node. Usually NSOnState, NSMixedState or NSOffState
+    // State of the node. Usually NSControlStateValueOn, NSControlStateValueMixed or NSControlStateValueOff
     NSInteger          state;
     
     // Flag indicating to hide the language folders (*.lproj)

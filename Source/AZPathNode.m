@@ -72,17 +72,17 @@
     {
         // Set the state of the parent depending on the states of its direct children.
         
-        NSInteger parentState = NSMixedState;
+        NSInteger parentState = NSControlStateValueMixed;
         
         for (AZPathNode *child in [pnode children])
         {
-            if (parentState == NSMixedState)
+            if (parentState == NSControlStateValueMixed)
             {
                 parentState = child.state;
             }
             else if (parentState != child.state)
             {
-                parentState = NSMixedState;
+                parentState = NSControlStateValueMixed;
                 break;
             }            
         }
@@ -113,7 +113,7 @@
         state = [[languagePlaceholderNodes firstObject] state];
         for(AZPathNode *node in languagePlaceholderNodes) {
             if(state != node.state) {
-                state = NSMixedState;
+                state = NSControlStateValueMixed;
                 break;
             }
         }
@@ -387,7 +387,7 @@
 {
     NSMutableArray *paths = [NSMutableArray array];
     [self visitLeaves:^(AZPathNode *node) {
-        if(node.state == NSOnState) {
+        if(node.state == NSControlStateValueOn) {
             if(relative) {
                 [paths addObject:[node relativePath]];                
             } else {

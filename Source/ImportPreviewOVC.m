@@ -91,7 +91,7 @@
         [root addNode:opNode];
     }
 
-    [root applyState:NSOnState];
+    [root applyState:NSControlStateValueOn];
 
     [outlineView reloadData];
     [outlineView expandItem:nil expandChildren:YES];
@@ -169,9 +169,9 @@
 {
     int state = [object intValue];
     
-    if (state == NSMixedState)
+    if (state == NSControlStateValueMixed)
     {
-        state = NSOnState;
+        state = NSControlStateValueOn;
     }
     
     AZPathNode *tn = item;
@@ -197,7 +197,7 @@
             
             [node visitLeaves:^(AZPathNode *n)
             {
-                if (n.state == NSOnState)
+                if (n.state == NSControlStateValueOn)
                 {
                     enabledCount++;
                 }

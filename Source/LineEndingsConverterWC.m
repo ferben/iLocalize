@@ -20,17 +20,17 @@
 
 - (BOOL)fromMac
 {
-    return [mFromMacButton state] == NSOnState;
+    return [mFromMacButton state] == NSControlStateValueOn;
 }
 
 - (BOOL)fromUnix
 {
-    return [mFromUnixButton state] == NSOnState;
+    return [mFromUnixButton state] == NSControlStateValueOn;
 }
 
 - (BOOL)fromWindows
 {
-    return [mFromWindowsButton state] == NSOnState;
+    return [mFromWindowsButton state] == NSControlStateValueOn;
 }
 
 - (int)toLineEnding

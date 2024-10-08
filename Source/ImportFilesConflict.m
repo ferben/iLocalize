@@ -101,12 +101,12 @@ static unsigned applyToAllResult = RESOLVE_USE_NONE;
     
     [NSApp runModalForWindow:[self window]];
     unsigned result = RESOLVE_USE_NONE;
-    if([mUseProjectFileButton state] == NSOnState)
+    if([mUseProjectFileButton state] == NSControlStateValueOn)
         result = RESOLVE_USE_PROJET_FILE;
     else
         result = RESOLVE_USE_IMPORTED_FILE;
     
-    if([mApplyToAllButton state] == NSOnState)
+    if([mApplyToAllButton state] == NSControlStateValueOn)
         applyToAllResult = result;
     
     return result;
@@ -124,8 +124,8 @@ static unsigned applyToAllResult = RESOLVE_USE_NONE;
 
 - (IBAction)useProjectFile:(id)sender
 {
-    [mUseProjectFileButton setState:NSOnState];
-    [mUseImportedFileButton setState:NSOffState];
+    [mUseProjectFileButton setState:NSControlStateValueOn];
+    [mUseImportedFileButton setState:NSControlStateValueOff];
 }
 
 - (IBAction)openImportedFile:(id)sender
@@ -140,8 +140,8 @@ static unsigned applyToAllResult = RESOLVE_USE_NONE;
 
 - (IBAction)useImportedFile:(id)sender
 {
-    [mUseProjectFileButton setState:NSOffState];
-    [mUseImportedFileButton setState:NSOnState];
+    [mUseProjectFileButton setState:NSControlStateValueOff];
+    [mUseImportedFileButton setState:NSControlStateValueOn];
 }
 
 - (IBAction)continue:(id)sender

@@ -745,11 +745,11 @@
     
     if (length <= 1)
     {
-        return [NSString stringWithFormat:NSLocalizedString(@"%@ (%d character)", nil), displayLanguage, length];
+        return [NSString stringWithFormat:NSLocalizedString(@"%@ (%lu character)", nil), displayLanguage, (unsigned long)length];
     }
     else
     {
-        return [NSString stringWithFormat:NSLocalizedString(@"%@ (%d characters)", nil), displayLanguage, length];        
+        return [NSString stringWithFormat:NSLocalizedString(@"%@ (%lu characters)", nil), displayLanguage, (unsigned long)length];        
     }
 }
 

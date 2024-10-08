@@ -20,7 +20,7 @@
 {
     // compose alert
     NSAlert *alert = [NSAlert new];
-    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert setAlertStyle:NSAlertStyleWarning];
     [alert setMessageText:[NSString stringWithFormat:NSLocalizedStringFromTable(@"RemoveLanguageTitle",@"Alerts",nil), [language language]]];
     [alert setInformativeText:NSLocalizedStringFromTable(@"RemoveLanguageDescr",@"Alerts",nil)];
     [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextDelete",@"Alerts",nil)];      // 1st button

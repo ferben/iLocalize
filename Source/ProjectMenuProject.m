@@ -280,9 +280,9 @@
 {        
     BOOL flag = NO;
     switch([[self.projectWC projectFiles] ignoreStateForSelectedFiles]) {
-        case NSOnState: flag = NO; break;
-        case NSOffState: flag = YES; break;
-        case NSMixedState: flag = YES; break;
+        case NSControlStateValueOn: flag = NO; break;
+        case NSControlStateValueOff: flag = YES; break;
+        case NSControlStateValueMixed: flag = YES; break;
     }
     
     for(FileController *fc in [[self.projectWC projectFiles] selectedFileControllers]) {

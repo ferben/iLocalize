@@ -38,7 +38,7 @@
         [self importBaseRadio:self];
     else {
         [self importOtherRadio:self];
-        [mImportImportLayoutsCheckbox setState:NSOnState];
+        [mImportImportLayoutsCheckbox setState:NSControlStateValueOn];
     }
     
     NSString *baseLanguage = [[[self projectProvider] projectModel] baseLanguage];
@@ -73,9 +73,9 @@
 
 - (void)saveSettings
 {
-    self.settings.updateBaseLanguage = ([mImportBaseRadio state] == NSOnState);
-    self.settings.resetLayout = ([mImportCheckLayoutCheckbox state] == NSOnState);
-    self.settings.updateNibLayouts = ([mImportImportLayoutsCheckbox state] == NSOnState);
+    self.settings.updateBaseLanguage = ([mImportBaseRadio state] == NSControlStateValueOn);
+    self.settings.resetLayout = ([mImportCheckLayoutCheckbox state] == NSControlStateValueOn);
+    self.settings.updateNibLayouts = ([mImportImportLayoutsCheckbox state] == NSControlStateValueOn);
     
     NSInteger index = [mLanguagesTableView selectedRow];
     
@@ -120,8 +120,8 @@
 
 - (IBAction)importBaseRadio:(id)sender
 {
-    [mImportBaseRadio setState:NSOnState];
-    [mImportOtherRadio setState:NSOffState];
+    [mImportBaseRadio setState:NSControlStateValueOn];
+    [mImportOtherRadio setState:NSControlStateValueOff];
     [mImportCheckLayoutCheckbox setEnabled:YES];
     [mImportImportLayoutsCheckbox setEnabled:NO];
     [mLanguagesTableView setEnabled:NO];
@@ -129,8 +129,8 @@
 
 - (IBAction)importOtherRadio:(id)sender
 {
-    [mImportBaseRadio setState:NSOffState];
-    [mImportOtherRadio setState:NSOnState];
+    [mImportBaseRadio setState:NSControlStateValueOff];
+    [mImportOtherRadio setState:NSControlStateValueOn];
     [mImportCheckLayoutCheckbox setEnabled:NO];
     [mImportImportLayoutsCheckbox setEnabled:YES];
     [mLanguagesTableView setEnabled:YES];

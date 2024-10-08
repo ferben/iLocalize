@@ -29,17 +29,17 @@ static NSMutableDictionary    *mInfoAttributes = NULL;
     
     if(greenWidth > 0) {
         NSImage *greenImage = [NSImage imageNamed:@"progress_green"];
-        [greenImage drawInRect:NSMakeRect(rect.origin.x, rect.origin.y, greenWidth, rect.size.height) operation:NSCompositeSourceOver fraction:1];        
+        [greenImage drawInRect:NSMakeRect(rect.origin.x, rect.origin.y, greenWidth, rect.size.height) operation:NSCompositingOperationSourceOver fraction:1];        
     }
     
     if(redWidth > 0) {
         NSImage *redImage = [NSImage imageNamed:@"progress_red"];
-        [redImage drawInRect:NSMakeRect(rect.origin.x+greenWidth, rect.origin.y, redWidth, rect.size.height) operation:NSCompositeSourceOver fraction:1];
+        [redImage drawInRect:NSMakeRect(rect.origin.x+greenWidth, rect.origin.y, redWidth, rect.size.height) operation:NSCompositingOperationSourceOver fraction:1];
     }
     
     if(blackWidth > 0) {
         NSImage *redImage = [NSImage imageNamed:@"progress_gray"];
-        [redImage drawInRect:NSMakeRect(rect.origin.x+greenWidth+redWidth, rect.origin.y, blackWidth, rect.size.height) operation:NSCompositeSourceOver fraction:1];
+        [redImage drawInRect:NSMakeRect(rect.origin.x+greenWidth+redWidth, rect.origin.y, blackWidth, rect.size.height) operation:NSCompositingOperationSourceOver fraction:1];
     }
 }
 

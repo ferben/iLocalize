@@ -177,9 +177,9 @@
     [mFilesTableView setNeedsDisplay:YES];
     
 /*    if([[PreferencesGeneral shared] tableViewShowSmartPath]) {
-        [mFilesTableViewContextualMenu setMenuItemState:NSOffState withTag:FILES_CONTEXTUAL_SHOW_FULL_PATH_TAG];
+        [mFilesTableViewContextualMenu setMenuItemState:NSControlStateValueOff withTag:FILES_CONTEXTUAL_SHOW_FULL_PATH_TAG];
     } else {
-        [mFilesTableViewContextualMenu setMenuItemState:NSOnState withTag:FILES_CONTEXTUAL_SHOW_FULL_PATH_TAG];
+        [mFilesTableViewContextualMenu setMenuItemState:NSControlStateValueOn withTag:FILES_CONTEXTUAL_SHOW_FULL_PATH_TAG];
     }*/
 }
 
@@ -342,7 +342,7 @@
 {
     for (NSTableColumn *column in [mFilesTableView tableColumns])
     {
-        [mFilesColumnTableViewContextualMenu setMenuItemState:[column isHidden]?NSOffState:NSOnState
+        [mFilesColumnTableViewContextualMenu setMenuItemState:[column isHidden]?NSControlStateValueOff:NSControlStateValueOn
                                                       withTag:[self tagForFilesColumnIdentifier:[column identifier]]];        
     }
 }
@@ -416,13 +416,13 @@
         return;
     }
     
-    if(state == NSOnState) {
+    if(state == NSControlStateValueOn) {
         if([self hideFilesTableColumn:identifier]) {
-            [sender setState:NSOffState];                    
+            [sender setState:NSControlStateValueOff];                    
         }
     } else {
         [self showFilesTableColumn:identifier];
-        [sender setState:NSOnState];
+        [sender setState:NSControlStateValueOn];
     }
     [[self.projectWC document] setDirty];
 }
@@ -432,20 +432,20 @@
 - (int)ignoreStateForSelectedFiles
 {
     BOOL first = YES;
-    int state = NSOffState;
+    int state = NSControlStateValueOff;
     for(FileController *fc in [self selectedFileControllers]) {
         if(first) {
             first = NO;
             if([fc ignore])
-                state = NSOnState;
+                state = NSControlStateValueOn;
             else
-                state = NSOffState;
+                state = NSControlStateValueOff;
         } else {
-            if([fc ignore] && state == NSOffState) {
-                state = NSMixedState;                
+            if([fc ignore] && state == NSControlStateValueOff) {
+                state = NSControlStateValueMixed;                
             }
-            if(![fc ignore] && state == NSOnState) {
-                state = NSMixedState;
+            if(![fc ignore] && state == NSControlStateValueOn) {
+                state = NSControlStateValueMixed;
             }
         }        
     }
@@ -455,9 +455,9 @@
 - (int)encodingStateForSelectedFilesWithEncoding:(StringEncoding*)se
 {
     if([mSelectedEncodingSet containsObject:se]) {
-        return [mSelectedEncodingSet count]>1?NSMixedState:NSOnState;
+        return [mSelectedEncodingSet count]>1?NSControlStateValueMixed:NSControlStateValueOn;
     } else {
-        return NSOffState;
+        return NSControlStateValueOff;
     }        
 }
 

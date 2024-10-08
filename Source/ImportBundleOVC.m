@@ -34,17 +34,17 @@
 
 - (BOOL)importBaseLanguage
 {
-    return [mImportBaseButton state] == NSOnState;    
+    return [mImportBaseButton state] == NSControlStateValueOn;    
 }
 
 - (BOOL)keepLayout
 {
-    return [mImportCheckLayoutCheckbox state] == NSOffState;
+    return [mImportCheckLayoutCheckbox state] == NSControlStateValueOff;
 }
 
 - (BOOL)importOtherLanguages
 {
-    return [mImportLocalizedButton state] == NSOnState;    
+    return [mImportLocalizedButton state] == NSControlStateValueOn;    
 }
 
 - (NSArray*)languages
@@ -70,12 +70,12 @@
 
 - (BOOL)layouts
 {
-    return [mImportImportLayoutsCheckbox state] == NSOnState;
+    return [mImportImportLayoutsCheckbox state] == NSControlStateValueOn;
 }
 
 - (BOOL)copyOnlyIfExists
 {
-    return [mCopyOnlyIfExistsCheckbox state] != NSOnState;
+    return [mCopyOnlyIfExistsCheckbox state] != NSControlStateValueOn;
 }
 
 - (BOOL)canContinue
@@ -218,15 +218,15 @@
     
     if([[Preferences shared] developerMode]) {
         if([[[self projectProvider] selectedLanguageController] isBaseLanguage]) {
-            [self selectImportBaseButton:NSOnState];            
-            [self selectImportLocalizedButton:NSOffState];
+            [self selectImportBaseButton:NSControlStateValueOn];            
+            [self selectImportLocalizedButton:NSControlStateValueOff];
         } else {
-            [self selectImportLocalizedButton:NSOnState];
-            [self selectImportBaseButton:NSOffState];            
+            [self selectImportLocalizedButton:NSControlStateValueOn];
+            [self selectImportBaseButton:NSControlStateValueOff];            
         }                
     } else {
-        [self selectImportBaseButton:NSOnState];            
-        [self selectImportLocalizedButton:NSOffState];        
+        [self selectImportBaseButton:NSControlStateValueOn];            
+        [self selectImportLocalizedButton:NSControlStateValueOff];        
     }
     
     NSString *bundlePathArg = (self.arguments)[@"importBundlePath"];

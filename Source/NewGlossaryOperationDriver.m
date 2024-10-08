@@ -121,7 +121,7 @@ enum
             if (alertReturnCode == NSAlertFirstButtonReturn)
             {
                 // Overwrite
-                BOOL suppressWarning = [alert suppressionButton].state == NSOnState;
+                BOOL suppressWarning = [alert suppressionButton].state == NSControlStateValueOn;
                 
                 if (suppressWarning)
                 {

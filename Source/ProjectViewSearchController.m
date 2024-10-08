@@ -37,7 +37,7 @@
 
 - (void)setButton:(NSButton*)button contextContains:(int)flag
 {
-    [button setState:(context.scope & flag) ? NSOnState : NSOffState];
+    [button setState:(context.scope & flag) ? NSControlStateValueOn : NSControlStateValueOff];
 }
 
 - (void)updateInterface
@@ -59,7 +59,7 @@
 
 - (NSButton*)createButtonWithTitle:(NSString*)title action:(SEL)action tag:(NSInteger)tag at:(NSPoint*)p
 {
-    NSFont *font = [NSFont controlContentFontOfSize:NSRegularControlSize];
+    NSFont *font = [NSFont controlContentFontOfSize:NSControlSizeRegular];
     NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
     attributes[NSFontAttributeName] = font;        
     NSSize size = [title sizeWithAttributes:attributes];
@@ -69,8 +69,8 @@
     p->x += 13;
     
     [button setAutoresizingMask:NSViewMinYMargin];
-    [button setBezelStyle:NSRoundRectBezelStyle];
-    [button setButtonType:NSPushOnPushOffButton];
+    [button setBezelStyle:NSBezelStyleRoundRect];
+    [button setButtonType:NSButtonTypePushOnPushOff];
     [button setTitle:title];
     [button setTarget:self];
     [button setAction:action];

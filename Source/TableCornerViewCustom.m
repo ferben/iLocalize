@@ -41,7 +41,7 @@
         NSImage *image = [NSImage imageNamed:[self cornerImage]];
         NSSize imageSize = [image size];
         [image drawInRect:NSMakeRect(r.origin.x+r.size.width*0.5-imageSize.width*0.5, r.origin.y+r.size.height*0.5-imageSize.height*0.5, imageSize.width, imageSize.height)
-                operation:NSCompositeSourceOver
+                operation:NSCompositingOperationSourceOver
                  fraction:1];        
     }
 }

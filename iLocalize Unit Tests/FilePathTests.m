@@ -193,32 +193,32 @@
     AZPathNode *placeholder = [root displayableChildAtLocation:@"0,0,0"]; // placeholder for the languages in Contents/Resources/
     [self assertNode:placeholder location:nil name:@"English, French" childrenCount:0];
     
-    [placeholder applyState:NSOnState];
-    XCTAssertEqual([[root childAtLocation:@"0,0,0"] state], (NSInteger)NSOnState, @"On State");
-    XCTAssertEqual([[root childAtLocation:@"0,0,1"] state], (NSInteger)NSOnState, @"On State");
-    XCTAssertEqual([[root childAtLocation:@"0,0,2"] state], (NSInteger)NSOnState, @"On State");
+    [placeholder applyState:NSControlStateValueOn];
+    XCTAssertEqual([[root childAtLocation:@"0,0,0"] state], (NSInteger)NSControlStateValueOn, @"On State");
+    XCTAssertEqual([[root childAtLocation:@"0,0,1"] state], (NSInteger)NSControlStateValueOn, @"On State");
+    XCTAssertEqual([[root childAtLocation:@"0,0,2"] state], (NSInteger)NSControlStateValueOn, @"On State");
     
-    [placeholder applyState:NSOffState];
-    XCTAssertEqual([[root childAtLocation:@"0,0,0"] state], (NSInteger)NSOffState, @"Off State");
-    XCTAssertEqual([[root childAtLocation:@"0,0,1"] state], (NSInteger)NSOffState, @"Off State");
-    XCTAssertEqual([[root childAtLocation:@"0,0,2"] state], (NSInteger)NSOffState, @"Off State");
+    [placeholder applyState:NSControlStateValueOff];
+    XCTAssertEqual([[root childAtLocation:@"0,0,0"] state], (NSInteger)NSControlStateValueOff, @"Off State");
+    XCTAssertEqual([[root childAtLocation:@"0,0,1"] state], (NSInteger)NSControlStateValueOff, @"Off State");
+    XCTAssertEqual([[root childAtLocation:@"0,0,2"] state], (NSInteger)NSControlStateValueOff, @"Off State");
     
-    [[root childAtLocation:@"0,0,0"] setState:NSOnState];
-    [[root childAtLocation:@"0,0,1"] setState:NSOnState];
-    [[root childAtLocation:@"0,0,2"] setState:NSOnState];
+    [[root childAtLocation:@"0,0,0"] setState:NSControlStateValueOn];
+    [[root childAtLocation:@"0,0,1"] setState:NSControlStateValueOn];
+    [[root childAtLocation:@"0,0,2"] setState:NSControlStateValueOn];
     
-    XCTAssertEqual([placeholder state], (NSInteger)NSOnState, @"Placeholder On State");
+    XCTAssertEqual([placeholder state], (NSInteger)NSControlStateValueOn, @"Placeholder On State");
     
-    [root applyState:NSOnState];
-    XCTAssertEqual([[root childAtLocation:@"0,0,0"] state], (NSInteger)NSOnState, @"On State");
-    XCTAssertEqual([[root childAtLocation:@"0,0,1"] state], (NSInteger)NSOnState, @"On State");
-    XCTAssertEqual([[root childAtLocation:@"0,0,2"] state], (NSInteger)NSOnState, @"On State");
-    XCTAssertEqual([[root childAtLocation:@"0,0,3"] state], (NSInteger)NSOnState, @"On State");
+    [root applyState:NSControlStateValueOn];
+    XCTAssertEqual([[root childAtLocation:@"0,0,0"] state], (NSInteger)NSControlStateValueOn, @"On State");
+    XCTAssertEqual([[root childAtLocation:@"0,0,1"] state], (NSInteger)NSControlStateValueOn, @"On State");
+    XCTAssertEqual([[root childAtLocation:@"0,0,2"] state], (NSInteger)NSControlStateValueOn, @"On State");
+    XCTAssertEqual([[root childAtLocation:@"0,0,3"] state], (NSInteger)NSControlStateValueOn, @"On State");
     
-    [placeholder applyState:NSOffState];
-    XCTAssertEqual([[root childAtLocation:@"0,0,0"] state], (NSInteger)NSOffState, @"Off State");
-    XCTAssertEqual([[root childAtLocation:@"0,0,1"] state], (NSInteger)NSOffState, @"Off State");
-    XCTAssertEqual([[root childAtLocation:@"0,0,2"] state], (NSInteger)NSOffState, @"Off State");
+    [placeholder applyState:NSControlStateValueOff];
+    XCTAssertEqual([[root childAtLocation:@"0,0,0"] state], (NSInteger)NSControlStateValueOff, @"Off State");
+    XCTAssertEqual([[root childAtLocation:@"0,0,1"] state], (NSInteger)NSControlStateValueOff, @"Off State");
+    XCTAssertEqual([[root childAtLocation:@"0,0,2"] state], (NSInteger)NSControlStateValueOff, @"Off State");
     
     // ***************************************
     // Testing the selected paths
@@ -231,7 +231,7 @@
     XCTAssertEqualObjects(selectedPaths, expected, @"Expected paths 1");
     
     // Select the placeholder
-    [placeholder applyState:NSOnState];
+    [placeholder applyState:NSControlStateValueOn];
     expected = [NSArray arrayWithObjects:
                 @"FilterBundle.app/Contents/Resources/en.lproj/Complex.rtfd",
                 @"FilterBundle.app/Contents/Resources/en.lproj/Credits.html",
@@ -254,7 +254,7 @@
     XCTAssertEqualObjects([root selectedRelativePaths], expected, @"Expected paths 2");
     
     // Select nothing
-    [root applyState:NSOffState];
+    [root applyState:NSControlStateValueOff];
     XCTAssertEqualObjects([root selectedRelativePaths], [NSArray array], @"Empty paths");
 }
 

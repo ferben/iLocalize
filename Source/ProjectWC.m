@@ -1246,7 +1246,7 @@
 {
     // compose alert
     NSAlert *alert = [NSAlert new];
-    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert setAlertStyle:NSAlertStyleWarning];
     [alert setMessageText:NSLocalizedStringFromTable(@"ProjectCheckTitle",@"Alerts",nil)];
     [alert setInformativeText:NSLocalizedStringFromTable(@"ProjectCheckDescr",@"Alerts",nil)];
     [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextCheck",@"Alerts",nil)];      // 1st button
@@ -1683,15 +1683,15 @@
         
         if ([anItem tag] == SEARCH_IGNORE_CASE)
         {
-            [anItem setState:c.ignoreCase?NSOnState:NSOffState];
+            [anItem setState:c.ignoreCase?NSControlStateValueOn:NSControlStateValueOff];
         }
         else if ([anItem tag] == c.options)
         {
-            [anItem setState:NSOnState];
+            [anItem setState:NSControlStateValueOn];
         }
         else
         {
-            [anItem setState:NSOffState];
+            [anItem setState:NSControlStateValueOff];
         }        
     }
     
@@ -1726,7 +1726,7 @@
         
          if ([self selectedLanguageController] == lc)
         {
-            [item setState:NSOnState];
+            [item setState:NSControlStateValueOn];
         }
         
         [menu addItem:item];

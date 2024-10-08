@@ -16,7 +16,7 @@
                   backing:(NSBackingStoreType)bufferingType
                     defer:(BOOL)flag
 {
-    NSWindow *result = [[NSWindow alloc] initWithContentRect:contentRect styleMask:NSBorderlessWindowMask backing:bufferingType defer:flag];
+    NSWindow *result = [[NSWindow alloc] initWithContentRect:contentRect styleMask:NSWindowStyleMaskBorderless backing:bufferingType defer:flag];
     
     [result setBackgroundColor:[NSColor clearColor]];    
     [result setHasShadow:NO];    

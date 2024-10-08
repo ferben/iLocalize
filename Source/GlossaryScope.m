@@ -90,7 +90,7 @@
     if([[localPath path] isPathExisting]) {
         TreeNode *localPathNode = [TreeNode nodeWithTitle:[self.projectProvider applicationExecutableName]];
         localPathNode.payload = [GlossaryScopeItem itemWithFolder:localPath
-                                                            state:NSOnState
+                                                            state:NSControlStateValueOn
                                                              icon:[[NSWorkspace sharedWorkspace] iconForFile:[self.projectProvider sourceApplicationPath]]];
         
         [glossaries enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
@@ -98,9 +98,9 @@
             if([g.folder isEqualTo:localPath]) {
                 TreeNode *node = [TreeNode leafNode];
                 [node setTitle:g.name];
-                int state = NSOnState;
+                int state = NSControlStateValueOn;
                 if([oldUnselectedGlossaryPaths containsObject:g.file]) {
-                    state = NSOffState;
+                    state = NSControlStateValueOff;
                 }
                 node.payload = [GlossaryScopeItem itemWithGlossary:g 
                                                              state:state
@@ -120,7 +120,7 @@
         if([p.path isPathExisting]) {
             TreeNode *globalPathNode = [TreeNode nodeWithTitle:[p nameAndPath]];
             globalPathNode.payload = [GlossaryScopeItem itemWithFolder:p
-                                                                 state:NSOnState
+                                                                 state:NSControlStateValueOn
                                                                   icon:[[NSWorkspace sharedWorkspace] iconForFile:p.path]];
             
             [glossaries enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
@@ -128,9 +128,9 @@
                 if([g.folder isEqualTo:p]) {
                     TreeNode *node = [TreeNode leafNode];
                     [node setTitle:g.name];
-                    int state = NSOnState;
+                    int state = NSControlStateValueOn;
                     if([oldUnselectedGlossaryPaths containsObject:g.file]) {
-                        state = NSOffState;
+                        state = NSControlStateValueOff;
                     }
                     node.payload = [GlossaryScopeItem itemWithGlossary:g state:state
                                                                   icon:[[NSWorkspace sharedWorkspace] iconForFile:g.file]];
@@ -166,7 +166,7 @@
 {
     for(NSString *language in [nodesForLanguage allKeys]) {
         // Build a set of path for all the glossaries that are selected.
-        NSArray *unselectedGlossaries = [self glossariesForLanguage:language state:NSOffState];
+        NSArray *unselectedGlossaries = [self glossariesForLanguage:language state:NSControlStateValueOff];
         NSMutableSet *unselectedGlossaryPaths = [NSMutableSet set];
         [unselectedGlossaries enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             Glossary *g = obj;
@@ -201,7 +201,7 @@
         for(TreeNode *pathNode in [nodesForLanguage[[self language]] nodes]) {
             for(TreeNode *glossaryNode in [pathNode nodes]) {
                 GlossaryScopeItem *item = glossaryNode.payload;
-                item.state = NSOffState;
+                item.state = NSControlStateValueOff;
             }
         }
     }    
@@ -210,7 +210,7 @@
 - (NSArray*)selectedGlossaries
 {
     [self rootNode]; // trigger the creation of the root node if it is not created already
-    return [self glossariesForLanguage:[self language] state:NSOnState];
+    return [self glossariesForLanguage:[self language] state:NSControlStateValueOn];
 }
 
 - (NSArray*)selectedStates {
@@ -228,9 +228,9 @@
             for(TreeNode *glossaryNode in [pathNode nodes]) {
                 GlossaryScopeItem *item = glossaryNode.payload;
                 if([selectedStates containsObject:item.glossary.targetFile]) {
-                    item.state = NSOnState;
+                    item.state = NSControlStateValueOn;
                 } else {
-                    item.state = NSOffState;
+                    item.state = NSControlStateValueOff;
                 }
             }
         }

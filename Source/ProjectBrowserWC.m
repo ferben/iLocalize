@@ -467,22 +467,22 @@ static ProjectBrowserWC *shared = nil;
     {
         if ([sortKey isEqual:@"date"])
         {
-            [menuItem setState:NSOnState];
+            [menuItem setState:NSControlStateValueOn];
         }
         else
         {
-            [menuItem setState:NSOffState];            
+            [menuItem setState:NSControlStateValueOff];            
         }
     }
     else if(action == @selector(sortByName:))
     {
         if ([sortKey isEqual:@"name"])
         {
-            [menuItem setState:NSOnState];
+            [menuItem setState:NSControlStateValueOn];
         }
         else
         {
-            [menuItem setState:NSOffState];            
+            [menuItem setState:NSControlStateValueOff];            
         }
     }
     else

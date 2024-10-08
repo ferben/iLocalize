@@ -218,7 +218,7 @@
     }    
     
     [mNameField setStringValue:self.filter.name];
-    [mGlobalButton setState:self.filter.local?NSOffState:NSOnState];    
+    [mGlobalButton setState:self.filter.local?NSControlStateValueOff:NSControlStateValueOn];    
 }
 
 #pragma mark -
@@ -234,7 +234,7 @@
     
     self.filter.predicate = [mPredicateEditor objectValue];
     self.filter.name = [mNameField stringValue];
-    self.filter.local = [mGlobalButton state] == NSOffState;
+    self.filter.local = [mGlobalButton state] == NSControlStateValueOff;
     
     [[ExplorerFilterManager shared] registerFilter:self.filter explorer:self.explorer];    
     [[ExplorerFilterManager shared] saveFilter:self.filter explorer:self.explorer];

@@ -68,7 +68,7 @@
         [languageMenuProvider selectCurrentLanguage];
     }
 
-    [mFillTranslationButton setState:[[NSUserDefaults standardUserDefaults] boolForKey:@"autoFillTranslationWithBaseForNewLanguage"]?NSOnState:NSOffState];
+    [mFillTranslationButton setState:[[NSUserDefaults standardUserDefaults] boolForKey:@"autoFillTranslationWithBaseForNewLanguage"]?NSControlStateValueOn:NSControlStateValueOff];
     [self updateOKButton];
 }
 
@@ -123,7 +123,7 @@
 
 - (IBAction)add:(id)sender
 {
-    [[NSUserDefaults standardUserDefaults] setBool:[mFillTranslationButton state] == NSOnState forKey:@"autoFillTranslationWithBaseForNewLanguage"];
+    [[NSUserDefaults standardUserDefaults] setBool:[mFillTranslationButton state] == NSControlStateValueOn forKey:@"autoFillTranslationWithBaseForNewLanguage"];
 
     if (mCheckForExistingLanguage && [self alreadyExistsLanguage:[self language]])
     {

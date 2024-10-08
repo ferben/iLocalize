@@ -252,7 +252,7 @@
     
     NSString *keypath;
     
-    if ([baseCommentButton state] == NSOnState)
+    if ([baseCommentButton state] == NSControlStateValueOn)
     {
         keypath = @"selection.baseComment";
     }
@@ -266,7 +266,7 @@
            withKeyPath:keypath
                options:@{NSContinuouslyUpdatesValueBindingOption: @YES}];
     
-    if ([localizedCommentButton state] == NSOnState)
+    if ([localizedCommentButton state] == NSControlStateValueOn)
     {
         keypath = @"selection.baseComment";
     }
@@ -280,7 +280,7 @@
            withKeyPath:keypath
                options:@{NSContinuouslyUpdatesValueBindingOption: @YES}];
     
-    if ([localizedCommentButton state] == NSOnState)
+    if ([localizedCommentButton state] == NSControlStateValueOn)
     {
         keypath = @"selection.translationComment";
     }
@@ -294,7 +294,7 @@
                 withKeyPath:keypath
                     options:@{NSContinuouslyUpdatesValueBindingOption: @YES}];
         
-    if ([baseCommentButton state] == NSOnState)
+    if ([baseCommentButton state] == NSControlStateValueOn)
     {
         keypath = @"selection.baseCommentInfo";
     }
@@ -308,7 +308,7 @@
             withKeyPath:keypath
                 options:NULL];
     
-    if ([localizedCommentButton state] == NSOnState)
+    if ([localizedCommentButton state] == NSControlStateValueOn)
     {
         keypath = @"selection.baseCommentInfo";
     }
@@ -322,7 +322,7 @@
             withKeyPath:keypath
                 options:NULL];
     
-    if ([localizedCommentButton state] == NSOnState)
+    if ([localizedCommentButton state] == NSControlStateValueOn)
     {
         keypath = @"selection.translationCommentInfo";
     }
@@ -516,7 +516,7 @@
 
 - (NSButton *)newToolButtonWithTitle:(NSString *)title action:(SEL)action
 {
-    NSFont *font = [NSFont controlContentFontOfSize:[NSFont systemFontSizeForControlSize:NSMiniControlSize]];
+    NSFont *font = [NSFont controlContentFontOfSize:[NSFont systemFontSizeForControlSize:NSControlSizeMini]];
     NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
     attributes[NSFontAttributeName] = font;        
 
@@ -525,10 +525,10 @@
     [button setTitle:title];
     [button setTarget:self];
     [button setAction:action];
-    [button setButtonType:NSPushOnPushOffButton];
-    [button setBezelStyle:NSSmallSquareBezelStyle];
+    [button setButtonType:NSButtonTypePushOnPushOff];
+    [button setBezelStyle:NSBezelStyleSmallSquare];
     [button setAutoresizingMask:NSViewMinYMargin|NSViewMaxXMargin];
-    [[button cell] setControlSize:NSMiniControlSize];
+    [[button cell] setControlSize:NSControlSizeMini];
     [[button cell] setFont:font];
     
     return button;
@@ -563,7 +563,7 @@
 
 - (NSTextField *)newLabelField:(NSRect)frame
 {
-    NSFont *font = [NSFont controlContentFontOfSize:[NSFont systemFontSizeForControlSize:NSMiniControlSize]];
+    NSFont *font = [NSFont controlContentFontOfSize:[NSFont systemFontSizeForControlSize:NSControlSizeMini]];
     
     NSTextField *label = [[NSTextField alloc] initWithFrame:frame];
     [label setAutoresizingMask:NSViewWidthSizable|NSViewMinYMargin|NSViewMaxXMargin];
@@ -572,7 +572,7 @@
     [label setSelectable:NO];
     [label setDrawsBackground:NO];    
     
-    [[label cell] setControlSize:NSMiniControlSize];
+    [[label cell] setControlSize:NSControlSizeMini];
     [[label cell] setFont:font];
 
     return label;
@@ -657,7 +657,7 @@ static int toolHeight = 23;
         if (biggestButton.frame.size.width > propagationModeButton.frame.size.width)
         {
             propagationModeButton = biggestButton;
-            [propagationModeButton setButtonType:NSMomentaryPushInButton];
+            [propagationModeButton setButtonType:NSButtonTypeMomentaryPushIn];
             [propagationModeButton setFrameOrigin:NSMakePoint(localizedCommentButton.frame.origin.x+localizedCommentButton.frame.size.width-2, editorViewFrame.size.height-toolHeight+2)];
         }
         else
@@ -679,7 +679,7 @@ static int toolHeight = 23;
 
     localizedInfoField = [self newLabelField:fieldRect];
     [localizedInfoField setAutoresizingMask:NSViewWidthSizable|NSViewMinYMargin|NSViewMinXMargin];
-    [localizedInfoField setAlignment:NSRightTextAlignment];
+    [localizedInfoField setAlignment:NSTextAlignmentRight];
     [localizedEditorView addSubview:localizedInfoField];
     
     // Text zones
@@ -906,7 +906,7 @@ static int toolHeight = 23;
         
         if (tv == baseTextView || tv == localizedBaseTextView)
         {
-            if ([baseCommentButton state] == NSOnState)
+            if ([baseCommentButton state] == NSControlStateValueOn)
             {
                 [[self selectedStringController] setBaseComment:string];                
             }
@@ -917,7 +917,7 @@ static int toolHeight = 23;
         }
         else
         {
-            if ([localizedCommentButton state] == NSOnState)
+            if ([localizedCommentButton state] == NSControlStateValueOn)
             {
                 [[self selectedStringController] setTranslationComment:string];                
             }
@@ -942,20 +942,20 @@ static int toolHeight = 23;
 - (void)updateLockStates
 {
     StringController *sc = [[self selectedStringControllers] firstObject];
-    __block NSInteger state = sc.lock?NSOnState:NSOffState;
+    __block NSInteger state = sc.lock?NSControlStateValueOn:NSControlStateValueOff;
     
     [[self selectedStringControllers] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop)
     {
         StringController *sc = obj;
     
-        if (sc.lock && state != NSOnState)
+        if (sc.lock && state != NSControlStateValueOn)
         {
-            state = NSMixedState;
+            state = NSControlStateValueMixed;
         }
         
-        if (!sc.lock && state != NSOffState)
+        if (!sc.lock && state != NSControlStateValueOff)
         {
-            state = NSMixedState;
+            state = NSControlStateValueMixed;
         }
     }];
 
@@ -967,7 +967,7 @@ static int toolHeight = 23;
 {
     [[self selectedStringControllers] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop)
     {
-        [obj setLock:[sender state] == NSOnState];
+        [obj setLock:[sender state] == NSControlStateValueOn];
     }];
 }
 
@@ -1405,7 +1405,7 @@ static int toolHeight = 23;
                                             owner:self
                                        pasteboard:pboard];
     
-        [pboard setData:[NSArchiver archivedDataWithRootObject:rowIndexes] forType:PBOARD_DATA_ROW_INDEXES];
+        [pboard setData:[NSKeyedArchiver archivedDataWithRootObject:rowIndexes] forType:PBOARD_DATA_ROW_INDEXES];
         return YES;
     }
     
@@ -1420,7 +1420,7 @@ static int toolHeight = 23;
         return;
     }
     
-    NSIndexSet *rowIndexes = [NSUnarchiver unarchiveObjectWithData:[sender dataForType:PBOARD_DATA_ROW_INDEXES]];
+    NSIndexSet *rowIndexes = [NSKeyedUnarchiver unarchiveObjectWithData:[sender dataForType:PBOARD_DATA_ROW_INDEXES]];
     
     if ([type isEqualToString:PBOARD_DATA_STRINGS])
     {
@@ -1436,7 +1436,7 @@ static int toolHeight = 23;
             [array addObject:dic];
         }
         
-        [sender setData:[NSArchiver archivedDataWithRootObject:array] forType:type];
+        [sender setData:[NSKeyedArchiver archivedDataWithRootObject:array] forType:type];
     }
 }
 
@@ -1614,15 +1614,15 @@ static int toolHeight = 23;
     
     if ([[tableColumn identifier] isEqualToString:COLUMN_BASE])
     {
-        [cell setValue:[sc base]];        
+        [(NSDictionaryControllerKeyValuePair*)cell setValue:[sc base]];
     }
     else if([[tableColumn identifier] isEqualToString:COLUMN_TRANSLATION])
     {
-        [cell setValue:[sc translation]];        
+        [(NSDictionaryControllerKeyValuePair*)cell setValue:[sc translation]];
     }
     else if([[tableColumn identifier] isEqualToString:COLUMN_KEY])
     {
-        [cell setValue:[sc key]];        
+        [(NSDictionaryControllerKeyValuePair*)cell setValue:[sc key]];        
     }
     
     [cell setShowInvisibleCharacters:[[[sc projectProvider] projectPrefs] showInvisibleCharacters]];
@@ -1710,7 +1710,7 @@ static int toolHeight = 23;
 {
     NSArray *content = [mStringsController arrangedObjects];
     
-    BOOL backwards = ([[[NSApplication sharedApplication] currentEvent] modifierFlags] & NSShiftKeyMask) > 0;
+    BOOL backwards = ([[[NSApplication sharedApplication] currentEvent] modifierFlags] & NSEventModifierFlagShift) > 0;
     
     NSUInteger startIndex = [content indexOfObject:[self selectedStringController]];
     NSUInteger maxIndex = [content count] - 1;

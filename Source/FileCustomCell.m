@@ -43,14 +43,14 @@ static NSMutableDictionary    *mSmartPathAttributes = NULL;
 
 - (void)drawImage:(NSImage*)image atPoint:(NSPoint)p
 {
-    [image drawAtPoint:p operation:NSCompositeSourceOver fraction:1];
+    [image drawAtPoint:p operation:NSCompositingOperationSourceOver fraction:1];
 }
 
 - (void)drawImage:(NSImage*)image atPoint:(NSPoint)p width:(float)width
 {
     NSSize size = [image size];
     NSRect dr = NSMakeRect(p.x, p.y, width, size.height);
-    [image drawInRect:dr operation:NSCompositeSourceOver fraction:1];
+    [image drawInRect:dr operation:NSCompositingOperationSourceOver fraction:1];
 }
 
 - (void)drawBackgroundInRect:(NSRect)r completed:(BOOL)completed

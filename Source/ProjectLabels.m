@@ -121,7 +121,7 @@ static NSMutableDictionary *labelAttributes = nil;
     NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:description action:@selector(labelContextMenuAction:) keyEquivalent:@""];
     
     [item setTarget:self];
-    [item setState:NSOffState];
+    [item setState:NSControlStateValueOff];
     [item setImage:[ProjectLabels createLabelImageForColor:color identifier:identifier]];
     
     return item;
@@ -151,14 +151,14 @@ static NSMutableDictionary *labelAttributes = nil;
     for (NSNumber *index in labelsSet)
     {
         BOOL partial = [countDic[index] intValue] < total;
-        [[menu itemAtIndex:[index intValue]] setState:partial?NSMixedState:NSOnState];        
+        [[menu itemAtIndex:[index intValue]] setState:partial?NSControlStateValueMixed:NSControlStateValueOn];        
     }
     
 }
 
 + (void)labelContextMenuAction:(id)sender controllers:(NSArray *)controllers
 {
-    int state = [sender state] == NSOnState?NSOffState:NSOnState;
+    int state = [sender state] == NSControlStateValueOn?NSControlStateValueOff:NSControlStateValueOn;
     [sender setState:state];
     
     NSNumber *index = [NSNumber numberWithInteger:[sender tag]];
@@ -167,7 +167,7 @@ static NSMutableDictionary *labelAttributes = nil;
     {
         NSMutableSet *set = [[NSMutableSet alloc] initWithSet:[c labelIndexes]];
     
-        if (state == NSOnState)
+        if (state == NSControlStateValueOn)
             [set addObject:index];
         else
             [set removeObject:index];
