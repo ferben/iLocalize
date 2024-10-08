@@ -402,7 +402,7 @@ static ProjectBrowserWC *shared = nil;
 {
     // compose alert
     NSAlert *alert = [NSAlert new];
-    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert setAlertStyle:NSAlertStyleWarning];
     [alert setMessageText:NSLocalizedStringFromTable(@"ProjectBrowserDeleteTitle",@"Alerts",nil)];
     [alert setInformativeText:NSLocalizedStringFromTable(@"ProjectBrowserDeleteDescr",@"Alerts",nil)];
     [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextCancel",@"Alerts",nil)];      // 1st button

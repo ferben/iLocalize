@@ -98,7 +98,7 @@
 {
     // compose alert
     NSAlert *alert = [NSAlert new];
-    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert setAlertStyle:NSAlertStyleWarning];
     [alert setMessageText:NSLocalizedStringFromTable(@"ProjectLabelsInvalidTitle",@"Alerts",nil)];
     [alert setInformativeText:@""];
     [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextOK",@"Alerts",nil)];      // 1st button
@@ -178,7 +178,7 @@
     {
         // compose alert
         NSAlert *alert = [NSAlert new];
-        [alert setAlertStyle:NSWarningAlertStyle];
+        [alert setAlertStyle:NSAlertStyleWarning];
         [alert setMessageText:NSLocalizedStringFromTable(@"ProjectLabelsRemoveTitle",@"Alerts",nil)];
         [alert setInformativeText:NSLocalizedStringFromTable(@"ProjectLabelsRemoveDescr",@"Alerts",nil)];
         [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextRemove",@"Alerts",nil)];      // 1st button

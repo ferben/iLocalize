@@ -130,7 +130,7 @@
     {
         // compose alert
         NSAlert *alert = [NSAlert new];
-        [alert setAlertStyle:NSWarningAlertStyle];
+        [alert setAlertStyle:NSAlertStyleWarning];
         [alert setMessageText:NSLocalizedStringFromTable(@"ConsoleClearAllEntriesTitle",@"Alerts",nil)];
         [alert setInformativeText:@""];
         [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextOK",@"Alerts",nil)];      // 1st button

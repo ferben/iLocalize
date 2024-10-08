@@ -196,7 +196,7 @@
     {
         // compose alert
         NSAlert *alert = [NSAlert new];
-        [alert setAlertStyle:NSWarningAlertStyle];
+        [alert setAlertStyle:NSAlertStyleWarning];
         [alert setMessageText:[NSString stringWithFormat:NSLocalizedStringFromTable(@"ExportProjectFileExistsTitle",@"Alerts",nil), [self.settings.compressedTargetBundle lastPathComponent]]];
         [alert setInformativeText:NSLocalizedStringFromTable(@"ExportProjectFileExistsDescr",@"Alerts",nil)];
         [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextMerge",@"Alerts",nil)];           // 1st button
@@ -251,7 +251,7 @@
     [panel setTitle:NSLocalizedString(@"Choose Destination Folder", nil)];
     [panel setPrompt:NSLocalizedString(@"Choose", nil)];
 
-    if ([panel runModal] == NSFileHandlingPanelOKButton)
+    if ([panel runModal] == NSModalResponseOK)
     {
         self.settings.destFolder = [[panel URL] path];        
         [self updateTargetFolder];

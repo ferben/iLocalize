@@ -98,7 +98,7 @@ static NSMutableDictionary *labelAttributes = nil;
     
     // Draw the label by stretching it if needed to accomodate the label width
     NSPoint p = NSZeroPoint;
-    [image drawInRect:NSMakeRect(p.x, p.y, imageWidth, imageSize.height) operation:NSCompositeCopy fraction:1];
+    [image drawInRect:NSMakeRect(p.x, p.y, imageWidth, imageSize.height) operation:NSCompositingOperationCopy fraction:1];
     
     // Draw the label
     p.x += imageWidth * 0.5 - size.width * 0.5 + 1;

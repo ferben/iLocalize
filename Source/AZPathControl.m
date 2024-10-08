@@ -263,9 +263,15 @@ static int triangle = 10;
     if (menu)
     {
         NSRect elementFrame = [self convertRect:[e frame] toView:nil];
-        NSEvent *evt = [NSEvent mouseEventWithType:[theEvent type] location:NSMakePoint(elementFrame.origin.x+elementFrame.size.width, elementFrame.origin.y+elementFrame.size.height) modifierFlags:[theEvent modifierFlags] 
-                                         timestamp:[theEvent timestamp] windowNumber:[theEvent windowNumber] context:[theEvent context] eventNumber:[theEvent eventNumber]
-                                        clickCount:[theEvent clickCount] pressure:[theEvent pressure]];
+        NSEvent *evt = [NSEvent mouseEventWithType:[theEvent type]
+                                          location:NSMakePoint(elementFrame.origin.x+elementFrame.size.width, elementFrame.origin.y+elementFrame.size.height)
+                                     modifierFlags:[theEvent modifierFlags]
+                                         timestamp:[theEvent timestamp]
+                                      windowNumber:[theEvent windowNumber]
+                                           context: nil /*[theEvent context]*/
+                                       eventNumber:[theEvent eventNumber]
+                                        clickCount:[theEvent clickCount]
+                                          pressure:[theEvent pressure]];
         [NSMenu popUpContextMenu:menu withEvent:evt forView:self];
     }            
 }

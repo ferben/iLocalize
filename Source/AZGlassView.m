@@ -17,7 +17,7 @@
     // nicer to not have a border on the right
     NSImage *endCap = nil; [NSImage imageNamed:@"left-strip.png"];
     
-    NSDrawThreePartImage(self.bounds, startCap, centerFill, endCap, NO, NSCompositeCopy, 1.0, NO);    
+    NSDrawThreePartImage(self.bounds, startCap, centerFill, endCap, NO, NSCompositingOperationCopy, 1.0, NO);    
 }
 
 @end

@@ -71,7 +71,7 @@
     
     // compose alert
     NSAlert *alert = [NSAlert new];
-    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert setAlertStyle:NSAlertStyleWarning];
     [alert setMessageText:NSLocalizedStringFromTable(@"HistoryManagerDeleteTitle",@"Alerts",nil)];
     [alert setInformativeText:NSLocalizedStringFromTable(@"AlertNoUndoDescr",@"Alerts",nil)];
     [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextCancel",@"Alerts",nil)];      // 1st button

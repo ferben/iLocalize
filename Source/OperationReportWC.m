@@ -120,7 +120,7 @@
     [panel setAllowedFileTypes:@[@"txt"]];
     [panel beginSheetModalForWindow:[self window] completionHandler:^(NSInteger result)
     {
-        if (result != NSFileHandlingPanelOKButton)
+        if (result != NSModalResponseOK)
             return;
                       
         NSMutableString *content = [NSMutableString string];

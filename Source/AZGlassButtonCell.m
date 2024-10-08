@@ -19,7 +19,7 @@
 
     //endCap = centerFill;
     
-    NSDrawThreePartImage(frame, startCap, centerFill, centerFill, NO, NSCompositeCopy, 1.0, YES);            
+    NSDrawThreePartImage(frame, startCap, centerFill, centerFill, NO, NSCompositingOperationCopy, 1.0, YES);            
 }
 
 @end

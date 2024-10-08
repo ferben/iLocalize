@@ -389,7 +389,7 @@ static NSString *FILTER_DRAG_TYPE = @"ch.arizona-software.filter";
     // compose alert
     NSAlert *alert = [NSAlert new];
     
-    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert setAlertStyle:NSAlertStyleWarning];
     [alert setMessageText:NSLocalizedStringFromTable(@"ProjectExplorerControllerDeleteFiltersTitle",@"Alerts",nil)];
     [alert setInformativeText:NSLocalizedStringFromTable(@"AlertNoUndoDescr",@"Alerts",nil)];
     [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextDelete",@"Alerts",nil)];   // 1st button

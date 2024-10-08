@@ -239,7 +239,7 @@ static PreferencesEditors *prefs = nil;
     [panel setCanChooseDirectories:NO];
     [panel setDirectoryURL:[NSURL fileURLWithPath:@"/Applications"]];
     [panel beginWithCompletionHandler:^(NSInteger result) {
-        if (result == NSFileHandlingPanelOKButton) {
+        if (result == NSModalResponseOK) {
             [mExternalAppField setStringValue:[[[[panel URL] path] lastPathComponent] stringByDeletingPathExtension]];        
         }
     }];

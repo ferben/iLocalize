@@ -17,7 +17,7 @@
     [archiver encodeObject:@CURRENT_DOCUMENT_VERSION forKey:PROJECT_VERSION_KEY];
     [archiver encodeObject:[NSNumber numberWithLong:[Utils getOSVersion]] forKey:PROJECT_OS_VERSION];
     [archiver encodeObject:@2L forKey:PROJECT_NIBENGINE_TYPE];
-    [archiver encodeObject:[NSArchiver archivedDataWithRootObject:model] forKey:PROJECT_MODEL_KEY];
+    [archiver encodeObject:[NSKeyedArchiver archivedDataWithRootObject:model] forKey:PROJECT_MODEL_KEY];
     [archiver encodeObject:[NSKeyedArchiver archivedDataWithRootObject:prefs] forKey:PROJECT_PREFS_KEY];
     [archiver finishEncoding];
     return data;
@@ -53,7 +53,7 @@
             tempDic[PROJECT_NIBENGINE_TYPE] = nibEngineType;            
         }
         
-        tempDic[PROJECT_MODEL_KEY] = [NSUnarchiver unarchiveObjectWithData:[unarchiver decodeObjectForKey:PROJECT_MODEL_KEY]];
+        tempDic[PROJECT_MODEL_KEY] = [NSKeyedUnarchiver unarchiveObjectWithData:[unarchiver decodeObjectForKey:PROJECT_MODEL_KEY]];
         
         @try
         {
@@ -63,7 +63,7 @@
         @catch (NSException * e)
         {
             // Before version 4
-            tempDic[PROJECT_PREFS_KEY] = [NSUnarchiver unarchiveObjectWithData:[unarchiver decodeObjectForKey:PROJECT_PREFS_KEY]];                
+            tempDic[PROJECT_PREFS_KEY] = [NSKeyedUnarchiver unarchiveObjectWithData:[unarchiver decodeObjectForKey:PROJECT_PREFS_KEY]];                
         }
         
         [unarchiver finishDecoding];
@@ -73,7 +73,7 @@
     @catch (NSException *e)
     {
         // Invalid archive. Perhaps an old one. Try the standard unarchiver.
-        dic = [NSUnarchiver unarchiveObjectWithData:data];
+        dic = [NSKeyedUnarchiver unarchiveObjectWithData:data];
     }
 
     return dic;

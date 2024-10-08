@@ -7,7 +7,6 @@
 //
 
 #import "AboutWindow.h"
-#import "NSHelpManager+Extensions.h"
 
 
 @implementation AboutWindow

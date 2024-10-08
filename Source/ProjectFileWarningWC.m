@@ -192,7 +192,7 @@
     NSSavePanel *panel = [NSSavePanel savePanel];
     [panel setAllowedFileTypes:@[@"txt"]];
     [panel beginWithCompletionHandler:^(NSInteger result) {
-        if (result == NSFileHandlingPanelOKButton) {
+        if (result == NSModalResponseOK) {
             NSString *text = [self exportableString];
             [text writeToFile:[[panel URL] path] atomically:NO encoding:[text smallestEncoding] error:nil];
         } 

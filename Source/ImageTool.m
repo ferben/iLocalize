@@ -45,7 +45,7 @@ static ImageTool *shared = nil;
     NSImage *target = [[NSImage alloc] initWithSize:imageSize];
     [target lockFocus];
     // [source setFlipped:YES];
-    [source drawInRect:r operation:NSCompositeSourceOver fraction:1];
+    [source drawInRect:r operation:NSCompositingOperationSourceOver fraction:1];
     [selectedLayer drawInRect:r operation:NSCompositeSourceAtop fraction:1];
     [target unlockFocus];    
     

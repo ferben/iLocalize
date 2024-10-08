@@ -58,7 +58,7 @@
     [panel setCanChooseFiles:YES];
     [panel setAllowsMultipleSelection:YES];
     [panel beginWithCompletionHandler:^(NSInteger result) {
-        if(result == NSFileHandlingPanelOKButton) {
+        if(result == NSModalResponseOK) {
             [[panel URLs] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
                 NSURL *file = obj;
                 [filesController addObject:@{@"file": [file path]}];

@@ -466,7 +466,7 @@ NSInteger glossaryPathSort(id doc1, id doc2, void *context)
     [panel beginSheetModalForWindow:[self window]
                   completionHandler:^(NSInteger result)
     {
-        if (result == NSFileHandlingPanelOKButton)
+        if (result == NSModalResponseOK)
         {
             NSString *dir = [[panel URL] path];
             [[GlossaryManager sharedInstance] addFolder:[GlossaryFolder folderForPath:dir name:[dir lastPathComponent]]];
@@ -821,7 +821,7 @@ NSInteger glossaryPathSort(id doc1, id doc2, void *context)
 {
     // compose alert
     NSAlert *alert = [NSAlert new];
-    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert setAlertStyle:NSAlertStyleWarning];
     [alert setMessageText:title];
     [alert setInformativeText:info];
     [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextOK",@"Alerts",nil)];     // 1st button

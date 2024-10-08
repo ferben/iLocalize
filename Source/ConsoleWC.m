@@ -127,7 +127,7 @@
 {
     // compose alert
     NSAlert *alert = [NSAlert new];
-    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert setAlertStyle:NSAlertStyleWarning];
     [alert setMessageText:NSLocalizedStringFromTable(@"ConsoleClearAllEntriesTitle",@"Alerts",nil)];
     [alert setInformativeText:NSLocalizedStringFromTable(@"ConsoleClearAllEntriesDescr",@"Alerts",nil)];
     [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextCancel",@"Alerts",nil)];      // 1st button
@@ -150,12 +150,11 @@
     [panel setAllowedFileTypes:@[@"txt"]];
     [panel beginSheetModalForWindow:[self window]
                   completionHandler:^(NSInteger result) {
-                      if(result != NSFileHandlingPanelOKButton)
-                          return;    
-                      
-                      NSString *description = [[self console] description];
-                      [description writeToFile:[[panel URL] path] atomically:YES encoding:[description smallestEncoding] error:nil];
-                  }];
+        if(result != NSModalResponseOK)
+            return;
+        NSString *description = [[self console] description];
+        [description writeToFile:[[panel URL] path] atomically:YES encoding:[description smallestEncoding] error:nil];
+    }];
 }
 
 @end

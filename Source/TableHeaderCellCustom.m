@@ -17,7 +17,7 @@
     
     NSRect r = cellFrame;
     r.size.height += 1;
-    [[NSImage imageNamed:@"TableViewGreyHeaderDown"] drawInRect:r operation:NSCompositeSourceOver fraction:1];    
+    [[NSImage imageNamed:@"TableViewGreyHeaderDown"] drawInRect:r operation:NSCompositingOperationSourceOver fraction:1];    
     
     NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithObject:[self font] forKey:NSFontAttributeName];
 

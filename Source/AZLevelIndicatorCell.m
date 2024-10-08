@@ -48,9 +48,9 @@
     for(CGFloat x=r.origin.x; x<r.origin.x+r.size.width; x+=barWidth) {
         NSRect ir = NSMakeRect(x, r.origin.y, barWidth-1, r.size.height);
         ir.size.width = MIN(ir.size.width, r.origin.x+r.size.width - x);
-        [image drawInRect:ir operation:NSCompositeSourceOver fraction:1];
+        [image drawInRect:ir operation:NSCompositingOperationSourceOver fraction:1];
     }
-    //[image drawInRect:r operation:NSCompositeSourceOver fraction:1];
+    //[image drawInRect:r operation:NSCompositingOperationSourceOver fraction:1];
 }
 
 - (NSArray *)accessibilityAttributeNames

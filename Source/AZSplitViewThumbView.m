@@ -33,11 +33,11 @@
     // nicer to not have a border on the right
     NSImage *endCap = nil; [NSImage imageNamed:@"left-strip.png"];
     
-    NSDrawThreePartImage(rect, startCap, centerFill, endCap, NO, NSCompositeSourceOver, 1.0, NO);    
+    NSDrawThreePartImage(rect, startCap, centerFill, endCap, NO, NSCompositingOperationSourceOver, 1.0, NO);    
     
     NSImage *thumb = [NSImage imageNamed:@"thumb.png"];
     NSSize is = [thumb size];
-    [thumb drawAtPoint:NSMakePoint(rect.origin.x+rect.size.width-is.width-5, rect.origin.y+(rect.size.height-is.height)/2) operation:NSCompositeSourceOver fraction:1.0];
+    [thumb drawAtPoint:NSMakePoint(rect.origin.x+rect.size.width-is.width-5, rect.origin.y+(rect.size.height-is.height)/2) operation:NSCompositingOperationSourceOver fraction:1.0];
 }
 
 @end

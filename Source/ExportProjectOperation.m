@@ -170,7 +170,7 @@ end:
     {
         // compose alert
         NSAlert *alert = [NSAlert new];
-        [alert setAlertStyle:NSWarningAlertStyle];
+        [alert setAlertStyle:NSAlertStyleWarning];
         [alert setMessageText:NSLocalizedStringFromTable(@"ExportProjectOperationZIPErrorTitle",@"Alerts",nil)];
         [alert setInformativeText:NSLocalizedStringFromTable(@"ExportProjectOperationZIPErrorDescr",@"Alerts",nil)];
         [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextOK",@"Alerts",nil)];      // 1st button
@@ -194,7 +194,7 @@ end:
     {
         // compose alert
         NSAlert *alert = [NSAlert new];
-        [alert setAlertStyle:NSWarningAlertStyle];
+        [alert setAlertStyle:NSAlertStyleWarning];
         [alert setMessageText:[NSString stringWithFormat:NSLocalizedStringFromTable(@"ExportProjectOperationAppleScriptErrorTitle",@"Alerts",nil), error]];
         [alert setInformativeText:NSLocalizedStringFromTable(@"ExportProjectOperationAppleScriptErrorDescr",@"Alerts",nil)];
         [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextOK",@"Alerts",nil)];      // 1st button

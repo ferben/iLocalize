@@ -497,7 +497,7 @@
         
     // Save the console data in another file
     
-    [[NSArchiver archivedDataWithRootObject:mConsole] writeToFile:[self consoleFile] atomically:YES];
+    [[NSKeyedArchiver archivedDataWithRootObject:mConsole] writeToFile:[self consoleFile] atomically:YES];
         
     // Save the project data    
     return [ProjectDiskOperations dataForModel:mProjectModel prefs:mProjectPrefs];
@@ -514,7 +514,7 @@
             // compose alert
             NSAlert *alert = [NSAlert new];
             
-            [alert setAlertStyle:NSWarningAlertStyle];
+            [alert setAlertStyle:NSAlertStyleWarning];
             [alert setMessageText:NSLocalizedStringFromTable(@"ProjectDocumentInvalidTitle",@"Alerts",nil)];
             [alert setInformativeText:NSLocalizedStringFromTable(@"ProjectDocumentRecentDescr",@"Alerts",nil)];
             [alert addButtonWithTitle:NSLocalizedStringFromTable(@"ProjectDocumentInvalidOK",@"Alerts",nil)];   // 1st button
@@ -546,7 +546,7 @@
             // compose alert
             NSAlert *alert = [NSAlert new];
             
-            [alert setAlertStyle:NSWarningAlertStyle];
+            [alert setAlertStyle:NSAlertStyleWarning];
             [alert setMessageText:NSLocalizedStringFromTable(@"ProjectDocumentTigerTitle",@"Alerts",nil)];
             [alert setInformativeText:NSLocalizedStringFromTable(@"ProjectDocumentTigerDescr",@"Alerts",nil)];
             [alert addButtonWithTitle:NSLocalizedStringFromTable(@"ProjectDocumentInvalidOK",@"Alerts",nil)];   // 1st button
@@ -564,7 +564,7 @@
             // compose alert
             NSAlert *alert = [NSAlert new];
             
-            [alert setAlertStyle:NSWarningAlertStyle];
+            [alert setAlertStyle:NSAlertStyleWarning];
             [alert setMessageText:NSLocalizedStringFromTable(@"ProjectDocumentRecentTitle",@"Alerts",nil)];
             [alert setInformativeText:NSLocalizedStringFromTable(@"ProjectDocumentRecentDescr",@"Alerts",nil)];
             [alert addButtonWithTitle:NSLocalizedStringFromTable(@"ProjectDocumentInvalidOK",@"Alerts",nil)];   // 1st button
@@ -579,7 +579,7 @@
             // compose alert
             NSAlert *alert = [NSAlert new];
             
-            [alert setAlertStyle:NSWarningAlertStyle];
+            [alert setAlertStyle:NSAlertStyleWarning];
             [alert setMessageText:NSLocalizedStringFromTable(@"ProjectDocumentUpgradeTitle",@"Alerts",nil)];
             [alert setInformativeText:[NSString stringWithFormat:NSLocalizedStringFromTable(@"ProjectDocumentUpgradeDescr",@"Alerts",nil), [[[self fileURL] path] lastPathComponent]]];
             [alert addButtonWithTitle:NSLocalizedStringFromTable(@"ProjectDocumentInvalidOK",@"Alerts",nil)];   // 1st button
@@ -593,7 +593,7 @@
 
         if ([[self consoleFile] isPathExisting])
         {
-            id console = [NSUnarchiver unarchiveObjectWithFile:[self consoleFile]];
+            id console = [NSKeyedUnarchiver unarchiveObjectWithFile:[self consoleFile]];
             
             if (console)
             {

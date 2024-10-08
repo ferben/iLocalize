@@ -79,7 +79,7 @@
     dic[@"version"] = @1;
     dic[@"snapshots"] = mHistorySnapshots;
     dic[@"data"] = mHistoryData;
-    [NSArchiver archiveRootObject:dic toFile:[self file]];
+    [NSKeyedArchiver archiveRootObject:dic toFile:[self file]];
     
     [self setDirty:NO];
 }

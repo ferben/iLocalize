@@ -157,7 +157,7 @@
     // compose alert
     NSAlert *alert = [NSAlert new];
     
-    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert setAlertStyle:NSAlertStyleWarning];
     [alert setMessageText:dic[@"title"]];
     [alert setInformativeText:dic[@"message"]];
     [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextOK",@"Alerts",nil)];   // 1st button

@@ -67,7 +67,7 @@ static id _shared = nil;
     [panel setDirectoryURL:[NSURL fileURLWithPath:NSHomeDirectory()]];
     [panel beginSheetModalForWindow:mWindow
                   completionHandler:^(NSInteger result) {
-                      if(result == NSFileHandlingPanelOKButton) {
+                      if(result == NSModalResponseOK) {
                           [[NSUserDefaults standardUserDefaults] setObject:[[[panel URL] path] stringByAbbreviatingWithTildeInPath] forKey:@"newProjectDefaultFolder"];
                       }                      
                   }];
@@ -88,7 +88,7 @@ static id _shared = nil;
     [panel setDirectoryURL:[NSURL fileURLWithPath:@"/Applications"]];
     [panel beginSheetModalForWindow:mWindow
                   completionHandler:^(NSInteger result) {
-                      if(result == NSFileHandlingPanelOKButton) {
+                      if(result == NSModalResponseOK) {
                           [[NSUserDefaults standardUserDefaults] setObject:[[panel URL] path] forKey:key];
                       }                      
                   }];
@@ -109,7 +109,7 @@ static id _shared = nil;
     [panel setAllowsMultipleSelection:YES];
     [panel beginSheetModalForWindow:mWindow
                   completionHandler:^(NSInteger result) {
-                      if(result == NSFileHandlingPanelOKButton) {
+        if(result == NSModalResponseOK) {
                           for (NSURL *url in [panel URLs]) {
                               NSString *file = [url path];
                               if([[file pathExtension] isEqualToString:@"ibplugin"]) {

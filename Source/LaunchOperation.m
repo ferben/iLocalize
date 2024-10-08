@@ -26,7 +26,7 @@
         // compose alert
         NSAlert *alert = [NSAlert new];
         
-        [alert setAlertStyle:NSWarningAlertStyle];
+        [alert setAlertStyle:NSAlertStyleWarning];
         [alert setMessageText:NSLocalizedStringFromTable(@"LaunchOperationCannotTitle",@"Alerts",nil)];
         [alert setInformativeText:NSLocalizedStringFromTable(@"LaunchOperationCannotDescr",@"Alerts",nil)];
         [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextOK",@"Alerts",nil)];  // 1st button
@@ -60,7 +60,7 @@
         // compose alert
         NSAlert *alert = [NSAlert new];
         
-        [alert setAlertStyle:NSWarningAlertStyle];
+        [alert setAlertStyle:NSAlertStyleWarning];
         [alert setMessageText:NSLocalizedStringFromTable(@"LaunchOperationBundleTitle",@"Alerts",nil)];
         [alert setInformativeText:NSLocalizedStringFromTable(@"LaunchOperationBundleDescr",@"Alerts",nil)];
         [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextOK",@"Alerts",nil)];  // 1st button

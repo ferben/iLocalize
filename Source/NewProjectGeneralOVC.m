@@ -139,7 +139,7 @@
         [panel setDirectoryURL:[NSURL fileURLWithPath:[self projectFolder]]];        
     }
     [panel beginSheetModalForWindow:[self window] completionHandler:^(NSInteger result) {
-        if(result == NSFileHandlingPanelOKButton) {
+        if(result == NSModalResponseOK) {
             [self setProjectFolder:[[panel URL] path]];
             [self updateInfoField];
         }        

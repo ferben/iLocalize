@@ -74,7 +74,7 @@ typedef NS_ENUM(NSInteger, NewGlossaryOptions)
 
     // compose alert
     NSAlert *alert = [NSAlert new];
-    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert setAlertStyle:NSAlertStyleWarning];
     [alert setMessageText:title];
     [alert setInformativeText:message];
     [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextOpen",@"Alerts",nil)];      // 1st button

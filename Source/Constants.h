@@ -135,10 +135,10 @@ enum
 };
 
 // Block used for various callback
-typedef void(^CallbackBlock)();
+typedef void(^CallbackBlock)(void);
 
 // Block used for various callback that can be interrupted
-typedef BOOL(^CancellableCallbackBlock)();
+typedef BOOL(^CancellableCallbackBlock)(void);
 
 // Block used for various error callback
 typedef void(^CallbackErrorBlock)(NSError *error);

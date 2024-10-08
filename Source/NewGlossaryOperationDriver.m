@@ -107,7 +107,7 @@ enum
 
         // compose alert
         NSAlert *alert = [NSAlert new];
-        [alert setAlertStyle:NSWarningAlertStyle];
+        [alert setAlertStyle:NSAlertStyleWarning];
         [alert setMessageText:title];
         [alert setInformativeText:message];
         [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextOverwrite",@"Alerts",nil)];   // 1st button

@@ -174,7 +174,7 @@ typedef void(^PresetAlertCallbackBlock)(NSString *name);
     // compose alert
     NSAlert *alert = [NSAlert new];
     
-    [alert setAlertStyle:NSInformationalAlertStyle];
+    [alert setAlertStyle:NSAlertStyleInformational];
     
     if (rename)
     {

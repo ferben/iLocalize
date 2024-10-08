@@ -38,9 +38,9 @@ static NSDateFormatter *NoStyleDateFormatter = nil;
     }
     
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *components = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit
+    NSDateComponents *components = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay
                                                fromDate:date];    
-    NSDateComponents *today = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit
+    NSDateComponents *today = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay
                                                fromDate:[NSDate date]];    
     if([components year] == [today year] && [components month] == [today month] && [components day] == [today day]) {
         return [NSString stringWithFormat:NSLocalizedString(@"Today at %@", nil), [NoStyleDateFormatter stringFromDate:date]];

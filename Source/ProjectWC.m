@@ -995,7 +995,7 @@
         }
         else
         {
-            text = [NSString stringWithFormat:NSLocalizedString(@"%d strings to translate", @"Language Progress"), count];        
+            text = [NSString stringWithFormat:NSLocalizedString(@"%lu strings to translate", @"Language Progress"), (unsigned long)count];        
         }
     }
     

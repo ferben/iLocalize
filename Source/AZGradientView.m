@@ -23,7 +23,7 @@
 
 - (void)drawRect:(NSRect)rect {
     NSImage *strip = [NSImage imageNamed:@"gradient-strip"];
-    NSDrawThreePartImage(self.bounds, strip, strip, strip, NO, NSCompositeCopy, 1.0, NO);            
+    NSDrawThreePartImage(self.bounds, strip, strip, strip, NO, NSCompositingOperationCopy, 1.0, NO);            
     
     if(self.bottomLine) {
         [[NSColor grayColor] set];

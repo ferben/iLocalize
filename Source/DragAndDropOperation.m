@@ -130,7 +130,7 @@
             NSUInteger count = [parameter count];
             
             if (count > 1)
-                [mWindowLayerWC setTitle:[NSString stringWithFormat:NSLocalizedString(@"Update %d files", nil), count]];
+                [mWindowLayerWC setTitle:[NSString stringWithFormat:NSLocalizedString(@"Update %lu files", nil), (unsigned long)count]];
             else
                 [mWindowLayerWC setTitle:[NSString stringWithFormat:NSLocalizedString(@"Update file “%@”", nil), [[parameter firstObject] lastPathComponent]]];
             
@@ -150,8 +150,8 @@
 
 - (void)modifierFlagsChanged:(NSEvent *)event
 {
-    unsigned int flags = [event modifierFlags];    
-    mOptionKeyMask = (flags & NSAlternateKeyMask) == NSAlternateKeyMask;
+    unsigned int flags = (uint)[event modifierFlags];    
+    mOptionKeyMask = (flags & NSEventModifierFlagOption) == NSEventModifierFlagOption;
         
     if (mOperation != OPERATION_NONE)
         [self setOperation:[self operation:mOperation] withParameter:mParameters[FIRST_PARAM]];

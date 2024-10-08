@@ -77,7 +77,7 @@
     
     // compose alert
     NSAlert *alert = [NSAlert new];
-    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert setAlertStyle:NSAlertStyleWarning];
     [alert setMessageText:NSLocalizedStringFromTable(@"ProjectMenuEditChangeTitle",@"Alerts",nil)];
     [alert setInformativeText:[NSString stringWithFormat:NSLocalizedStringFromTable(@"ProjectMenuEditChangeDescr",@"Alerts",nil), encodingName, encodingName]];
     

@@ -13,7 +13,7 @@
 - (void)drawRect:(NSRect)r
 {
     [[NSImage imageNamed:@"TableViewGreyHeader"] drawInRect:r 
-                                                  operation:NSCompositeSourceOver 
+                                                  operation:NSCompositingOperationSourceOver 
                                                    fraction:1];
     
     [super drawRect:r];

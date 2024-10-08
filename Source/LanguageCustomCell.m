@@ -54,7 +54,7 @@ static NSMutableDictionary    *mInfoAttributes = NULL;
     NSString *language = [[self languageController] language];
     [language drawAtPoint:NSMakePoint(cellFrame.origin.x+4, cellFrame.origin.y) withAttributes:mTitleAttributes];        
     
-    NSString *info = [NSString stringWithFormat:NSLocalizedString(@"%d files", nil), [[self languageController] numberOfFileControllers]];
+    NSString *info = [NSString stringWithFormat:NSLocalizedString(@"%lu files", nil), (unsigned long)[[self languageController] numberOfFileControllers]];
     NSSize size = [info sizeWithAttributes:mInfoAttributes];
     [info drawAtPoint:NSMakePoint(cellFrame.origin.x+4, cellFrame.origin.y+cellFrame.size.height-size.height) withAttributes:mInfoAttributes];            
 

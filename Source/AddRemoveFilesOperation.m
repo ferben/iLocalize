@@ -38,7 +38,7 @@
     [panel beginSheetModalForWindow:[self projectWindow]
                   completionHandler:^(NSInteger result)
     {
-        if (result == NSFileHandlingPanelCancelButton)
+        if (result == NSModalResponseCancel)
         {
             [self close];
             return;
@@ -117,7 +117,7 @@
 
     // compose alert
     NSAlert *alert = [NSAlert new];
-    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert setAlertStyle:NSAlertStyleWarning];
     [alert setMessageText:NSLocalizedStringFromTable(@"AddRemoveFileOperationsTitle",@"Alerts",nil)];
     [alert setInformativeText:NSLocalizedStringFromTable(@"AddRemoveFileOperationsDescr",@"Alerts",nil)];
     [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextCancel",@"Alerts",nil)];  // 1st button

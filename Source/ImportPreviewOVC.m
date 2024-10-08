@@ -104,7 +104,7 @@
     [panel setAllowedFileTypes:@[@"txt"]];
     [panel beginSheetModalForWindow:[self window] completionHandler:^(NSInteger result)
     {
-        if (result == NSFileHandlingPanelOKButton)
+        if (result == NSModalResponseOK)
         {
             [mDescription writeToFile:[[panel URL] path] atomically:YES encoding:[mDescription smallestEncoding] error:nil];
         }                

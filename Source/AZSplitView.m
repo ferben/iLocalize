@@ -23,7 +23,7 @@
 - (void)drawRect:(NSRect)dirtyRect
 {
     NSEraseRect(self.frame);
-    [image drawAtPoint:NSMakePoint(0, self.frame.size.height-image.size.height) operation:NSCompositeCopy fraction:1];
+    [image drawAtPoint:NSMakePoint(0, self.frame.size.height-image.size.height) operation:NSCompositingOperationCopy fraction:1];
 }
 
 @end
@@ -133,11 +133,11 @@ static NSString *KEY_TITLE = @"title";
     NSImage *centerFill = [NSImage imageNamed:@"vertical-divider.png"];
     NSImage *endCap = [NSImage imageNamed:@"vertical-divider.png"];
     
-    NSDrawThreePartImage(rect, startCap, centerFill, endCap, NO, NSCompositeCopy, 1.0, NO);    
+    NSDrawThreePartImage(rect, startCap, centerFill, endCap, NO, NSCompositingOperationCopy, 1.0, NO);    
     
     NSImage *thumb = [NSImage imageNamed:@"vertical-thumb.png"];
     NSSize is = [thumb size];
-    [thumb drawAtPoint:NSMakePoint(rect.origin.x+rect.size.width-is.width-5, rect.origin.y+(rect.size.height-is.height)/2) operation:NSCompositeSourceOver fraction:1.0];
+    [thumb drawAtPoint:NSMakePoint(rect.origin.x+rect.size.width-is.width-5, rect.origin.y+(rect.size.height-is.height)/2) operation:NSCompositingOperationSourceOver fraction:1.0];
     
     if(title) {
         NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
@@ -160,7 +160,7 @@ static NSString *KEY_TITLE = @"title";
         [transform translateXBy:-point.x yBy:-(point.y + as.height)];
         [transform concat];
         
-        [action drawAtPoint:point operation:NSCompositeSourceOver fraction:1.0];
+        [action drawAtPoint:point operation:NSCompositingOperationSourceOver fraction:1.0];
         
         [NSGraphicsContext restoreGraphicsState];
     }

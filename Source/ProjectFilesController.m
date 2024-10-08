@@ -615,7 +615,7 @@
     // FIX CASE 23
     [pboard setPropertyList:[[[mFilesController arrangedObjects] objectsAtIndexes:rowIndexes] buildArrayOfFileControllerPaths] forType:NSFilenamesPboardType];
     
-    [pboard setData:[NSArchiver archivedDataWithRootObject:rowIndexes] forType:PBOARD_DATA_ROW_INDEXES];
+    [pboard setData:[NSKeyedArchiver archivedDataWithRootObject:rowIndexes] forType:PBOARD_DATA_ROW_INDEXES];
     [pboard setPropertyList:@((long)self) forType:PBOARD_OWNER_POINTER];
     return YES;
 }
@@ -646,15 +646,15 @@
         return;
     }
     
-    NSIndexSet *rowIndexes = [NSUnarchiver unarchiveObjectWithData:[sender dataForType:PBOARD_DATA_ROW_INDEXES]];
+    NSIndexSet *rowIndexes = [NSKeyedUnarchiver unarchiveObjectWithData:[sender dataForType:PBOARD_DATA_ROW_INDEXES]];
     
     if([type isEqualToString:PBOARD_DATA_LANGUAGE_STRINGS]) {
         LanguageController *lc = [[self.projectWC languagesController] arrangedObjects][[rowIndexes firstIndex]];
         NSArray *scs = [self buildArrayOfStringModelsForFileControllers:[lc fileControllers]];
-        [sender setData:[NSArchiver archivedDataWithRootObject:scs] forType:type];
+        [sender setData:[NSKeyedArchiver archivedDataWithRootObject:scs] forType:type];
     } else if([type isEqualToString:PBOARD_DATA_FILES_STRINGS]) {
         NSArray *scs = [self buildArrayOfStringModelsForFileControllers:[[self filesController] objectsAtIndexes:rowIndexes]];
-        [sender setData:[NSArchiver archivedDataWithRootObject:scs] forType:type];        
+        [sender setData:[NSKeyedArchiver archivedDataWithRootObject:scs] forType:type];
     }
 }
 
@@ -715,7 +715,7 @@
     [panel setPrompt:NSLocalizedString(@"Export", nil)];
     [panel beginSheetModalForWindow:[self.projectWC window]
                   completionHandler:^(NSInteger result) {
-                      if(result == NSFileHandlingPanelOKButton) {
+                      if(result == NSModalResponseOK) {
                           [self performSelector:@selector(performExportToStrings:) withObject:[[panel URL] path] afterDelay:0];
                       }
                   }];
@@ -730,7 +730,7 @@
     [panel setAllowedFileTypes:@[@"strings"]];
     [panel beginSheetModalForWindow:[self.projectWC window]
                   completionHandler:^(NSInteger result) {
-                      if(result == NSFileHandlingPanelOKButton) {
+        if(result == NSModalResponseOK) {
                           [self performSelector:@selector(performTranslateUsingStringsFile:) withObject:[[panel URL] path] afterDelay:0];
                       }
                   }];

@@ -86,7 +86,7 @@
     {
         // compose alert
         NSAlert *alert = [NSAlert new];
-        [alert setAlertStyle:NSWarningAlertStyle];
+        [alert setAlertStyle:NSAlertStyleWarning];
         [alert setMessageText:NSLocalizedStringFromTable(@"GlossaryNotIndexedAliasTitle",@"Alerts",nil)];
         [alert setInformativeText:NSLocalizedStringFromTable(@"GlossaryNotIndexedAliasDescr",@"Alerts",nil)];
         [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextOK",@"Alerts",nil)];      // 1st button
@@ -113,7 +113,7 @@
     {
         // compose alert
         NSAlert *alert = [NSAlert new];
-        [alert setAlertStyle:NSWarningAlertStyle];
+        [alert setAlertStyle:NSAlertStyleWarning];
         [alert setMessageText:NSLocalizedStringFromTable(@"GlossaryNotIndexedMoveTitle",@"Alerts",nil)];
         [alert setInformativeText:[NSString stringWithFormat:NSLocalizedStringFromTable(@"GlossaryNotIndexedMoveDescr",@"Alerts",nil), error]];
         [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextOK",@"Alerts",nil)];      // 1st button

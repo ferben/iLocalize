@@ -82,7 +82,7 @@
     for(NSImage *image in self) {
         NSSize imageSize = [image size];
         [image drawInRect:NSMakeRect(offset, totalSize.height*0.5-imageSize.height*0.5, imageSize.width, imageSize.height)
-                operation:NSCompositeSourceOver
+                operation:NSCompositingOperationSourceOver
                  fraction:1];
         offset += imageSize.width+space;
     }        

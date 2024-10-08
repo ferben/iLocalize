@@ -44,7 +44,7 @@
         {
             // compose alert
             NSAlert *alert = [NSAlert new];
-            [alert setAlertStyle:NSWarningAlertStyle];
+            [alert setAlertStyle:NSAlertStyleWarning];
             [alert setMessageText:NSLocalizedStringFromTable(@"DebugMismatchEncodingTitle",@"Alerts",nil)];
             [alert setInformativeText:[NSString stringWithFormat:NSLocalizedStringFromTable(@"DebugMismatchEncodingDescr", @"Alerts", nil), [[fc encoding] encodingName], encoding.encodingName]];
             [alert addButtonWithTitle:NSLocalizedStringFromTable(@"AlertButtonTextReload",@"Alerts",nil)];      // 1st button
