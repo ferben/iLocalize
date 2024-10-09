@@ -103,7 +103,8 @@
 		12E7D8F61A204E2D0081037B /* ilocalize.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 12E7D8F51A204E2D0081037B /* ilocalize.sdef */; };
 		12F05F681A14FB4B00BFB4B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12F05F671A14FB4B00BFB4B4 /* Images.xcassets */; };
 		12F05F6A1A14FB7400BFB4B4 /* ApplicationIcons.icns in Resources */ = {isa = PBXBuildFile; fileRef = 12F05F691A14FB7400BFB4B4 /* ApplicationIcons.icns */; };
-		12F05F7F1A1612EE00BFB4B4 /* license.txt in Resources */ = {isa = PBXBuildFile; fileRef = 12F05F7E1A1612EE00BFB4B4 /* license.txt */; };
+		1BD07FC92CB6006D00968962 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1BD07FC82CB6006D00968962 /* LICENSE */; };
+		1BD07FCB2CB6007900968962 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1BD07FCA2CB6007900968962 /* ReadMe.txt */; };
 		A708C193133C0A240021A1EC /* XLIFFImportPreviewOVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A708C191133C0A240021A1EC /* XLIFFImportPreviewOVC.m */; };
 		A708C196133C0A3A0021A1EC /* XLIFFImportPreviewOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A708C195133C0A3A0021A1EC /* XLIFFImportPreviewOperation.m */; };
 		A70969A01363E5D100DE6327 /* SimpleFileController.m in Sources */ = {isa = PBXBuildFile; fileRef = A709699B1363E5D100DE6327 /* SimpleFileController.m */; };
@@ -1396,8 +1397,9 @@
 		12F05F631A14F97600BFB4B4 /* InfoAppStore.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InfoAppStore.plist; sourceTree = "<group>"; };
 		12F05F671A14FB4B00BFB4B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = iLocalize/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		12F05F691A14FB7400BFB4B4 /* ApplicationIcons.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ApplicationIcons.icns; sourceTree = "<group>"; };
-		12F05F6B1A14FBD500BFB4B4 /* History.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = History.txt; path = Doc/History.txt; sourceTree = "<group>"; };
-		12F05F7E1A1612EE00BFB4B4 /* license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.txt; sourceTree = SOURCE_ROOT; };
+		1BD07FC72CB6004F00968962 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1BD07FC82CB6006D00968962 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		1BD07FCA2CB6007900968962 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -2222,7 +2224,6 @@
 		A7EBF7951311E66900303F3E /* CustomTypesetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTypesetter.h; path = Source/CustomTypesetter.h; sourceTree = "<group>"; };
 		A7EBF7961311E66900303F3E /* CustomTypesetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomTypesetter.m; path = Source/CustomTypesetter.m; sourceTree = "<group>"; };
 		A7EBF8CB1311F8A000303F3E /* TextViewCustomDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextViewCustomDelegate.h; path = Source/TextViewCustomDelegate.h; sourceTree = "<group>"; };
-		A7F0BAE40FA7E949006C6BA8 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		A7F1188F0D17843C001F77FA /* ProjectExportMailScripts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProjectExportMailScripts.h; path = Source/ProjectExportMailScripts.h; sourceTree = "<group>"; };
 		A7F118900D17843C001F77FA /* ProjectExportMailScripts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProjectExportMailScripts.m; path = Source/ProjectExportMailScripts.m; sourceTree = "<group>"; };
 		A7F119600D17A8FC001F77FA /* ASCommandOpenProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASCommandOpenProject.h; path = Source/ASCommandOpenProject.h; sourceTree = "<group>"; };
@@ -2384,9 +2385,10 @@
 			isa = PBXGroup;
 			children = (
 				127259B41E43C94E00318718 /* ToDo.txt */,
-				12F05F6B1A14FBD500BFB4B4 /* History.txt */,
+				1BD07FC82CB6006D00968962 /* LICENSE */,
+				1BD07FC72CB6004F00968962 /* README.md */,
+				1BD07FCA2CB6007900968962 /* ReadMe.txt */,
 				12F05F631A14F97600BFB4B4 /* InfoAppStore.plist */,
-				A7CD2F950C8B26BD00BD04F5 /* Doc */,
 				080E96DDFE201D6D7F000001 /* Source */,
 				A77407550C950B4100BB0C2A /* Images */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -3441,15 +3443,6 @@
 			name = Glossary;
 			sourceTree = "<group>";
 		};
-		A7CD2F950C8B26BD00BD04F5 /* Doc */ = {
-			isa = PBXGroup;
-			children = (
-				12F05F7E1A1612EE00BFB4B4 /* license.txt */,
-				A7F0BAE40FA7E949006C6BA8 /* ReadMe.txt */,
-			);
-			path = Doc;
-			sourceTree = "<group>";
-		};
 		A7CD2FBB0C8B661900BD04F5 /* Encoding */ = {
 			isa = PBXGroup;
 			children = (
@@ -4220,6 +4213,7 @@
 				A751E16913045B19007635F2 /* Glossary.icns in Resources */,
 				1256738D1A1A681E002117B0 /* ImportFilesSelection.xib in Resources */,
 				125677541A1A6D4B002117B0 /* ProjectInfoViewProject.xib in Resources */,
+				1BD07FC92CB6006D00968962 /* LICENSE in Resources */,
 				125673801A1A681E002117B0 /* GlossaryManager.xib in Resources */,
 				A751E16A13045B19007635F2 /* Project.icns in Resources */,
 				125673941A1A681E002117B0 /* LocalizableFilters.strings in Resources */,
@@ -4260,9 +4254,9 @@
 				A751E18013045B19007635F2 /* SmallAppIcon.tif in Resources */,
 				A751E18113045B19007635F2 /* SmartFolder.png in Resources */,
 				A751E18313045B19007635F2 /* PatchCenterBlack.png in Resources */,
-				12F05F7F1A1612EE00BFB4B4 /* license.txt in Resources */,
 				1256737D1A1A681E002117B0 /* FMEditorStrings.xib in Resources */,
 				125673741A1A681E002117B0 /* Clean.xib in Resources */,
+				1BD07FCB2CB6007900968962 /* ReadMe.txt in Resources */,
 				A751E18413045B19007635F2 /* PatchCenterGreen.png in Resources */,
 				125673931A1A681E002117B0 /* LocalizableEditors.strings in Resources */,
 				125673811A1A681E002117B0 /* GlossaryMerge.xib in Resources */,
@@ -4372,7 +4366,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "git=`sh /etc/profile; which git`\n# branch_name=`$git symbolic-ref HEAD | sed -e 's,.*/\\\\(.*\\\\),\\\\1,'`\nbranch_name=`$git rev-parse --abbrev-ref HEAD`\ngit_count=`$git rev-list $branch_name |wc -l | sed 's/^ *//;s/ *$//'`\n\nbase_count=1\n\nsum_count=$(($base_count+$git_count))\n\nbuild_number=\"$sum_count\"\nif [ $CONFIGURATION != \"Release\" ]; then\nbuild_number+=\"-$branch_name\"\nfi\n\nplist=\"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\ndsym_plist=\"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist\"\n\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $build_number\" \"$plist\"\nif [ -f \"$DSYM_INFO_PLIST\" ] ; then\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $build_number\" \"$dsym_plist\"\nfi";
+			shellScript = "git=`sh /etc/profile; which git`\n# branch_name=`$git symbolic-ref HEAD | sed -e 's,.*/\\\\(.*\\\\),\\\\1,'`\nbranch_name=`$git rev-parse --abbrev-ref HEAD`\ngit_count=`$git rev-list $branch_name |wc -l | sed 's/^ *//;s/ *$//'`\n\nbase_count=1\n\nsum_count=$(($base_count+$git_count))\n\nbuild_number=\"$sum_count\"\nif [ $CONFIGURATION != \"Release\" ]; then\nbuild_number+=\"-$branch_name\"\nfi\n\nplist=\"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\ndsym_plist=\"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist\"\n\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $build_number\" \"$plist\"\nif [ -f \"$DSYM_INFO_PLIST\" ] ; then\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $build_number\" \"$dsym_plist\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -6221,11 +6215,10 @@
 				GCC_PREFIX_HEADER = iLocalize_Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = InfoAppStore.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				PRODUCT_BUNDLE_IDENTIFIER = "ch.arizona-software.iLocalize";
 				PRODUCT_NAME = iLocalize;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -6241,11 +6234,10 @@
 				GCC_PREFIX_HEADER = iLocalize_Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = InfoAppStore.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				PRODUCT_BUNDLE_IDENTIFIER = "ch.arizona-software.iLocalize";
 				PRODUCT_NAME = iLocalize;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -6334,7 +6326,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = NO;
-				CLANG_WARN_OBJC_RECEIVER_WEAK = NO;
 				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = NO;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
@@ -6345,10 +6336,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = NO;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 4626;
 				DEAD_CODE_STRIPPING = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
@@ -6356,10 +6345,8 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
-				GCC_VERSION = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = NO;
 				GCC_WARN_STRICT_SELECTOR_MATCH = NO;
 				GCC_WARN_UNDECLARED_SELECTOR = NO;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -6370,7 +6357,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-licucore";
 				STRINGS_FILE_OUTPUT_ENCODING = "UTF-8";
-				VALID_ARCHS = x86_64;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -6395,7 +6381,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = NO;
-				CLANG_WARN_OBJC_RECEIVER_WEAK = NO;
 				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = NO;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
@@ -6406,20 +6391,16 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = NO;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 4626;
 				DEAD_CODE_STRIPPING = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
-				GCC_VERSION = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = NO;
 				GCC_WARN_STRICT_SELECTOR_MATCH = NO;
 				GCC_WARN_UNDECLARED_SELECTOR = NO;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -6430,7 +6411,6 @@
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "-licucore";
 				STRINGS_FILE_OUTPUT_ENCODING = "UTF-8";
-				VALID_ARCHS = x86_64;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
